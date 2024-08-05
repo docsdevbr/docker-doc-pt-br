@@ -123,4 +123,4 @@ system down more.
 ## Additional information
 
 For more detailed information on configuration options for remote access to the daemon, refer to the
-[dockerd CLI reference](/reference/cli/dockerd/#bind-docker-to-another-hostport-or-a-unix-socket).
+[dockerd CLI reference](reference/cli/dockerd/#bind-docker-to-another-hostport-or-a-unix-socket).

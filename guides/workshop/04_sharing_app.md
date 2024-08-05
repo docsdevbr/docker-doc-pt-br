@@ -128,7 +128,7 @@ can use the latest version of the image.
 
 Related information:
 
- - [docker CLI reference](/reference/cli/docker/)
+ - [docker CLI reference](reference/cli/docker/)
  - [Multi-platform images](../../build/building/multi-platform.md)
  - [Docker Hub overview](../../docker-hub/_index.md)
 

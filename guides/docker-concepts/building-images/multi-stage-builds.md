@@ -23,16 +23,16 @@ Here's a simplified example of a multi-stage build structure using pseudo-code. 
 
 ```dockerfile
 # Stage 1: Build Environment
-FROM builder-image AS build-stage 
+FROM builder-image AS build-stage
 # Install build tools (e.g., Maven, Gradle)
 # Copy source code
 # Build commands (e.g., compile, package)
 
 # Stage 2: Runtime environment
-FROM runtime-image AS final-stage  
+FROM runtime-image AS final-stage
 #  Copy application artifacts from the build stage (e.g., JAR file)
 COPY --from=build-stage /path/in/build/stage /path/to/place/in/final/stage
-# Define runtime configuration (e.g., CMD, ENTRYPOINT) 
+# Define runtime configuration (e.g., CMD, ENTRYPOINT)
 ```
 
 
@@ -54,7 +54,7 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
     ![A screenshot of Spring Initializr tool selected with Java 21, Spring Web and Spring Boot 3.3.0](images/spring-initializr.webp?border=true)
 
 
-    [Spring Initializr](https://start.spring.io/) is a quickstart generator for Spring projects. It provides an extensible API to generate JVM-based projects with implementations for several common concepts — like basic language generation for Java, Kotlin, and Groovy. 
+    [Spring Initializr](https://start.spring.io/) is a quickstart generator for Spring projects. It provides an extensible API to generate JVM-based projects with implementations for several common concepts — like basic language generation for Java, Kotlin, and Groovy.
 
     Select **Generate** to create and download the zip file for this project.
 
@@ -89,21 +89,21 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
                     └── example
                         └── springbootdocker
                             └── SpringBootDockerApplicationTests.java
-    
+
     15 directories, 9 files
     ```
 
-   The `src/main/java` directory contains your project's source code, the `src/test/java` directory   
+   The `src/main/java` directory contains your project's source code, the `src/test/java` directory
    contains the test source, and the `pom.xml` file is your project’s Project Object Model (POM).
 
-   The `pom.xml` file is the core of a Maven project's configuration. It's a single configuration file that   
-   contains most of the information needed to build a customized project. The POM is huge and can seem    
-   daunting. Thankfully, you don't yet need to understand every intricacy to use it effectively. 
+   The `pom.xml` file is the core of a Maven project's configuration. It's a single configuration file that
+   contains most of the information needed to build a customized project. The POM is huge and can seem
+   daunting. Thankfully, you don't yet need to understand every intricacy to use it effectively.
 
-4. Create a RESTful web service that displays "Hello World!". 
+4. Create a RESTful web service that displays "Hello World!".
 
-    
-    Under the `src/main/java/com/example/springbootdocker/` directory, you can modify your  
+
+    Under the `src/main/java/com/example/springbootdocker/` directory, you can modify your
     `SpringBootDockerApplication.java` file with the following content:
 
 
@@ -132,7 +132,7 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
     }
     ```
 
-    The `SpringbootDockerApplication.java` file starts by declaring your `com.example.springbootdocker` package and importing necessary Spring frameworks. This Java file creates a simple Spring Boot web application that responds with "Hello World" when a user visits its homepage. 
+    The `SpringbootDockerApplication.java` file starts by declaring your `com.example.springbootdocker` package and importing necessary Spring frameworks. This Java file creates a simple Spring Boot web application that responds with "Hello World" when a user visits its homepage.
 
 
 ### Create the Dockerfile
@@ -166,7 +166,7 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
      RUN ./mvnw dependency:go-offline
      ```
 
- 6. Copy the `src` directory from your project on the host machine to the `/app` directory within the container. 
+ 6. Copy the `src` directory from your project on the host machine to the `/app` directory within the container.
 
      ```dockerfile
      COPY src ./src
@@ -181,7 +181,7 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
 
     And with that, you should have the following Dockerfile:
 
-    ```dockerfile 
+    ```dockerfile
     FROM eclipse-temurin:21.0.2_13-jdk-jammy
     WORKDIR /app
     COPY .mvn/ .mvn
@@ -240,8 +240,8 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
 
      :: Spring Boot ::             (v3.3.0-M3)
 
-     2024-04-04T15:36:47.202Z  INFO 42 --- [spring-boot-docker] [           main]       
-     c.e.s.SpringBootDockerApplication        : Starting SpringBootDockerApplication using Java    
+     2024-04-04T15:36:47.202Z  INFO 42 --- [spring-boot-docker] [           main]
+     c.e.s.SpringBootDockerApplication        : Starting SpringBootDockerApplication using Java
      21.0.2 with PID 42 (/app/target/classes started by root in /app)
      ….
      ```
@@ -274,20 +274,20 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
     ENTRYPOINT ["java", "-jar", "/opt/app/*.jar"]
     ```
 
-    Notice that this Dockerfile has been split into two stages. 
+    Notice that this Dockerfile has been split into two stages.
 
     - The first stage remains the same as the previous Dockerfile, providing a Java Development Kit (JDK) environment for building the application. This stage is given the name of builder.
 
-    - The second stage is a new stage named `final`. It uses a slimmer `eclipse-temurin:21.0.2_13-jre-jammy` image, containing just the Java Runtime Environment (JRE) needed to run the application. This image provides a Java Runtime Environment (JRE) which is enough for running the compiled application (JAR file). 
+    - The second stage is a new stage named `final`. It uses a slimmer `eclipse-temurin:21.0.2_13-jre-jammy` image, containing just the Java Runtime Environment (JRE) needed to run the application. This image provides a Java Runtime Environment (JRE) which is enough for running the compiled application (JAR file).
 
-    
+
    > For production use, it's highly recommended that you produce a custom JRE-like runtime using jlink. JRE images are available for all versions of Eclipse Temurin, but `jlink` allows you to create a minimal runtime containing only the necessary Java modules for your application. This can significantly reduce the size and improve the security of your final image. [Refer to this page](https://hub.docker.com/_/eclipse-temurin) for more information.
-  { .tip } 
+  { .tip }
 
-   With multi-stage builds, a Docker build uses one base image for compilation, packaging, and unit tests and then a separate image for the application runtime. As a result, the final image is smaller in size since it doesn’t contain any development or debugging tools. By separating the build environment from the final runtime environment, you can significantly reduce the image size and increase the security of your final images. 
+   With multi-stage builds, a Docker build uses one base image for compilation, packaging, and unit tests and then a separate image for the application runtime. As a result, the final image is smaller in size since it doesn’t contain any development or debugging tools. By separating the build environment from the final runtime environment, you can significantly reduce the image size and increase the security of your final images.
 
 
-2. Now, rebuild your image and run your ready-to-use production build. 
+2. Now, rebuild your image and run your ready-to-use production build.
 
     ```console
     $ docker build -t spring-helloworld-builder .
@@ -317,15 +317,15 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
     Your final image is just 428 MB, compared to the original build size of 880 MB.
 
 
-    By optimizing each stage and only including what's necessary, you were able to significantly reduce the   
-    overall image size while still achieving the same functionality. This not only improves performance but   
+    By optimizing each stage and only including what's necessary, you were able to significantly reduce the
+    overall image size while still achieving the same functionality. This not only improves performance but
     also makes your Docker images more lightweight, more secure, and easier to manage.
 
 ## Additional resources
 
-* [Multi-stage builds](/build/building/multi-stage/)
-* [Dockerfile best practices](/develop/develop-images/dockerfile_best-practices/)
-* [Base images](/build/building/base-images/)
+* [Multi-stage builds](build/building/multi-stage/)
+* [Dockerfile best practices](develop/develop-images/dockerfile_best-practices/)
+* [Base images](build/building/base-images/)
 * [Spring Boot Docker](https://spring.io/guides/topicals/spring-boot-docker)
 
 

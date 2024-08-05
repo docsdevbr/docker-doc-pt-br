@@ -64,24 +64,24 @@ setting, see the topic for [Mac](../../desktop/settings/mac.md/#file-sharing),
    ```console
    $ docker run -it --mount type=bind,src="$(pwd)",target=/src ubuntu bash
    ```
-   
+
    {{< /tab >}}
    {{< tab name="Command Prompt" >}}
 
    ```console
    $ docker run -it --mount "type=bind,src=%cd%,target=/src" ubuntu bash
    ```
-   
+
    {{< /tab >}}
    {{< tab name="Git Bash" >}}
 
    ```console
    $ docker run -it --mount type=bind,src="/$(pwd)",target=/src ubuntu bash
    ```
-   
+
    {{< /tab >}}
    {{< /tabs >}}
-   
+
    The `--mount type=bind` option tells Docker to create a bind mount, where `src` is the
    current working directory on your host machine (`getting-started-app`), and
    `target` is where that directory should appear inside the container (`/src`).
@@ -428,7 +428,7 @@ types and storage drivers for handling more complex and specialized use cases.
 
 Related information:
 
- - [docker CLI reference](/reference/cli/docker/)
+ - [docker CLI reference](reference/cli/docker/)
  - [Manage data in Docker](https://docs.docker.com/storage/)
 
 ## Next steps

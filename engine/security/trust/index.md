@@ -114,7 +114,7 @@ set. For more information, see the [Notary GitHub repository](https://github.com
 
 A prerequisite for signing an image is a Docker Registry with a Notary server
 attached (Such as the Docker Hub ). Instructions for
-standing up a self-hosted environment can be found [here](/engine/security/trust/deploying_notary/).
+standing up a self-hosted environment can be found [here](engine/security/trust/deploying_notary/).
 
 To sign a Docker Image you will need a delegation key pair. These keys
 can be generated locally using `$ docker trust key generate` or generated

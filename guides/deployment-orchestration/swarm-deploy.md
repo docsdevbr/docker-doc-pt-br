@@ -43,7 +43,7 @@ services:
 
 In this Swarm YAML file, there is one object, a `service`, describing a scalable group of identical containers. In this case, you'll get just one container (the default), and that container will be based on your `getting-started` image created in [Part 2](02_our_app.md) of the tutorial. In addition, you've asked Swarm to forward all traffic arriving at port 8000 on your development machine to port 3000 inside our getting-started container.
 
-> **Kubernetes Services and Swarm Services are very different** 
+> **Kubernetes Services and Swarm Services are very different**
 >
 > Despite the similar name, the two orchestrators mean very different things by
 > the term 'service'. In Swarm, a service provides both scheduling and
@@ -106,5 +106,5 @@ Further documentation for all new Swarm objects and CLI commands used in this ar
  - [Swarm Mode](../../engine/swarm/_index.md)
  - [Swarm Mode Services](../../engine/swarm/how-swarm-mode-works/services.md)
  - [Swarm Stacks](../../engine/swarm/stack-deploy.md)
- - [`docker stack *`](/reference/cli/docker/stack/)
- - [`docker service *`](/reference/cli/docker/service/)
+ - [`docker stack *`](reference/cli/docker/stack/)
+ - [`docker service *`](reference/cli/docker/service/)

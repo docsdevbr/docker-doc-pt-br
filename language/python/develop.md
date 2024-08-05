@@ -36,15 +36,15 @@ You'll need to clone a new repository to get a sample application that includes 
    ```console
    $ docker init
    Welcome to the Docker Init CLI!
-   
+
    This utility will walk you through creating the following files with sensible defaults for your project:
      - .dockerignore
      - Dockerfile
      - compose.yaml
      - README.Docker.md
-   
+
    Let's get started!
-   
+
    ? What application platform does your project use? Python
    ? What version of Python do you want to use? 3.11.4
    ? What port do you want your app to listen on? 8001
@@ -52,16 +52,16 @@ You'll need to clone a new repository to get a sample application that includes 
    ```
 
    Create a file named `.gitignore` with the following contents.
-   
+
    ```text {collapse=true,title=".gitignore"}
    # Byte-compiled / optimized / DLL files
    __pycache__/
    *.py[cod]
    *$py.class
-   
+
    # C extensions
    *.so
-   
+
    # Distribution / packaging
    .Python
    build/
@@ -81,7 +81,7 @@ You'll need to clone a new repository to get a sample application that includes 
    .installed.cfg
    *.egg
    MANIFEST
-   
+
    # Unit test / coverage reports
    htmlcov/
    .tox/
@@ -96,10 +96,10 @@ You'll need to clone a new repository to get a sample application that includes 
    .hypothesis/
    .pytest_cache/
    cover/
-   
+
    # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
    __pypackages__/
-   
+
    # Environments
    .env
    .venv
@@ -109,36 +109,36 @@ You'll need to clone a new repository to get a sample application that includes 
    env.bak/
    venv.bak/
    ```
-   
+
    {{< /tab >}}
    {{< tab name="Manually create assets" >}}
-   
+
    If you don't have Docker Desktop installed or prefer creating the assets
    manually, you can create the following files in your project directory.
-   
+
    Create a file named `Dockerfile` with the following contents.
-   
+
    ```dockerfile {collapse=true,title=Dockerfile}
    # syntax=docker/dockerfile:1
-   
+
    # Comments are provided throughout this file to help you get started.
    # If you need more help, visit the Dockerfile reference guide at
    # https://docs.docker.com/go/dockerfile-reference/
-   
+
    # Want to help us make this template better? Share your feedback here: https://   forms.gle/ybq9Krt8jtBL3iCk7
-   
+
    ARG PYTHON_VERSION=3.11.4
    FROM python:${PYTHON_VERSION}-slim as base
-   
+
    # Prevents Python from writing pyc files.
    ENV PYTHONDONTWRITEBYTECODE=1
-   
+
    # Keeps Python from buffering stdout and stderr to avoid situations where
    # the application crashes without emitting any logs due to buffering.
    ENV PYTHONUNBUFFERED=1
-   
+
    WORKDIR /app
-   
+
    # Create a non-privileged user that the app will run under.
    # See https://docs.docker.com/go/dockerfile-user-best-practices/
    ARG UID=10001
@@ -150,7 +150,7 @@ You'll need to clone a new repository to get a sample application that includes 
        --no-create-home \
        --uid "${UID}" \
        appuser
-   
+
    # Download dependencies as a separate step to take advantage of Docker's    caching.
    # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
    # Leverage a bind mount to requirements.txt to avoid having to copy them into
@@ -158,27 +158,27 @@ You'll need to clone a new repository to get a sample application that includes 
    RUN --mount=type=cache,target=/root/.cache/pip \
        --mount=type=bind,source=requirements.txt,target=requirements.txt \
        python -m pip install -r requirements.txt
-   
+
    # Switch to the non-privileged user to run the application.
    USER appuser
-   
+
    # Copy the source code into the container.
    COPY . .
-   
+
    # Expose the port that the application listens on.
    EXPOSE 8001
-   
+
    # Run the application.
    CMD python3 -m uvicorn app:app --host=0.0.0.0 --port=8001
    ```
-   
+
    Create a file named `compose.yaml` with the following contents.
-   
+
    ```yaml {collapse=true,title=compose.yaml}
    # Comments are provided throughout this file to help you get started.
    # If you need more help, visit the Docker Compose reference guide at
    # https://docs.docker.com/go/compose-spec-reference/
-   
+
    # Here the instructions define your application as a service called "server".
    # This service is built from the Dockerfile in the current directory.
    # You can add other services your application may depend on here, such as a
@@ -190,7 +190,7 @@ You'll need to clone a new repository to get a sample application that includes 
          context: .
        ports:
          - 8001:8001
-   
+
    # The commented out section below is an example of how to define a PostgreSQL
    # database that your application can use. `depends_on` tells Docker Compose to
    # start the database before your application. The `db-data` volume persists the
@@ -224,16 +224,16 @@ You'll need to clone a new repository to get a sample application that includes 
    #   db-password:
    #     file: db/password.txt
    ```
-   
+
    Create a file named `.dockerignore` with the following contents.
-   
+
    ```text {collapse=true,title=".dockerignore"}
    # Include any files or directories that you don't want to be copied to your
    # container here (e.g., local build artifacts, temporary files, etc.).
    #
    # For more help, visit the .dockerignore file reference guide at
    # https://docs.docker.com/go/build-context-dockerignore/
-   
+
    **/.DS_Store
    **/__pycache__
    **/.venv
@@ -264,16 +264,16 @@ You'll need to clone a new repository to get a sample application that includes 
    README.md
    ```
    Create a file named `.gitignore` with the following contents.
-   
+
    ```text {collapse=true,title=".gitignore"}
    # Byte-compiled / optimized / DLL files
    __pycache__/
    *.py[cod]
    *$py.class
-   
+
    # C extensions
    *.so
-   
+
    # Distribution / packaging
    .Python
    build/
@@ -293,7 +293,7 @@ You'll need to clone a new repository to get a sample application that includes 
    .installed.cfg
    *.egg
    MANIFEST
-   
+
    # Unit test / coverage reports
    htmlcov/
    .tox/
@@ -308,10 +308,10 @@ You'll need to clone a new repository to get a sample application that includes 
    .hypothesis/
    .pytest_cache/
    cover/
-   
+
    # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
    __pypackages__/
-   
+
    # Environments
    .env
    .venv
@@ -321,7 +321,7 @@ You'll need to clone a new repository to get a sample application that includes 
    env.bak/
    venv.bak/
    ```
-   
+
    {{< /tab >}}
    {{< /tabs >}}
 
@@ -380,7 +380,7 @@ secrets:
 > **Note**
 >
 > To learn more about the instructions in the Compose file, see [Compose file
-> reference](/compose/compose-file/).
+> reference](compose/compose-file/).
 
 Before you run the application using Compose, notice that this Compose file specifies a `password.txt` file to hold the database's password. You must create this file as it's not included in the source repository.
 
@@ -557,7 +557,7 @@ In this section, you took a look at setting up your Compose file to add a local
 database and persist data. You also learned how to use Compose Watch to automatically rebuild and run your container when you update your code.
 
 Related information:
- - [Compose file reference](/compose/compose-file/)
+ - [Compose file reference](compose/compose-file/)
  - [Compose file watch](../../compose/file-watch.md)
  - [Multi-stage builds](../../build/building/multi-stage.md)
 

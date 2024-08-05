@@ -23,7 +23,7 @@ After every successful SSO sign-in authentication, the JIT provisioner performs 
    a) If the IdP provided group mappings for the user, the user gets added to the organizations and teams indicated by the group mappings.
 
    b) If the IdP didn't provide group mappings, it checks if the user is already a member of the organization, or if the SSO connection is for multiple organizations (only at company level) and if the user is a member of any of those organizations. If the user isn't a member, it adds the user to the default team and organization configured in the SSO connection.
-   
+
    ![JIT provisioning enabled](../../images/jit-enabled-flow.svg)
 
 ## SSO authentication with JIT provisioning disabled
@@ -42,7 +42,7 @@ When you opt to disable JIT provisioning in your SSO connection, the following a
 
    b) If the user is a member of the organization, or has a pending invitation to join, then sign in is successful.
 
-If you disable JIT provisioning when you create or edit your SSO connection, you can still use group mapping as long as you have also [enabled SCIM](/security/for-admins/provisioning/scim/#enable-scim-in-docker). When JIT provisioning is disabled and SCIM isn't enabled, users won't be auto-provisioned to groups. For instructions on disabling JIT provisioning, see [Manage how users are provisioned](/security/for-admins/single-sign-on/manage/#manage-how-users-are-provisioned).
+If you disable JIT provisioning when you create or edit your SSO connection, you can still use group mapping as long as you have also [enabled SCIM](security/for-admins/provisioning/scim/#enable-scim-in-docker). When JIT provisioning is disabled and SCIM isn't enabled, users won't be auto-provisioned to groups. For instructions on disabling JIT provisioning, see [Manage how users are provisioned](security/for-admins/single-sign-on/manage/#manage-how-users-are-provisioned).
 
 ![JIT provisioning disabled](../../images/jit-disabled-flow.svg)
 

@@ -10,7 +10,7 @@ toc_max: 2
 
 _Last updated July, 2024_
 
-When [SSO enforcement](/security/for-admins/single-sign-on/connect/#optional-enforce-sso) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](/security/for-admins/single-sign-on/#prerequisites) in anticipation of this grace period ending.
+When [SSO enforcement](security/for-admins/single-sign-on/connect/#optional-enforce-sso) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](security/for-admins/single-sign-on/#prerequisites) in anticipation of this grace period ending.
 
 On September 16, 2024 the grace period will end and passwords will no longer be able to authenticate to Docker Hub via the Docker CLI when SSO is enforced. Affected users are required to switch over to using PATs to continue signing in.
 
@@ -43,7 +43,7 @@ If you are using affected versions of runc, BuildKit, Moby, or Docker Desktop, m
 | `Docker Desktop`       | >= [4.27.1](../desktop/release-notes.md#4271)                 |
 
 
-If you are unable to update to an unaffected version promptly, follow these best practices to mitigate risk: 
+If you are unable to update to an unaffected version promptly, follow these best practices to mitigate risk:
 
 * Only use trusted Docker images (such as [Docker Official Images](../trusted-content/official-images/_index.md)).
 * Don’t build Docker images from untrusted sources or untrusted Dockerfiles.
@@ -91,7 +91,7 @@ In Moby <= v25.0.1 and <= v24.0.8, the classic builder cache system is prone to 
 
 _The issue has been fixed in Moby >= v25.0.2 and >= v24.0.9._
 
-### How are Docker products affected? 
+### How are Docker products affected?
 
 #### Docker Desktop
 
@@ -123,7 +123,7 @@ _Last updated October 2022_
 
 [CVE-2022-42889](https://nvd.nist.gov/vuln/detail/CVE-2022-42889) has been discovered in the popular Apache Commons Text library. Versions of this library up to but not including 1.10.0 are affected by this vulnerability.
 
-We strongly encourage you to update to the latest version of [Apache Commons Text](https://commons.apache.org/proper/commons-text/download_text.cgi). 
+We strongly encourage you to update to the latest version of [Apache Commons Text](https://commons.apache.org/proper/commons-text/download_text.cgi).
 
 ### Scan images on Docker Hub
 
@@ -139,13 +139,13 @@ A number of [Docker Official Images](../trusted-content/official-images/_index.m
 Apache Commons Text. The following lists Docker Official Images that
 may contain the vulnerable versions of Apache Commons Text:
 
-- [bonita](https://hub.docker.com/_/bonita) 
+- [bonita](https://hub.docker.com/_/bonita)
 - [Couchbase](https://hub.docker.com/_/couchbase)
-- [Geonetwork](https://hub.docker.com/_/geonetwork) 
+- [Geonetwork](https://hub.docker.com/_/geonetwork)
 - [neo4j](https://hub.docker.com/_/neo4j)
 - [sliverpeas](https://hub.docker.com/_/sliverpeas)
-- [solr](https://hub.docker.com/_/solr) 
-- [xwiki](https://hub.docker.com/_/xwiki) 
+- [solr](https://hub.docker.com/_/solr)
+- [xwiki](https://hub.docker.com/_/xwiki)
 
 We have updated
 Apache Commons Text in these images to the latest version. Some of these images may not be

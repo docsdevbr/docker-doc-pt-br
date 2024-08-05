@@ -31,7 +31,7 @@ If you’re new to container images, think of them as a standardized package tha
 
 To share your Docker images, you need a place to store them. This is where registries come in. While there are many registries, Docker Hub is the default and go-to registry for images. Docker Hub provides both a place for you to store your own images and to find images from others to either run or use as the bases for your own images.
 
-In [Develop with containers](develop-with-containers.md), you used the following images that came from Docker Hub, each of which are [Docker Official Images](/trusted-content/official-images/):
+In [Develop with containers](develop-with-containers.md), you used the following images that came from Docker Hub, each of which are [Docker Official Images](trusted-content/official-images/):
 
 - [node](https://hub.docker.com/_/node) - provides a Node environment and is used as the base of your development efforts. This image is also used as the base for the final application image.
 - [mysql](https://hub.docker.com/_/mysql) - provides a MySQL database to store the to-do list items
@@ -81,10 +81,10 @@ Now that you have a repository, you are ready to build and push your image. An i
 >
 > Without going too deep yet, think of a container image as a single package that contains
 > everything needed to run a process. In this case, it will contain a Node environment,
-> the backend code, and the compiled React code. 
+> the backend code, and the compiled React code.
 >
-> Any machine that runs a container using the image, will then be able to run the application as 
-> it was built without needing anything else pre-installed on the machine. 
+> Any machine that runs a container using the image, will then be able to run the application as
+> it was built without needing anything else pre-installed on the machine.
 >
 > A `Dockerfile` is a text-based script that provides the instruction set on how to build
 > the image. For this quick start, the repository already contains the Dockerfile.
@@ -153,13 +153,13 @@ Now that you have a repository, you are ready to build and push your image. An i
 
     ![Screenshot of VS Code showing the right-click menu and "Build Image" menu item](images/build-vscode-menu-item.webp?border=true)
 
-3. In the dialog that appears, enter a name of `DOCKER_USERNAME/getting-started-todo-app`, replacing `DOCKER_USERNAME` with your Docker username. 
+3. In the dialog that appears, enter a name of `DOCKER_USERNAME/getting-started-todo-app`, replacing `DOCKER_USERNAME` with your Docker username.
 
 4. After pressing **Enter**, you'll see a terminal appear where the build will occur. Once it's completed, feel free to close the terminal.
 
 5. Open the Docker Extension for VS Code by selecting the Docker logo in the left nav menu.
 
-6. Find the image you created. It'll have a name of `docker.io/DOCKER_USERNAME/getting-started-todo-app`. 
+6. Find the image you created. It'll have a name of `docker.io/DOCKER_USERNAME/getting-started-todo-app`.
 
 7. Expand the image to view the tags (or different versions) of the image. You should see a tag named `latest`, which is the default tag given to an image.
 
@@ -187,9 +187,9 @@ Going forward, you’ll want to remember that:
 
 > **Usage of other registries**
 >
-> While Docker Hub is the default registry, registries are standardized and made 
-> interoperable through the [Open Container Initiative](https://opencontainers.org/). This allows companies and 
-> organizations to run their own private registries. Quite often, trusted content 
+> While Docker Hub is the default registry, registries are standardized and made
+> interoperable through the [Open Container Initiative](https://opencontainers.org/). This allows companies and
+> organizations to run their own private registries. Quite often, trusted content
 > is mirrored (or copied) from Docker Hub into these private registries.
 >
 

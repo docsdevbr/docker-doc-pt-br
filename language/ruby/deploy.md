@@ -7,7 +7,7 @@ description: Learn how to develop locally using Kubernetes
 ## Prerequisites
 
 - Complete all the previous sections of this guide, starting with [Containerize a Ruby on Rails application](containerize.md).
-- [Turn on Kubernetes](/desktop/kubernetes/#install-and-turn-on-kubernetes) in Docker Desktop.
+- [Turn on Kubernetes](desktop/kubernetes/#install-and-turn-on-kubernetes) in Docker Desktop.
 
 ## Overview
 
@@ -114,7 +114,7 @@ To learn more about Kubernetes objects, see the [Kubernetes documentation](https
    ```
 
    In addition to the default `kubernetes` service, you can see your `docker-ruby-on-rails-demo` service, accepting traffic on port 30001/TCP.
-  
+
 
 3. To create and migrate the database in a Ruby on Rails application running on Kubernetes, you need to follow these steps.
 

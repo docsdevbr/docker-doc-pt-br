@@ -17,7 +17,7 @@ Docker offers two primary storage options for persisting data and sharing files 
 
 ### Volume versus bind mounts
 
-If you want to ensure that data generated or modified inside the container persists even after the container stops running, you would opt for a volume. See [Persisting container data](/guides/docker-concepts/running-containers/persisting-container-data/) to learn more about volumes and their use cases.
+If you want to ensure that data generated or modified inside the container persists even after the container stops running, you would opt for a volume. See [Persisting container data](guides/docker-concepts/running-containers/persisting-container-data/) to learn more about volumes and their use cases.
 
 If you have specific files or directories on your host system that you want to directly share with your container, like configuration files or development code, then you would use a bind mount. It's like opening a direct portal between your host and container for sharing. Bind mounts are ideal for development environments where real-time file access and sharing between the host and container are crucial.
 
@@ -58,7 +58,7 @@ Read-only bind mounts let the container access the mounted files on the host for
 
 > **Synchronised File Share**
 >
-> As your codebase grows larger, traditional methods of file sharing like bind mounts may become inefficient or slow, especially in development environments where frequent access to files is necessary. [Synchronized file shares](/desktop/synchronized-file-sharing/) improve bind mount performance by leveraging synchronized filesystem caches. This optimization ensures that file access between the host and virtual machine (VM) is fast and efficient.
+> As your codebase grows larger, traditional methods of file sharing like bind mounts may become inefficient or slow, especially in development environments where frequent access to files is necessary. [Synchronized file shares](desktop/synchronized-file-sharing/) improve bind mount performance by leveraging synchronized filesystem caches. This optimization ensures that file access between the host and virtual machine (VM) is fast and efficient.
 { .tip }
 
 ## Try it out
@@ -67,7 +67,7 @@ In this hands-on guide, you’ll practice how to create and use a bind mount to 
 
 ### Run a container
 
-1. [Download and install](/get-docker/) Docker Desktop.
+1. [Download and install](get-docker/) Docker Desktop.
 
 2. Start a container using the [httpd](https://hub.docker.com/_/httpd) image with the following command:
 
@@ -147,8 +147,8 @@ Using a bind mount, you can map the configuration file on your host computer to 
    {{< /tabs >}}
 
 
-   > **Tip**  
-   > When using the `-v` or `--mount` flag in Windows PowerShell, you need to provide the absolute path to your directory instead of just `./`. This is because PowerShell handles relative paths differently from bash (commonly used in Mac and Linux environments).    
+   > **Tip**
+   > When using the `-v` or `--mount` flag in Windows PowerShell, you need to provide the absolute path to your directory instead of just `./`. This is because PowerShell handles relative paths differently from bash (commonly used in Mac and Linux environments).
    { .tip }
 
 
@@ -194,12 +194,12 @@ The container continues to run until you stop it.
 The following resources will help you learn more about bind mounts:
 
 
-* [Manage data in Docker](/storage/)
-* [Volumes](/storage/volumes/)
-* [Bind mounts](/storage/bind-mounts/)
-* [Running containers](/reference/run/)
-* [Troubleshoot storage errors](/storage/troubleshooting_volume_errors/)
-* [Persisting container data](/guides/docker-concepts/running-containers/persisting-container-data/)
+* [Manage data in Docker](storage/)
+* [Volumes](storage/volumes/)
+* [Bind mounts](storage/bind-mounts/)
+* [Running containers](reference/run/)
+* [Troubleshoot storage errors](storage/troubleshooting_volume_errors/)
+* [Persisting container data](guides/docker-concepts/running-containers/persisting-container-data/)
 
 ## Next steps
 

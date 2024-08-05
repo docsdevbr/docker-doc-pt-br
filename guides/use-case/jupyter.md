@@ -49,7 +49,7 @@ The following are the notable parts of the command:
 - `start-notebook.py --NotebookApp.token='my-token'`: Sets an access token
   rather than using a random token.
 
-For more details, see the [Jupyter Server Options](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html#jupyter-server-options) and the [docker run CLI reference](/reference/cli/docker/container/run/).
+For more details, see the [Jupyter Server Options](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html#jupyter-server-options) and the [docker run CLI reference](reference/cli/docker/container/run/).
 
 If this is the first time you are running the image, Docker will download and
 run it. The amount of time it takes to download the image will vary depending on
@@ -62,7 +62,7 @@ container, in a web browser navigate to
 To stop the container, in the terminal press `ctrl`+`c`.
 
 To access an existing notebook on your system, you can use a
-[bind mount](/storage/bind-mounts/). Open a terminal and
+[bind mount](storage/bind-mounts/). Open a terminal and
 change directory to where your existing notebook is. Then,
 run the following command based on your operating system.
 
@@ -114,7 +114,7 @@ managed by Docker.
 ## Save and access notebooks
 
 When you remove a container, all data in that container is deleted. To save
-notebooks outside of the container, you can use a [volume](/storage/volumes/).
+notebooks outside of the container, you can use a [volume](storage/volumes/).
 
 ### Run a JupterLab container with a volume
 
@@ -216,7 +216,7 @@ FROM quay.io/jupyter/base-notebook
 RUN pip install --no-cache-dir matplotlib scikit-learn
 ```
 
-This Dockerfile uses the `quay.io/jupyter/base-notebook` image as the base, and then runs `pip` to install the dependencies. For more details about the instructions in the Dockerfile, see the [Dockerfile reference](/reference/dockerfile/).
+This Dockerfile uses the `quay.io/jupyter/base-notebook` image as the base, and then runs `pip` to install the dependencies. For more details about the instructions in the Dockerfile, see the [Dockerfile reference](reference/dockerfile/).
 
 Before you proceed, save your changes to the `Dockerfile`.
 
@@ -371,7 +371,7 @@ $ docker run --rm -p 8889:8888 YOUR-USER-NAME/my-jupyer-image start-notebook.py 
 
 ### Share your volume
 
-This example uses the Docker Desktop [Volumes Backup & Share](https://hub.docker.com/extensions/docker/volumes-backup-extension) extension. Alternatively, in the CLI you can [back up the volume](/storage/volumes/#back-up-a-volume) and then [push it using the ORAS CLI](/docker-hub/oci-artifacts/#push-a-volume).
+This example uses the Docker Desktop [Volumes Backup & Share](https://hub.docker.com/extensions/docker/volumes-backup-extension) extension. Alternatively, in the CLI you can [back up the volume](storage/volumes/#back-up-a-volume) and then [push it using the ORAS CLI](docker-hub/oci-artifacts/#push-a-volume).
 
 1. Install the Volumes Backup & Share extension.
    1. Open the Docker Dashboard and select **Extensions**.
@@ -415,7 +415,7 @@ notebooks and environments with other data scientists.
 
 Related information:
 
-- [Dockerfile reference](/reference/dockerfile/)
-- [Compose file reference](/compose/compose-file/)
+- [Dockerfile reference](reference/dockerfile/)
+- [Compose file reference](compose/compose-file/)
 - [Docker CLI reference](reference/cli/docker/)
 - [Jupyter Docker Stacks docs](https://jupyter-docker-stacks.readthedocs.io/en/latest/)

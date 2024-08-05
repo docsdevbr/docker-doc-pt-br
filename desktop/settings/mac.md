@@ -57,7 +57,7 @@ If you choose the integrated terminal, you can run commands in a running contain
     > Use VirtioFS for speedy file sharing. VirtioFS has reduced the time taken to complete filesystem operations by [up to 98%](https://github.com/docker/roadmap/issues/7#issuecomment-1044452206)
     { .tip }
 
-- **Use Rosetta for x86_64/amd64 emulation on Apple Silicon**. Turns on Rosetta to accelerate x86/AMD64 binary emulation on Apple Silicon. This option is only available if you have turned on **Virtualization framework** in the **General** settings tab. You must also be on macOS Ventura or later. 
+- **Use Rosetta for x86_64/amd64 emulation on Apple Silicon**. Turns on Rosetta to accelerate x86/AMD64 binary emulation on Apple Silicon. This option is only available if you have turned on **Virtualization framework** in the **General** settings tab. You must also be on macOS Ventura or later.
 
 - **Send usage statistics**. Select so Docker Desktop sends diagnostics,
   crash reports, and usage data. This information helps Docker improve and
@@ -79,9 +79,9 @@ If you choose the integrated terminal, you can run commands in a running contain
 
   Docker Desktop checks if your setup, configured during installation, has been altered by external apps like Orbstack. Docker Desktop checks:
     - The symlinks of Docker binaries to `/usr/local/bin`.
-    - The symlink of the default Docker socket. 
+    - The symlink of the default Docker socket.
   Additionally, Docker Desktop ensures that the context is switched to `desktop-linux` on startup.
-  
+
   You are notified if changes are found and are able to restore the configuration directly from the notification. For more information, see the [FAQs](../faqs/macfaqs.md#why-do-i-keep-getting-a-notification-telling-me-an-application-has-changed-my-desktop-configurations).
 
 ## Resources
@@ -139,7 +139,7 @@ Use File sharing to allow local directories on your machine to be shared with
 Linux containers. This is especially useful for editing source code in an IDE on
 the host while running and testing the code in a container.
 
-#### Synchronized file shares 
+#### Synchronized file shares
 
 Synchronized file shares is an alternative file sharing mechanism that provides fast and flexible host-to-VM file sharing, enhancing bind mount performance through the use of synchronized filesystem caches. Available with Pro, Team, and Business subscriptions.
 
@@ -251,7 +251,7 @@ edit the JSON configuration directly from the dashboard in Docker Desktop, or op
 edit the file using your favorite text editor.
 
 To see the full list of possible configuration options, see the
-[dockerd command reference](/reference/cli/dockerd/).
+[dockerd command reference](reference/cli/dockerd/).
 
 Select **Apply & Restart** to save your settings and restart Docker Desktop.
 

@@ -239,7 +239,7 @@ Discarded in favor of [1.9.1](#191).
 
 ### New
 
-- The [`docker scout push` command](/reference/cli/docker/scout/push/) is now fully available: analyze images locally and push the SBOM to Docker Scout.
+- The [`docker scout push` command](reference/cli/docker/scout/push/) is now fully available: analyze images locally and push the SBOM to Docker Scout.
 
 ### Bug fixes and enhancements
 

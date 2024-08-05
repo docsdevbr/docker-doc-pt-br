@@ -27,24 +27,24 @@ You may need to reduce the number of team members and convert any private reposi
 
 ### SSO and SCIM
 
-If you want to downgrade a Docker Business subscription and your organization uses single sign-on (SSO) for user authentication, you need to remove your SSO connection and verified domains before downgrading. After removing the SSO connection, any organization members that were auto-provisioned (for example, with SCIM) need to set up a password to sign in without SSO. To do this, users can [reset their password at sign in](/docker-id/#reset-your-password-at-sign-in).
+If you want to downgrade a Docker Business subscription and your organization uses single sign-on (SSO) for user authentication, you need to remove your SSO connection and verified domains before downgrading. After removing the SSO connection, any organization members that were auto-provisioned (for example, with SCIM) need to set up a password to sign in without SSO. To do this, users can [reset their password at sign in](docker-id/#reset-your-password-at-sign-in).
 
 ## Downgrade your Docker subscription
 
 >**Important**
 >
->If you have a [sales-assisted Docker Business subscription](details.md#sales-assisted), contact your account manager to downgrade your subscription. 
+>If you have a [sales-assisted Docker Business subscription](details.md#sales-assisted), contact your account manager to downgrade your subscription.
 { .important }
 
 1. Sign in to your [Docker Hub](https://hub.docker.com) account.
 
 2. Select your avatar in the top-right corner and from the drop-down menu select **Billing**.
 
-3. Choose either your personal account or an organization to downgrade. 
+3. Choose either your personal account or an organization to downgrade.
 
 4. In the **Plan** section, select **Change plan**.
 
-5. On the **Change Plan** page, select the plan you'd like to downgrade to. 
+5. On the **Change Plan** page, select the plan you'd like to downgrade to.
 
 6. Review the downgrade warning and select **Continue**.
 

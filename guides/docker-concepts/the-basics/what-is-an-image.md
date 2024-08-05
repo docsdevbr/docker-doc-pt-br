@@ -8,9 +8,9 @@ description: What is an image
 
 ## Explanation
 
-Seeing a [container](./what-is-a-container) is an isolated process, where does it get its files and configuration? How do you share those environments? 
+Seeing a [container](./what-is-a-container) is an isolated process, where does it get its files and configuration? How do you share those environments?
 
-That's where container images come in! 
+That's where container images come in!
 
 A container image is a standardized package that includes all of the files, binaries, libraries, and configurations to run a container.
 
@@ -84,7 +84,7 @@ Follow the instructions to search and pull a Docker image using CLI to view its 
 
 ### Search for and download an image
 
-1. Open a terminal and search for images using the [`docker search`](/reference/cli/docker/search/) command:
+1. Open a terminal and search for images using the [`docker search`](reference/cli/docker/search/) command:
 
     ```console
     docker search docker/welcome-to-docker
@@ -99,7 +99,7 @@ Follow the instructions to search and pull a Docker image using CLI to view its 
 
     This output shows you information about relevant images available on Docker Hub.
 
-2. Pull the image using the [`docker pull`](/reference/cli/docker/image/pull/) command.
+2. Pull the image using the [`docker pull`](reference/cli/docker/image/pull/) command.
 
     ```console
     docker pull docker/welcome-to-docker
@@ -128,7 +128,7 @@ Follow the instructions to search and pull a Docker image using CLI to view its 
 
 ### Learn about the image
 
-1. List your downloaded images using the [`docker image ls`](/reference/cli/docker/image/ls/) command:
+1. List your downloaded images using the [`docker image ls`](reference/cli/docker/image/ls/) command:
 
     ```console
     docker image ls
@@ -144,10 +144,10 @@ Follow the instructions to search and pull a Docker image using CLI to view its 
     The command shows a list of Docker images currently available on your system. The `docker/welcome-to-docker` has a total size of approximately 29.7MB.
 
     > **Image size**
-    > 
+    >
     > The image size represented here reflects the uncompressed size of the image, not the download size of the layers.
 
-2. List the image's layers using the [`docker image history`](/reference/cli/docker/image/history/) command:
+2. List the image's layers using the [`docker image history`](reference/cli/docker/image/history/) command:
 
     ```console
     docker image history docker/welcome-to-docker
@@ -175,7 +175,7 @@ Follow the instructions to search and pull a Docker image using CLI to view its 
     <missing>      5 months ago   /bin/sh -c #(nop) ADD file:ff3112828967e8004…   7.66MB
     ```
 
-    This output shows you all of the layers, their sizes, and the command used to create the layer. 
+    This output shows you all of the layers, their sizes, and the command used to create the layer.
 
     > **Viewing the full command**
     >
@@ -192,12 +192,12 @@ In this walkthrough, you searched and pulled a Docker image. In addition to pull
 
 The following resources will help you learn more about exploring, finding, and building images:
 
-- [Docker Trusted Content](/trusted-content/)
-  - [Docker Official Images docs](/trusted-content/official-images/)
-  - [Docker Verified Publisher docs](/trusted-content/dvp-program/)
-  - [Docker-Sponsored Open Source Program docs](/trusted-content/dsos-program/)
-- [Explore the Image view in Docker Desktop](/desktop/use-desktop/images/)
-- [Packaging your software](/build/building/packaging/)
+- [Docker Trusted Content](trusted-content/)
+  - [Docker Official Images docs](trusted-content/official-images/)
+  - [Docker Verified Publisher docs](trusted-content/dvp-program/)
+  - [Docker-Sponsored Open Source Program docs](trusted-content/dsos-program/)
+- [Explore the Image view in Docker Desktop](desktop/use-desktop/images/)
+- [Packaging your software](build/building/packaging/)
 - [Docker Hub](https://hub.docker.com)
 
 ## Next steps

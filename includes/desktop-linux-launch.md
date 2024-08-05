@@ -8,7 +8,7 @@ Alternatively, open a terminal and run:
 $ systemctl --user start docker-desktop
 ```
 
-When Docker Desktop starts, it creates a dedicated [context](/engine/context/working-with-contexts) that the Docker CLI
+When Docker Desktop starts, it creates a dedicated [context](engine/context/working-with-contexts) that the Docker CLI
 can use as a target and sets it as the current context in use. This is to avoid
 a clash with a local Docker Engine that may be running on the Linux host and
 using the default context. On shutdown, Docker Desktop resets the current

@@ -142,7 +142,7 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
 
    {{< tabs >}}
    {{< tab name="Local or Hub storage" >}}
-   
+
    - **Local file**: Specify a file name and select a folder.
    - **Local image**: Select a local image to export the content to. Any
     existing data in the image will be replaced by the exported content.
@@ -150,7 +150,7 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    - **Registry**: Specify a Docker Hub repository. Note that Docker Hub
      repositories can be publicly accessible which means your data can be
      publicly accessible. For more details, see
-     [Change a repository from public to private](/docker-hub/repos/#change-a-repository-from-public-to-private).
+     [Change a repository from public to private](docker-hub/repos/#change-a-repository-from-public-to-private).
 
    {{< /tab >}}
    {{< tab name="External cloud storage" >}}
@@ -188,10 +188,10 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
 6. Select whether to export the volume to **Local or Hub storage** or **External
    cloud storage**, then specify the following additional details depending on
    your selection.
-   
+
    {{< tabs >}}
    {{< tab name="Local or Hub storage" >}}
-   
+
    - **Local file**: Specify a file name and select a folder.
    - **Local image**: Select a local image to export the content to. Any
     existing data in the image will be replaced by the exported content.
@@ -199,7 +199,7 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    - **Registry**: Specify a Docker Hub repository. Note that Docker Hub
      repositories can be publicly accessible which means your data can be
      publicly accessible. For more details, see
-     [Change a repository from public to private](/docker-hub/repos/#change-a-repository-from-public-to-private).
+     [Change a repository from public to private](docker-hub/repos/#change-a-repository-from-public-to-private).
 
    {{< /tab >}}
    {{< tab name="External cloud storage" >}}

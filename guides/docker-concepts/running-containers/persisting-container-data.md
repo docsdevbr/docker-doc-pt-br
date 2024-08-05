@@ -16,9 +16,9 @@ While this ephemeral nature of containers is great, it poses a challenge when yo
 
 ### Container volumes
 
-Volumes are a storage mechanism that provide the ability to persist data beyond the lifecycle of an individual container. Think of it like providing a shortcut or symlink from inside the container to outside the container. 
+Volumes are a storage mechanism that provide the ability to persist data beyond the lifecycle of an individual container. Think of it like providing a shortcut or symlink from inside the container to outside the container.
 
-As an example, imagine you create a volume named `log-data`. 
+As an example, imagine you create a volume named `log-data`.
 
 ```console
 $ docker volume create log-data
@@ -30,7 +30,7 @@ When starting a container with the following command, the volume will be mounted
 $ docker run -d -p 80:80 -v log-data:/logs docker/welcome-to-docker
 ```
 
-If the volume `log-data` doesn't exist, Docker will automatically create it for you. 
+If the volume `log-data` doesn't exist, Docker will automatically create it for you.
 
 When the container runs, all files it writes into the `/logs` folder will be saved in this volume, outside of the container. If you delete the container and start a new container using the same volume, the files will still be there.
 
@@ -56,7 +56,7 @@ In this guide, you’ll practice creating and using volumes to persist data crea
 
 ### Use volumes
 
-1. [Download and install](/get-docker/) Docker Desktop.
+1. [Download and install](get-docker/) Docker Desktop.
 
 2. Start a container using the [Postgres image](https://hub.docker.com/_/postgres) with the following command:
 
@@ -114,7 +114,7 @@ In this guide, you’ll practice creating and using volumes to persist data crea
 8. Start a new container by running the following command, attaching the same volume with the persisted data:
 
     ```console
-    $ docker run --name=new-db -d -v postgres_data:/var/lib/postgresql/data postgres 
+    $ docker run --name=new-db -d -v postgres_data:/var/lib/postgresql/data postgres
     ```
 
     You might have noticed that the `POSTGRES_PASSWORD` environment variable has been omitted. That’s because that variable is only used when bootstrapping a new database.
@@ -165,9 +165,9 @@ There are a few methods to remove volumes, including the following:
 
 The following resources will help you learn more about volumes:
 
-- [Manage data in Docker](/storage)
-- [Volumes](/storage/volumes)
-- [Volume mounts (`docker run` reference)](/engine/reference/run/#volume-mounts)
+- [Manage data in Docker](storage)
+- [Volumes](storage/volumes)
+- [Volume mounts (`docker run` reference)](engine/reference/run/#volume-mounts)
 
 
 ## Next steps

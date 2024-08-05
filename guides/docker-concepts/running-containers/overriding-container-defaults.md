@@ -68,19 +68,19 @@ By effectively using these `docker run` flags, you can tailor your containerized
 
 In this hands-on guide, you'll see how to use the `docker run` command to override the container defaults.
 
-1. [Download and install](/get-docker/) Docker Desktop.
+1. [Download and install](get-docker/) Docker Desktop.
 
 ### Run multiple instance of the Postgres database
 
 1.  Start a container using the [Postgres image](https://hub.docker.com/_/postgres) with the following command:
-    
+
     ```console
     $ docker run -d -e POSTGRES_PASSWORD=secret -p 5432:5432 postgres
     ```
 
     This will start the Postgres database in the background, listening on the standard container port `5432` and mapped to port `5432` on the host machine.
 
-2. Start a second Postgres container mapped to a different port. 
+2. Start a second Postgres container mapped to a different port.
 
     ```console
     $ docker run -d -e POSTGRES_PASSWORD=secret -p 5433:5432 postgres
@@ -125,7 +125,7 @@ Follow the steps to see how to connect a Postgres container to a custom network.
 
     > **Key difference between default bridge and custom networks**
     >
-    > 1. DNS resolution: By default, containers connected to the default bridge network can communicate with each other, but only by IP address. (unless you use `--link` option which is considered legacy). It is not recommended for production use due to the various [technical shortcomings](/network/drivers/bridge/#differences-between-user-defined-bridges-and-the-default-bridge). On a custom network, containers can resolve each other by name or alias.
+    > 1. DNS resolution: By default, containers connected to the default bridge network can communicate with each other, but only by IP address. (unless you use `--link` option which is considered legacy). It is not recommended for production use due to the various [technical shortcomings](network/drivers/bridge/#differences-between-user-defined-bridges-and-the-default-bridge). On a custom network, containers can resolve each other by name or alias.
     > 2. Isolation: All containers without a `--network` specified are attached to the default bridge network, hence can be a risk, as unrelated containers are then able to communicate. Using a custom network provides a scoped network in which only containers attached to that network are able to communicate, hence providing better isolation.
     { .tip }
 
@@ -156,7 +156,7 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
         entrypoint: ["docker-entrypoint.sh", "postgres"]
         command: ["-h", "localhost", "-p", "5432"]
         environment:
-          POSTGRES_PASSWORD: secret 
+          POSTGRES_PASSWORD: secret
     ```
 
 
@@ -182,14 +182,14 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
 
 
     > **Note**
-    > 
+    >
     > The PostgreSQL image sets up trust authentication locally so you may notice a password isn't required when connecting from localhost (inside the same container). However, a password will be required if connecting from a different host/container.
 
 ### Override the default CMD and ENTRYPOINT with `docker run`
 
 You can also override defaults directly using the `docker run` command with the following command:
 
-```console 
+```console
 $ docker run -e POSTGRES_PASSWORD=secret postgres docker-entrypoint.sh -h localhost -p 5432
 ```
 
@@ -198,8 +198,8 @@ This command runs a Postgres container, sets an environment variable for passwor
 
 ## Additional resources
 
-* [Ways to set environment variables with Compose](/compose/environment-variables/set-environment-variables/)
-* [What is a container](/guides/docker-concepts/the-basics/what-is-a-container/)
+* [Ways to set environment variables with Compose](compose/environment-variables/set-environment-variables/)
+* [What is a container](guides/docker-concepts/the-basics/what-is-a-container/)
 
 ## Next steps
 

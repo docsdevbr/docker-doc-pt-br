@@ -10,9 +10,9 @@ Every Engine release strives to be backward compatible with its predecessors,
 and interface stability is always a priority at Docker.
 
 In all cases, feature removal is communicated three releases
-in advance and documented as part of the [deprecated features](/engine/deprecated/)
+in advance and documented as part of the [deprecated features](engine/deprecated/)
 page.
-  
+
 The following list compiles any updates to Docker Engine that created
 backwards-incompatibility for old versions of Docker tools.
 

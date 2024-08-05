@@ -91,14 +91,14 @@ The full release note for this release is available
 
   In addition to the default `build` method, the following methods are implemented by Dockerfile frontend:
 
-  - [`--call=check`](/reference/cli/docker/buildx/build.md#check): Run validation routines for your build configuration. For more information about build checks, see [Build checks](/build/checks.md)
-  - [`--call=outline`](/reference/cli/docker/buildx/build.md#call-outline): Show configuration that would be used by current build, including all build arguments, secrets, SSH mounts, etc., that your build would use.
-  - [`--call=targets`](/reference/cli/docker/buildx/build.md#call-targets): Show all available targets and their descriptions.
+  - [`--call=check`](reference/cli/docker/buildx/build.md#check): Run validation routines for your build configuration. For more information about build checks, see [Build checks](build/checks.md)
+  - [`--call=outline`](reference/cli/docker/buildx/build.md#call-outline): Show configuration that would be used by current build, including all build arguments, secrets, SSH mounts, etc., that your build would use.
+  - [`--call=targets`](reference/cli/docker/buildx/build.md#call-targets): Show all available targets and their descriptions.
 
 - New `--prefer-index` flag has been added to the `docker buildx imagetools create` command to control the behavior of creating image out of one single-platform image manifest. [docker/buildx#2482](https://github.com/docker/buildx/pull/2482/)
-- The [`kubernetes` driver](/build/drivers/kubernetes.md) now supports a `timeout` option for configuring deployment timeout. [docker/buildx#2492](https://github.com/docker/buildx/pull/2492/)
+- The [`kubernetes` driver](build/drivers/kubernetes.md) now supports a `timeout` option for configuring deployment timeout. [docker/buildx#2492](https://github.com/docker/buildx/pull/2492/)
 - New metrics definitions have been added for build warning types. [docker/buildx#2482](https://github.com/docker/buildx/pull/2482/), [docker/buildx#2507](https://github.com/docker/buildx/pull/2507/)
-- The [`buildx prune`](/reference/cli/docker/buildx/prune.md) and [`buildx du`](/reference/cli/docker/buildx/du.md) commands now support negative and prefix filters. [docker/buildx#2473](https://github.com/docker/buildx/pull/2473/)
+- The [`buildx prune`](reference/cli/docker/buildx/prune.md) and [`buildx du`](reference/cli/docker/buildx/du.md) commands now support negative and prefix filters. [docker/buildx#2473](https://github.com/docker/buildx/pull/2473/)
 - Building Compose files with Bake now supports passing SSH forwarding configuration. [docker/buildx#2445](https://github.com/docker/buildx/pull/2445/)
 - Fix issue with configuring the `kubernetes` driver with custom TLS certificates. [docker/buildx#2454](https://github.com/docker/buildx/pull/2454/)
 - Fix concurrent kubeconfig access when loading nodes. [docker/buildx#2497](https://github.com/docker/buildx/pull/2497/)
@@ -701,7 +701,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ### New
 
-- Build command now accepts `--build-context` flag to [define additional named build contexts](/reference/cli/docker/buildx/build/#build-context)
+- Build command now accepts `--build-context` flag to [define additional named build contexts](reference/cli/docker/buildx/build/#build-context)
   for your builds. [docker/buildx#904](https://github.com/docker/buildx/issues/904)
 - Bake definitions now support [defining dependencies between targets](bake/contexts.md)
   and using the result of one target in another build.

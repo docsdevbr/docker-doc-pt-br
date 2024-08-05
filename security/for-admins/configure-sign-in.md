@@ -38,14 +38,14 @@ following occurs:
 > If your organization is also using single sign-on (SSO), you can optionally enforce SSO.
 > This means that your users must use SSO to sign in, instead of a username and password.
 > When you enforce sign-in and enforce SSO, your users must sign in and must use SSO to do so.
-> See [Enforce SSO](/security/for-admins/single-sign-on/connect#optional-enforce-sso) for details on how to enable this for your SSO connection.
+> See [Enforce SSO](security/for-admins/single-sign-on/connect#optional-enforce-sso) for details on how to enable this for your SSO connection.
 { .tip }
 
 
 ## Create a registry.json file to enforce sign-in
 
 1. Ensure that the user is a member of your organization in Docker. For more
-details, see [Manage members](/admin/organization/members/).
+details, see [Manage members](admin/organization/members/).
 
 2. Create the `registry.json` file.
 
@@ -71,8 +71,8 @@ details, see [Manage members](/admin/organization/members/).
 4. Verify that sign-in is enforced.
 
     To activate the `registry.json` file, restart Docker Desktop on the user’s machine. When Docker Desktop starts, verify that the **Sign in
-    required!** prompt appears. 
-    
+    required!** prompt appears.
+
     In some cases, a system reboot may be necessary for the enforcement to take effect.
 
     > **Tip**

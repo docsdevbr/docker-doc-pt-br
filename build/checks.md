@@ -12,7 +12,7 @@ build. Think of it as an advanced form of linting for your Dockerfile and build
 options, or a dry-run mode for builds.
 
 You can find the list of checks available, and a description of each, in the
-[Build checks reference](/reference/build-checks/).
+[Build checks reference](reference/build-checks/).
 
 ## How build checks work
 
@@ -46,7 +46,7 @@ $ docker build .
 ```
 
 In this example, the build ran successfully, but a
-[JSONArgsRecommended](/reference/build-checks/json-args-recommended/) warning
+[JSONArgsRecommended](reference/build-checks/json-args-recommended/) warning
 was reported, because `CMD` instructions should use JSON array syntax.
 
 ### More verbose output

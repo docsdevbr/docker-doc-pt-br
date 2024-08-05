@@ -1,5 +1,5 @@
 If you have turned on the
-[Docker Desktop Builds view](/desktop/use-desktop/builds/), you can use the
+[Docker Desktop Builds view](desktop/use-desktop/builds/), you can use the
 **Builders** tab to inspect and manage builders in the Docker Desktop settings.
 
 ### Inspect
@@ -30,14 +30,14 @@ Your build commands now use the selected builder by default.
 ### Create a builder
 
 To create a builder, use the Docker CLI. See
-[Create a new builder](/build/builders/manage/#create-a-new-builder)
+[Create a new builder](build/builders/manage/#create-a-new-builder)
 
 ### Remove a builder
 
 You can remove a builder if:
 
-- The builder isn't your [selected builder](/build/builders/#selected-builder)
-- The builder isn't [associated with a Docker context](/build/builders/#default-builder).
+- The builder isn't your [selected builder](build/builders/#selected-builder)
+- The builder isn't [associated with a Docker context](build/builders/#default-builder).
 
   To remove builders associated with a Docker context, remove the context using
   the `docker context rm` command.
@@ -54,7 +54,7 @@ the build cache is also removed, along with the builder.
 ### Stop and start a builder
 
 Builders that use the
-[`docker-container` driver](/build/drivers/docker-container/)
+[`docker-container` driver](build/drivers/docker-container/)
 run the BuildKit daemon in a container.
 You can start and stop the BuildKit container using the drop-down menu.
 

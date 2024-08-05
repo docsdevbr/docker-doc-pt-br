@@ -151,7 +151,7 @@ $ docker build \
   --push .
 ```
 
-For more information, see [Docker Build Cloud](/build-cloud/_index.md).
+For more information, see [Docker Build Cloud](build-cloud/_index.md).
 
 ### Cross-compilation
 
@@ -259,7 +259,7 @@ $ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t <userna
 ```
 
 > **Note**
-> 
+>
 > * `<username>` must be a valid Docker ID and `<image>` and valid repository on
 >   Docker Hub.
 > * The `--platform` flag informs buildx to create Linux images for x86 64-bit,

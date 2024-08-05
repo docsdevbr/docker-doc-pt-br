@@ -11,7 +11,7 @@ Docker and the broader community of Docker experts have put together many differ
 
 ## Docker Training
 
-Expand your knowledge on all things Docker with [basic to advanced trainings from Docker experts](https://www.docker.com/resources/trainings/). 
+Expand your knowledge on all things Docker with [basic to advanced trainings from Docker experts](https://www.docker.com/resources/trainings/).
 
 You can find recorded content at your own convenience, or register for a live session to participate in Q&A.
 
@@ -54,7 +54,7 @@ If books are your preferred learning style, check out these written by the [Dock
 
 ## CLI cheat sheet
 
-The [Docker CLI cheat sheet](/get-started/docker_cheatsheet.pdf) features the common Docker CLI commands for easy reference. It covers working with Images, Containers, Docker Hub, and other general purpose commands.
+The [Docker CLI cheat sheet](get-started/docker_cheatsheet.pdf) features the common Docker CLI commands for easy reference. It covers working with Images, Containers, Docker Hub, and other general purpose commands.
 
 ## Self-Paced online learning
 

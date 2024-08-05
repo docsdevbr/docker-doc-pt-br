@@ -6,10 +6,10 @@ title: Configure your IdP
 
 The steps to set up your SSO configuration are:
 
-1. [Add and verify the domain or domains](/security/for-admins/single-sign-on/configure#step-one-add-and-verify-your-domain) that your members use to sign in to Docker.
-2. [Create your SSO connection](/security/for-admins/single-sign-on/configure#step-two-create-an-sso-connection-in-docker) in Docker.
+1. [Add and verify the domain or domains](security/for-admins/single-sign-on/configure#step-one-add-and-verify-your-domain) that your members use to sign in to Docker.
+2. [Create your SSO connection](security/for-admins/single-sign-on/configure#step-two-create-an-sso-connection-in-docker) in Docker.
 3. [Configure your IdP](#step-three-configure-your-idp-to-work-with-docker) to work with Docker.
-4. [Complete your SSO connection](/security/for-admins/single-sign-on/connect/) in Docker.
+4. [Complete your SSO connection](security/for-admins/single-sign-on/connect/) in Docker.
 
 This page walks through step 3 for common IdPs.
 
@@ -43,7 +43,7 @@ If you use SAML for your SSO connection, Docker obtains these attributes from th
 
 > **Tip**
 >
-> Optional Just-in-Time (JIT) provisioning is available when you use the Admin Console and enable SCIM. With this feature, you can avoid conflicts between SCIM and JIT by disabling JIT provisioning in your SSO connection. See [SSO authentication with JIT provisioning disabled](/security/for-admins/provisioning/just-in-time/#sso-authentication-with-jit-provisioning-disabled).
+> Optional Just-in-Time (JIT) provisioning is available when you use the Admin Console and enable SCIM. With this feature, you can avoid conflicts between SCIM and JIT by disabling JIT provisioning in your SSO connection. See [SSO authentication with JIT provisioning disabled](security/for-admins/provisioning/just-in-time/#sso-authentication-with-jit-provisioning-disabled).
 { .tip }
 
 You can also configure attributes to override default values, such as default team or organization. See [role mapping](../../provisioning/scim.md#set-up-role-mapping).
@@ -81,7 +81,7 @@ See [More resources](#more-resources) for a video overview on how to set up SSO 
     - Name ID format: `EmailAddress`
     - Application username: `Email`
     - Update application on: `Create or Update`
-    - Attribute Statements: `add`. You can define your attribute statement like the following: 
+    - Attribute Statements: `add`. You can define your attribute statement like the following:
 
      | Attribute name | Name format | Value                                    |
      | :------------- | :---------- | :--------------------------------------- |

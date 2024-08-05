@@ -33,15 +33,15 @@ exceptions affecting images in your organization. You can also go to the image
 view in the Docker Scout Dashboard to see all exceptions that apply to a given
 image.
 
-For more information, see [Manage vulnerability exceptions](/scout/explore/exceptions.md).
+For more information, see [Manage vulnerability exceptions](scout/explore/exceptions.md).
 If you're new to VEX, check out this use-case guide:
-[Suppress image vulnerabilities with VEX](/scout/guides/vex.md).
+[Suppress image vulnerabilities with VEX](scout/guides/vex.md).
 
 ### 2024-05-06
 
 New HTTP endpoint that lets you scrape data from Docker Scout with Prometheus,
 to create your own vulnerability and policy dashboards with Grafana.
-For more information, see [Docker Scout metrics exporter](/scout/explore/metrics-exporter.md).
+For more information, see [Docker Scout metrics exporter](scout/explore/metrics-exporter.md).
 
 ## Q1 2024
 

@@ -54,7 +54,7 @@ secrets:
 > **Note**
 >
 > To learn more about the instructions in the Compose file, see [Compose file
-> reference](/compose/compose-file/).
+> reference](compose/compose-file/).
 
 Before you run the application using Compose, notice that this Compose file specifies a `password.txt` file to hold the database's password. You must create this file as it's not included in the source repository.
 
@@ -102,7 +102,7 @@ Now, run the following `docker compose up` command to start your application.
 $ docker compose up --build
 ```
 
-In Ruby on Rails, `db:migrate` is a Rake task that is used to run migrations on the database. Migrations are a way to alter the structure of your database schema over time in a consistent and easy way. 
+In Ruby on Rails, `db:migrate` is a Rake task that is used to run migrations on the database. Migrations are a way to alter the structure of your database schema over time in a consistent and easy way.
 
 ```console
 $ docker exec -it docker-ruby-on-rails-web-1 rake db:migrate RAILS_ENV=test
@@ -117,7 +117,7 @@ You will see a similar message like this:
 == 20240710193146 CreateWhales: migrated (0.0127s) ============================
 ``
 
-Refresh <http://localhost:3000> in your browser and add the whales. 
+Refresh <http://localhost:3000> in your browser and add the whales.
 
 Press `ctrl+c` in the terminal to stop your application and run `docker compose up` again, the whales are being persisted.
 
@@ -188,7 +188,7 @@ In this section, you took a look at setting up your Compose file to add a local
 database and persist data. You also learned how to use Compose Watch to automatically rebuild and run your container when you update your code.
 
 Related information:
- - [Compose file reference](/compose/compose-file/)
+ - [Compose file reference](compose/compose-file/)
  - [Compose file watch](../../compose/file-watch.md)
  - [Multi-stage builds](../../build/building/multi-stage.md)
 

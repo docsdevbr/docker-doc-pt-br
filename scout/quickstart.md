@@ -46,7 +46,7 @@ a vulnerable Node.js application that you can use to follow along.
 Docker Scout analyzes all local images by default. To analyze images in
 remote repositories, you need to enable it first.
 You can do this from Docker Hub, the Docker Scout Dashboard, and CLI.
-[Find out how in the overview guide](/scout).
+[Find out how in the overview guide](scout).
 
 1. Sign in to your Docker account with the `docker login` command or use the
    **Sign in** button in Docker Desktop.
@@ -81,7 +81,7 @@ Docker Scout analyzes the image you built most recently by default,
 so there's no need to specify the name of the image in this case.
 
 Learn more about the `docker scout cves` command in the
-[`CLI reference documentation`](/reference/cli/docker/scout/cves).
+[`CLI reference documentation`](reference/cli/docker/scout/cves).
 
 ## Step 4: Fix application vulnerabilities
 
@@ -116,16 +116,16 @@ $ docker scout cves --only-package express
 
   ## Overview
 
-                      │                  Analyzed Image                   
+                      │                  Analyzed Image
   ────────────────────┼───────────────────────────────────────────────────
-    Target            │  mobywhale/scout-demo:v2                   
-      digest          │  ef68417b2866                                     
-      platform        │ linux/arm64                                       
-      provenance      │ https://github.com/docker/scout-demo-service.git  
-                      │  7c3a06793fc8f97961b4a40c73e0f7ed85501857         
-      vulnerabilities │    0C     0H     0M     0L                        
-      size            │ 19 MB                                             
-      packages        │ 1                                                 
+    Target            │  mobywhale/scout-demo:v2
+      digest          │  ef68417b2866
+      platform        │ linux/arm64
+      provenance      │ https://github.com/docker/scout-demo-service.git
+                      │  7c3a06793fc8f97961b4a40c73e0f7ed85501857
+      vulnerabilities │    0C     0H     0M     0L
+      size            │ 19 MB
+      packages        │ 1
 
 
   ## Packages and Vulnerabilities
@@ -274,8 +274,8 @@ to policy customization, and runtime environment monitoring in real-time.
 
 Check out the following sections:
 
-- [Image analysis](/scout/explore/analysis.md)
-- [Data sources](/scout/advisory-db-sources)
-- [Docker Scout Dashboard](/scout/dashboard)
+- [Image analysis](scout/explore/analysis.md)
+- [Data sources](scout/advisory-db-sources)
+- [Docker Scout Dashboard](scout/dashboard)
 - [Integrations](./integrations/_index.md)
 - [Policy evaluation](./policy/_index.md)

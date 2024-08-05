@@ -41,7 +41,7 @@ What you'll see is that the file created in one container isn't available in ano
 
 4. Run a new Alpine container and use the `cat` command to verify that the
    file does not exist.
-   
+
    ```console
    $ docker run alpine cat greeting.txt
    ```
@@ -58,11 +58,11 @@ What you'll see is that the file created in one container isn't available in ano
 
 ## Container volumes
 
-With the previous experiment, you saw that each container starts from the image definition each time it starts. 
-While containers can create, update, and delete files, those changes are lost when you remove the container 
+With the previous experiment, you saw that each container starts from the image definition each time it starts.
+While containers can create, update, and delete files, those changes are lost when you remove the container
 and Docker isolates all changes to that container. With volumes, you can change all of this.
 
-[Volumes](../../storage/volumes.md) provide the ability to connect specific filesystem paths of 
+[Volumes](../../storage/volumes.md) provide the ability to connect specific filesystem paths of
 the container back to the host machine. If you mount a directory in the container, changes in that
 directory are also seen on the host machine. If you mount that same directory across container restarts, you'd see
 the same files.
@@ -77,10 +77,10 @@ it works for small demos. You'll learn how to switch this to a different databas
 
 With the database being a single file, if you can persist that file on the host and make it available to the
 next container, it should be able to pick up where the last one left off. By creating a volume and attaching
-(often called "mounting") it to the directory where you stored the data, you can persist the data. As your container 
+(often called "mounting") it to the directory where you stored the data, you can persist the data. As your container
 writes to the `todo.db` file, it will persist the data to the host in the volume.
 
-As mentioned, you're going to use a volume mount. Think of a volume mount as an opaque bucket of data. 
+As mentioned, you're going to use a volume mount. Think of a volume mount as an opaque bucket of data.
 Docker fully manages the volume, including the storage location on disk. You only need to remember the
 name of the volume.
 
@@ -160,7 +160,7 @@ To start the todo app container with the volume mounted:
 1. Once the container starts up, open the app and add a few items to your todo list.
 
     ![Items added to todo list](images/items-added.webp)
-    
+
 
 2. Stop and remove the container for the todo app. Use Docker Desktop or `docker ps` to get the ID and then `docker rm -f <id>` to remove it.
 
@@ -174,7 +174,7 @@ You've now learned how to persist data.
 
 ## Dive into the volume
 
-A lot of people frequently ask "Where is Docker storing my data when I use a volume?" If you want to know, 
+A lot of people frequently ask "Where is Docker storing my data when I use a volume?" If you want to know,
 you can use the `docker volume inspect` command.
 
 ```console
@@ -204,7 +204,7 @@ In this section, you learned how to persist container data.
 
 Related information:
 
- - [docker CLI reference](/reference/cli/docker/)
+ - [docker CLI reference](reference/cli/docker/)
  - [Volumes](../../storage/volumes.md)
 
 ## Next steps

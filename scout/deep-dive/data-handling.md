@@ -70,7 +70,7 @@ and packages, and application-level packages such as maven, npm, and so on.
 ### Environment metadata
 
 If you integrate Docker Scout with your runtime environment via the
-[Sysdig integration](/scout/integrations/environment/sysdig.md),
+[Sysdig integration](scout/integrations/environment/sysdig.md),
 Docker Scout collects the following data points about your deployments:
 
 - Kubernetes namespace
@@ -85,7 +85,7 @@ Docker Scout platform; it's only used to run the analysis.
 
 ### Provenance
 
-For images with [provenance attestations](/build/attestations/slsa-provenance.md),
+For images with [provenance attestations](build/attestations/slsa-provenance.md),
 Docker Scout stores the following data in addition to the SBOM:
 
 - Materials

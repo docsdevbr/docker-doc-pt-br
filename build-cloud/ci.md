@@ -38,7 +38,7 @@ See [Loading build results](./usage/#loading-build-results) for details.
 >
 > Version 4.0.0 and later of `docker/build-push-action` and
 > `docker/bake-action` builds images with [provenance attestations by
-> default](/build/ci/github-actions/attestations.md#default-provenance). Docker
+> default](build/ci/github-actions/attestations.md#default-provenance). Docker
 > Build Cloud automatically attempts to load images to the local image store if
 > you don't explicitly push them to a registry.
 >
@@ -311,8 +311,8 @@ pipeline {
 {{< tab name="Travis CI" >}}
 
 ```yaml
-language: minimal 
-dist: jammy 
+language: minimal
+dist: jammy
 
 services:
   - docker
@@ -325,7 +325,7 @@ before_install: |
   echo "$DOCKER_PAT" | docker login --username "$DOCKER_USER" --password-stdin
 
 install: |
-  set -e 
+  set -e
   BUILDX_URL=$(curl -s https://raw.githubusercontent.com/docker/actions-toolkit/main/.github/buildx-lab-releases.json | jq -r ".latest.assets[] | select(endswith(\"linux-$TRAVIS_CPU_ARCH\"))")
   mkdir -vp ~/.docker/cli-plugins/
   curl --silent -L --output ~/.docker/cli-plugins/docker-buildx $BUILDX_URL

@@ -79,7 +79,7 @@ To run a container using the GUI:
    - **Environment variables**:
       - `MYSQL_ROOT_PASSWORD`:`my-secret-pw`
       - `MYSQL_DATABASE`:`mydb`
-   
+
    ![The optional settings screen with the options specified.](images/databases-1.webp)
 
 6. Select `Run`.
@@ -224,7 +224,7 @@ To run a container using the GUI:
    - **Environment variables**:
       - `MYSQL_ROOT_PASSWORD`:`my-secret-pw`
       - `MYSQL_DATABASE`:`mydb`
-      
+
    ![The optional settings screen with the options specified.](images/databases-2.webp)
 
 6. Select `Run`.
@@ -323,7 +323,7 @@ To run a database container with a volume attached, and then verify that the
 data persists:
 
 1. Run the container and attach the volume.
-   
+
    ```console
    $ docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -e MYSQL_DATABASE=mydb -v my-db-volume:/var/lib/mysql -d mysql:latest
    ```
@@ -332,11 +332,11 @@ data persists:
 
 2. Create some data in the database. Use the `docker exec` command to run
    `mysql` inside the container and create a table.
-   
+
    ```console
    $ docker exec my-mysql mysql -u root -pmy-secret-pw -e "CREATE TABLE IF NOT EXISTS mydb.mytable (column_name VARCHAR(255)); INSERT INTO mydb.mytable (column_name) VALUES ('value');"
    ```
-   
+
    This command uses the `mysql` tool in the container to create a table named
    `mytable` with a column named `column_name`, and finally inserts a value of
    `value`.
@@ -403,7 +403,7 @@ data persists:
    1. In the **Containers** view, next to your container select the **Show
       container actions** icon, and then select **Open in terminal**.
    2. Run the following command in the container's terminal to add a table.
-      
+
       ```console
       # mysql -u root -pmy-secret-pw -e "CREATE TABLE IF NOT EXISTS mydb.mytable (column_name VARCHAR(255)); INSERT INTO mydb.mytable (column_name) VALUES ('value');"
       ```
@@ -440,7 +440,7 @@ data persists:
       container actions** icon, and then select **Open in terminal**.
    2. Run the following command in the container's terminal to verify that table
       you created still exists.
-      
+
       ```console
       # mysql -u root -pmy-secret-pw -e "SELECT * FROM mydb.mytable;"
       ```
@@ -506,7 +506,7 @@ To build and run your custom image:
       container's `/docker-entrypoint-initdb.d/` directory. In this directory,
       `.sh`, `.sql`, and `.sql.gz` scripts are executed when the container is
       started for the first time. For more details about Dockerifles, see the
-      [Dockerfile reference](/reference/dockerfile/).
+      [Dockerfile reference](reference/dockerfile/).
 
    3. Create a script file to initialize a table in the database. In the
       directory where your `Dockerfile` is located, create a subdirectory named
@@ -595,7 +595,7 @@ To run your containers with Docker Compose:
    1. Create a file named `compose.yaml` in your project directory. This file
       will define the services, networks, and volumes.
    2. Add the following content to the `compose.yaml` file.
-      
+
       ```yaml
       services:
         db:
@@ -635,13 +635,13 @@ To run your containers with Docker Compose:
         allowing you to connect to the database from your host machine.
       - `volumes` mounts `my-db-volume` to `/var/lib/mysql` inside the container
         to persist database data.
-    
+
       In addition to the database service, there is a phpMyAdmin service. By
       default Compose sets up a single network for your app. Each container for
       a service joins the default network and is both reachable by other
       containers on that network, and discoverable by the service's name.
       Therefore, in the `PMA_HOST` environment variable, you can specify the
-      service name, `db`, in order to connect to the database service. For more details about Compose, see the [Compose file reference](/compose/compose-file/).
+      service name, `db`, in order to connect to the database service. For more details about Compose, see the [Compose file reference](compose/compose-file/).
 
 2. Run Docker Compose.
    1. Open a terminal and change directory to the directory where your
@@ -650,7 +650,7 @@ To run your containers with Docker Compose:
       ```console
       $ docker compose up
       ```
-      
+
       You can now access phpMyAdmin at
       [http://localhost:8080](http://localhost:8080) and connect to your
       database using `root` as the username and `my-secret-pw` as the password.
@@ -672,7 +672,7 @@ data-driven applications remain robust and scalable.
 Related information:
 
 - [Docker Hub database images](https://hub.docker.com/search?q=database&type=image)
-- [Dockerfile reference](/reference/dockerfile/)
-- [Compose file reference](/compose/compose-file/)
-- [CLI reference](/reference/cli/docker/)
+- [Dockerfile reference](reference/dockerfile/)
+- [Compose file reference](compose/compose-file/)
+- [CLI reference](reference/cli/docker/)
 - [Database samples](../../samples/_index.md#databases)

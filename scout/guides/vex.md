@@ -207,12 +207,12 @@ You should now see `VEX` fields appear in the output of the command.
 ```text {hl_lines=[7,8]}
 ✗ HIGH CVE-2022-24999 [OWASP Top Ten 2017 Category A9 - Using Components with Known Vulnerabilities]
   https://scout.docker.com/v/CVE-2022-24999
-  Affected range : <4.17.3                                             
-  Fixed version  : 4.17.3                                              
-  CVSS Score     : 7.5                                                 
-  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H        
-  VEX            : not affected [vulnerable code not in execute path]  
-                 : author@example.com     
+  Affected range : <4.17.3
+  Fixed version  : 4.17.3
+  CVSS Score     : 7.5
+  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+  VEX            : not affected [vulnerable code not in execute path]
+                 : author@example.com
 ```
 
 ## Attach VEX documents to images
@@ -297,4 +297,4 @@ For more information about VEX:
 - [VEX Status Justifications (CISA)](https://www.cisa.gov/sites/default/files/publications/VEX_Status_Justification_Jun22.pdf)
 - [VEX Use Cases (CISA)](https://www.cisa.gov/sites/default/files/publications/VEX_Use_Cases_Document_508c.pdf)
 - [OpenVEX specification](https://github.com/openvex/spec/blob/main/OPENVEX-SPEC.md)
-- [Manage vulnerability exceptions](/scout/explore/exceptions.md)
+- [Manage vulnerability exceptions](scout/explore/exceptions.md)

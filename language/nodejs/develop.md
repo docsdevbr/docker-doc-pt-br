@@ -48,14 +48,14 @@ You can use containers to set up local services, like a database. In this sectio
          NODE_ENV: production
        ports:
          - 3000:3000
-   
+
    # The commented out section below is an example of how to define a PostgreSQL
    # database that your application can use. `depends_on` tells Docker Compose to
    # start the database before your application. The `db-data` volume persists the
    # database data between container restarts. The `db-password` secret is used
    # to set the database password. You must create `db/password.txt` and add
    # a password of your choosing to it before running `docker-compose up`.
-       
+
        depends_on:
          db:
            condition: service_healthy
@@ -87,7 +87,7 @@ You can use containers to set up local services, like a database. In this sectio
    > **Note**
    >
    > To learn more about the instructions in the Compose file, see [Compose file
-   > reference](/compose/compose-file/).
+   > reference](compose/compose-file/).
 
 
 3. Open `src/persistence/postgres.js` in an IDE or text editor. You'll notice
@@ -119,14 +119,14 @@ have these variables defined yet.
          POSTGRES_DB: example
        ports:
          - 3000:3000
-   
+
    # The commented out section below is an example of how to define a PostgreSQL
    # database that your application can use. `depends_on` tells Docker Compose to
    # start the database before your application. The `db-data` volume persists the
    # database data between container restarts. The `db-password` secret is used
    # to set the database password. You must create `db/password.txt` and add
    # a password of your choosing to it before running `docker-compose up`.
-       
+
        depends_on:
          db:
            condition: service_healthy
@@ -179,14 +179,14 @@ have these variables defined yet.
          POSTGRES_DB: example
        ports:
          - 3000:3000
-   
+
    # The commented out section below is an example of how to define a PostgreSQL
    # database that your application can use. `depends_on` tells Docker Compose to
    # start the database before your application. The `db-data` volume persists the
    # database data between container restarts. The `db-password` secret is used
    # to set the database password. You must create `db/password.txt` and add
    # a password of your choosing to it before running `docker-compose up`.
-       
+
        depends_on:
          db:
            condition: service_healthy
@@ -220,7 +220,7 @@ have these variables defined yet.
 6. In the `docker-nodejs-sample` directory, create a directory named `db`.
 7. In the `db` directory, create a file named `password.txt`. This file will
    contain your database password.
-   
+
    You should now have at least the following contents in your
    `docker-nodejs-sample` directory.
 
@@ -418,8 +418,8 @@ database and persist data. You also learned how to create a multi-stage
 Dockerfile and set up a bind mount for development.
 
 Related information:
- - [Volumes top-level element](/compose/compose-file/07-volumes/)
- - [Services top-level element](/compose/compose-file/05-services/)
+ - [Volumes top-level element](compose/compose-file/07-volumes/)
+ - [Services top-level element](compose/compose-file/05-services/)
  - [Multi-stage builds](../../build/building/multi-stage.md)
 
 ## Next steps

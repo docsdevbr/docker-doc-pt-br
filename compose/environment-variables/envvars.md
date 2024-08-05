@@ -6,7 +6,7 @@ aliases:
 - /compose/reference/envvars/
 ---
 
-Compose already comes with pre-defined environment variables. It also inherits common Docker CLI environment variables, such as `DOCKER_HOST` and `DOCKER_CONTEXT`. See [Docker CLI environment variable reference](/engine/reference/commandline/cli/#environment-variables) for details.
+Compose already comes with pre-defined environment variables. It also inherits common Docker CLI environment variables, such as `DOCKER_HOST` and `DOCKER_CONTEXT`. See [Docker CLI environment variable reference](engine/reference/commandline/cli/#environment-variables) for details.
 
 This page contains information on how you can set or change the following pre-defined environment variables if you need to:
 
@@ -25,11 +25,11 @@ This page contains information on how you can set or change the following pre-de
 - `COMPOSE_MENU`
 - `COMPOSE_EXPERIMENTAL`
 
-## Methods to override 
+## Methods to override
 
 You can set or change the pre-defined environment variables:
 - Within your Compose file using the [`environment` attribute](set-environment-variables.md#use-the-environment-attribute)
-- With the `env-file` attribute and an [environment file](set-environment-variables.md#use-the-env_file-attribute) 
+- With the `env-file` attribute and an [environment file](set-environment-variables.md#use-the-env_file-attribute)
 - From the command line
 - From your [shell](variable-interpolation.md#substitute-from-the-shell)
 
@@ -42,12 +42,12 @@ When changing or setting any environment variables, be aware of [Environment var
 Sets the project name. This value is prepended along with the service name to
 the container's name on startup.
 
-For example, if your project name is `myapp` and it includes two services `db` and `web`, 
+For example, if your project name is `myapp` and it includes two services `db` and `web`,
 then Compose starts containers named `myapp-db-1` and `myapp-web-1` respectively.
 
 Compose can set the project name in different ways. The level of precedence (from highest to lowest) for each method is as follows:
 
-1. The `-p` command line flag 
+1. The `-p` command line flag
 2. `COMPOSE_PROJECT_NAME`
 3. The top level `name:` variable from the config file (or the last `name:` from
   a series of config files specified using `-f`)
@@ -71,9 +71,9 @@ Specifies the path to a Compose file. Specifying multiple Compose files is suppo
     * Mac and Linux: `:` (colon),
     * Windows: `;` (semicolon).
 
-The path separator can also be customized using `COMPOSE_PATH_SEPARATOR`.  
+The path separator can also be customized using `COMPOSE_PATH_SEPARATOR`.
 
-Example: `COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml`.  
+Example: `COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml`.
 
 See also the [command-line options overview](../reference/index.md#command-options-overview-and-help) and [using `-f` to specify name and path of one or more Compose files](../reference/index.md#use--f-to-specify-name-and-path-of-one-or-more-compose-files).
 
@@ -82,12 +82,12 @@ See also the [command-line options overview](../reference/index.md#command-optio
 Specifies one or more profiles to be enabled on `compose up` execution.
 Services with matching profiles are started as well as any services for which no profile has been defined.
 
-For example, calling `docker compose up`with `COMPOSE_PROFILES=frontend` selects services with the 
+For example, calling `docker compose up`with `COMPOSE_PROFILES=frontend` selects services with the
 `frontend` profile as well as any services without a profile specified.
 
 * Default separator: specify a list of profiles using a comma as separator.
 
-Example: `COMPOSE_PROFILES=frontend,debug`  
+Example: `COMPOSE_PROFILES=frontend,debug`
 This example enables all services matching both the `frontend` and `debug` profiles and services without a profile.
 
 See also [Using profiles with Compose](../profiles.md) and the [`--profile` command-line option](../reference/index.md#use---profile-to-specify-one-or-more-active-profiles).
@@ -96,7 +96,7 @@ See also [Using profiles with Compose](../profiles.md) and the [`--profile` comm
 
 When enabled, Compose performs path conversion from Windows-style to Unix-style in volume definitions.
 
-* Supported values: 
+* Supported values:
     * `true` or `1`, to enable,
     * `false` or `0`, to disable.
 * Defaults to: `0`.
@@ -113,7 +113,7 @@ Specifies a different path separator for items listed in `COMPOSE_FILE`.
 
 When enabled, Compose doesn't try to detect orphaned containers for the project.
 
-* Supported values: 
+* Supported values:
     * `true` or `1`, to enable,
     * `false` or `0`, to disable.
 * Defaults to: `0`.
@@ -124,7 +124,7 @@ Specifies the maximum level of parallelism for concurrent engine calls.
 
 ### COMPOSE\_ANSI
 
-Specifies when to print ANSI control characters. 
+Specifies when to print ANSI control characters.
 
 * Supported values:
   * `auto`, Compose detects if TTY mode can be used. Otherwise, use plain text mode.
@@ -134,7 +134,7 @@ Specifies when to print ANSI control characters.
 
 ### COMPOSE\_STATUS\_STDOUT
 
-When enabled, Compose writes its internal status and progress messages to `stdout` instead of `stderr`. 
+When enabled, Compose writes its internal status and progress messages to `stdout` instead of `stderr`.
 The default value is false to clearly separate the output streams between Compose messages and your container's logs.
 
 * Supported values:
@@ -146,7 +146,7 @@ The default value is false to clearly separate the output streams between Compos
 
 Lets you specify which environment files Compose should use if `--env-file` isn't used.
 
-When using multiple environment files, use a comma as a separator. For example, 
+When using multiple environment files, use a comma as a separator. For example,
 
 ```console
 COMPOSE_ENV_FILES=.env.envfile1, .env.envfile2
@@ -186,7 +186,7 @@ The following environment variables have no effect in Compose V2.
 For more information, see [Migrate to Compose V2](../migrate.md).
 
 - `COMPOSE_API_VERSION`
-    By default the API version is negotiated with the server. Use `DOCKER_API_VERSION`.  
+    By default the API version is negotiated with the server. Use `DOCKER_API_VERSION`.
     See the [Docker CLI environment variable reference](../../../engine/reference/commandline/cli/#environment-variables) page.
 - `COMPOSE_HTTP_TIMEOUT`
 - `COMPOSE_TLS_VERSION`

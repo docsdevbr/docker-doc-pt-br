@@ -31,11 +31,11 @@ more efficient:
 - [Multi-threaded tools](#multi-threaded-tools)
 
 For more information on how to optimize your builds, see
-[Building best practices](/build/building/best-practices.md).
+[Building best practices](build/building/best-practices.md).
 
 ### Dockerignore files
 
-Using a [`.dockerignore` file](/build/building/context/#dockerignore-files),
+Using a [`.dockerignore` file](build/building/context/#dockerignore-files),
 you can be explicit about which local files you don’t want to include in the
 build context. Files caught by the glob patterns you specify in your
 ignore-file aren't transferred to the remote builder.
@@ -65,14 +65,14 @@ binaries, for example.
 
 ### Multi-stage builds
 
-[Multi-stage builds](/build/building/multi-stage/) can make your build run faster,
+[Multi-stage builds](build/building/multi-stage/) can make your build run faster,
 because stages can run in parallel. It can also make your end-result smaller.
 Write your Dockerfile in such a way that the final runtime stage uses the
 smallest possible base image, with only the resources that your program requires
 to run.
 
 It’s also possible to
-[copy resources from other images or stages](/build/building/multi-stage/#name-your-build-stages),
+[copy resources from other images or stages](build/building/multi-stage/#name-your-build-stages),
 using the Dockerfile `COPY --from` instruction. This technique can reduce the
 number of layers, and the size of those layers, in the final stage.
 
@@ -84,7 +84,7 @@ Docker Build Cloud server directly is better, because it will likely be faster
 than transferring the files with the build context.
 
 You can fetch remote files during the build using the
-[Dockerfile `ADD` instruction](/reference/dockerfile/#add),
+[Dockerfile `ADD` instruction](reference/dockerfile/#add),
 or in your `RUN` instructions with tools like `wget` and `rsync`.
 
 ### Multi-threaded tools

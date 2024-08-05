@@ -7,7 +7,7 @@ keywords: linux, docker linux install, docker linux, linux docker installation, 
 title: Install Docker Desktop on Linux
 aliases:
 - /desktop/linux/install/
-'yes': '![yes](/assets/images/green-check.svg){: .inline style="height: 14px; margin:
+'yes': '![yes](assets/images/green-check.svg){: .inline style="height: 14px; margin:
   0 auto"}'
 ---
 
@@ -21,12 +21,12 @@ This page contains information about general system requirements, supported plat
 
 > **Important**
 >
->Docker Desktop on Linux runs a Virtual Machine (VM) which creates and uses a custom docker context, `desktop-linux`, on startup. 
+>Docker Desktop on Linux runs a Virtual Machine (VM) which creates and uses a custom docker context, `desktop-linux`, on startup.
 >
->This means images and containers deployed on the Linux Docker Engine (before installation) are not available in Docker Desktop for Linux. 
+>This means images and containers deployed on the Linux Docker Engine (before installation) are not available in Docker Desktop for Linux.
 >
->For more information see [What is the difference between Docker Desktop for Linux and Docker Engine](../faqs/linuxfaqs.md#what-is-the-difference-between-docker-desktop-for-linux-and-docker-engine). 
-{ .important } 
+>For more information see [What is the difference between Docker Desktop for Linux and Docker Engine](../faqs/linuxfaqs.md#what-is-the-difference-between-docker-desktop-for-linux-and-docker-engine).
+{ .important }
 
 {{< accordion title=" What is the difference between Docker Desktop for Linux and Docker Engine?" >}}
 
@@ -90,7 +90,7 @@ machine. The current context is indicated with an asterisk (`*`);
 $ docker context ls
 NAME            DESCRIPTION                               DOCKER ENDPOINT                                  ...
 default *       Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                      ...
-desktop-linux                                             unix:///home/<user>/.docker/desktop/docker.sock  ...        
+desktop-linux                                             unix:///home/<user>/.docker/desktop/docker.sock  ...
 ```
 
 If you have both Docker Desktop and Docker Engine installed on the same machine,
@@ -124,7 +124,7 @@ and architectures:
 
 
 
-| Platform                | x86_64 / amd64          | 
+| Platform                | x86_64 / amd64          |
 |:------------------------|:-----------------------:|
 | [Ubuntu](ubuntu.md)                         | ✅  |
 | [Debian](debian.md)                         | ✅  |
@@ -214,7 +214,7 @@ Sign out and sign back in so that your group membership is re-evaluated.
 > **Important**
 >
 > Make sure you meet the system requirements outlined earlier and follow the distro-specific prerequisites.
-{ .important } 
+{ .important }
 
 1. Download the correct package for your Linux distribution and install it with the corresponding package manager.
    - [Install on Ubuntu](ubuntu.md)

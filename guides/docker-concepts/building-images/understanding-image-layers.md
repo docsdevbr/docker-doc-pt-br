@@ -34,7 +34,7 @@ Layers let you extend images of others by reusing their base layers, allowing yo
 
 Layering is made possible by content-addressable storage and union filesystems. While this will get technical, here’s how it works:
 
-1. After each layer is downloaded, it is extracted into its own directory on the host filesystem. 
+1. After each layer is downloaded, it is extracted into its own directory on the host filesystem.
 2. When you run a container from an image, a union filesystem is created where layers are stacked on top of each other, creating a new and unified view.
 3. When the container starts, its root directory is set to the location of this unified directory, using `chroot`.
 
@@ -69,7 +69,7 @@ In this first step, you will create your own base image that you will then use f
     $ apt update && apt install -y nodejs
     ```
 
-    When this command runs, it downloads and installs Node inside the container. In the context of the union filesystem, these filesystem changes occur within the directory unique to this container. 
+    When this command runs, it downloads and installs Node inside the container. In the context of the union filesystem, these filesystem changes occur within the directory unique to this container.
 
 4. Validate if Node is installed by running the following command:
 
@@ -196,9 +196,9 @@ Now that you have a base image, you can extend that image to build additional im
 
 If you’d like to dive deeper into the things you learned, check out the following resources:
 
-* [docker image history CLI reference](/reference/cli/docker/image/history/)
-* [docker image layers](/build/guide/layers/)
-* [`docker container commit`](/reference/cli/docker/container/commit/)
+* [docker image history CLI reference](reference/cli/docker/image/history/)
+* [docker image layers](build/guide/layers/)
+* [`docker container commit`](reference/cli/docker/container/commit/)
 
 
 ## Next steps

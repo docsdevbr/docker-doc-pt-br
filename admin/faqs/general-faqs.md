@@ -40,7 +40,7 @@ A team is a group of Docker users that belong to an organization. An organizatio
 
 ### What's a company?
 
-A company is a management layer that centralizes administration of multiple organizations. Administrators can add organizations with a Docker Business subscription to a company and configure settings for all organizations under the company. See [Set up your company](/admin/company/).
+A company is a management layer that centralizes administration of multiple organizations. Administrators can add organizations with a Docker Business subscription to a company and configure settings for all organizations under the company. See [Set up your company](admin/company/).
 
 ### Who is an organization owner?
 
@@ -74,4 +74,4 @@ If the user is a member of your organization, you can remove the user from your 
 
 ### How do I manage settings for a user account?
 
-You can manage your account settings any time when you sign in to your [Docker account](https://app.docker.com/login). In Docker Home, select your avatar in the top-right navigation, then select **My Account**. You can also access this menu from any Docker web applications when you're signed in to your account. See [Manage your Docker account](/accounts/manage-account). If your account is associated with an organization that uses SSO, you may have limited access to the settings that you can control.
+You can manage your account settings any time when you sign in to your [Docker account](https://app.docker.com/login). In Docker Home, select your avatar in the top-right navigation, then select **My Account**. You can also access this menu from any Docker web applications when you're signed in to your account. See [Manage your Docker account](accounts/manage-account). If your account is associated with an organization that uses SSO, you may have limited access to the settings that you can control.

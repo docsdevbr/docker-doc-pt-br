@@ -7,7 +7,7 @@ description: Learn how to develop locally using Kubernetes
 ## Prerequisites
 
 - Complete all the previous sections of this guide, starting with [Containerize a C++ application](containerize.md).
-- [Turn on Kubernetes](/desktop/kubernetes/#install-and-turn-on-kubernetes) in Docker Desktop.
+- [Turn on Kubernetes](desktop/kubernetes/#install-and-turn-on-kubernetes) in Docker Desktop.
 
 ## Overview
 
@@ -129,7 +129,7 @@ To learn more about Kubernetes objects, see the [Kubernetes documentation](https
 
 ## Summary
 
-In this section, you learned how to use Docker Desktop to deploy your C++ application to a fully-featured Kubernetes environment on your development machine. 
+In this section, you learned how to use Docker Desktop to deploy your C++ application to a fully-featured Kubernetes environment on your development machine.
 
 Related information:
    - [Kubernetes documentation](https://kubernetes.io/docs/home/)

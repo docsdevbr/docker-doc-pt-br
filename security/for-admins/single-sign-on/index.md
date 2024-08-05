@@ -8,7 +8,7 @@ aliases:
 - /admin/organization/security-settings/sso-management/
 ---
 
-Single sign-on (SSO) allows users to authenticate using their identity providers (IdPs) to access Docker. SSO is available for a whole company, and all associated organizations, or an individual organization that has a Docker Business subscription. To upgrade your existing account to a Docker Business subscription, see [Upgrade your subscription](/subscription/upgrade/).
+Single sign-on (SSO) allows users to authenticate using their identity providers (IdPs) to access Docker. SSO is available for a whole company, and all associated organizations, or an individual organization that has a Docker Business subscription. To upgrade your existing account to a Docker Business subscription, see [Upgrade your subscription](subscription/upgrade/).
 
 ## How it works
 
@@ -22,14 +22,14 @@ The following diagram shows how SSO operates and is managed in Docker Hub and Do
 
 1. Configure SSO by adding and verify your domain for your organization, then create an SSO connection with your IdP. Docker provides the Assertion Consumer Service (ACS) URL and Entity ID needed to establish a connection between your IdP server and Docker Hub.
 2. Test your connection by attempting to sign in to Docker Hub using your domain email address.
-3. Optionally, you can [enforce SSO](/security/for-admins/single-sign-on/connect/#optional-enforce-sso) sign-in.
+3. Optionally, you can [enforce SSO](security/for-admins/single-sign-on/connect/#optional-enforce-sso) sign-in.
 4. Complete SSO enablement. A first-time user can sign in to Docker Hub using their company's domain email address. They're then added to your company, assigned to an organization, and optionally assigned to a team.
 
 ## Prerequisites
 
 * You must first notify your company about the new SSO login procedures.
 * Verify that your members have Docker Desktop version 4.4.2, or later, installed on their machines.
-* If your organization is planning to [enforce SSO](/security/for-admins/single-sign-on/connect/#optional-enforce-sso), members using the Docker CLI are required to [create a Personal Access Token (PAT)](/docker-hub/access-tokens/) to sign in instead of with a username and password. Docker plans to deprecate signing in to the CLI with a password in the future, so using a PAT will be required to prevent issues with authentication. For more details see the [security announcement](/security/security-announcements/#deprecation-of-password-logins-on-cli-when-sso-enforced).
+* If your organization is planning to [enforce SSO](security/for-admins/single-sign-on/connect/#optional-enforce-sso), members using the Docker CLI are required to [create a Personal Access Token (PAT)](docker-hub/access-tokens/) to sign in instead of with a username and password. Docker plans to deprecate signing in to the CLI with a password in the future, so using a PAT will be required to prevent issues with authentication. For more details see the [security announcement](security/security-announcements/#deprecation-of-password-logins-on-cli-when-sso-enforced).
 * Ensure all your Docker users have a valid user on your IdP with the same email address as their Unique Primary Identifier (UPN)
 * Confirm that all CI/CD pipelines have replaced their passwords with PATs.
 * For your service accounts, add your additional domains or enable it in your IdP.

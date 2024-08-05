@@ -1,6 +1,6 @@
 ---
 description: Learn about the different ways you can force users to sign in to Docker Desktop
-keywords: authentication, registry.json, configure, enforce sign-in, docker desktop, security 
+keywords: authentication, registry.json, configure, enforce sign-in, docker desktop, security
 title: Ways to enforce sign-in for Docker Desktop
 ---
 
@@ -10,16 +10,16 @@ This page outlines the different ways you can enforce sign-in for Docker Desktop
 
 > **Early Access**
 >
-> The registry key method is an [early access](../../../release-lifecycle.md#early-access-ea) feature for Docker Business subscribers. 
+> The registry key method is an [early access](../../../release-lifecycle.md#early-access-ea) feature for Docker Business subscribers.
 > It's available with Docker Desktop version 4.32 and later.
 { .restricted }
 
 1. Create the registry key. Your new key should look like the following:
 
-   ```console 
+   ```console
    $ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Docker\Docker Desktop
    ```
-2. Create a multi-string value `allowedOrgs`. 
+2. Create a multi-string value `allowedOrgs`.
    > **Important**
    >
    > Only one entry for `allowedOrgs` is currently supported. If you add more than one value, sign-in enforcement silently fails.
@@ -36,9 +36,9 @@ In some cases, a system reboot may be necessary for enforcement to take effect.
 
 ### Example deployment via Group Policy
 
-The following is only an illustrative example. 
+The following is only an illustrative example.
 
-There are many ways to deploy the registry key, for example using an MDM solution or with PowerShell scripting. The method you choose is dependent on your organizations infrastructure, security policies, and the administrative rights of the end-users. 
+There are many ways to deploy the registry key, for example using an MDM solution or with PowerShell scripting. The method you choose is dependent on your organizations infrastructure, security policies, and the administrative rights of the end-users.
 
 1. Create the registry script. Write a script to create the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Docker\Docker Desktop` key, add the `allowedOrgs` multi-string, and then set the value to your organization’s name.
 2. Within Group Policy, create or edit a Group Policy Objective (GPO) that applies to the machines or users you want to target.
@@ -53,7 +53,7 @@ There are many ways to deploy the registry key, for example using an MDM solutio
 
 > **Early Access**
 >
-> The plist method is an [early access](../../../release-lifecycle.md#early-access-ea) feature for Docker Business subscribers. 
+> The plist method is an [early access](../../../release-lifecycle.md#early-access-ea) feature for Docker Business subscribers.
 > It's available with Docker Desktop version 4.32 and later.
 { .restricted }
 
@@ -78,18 +78,18 @@ There are many ways to deploy the registry key, for example using an MDM solutio
    { .important }
 
 3. Modify the file permissions to ensure the file cannot be edited by any non-administrator users.
-4. Restart Docker Desktop. 
+4. Restart Docker Desktop.
 5. Open Docker Desktop and when Docker Desktop starts, verify that the **Sign in required!** prompt appears.
 
 >**Note**
 >
 > If a `plist` and `registry.json` file both exist, the `plist` file takes precedence.
 
-### Example deployment 
+### Example deployment
 
-The following is only an illustrative example. 
+The following is only an illustrative example.
 
-There are many ways to deploy the `.plist` file. The method you choose is dependent on your organizations infrastructure, security policies, and the administrative rights of the end-users. 
+There are many ways to deploy the `.plist` file. The method you choose is dependent on your organizations infrastructure, security policies, and the administrative rights of the end-users.
 
 {{< tabs >}}
 {{< tab name="MDM" >}}
@@ -120,13 +120,13 @@ There are many ways to deploy the `.plist` file. The method you choose is depend
 {{< /tabs >}}
 
 ## registry.json method (All)
- 
+
 The following instructions explain how to create and deploy a `registry.json` file to a single device. There are many ways to deploy the `regitry.json` file. You can follow the example deployments outlined in the `.plist` file section.  The method you choose is dependent on your organization's infrastructure, security policies, and the administrative rights of the end-users.
 
 ### Option 1: Create a registry.json file to enforce sign-in
 
 1. Ensure that the user is a member of your organization in Docker. For more
-details, see [Manage members](/admin/organization/members/).
+details, see [Manage members](admin/organization/members/).
 
 2. Create the `registry.json` file.
 
@@ -156,8 +156,8 @@ details, see [Manage members](/admin/organization/members/).
 4. Verify that sign-in is enforced.
 
     To activate the `registry.json` file, restart Docker Desktop on the user’s machine. When Docker Desktop starts, verify that the **Sign in
-    required!** prompt appears. 
-    
+    required!** prompt appears.
+
     In some cases, a system reboot may be necessary for the enforcement to take effect.
 
     > **Tip**

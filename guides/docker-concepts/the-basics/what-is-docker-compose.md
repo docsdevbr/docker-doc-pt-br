@@ -25,7 +25,7 @@ It's important to understand that Compose is a declarative tool - you simply def
 > A Dockerfile provides instructions to build a container image while a Compose file defines your running containers. Quite often, a Compose file references a Dockerfile to build an image to use for a particular service.
 
 
-## Try it out 
+## Try it out
 
 In this hands-on, you will learn how to use a Docker Compose to run a multi-container application. You'll use a simple to-do list app built with Node.js and MySQL as a database server.
 
@@ -37,7 +37,7 @@ Follow the instructions to run the to-do list app on your system.
 2. Open a terminal and [clone this sample application](https://github.com/dockersamples/todo-list-app).
 
     ```console
-    git clone https://github.com/dockersamples/todo-list-app 
+    git clone https://github.com/dockersamples/todo-list-app
     ```
 
 3. Navigate into the `todo-list-app` directory:
@@ -46,9 +46,9 @@ Follow the instructions to run the to-do list app on your system.
     cd todo-list-app
     ```
 
-    Inside this directory, you'll find a file named `compose.yaml`. This YAML file is where all the magic happens! It defines all the services that make up your application, along with their configurations. Each service specifies its image, ports, volumes, networks, and any other settings necessary for its functionality. Take some time to explore the YAML file and familiarize yourself with its structure. 
+    Inside this directory, you'll find a file named `compose.yaml`. This YAML file is where all the magic happens! It defines all the services that make up your application, along with their configurations. Each service specifies its image, ports, volumes, networks, and any other settings necessary for its functionality. Take some time to explore the YAML file and familiarize yourself with its structure.
 
-4. Use the [`docker compose up`](/reference/cli/docker/compose/up/) command to start the application:
+4. Use the [`docker compose up`](reference/cli/docker/compose/up/) command to start the application:
 
     ```console
     docker compose up -d --build
@@ -91,7 +91,7 @@ Follow the instructions to run the to-do list app on your system.
 
 Since this application was started using Docker Compose, it's easy to tear it all down when you're done.
 
-1. In the CLI, use the [`docker compose down`](/reference/cli/docker/compose/down/) command to remove everything:
+1. In the CLI, use the [`docker compose down`](reference/cli/docker/compose/down/) command to remove everything:
 
     ```console
     docker compose down
@@ -134,6 +134,6 @@ In this walkthrough, you learned how to use Docker Compose to start and stop a m
 This page was a brief introduction to Compose. In the following resources, you can dive deeper into Compose and how to write Compose files.
 
 
-* [Overview of Docker Compose](/compose/)
-* [Overview of Docker Compose CLI](/compose/reference/)
-* [How Compose works](/compose/compose-application-model/)
+* [Overview of Docker Compose](compose/)
+* [Overview of Docker Compose CLI](compose/reference/)
+* [How Compose works](compose/compose-application-model/)

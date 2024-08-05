@@ -6,16 +6,16 @@ keywords: billing, renewal, payments, subscriptions
 
 > **Note**
 >
-> [Docker Core subscription](/billing/core-billing/get-started-core/) payments support 3D secure authentication.
+> [Docker Core subscription](billing/core-billing/get-started-core/) payments support 3D secure authentication.
 
 3D Secure (3DS) authentication incorporates an additional security layer for credit card transactions. If you’re making payments for your Docker billing in a region that requires 3DS, or using a payment method that requires 3DS, you’ll need to verify your identity to complete any transactions. The method used to verify your identity varies depending on your banking institution.
 
 The following transactions will use 3DS authentication if your payment method requires it.
 
-- Starting a [new paid subscription](/billing/core-billing/get-started-core/)
-- Changing your [billing cycle](/billing/core-billing/cycle/) from monthly to annual
-- [Upgrading your subscription](/subscription/core-subscription/upgrade/)
-- [Adding seats](/subscription/core-subscription/add-seats/) to an existing subscription
+- Starting a [new paid subscription](billing/core-billing/get-started-core/)
+- Changing your [billing cycle](billing/core-billing/cycle/) from monthly to annual
+- [Upgrading your subscription](subscription/core-subscription/upgrade/)
+- [Adding seats](subscription/core-subscription/add-seats/) to an existing subscription
 
 ## Troubleshooting
 

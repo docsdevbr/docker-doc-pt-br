@@ -4,12 +4,12 @@ description: Docker extension metadata
 keywords: Docker, extensions, sdk, metadata
 ---
 
-Extensions can invoke Docker commands directly from the frontend with the SDK. 
+Extensions can invoke Docker commands directly from the frontend with the SDK.
 
-In some cases, it is useful to also interact with Docker Engine from the backend. 
+In some cases, it is useful to also interact with Docker Engine from the backend.
 
 Extension backend containers can mount the Docker socket and use it to
-interact with Docker Engine from the extension backend logic. Learn more about the [Docker Engine socket](/reference/cli/dockerd/#examples)
+interact with Docker Engine from the extension backend logic. Learn more about the [Docker Engine socket](reference/cli/dockerd/#examples)
 
 However, when mounting the Docker socket from an extension container that lives in the Desktop virtual machine, you want
 to mount the Docker socket from inside the VM, and not mount `/var/run/docker.sock` from the host filesystem (using

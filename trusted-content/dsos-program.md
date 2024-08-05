@@ -69,7 +69,7 @@ Docker verifies that developers can trust images with this badge on Docker Hub a
 
 ### Insights and analytics
 
-The [insights and analytics](/docker-hub/publish/insights-analytics) service provides usage metrics for how
+The [insights and analytics](docker-hub/publish/insights-analytics) service provides usage metrics for how
 the community uses Docker images, granting insight into user behavior.
 
 The usage metrics show the number of image pulls by tag or by digest, and breakdowns by
@@ -87,7 +87,7 @@ chain management, integrations with third-party systems like CI platforms and
 source code management, and more.
 
 You can enable Docker Scout on a per-repository basis. For information about
-how to use this product, refer to the [Docker Scout documentation](/scout/).
+how to use this product, refer to the [Docker Scout documentation](scout/).
 
 ### Who's eligible for the Docker-Sponsored Open Source program?
 

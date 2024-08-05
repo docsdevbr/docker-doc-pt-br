@@ -13,7 +13,7 @@ aliases:
 
 ## Explanation
 
-Imagine you're developing a killer web app that has three main components - a React frontend, a Python API, and a PostgreSQL database. If you wanted to work on this project, you'd have to install Node, Python, and PostgreSQL. 
+Imagine you're developing a killer web app that has three main components - a React frontend, a Python API, and a PostgreSQL database. If you wanted to work on this project, you'd have to install Node, Python, and PostgreSQL.
 
 How do you make sure you have the same versions as the other developers on your team? Or your CI/CD system? Or what's used in production?
 
@@ -21,7 +21,7 @@ How do you ensure the version of Python (or Node or the database) your app needs
 
 Enter containers!
 
-What is a container? Simply put, containers are isolated processes for each of your app's components. Each component - the frontend React app, the Python API engine, and the database - runs in its own isolated environment, completely isolated from everything else on your machine. 
+What is a container? Simply put, containers are isolated processes for each of your app's components. Each component - the frontend React app, the Python API engine, and the database - runs in its own isolated environment, completely isolated from everything else on your machine.
 
 Here's what makes them awesome. Containers are:
 
@@ -69,7 +69,7 @@ Use the following instructions to run a container.
 7. Select **Run** to start your container.
 
 Congratulations! You just ran your first container! 🎉
- 
+
 ### View your container
 
 You can view all of your containers by going to the **Containers** view of the Docker Dashboard.
@@ -80,7 +80,7 @@ This container runs a web server that displays a simple website. When working wi
 
 ### Access the frontend
 
-When you launched the container, you exposed one of the container's ports onto your machine. Think of this as creating configuration to let you to connect through the isolated environment of the container. 
+When you launched the container, you exposed one of the container's ports onto your machine. Think of this as creating configuration to let you to connect through the isolated environment of the container.
 
 For this container, the frontend is accessible on port `8080`. To open the website, select the link in the **Port(s)** column of your container or visit [http://localhost:8080](https://localhost:8080) in your browser.
 
@@ -88,7 +88,7 @@ For this container, the frontend is accessible on port `8080`. To open the websi
 
 ### Explore your container
 
-Docker Desktop lets you explore and interact with different aspects of your container. Try it out yourself. 
+Docker Desktop lets you explore and interact with different aspects of your container. Try it out yourself.
 
 1. Go to the **Containers** view in the Docker Dashboard.
 
@@ -100,7 +100,7 @@ Docker Desktop lets you explore and interact with different aspects of your cont
 
 ### Stop your container
 
-The `docker/welcome-to-docker` container continues to run until you stop it. 
+The `docker/welcome-to-docker` container continues to run until you stop it.
 
 1. Go to the **Containers** view in the Docker Dashboard.
 
@@ -115,19 +115,19 @@ The `docker/welcome-to-docker` container continues to run until you stop it.
 
 Follow the instructions to run a container using the CLI:
 
-1. Open your CLI terminal and start a container by using the [`docker run`](/reference/cli/docker/container/run/) command:
+1. Open your CLI terminal and start a container by using the [`docker run`](reference/cli/docker/container/run/) command:
 
     ```console
     $ docker run -d -p 8080:80 docker/welcome-to-docker
     ```
 
-    The output from this command is the full container ID. 
+    The output from this command is the full container ID.
 
 Congratulations! You just fired up your first container! 🎉
 
 ### View your running containers
 
-You can verify if the container is up and running by using the [`docker ps`](/reference/cli/docker/container/ls/) command:
+You can verify if the container is up and running by using the [`docker ps`](reference/cli/docker/container/ls/) command:
 
 ```console
 docker ps
@@ -150,7 +150,7 @@ This container runs a web server that displays a simple website. When working wi
 
 ### Access the frontend
 
-When you launched the container, you exposed one of the container's ports onto your machine. Think of this as creating configuration to let you to connect through the isolated environment of the container. 
+When you launched the container, you exposed one of the container's ports onto your machine. Think of this as creating configuration to let you to connect through the isolated environment of the container.
 
 For this container, the frontend is accessible on port `8080`. To open the website, select the link in the **Port(s)** column of your container or visit [http://localhost:8080](https://localhost:8080) in your browser.
 
@@ -162,7 +162,7 @@ The `docker/welcome-to-docker` container continues to run until you stop it. You
 
 1. Run `docker ps` to get the ID of the container
 
-2. Provide the container ID or name to the [`docker stop`](/reference/cli/docker/container/stop/) command:
+2. Provide the container ID or name to the [`docker stop`](reference/cli/docker/container/stop/) command:
 
     ```console
     docker stop <the-container-id>
@@ -184,7 +184,7 @@ The `docker/welcome-to-docker` container continues to run until you stop it. You
 
 The following links provide additional guidance into containers:
 
-- [Running a container](/engine/reference/run/)
+- [Running a container](engine/reference/run/)
 - [Overview of container](https://www.docker.com/resources/what-container/)
 - [Why Docker?](https://www.docker.com/why-docker/)
 

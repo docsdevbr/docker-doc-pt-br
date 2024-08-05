@@ -47,7 +47,7 @@ In the following steps, you'll create the network first and then attach the MySQ
 
    {{< tabs >}}
    {{< tab name="Mac / Linux / Git Bash" >}}
-   
+
    ```console
    $ docker run -d \
        --network todo-app --network-alias mysql \
@@ -68,7 +68,7 @@ In the following steps, you'll create the network first and then attach the MySQ
        -e MYSQL_DATABASE=todos `
        mysql:8.0
    ```
-   
+
    {{< /tab >}}
    {{< tab name="Command Prompt" >}}
 
@@ -80,10 +80,10 @@ In the following steps, you'll create the network first and then attach the MySQ
        -e MYSQL_DATABASE=todos ^
        mysql:8.0
    ```
-   
+
    {{< /tab >}}
    {{< /tabs >}}
-   
+
    In the previous command, you can see the `--network-alias` flag. In a later section, you'll learn more about this flag.
 
    > **Tip**
@@ -219,7 +219,7 @@ You can now start your dev-ready container.
      node:18-alpine \
      sh -c "yarn install && yarn run dev"
    ```
-   
+
    {{< /tab >}}
    {{< tab name="PowerShell" >}}
    In Windows, run this command in PowerShell.
@@ -266,7 +266,7 @@ You can now start your dev-ready container.
      node:18-alpine \
      sh -c "yarn install && yarn run dev"
    ```
-   
+
    {{< /tab >}}
    {{< /tabs >}}
 
@@ -312,7 +312,7 @@ At this point, you have an application that now stores its data in an external d
 container. You learned a little bit about container networking and service discovery using DNS.
 
 Related information:
- - [docker CLI reference](/reference/cli/docker/)
+ - [docker CLI reference](reference/cli/docker/)
  - [Networking overview](../../network/_index.md)
 
 ## Next steps

@@ -164,9 +164,9 @@ and the SBOM is exported to file `sbom.spdx.json` in SPDX format.
 ```console
 $ docker pull docker/scout-cli:latest
 latest: Pulling from docker/scout-cli
-257973a141f5: Download complete 
-1f2083724dd1: Download complete 
-5c8125a73507: Download complete 
+257973a141f5: Download complete
+1f2083724dd1: Download complete
+5c8125a73507: Download complete
 Digest: sha256:13318bb059b0f8b0b87b35ac7050782462b5d0ac3f96f9f23d165d8ed68d0894
 $ docker save docker/scout-cli:latest -o scout-cli.tar
 $ docker scout sbom --format spdx -o sbom.spdx.json archive://scout-cli.tar
@@ -176,6 +176,6 @@ $ docker scout sbom --format spdx -o sbom.spdx.json archive://scout-cli.tar
 
 Read about the commands and supported flags in the CLI reference documentation:
 
-- [`docker scout quickview`](/reference/cli/docker/scout/quickview.md)
-- [`docker scout cves`](/reference/cli/docker/scout/cves.md)
-- [`docker scout compare`](/reference/cli/docker/scout/compare.md)
+- [`docker scout quickview`](reference/cli/docker/scout/quickview.md)
+- [`docker scout cves`](reference/cli/docker/scout/cves.md)
+- [`docker scout compare`](reference/cli/docker/scout/compare.md)

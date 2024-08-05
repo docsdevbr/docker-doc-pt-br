@@ -78,7 +78,7 @@ directory. Both names are supported, but Compose prefers the canonical
 {{< tab name="Manually create assets" >}}
 
 If you don't have Docker Desktop installed or prefer creating the assets
-manually, you can create the following files in your project directory. 
+manually, you can create the following files in your project directory.
 
 Create a file named `Dockerfile` with the following contents.
 
@@ -277,8 +277,8 @@ README.md
 You should now have the following three files in your `spring-petclinic`
 directory.
 
-- [Dockerfile](/reference/dockerfile/)
-- [.dockerignore](/reference/dockerfile/#dockerignore-file)
+- [Dockerfile](reference/dockerfile/)
+- [.dockerignore](reference/dockerfile/#dockerignore-file)
 - [docker-compose.yaml](../../compose/compose-file/_index.md)
 
 ## Run the application
@@ -323,7 +323,7 @@ In this section, you learned how you can containerize and run a Java
 application using Docker.
 
 Related information:
- - [docker init reference](/reference/cli/docker/init/)
+ - [docker init reference](reference/cli/docker/init/)
 
 ## Next steps
 

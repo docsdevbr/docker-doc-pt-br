@@ -16,7 +16,7 @@ Each generated target must have a unique name. To specify how target names
 should resolve, use the name attribute.
 
 The following example resolves the app target to `app-foo` and `app-bar`. It
-also uses the matrix value to define the [target build stage](/build/bake/reference/#targettarget).
+also uses the matrix value to define the [target build stage](build/bake/reference/#targettarget).
 
 ```hcl
 target "app" {

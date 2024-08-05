@@ -46,7 +46,7 @@ If you choose the integrated terminal, you can run commands in a running contain
   This brings new features like faster container startup performance by lazy-pulling images,
   and the ability to run Wasm applications with Docker.
   For more information, see [containerd image store](../containerd.md).
-  
+
 - **Send usage statistics**. Select so Docker Desktop sends diagnostics,
   crash reports, and usage data. This information helps Docker improve and
   troubleshoot the application. Clear the check box to opt out. Docker may
@@ -128,7 +128,7 @@ Advanced settings are:
 > The **File sharing** tab is only available in Hyper-V mode because the files
 > are automatically shared in WSL 2 mode and Windows container mode.
 
-#### Synchronized file shares 
+#### Synchronized file shares
 
 Synchronized file shares is an alternative file sharing mechanism that provides fast and flexible host-to-VM file sharing, enhancing bind mount performance through the use of synchronized filesystem caches. Available with Pro, Team, and Business subscriptions.
 
@@ -209,7 +209,7 @@ HTTP/HTTPS proxies can be used when:
 If the host uses a HTTP/HTTPS proxy configuration (static or via Proxy Auto-Configuration (PAC)), Docker Desktop reads
 this configuration
 and automatically uses these settings for signing into Docker, for pulling and pushing images, and for
-container Internet access. 
+container Internet access.
 
 To set a different proxy for Docker Desktop, turn on **Manual proxy configuration** and enter a single
 upstream proxy URL of the form `http://proxy:port` or `https://proxy:port`.
@@ -228,7 +228,7 @@ This is useful when a corporate proxy that requires authentication is manually c
 
 #### Proxy authentication
 
-Docker Desktop supports Basic, Kerberos and NTLM proxy authentication methods. 
+Docker Desktop supports Basic, Kerberos and NTLM proxy authentication methods.
 
 ##### Basic authentication
 
@@ -294,7 +294,7 @@ edit the JSON configuration directly from the dashboard in Docker Desktop, or op
 edit the file using your favorite text editor.
 
 To see the full list of possible configuration options, see the
-[dockerd command reference](/reference/cli/dockerd/).
+[dockerd command reference](reference/cli/dockerd/).
 
 Select **Apply & Restart** to save your settings and restart Docker Desktop.
 

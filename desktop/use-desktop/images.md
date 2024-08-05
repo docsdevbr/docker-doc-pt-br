@@ -4,7 +4,7 @@ keywords: Docker Dashboard, manage, containers, gui, dashboard, images, user man
 title: Explore the Images view in Docker Desktop
 ---
 
-The **Images** view lets you manage Docker images without having to use the CLI. By default, it displays a list of all Docker images on your local disk. 
+The **Images** view lets you manage Docker images without having to use the CLI. By default, it displays a list of all Docker images on your local disk.
 
 You can also view Hub images once you have signed in to Docker Hub. This allows you to collaborate with your team and manage your images directly through Docker Desktop.
 
@@ -16,7 +16,7 @@ It also displays metadata about the image such as the:
 - Date created
 - Size of the image.
 
-An **In Use** tag displays next to images used by running and stopped containers. You can choose what information you want displayed by selecting the **More options** menu to the right of the search bar, and then use the toggle switches according to your preferences. 
+An **In Use** tag displays next to images used by running and stopped containers. You can choose what information you want displayed by selecting the **More options** menu to the right of the search bar, and then use the toggle switches according to your preferences.
 
 The **Images on disk** status bar displays the number of images and the total disk space used by the images and when this information was last refreshed.
 
@@ -52,8 +52,8 @@ To inspect an image, select the image row. Inspecting an image displays detailed
 - Vulnerabilities found
 - Packages inside the image
 
-[Docker Scout](/scout/_index.md) powers this vulnerability information.
-For more information about this view, see [Image details view](/scout/explore/image-details-view.md)
+[Docker Scout](scout/_index.md) powers this vulnerability information.
+For more information about this view, see [Image details view](scout/explore/image-details-view.md)
 
 ## Pull the latest image from Docker Hub
 
@@ -79,7 +79,7 @@ Select the image from the list, select the **More options** button and select **
 
 An unused image is an image which is not used by any running or stopped containers. An image becomes dangling when you build a new version of the image with the same tag.
 
-To remove individual images, select the bin icon. 
+To remove individual images, select the bin icon.
 
 ## Docker Hub repositories
 

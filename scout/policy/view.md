@@ -8,7 +8,7 @@ keywords: scout, policy, status, vulnerabilities, supply chain, cves, licenses
 
 > **Early Access**
 >
-> Policy Evaluation is an [Early Access](/release-lifecycle/#early-access-ea)
+> Policy Evaluation is an [Early Access](release-lifecycle/#early-access-ea)
 > feature of Docker Scout.
 { .restricted }
 

@@ -28,8 +28,8 @@ grid:
   icon: settings
   link: /admin/organization/general-settings/
 - title: SSO and SCIM
-  description: 'Set up [Single Sign-On](/security/for-admins/single-sign-on/)
-    and [SCIM](/security/for-admins/provisioning/scim/) for your organization.
+  description: 'Set up [Single Sign-On](security/for-admins/single-sign-on/)
+    and [SCIM](security/for-admins/provisioning/scim/) for your organization.
 
     '
   icon: key

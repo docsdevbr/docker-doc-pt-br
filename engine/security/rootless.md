@@ -105,8 +105,8 @@ testuser:231072:65536
   This step is not required on Debian 12.
 
 - Rootless docker requires version of `slirp4netns` greater than `v0.4.0` (when `vpnkit` is not installed).
-  Check you have this with 
-  
+  Check you have this with
+
   ```console
   $ slirp4netns --version
   ```
@@ -166,12 +166,12 @@ testuser:231072:65536
 >```
 > Should you choose not to shut down the `docker` service and socket, you will need to use the `--force`
 > parameter in the next section. There are no known issues, but until you shutdown and disable you're
-> still running rootful Docker. 
+> still running rootful Docker.
 
 {{< tabs >}}
 {{< tab name="With packages (RPM/DEB)" >}}
 
-If you installed Docker 20.10 or later with [RPM/DEB packages](/engine/install), you should have `dockerd-rootless-setuptool.sh` in `/usr/bin`.
+If you installed Docker 20.10 or later with [RPM/DEB packages](engine/install), you should have `dockerd-rootless-setuptool.sh` in `/usr/bin`.
 
 Run `dockerd-rootless-setuptool.sh install` as a non-root user to set up the daemon:
 

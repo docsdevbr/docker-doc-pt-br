@@ -12,7 +12,7 @@ title: Configure a private marketplace for extensions
 
 Learn how to configure and set up a private marketplace with a curated list of extensions for your Docker Desktop users.
 
-It is designed specifically 
+It is designed specifically
 
 Docker Extensions' private marketplace is designed specifically for organizations who don’t give developers root access to their machines. It makes use of [Settings Management](../hardened-desktop/settings-management/_index.md) so administrators have complete control over the private marketplace.
 
@@ -82,7 +82,7 @@ Each setting has a `value` that you can set, including a `locked` field that let
 
 To find out more information about the `admin-settings.json` file, see [Settings Management](../hardened-desktop/settings-management/_index.md).
 
-## Step three: List allowed extensions 
+## Step three: List allowed extensions
 
 The generated `extensions.txt` file defines the list of extensions that are available in your private marketplace.
 
@@ -96,14 +96,14 @@ docker/disk-usage-extension:0.2.8
 
 If no tag is provided, the latest tag available for the image is used. You can also comment out lines with `#` so the extension is ignored.
 
-This list can include different types of extension images: 
- 
+This list can include different types of extension images:
+
 - Extensions from the public marketplace or any public image stored in Docker Hub.
 - Extension images stored in Docker Hub as private images. Developers need to be signed in and have pull access to these images.
 - Extension images stored in a private registry. Developers need to be signed in and have pull access to these images.
- 
+
 > **Important**
-> 
+>
 > Your developers can only install the version of the extension that you’ve listed.
 { .important}
 
@@ -137,7 +137,7 @@ $ /opt/docker-desktop/extension-admin generate
 
 This creates an `extension-marketplace` directory and downloads the marketplace metadata for all the allowed extensions.
 
-The marketplace content is generated from extension image information as image labels, which is the [same format as public extensions](../extensions-sdk/extensions/labels.md). It includes the extension title, description, screenshots, links, etc. 
+The marketplace content is generated from extension image information as image labels, which is the [same format as public extensions](../extensions-sdk/extensions/labels.md). It includes the extension title, description, screenshots, links, etc.
 
 ## Step five: Test the private marketplace setup
 
@@ -173,18 +173,18 @@ It's recommended that you try the private marketplace on your Docker Desktop ins
    {{< /tab >}}
    {{< /tabs >}}
 
-2. Quit and re-open Docker Desktop. 
+2. Quit and re-open Docker Desktop.
 3. Sign in with a Docker account.
 
 When you select the **Extensions** tab, you should see the private marketplace listing only the extensions you have allowed in `extensions.txt`.
 
-![Extensions Private Marketplace](/assets/images/extensions-private-marketplace.webp)
+![Extensions Private Marketplace](assets/images/extensions-private-marketplace.webp)
 
 ## Step six: Distribute the private marketplace
 
 Once you’ve confirmed that the private marketplace configuration works, the final step is to distribute the files to the developers’ machines with the MDM software your organization uses. For example, [Jamf](https://www.jamf.com/).
 
-The files to distribute are: 
+The files to distribute are:
 * `admin-settings.json`
 * the entire `extension-marketplace` folder and its subfolders
 

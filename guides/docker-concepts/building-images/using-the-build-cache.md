@@ -226,8 +226,8 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
      FROM node:20-alpine
      WORKDIR /app
      COPY package.json yarn.lock ./
-     RUN yarn install --production 
-     COPY . . 
+     RUN yarn install --production
+     COPY . .
      EXPOSE 3000
      CMD ["node", "src/index.js"]
      ```
@@ -262,7 +262,7 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
     => [5/5] COPY . .                                                                                 0.5s
     => exporting to image                                                                             0.6s
     => => exporting layers                                                                            0.6s
-    => => writing image     
+    => => writing image
     sha256:d6f819013566c54c50124ed94d5e66c452325327217f4f04399b45f94e37d25        0.0s
     => => naming to docker.io/library/node-app:2.0                                                 0.0s
     ```
@@ -280,22 +280,22 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
     You'll then see output similar to the following:
 
     ```console
-    [+] Building 1.2s (10/10) FINISHED 
+    [+] Building 1.2s (10/10) FINISHED
     => [internal] load build definition from Dockerfile                                               0.0s
     => => transferring dockerfile: 37B                                                                0.0s
     => [internal] load .dockerignore                                                                  0.0s
     => => transferring context: 2B                                                                    0.0s
-    => [internal] load metadata for docker.io/library/node:21-alpine                                  0.0s 
+    => [internal] load metadata for docker.io/library/node:21-alpine                                  0.0s
     => [internal] load build context                                                                  0.2s
     => => transferring context: 450.43kB                                                              0.2s
     => [1/5] FROM docker.io/library/node:21-alpine                                                    0.0s
     => CACHED [2/5] WORKDIR /app                                                                      0.0s
     => CACHED [3/5] COPY package.json yarn.lock ./                                                    0.0s
     => CACHED [4/5] RUN yarn install --production                                                     0.0s
-    => [5/5] COPY . .                                                                                 0.5s 
+    => [5/5] COPY . .                                                                                 0.5s
     => exporting to image                                                                             0.3s
     => => exporting layers                                                                            0.3s
-    => => writing image     
+    => => writing image
     sha256:91790c87bcb096a83c2bd4eb512bc8b134c757cda0bdee4038187f98148e2eda       0.0s
     => => naming to docker.io/library/node-app:3.0                                                 0.0s
     ```
@@ -306,9 +306,9 @@ By following these optimization techniques, you can make your Docker builds fast
 
 ## Additional resources
 
-* [Optimizing builds with cache management](/build/cache/)
-* [Cache Storage Backend](/build/cache/backends/)
-* [Build cache invalidation](/build/cache/invalidation/)
+* [Optimizing builds with cache management](build/cache/)
+* [Cache Storage Backend](build/cache/backends/)
+* [Build cache invalidation](build/cache/invalidation/)
 
 
 ## Next steps

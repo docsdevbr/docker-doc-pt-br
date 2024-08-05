@@ -154,7 +154,7 @@ worker nodes that do not meet these requirements cannot run these tasks.
 
 You can monitor the health of manager nodes by querying the docker `nodes` API
 in JSON format through the `/nodes` HTTP endpoint. Refer to the
-[nodes API documentation](/engine/api/v1.25/#tag/Node)
+[nodes API documentation](engine/api/v1.25/#tag/Node)
 for more information.
 
 From the command line, run `docker node inspect <id-node>` to query the nodes.
@@ -255,7 +255,7 @@ You can back up the swarm using any manager. Use the following procedure.
     other nodes continue generating swarm data that is not part of this backup.
 
     > **Note**
-    > 
+    >
     > Be sure to maintain the quorum of swarm managers. During the
     > time that a manager is shut down, your swarm is more vulnerable to
     > losing the quorum if further nodes are lost. The number of managers you
@@ -267,7 +267,7 @@ You can back up the swarm using any manager. Use the following procedure.
 
 4.  Restart the manager.
 
-To restore, see [Restore from a backup](#restore-from-a-backup). 
+To restore, see [Restore from a backup](#restore-from-a-backup).
 
 ## Recover from disaster
 
@@ -286,7 +286,7 @@ restore the data to a new swarm.
     backup.
 
     > **Note**
-    > 
+    >
     > The new node uses the same encryption key for on-disk
     > storage as the old one. It is not possible to change the on-disk storage
     > encryption keys at this time.

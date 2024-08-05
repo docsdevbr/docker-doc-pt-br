@@ -52,7 +52,7 @@ We support these broad categories of callouts:
 > The Docker Dashboard does not remove volumes when you delete the app stack.
 { .warning }
 
-For both of the following callouts, consult [the Docker release lifecycle](/release-lifecycle) for more information on when to use them.
+For both of the following callouts, consult [the Docker release lifecycle](release-lifecycle) for more information on when to use them.
 
 > **Beta feature**
 >
@@ -61,11 +61,11 @@ For both of the following callouts, consult [the Docker release lifecycle](/rele
 
 > **Restricted**
 >
-> Docker Scout is an [early access](/release-lifecycle/#early-access-ea)
+> Docker Scout is an [early access](release-lifecycle/#early-access-ea)
 > product.
 { .restricted}
 
-## Formatting 
+## Formatting
 
 ```go
 {{</* introduced buildx 0.10.4 "../../release-notes.md#0104" */>}}
@@ -111,7 +111,7 @@ For both of the following callouts, consult [the Docker release lifecycle](/rele
 
 > **Restricted**
 >
-> Docker Scout is an [early access](/release-lifecycle/#early-access-ea)
+> Docker Scout is an [early access](release-lifecycle/#early-access-ea)
 > product.
 { .restricted }
 ```

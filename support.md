@@ -13,7 +13,7 @@ Find information on how to get support, and the scope of support.
 If you have a paid Docker subscription, you can [contact the Support team](https://hub.docker.com/support/contact/).
 
 All Docker users can seek support through the following resources, where Docker or the community respond on a best effort basis.
-   - [Docker Desktop for Windows GitHub repo](https://github.com/docker/for-win) 
+   - [Docker Desktop for Windows GitHub repo](https://github.com/docker/for-win)
    - [Docker Desktop for Mac GitHub repo](https://github.com/docker/for-mac)
    - [Docker Desktop for Linux GitHub repo](https://github.com/docker/desktop-linux)
    - [Docker Community Forums](https://forums.docker.com/)
@@ -98,4 +98,4 @@ For more information, see [Docker Data Processing Agreement](https://www.docker.
 
 Before seeking support, you can perform basic troubleshooting. See [Diagnose and troubleshooting](../desktop/troubleshoot/overview.md) for more information.
 
-You can also see if an answer already exists in the [FAQs](/tags/faq/).
+You can also see if an answer already exists in the [FAQs](tags/faq/).

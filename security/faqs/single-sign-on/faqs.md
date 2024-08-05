@@ -13,7 +13,7 @@ aliases:
 
 ### Is Docker SSO available for all paid subscriptions?
 
-Docker single sign-on (SSO) is only available with the Docker Business subscription. [Upgrade your existing subscription](/subscription/core-subscription/upgrade/) to start using Docker SSO.
+Docker single sign-on (SSO) is only available with the Docker Business subscription. [Upgrade your existing subscription](subscription/core-subscription/upgrade/) to start using Docker SSO.
 
 ### How does Docker SSO work?
 

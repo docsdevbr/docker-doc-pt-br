@@ -189,7 +189,7 @@ respectively.
 ## Install plugins on swarm nodes
 
 If your swarm service relies on one or more
-[plugins](/engine/extend/plugin_api/), these plugins need to be available on
+[plugins](engine/extend/plugin_api/), these plugins need to be available on
 every node where the service could potentially be deployed. You can manually
 install the plugin on each node or script the installation. You can also deploy
 the plugin in a similar way as a global service using the Docker API, by specifying
@@ -201,9 +201,9 @@ a `PluginSpec` instead of a `ContainerSpec`.
 > Docker CLI or Docker Compose. In addition, it is not possible to install
 > plugins from a private repository.
 
-The [`PluginSpec`](/engine/extend/plugin_api/#json-specification)
+The [`PluginSpec`](engine/extend/plugin_api/#json-specification)
 is defined by the plugin developer. To add the plugin to all Docker nodes, use
-the [`service/create`](/engine/api/v1.31/#operation/ServiceCreate) API, passing
+the [`service/create`](engine/api/v1.31/#operation/ServiceCreate) API, passing
 the `PluginSpec` JSON defined in the `TaskTemplate`.
 
 ## Leave the swarm

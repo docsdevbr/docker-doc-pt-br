@@ -41,5 +41,5 @@ following occurs:
 > If your organization is also using single sign-on (SSO), you can optionally enforce SSO.
 > This means that your users must use SSO to sign in, instead of a username and password.
 > When you enforce sign-in and enforce SSO, your users must sign in and must use SSO to do so.
-> See [Enforce SSO](/security/for-admins/single-sign-on/connect#optional-enforce-sso) for details on how to enable this for your SSO connection.
+> See [Enforce SSO](security/for-admins/single-sign-on/connect#optional-enforce-sso) for details on how to enable this for your SSO connection.
 { .tip }

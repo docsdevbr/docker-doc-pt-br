@@ -25,7 +25,7 @@ configure it in different ways:
 
 > **Note**
 >
-> Unfortunately, there's no standard that defines how web clients should handle proxy 
+> Unfortunately, there's no standard that defines how web clients should handle proxy
 > environment variables, or the format for defining them.
 >
 > If you're interested in the history of these variables, check out this blog
@@ -78,7 +78,7 @@ The following table describes the available configuration parameters.
 These settings are used to configure proxy environment variables for containers
 only, and not used as proxy settings for the Docker CLI or the Docker Engine
 itself.
-Refer to the [environment variables](/engine/reference/commandline/cli/#environment-variables)
+Refer to the [environment variables](engine/reference/commandline/cli/#environment-variables)
 and [configure the Docker daemon to use a proxy server](../config/daemon/proxy.md#httphttps-proxy)
 sections for configuring proxy settings for the CLI and daemon.
 

@@ -1,7 +1,7 @@
 ---
 title: Publishing and exposing ports
 keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you the significance of publishing and exposing ports in Docker 
+description: This concept page will teach you the significance of publishing and exposing ports in Docker
 ---
 
 {{< youtube-embed 9JnqOmJ96ds >}}
@@ -38,14 +38,14 @@ Now, any traffic sent to port `8080` on your host machine will be forwarded to p
 
 ### Publishing to ephemeral ports
 
-At times, you may want to simply publish the port but don’t care which host port is used. In these cases, you can let Docker pick the port for you. To do so, simply omit the `HOST_PORT` configuration. 
+At times, you may want to simply publish the port but don’t care which host port is used. In these cases, you can let Docker pick the port for you. To do so, simply omit the `HOST_PORT` configuration.
 
 For example, the following command will publish the container’s port `80` onto an ephemeral port on the host:
 
 ```console
 $ docker run -p 80 nginx
 ```
- 
+
 Once the container is running, using `docker ps` will show you the port that was chosen:
 
 ```console
@@ -58,7 +58,7 @@ In this example, the app is exposed on the host at port `54772`.
 
 ### Publishing all ports
 
-When creating a container image, the `EXPOSE` instruction is used to indicate the packaged application will use the specified port. These ports aren't published by default. 
+When creating a container image, the `EXPOSE` instruction is used to indicate the packaged application will use the specified port. These ports aren't published by default.
 
 With the `-P` or `--publish-all` flag, you can automatically publish all exposed ports to ephemeral ports. This is quite useful when you’re trying to avoid port conflicts in development or testing environments.
 
@@ -76,7 +76,7 @@ In this hands-on guide, you'll learn how to publish container ports using both t
 
 In this step, you will run a container and publish its port using the Docker CLI.
 
-1. [Download and install](/get-docker/) Docker Desktop.
+1. [Download and install](get-docker/) Docker Desktop.
 
 2. In a terminal, run the following command to start a new container:
 
@@ -92,7 +92,7 @@ In this step, you will run a container and publish its port using the Docker CLI
 
 4. Open the website by either selecting the link in the **Port(s)** column of your container or visiting [http://localhost:8080](http://localhost:8080) in your browser.
 
-   ![A screenshot of the landing page of the Nginx web server running in a container](/guides/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
+   ![A screenshot of the landing page of the Nginx web server running in a container](guides/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
 
 
 ### Use Docker Compose
@@ -113,7 +113,7 @@ This example will launch the same application using Docker Compose:
 
 2. Open a terminal and navigate to the directory you created in the previous step.
 
-3. Use the `docker compose up` command to start the application. 
+3. Use the `docker compose up` command to start the application.
 
 4. Open your browser to [http://localhost:8080](http://localhost:8080).
 
@@ -121,8 +121,8 @@ This example will launch the same application using Docker Compose:
 
 If you’d like to dive in deeper on this topic, be sure to check out the following resources:
 
-* [`docker container port` CLI reference](/reference/cli/docker/container/port/)
-* [Published ports](/network/#published-ports)
+* [`docker container port` CLI reference](reference/cli/docker/container/port/)
+* [Published ports](network/#published-ports)
 
 ## Next steps
 

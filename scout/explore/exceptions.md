@@ -71,7 +71,7 @@ Here's a description of the options in this example:
 : PURL of the vulnerable package in the image. In this example, the
   vulnerability exists in an npm package, so the `--subcomponents` PURL is the
   identifier for the npm package name and version (`pkg:npm/express@4.17.1`).
-  
+
   If the same vulnerability exists in multiple packages, `vexctl` lets you
   specify the `--subcomponents` flag multiple times for a single `create`
   command.
@@ -163,7 +163,7 @@ To learn more about the available flags and syntax of the `vexctl` CLI tool and
 how to install it, refer to the [`vexctl` GitHub repository](https://github.com/openvex/vexctl).
 
 For an introduction to VEX, you may also want to check out this use-case guide:
-[Suppress image vulnerabilities with VEX](/scout/guides/vex.md).
+[Suppress image vulnerabilities with VEX](scout/guides/vex.md).
 
 ## Verifying VEX documents
 

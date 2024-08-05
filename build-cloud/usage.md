@@ -35,7 +35,7 @@ $ docker buildx use cloud-<ORG>-<BUILDER_NAME> --global
 2. Find the cloud builder under **Available builders**.
 3. Open the drop-down menu and select **Use**.
 
-   ![Selecting the cloud builder as default using the Docker Desktop GUI](/build/images/set-default-builder-gui.webp)
+   ![Selecting the cloud builder as default using the Docker Desktop GUI](build/images/set-default-builder-gui.webp)
 
 {{< /tab >}}
 {{< /tabs >}}
@@ -67,7 +67,7 @@ $ docker compose build
 
 In addition to `docker buildx use`, you can also use the `docker compose build
 --builder` flag or the [`BUILDX_BUILDER` environment
-variable](/build/building/variables.md#buildx_builder) to select the cloud builder.
+variable](build/building/variables.md#buildx_builder) to select the cloud builder.
 
 ## Loading build results
 
@@ -112,11 +112,11 @@ If you don't specify the platform, the cloud builder automatically builds for th
 architecture matching your local environment.
 
 To learn more about building for multiple platforms, refer to [Multi-platform
-builds](/build/building/multi-platform/).
+builds](build/building/multi-platform/).
 
 ## Cloud builds in Docker Desktop
 
-The Docker Desktop [Builds view](/desktop/use-desktop/builds/) works with
+The Docker Desktop [Builds view](desktop/use-desktop/builds/) works with
 Docker Build Cloud out of the box. This view can show information about not only your
 own builds, but also builds initiated by your team members using the same
 builder.
@@ -143,27 +143,27 @@ The traffic is encrypted and secrets are never stored in the build cache.
 >
 > If you're misusing build arguments to pass credentials, authentication
 > tokens, or other secrets, you should refactor your build to pass the secrets using
-> [secret mounts](/reference/cli/docker/buildx/build.md#secret) instead.
+> [secret mounts](reference/cli/docker/buildx/build.md#secret) instead.
 > Build arguments are stored in the cache and their values are exposed through attestations.
 > Secret mounts don't leak outside of the build and are never included in attestations.
 {.warning}
 
 For more information, refer to:
 
-- [`docker buildx build --secret`](/reference/cli/docker/buildx/build/#secret)
-- [`docker buildx build --ssh`](/reference/cli/docker/buildx/build/#ssh)
+- [`docker buildx build --secret`](reference/cli/docker/buildx/build/#secret)
+- [`docker buildx build --ssh`](reference/cli/docker/buildx/build/#ssh)
 
 ## Managing build cache
 
 You don't need to manage Docker Build Cloud cache manually.
-The system manages it for you through [garbage collection](/build/cache/garbage-collection/).
+The system manages it for you through [garbage collection](build/cache/garbage-collection/).
 
 Old cache is automatically removed if you hit your storage limit.
 You can check your current cache state using the
-[`docker buildx du` command](/reference/cli/docker/buildx/du/).
+[`docker buildx du` command](reference/cli/docker/buildx/du/).
 
 To clear the builder's cache manually,
-use the [`docker buildx prune` command](/reference/cli/docker/buildx/prune/).
+use the [`docker buildx prune` command](reference/cli/docker/buildx/prune/).
 This works like pruning the cache for any other builder.
 
 > **Warning**
@@ -194,7 +194,7 @@ including OCI registries, must be accessible over the internet.
 
 > **Interested in trying out an experimental feature?**
 >
->We are currently testing an experimental feature which lets cloud builders access internal resources. 
+>We are currently testing an experimental feature which lets cloud builders access internal resources.
 >
 > If you're interested in trying this feature, contact us using the [Support form](https://hub.docker.com/support/contact?topic=Docker+Build+Cloud&subject=Private+registry+access).
 { .tip }

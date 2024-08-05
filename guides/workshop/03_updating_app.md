@@ -36,7 +36,7 @@ In the following steps, you'll change the "empty text" when you don't have any t
 You probably saw an error like this:
 
 ```console
-docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_burnell 
+docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_burnell
 (bb242b2ca4d67eba76e79474fb36bb5125708ebdabd7f45c8eaf16caaabde9dd): Bind for 127.0.0.1:3000 failed: port is already allocated.
 ```
 
@@ -100,7 +100,7 @@ To remove a container, you first need to stop it. Once it has stopped, you can r
 In this section, you learned how to update and rebuild a container, as well as how to stop and remove a container.
 
 Related information:
- - [docker CLI reference](/reference/cli/docker/)
+ - [docker CLI reference](reference/cli/docker/)
 
 ## Next steps
 

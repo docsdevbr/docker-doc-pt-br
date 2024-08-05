@@ -14,7 +14,7 @@ Docker is an open platform for developing, shipping, and running applications.
 
 Docker allows you to separate your applications from your infrastructure so you
 can deliver software quickly. With Docker, you can manage your infrastructure in
-the same ways you manage your applications. 
+the same ways you manage your applications.
 
 By taking advantage of Docker’s
 methodologies for shipping, testing, and deploying code quickly, you can
@@ -53,4 +53,4 @@ section and choose the best installation path for you.
 
 > **Note**
 >
-> If you're looking for information on how to install Docker Engine, see [Docker Engine installation overview](/engine/install/).
+> If you're looking for information on how to install Docker Engine, see [Docker Engine installation overview](engine/install/).

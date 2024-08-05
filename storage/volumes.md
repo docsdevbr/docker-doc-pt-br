@@ -99,7 +99,7 @@ If you need to specify volume driver options, you must use `--mount`.
 The examples below show both the `--mount` and `-v` syntax where possible, with
 `--mount` first.
 
-### Differences between `-v` and `--mount` behavior 
+### Differences between `-v` and `--mount` behavior
 
 As opposed to bind mounts, all options for volumes are available for both
 `--mount` and `-v` flags.
@@ -538,7 +538,7 @@ $ mount -t <mount.volume-opt.type> <mount.volume-opt.device> <mount.dst> -o <mou
 ```
 
 To explain this further, consider the following `mount` command example.
-This command mounts the `/dev/loop5` device to the path `/external-drive` on the system. 
+This command mounts the `/dev/loop5` device to the path `/external-drive` on the system.
 
 ```console
 $ mount -t ext4 /dev/loop5 /external-drive
@@ -686,5 +686,5 @@ $ docker volume prune
 
 - Learn about [bind mounts](bind-mounts.md).
 - Learn about [tmpfs mounts](tmpfs.md).
-- Learn about [storage drivers](/storage/storagedriver/).
-- Learn about [third-party volume driver plugins](/engine/extend/legacy_plugins/).
+- Learn about [storage drivers](storage/storagedriver/).
+- Learn about [third-party volume driver plugins](engine/extend/legacy_plugins/).

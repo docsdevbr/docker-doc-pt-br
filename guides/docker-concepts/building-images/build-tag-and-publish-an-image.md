@@ -1,7 +1,7 @@
 ---
 title: Build, tag, and publish an image
 keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you how to build, tag, and publish an image to Docker Hub or any other registry 
+description: This concept page will teach you how to build, tag, and publish an image to Docker Hub or any other registry
 ---
 
 {{< youtube-embed chiiGLlYRlY >}}
@@ -168,7 +168,7 @@ Now that you have a repository on Docker Hub, it's time for you to build an imag
     mobywhale/concepts-build-image-demo    latest    746c7e06537f   24 seconds ago   354MB
     ```
 
-3. You can actually view the history (or how the image was created) by using the [docker image history](/reference/cli/docker/image/history/) command:
+3. You can actually view the history (or how the image was created) by using the [docker image history](reference/cli/docker/image/history/) command:
 
     ```console
     $ docker image history mobywhale/concepts-build-image-demo
@@ -179,7 +179,7 @@ Now that you have a repository on Docker Hub, it's time for you to build an imag
     ```plaintext
     IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
     f279389d5f01   8 seconds ago   CMD ["node" "./src/index.js"]                   0B        buildkit.dockerfile.v0
-    <missing>      8 seconds ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0 
+    <missing>      8 seconds ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0
     <missing>      8 seconds ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
     <missing>      4 days ago      /bin/sh -c #(nop)  CMD ["node"]                 0B
     <missing>      4 days ago      /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B
@@ -198,7 +198,7 @@ Now that you have a repository on Docker Hub, it's time for you to build an imag
 
 Now that you have an image built, it's time to push the image to a registry.
 
-1. Push the image using the [docker push](/reference/cli/docker/image/push/) command:
+1. Push the image using the [docker push](reference/cli/docker/image/push/) command:
 
     ```console
     $ docker push <YOUR_DOCKER_USERNAME>/concepts-build-image-demo
@@ -212,11 +212,11 @@ Now that you have an image built, it's time to push the image to a registry.
 
 To learn more about building, tagging, and publishing images, visit the following resources:
 
-* [What is a build context?](/build/building/context/#what-is-a-build-context)
-* [docker build reference](/engine/reference/commandline/image_build/)
-* [docker image tag reference](/engine/reference/commandline/image_tag/)
-* [docker push reference](/engine/reference/commandline/image_push/)
-* [What is a registry?](/guides/docker-concepts/the-basics/what-is-a-registry/)
+* [What is a build context?](build/building/context/#what-is-a-build-context)
+* [docker build reference](engine/reference/commandline/image_build/)
+* [docker image tag reference](engine/reference/commandline/image_tag/)
+* [docker push reference](engine/reference/commandline/image_push/)
+* [What is a registry?](guides/docker-concepts/the-basics/what-is-a-registry/)
 
 ## Next steps
 

@@ -534,7 +534,7 @@ Related information:
 
 - [TensorFlow.js website](https://www.tensorflow.org/js)
 - [MediaPipe website](https://developers.google.com/mediapipe/)
-- [Dockerfile reference](/reference/dockerfile/)
+- [Dockerfile reference](reference/dockerfile/)
 - [Compose file reference](../../compose/compose-file/_index.md)
-- [Docker CLI reference](/reference/cli/docker/)
+- [Docker CLI reference](reference/cli/docker/)
 - [Docker Blog: Accelerating Machine Learning with TensorFlow.js](https://www.docker.com/blog/accelerating-machine-learning-with-tensorflow-js-using-pretrained-models-and-docker/)

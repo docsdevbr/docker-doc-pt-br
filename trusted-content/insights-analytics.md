@@ -62,7 +62,7 @@ You can download extension CSV reports from the **Insights and analytics** dashb
 ## Exporting analytics data
 
 You can export the analytics data either from the web dashboard, or using the
-[DVP Data API](/docker-hub/api/dvp/). All members of an organization have access to the analytics data.
+[DVP Data API](docker-hub/api/dvp/). All members of an organization have access to the analytics data.
 
 The data is available as a downloadable CSV file, in a weekly (Monday through
 Sunday) or monthly format. Monthly data is available from the first day of the
@@ -90,7 +90,7 @@ Export usage data for your organization's images using the Docker Hub website by
 
 The HTTP API endpoints are available at:
 `https://hub.docker.com/api/publisher/analytics/v1`. Learn how to export data
-using the API in the [DVP Data API documentation](/docker-hub/api/dvp/).
+using the API in the [DVP Data API documentation](docker-hub/api/dvp/).
 
 ## Data points
 

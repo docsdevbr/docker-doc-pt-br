@@ -51,7 +51,7 @@ The source code for the name recognition application is in the `Docker-NLP/02_na
    ```python
    import spacy
    ```
-   
+
    This line imports the `spaCy` library. `spaCy` is a popular library in Python
    used for natural language processing (NLP).
 
@@ -60,7 +60,7 @@ The source code for the name recognition application is in the `Docker-NLP/02_na
    ```python
    nlp = spacy.load("en_core_web_sm")
    ```
-   
+
    Here, the `spacy.load` function loads a language model. The `en_core_web_sm`
    model is a small English language model. You can use this model for various
    NLP tasks, including tokenization, part-of-speech tagging, and named entity
@@ -147,7 +147,7 @@ for creating a Docker container.
 
 The sample application already contains a `Dockerfile`. Open the `Dockerfile` in a code or text editor to explore its contents.
 
-The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](/reference/dockerfile/).
+The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](reference/dockerfile/).
 
 1. Specify the base image.
 
@@ -237,7 +237,7 @@ The following steps explain each part of the `Dockerfile`. For more details, see
     The `ENTRYPOINT` instruction configures the container to run `entrypoint.sh`
     as its default executable. This means that when the container starts, it
     automatically executes the script.
-   
+
    You can explore the `entrypoint.sh` script by opening it in a code or text
    editor. As the sample contains several applications, the script lets you
    specify which application to run when the container starts.
@@ -269,7 +269,7 @@ To run the application using Docker:
      this case) is sent to the Docker daemon to enable the build. It includes
      all the files and subdirectories in the specified directory.
 
-   For more details, see the [docker build CLI reference](/reference/cli/docker/buildx/build/).
+   For more details, see the [docker build CLI reference](reference/cli/docker/buildx/build/).
 
    Docker outputs several logs to your console as it builds the image. You'll
    see it download and install the dependencies. Depending on your network
@@ -302,15 +302,15 @@ To run the application using Docker:
    - `02_name_entity_recognition.py`: This is the script you want to run inside
      the Docker container. It gets passed to the `entrypoint.sh` script, which
      runs it when the container starts.
-     
-   For more details, see the [docker run CLI reference](/reference/cli/docker/container/run/).
+
+   For more details, see the [docker run CLI reference](reference/cli/docker/container/run/).
 
 
    > **Note**
    >
    > For Windows users, you may get an error when running the container. Verify
    > that the line endings in the `entrypoint.sh` are `LF` (`\n`) and not `CRLF` (`\r\n`),
-   > then rebuild the image. For more details, see [Avoid unexpected syntax errors, use Unix style line endings for files in containers](/desktop/troubleshoot/topics/#avoid-unexpected-syntax-errors-use-unix-style-line-endings-for-files-in-containers).
+   > then rebuild the image. For more details, see [Avoid unexpected syntax errors, use Unix style line endings for files in containers](desktop/troubleshoot/topics/#avoid-unexpected-syntax-errors-use-unix-style-line-endings-for-files-in-containers).
 
    You will see the following in your console after the container starts.
 
@@ -324,7 +324,7 @@ To run the application using Docker:
 
    ```console
    Enter the text for entity recognition (type 'exit' to end): Apple Inc. is planning to open a new store in San Francisco. Tim Cook is the CEO of Apple.
-   
+
    Entity: Apple Inc., Type: ORG
    Entity: San Francisco, Type: GPE
    Entity: Tim Cook, Type: PERSON
@@ -339,8 +339,8 @@ and then set up the environment and run the application using Docker.
 
 Related information:
 
-* [Docker CLI reference](/reference/cli/docker/)
-* [Dockerfile reference](/reference/dockerfile/)
+* [Docker CLI reference](reference/cli/docker/)
+* [Dockerfile reference](reference/dockerfile/)
 * [spaCy](https://spacy.io/)
 * [Python documentation](https://docs.python.org/3/)
 

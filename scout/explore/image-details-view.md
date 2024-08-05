@@ -18,7 +18,7 @@ and vulnerabilities.
 
 Docker Desktop first analyzes images locally, where it generates a software bill of materials (SBOM).
 Docker Desktop, Docker Hub, and the Docker Scout Dashboard and CLI all use the [package URL (PURL) links](https://github.com/package-url/purl-spec)
-in this SBOM to query for matching Common Vulnerabilities and Exposures (CVEs) in [Docker Scout's advisory database](/scout/deep-dive/advisory-db-sources.md).
+in this SBOM to query for matching Common Vulnerabilities and Exposures (CVEs) in [Docker Scout's advisory database](scout/deep-dive/advisory-db-sources.md).
 
 ## Image hierarchy
 
@@ -41,7 +41,7 @@ A Docker image consists of layers. Image layers are listed from top to bottom,
 with the earliest layer at the top and the most recent layer at the bottom.
 Often, the layers at the top of the list originate from a base image, and the
 layers towards the bottom added by the image author, often using
-commands in a Dockerfile. Selecting a base image under **Image hierarchy** 
+commands in a Dockerfile. Selecting a base image under **Image hierarchy**
 highlights with layers originate from a base image.
 
 Selecting individual or multiple layers filters the packages and vulnerabilities
@@ -74,7 +74,7 @@ the current image or any base images used to build it:
 - [**Recommendations for base image**](#recommendations-for-base-image) provides
   recommendations for base images used to build the image.
 
-If the image you're viewing has no associated base images, the drop-down menu only 
+If the image you're viewing has no associated base images, the drop-down menu only
 shows the option to view recommendations for the current image.
 
 ### Recommendations in Docker Hub
@@ -128,7 +128,7 @@ includes:
 - The age of the latest available version
 - The number of CVEs affecting each version
 
-At the bottom of the window, you also receive command snippets that you can 
+At the bottom of the window, you also receive command snippets that you can
 run to re-build the image using the latest version.
 
 #### Change base image

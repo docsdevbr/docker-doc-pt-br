@@ -23,7 +23,7 @@ Create a GitHub repository and configure the Docker Hub credentials.
 3. Create a new **Repository variable** named `DOCKER_USERNAME` and your Docker ID as value.
 
 4. Create a new
-   [Personal Access Token (PAT)](/security/for-developers/access-tokens/#create-an-access-token)
+   [Personal Access Token (PAT)](security/for-developers/access-tokens/#create-an-access-token)
    for Docker Hub. You can name this token `clockboxci`.
 
 5. Add the PAT as a **Repository secret** in your GitHub repository, with the name

@@ -106,7 +106,7 @@ To build the image, you'll need to use a Dockerfile. A Dockerfile is simply a te
 
    ```dockerfile
    # syntax=docker/dockerfile:1
-   
+
    FROM node:18-alpine
    WORKDIR /app
    COPY . .
@@ -162,7 +162,7 @@ Now that you have an image, you can run the application in a container using the
    You should see your app.
 
    ![Empty todo list](images/todo-list-empty.webp)
-   
+
 
 3. Add an item or two and see that it works as you expect. You can mark items as complete and remove them. Your frontend is successfully storing items in the backend.
 
@@ -201,8 +201,8 @@ In this section, you learned the basics about creating a Dockerfile to build an 
 
 Related information:
 
- - [Dockerfile reference](/reference/dockerfile/)
- - [docker CLI reference](/reference/cli/docker/)
+ - [Dockerfile reference](reference/dockerfile/)
+ - [docker CLI reference](reference/cli/docker/)
  - [Build with Docker guide](../../build/guide/_index.md)
 
 ## Next steps

@@ -52,7 +52,7 @@ $ docker buildx bake
 The properties you can set for a target closely resemble the CLI flags for
 `docker build`, with a few additional properties that are specific to Bake.
 
-For all the properties you can set for a target, see the [Bake reference](/build/bake/reference#target).
+For all the properties you can set for a target, see the [Bake reference](build/bake/reference#target).
 
 ## Grouping targets
 
@@ -102,5 +102,5 @@ Refer to the following pages to learn more about Bake's features:
   configuration more flexible.
 - Learn how you can use matrices to build multiple images with different
   configurations in [Matrices](./matrices.md).
-- Head to the [Bake file reference](/build/bake/reference/) to learn about all
+- Head to the [Bake file reference](build/bake/reference/) to learn about all
   the properties you can set in a Bake file, and its syntax.

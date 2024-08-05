@@ -60,7 +60,7 @@ The source code for the text classification application is in the `Docker-NLP/03
    from sklearn.model_selection import train_test_split
    import ssl
    ```
-   
+
    - `nltk`: A popular Python library for natural language processing (NLP).
    - `SentimentIntensityAnalyzer`: A component of `nltk` for sentiment analysis.
    - `accuracy_score`, `classification_report`: Functions from scikit-learn for
@@ -80,7 +80,7 @@ The source code for the text classification application is in the `Docker-NLP/03
    else:
        ssl._create_default_https_context = _create_unverified_https_context
    ```
-   
+
    This block is a workaround for certain environments where downloading data
    through NLTK might fail due to SSL certificate verification issues. It's
    telling Python to ignore SSL certificate verification for HTTPS requests.
@@ -90,7 +90,7 @@ The source code for the text classification application is in the `Docker-NLP/03
    ```python
    nltk.download('vader_lexicon')
    ```
-   
+
    The `vader_lexicon` is a lexicon used by the `SentimentIntensityAnalyzer` for
      sentiment analysis.
 
@@ -157,7 +157,7 @@ The source code for the text classification application is in the `Docker-NLP/03
      ```python
         while True:
          input_text = input("Enter the text for classification (type 'exit' to end): ")
-     
+
            if input_text.lower() == 'exit':
               print("Exiting...")
               break
@@ -179,7 +179,7 @@ The source code for the text classification application is in the `Docker-NLP/03
              print(f"Accuracy: {accuracy:.2f}")
              print("\nVADER Classification Report:")
              print(report_vader)
-     
+
              print(f"\nTest Text (Positive): '{input_text}'")
              print(f"Predicted Sentiment: {'Positive' if input_text_classification == 0 else 'Negative'}")
      ```
@@ -218,7 +218,7 @@ for creating a Docker container.
 
 The sample application already contains a `Dockerfile`. Open the `Dockerfile` in a code or text editor to explore its contents.
 
-The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](/reference/dockerfile/).
+The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](reference/dockerfile/).
 
 1. Specify the base image.
 
@@ -308,7 +308,7 @@ The following steps explain each part of the `Dockerfile`. For more details, see
     The `ENTRYPOINT` instruction configures the container to run `entrypoint.sh`
     as its default executable. This means that when the container starts, it
     automatically executes the script.
-   
+
    You can explore the `entrypoint.sh` script by opening it in a code or text
    editor. As the sample contains several applications, the script lets you
    specify which application to run when the container starts.
@@ -341,7 +341,7 @@ To run the application using Docker:
      this case) is sent to the Docker daemon to enable the build. It includes
      all the files and subdirectories in the specified directory.
 
-   For more details, see the [docker build CLI reference](/reference/cli/docker/buildx/build/).
+   For more details, see the [docker build CLI reference](reference/cli/docker/buildx/build/).
 
    Docker outputs several logs to your console as it builds the image. You'll
    see it download and install the dependencies. Depending on your network
@@ -375,13 +375,13 @@ To run the application using Docker:
      Docker container. It gets passed to the `entrypoint.sh` script, which runs
      it when the container starts.
 
-   For more details, see the [docker run CLI reference](/reference/cli/docker/container/run/).
+   For more details, see the [docker run CLI reference](reference/cli/docker/container/run/).
 
    > **Note**
    >
    > For Windows users, you may get an error when running the container. Verify
    > that the line endings in the `entrypoint.sh` are `LF` (`\n`) and not `CRLF` (`\r\n`),
-   > then rebuild the image. For more details, see [Avoid unexpected syntax errors, use Unix style line endings for files in containers](/desktop/troubleshoot/topics/#avoid-unexpected-syntax-errors-use-unix-style-line-endings-for-files-in-containers).
+   > then rebuild the image. For more details, see [Avoid unexpected syntax errors, use Unix style line endings for files in containers](desktop/troubleshoot/topics/#avoid-unexpected-syntax-errors-use-unix-style-line-endings-for-files-in-containers).
 
    You will see the following in your console after the container starts.
 
@@ -420,8 +420,8 @@ the application using Docker.
 
 Related information:
 
-* [Docker CLI reference](/reference/cli/docker/)
-* [Dockerfile reference](/reference/dockerfile/)
+* [Docker CLI reference](reference/cli/docker/)
+* [Dockerfile reference](reference/dockerfile/)
 * [Natural Language Toolkit](https://www.nltk.org/)
 * [Python documentation](https://docs.python.org/3/)
 * [scikit-learn](https://scikit-learn.org/)
