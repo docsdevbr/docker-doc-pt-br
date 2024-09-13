@@ -22,9 +22,9 @@ Para conceitos e cenários mais avançados no Docker, consulte os
 
 Instale o Docker e comece a descobrir o que é o Docker.
 
-* [Obtenha o Docker](obtenha-o-docker.md)
+* [Obtenha o Docker](obtenha-o-docker)
   * Escolha a melhor forma de instalação para sua configuração.
-* [O que é Docker?](../get-started/docker-overview.md)
+* [O que é Docker?](o-que-e-docker)
   * Aprenda sobre a plataforma Docker.
 
 Aprenda os conceitos básicos e os fluxos de trabalho do Docker.

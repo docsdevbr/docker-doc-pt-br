@@ -5,6 +5,14 @@
 /installation/ /comecando/obtenha-o-docker
 /get-docker/ /comecando/obtenha-o-docker
 
+/introduction/understanding-docker/ /comecando/o-que-e-docker
+/engine/userguide/basics/ /comecando/o-que-e-docker
+/engine/introduction/understanding-docker/ /comecando/o-que-e-docker
+/engine/understanding-docker/ /comecando/o-que-e-docker
+/engine/docker-overview/ /comecando/o-que-e-docker
+/get-started/overview/ /comecando/o-que-e-docker
+/guides/docker-overview/ /comecando/o-que-e-docker
+
 # engine
 
 /engine/edge/ engine/index.html
