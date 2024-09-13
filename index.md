@@ -17,7 +17,16 @@ keywords: |
 
 # Documentação do Docker
 
-## Docker Desktop
+## Começando
+
+Aprenda os conceitos básicos do Docker e os benefícios de criar contêineres com
+suas aplicações.
+
+- [Comece](comecando)
+
+## Navegar por seção
+
+### Docker Desktop
 
 Gerencie contêineres, aplicações e imagens diretamente de sua máquina.
 
@@ -25,7 +34,7 @@ Gerencie contêineres, aplicações e imagens diretamente de sua máquina.
 - [Explorar o Docker Desktop](desktop/use-desktop/)
 - [Notas de lançamento](desktop/release-notes/)
 
-## Docker Engine
+### Docker Engine
 
 O cliente e tempo de execução de contêiner definitivo de código aberto.
 
@@ -33,7 +42,7 @@ O cliente e tempo de execução de contêiner definitivo de código aberto.
 - [Instalar](engine/install/)
 - [Notas de lançamento](engine/release-notes/)
 
-## Docker Build
+### Docker Build
 
 Empacote, teste e distribua suas aplicações.
 
@@ -41,7 +50,7 @@ Empacote, teste e distribua suas aplicações.
 - [Empacotando seu software](build/building/packaging/)
 - [Notas de lançamento](build/release-notes/)
 
-## Docker Build Cloud
+### Docker Build Cloud
 
 Execute suas compilações na nuvem.
 
@@ -49,7 +58,7 @@ Execute suas compilações na nuvem.
 - [Configuração](build-cloud/setup/)
 - [Otimização](build-cloud/optimization/)
 
-## Docker Compose
+### Docker Compose
 
 Defina e execute aplicações de vários contêineres com o Docker.
 
@@ -57,7 +66,7 @@ Defina e execute aplicações de vários contêineres com o Docker.
 - [Experimente o Docker Compose](compose/gettingstarted/)
 - [Notas de lançamento](compose/release-notes/)
 
-## Docker Hub
+### Docker Hub
 
 Encontre e compartilhe imagens de contêineres e outros artefatos.
 
@@ -65,7 +74,7 @@ Encontre e compartilhe imagens de contêineres e outros artefatos.
 - [Crie uma conta](docker-id/)
 - [Crie um repositório](docker-hub/repos/create/)
 
-## Docker Scout
+### Docker Scout
 
 Fortaleça sua cadeia de suprimentos de software com o Docker Scout.
 
@@ -73,7 +82,7 @@ Fortaleça sua cadeia de suprimentos de software com o Docker Scout.
 - [Início rápido](scout/quickstart/)
 - [Análise de imagem](scout/image-analysis/)
 
-## Conteúdo Confiável
+### Conteúdo Confiável
 
 Imagens seguras e de alta qualidade do Docker e de parceiros verificados.
 
@@ -81,7 +90,7 @@ Imagens seguras e de alta qualidade do Docker e de parceiros verificados.
 - [Imagens oficiais](trusted-content/official-images/)
 - [Programa de publicador verificado](trusted-content/dvp-program/)
 
-## Assinatura
+### Assinatura
 
 Licenciamento para uso comercial de componentes do Docker.
 
@@ -89,7 +98,7 @@ Licenciamento para uso comercial de componentes do Docker.
 - [Assinaturas e recursos](subscription/core-subscription/details/)
 - [Atualizar](subscription/core-subscription/upgrade/)
 
-## Cobrança
+### Cobrança
 
 Gerencie as configurações de faturamento e pagamento da sua assinatura.
 
@@ -97,7 +106,7 @@ Gerencie as configurações de faturamento e pagamento da sua assinatura.
 - [Atualizar forma de pagamento](billing/core-billing/payment-method/)
 - [Ver histórico de faturamento](billing/core-billing/history/)
 
-## Administração
+### Administração
 
 Gerencie pessoas usuárias, permissões e muito mais da empresa e da organização.
 
@@ -105,7 +114,7 @@ Gerencie pessoas usuárias, permissões e muito mais da empresa e da organizaç�
 - [Administração da organização](admin/organization/)
 - [Administração da empresa](admin/company/)
 
-## Segurança
+### Segurança
 
 Proteções de segurança para pessoas administradoras e desenvolvedoras.
 
