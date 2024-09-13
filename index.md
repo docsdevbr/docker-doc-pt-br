@@ -1,6 +1,6 @@
 ---
 source_url: https://github.com/docker/docs/blob/main/content/_index.md
-revision: 19c9da7eb79ab325874fbe3b95852773bafc42f0
+revision: d444610c66111ed2793ab7de7d82978a78576408
 status: ready
 license: https://github.com/docker/docs/blob/main/LICENSE
 
@@ -71,7 +71,7 @@ Defina e execute aplicações de vários contêineres com o Docker.
 Encontre e compartilhe imagens de contêineres e outros artefatos.
 
 - [Visão geral](docker-hub/)
-- [Crie uma conta](docker-id/)
+- [Crie uma conta](accounts/create-account.md)
 - [Crie um repositório](docker-hub/repos/create/)
 
 ### Docker Scout
