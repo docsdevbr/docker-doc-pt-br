@@ -9,7 +9,7 @@ aliases:
 
 ## Prerequisites
 
-* You have installed the latest version of [Docker Desktop](../../get-docker.md).
+* You have installed the latest version of [Docker Desktop](../../comecando/obtenha-o-docker.md).
 * You have a [Git client](https://git-scm.com/downloads). The examples in this section show the Git CLI, but you can use any client.
 
 ## Overview

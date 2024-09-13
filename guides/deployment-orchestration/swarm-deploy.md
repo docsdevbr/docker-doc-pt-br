@@ -11,7 +11,7 @@ aliases:
 
 ## Prerequisites
 
-- Download and install Docker Desktop as described in [Get Docker](../../get-docker.md).
+- Download and install Docker Desktop as described in [Get Docker](../../comecando/obtenha-o-docker.md).
 - Work through containerizing an application in [Docker workshop part 2](../../guides/workshop/02_our_app.md)
 - Make sure that Swarm is enabled on your Docker Desktop by typing `docker system info`, and looking for a message `Swarm: active` (you might have to scroll up a little).
 

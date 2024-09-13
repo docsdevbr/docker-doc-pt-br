@@ -16,7 +16,7 @@ don't worry. This guide doesn't require any prior experience with JavaScript.
 
 ## Prerequisites
 
-- You have installed the latest version of [Docker Desktop](../../get-docker.md).
+- You have installed the latest version of [Docker Desktop](../../comecando/obtenha-o-docker.md).
 - You have installed a [Git client](https://git-scm.com/downloads).
 - You have an IDE or a text editor to edit files. Docker recommends using [Visual Studio Code](https://code.visualstudio.com/).
 

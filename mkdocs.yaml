@@ -12,4 +12,5 @@ site_description: Documentação do Docker
 nav:
   - Documentação do Docker: index.md
   - Começando:
-      - Início: comecando/index.md
+      - comecando/index.md
+      - comecando/obtenha-o-docker.md

@@ -46,7 +46,7 @@ the [Docker Desktop **Builds** view](../../../desktop/use-desktop/builds.md).
 
 To import the build record archive into Docker Desktop:
 
-1. Download and install [Docker Desktop](../../../get-docker.md).
+1. Download and install [Docker Desktop](../../../comecando/obtenha-o-docker.md).
 
 2. Download the build record archive from the job summary in GitHub Actions.
 

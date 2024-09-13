@@ -34,7 +34,7 @@ By combining Docker and JupyterLab, you can benefit from the advantages of both 
 
 ## Prerequisites
 
-To follow along with this guide, you must install the latest version of [Docker Desktop](../../../get-docker.md).
+To follow along with this guide, you must install the latest version of [Docker Desktop](../../../comecando/obtenha-o-docker.md).
 
 ## Run and access a JupyterLab container
 

@@ -202,5 +202,5 @@ in a separate namespace and its access is limited to that namespace.
 
 ## Next steps
 
-- [Install Docker](../get-docker.md)
+- [Install Docker](../comecando/obtenha-o-docker.md)
 - [Get started with Docker](index.md)
