@@ -505,8 +505,8 @@ To build and run your custom image:
       example, files from your host's `./scripts/` directory are copied into the
       container's `/docker-entrypoint-initdb.d/` directory. In this directory,
       `.sh`, `.sql`, and `.sql.gz` scripts are executed when the container is
-      started for the first time. For more details about Dockerifles, see the
-      [Dockerfile reference](reference/dockerfile/).
+      started for the first time. For more details about Dockerfiles, see the
+      [Dockerfile reference](../../reference/dockerfile.md).
 
    3. Create a script file to initialize a table in the database. In the
       directory where your `Dockerfile` is located, create a subdirectory named
@@ -641,7 +641,7 @@ To run your containers with Docker Compose:
       a service joins the default network and is both reachable by other
       containers on that network, and discoverable by the service's name.
       Therefore, in the `PMA_HOST` environment variable, you can specify the
-      service name, `db`, in order to connect to the database service. For more details about Compose, see the [Compose file reference](compose/compose-file/).
+      service name, `db`, in order to connect to the database service. For more details about Compose, see the [Compose file reference](../../reference/compose-file/index.md).
 
 2. Run Docker Compose.
    1. Open a terminal and change directory to the directory where your
@@ -672,7 +672,7 @@ data-driven applications remain robust and scalable.
 Related information:
 
 - [Docker Hub database images](https://hub.docker.com/search?q=database&type=image)
-- [Dockerfile reference](reference/dockerfile/)
-- [Compose file reference](compose/compose-file/)
-- [CLI reference](reference/cli/docker/)
-- [Database samples](../../samples/_index.md#databases)
+- [Dockerfile reference](../../reference/dockerfile.md)
+- [Compose file reference](../../reference/compose-file/index.md)
+- [CLI reference](../../reference/cli/docker/index.md)
+- [Database samples](../../samples/index.md#databases)

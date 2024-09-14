@@ -14,7 +14,6 @@ for the script is open source, and you can find it in the
 Always examine scripts downloaded from the internet before running them locally.
 Before installing, make yourself familiar with potential risks and limitations
 of the convenience script:
-{ .warning }
 
 - The script requires `root` or `sudo` privileges to run.
 - The script attempts to detect your Linux distribution and version and
@@ -62,10 +61,10 @@ indicates, non-root users can't run Docker commands by default.
 >
 > The installation script requires `root` or `sudo` privileges to install and
 > use Docker. If you want to grant non-root users access to Docker, refer to the
-> [post-installation steps for Linux](engine/install/linux-postinstall/#manage-docker-as-a-non-root-user).
+> [post-installation steps for Linux](../manuals/engine/install/linux-postinstall.md#manage-docker-as-a-non-root-user).
 > You can also install Docker without `root` privileges, or configured to run in
 > rootless mode. For instructions on running Docker in rootless mode, refer to
-> [run the Docker daemon as a non-root user (rootless mode)](engine/security/rootless/).
+> [run the Docker daemon as a non-root user (rootless mode)](../manuals/engine/security/rootless.md).
 
 #### Install pre-releases
 

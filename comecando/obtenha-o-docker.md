@@ -5,11 +5,13 @@ status: ready
 license: https://github.com/docker/docs/blob/main/LICENSE
 
 description: Baixe e instale o Docker na plataforma de sua escolha, incluindo
-  Mac, Linux ou Windows.
+    Mac, Linux ou Windows.
 keywords: instalar docker, baixar docker, instalação do docker, como instalar
-  docker, obter docker, docker localmente
+    docker, obter docker, docker localmente
 title: Obtenha o Docker
 ---
+
+# Obtenha o Docker
 
 Docker é uma plataforma aberta para desenvolver, distribuir e executar
 aplicações.
@@ -32,19 +34,20 @@ Consulte a seção a seguir e escolha a melhor forma de instalação para você.
 > funcionárias OU mais de US$ 10 milhões em receita anual) requer uma
 > [assinatura paga](https://www.docker.com/pricing/).
 
-* [Docker Desktop para Mac](../desktop/install/mac-install.md)
-  * Uma aplicação nativa que usa o modelo de segurança de _sandbox_ do macOS que
-    fornece todas as ferramentas do Docker para o seu Mac.
+* [Docker Desktop para Mac](../manuals/desktop/install/mac-install.md)
+    * Uma aplicação nativa que usa o modelo de segurança de _sandbox_ do macOS
+      que
+      fornece todas as ferramentas do Docker para o seu Mac.
 
-* [Docker Desktop para Windows](../desktop/install/windows-install.md)
+* [Docker Desktop para Windows](../manuals/desktop/install/windows-install.md)
     * Uma aplicação nativa do Windows que fornece todas as ferramentas do Docker
       para o seu computador Windows.
 
-* [Docker Desktop para Linux](../desktop/install/linux-install.md)
+* [Docker Desktop para Linux](../manuals/desktop/install/linux/index.md)
     * Uma aplicação nativa do Linux que fornece todas as ferramentas do Docker
       para seu computador Linux.
 
 > **Nota**
 >
 > Se você estiver procurando informações sobre como instalar o Docker Engine,
-> consulte a [visão geral da instalação do Docker Engine](../engine/install).
+> consulte a [visão geral da instalação do Docker Engine](../manuals/engine/install/index.md).

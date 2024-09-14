@@ -1,5 +1,6 @@
 ---
 title: Build a named entity recognition app
+linkTitle: Named entity recognition
 keywords: nlp, natural language processing, named entity recognition, python, spacy, ner
 description: Learn how to build and run a named entity recognition application using Python, spaCy, and Docker.
 ---
@@ -147,7 +148,7 @@ for creating a Docker container.
 
 The sample application already contains a `Dockerfile`. Open the `Dockerfile` in a code or text editor to explore its contents.
 
-The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](reference/dockerfile/).
+The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](../../../reference/dockerfile.md).
 
 1. Specify the base image.
 
@@ -269,7 +270,7 @@ To run the application using Docker:
      this case) is sent to the Docker daemon to enable the build. It includes
      all the files and subdirectories in the specified directory.
 
-   For more details, see the [docker build CLI reference](reference/cli/docker/buildx/build/).
+   For more details, see the [docker build CLI reference](../../../reference/cli/docker/buildx/build.md).
 
    Docker outputs several logs to your console as it builds the image. You'll
    see it download and install the dependencies. Depending on your network
@@ -303,14 +304,14 @@ To run the application using Docker:
      the Docker container. It gets passed to the `entrypoint.sh` script, which
      runs it when the container starts.
 
-   For more details, see the [docker run CLI reference](reference/cli/docker/container/run/).
+   For more details, see the [docker run CLI reference](../../../reference/cli/docker/container/run.md).
 
 
-   > **Note**
+   > [!NOTE]
    >
    > For Windows users, you may get an error when running the container. Verify
    > that the line endings in the `entrypoint.sh` are `LF` (`\n`) and not `CRLF` (`\r\n`),
-   > then rebuild the image. For more details, see [Avoid unexpected syntax errors, use Unix style line endings for files in containers](desktop/troubleshoot/topics/#avoid-unexpected-syntax-errors-use-unix-style-line-endings-for-files-in-containers).
+   > then rebuild the image. For more details, see [Avoid unexpected syntax errors, use Unix style line endings for files in containers](../../../manuals/desktop/troubleshoot/topics.md#avoid-unexpected-syntax-errors-use-unix-style-line-endings-for-files-in-containers).
 
    You will see the following in your console after the container starts.
 
@@ -339,11 +340,11 @@ and then set up the environment and run the application using Docker.
 
 Related information:
 
-* [Docker CLI reference](reference/cli/docker/)
-* [Dockerfile reference](reference/dockerfile/)
+* [Docker CLI reference](../../../reference/cli/docker/index.md)
+* [Dockerfile reference](../../../reference/dockerfile.md)
 * [spaCy](https://spacy.io/)
 * [Python documentation](https://docs.python.org/3/)
 
 ## Next steps
 
-Explore more [natural language processing guides](./_index.md).
+Explore more [natural language processing guides](index.md).

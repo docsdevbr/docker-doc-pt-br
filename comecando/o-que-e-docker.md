@@ -5,14 +5,16 @@ status: ready
 license: https://github.com/docker/docs/blob/main/LICENSE
 
 description: Obtenha uma visão geral aprofundada da plataforma Docker, incluindo
-  para que ela pode ser usada, a arquitetura que ela emprega e sua tecnologia
-  subjacente.
+    para que ela pode ser usada, a arquitetura que ela emprega e sua tecnologia
+    subjacente.
 keywords: o que é docker, daemon docker, por que usar docker, arquitetura
-  docker, para que usar docker, cliente docker, para que serve o docker, por que
-  docker, usos para docker, para que o contêiner docker é usado, para que os
-  contêineres docker são usados
+    docker, para que usar docker, cliente docker, para que serve o docker, por
+    que docker, usos para docker, para que o contêiner docker é usado, para que
+    os contêineres docker são usados
 title: O que é Docker?
 ---
+
+# O que é Docker?
 
 Docker é uma plataforma aberta para desenvolver, distribuir e executar
 aplicações.
@@ -128,7 +130,7 @@ microsserviços em contêineres.
 O Docker Desktop inclui o _daemon_ do Docker (`dockerd`), o cliente Docker
 (`docker`), o Docker Compose, o Docker Content Trust, o Kubernetes e o
 Credential Helper.
-Para obter mais informações, consulte [Docker Desktop](/desktop).
+Para obter mais informações, consulte [Docker Desktop](../manuals/desktop/index.md).
 
 ### Registros do Docker
 

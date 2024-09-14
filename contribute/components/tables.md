@@ -9,7 +9,7 @@ toc_max: 3
 ### Basic table
 
 | Permission level                                                         | Access                                                        |
-| :----------------------------------------------------------------------- | :------------------------------------------------------------ |
+|:-------------------------------------------------------------------------|:--------------------------------------------------------------|
 | **Bold** or _italic_ within a table cell. Next cell is empty on purpose. |                                                               |
 |                                                                          | Previous cell is empty. A `--flag` in mono text.              |
 | Read                                                                     | Pull                                                          |
@@ -19,11 +19,11 @@ toc_max: 3
 ### Feature-support table
 
 | Platform   | x86_64 / amd64 |
-| :--------- | :------------: |
-| Ubuntu     |       ✅       |
-| Debian     |       ✅       |
+|:-----------|:--------------:|
+| Ubuntu     |       ✅        |
+| Debian     |       ✅        |
 | Fedora     |                |
-| Arch (btw) |       ✅       |
+| Arch (btw) |       ✅        |
 
 ## Markdown
 

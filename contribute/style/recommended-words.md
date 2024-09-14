@@ -36,7 +36,7 @@ Avoid because the writing itself implies this phrase. The phrase can also premat
 
 #### below
 
-Try to avoid `below` when referring to an example or table on a documentation page. If required, use `following` instead.
+Try to avoid `below` when referring to an example or table on a documentation page. If required, use `following` instead.
 
 For example:
 
@@ -44,23 +44,19 @@ _In the following example, the dog had fleas._
 
 #### checkbox
 
-Use one word for `checkbox`. Don't use `check box`.
+Use one word for `checkbox`. Don't use `check box`.
 
-You select (not check or enable) and clear (not deselect or disable) checkboxes.
+You select (not check or enable) and clear (not deselect or disable) checkboxes.
 
 #### click
 
-Don't use `click`. Instead, use `select` with buttons, links, menu items, and lists.
+Don't use `click`. Instead, use `select` with buttons, links, menu items, and lists.
 
-Select applies to more devices, while click is more specific to a mouse.
+Select applies to more devices, while click is more specific to a mouse.
 
 #### currently
 
 Don't use `currently` when talking about the product or its features. The documentation describes the product as it is today.
-
-#### deselect
-
-Don’t use `deselect`. Instead, use `clear`.
 
 #### disable
 
@@ -150,7 +146,7 @@ Use `sign up` or `create account` instead of `register` when talking about creat
 
 #### tab versus view
 
-Use `view` when referring to a major section in a UI. Use `tab` when referring to a sub-section in the UI. 
+Use `view` when referring to a major section in a UI. Use `tab` when referring to a sub-section in the UI.
 
 For example, in Docker Desktop, the **Images** view and the **Local** tab.
 

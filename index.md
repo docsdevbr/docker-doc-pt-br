@@ -4,7 +4,7 @@ revision: d444610c66111ed2793ab7de7d82978a78576408
 status: ready
 license: https://github.com/docker/docs/blob/main/LICENSE
 
-title: Início
+title: Documentação do Docker
 description: |
     A Documentação do Docker é a biblioteca oficial de recursos, manuais e guias
     do Docker para te ajudar a criar contêineres de aplicações.
@@ -30,94 +30,94 @@ suas aplicações.
 
 Gerencie contêineres, aplicações e imagens diretamente de sua máquina.
 
-- [Visão geral](desktop/)
-- [Explorar o Docker Desktop](desktop/use-desktop/)
-- [Notas de lançamento](desktop/release-notes/)
+- [Visão geral](manuals/desktop)
+- [Explorar o Docker Desktop](manuals/desktop/use-desktop)
+- [Notas de lançamento](manuals/desktop/release-notes)
 
 ### Docker Engine
 
 O cliente e tempo de execução de contêiner definitivo de código aberto.
 
-- [Visão geral](engine/)
-- [Instalar](engine/install/)
-- [Notas de lançamento](engine/release-notes/)
+- [Visão geral](manuals/engine)
+- [Instalar](manuals/engine/install)
+- [Notas de lançamento](manuals/engine/release-notes)
 
 ### Docker Build
 
 Empacote, teste e distribua suas aplicações.
 
-- [Visão geral](build/)
-- [Empacotando seu software](build/building/packaging/)
-- [Notas de lançamento](build/release-notes/)
+- [Visão geral](manuals/build)
+- [Empacotando seu software](manuals/build/building/packaging)
+- [Notas de lançamento](manuals/build/release-notes)
 
 ### Docker Build Cloud
 
 Execute suas compilações na nuvem.
 
-- [Visão geral](build-cloud/)
-- [Configuração](build-cloud/setup/)
-- [Otimização](build-cloud/optimization/)
+- [Visão geral](manuals/build-cloud)
+- [Configuração](manuals/build-cloud/setup)
+- [Otimização](manuals/build-cloud/optimization)
 
 ### Docker Compose
 
 Defina e execute aplicações de vários contêineres com o Docker.
 
-- [Visão geral](compose/)
-- [Experimente o Docker Compose](compose/gettingstarted/)
-- [Notas de lançamento](compose/release-notes/)
+- [Visão geral](manuals/compose)
+- [Experimente o Docker Compose](manuals/compose/gettingstarted)
+- [Notas de lançamento](manuals/compose/release-notes)
 
 ### Docker Hub
 
 Encontre e compartilhe imagens de contêineres e outros artefatos.
 
-- [Visão geral](docker-hub/)
-- [Crie uma conta](accounts/create-account.md)
-- [Crie um repositório](docker-hub/repos/create/)
+- [Visão geral](manuals/docker-hub)
+- [Crie uma conta](manuals/manuals/accounts/create-account)
+- [Crie um repositório](manuals/docker-hub/repos/create)
 
 ### Docker Scout
 
 Fortaleça sua cadeia de suprimentos de software com o Docker Scout.
 
-- [Visão geral](scout/)
-- [Início rápido](scout/quickstart/)
-- [Análise de imagem](scout/image-analysis/)
+- [Visão geral](manuals/scout)
+- [Início rápido](manuals/scout/quickstart)
+- [Análise de imagem](manuals/scout/explore/analysis)
 
 ### Conteúdo Confiável
 
 Imagens seguras e de alta qualidade do Docker e de parceiros verificados.
 
-- [Visão geral](trusted-content/)
-- [Imagens oficiais](trusted-content/official-images/)
-- [Programa de publicador verificado](trusted-content/dvp-program/)
+- [Visão geral](manuals/trusted-content)
+- [Imagens oficiais](manuals/trusted-content/official-images)
+- [Programa de publicador verificado](manuals/trusted-content/dvp-program)
 
 ### Assinatura
 
 Licenciamento para uso comercial de componentes do Docker.
 
-- [Visão geral](subscription/)
-- [Assinaturas e recursos](subscription/core-subscription/details/)
-- [Atualizar](subscription/core-subscription/upgrade/)
+- [Visão geral](manuals/subscription)
+- [Assinaturas e recursos](manuals/subscription/core-subscription/details)
+- [Atualizar](manuals/subscription/core-subscription/upgrade)
 
 ### Cobrança
 
 Gerencie as configurações de faturamento e pagamento da sua assinatura.
 
-- [Visão geral](billing/)
-- [Atualizar forma de pagamento](billing/core-billing/payment-method/)
-- [Ver histórico de faturamento](billing/core-billing/history/)
+- [Visão geral](manuals/billing)
+- [Atualizar forma de pagamento](manuals/billing/core-billing/payment-method)
+- [Ver histórico de faturamento](manuals/billing/core-billing/history)
 
 ### Administração
 
 Gerencie pessoas usuárias, permissões e muito mais da empresa e da organização.
 
-- [Visão geral](admin/company/)
-- [Administração da organização](admin/organization/)
-- [Administração da empresa](admin/company/)
+- [Visão geral](manuals/admin/company)
+- [Administração da organização](manuals/admin/organization)
+- [Administração da empresa](manuals/admin/company)
 
 ### Segurança
 
 Proteções de segurança para pessoas administradoras e desenvolvedoras.
 
-- [Visão geral](security/)
-- [SSO](security/for-admins/single-sign-on/)
-- [SCIM](security/for-admins/provisioning/scim/)
+- [Visão geral](manuals/security)
+- [SSO](manuals/security/for-admins/single-sign-on)
+- [SCIM](manuals/security/for-admins/provisioning/scim)

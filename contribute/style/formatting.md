@@ -103,13 +103,13 @@ Use callouts to emphasize selected information on a page.
 - Format the word Warning, Important, or Note in bold. Don't bold the content within the callout.
 - It's good practice to avoid placing a lot of text callouts on one page. They can create a cluttered appearance if used to excess, and you'll diminish their impact.
 
-| Text callout | Use case scenario                                                                                                                                                                   | Color or callout box |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| Warning      | Use a Warning tag to signal to the reader where actions may cause damage to hardware or software loss of data.                                                                      | Red                  |
-|              | ✅ Example: Warning: When you use the docker login command, your credentials are stored in your home directory in .docker/config.json. The password is base64-encoded in this file. |                      |
-| Important    | Use an Important tag to signal to the reader where actions may cause issues of a lower magnitude.                                                                                   | Yellow               |
+| Text callout | Use case scenario                                                                                                                                                                  | Color or callout box |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| Warning      | Use a Warning tag to signal to the reader where actions may cause damage to hardware or software loss of data.                                                                     | Red                  |
+|              | ✅ Example: Warning: When you use the docker login command, your credentials are stored in your home directory in .docker/config.json. The password is base64-encoded in this file. |                      |
+| Important    | Use an Important tag to signal to the reader where actions may cause issues of a lower magnitude.                                                                                  | Yellow               |
 |              | ✅ Example: Update to the Docker Desktop terms                                                                                                                                      |                      |
-| Note         | Use the Note tag for information that may not apply to all readers, or if the information is tangential to a topic.                                                                 | Blue                 |
+| Note         | Use the Note tag for information that may not apply to all readers, or if the information is tangential to a topic.                                                                | Blue                 |
 |              | ✅ Example: Deleting a repository deletes all the images it contains and its build settings. This action cannot be undone.                                                          |                      |
 
 For information on how to add callouts to your content, see [Useful component and formatting examples](../components/call-outs.md).

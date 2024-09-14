@@ -54,7 +54,7 @@ If books are your preferred learning style, check out these written by the [Dock
 
 ## CLI cheat sheet
 
-The [Docker CLI cheat sheet](get-started/docker_cheatsheet.pdf) features the common Docker CLI commands for easy reference. It covers working with Images, Containers, Docker Hub, and other general purpose commands.
+The [Docker CLI cheat sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf) features the common Docker CLI commands for easy reference. It covers working with Images, Containers, Docker Hub, and other general purpose commands.
 
 ## Self-Paced online learning
 
@@ -72,7 +72,7 @@ A number of Docker Captains have also created video courses on Docker and Kubern
 
 ## Community-translated docs
 
-> **Note**
+> [!NOTE]
 >
 > The following section contains a subset of Docker docs that are translated by community
 > members. This is not an officially translated version of Docker docs and it may not be up to date.

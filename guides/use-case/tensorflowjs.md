@@ -22,7 +22,7 @@ perform face detection. In this guide, you'll explore how to:
 ## Prerequisites
 
 * You have installed the latest version of
-  [Docker Desktop](../../../comecando/obtenha-o-docker.md).
+  [Docker Desktop](../../comecando/obtenha-o-docker.md).
 * You have a [Git client](https://git-scm.com/downloads). The examples in this
   guide use a command-line based Git client, but you can use any client.
 
@@ -431,7 +431,7 @@ Docker Compose is a tool for defining and running multi-container Docker
 applications. With Compose, you use a YAML file to configure your application's
 services, networks, and volumes. In this case, the application isn't a
 multi-container application, but Docker Compose has other useful features for
-development, like [Compose Watch](../../compose/file-watch.md).
+development, like [Compose Watch](../../manuals/compose/file-watch.md).
 
 The sample application doesn't have a Compose file yet. To create a Compose
 file, in the `TensorJS-Face-Detection` directory, create a text file named
@@ -456,7 +456,7 @@ same directory. It maps port 80 on the host to port 80 in the container. It also
 has a `develop` subsection with the `watch` attribute that defines a list of
 rules that control automatic service updates based on local file changes. For
 more details about the Compose instructions, see the
-[Compose file reference](../../compose/compose-file/_index.md).
+[Compose file reference](../../reference/compose-file/index.md).
 
 Save the changes to your `compose.yaml` file and then run the following command to run the application.
 
@@ -534,7 +534,7 @@ Related information:
 
 - [TensorFlow.js website](https://www.tensorflow.org/js)
 - [MediaPipe website](https://developers.google.com/mediapipe/)
-- [Dockerfile reference](reference/dockerfile/)
-- [Compose file reference](../../compose/compose-file/_index.md)
-- [Docker CLI reference](reference/cli/docker/)
+- [Dockerfile reference](../../reference/dockerfile.md)
+- [Compose file reference](../../reference/compose-file/index.md)
+- [Docker CLI reference](../../reference/cli/docker/index.md)
 - [Docker Blog: Accelerating Machine Learning with TensorFlow.js](https://www.docker.com/blog/accelerating-machine-learning-with-tensorflow-js-using-pretrained-models-and-docker/)

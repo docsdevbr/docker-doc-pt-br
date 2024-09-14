@@ -29,14 +29,14 @@ Cards can be added to a page using the `card` shortcode.
 The parameters for this shortcode are:
 
 | Parameter   | Description                                                          |
-| ----------- | -------------------------------------------------------------------- |
+|-------------|----------------------------------------------------------------------|
 | title       | The title of the card                                                |
 | icon        | The icon slug of the card                                            |
 | image       | Use a custom image instead of an icon (mutually exclusive with icon) |
 | link        | (Optional) The link target of the card, when clicked                 |
 | description | A description text, in Markdown                                      |
 
-> **Note**
+> [!NOTE]
 >
 > There's a known limitation with the Markdown description of cards,
 > in that they can't contain relative links, pointing to other .md documents.

@@ -50,9 +50,9 @@ Organization or User name. Every image needs a namespace to live under.
 
 #### Node
 
-A node is a physical or virtual machine running an instance of the Docker Engine in swarm mode.
-Manager nodes perform swarm management and orchestration duties. By default manager nodes are also worker nodes.
-Worker nodes invoke tasks.
+A node is a physical or virtual machine running an instance of the Docker Engine in swarm mode.
+Manager nodes perform swarm management and orchestration duties. By default manager nodes are also worker nodes.
+Worker nodes invoke tasks.
 
 #### Registry
 

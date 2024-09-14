@@ -9,6 +9,8 @@ keywords: Docker, começando
 description: Comece a usar o Docker
 ---
 
+# Começando
+
 Se você é uma pessoa nova no Docker, esta seção te guiará pelos recursos
 essenciais para começar.
 
@@ -22,17 +24,17 @@ Para conceitos e cenários mais avançados no Docker, consulte os
 
 Instale o Docker e comece a descobrir o que é o Docker.
 
-* [Obtenha o Docker](obtenha-o-docker)
-  * Escolha a melhor forma de instalação para sua configuração.
-* [O que é Docker?](o-que-e-docker)
-  * Aprenda sobre a plataforma Docker.
+* [Obtenha o Docker](obtenha-o-docker.md)
+    * Escolha a melhor forma de instalação para sua configuração.
+* [O que é Docker?](o-que-e-docker.md)
+    * Aprenda sobre a plataforma Docker.
 
 Aprenda os conceitos básicos e os fluxos de trabalho do Docker.
 
-* [Introdução](../get-started/introduction/_index.md)
-  * Comece com os conceitos básicos e os benefícios de criar contêineres com
-    suas aplicações.
+* [Introdução](../get-started/introduction/index.md)
+    * Comece com os conceitos básicos e os benefícios de criar contêineres com
+      suas aplicações.
 * [Conceitos do Docker](../get-started/docker-concepts/the-basics/what-is-a-container.md)
-  * Obtenha uma melhor compreensão dos conceitos básicos do Docker.
-* [_Workshop_ do Docker](../get-started/workshop/_index.md)
-  * Seja guiado por um _workshop_ de 45 minutos para aprender sobre o Docker.
+    * Obtenha uma melhor compreensão dos conceitos básicos do Docker.
+* [_Workshop_ do Docker](../get-started/workshop/index.md)
+    * Seja guiado por um _workshop_ de 45 minutos para aprender sobre o Docker.

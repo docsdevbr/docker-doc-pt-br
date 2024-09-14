@@ -1,7 +1,8 @@
 ---
+title: GenAI video transcription and chat
+linkTitle: Video transcription and chat
 description: Explore a generative AI video analysis app that uses Docker, OpenAI, and Pinecone.
 keywords:  python, generative ai, genai, llm, whisper, pinecone, openai, whisper
-title: GenAI video transcription and chat
 ---
 
 ## Overview
@@ -29,7 +30,7 @@ The project showcases the following technologies:
 
 - You have an [OpenAI API Key](https://platform.openai.com/api-keys).
 
-  > **Note**
+  > [!NOTE]
   >
   > OpenAI is a third-party hosted service and [charges](https://openai.com/pricing) may apply.
 
@@ -126,7 +127,7 @@ The dockerbot service is a question-answering service that leverages both the
 Pinecone database and an AI model to provide responses. The following steps show
 how to use the service.
 
-> **Note**
+> [!NOTE]
 >
 > You must process at least one video via the
 > [yt-whisper service](#using-the-yt-whisper-service) before using
@@ -179,11 +180,11 @@ The following image shows the application's high-level service architecture, whi
 The application uses Docker to run the application in containers, providing a
 consistent and isolated environment for running it. This means the application
 will operate as intended within its Docker containers, regardless of the
-underlying system differences. To learn more about Docker, see the [Getting started overview](../../getting-started/_index.md).
+underlying system differences. To learn more about Docker, see the [Getting started overview](/get-started/introduction/index.md).
 
 Docker Compose is a tool for defining and running multi-container applications.
 Compose makes it easy to run this application with a single command, `docker
-compose up`. For more details, see the [Compose overview](../../../compose/_index.md).
+compose up`. For more details, see the [Compose overview](../../../manuals/compose/index.md).
 
 ### OpenAI API
 
@@ -244,6 +245,6 @@ OpenAI's cookbook for
 
 ## Next steps
 
-Explore how to [create a PDF bot application](../genai-pdf-bot/_index.md) using
+Explore how to [create a PDF bot application](../genai-pdf-bot/index.md) using
 generative AI, or view more GenAI samples in the
 [GenAI Stack](https://github.com/docker/genai-stack) repository.

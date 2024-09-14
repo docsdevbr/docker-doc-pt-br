@@ -14,11 +14,15 @@ toc_max: 3
 
 You can also make a badge a link.
 
-[{{< badge color="blue" text="badge with a link" >}}](../_index.md)
+[{{< badge color="blue" text="badge with a link" >}}](../index.md)
 
 ### Usage guidelines
 
-We use the violet badge to highlight new content in our docs: {{< badge color=violet text="New" >}} 
+We use badges to indicate new content and product content in various stages of the release lifcycle:
+
+- The violet badge to highlight new early access or experimental content
+- The blue badge to highlight beta content
+- The green badge to highlight new content that is either GA or not product-related content, such as guides/learning paths
 
 Best practice is to use this badge for no longer than 2 months post release of the feature.
 
