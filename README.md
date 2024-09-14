@@ -17,5 +17,5 @@
 
 | Image                              | Source                                                                               |
 |------------------------------------|--------------------------------------------------------------------------------------|
-| /assets/img/footer_moby_icon.png   | https://github.com/docker/docs/blob/main/static/assets/images/footer_moby_icon.png   |
-| /assets/img/banner_image_24512.png | https://github.com/docker/docs/blob/main/static/assets/images/banner_image_24512.png |
+| /assets/img/footer-moby-icon.png   | https://github.com/docker/docs/blob/main/static/assets/images/footer_moby_icon.png   |
+| /assets/img/banner-image-24512.png | https://github.com/docker/docs/blob/main/static/assets/images/banner_image_24512.png |
