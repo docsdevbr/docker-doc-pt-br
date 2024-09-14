@@ -61,7 +61,7 @@ networking functionality:
 | `macvlan` | Assign a MAC address to a container.                                     |
 
 For more information about the different drivers, see [Network drivers
-overview](./drivers/).
+overview](drivers/).
 
 ## Container networks
 
@@ -132,7 +132,7 @@ Here are some examples:
 If you want to make a container accessible to other containers,
 it isn't necessary to publish the container's ports.
 You can enable inter-container communication by connecting the containers to the
-same network, usually a [bridge network](./drivers/bridge.md).
+same network, usually a [bridge network](drivers/bridge.md).
 
 Ports on the host's IPv6 addresses will map to the container's IPv4 address
 if no host IP is given in a port mapping, the bridge network is IPv4-only,
@@ -140,7 +140,7 @@ and `--userland-proxy=true` (default).
 
 For more information about port mapping, including how to disable it and use
 direct routing to containers, see
-[packet filtering and firewalls](./packet-filtering-firewalls.md).
+[packet filtering and firewalls](packet-filtering-firewalls.md).
 
 ## IP address and hostname
 
@@ -196,4 +196,4 @@ container hosts file](../../../reference/cli/docker/container/run.md#add-host) i
 ## Proxy server
 
 If your container needs to use a proxy server, see
-[Use a proxy server](../../../manuals/engine/daemon/proxy.md).
+[Use a proxy server](../daemon/proxy.md).

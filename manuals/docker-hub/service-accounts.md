@@ -10,7 +10,7 @@ weight: 50
 > [!NOTE]
 >
 > Service accounts require a
-> [Docker Team, or Business subscription](../subscription/).
+> [Docker Team, or Business subscription](../subscription/index.md).
 
 A service account is a Docker ID used for automated management of container images or containerized applications. Service accounts are typically used in automated workflows, and don't share Docker IDs with the members in the organization. Common use cases for service accounts include mirroring content on Docker Hub, or tying in image pulls from your CI/CD process.
 
@@ -46,10 +46,10 @@ Refer to the following table for details on the Enhanced Service Account add-on 
 To create a new service account for your Team account:
 
 1. Create a new Docker ID.
-2. Create a [team](manage-a-team.md) in your organization and grant it read-only access to your private repositories.
-3. Add the new Docker ID to your [organization](orgs.md).
-4. Add the new Docker ID  to the [team](manage-a-team.md) you created earlier.
-5. Create a new [personal access token (PAT)](access-tokens.md) from the user account and use it for CI.
+2. Create a [team](../admin/organization/manage-a-team.md) in your organization and grant it read-only access to your private repositories.
+3. Add the new Docker ID to your [organization](../admin/organization/orgs.md).
+4. Add the new Docker ID  to the [team](../admin/organization/manage-a-team.md) you created earlier.
+5. Create a new [personal access token (PAT)](../security/for-developers/access-tokens.md) from the user account and use it for CI.
 
 > [!NOTE]
 >
@@ -60,5 +60,5 @@ official images and other public images, you don't have to grant any access perm
 
 Refer to the following topics for additional information:
 
-- [Mirroring Docker Hub](./mirror.md)
+- [Mirroring Docker Hub](mirror.md)
 - [Docker pricing FAQs](https://www.docker.com/pricing/faq/)

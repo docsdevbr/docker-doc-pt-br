@@ -175,7 +175,7 @@ plus the added sandboxing provided by the Wasm runtime environment.
 
 To add Wasmtime as a container runtime, follow these steps:
 
-1. Turn on the [containerd image store](../../../manuals/engine/storage/containerd.md)
+1. Turn on the [containerd image store](../storage/containerd.md)
    feature in the daemon configuration file.
 
    > [!NOTE]

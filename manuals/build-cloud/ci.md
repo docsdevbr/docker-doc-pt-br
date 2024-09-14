@@ -25,7 +25,7 @@ directly speeds up your builds and avoids unnecessary file transfers.
 If you just want to build and discard the output, export the results to the
 build cache or build without tagging the image. When you use Docker Build Cloud,
 Buildx automatically loads the build result if you build a tagged image.
-See [Loading build results](./usage/index.md#loading-build-results) for details.
+See [Loading build results](usage.md#loading-build-results) for details.
 
 > [!NOTE]
 >
@@ -39,7 +39,7 @@ See [Loading build results](./usage/index.md#loading-build-results) for details.
 >
 > Version 4.0.0 and later of `docker/build-push-action` and
 > `docker/bake-action` builds images with [provenance attestations by
-> default](../../../manuals/build/ci/github-actions/attestations.md#default-provenance). Docker
+> default](../build/ci/github-actions/attestations.md#default-provenance). Docker
 > Build Cloud automatically attempts to load images to the local image store if
 > you don't explicitly push them to a registry.
 >

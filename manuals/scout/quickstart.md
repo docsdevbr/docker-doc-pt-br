@@ -204,7 +204,7 @@ Docker Scout uses the provenance attestations to determine how the image was
 built so that it can provide a better evaluation result.
 
 Before you can build an image with attestations,
-you must enable the [containerd image store](../../../manuals/desktop/containerd.md)
+you must enable the [containerd image store](../../desktop/containerd.md)
 (or create a custom builder using the `docker-container` driver).
 The classic image store doesn't support manifest lists,
 which is how the provenance attestations are attached to an image.
@@ -248,7 +248,7 @@ because the example image uses an old version `alpine` as a base image.
 Select the **View fix** button next to the policy name for details about the violation,
 and recommendations on how to address it.
 In this case, the recommended action is to enable
-[Docker Scout's GitHub integration](./integrations/source-code-management/github.md),
+[Docker Scout's GitHub integration](integrations/source-code-management/github.md),
 which helps keep your base images up-to-date automatically.
 
 > [!TIP]
@@ -274,8 +274,8 @@ to policy customization, and runtime environment monitoring in real-time.
 
 Check out the following sections:
 
-- [Image analysis](../../../manuals/scout/explore/analysis.md)
+- [Image analysis](../explore/analysis.md)
 - [Data sources](/scout/advisory-db-sources)
 - [Docker Scout Dashboard](/scout/dashboard)
-- [Integrations](./integrations/)
-- [Policy evaluation](./policy/)
+- [Integrations](integrations/)
+- [Policy evaluation](policy/)

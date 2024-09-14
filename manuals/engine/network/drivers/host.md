@@ -105,8 +105,8 @@ network contradict each other.
 
 ## Next steps
 
-- Go through the [host networking tutorial](../../../manuals/engine/network/tutorials/host.md)
+- Go through the [host networking tutorial](../tutorials/host.md)
 - Learn about [networking from the container's point of view](../index.md)
-- Learn about [bridge networks](./bridge.md)
-- Learn about [overlay networks](./overlay.md)
-- Learn about [Macvlan networks](./macvlan.md)
+- Learn about [bridge networks](bridge.md)
+- Learn about [overlay networks](overlay.md)
+- Learn about [Macvlan networks](macvlan.md)

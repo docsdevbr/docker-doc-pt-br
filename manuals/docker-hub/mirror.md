@@ -37,7 +37,7 @@ Hub can be mirrored.
 
 > [!NOTE]
 >
-> Mirrors of Docker Hub are still subject to Docker's [fair use policy](./download-rate-limit.md#fair-use).
+> Mirrors of Docker Hub are still subject to Docker's [fair use policy](download-rate-limit.md#fair-use).
 
 ### Solution
 
@@ -80,7 +80,7 @@ but this property does not hold true for a registry cache cluster.
 
 > [!NOTE]
 >
-> When using Docker Hub, all paid Docker subscriptions are limited to 5000 pulls per day. If you require a higher number of pulls, you can purchase an Enhanced Service Account add-on. See [Service Accounts](/docker-hub/service-accounts/index.md) for more details.
+> When using Docker Hub, all paid Docker subscriptions are limited to 5000 pulls per day. If you require a higher number of pulls, you can purchase an Enhanced Service Account add-on. See [Service Accounts](service-accounts.md) for more details.
 
 ### Configure the cache
 
@@ -112,7 +112,7 @@ proxy:
 ### Configure the Docker daemon
 
 Either pass the `--registry-mirror` option when starting `dockerd` manually,
-or edit [`/etc/docker/daemon.json`](../../../reference/cli/dockerd.md#daemon-configuration-file)
+or edit [`/etc/docker/daemon.json`](../../reference/cli/dockerd.md#daemon-configuration-file)
 and add the `registry-mirrors` key and value, to make the change persistent.
 
 ```json

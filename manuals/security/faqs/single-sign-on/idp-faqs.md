@@ -14,7 +14,7 @@ No. You can only configure Docker SSO to work with a single IdP. A domain can on
 
 ### Is it possible to change my identity provider after configuring SSO?
 
-Yes. You must delete your existing IdP configuration in your Docker SSO connection and then [configure SSO using your new IdP](../../../manuals/security/for-admins/single-sign-on/configure/configure-idp/index.md). If you had already turned on enforcement, you should turn off enforcement before updating the provider SSO connection.
+Yes. You must delete your existing IdP configuration in your Docker SSO connection and then [configure SSO using your new IdP](../for-admins/single-sign-on/configure/configure-idp/index.md). If you had already turned on enforcement, you should turn off enforcement before updating the provider SSO connection.
 
 ### What information do I need from my identity provider to configure SSO?
 
@@ -26,7 +26,7 @@ To enable SSO in Docker, you need the following from your IdP:
 
 ### What happens if my existing certificate expires?
 
-If your existing certificate has expired, you may need to contact your identity provider to retrieve a new X.509 certificate. Then, you need to update the certificate in the [SSO configuration settings](../../../manuals/security/for-admins/single-sign-on/manage/index.md#manage-sso-connections) in Docker Hub or Docker Admin Console.
+If your existing certificate has expired, you may need to contact your identity provider to retrieve a new X.509 certificate. Then, you need to update the certificate in the [SSO configuration settings](../for-admins/single-sign-on/manage/index.md#manage-sso-connections) in Docker Hub or Docker Admin Console.
 
 ### What happens if my IdP goes down when SSO is enabled?
 
@@ -44,7 +44,7 @@ Yes, bot accounts need a seat, similar to a regular end user, having a non-alias
 
 ### Does SAML SSO use Just-in-Time provisioning?
 
-The SSO implementation uses Just-in-Time (JIT) provisioning by default. You can optionally disable JIT in the Admin Console if you enable auto-provisioning using SCIM. See [Just-in-Time provisioning](../../../manuals/security/for-admins/provisioning/just-in-time/index.md).
+The SSO implementation uses Just-in-Time (JIT) provisioning by default. You can optionally disable JIT in the Admin Console if you enable auto-provisioning using SCIM. See [Just-in-Time provisioning](../for-admins/provisioning/just-in-time/index.md).
 
 ### Is IdP-initiated sign-in available?
 

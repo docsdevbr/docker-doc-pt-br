@@ -268,7 +268,7 @@ the `--privileged` flag. See [docker/for-win#8326](https://github.com/docker/for
 - [Docker 19.03.12](https://github.com/docker/docker-ce/releases/tag/v19.03.12)
 - [Docker Compose 1.26.0](https://github.com/docker/compose/releases/tag/1.26.0)
 - [Kubernetes 1.18.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.18.3)
-- Beta release of the [Docker ACI integration](../../../manuals/engine/context/aci-integration/index.md)
+- Beta release of the [Docker ACI integration](../../engine/context/aci-integration/index.md)
 
 ### Bug fixes and minor changes
 
@@ -732,7 +732,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
   - Add an experimental SOCKS server to allow access to container networks, see [docker/for-mac#2670](https://github.com/docker/for-mac/issues/2670#issuecomment-372365274). Also see [docker/for-mac#2721](https://github.com/docker/for-mac/issues/2721)
 
 * Bug fixes and minor changes
-  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Preferences > Reset menu) before updating to the next major update. You can check documentation to [save images](../../../reference/cli/docker/image/save/index.md#examples) and [back up volumes](../../../manuals/engine/storage/volumes.md#back-up-restore-or-migrate-data-volumes)
+  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Preferences > Reset menu) before updating to the next major update. You can check documentation to [save images](../../../reference/cli/docker/image/save/index.md#examples) and [back up volumes](../../engine/storage/volumes.md#back-up-restore-or-migrate-data-volumes)
   - Fix startup issue with AUFS [docker/for-mac#2804](https://github.com/docker/for-mac/issues/2804)
   - Fix status bug which could prevent the Kubernetes cluster from starting. Fixes [docker/for-mac#2990](https://github.com/docker/for-mac/issues/2990)
   - Fix bug which would cause virtual machine logs to be written to RAM rather than disk in some cases, and the virtual machine to hang. See [docker/for-mac#2984](https://github.com/docker/for-mac/issues/2984)
@@ -1559,9 +1559,9 @@ TCP connection is idle for more than five minutes (related to
 
 **New**
 
-- Dedicated preference pane for advanced configuration of the docker daemon (edit daemon.json). See [Daemon Advanced (JSON configuration file)](../../../manuals/desktop/settings.md#docker-engine).
+- Dedicated preference pane for advanced configuration of the docker daemon (edit daemon.json). See [Daemon Advanced (JSON configuration file)](../settings.md#docker-engine).
 
-- Docker Experimental mode can be toggled. See [Daemon Basic (experimental mode and registries)](../../../manuals/desktop/settings.md#docker-engine).
+- Docker Experimental mode can be toggled. See [Daemon Basic (experimental mode and registries)](../settings.md#docker-engine).
 
 **Upgrades**
 

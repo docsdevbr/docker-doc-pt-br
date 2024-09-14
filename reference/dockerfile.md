@@ -7,6 +7,8 @@ license: https://github.com/moby/buildkit/blob/master/LICENSE
 title: Dockerfile reference
 ---
 
+# Dockerfile reference
+
 Docker can build images automatically by reading the instructions from a
 Dockerfile. A Dockerfile is a text document that contains all the commands a
 user could call on the command line to assemble an image. This page describes

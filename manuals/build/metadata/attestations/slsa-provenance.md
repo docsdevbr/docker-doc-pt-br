@@ -36,7 +36,7 @@ Alternatively, you can use the shorthand `--provenance=true` option instead of `
 To specify the `mode` parameter using the shorthand option, use: `--provenance=mode=max`.
 
 For an example on how to add provenance attestations with GitHub Actions, see
-[Add attestations with GitHub Actions](../../../build/ci/github-actions/attestations.md).
+[Add attestations with GitHub Actions](../../ci/github-actions/attestations.md).
 
 ## Mode
 

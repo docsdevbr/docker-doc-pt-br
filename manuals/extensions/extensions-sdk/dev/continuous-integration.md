@@ -81,6 +81,6 @@ afterAll(async () => {
 
 ## What's next
 
-- Build an [advanced frontend](../../../manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md) extension.
-- Learn more about extensions [architecture](../architecture/).
-- Learn how to [publish your extension](../extensions/).
+- Build an [advanced frontend](../build/frontend-extension-tutorial.md) extension.
+- Learn more about extensions [architecture](../architecture/index.md).
+- Learn how to [publish your extension](index.md).

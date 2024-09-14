@@ -40,7 +40,7 @@ For additional details about supported attributes and SCIM, see [Docker Hub API 
 
 > [!TIP]
 >
-> Optional Just-in-Time (JIT) provisioning is available when you use the Admin Console and enable SCIM. With this feature, you can avoid conflicts between SCIM and JIT by disabling JIT provisioning in your SSO connection. See [SSO authentication with JIT provisioning disabled](../../../manuals/security/for-admins/provisioning/just-in-time/index.md#sso-authentication-with-jit-provisioning-disabled).
+> Optional Just-in-Time (JIT) provisioning is available when you use the Admin Console and enable SCIM. With this feature, you can avoid conflicts between SCIM and JIT by disabling JIT provisioning in your SSO connection. See [SSO authentication with JIT provisioning disabled](provisioning/just-in-time/index.md#sso-authentication-with-jit-provisioning-disabled).
 
 ## Enable SCIM in Docker
 
@@ -122,7 +122,7 @@ See the documentation for your IdP for additional details:
 
 ## Set up role mapping
 
-You can assign [roles](../../../manuals/security/for-admins/roles-and-permissions/index.md) to members in your organization in the IdP. To set up a role, you can use optional user-level attributes for the person you want to assign a role. In addition to roles, you can set an organization or team to override the default provisioning values set by the SSO connection.
+You can assign [roles](roles-and-permissions/index.md) to members in your organization in the IdP. To set up a role, you can use optional user-level attributes for the person you want to assign a role. In addition to roles, you can set an organization or team to override the default provisioning values set by the SSO connection.
 
 > [!NOTE]
 >
@@ -132,9 +132,9 @@ The following table lists the supported optional user-level attributes.
 
 | Attribute | Possible values    | Considerations |
 | --------- | ------------------ | -------------- |
-| `dockerRole` | `member`, `editor`, or `owner`. For a list of permissions for each role, see [Roles and permissions](../../../manuals/security/for-admins/roles-and-permissions/index.md). | If you don't assign a role in the IdP, the value of the `dockerRole` attribute defaults to `member`. When you set the attribute, this overrides the default value. |
+| `dockerRole` | `member`, `editor`, or `owner`. For a list of permissions for each role, see [Roles and permissions](roles-and-permissions/index.md). | If you don't assign a role in the IdP, the value of the `dockerRole` attribute defaults to `member`. When you set the attribute, this overrides the default value. |
 | `dockerOrg` | `organizationName`. For example, an organization named "moby" would be `moby`. | Setting this attribute overrides the default organization configured by the SSO connection. Also, this won't add the user to the default team. If this attribute isn't set, the user is provisioned to the default organization and the default team. If set and `dockerTeam` is also set, this provisions the user to the team within that organization. |
-| `dockerTeam` | `teamName`. For example, a team named "developers" would be `developers`. | Setting this attribute provisions the user to the default organization and to the specified team, instead of the SSO connection's default team. This also creates the team if it doesn't exist. You can still use group mapping to provision users to teams in multiple organizations. See [Group mapping](../../../manuals/security/for-admins/provisioning/group-mapping/index.md). |
+| `dockerTeam` | `teamName`. For example, a team named "developers" would be `developers`. | Setting this attribute provisions the user to the default organization and to the specified team, instead of the SSO connection's default team. This also creates the team if it doesn't exist. You can still use group mapping to provision users to teams in multiple organizations. See [Group mapping](provisioning/group-mapping/index.md). |
 
 After you set the role in the IdP, you need to sync to push the changes to Docker.
 

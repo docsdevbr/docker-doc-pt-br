@@ -65,4 +65,4 @@ You can take administrative actions for your account in Docker Home.
 
 For more information on converting your account, see [Convert an account into an organization](../admin/convert-account.md).
 
-For information on deactivating your account, see [Deactivating a user account](./deactivate-user-account.md).
+For information on deactivating your account, see [Deactivating a user account](deactivate-user-account.md).

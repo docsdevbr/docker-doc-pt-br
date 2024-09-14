@@ -37,7 +37,7 @@ containers.
 ### Why do my services take 10 seconds to recreate or stop?
 
 The `docker compose stop` command attempts to stop a container by sending a `SIGTERM`. It then waits
-for a [default timeout of 10 seconds](../../../reference/cli/docker/compose/stop.md). After the timeout,
+for a [default timeout of 10 seconds](../../reference/cli/docker/compose/stop.md). After the timeout,
 a `SIGKILL` is sent to the container to forcefully kill it. If you
 are waiting for this timeout, it means that your containers aren't shutting down
 when they receive the `SIGTERM` signal.
@@ -78,7 +78,7 @@ handling `SIGTERM` properly.
 
 Compose uses the project name to create unique identifiers for all of a
 project's containers and other resources. To run multiple copies of a project,
-set a custom project name using the [`-p` command line option](reference/)
+set a custom project name using the [`-p` command line option](../../reference/cli/docker/compose/index.md)
 or the [`COMPOSE_PROJECT_NAME` environment variable](environment-variables/envvars.md#compose_project_name).
 
 ### Can I use JSON instead of YAML for my Compose file?

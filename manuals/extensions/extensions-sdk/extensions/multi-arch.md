@@ -58,7 +58,7 @@ Manifests:
 >
 > If you're having trouble pushing the image, make sure you're signed in to Docker Hub. Otherwise, run `docker login` to authenticate.
 
-For more information, see [Multi-platform images](../../../manuals/build/building/multi-platform.md) page.
+For more information, see [Multi-platform images](../../build/building/multi-platform.md) page.
 
 ## Adding multi-arch binaries
 

@@ -6,7 +6,7 @@ keywords: build, buildx, buildkit, cache, invalidation, cache miss
 
 When building an image, Docker steps through the instructions in your
 Dockerfile, executing each in the order specified. For each instruction, the
-[builder](../../../manuals/build/builders/index.md) checks whether it can reuse the
+[builder](../builders/index.md) checks whether it can reuse the
 instruction from the build cache.
 
 ## General rules

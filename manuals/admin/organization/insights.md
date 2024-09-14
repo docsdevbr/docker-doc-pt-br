@@ -117,7 +117,7 @@ The chart contains the following data.
 |:----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Most used version                 | The most used version of Docker Desktop by users in your organization.                                                                                                                                                                                                            |
 | Most used OS                      | The most used operating system by users.                                                                                                                                                                                                                                          |
-| Versions by active users (graph)  | The number of active users using each version of Docker Desktop. <br><br>To learn more about each version and release dates, see the [Docker Desktop release notes](../../../manuals/desktop/release-notes/index.md).                                                                                     |
+| Versions by active users (graph)  | The number of active users using each version of Docker Desktop. <br><br>To learn more about each version and release dates, see the [Docker Desktop release notes](../../desktop/release-notes/index.md).                                                                                     |
 | Interface by active users (graph) | The number of active users grouped into the type of interface they used to interact with Docker Desktop. <br><br>A CLI user is any active user who has run a `docker` command. A GUI user is any active user who has interacted with the Docker Desktop graphical user interface. |
 
 ### Docker Hub images
@@ -169,7 +169,7 @@ solutions to resolve common problems.
    If users have opted out of sending usage statistics for Docker Desktop, then
    their usage data will not be a part of Insights. To manage the setting at
    scale for all your users, you can use [Settings
-   Management](../../../manuals/desktop/hardened-desktop/settings-management/index.md) and enable the
+   Management](../../desktop/hardened-desktop/settings-management/index.md) and enable the
    `analyticsEnabled` setting.
 
 * Ensure that users are using Docker Desktop and aren't using the standalone
@@ -185,4 +185,4 @@ solutions to resolve common problems.
    Users who don’t sign in to an account associated with your organization are
    not represented in the data. To ensure users sign in with an account
    associated with your organization, you can [enforce
-   sign-in](../../../manuals/security/for-admins/enforce-sign-in/index.md).
+   sign-in](../../security/for-admins/enforce-sign-in/index.md).

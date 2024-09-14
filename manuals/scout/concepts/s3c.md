@@ -53,9 +53,9 @@ updated risk assessment is available within seconds, and earlier in the
 development process.
 
 Docker Scout works by analyzing the composition of your images to create a
-[Software Bill of Materials (SBOM)](../../../manuals/scout/concepts/sbom.md). The SBOM is
+[Software Bill of Materials (SBOM)](sbom.md). The SBOM is
 cross-referenced against the security advisories to identify CVEs that affect
 your images. Docker Scout integrates with [over 20 different security
-advisories](../../../manuals/scout/deep-dive/advisory-db-sources.md), and updates its
+advisories](../deep-dive/advisory-db-sources.md), and updates its
 vulnerability database in real-time. This ensures that your security posture is
 represented using the latest available information.

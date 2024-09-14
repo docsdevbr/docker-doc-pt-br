@@ -18,8 +18,8 @@ The steps to set up your SSO configuration are:
 
 1. [Add and verify the domain or domains](#step-one-add-and-verify-your-domain) that your members use to sign in to Docker.
 2. [Create your SSO connection](#step-two-create-an-sso-connection-in-docker) in Docker.
-3. [Configure your IdP](./configure-idp.md) to work with Docker.
-4. [Complete your SSO connection](../connect/) in Docker.
+3. [Configure your IdP](configure-idp.md) to work with Docker.
+4. [Complete your SSO connection](../connect/index.md) in Docker.
 
 This page walks through steps 1 and 2 using Docker Hub or the Admin Console.
 
@@ -66,4 +66,4 @@ The following videos walk through verifying your domain to create your SSO conne
 
 ## What's next?
 
-[Continue configuration in your IdP](./configure-idp.md).
+[Continue configuration in your IdP](configure-idp.md).

@@ -40,7 +40,7 @@ $ docker buildx build --tag <namespace>/<image>:<version> \
 Alternatively, you can use the shorthand `--sbom=true` option instead of `--attest type=sbom`.
 
 For an example on how to add SBOM attestations with GitHub Actions, see
-[Add attestations with GitHub Actions](../../../build/ci/github-actions/attestations.md).
+[Add attestations with GitHub Actions](../../ci/github-actions/attestations.md).
 
 ## Verify SBOM attestations
 
@@ -71,7 +71,7 @@ exist in the build context. This may cause you to overlook vulnerabilities in
 those dependencies, which could impact the security of your final build
 artifacts.
 
-For instance, you might use [multi-stage builds](../../../build/building/multi-stage.md),
+For instance, you might use [multi-stage builds](../../building/multi-stage.md),
 with a `FROM scratch` stanza for your final stage to achieve a smaller image size.
 
 ```dockerfile

@@ -34,7 +34,7 @@ The following table outlines some differences between drivers.
 | **BuildKit configuration**   |             |         ✅         |      ✅      | Managed externally |
 
 \* _The `docker` driver doesn't support all cache export options.
-See [Cache storage backends](../../../manuals/build/cache/backends/index.md) for more information._
+See [Cache storage backends](../../cache/backends/index.md) for more information._
 
 ## Loading to local image store
 
@@ -85,7 +85,7 @@ flag.
 
 Read about each driver:
 
-  - [Docker driver](./docker.md)
-  - [Docker container driver](./docker-container.md)
-  - [Kubernetes driver](./kubernetes.md)
-- [Remote driver](./remote.md)
+  - [Docker driver](docker.md)
+  - [Docker container driver](docker-container.md)
+  - [Kubernetes driver](kubernetes.md)
+- [Remote driver](remote.md)

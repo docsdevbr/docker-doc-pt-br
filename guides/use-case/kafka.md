@@ -5,9 +5,9 @@ title: Developing event-driven applications with Kafka and Docker
 toc_max: 2
 ---
 
-With the rise of microservices, event-driven architectures have become increasingly popular. 
-[Apache Kafka](https://kafka.apache.org/), a distributed event streaming platform, is often at the 
-heart of these architectures. Unfortunately, setting up and deploying your own Kafka instance for development 
+With the rise of microservices, event-driven architectures have become increasingly popular.
+[Apache Kafka](https://kafka.apache.org/), a distributed event streaming platform, is often at the
+heart of these architectures. Unfortunately, setting up and deploying your own Kafka instance for development
 is often tricky. Fortunately, Docker and containers make this much easier.
 
 In this guide, you will learn how to:
@@ -71,7 +71,7 @@ Start a basic Kafka cluster by doing the following steps. This example will laun
     ```
 
     And
- 
+
     ```plaintext
     Second message
     ```
@@ -168,9 +168,9 @@ To help this make sense, let’s look at how Kafka needs to be configured to sup
 
 Since there are two different methods clients need to connect, two different listeners are required - `HOST` and `DOCKER`. The `HOST` listener will tell clients to connect using localhost:9092, while the `DOCKER` listener will inform clients to connect using `kafka:9093`. Notice this means Kafka is listening on both ports 9092 and 9093. But, only the host listener needs to be exposed to the host.
 
-![Diagram showing the DOCKER and HOST listeners and how they are exposed to the host and Docker networks](./images/kafka-1.webp)
+![Diagram showing the DOCKER and HOST listeners and how they are exposed to the host and Docker networks](images/kafka-1.webp)
 
-In order to set this up, the `compose.yaml` for Kafka needs some additional configuration. Once you start overriding some of the defaults, you also need to specify a few other options in order for KRaft mode to work. 
+In order to set this up, the `compose.yaml` for Kafka needs some additional configuration. Once you start overriding some of the defaults, you also need to specify a few other options in order for KRaft mode to work.
 
 ```yaml
 services:
@@ -213,7 +213,7 @@ Give it a try using the steps below.
     $ docker compose up
     ```
 
-    After a moment, the application will be up and running. 
+    After a moment, the application will be up and running.
 
 4. In the stack is another service that can be used to publish messages. Open it by going to [http://localhost:3000](http://localhost:3000). As you type in a message and submit the form, you should see the log message of the message being received by the app.
 
@@ -249,4 +249,4 @@ If you’re interested in learning how you can integrate Kafka easily into your 
 
 By using Docker, you can simplify the process of developing and testing event-driven applications with Kafka. Containers simplify the process of setting up and deploying the various services you need to develop. And once they’re defined in Compose, everyone on the team can benefit from the ease of use.
 
-In case you missed it earlier, all of the sample app code can be found at dockersamples/kafka-development-node. 
+In case you missed it earlier, all of the sample app code can be found at dockersamples/kafka-development-node.

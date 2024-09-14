@@ -31,7 +31,7 @@ aliases:
 
 Docker recommends that you authenticate using the **Sign in** option in the top-right corner of the Docker Dashboard.
 
-In large enterprises where admin access is restricted, administrators can [enforce sign-in](../security/for-admins/enforce-sign-in/).
+In large enterprises where admin access is restricted, administrators can [enforce sign-in](../security/for-admins/enforce-sign-in/index.md).
 
 > [!TIP]
 >
@@ -43,7 +43,7 @@ In large enterprises where admin access is restricted, administrators can [enfor
 
 - Authenticated users also get a higher pull rate limit compared to anonymous users. For example, if you are authenticated, you get 200 pulls per 6 hour period, compared to 100 pulls per 6 hour period per IP address for anonymous users. For more information, see [Download rate limit](../docker-hub/download-rate-limit.md).
 
-- Improve your organization’s security posture for containerized development by taking advantage of [Hardened Desktop](../../../manuals/security/for-admins/hardened-desktop/index.md).
+- Improve your organization’s security posture for containerized development by taking advantage of [Hardened Desktop](../security/for-admins/hardened-desktop/index.md).
 
 > [!NOTE]
 >
@@ -52,7 +52,7 @@ In large enterprises where admin access is restricted, administrators can [enfor
 ## Signing in with Docker Desktop for Linux
 
 Docker Desktop for Linux relies on [`pass`](https://www.passwordstore.org/) to store credentials in gpg2-encrypted files.
-Before signing in to Docker Desktop with your [Docker ID](/accounts/create-account/index.md), you must initialize `pass`.
+Before signing in to Docker Desktop with your [Docker ID](../accounts/create-account.md), you must initialize `pass`.
 Docker Desktop displays a warning if you've not initialized `pass`.
 
 You can initialize pass by using a gpg key. To generate a gpg key, run:
@@ -107,6 +107,6 @@ docker.io/molly/privateimage:latest
 
 ## What's next?
 
-- [Explore Docker Desktop](use-desktop/) and its features.
+- [Explore Docker Desktop](use-desktop/index.md) and its features.
 - Change your Docker Desktop settings
 - [Browse common FAQs](faqs/general.md)

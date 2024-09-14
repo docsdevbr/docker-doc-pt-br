@@ -11,7 +11,7 @@ tags: [Release notes]
 This page contains information about the new features, improvements, known
 issues, and bug fixes in Docker Scout releases. These release notes cover the
 Docker Scout platform, including the Dashboard. For CLI release notes, refer to
-[Docker Scout CLI release notes](./cli.md).
+[Docker Scout CLI release notes](cli.md).
 
 Take a look at the [Docker Public Roadmap](https://github.com/docker/roadmap/projects/1)
 for what's coming next.
@@ -22,7 +22,7 @@ New features and enhancements released in the third quarter of 2024.
 
 ### 2024-09-09
 
-This release changes how [health scores](../../../manuals/scout/policy/scores.md) are
+This release changes how [health scores](../policy/scores.md) are
 calculated in Docker Scout. The health score calculation now considers optional
 and custom policies that you have configured for your organization.
 
@@ -36,7 +36,7 @@ calculation will be based on the out-of-the-box policies.
 ### 2024-08-13
 
 This release changes the out-of-the-box policies to align with the policy
-configurations used to evaluate Docker Scout [health scores](../../../manuals/scout/policy/scores.md).
+configurations used to evaluate Docker Scout [health scores](../policy/scores.md).
 
 The default out-of-the-box policies are now:
 
@@ -70,13 +70,13 @@ exceptions affecting images in your organization. You can also go to the image
 view in the Docker Scout Dashboard to see all exceptions that apply to a given
 image.
 
-For more information, see [Manage vulnerability exceptions](../../../manuals/scout/explore/exceptions.md).
+For more information, see [Manage vulnerability exceptions](../explore/exceptions.md).
 
 ### 2024-05-06
 
 New HTTP endpoint that lets you scrape data from Docker Scout with Prometheus,
 to create your own vulnerability and policy dashboards with Grafana.
-For more information, see [Docker Scout metrics exporter](../../../manuals/scout/explore/metrics-exporter.md).
+For more information, see [Docker Scout metrics exporter](../explore/metrics-exporter.md).
 
 ## Q1 2024
 

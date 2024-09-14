@@ -26,7 +26,7 @@ with established best practices.
 ## How Policy Evaluation works
 
 When you activate Docker Scout for a repository, images that you push are
-[automatically analyzed](../../../manuals/scout/explore/analysis.md). The analysis gives you insights
+[automatically analyzed](../explore/analysis.md). The analysis gives you insights
 about the composition of your images, including what packages they contain and
 what vulnerabilities they're exposed to. Policy Evaluation builds on top of the
 image analysis feature, interpreting the analysis results against the rules
@@ -67,7 +67,7 @@ To give you a head start, Scout enables several policies by default for your
 Scout-enabled repositories. You can customize the default configurations to
 reflect internal requirements and standards. You can also disable a policy
 altogether if it isn't relevant to you. For more information, see [Configure
-policies](./configure.md).
+policies](configure.md).
 
 There's also a set of [additional policies](#additional-policies) that can be
 optionally enabled for repositories.
@@ -101,7 +101,7 @@ The following policy parameters are configurable in a custom version:
 - **Fixable vulnerabilities only**: Whether or not to only report
   vulnerabilities with a fix version available (enabled by default).
 
-For more information about configuring policies, see [Configure policies](./configure.md).
+For more information about configuring policies, see [Configure policies](configure.md).
 
 ### No AGPL v3 licenses
 
@@ -111,7 +111,7 @@ your artifacts contain one or more packages with this license.
 
 You can configure the list of licenses that this policy should look out for,
 and add exceptions by specifying an allow-list (in the form of PURLs).
-See [Configure policies](./configure.md).
+See [Configure policies](configure.md).
 
 ### No outdated base images
 
@@ -155,13 +155,13 @@ Custom configuration options include:
 
   Enabled by default.
 
-For more information on policy configuration, see [Configure policies](./configure.md).
+For more information on policy configuration, see [Configure policies](configure.md).
 
 ### Supply chain attestations
 
 The **Supply chain attestations** policy requires that your artifacts have
-[SBOM](../../../manuals/build/metadata/attestations/sbom.md) and
-[provenance](../../../manuals/build/metadata/attestations/slsa-provenance.md) attestations.
+[SBOM](../../build/metadata/attestations/sbom.md) and
+[provenance](../../build/metadata/attestations/slsa-provenance.md) attestations.
 
 This policy is violated if an artifact lacks either an SBOM attestation or a
 provenance attestation with max mode. To ensure compliance,
@@ -172,10 +172,10 @@ $ docker buildx build --provenance=true --sbom=true -t <IMAGE> --push .
 ```
 
 For more information about building with attestations, see
-[Attestations](../../../manuals/build/metadata/attestations/index.md).
+[Attestations](../../build/metadata/attestations/index.md).
 
 If you're using GitHub Actions to build and push your images,
-learn how you can [configure the action](../../../manuals/build/ci/github-actions/attestations.md)
+learn how you can [configure the action](../../build/ci/github-actions/attestations.md)
 to apply SBOM and provenance attestations.
 
 ### Default non-root user
@@ -334,7 +334,7 @@ SonarQube evaluates your source code against the quality gates you've defined
 in SonarQube. Docker Scout surfaces the SonarQube assessment as a Docker Scout
 policy.
 
-Docker Scout uses [provenance](../../../manuals/build/metadata/attestations/slsa-provenance.md)
+Docker Scout uses [provenance](../../build/metadata/attestations/slsa-provenance.md)
 attestations or the `org.opencontainers.image.revision` OCI annotation to link
 SonarQube analysis results with container images. In addition to enabling the
 SonarQube integration, you must also make sure that your images have either the
@@ -366,6 +366,6 @@ This "no data" state occurs when:
   of date
 
 To make sure that Docker Scout always knows about your base image, you can
-attach [provenance attestations](../../../manuals/build/metadata/attestations/slsa-provenance.md)
+attach [provenance attestations](../../build/metadata/attestations/slsa-provenance.md)
 at build-time. Docker Scout uses provenance attestations to find out the base
 image version.

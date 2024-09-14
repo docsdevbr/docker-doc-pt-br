@@ -413,7 +413,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 > [!NOTE]
 >
 > The `watch` command is now generally available (GA). You can directly use it from the root command `docker compose watch`.
-> For more information, see [File watch](./file-watch.md).
+> For more information, see [File watch](file-watch.md).
 
 ### Update
 
@@ -2338,8 +2338,8 @@ naming scheme accordingly before upgrading.
 
 - Added support for `extra_hosts` in build configuration
 
-- Added support for the [long syntax](../../../reference/compose-file/legacy-versions.md) for volume entries, as previously introduced in the 3.2 format.
-  Using this syntax will create [mounts](../../../manuals/engine/storage/bind-mounts.md) instead of volumes.
+- Added support for the [long syntax](../../reference/compose-file/legacy-versions.md) for volume entries, as previously introduced in the 3.2 format.
+  Using this syntax will create [mounts](../engine/storage/bind-mounts.md) instead of volumes.
 
 #### Compose file version 2.1 and up
 
@@ -3274,7 +3274,7 @@ naming scheme accordingly before upgrading.
     You don't have to use it - your existing Compose files will run on Compose
     1.6 exactly as they do today.
 
-    Check the [upgrade guide](../../../reference/compose-file/legacy-versions.md)
+    Check the [upgrade guide](../../reference/compose-file/legacy-versions.md)
     for full details.
 
 -   Support for networking has exited experimental status and is the recommended
@@ -3286,7 +3286,7 @@ naming scheme accordingly before upgrading.
 
     By default, you don't have to configure any networks. In fact, using
     networking with Compose involves even less configuration than using links.
-    Consult the [networking guide](../../../manuals/compose/networking.md) for how to use it.
+    Consult the [networking guide](networking.md) for how to use it.
 
     The experimental flags `--x-networking` and `--x-network-driver`, introduced
     in Compose 1.5, have been removed.
@@ -3684,7 +3684,7 @@ Several new configuration keys have been added to `docker-compose.yml`:
 - `cpuset`, like `docker run --cpuset-cpus`, lets you specify which CPUs to allow execution in.
 - `read_only`, like `docker run --read-only`, lets you mount a container's filesystem as read-only.
 - `security_opt`, like `docker run --security-opt`, lets you specify [security options](../../reference/cli/docker/container/run.md#security-opt).
-- `log_driver`, like `docker run --log-driver`, lets you specify a [log driver](../../../reference/cli/docker/container/run/index.md#log-driver).
+- `log_driver`, like `docker run --log-driver`, lets you specify a [log driver](../../reference/cli/docker/container/run.md#log-driver).
 
 ### Bug fixes
 
@@ -3773,7 +3773,7 @@ The highlights:
 
    This means the GitHub repository has moved to [https://github.com/docker/fig](https://github.com/docker/fig) and our IRC channel is now #docker-fig on Freenode.
 
- - Fig can be used with the [official Docker OS X installer](../../../manuals/desktop/install/mac-install.md). Boot2Docker will mount the home directory from your host machine so volumes work as expected.
+ - Fig can be used with the [official Docker OS X installer](../desktop/install/mac-install.md). Boot2Docker will mount the home directory from your host machine so volumes work as expected.
 
  - Fig supports Docker 1.3.
 

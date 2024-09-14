@@ -121,7 +121,7 @@ The following instructions explain how to create and deploy a `registry.json` fi
 ### Option 1: Create a registry.json file to enforce sign-in
 
 1. Ensure that the user is a member of your organization in Docker. For more
-details, see [Manage members](../../../manuals/admin/organization/members/index.md).
+details, see [Manage members](../../../admin/organization/members.md).
 
 2. Create the `registry.json` file.
 

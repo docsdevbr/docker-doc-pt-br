@@ -20,7 +20,7 @@ You can use them to parameterize the build, allowing for more flexible and confi
 > to your build, because they're exposed in the final image. Instead, use
 > secret mounts or SSH mounts, which expose secrets to your builds securely.
 >
-> See [Build secrets](./secrets.md) for more information.
+> See [Build secrets](secrets.md) for more information.
 
 ## Similarities and differences
 
@@ -438,7 +438,7 @@ Example:
 {{< introduced buildx 0.14.0 >}}
 
 Sets the HTTP authentication scheme when using a remote Bake definition in a private Git repository.
-This is equivalent to the [`GIT_AUTH_HEADER` secret](./secrets#http-authentication-scheme),
+This is equivalent to the [`GIT_AUTH_HEADER` secret](secrets#http-authentication-scheme),
 but facilitates the pre-flight authentication in Bake when loading the remote Bake file.
 Supported values are `bearer` (default) and `basic`.
 
@@ -453,7 +453,7 @@ $ export BUILDX_BAKE_GIT_AUTH_HEADER=basic
 {{< introduced buildx 0.14.0 >}}
 
 Sets the HTTP authentication token when using a remote Bake definition in a private Git repository.
-This is equivalent to the [`GIT_AUTH_TOKEN` secret](./secrets#git-authentication-for-remote-contexts),
+This is equivalent to the [`GIT_AUTH_TOKEN` secret](secrets#git-authentication-for-remote-contexts),
 but facilitates the pre-flight authentication in Bake when loading the remote Bake file.
 
 Usage:
@@ -522,7 +522,7 @@ $ export BUILDX_EXPERIMENTAL=1
 {{< introduced buildx 0.10.4 "../release-notes.md#0104" >}}
 
 When set to true, checks for dirty state in source control information for
-[provenance attestations](../../../manuals/build/metadata/attestations/slsa-provenance.md).
+[provenance attestations](../metadata/attestations/slsa-provenance.md).
 
 Usage:
 
@@ -535,7 +535,7 @@ $ export BUILDX_GIT_CHECK_DIRTY=1
 {{< introduced buildx 0.10.0 "../release-notes.md#0100" >}}
 
 When set to false, removes source control information from
-[provenance attestations](../../../manuals/build/metadata/attestations/slsa-provenance.md).
+[provenance attestations](../metadata/attestations/slsa-provenance.md).
 
 Usage:
 
@@ -577,7 +577,7 @@ If the repository is in a dirty state, the `revision` gets a `-dirty` suffix.
 {{< introduced buildx 0.10.4 "../release-notes.md#0104" >}}
 
 By default, BuildKit v0.11 and later adds
-[provenance attestations](../../../manuals/build/metadata/attestations/slsa-provenance.md) to images you
+[provenance attestations](../metadata/attestations/slsa-provenance.md) to images you
 build. Set `BUILDX_NO_DEFAULT_ATTESTATIONS=1` to disable the default provenance
 attestations.
 

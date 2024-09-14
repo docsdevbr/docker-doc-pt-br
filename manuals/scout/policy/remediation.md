@@ -72,7 +72,7 @@ information available about the image.
 ### No provenance attestations
 
 For Docker Scout to be able to evaluate this policy, you must add [provenance
-attestations](../../../manuals/build/metadata/attestations/slsa-provenance.md) to your image. If
+attestations](../../build/metadata/attestations/slsa-provenance.md) to your image. If
 your image doesn't have provenance attestations, compliance is undeterminable.
 
 <!--
@@ -99,7 +99,7 @@ determine if it's up-to-date.
 If there's a policy violation, the recommended actions show how to update your
 base image version to the latest version, while also pinning the base image
 version to a specific digest. For more information, see [Pin base image
-versions](../../../manuals/build/building/best-practices.md#pin-base-image-versions).
+versions](../../build/building/best-practices.md#pin-base-image-versions).
 
 ### GitHub integration enabled
 
@@ -120,7 +120,7 @@ image to a digest is important for reproducibility, and helps avoid unwanted
 changes from making their way into your supply chain.
 
 For more information about base image pinning, see [Pin base image
-versions](../../../manuals/build/building/best-practices.md#pin-base-image-versions).
+versions](../../build/building/best-practices.md#pin-base-image-versions).
 
 <!--
   TODO(dvdksn): no support for the following, yet
@@ -143,4 +143,4 @@ The recommendations available in the remediation side panel helps guide you to
 what action you need to take to address the issues. For example, if your image
 has a provenance attestation, but the attestation doesn't contain enough
 information, you're recommended to re-build your image with
-[`mode=max`](../../../manuals/build/metadata/attestations/slsa-provenance.md#max) provenance.
+[`mode=max`](../../build/metadata/attestations/slsa-provenance.md#max) provenance.

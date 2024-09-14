@@ -9,7 +9,7 @@ keywords: payments, billing, subscription, invoices, docker core, subscribe
 
 Docker Core subscriptions offer features and benefits to support both new and professional developers, as well as plans for individuals, teams, and enterprise businesses. To learn more about what's included with each tier, see [Docker Core subscriptions and features](../../subscription/core-subscription/details.md) and [Docker Pricing](https://www.docker.com/pricing/).
 
-In this section, learn how to get started with a Docker Core subscription for individuals or for organizations. Before you begin, make sure you have a [Docker ID](/accounts/create-account/index.md).
+In this section, learn how to get started with a Docker Core subscription for individuals or for organizations. Before you begin, make sure you have a [Docker ID](../../accounts/create-account.md).
 
 {{< include "tax-compliance.md" >}}
 
@@ -19,7 +19,7 @@ In this section, learn how to get started with a Docker Core subscription for in
 2. Select your avatar in the top-right corner then select **Billing**.
 3. In **Billing Details**, select your personal account.
 4. Select **Buy now**.
-5. To continue to use [**Docker Core Personal**](../../../manuals/subscription/core-subscription/details.md#docker-personal), select **Continue with Personal**. To buy [**Docker Core Pro**](../../../manuals/subscription/core-subscription/details.md#docker-pro), select **Buy Now** on the **Pro** card.
+5. To continue to use [**Docker Core Personal**](../../subscription/core-subscription/details.md#docker-personal), select **Continue with Personal**. To buy [**Docker Core Pro**](../../subscription/core-subscription/details.md#docker-pro), select **Buy Now** on the **Pro** card.
 6. Enter your billing information, then select **Submit**.
 7. Follow the on-screen instructions to confirm monthly or annual billing cycle and enter your payment information.
 8. Select **Subscribe**.

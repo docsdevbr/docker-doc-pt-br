@@ -132,7 +132,7 @@ node-1
 
 The labels you set for nodes using `docker node update` apply only to the node
 entity within the swarm. Do not confuse them with the Docker daemon labels for
-[dockerd](../../../manuals/engine/manage-resources/labels.md).
+[dockerd](../manage-resources/labels.md).
 
 Therefore, node labels can be used to limit critical tasks to nodes that meet
 certain requirements. For example, schedule only on machines where special
@@ -189,7 +189,7 @@ respectively.
 ## Install plugins on swarm nodes
 
 If your swarm service relies on one or more
-[plugins](../../../manuals/engine/extend/plugin_api/index.md), these plugins need to be available on
+[plugins](../extend/plugin_api/index.md), these plugins need to be available on
 every node where the service could potentially be deployed. You can manually
 install the plugin on each node or script the installation. You can also deploy
 the plugin in a similar way as a global service using the Docker API, by specifying
@@ -201,7 +201,7 @@ a `PluginSpec` instead of a `ContainerSpec`.
 > Docker CLI or Docker Compose. In addition, it is not possible to install
 > plugins from a private repository.
 
-The [`PluginSpec`](../../../manuals/engine/extend/plugin_api/index.md#json-specification)
+The [`PluginSpec`](../extend/plugin_api/index.md#json-specification)
 is defined by the plugin developer. To add the plugin to all Docker nodes, use
 the [`service/create`](../../../reference/api/engine/v1.31/index.md#operation/ServiceCreate) API, passing
 the `PluginSpec` JSON defined in the `TaskTemplate`.

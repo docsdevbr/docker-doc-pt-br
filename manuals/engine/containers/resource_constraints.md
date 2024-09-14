@@ -61,7 +61,7 @@ You can mitigate the risk of system instability due to OOME by:
 - Be mindful when configuring swap on your Docker hosts. Swap is slower than
   memory but can provide a buffer against running out of system memory.
 - Consider converting your container to a
-  [service](../../../manuals/engine/swarm/services.md), and using service-level constraints
+  [service](../swarm/services.md), and using service-level constraints
   and node labels to ensure that the application runs only on hosts with enough
   memory
 

@@ -73,7 +73,7 @@ If SCIM isn't enabled, you have to manually remove users from the organization i
 
 ### What metadata is collected from container images that Scout analyzes?
 
-For information about the metadata stored by Docker Scout, see [Data handling](../../../manuals/scout/deep-dive/data-handling.md).
+For information about the metadata stored by Docker Scout, see [Data handling](../../scout/deep-dive/data-handling.md).
 
 ### How are extensions within the Marketplace vetted for security prior to placement?
 
@@ -83,4 +83,4 @@ Extensions are not covered as part of Docker’s Third-Party Risk Management Pro
 
 ### Can I disable private repos in my organization via a setting to make sure nobody is pushing images into Docker Hub?
 
-No. With [Registry Access Management](../../../manuals/security/for-admins/hardened-desktop/registry-access-management.md) (RAM), administrators can ensure that their developers using Docker Desktop only access allowed registries. This is done through the Registry Access Management dashboard on Docker Hub.
+No. With [Registry Access Management](../for-admins/hardened-desktop/registry-access-management.md) (RAM), administrators can ensure that their developers using Docker Desktop only access allowed registries. This is done through the Registry Access Management dashboard on Docker Hub.

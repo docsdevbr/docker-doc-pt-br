@@ -361,8 +361,8 @@ speed up the build process.
 
 For more information about the concepts discussed in this guide, see:
 
-- [.dockerignore files](../../../manuals/build/concepts/context.md#dockerignore-files)
-- [Cache invalidation](../../../manuals/build/cache/invalidation.md)
+- [.dockerignore files](../concepts/context.md#dockerignore-files)
+- [Cache invalidation](invalidation.md)
 - [Cache mounts](../../../reference/dockerfile.md#run---mounttypecache)
-- [Cache backend types](../../../manuals/build/cache/backends/index.md)
-- [Building best practices](../../../manuals/build/building/best-practices.md)
+- [Cache backend types](backends/index.md)
+- [Building best practices](../building/best-practices.md)

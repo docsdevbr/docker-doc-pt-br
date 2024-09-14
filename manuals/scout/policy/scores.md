@@ -66,7 +66,7 @@ your organization. This also includes any custom policies that you have
 configured.
 
 If you're not using Docker Scout, the health scores show the compliance of your
-images with the default, [out-of-the-box policies](../../../manuals/scout/policy/index.md#out-of-the-box-policies).
+images with the default, [out-of-the-box policies](index.md#out-of-the-box-policies).
 You can enable Docker Scout for your organization to get a more relevant health
 score based on your specific policies.
 
@@ -118,14 +118,14 @@ The policies that influence the score, and their respective weights, are as foll
 
 | Policy                                                                                                                     | Points |
 | -------------------------------------------------------------------------------------------------------------------------- | ------ |
-| [No fixable critical or high vulnerabilities](../../../manuals/scout/policy/index.md#no-fixable-critical-or-high-vulnerabilities) | 20     |
-| [No high-profile vulnerabilities](../../../manuals/scout/policy/index.md#no-high-profile-vulnerabilities)                         | 20     |
-| [Supply chain attestations](../../../manuals/scout/policy/index.md#supply-chain-attestations)                                     | 15     |
-| [No unapproved base images](../../../manuals/scout/policy/index.md#no-unapproved-base-images)                                     | 15     |
-| [No outdated base images](../../../manuals/scout/policy/index.md#no-outdated-base-images)                                         | 10     |
-| [SonarQube quality gates passed](../../../manuals/scout/policy/index.md#sonarqube-quality-gates-passed) \*                        | 10     |
-| [Default non-root user](../../../manuals/scout/policy/index.md#default-non-root-user)                                             | 5      |
-| [No AGPL v3 licenses](../../../manuals/scout/policy/index.md#no-agpl-v3-licenses)                                                 | 5      |
+| [No fixable critical or high vulnerabilities](index.md#no-fixable-critical-or-high-vulnerabilities) | 20     |
+| [No high-profile vulnerabilities](index.md#no-high-profile-vulnerabilities)                         | 20     |
+| [Supply chain attestations](index.md#supply-chain-attestations)                                     | 15     |
+| [No unapproved base images](index.md#no-unapproved-base-images)                                     | 15     |
+| [No outdated base images](index.md#no-outdated-base-images)                                         | 10     |
+| [SonarQube quality gates passed](index.md#sonarqube-quality-gates-passed) \*                        | 10     |
+| [Default non-root user](index.md#default-non-root-user)                                             | 5      |
+| [No AGPL v3 licenses](index.md#no-agpl-v3-licenses)                                                 | 5      |
 
 \* _This policy is not enabled by default and must be configured by the user._
 

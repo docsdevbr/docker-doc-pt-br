@@ -17,7 +17,7 @@ Settings Management is a feature that helps admins to control certain Docker Des
 
 With a few lines of JSON, admins can configure controls for Docker Desktop settings such as proxies and network settings. For an extra layer of security, admins can also use Settings Management to enable and lock in [Enhanced Container Isolation](../enhanced-container-isolation/) which ensures that any configurations set with Settings Management cannot be modified by containers.
 
-It is available with [Docker Desktop 4.13.0 and later](../../../manuals/desktop/release-notes.md).
+It is available with [Docker Desktop 4.13.0 and later](../../desktop/release-notes.md).
 
 ### Who is it for?
 
@@ -56,7 +56,7 @@ For more details on the syntax and options admins can set, see [Configure Settin
 ### How do I set up and enforce Settings Management?
 
 As an administrator, you first need to [enforce
-sign-in](../../../manuals/security/for-admins/enforce-sign-in/index.md). This is
+sign-in](enforce-sign-in/index.md). This is
 because the Settings Management feature requires a Docker Business subscription
 and therefore your Docker Desktop developers must authenticate to your
 organization. Enforcing sign-in ensures that your Docker Desktop developers
@@ -65,7 +65,7 @@ without it and the feature will take effect. Enforcing sign-in guarantees the
 feature always takes effect.
 
 
-Next, you must either manually [create and configure the admin-settings.json file](configure.md), or use the `--admin-settings` installer flag on [macOS](../../../manuals/desktop/install/mac-install.md#install-from-the-command-line) or [Windows](../../../manuals/desktop/install/windows-install.md#install-from-the-command-line) to automatically create the `admin-settings.json` and save it in the correct location.
+Next, you must either manually [create and configure the admin-settings.json file](configure.md), or use the `--admin-settings` installer flag on [macOS](../../desktop/install/mac-install.md#install-from-the-command-line) or [Windows](../../desktop/install/windows-install.md#install-from-the-command-line) to automatically create the `admin-settings.json` and save it in the correct location.
 
 Once this is done, Docker Desktop developers receive the changed settings when they either:
 - Quit, re-launch, and sign in to Docker Desktop

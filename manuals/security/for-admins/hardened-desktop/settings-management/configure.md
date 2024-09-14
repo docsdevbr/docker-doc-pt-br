@@ -17,9 +17,9 @@ Settings Management is designed specifically for organizations who don’t give 
 
 ### Prerequisites
 
-- [Download and install Docker Desktop 4.13.0 or later](../../../manuals/desktop/release-notes.md).
+- [Download and install Docker Desktop 4.13.0 or later](../../desktop/release-notes.md).
 - As an administrator, you need to [enforce
-  sign-in](../../../manuals/security/for-admins/enforce-sign-in/index.md). This is
+  sign-in](enforce-sign-in/index.md). This is
   because this feature requires a Docker Business subscription and therefore
   your Docker Desktop users must authenticate to your organization for this
   configuration to take effect. Enforcing sign-in ensures that your Docker
@@ -30,7 +30,7 @@ Settings Management is designed specifically for organizations who don’t give 
 
 ### Step one: Create the `admin-settings.json` file and save it in the correct location
 
-You can either use the `--admin-settings` installer flag on [macOS](../../../manuals/desktop/install/mac-install.md#install-from-the-command-line) or [Windows](../../../manuals/desktop/install/windows-install.md#install-from-the-command-line) to automatically create the `admin-settings.json` and save it in the correct location, or set it up manually.
+You can either use the `--admin-settings` installer flag on [macOS](../../desktop/install/mac-install.md#install-from-the-command-line) or [Windows](../../desktop/install/windows-install.md#install-from-the-command-line) to automatically create the `admin-settings.json` and save it in the correct location, or set it up manually.
 
 To set it up manually:
 1. Create a new, empty JSON file and name it `admin-settings.json`.
@@ -202,11 +202,11 @@ The following `admin-settings.json` code and table provides an example of the re
 | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `commandList` |  | Restricts the commands that containers can issue via the bind-mounted Docker Engine socket. |
 | `linuxVM` |   |Parameters and settings related to Linux VM options - grouped together here for convenience. |
 | &nbsp; &nbsp; &nbsp; &nbsp;`wslEngineEnabled`  | Windows only | If `value` is set to true, Docker Desktop uses the WSL 2 based engine. This overrides anything that may have been set at installation using the `--backend=<backend name>` flag. |
-| &nbsp;&nbsp; &nbsp; &nbsp;`dockerDaemonOptions`|  |If `value` is set to true, it overrides the options in the Docker Engine config file. See the [Docker Engine reference](../../../reference/cli/dockerd/index.md#daemon-configuration-file). Note that for added security, a few of the config attributes may be overridden when Enhanced Container Isolation is enabled. |
+| &nbsp;&nbsp; &nbsp; &nbsp;`dockerDaemonOptions`|  |If `value` is set to true, it overrides the options in the Docker Engine config file. See the [Docker Engine reference](../../../reference/cli/dockerd.md#daemon-configuration-file). Note that for added security, a few of the config attributes may be overridden when Enhanced Container Isolation is enabled. |
 | &nbsp;&nbsp; &nbsp; &nbsp;`vpnkitCIDR` |  |Overrides the network range used for vpnkit DHCP/DNS for `*.docker.internal`  |
 |`kubernetes`|  | If `enabled` is set to true, a Kubernetes single-node cluster is started when Docker Desktop starts. If `showSystemContainers` is set to true, Kubernetes containers are displayed in the UI and when you run `docker ps`.  `imagesRepository` allows you to specify which repository Docker Desktop pulls the Kubernetes images from. For example, `"imagesRepository": "registry-1.docker.io/docker"`.  |
 | `windowsContainers` |  | Parameters and settings related to `windowsContainers` options - grouped together here for convenience.                  |
-| &nbsp; &nbsp; &nbsp; &nbsp;`dockerDaemonOptions` |  | Overrides the options in the Linux daemon config file. See the [Docker Engine reference](../../../reference/cli/dockerd/index.md#daemon-configuration-file).|
+| &nbsp; &nbsp; &nbsp; &nbsp;`dockerDaemonOptions` |  | Overrides the options in the Linux daemon config file. See the [Docker Engine reference](../../../reference/cli/dockerd.md#daemon-configuration-file).|
 |`disableUpdate`|  |If `value` is set to true, checking for and notifications about Docker Desktop updates is disabled.|
 |`analyticsEnabled`|  |If `value` is set to false, Docker Desktop doesn't send usage statistics to Docker. |
 |`extensionsEnabled`|  |If `value` is set to false, Docker extensions are disabled. |

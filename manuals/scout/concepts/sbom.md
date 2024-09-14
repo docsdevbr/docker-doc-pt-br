@@ -35,10 +35,10 @@ An SBOM typically includes the following information:
 
 Docker Scout uses SBOMs to determine the components that are used in a Docker
 image. When you analyze an image, Docker Scout will either use the SBOM that is
-attached to the image (using [attestations](../../../manuals/build/metadata/attestations/index.md)), or
+attached to the image (using [attestations](../../build/metadata/attestations/index.md)), or
 it will generate an SBOM on the fly by analyzing the contents of the image.
 
-The SBOM is cross-referenced with the [advisory database](../../../manuals/scout/deep-dive/advisory-db-sources.md)
+The SBOM is cross-referenced with the [advisory database](../deep-dive/advisory-db-sources.md)
 to determine if any of the components in the image have known vulnerabilities.
 
 ## Additional resources
@@ -46,5 +46,5 @@ to determine if any of the components in the image have known vulnerabilities.
 To learn more about generating SBOMs and how SBOMs are used in Docker Scout,
 see:
 
-- [Image analysis in Docker Scout](../../../manuals/scout/explore/analysis.md)
-- [View and create SBOMs](../../../manuals/scout/how-tos/view-create-sboms.md)
+- [Image analysis in Docker Scout](../explore/analysis.md)
+- [View and create SBOMs](../how-tos/view-create-sboms.md)

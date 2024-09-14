@@ -66,10 +66,10 @@ $ docker buildx build --sbom=true --provenance=true .
 >
 > Provenance attestations are enabled by default, with the `mode=min` option.
 > You can disable provenance attestations using the `--provenance=false` flag,
-> or by setting the [`BUILDX_NO_DEFAULT_ATTESTATIONS`](../../../build/building/variables.md#buildx_no_default_attestations) environment variable.
+> or by setting the [`BUILDX_NO_DEFAULT_ATTESTATIONS`](../../building/variables.md#buildx_no_default_attestations) environment variable.
 >
 > Using the `--provenance=true` flag attaches provenance attestations with `mode=max`
-> by default. See [Provenance attestation](./slsa-provenance.md) for more details.
+> by default. See [Provenance attestation](slsa-provenance.md) for more details.
 
 BuildKit generates the attestations when building the image. The attestation
 records are wrapped in the in-toto JSON format and attached to the image

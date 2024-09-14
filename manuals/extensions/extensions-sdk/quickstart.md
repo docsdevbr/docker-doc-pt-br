@@ -12,7 +12,7 @@ Follow this guide to get started with creating a basic Docker extension. The Qui
 
 ## Prerequisites
 
-- [Docker Desktop](../../../manuals/desktop/release-notes.md)
+- [Docker Desktop](../../desktop/release-notes.md)
 - [NodeJS](https://nodejs.org/)
 - [Go](https://go.dev/dl/)
 

@@ -92,7 +92,7 @@ The full release note for this release is available
 
   In addition to the default `build` method, the following methods are implemented by Dockerfile frontend:
 
-  - [`--call=check`](../../reference/cli/docker/buildx/build.md#check): Run validation routines for your build configuration. For more information about build checks, see [Build checks](../../../manuals/build/checks.md)
+  - [`--call=check`](../../reference/cli/docker/buildx/build.md#check): Run validation routines for your build configuration. For more information about build checks, see [Build checks](checks.md)
   - [`--call=outline`](../../reference/cli/docker/buildx/build.md#call-outline): Show configuration that would be used by current build, including all build arguments, secrets, SSH mounts, etc., that your build would use.
   - [`--call=targets`](../../reference/cli/docker/buildx/build.md#call-targets): Show all available targets and their descriptions.
 
@@ -124,7 +124,7 @@ The full release note for this release is available
   [docker/buildx#2374](https://github.com/docker/buildx/pull/2374)
 - Provenance records are now set when building with `--metadata-file`.
   [docker/buildx#2280](https://github.com/docker/buildx/pull/2280)
-- Add [Git authentication support](./bake/remote-definition.md#remote-definition-in-a-private-repository) for remote definitions.
+- Add [Git authentication support](bake/remote-definition.md#remote-definition-in-a-private-repository) for remote definitions.
   [docker/buildx#2363](https://github.com/docker/buildx/pull/2363)
 - New `default-load` driver option for the `docker-container`, `remote`, and `kubernetes` drivers to load build results to the Docker Engine image store by default.
   [docker/buildx#2259](https://github.com/docker/buildx/pull/2259)
@@ -369,7 +369,7 @@ The full release note for this release is available
   that lets you start a debug session in your builds.
   [docker/buildx#1626](https://github.com/docker/buildx/pull/1626),
   [docker/buildx#1640](https://github.com/docker/buildx/pull/1640)
-- New [`EXPERIMENTAL_BUILDKIT_SOURCE_POLICY` environment variable](./building/variables.md#experimental_buildkit_source_policy)
+- New [`EXPERIMENTAL_BUILDKIT_SOURCE_POLICY` environment variable](building/variables.md#experimental_buildkit_source_policy)
   for applying a BuildKit source policy file.
   [docker/buildx#1628](https://github.com/docker/buildx/pull/1628)
 
@@ -514,7 +514,7 @@ The full release note for this release is available
   for initializing the context with a value of a local OCI layout directory.
   E.g. `--build-context stagename=oci-layout://path/to/dir`. This feature
   requires BuildKit v0.11.0+ and Dockerfile 1.5.0+. [docker/buildx#1456](https://github.com/docker/buildx/issues/1456)
-- Bake now supports [resource interpolation](bake/inheritance.md#reusing-single-attribute-from-targets)
+- Bake now supports [resource interpolation](bake/inheritance.md#reusing-single-attributes-from-targets)
   where you can reuse the values from other target definitions. [docker/buildx#1434](https://github.com/docker/buildx/issues/1434)
 - Buildx will now automatically forward `SOURCE_DATE_EPOCH` environment variable
   if it is defined in your environment. This feature is meant to be used with
@@ -702,7 +702,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ### New
 
-- Build command now accepts `--build-context` flag to [define additional named build contexts](../../reference/cli/docker/buildx/build/index.md#build-context)
+- Build command now accepts `--build-context` flag to [define additional named build contexts](../../reference/cli/docker/buildx/build.md#build-context)
   for your builds. [docker/buildx#904](https://github.com/docker/buildx/issues/904)
 - Bake definitions now support [defining dependencies between targets](bake/contexts.md)
   and using the result of one target in another build.

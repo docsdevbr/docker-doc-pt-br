@@ -56,6 +56,6 @@ anything differently, they still need to re-run.
 For more information on using cache to do efficient builds, see:
 
 - [Cache invalidation](invalidation.md)
-- [Optimize build cache](optimization.md)
+- [Optimize build cache](../../build-cloud/optimization.md)
 - [Garbage collection](garbage-collection.md)
-- [Cache storage backends](./backends/)
+- [Cache storage backends](backends/index.md)

@@ -19,12 +19,12 @@ for your builds. This builder uses the BuildKit library bundled with the
 daemon. This builder requires no configuration.
 
 The default builder is directly bound to the Docker daemon and its
-[context](../../../manuals/engine/manage-resources/contexts.md). If you change the
+[context](../../engine/manage-resources/contexts.md). If you change the
 Docker context, your `default` builder refers to the new Docker context.
 
 ## Build drivers
 
-Buildx implements a concept of [build drivers](drivers/) to refer to
+Buildx implements a concept of [build drivers](drivers/index.md) to refer to
 different builder configurations. The default builder created by the daemon
 uses the [`docker` driver](drivers/docker.md).
 
@@ -68,6 +68,6 @@ selected when you invoke builds.
 ## Additional information
 
 - For information about how to interact with and manage builders,
-  see [Manage builders](./manage.md)
+  see [Manage builders](manage.md)
 - To learn about different types of builders,
-  see [Build drivers](drivers/)
+  see [Build drivers](drivers/index.md)

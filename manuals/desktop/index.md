@@ -9,9 +9,9 @@ grid:
 - title: Install Docker Desktop
   description: |
     Install Docker Desktop on
-    [Mac](../../../manuals/desktop/install/mac-install/index.md),
-    [Windows](../../../manuals/desktop/install/windows-install/index.md), or
-    [Linux](../../../manuals/desktop/install/linux/index.md).
+    [Mac](../install/mac-install/index.md),
+    [Windows](../install/windows-install/index.md), or
+    [Linux](../install/linux/index.md).
   icon: download
 - title: Explore Docker Desktop
   description: Navigate Docker Desktop and learn about its key features.
@@ -52,13 +52,13 @@ Docker Desktop reduces the time spent on complex setups so you can focus on writ
 {{< tabs >}}
 {{< tab name="What's included in Docker Desktop?" >}}
 
-- [Docker Engine](../../../manuals/engine/index.md)
+- [Docker Engine](../engine/index.md)
 - Docker CLI client
-- [Docker Scout](../scout/) (additional subscription may apply)
-- [Docker Build](../../../manuals/build/index.md)
-- [Docker Extensions](../extensions/)
-- [Docker Compose](../../../manuals/compose/index.md)
-- [Docker Content Trust](../../../manuals/engine/security/trust/index.md)
+- [Docker Scout](../scout/index.md) (additional subscription may apply)
+- [Docker Build](../build/index.md)
+- [Docker Extensions](../extensions/index.md)
+- [Docker Compose](../compose/index.md)
+- [Docker Content Trust](../engine/security/trust/index.md)
 - [Kubernetes](https://github.com/kubernetes/kubernetes/)
 - [Credential Helper](https://github.com/docker/docker-credential-helpers/)
 

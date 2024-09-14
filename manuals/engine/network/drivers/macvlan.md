@@ -108,7 +108,7 @@ $ docker network create -d ipvlan \
 
 ## Use IPv6
 
-If you have [configured the Docker daemon to allow IPv6](../../../manuals/engine/daemon/ipv6.md),
+If you have [configured the Docker daemon to allow IPv6](../../daemon/ipv6.md),
 you can use dual-stack IPv4/IPv6 `macvlan` networks.
 
 ```console
@@ -123,4 +123,4 @@ $ docker network create -d macvlan \
 ## Next steps
 
 Learn how to use the Macvlan driver in the
-[Macvlan networking tutorial](../../../manuals/engine/network/tutorials/macvlan.md).
+[Macvlan networking tutorial](../tutorials/macvlan.md).

@@ -77,7 +77,7 @@ Possible solutions:
   subscription](/subscription/core-subscription/add-seats/index.md).
  * Remove some users or pending invitations from your organization to make more
    seats available. For more details, see [Manage organization
-   members](../../../manuals/admin/organization/members/index.md).
+   members](../../admin/organization/members/index.md).
 
 ### Domain is not verified for SSO connection
 
@@ -99,7 +99,7 @@ Possible solutions:
  * Add and verify all domains and subdomains that are used as UPN by your IdP
    and associate them to your Docker SSO connection. For more details, see [Add
    and verify your
-   domain](../../../manuals/security/for-admins/single-sign-on/configure/index.md#step-one-add-and-verify-your-domain).
+   domain](single-sign-on/configure/index.md#step-one-add-and-verify-your-domain).
 
 ### Unable to find session
 
@@ -141,11 +141,11 @@ Possible solutions:
  * Review your SSO connection configuration and enable JIT provisioning to add
    all users to the organization after authenticating via SSO. For more details,
    see [Just-in-Time
-   provisioning](../../../manuals/security/for-admins/provisioning/just-in-time/index.md).
+   provisioning](provisioning/just-in-time/index.md).
  * If JIT provisioning should remain disabled, then add the user to the
    organization by manually inviting them. Next time the user authenticates via
    SSO they will get added to the org because they are invited. For more
-   details, see [Manage organization members](../../../manuals/admin/organization/members/index.md).
+   details, see [Manage organization members](../../admin/organization/members/index.md).
  * If SCIM should provision the user, then ensure that the IdP controlling SCIM
    provisioning is properly configured to synchronize users with Docker as soon
    as they get assigned to the app. For more details, refer to your identity

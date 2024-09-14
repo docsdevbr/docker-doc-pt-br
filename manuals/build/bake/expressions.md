@@ -52,7 +52,7 @@ $ docker buildx bake --print app
 You can use ternary operators to conditionally register a value.
 
 The following example adds a tag only when a variable is not empty, using the
-built-in `notequal` [function](./funcs.md).
+built-in `notequal` [function](funcs.md).
 
 ```hcl {title=docker-bake.hcl}
 variable "TAG" {}
@@ -93,7 +93,7 @@ $ docker buildx bake --print
 
 ## Expressions with variables
 
-You can use expressions with [variables](./variables.md) to conditionally set
+You can use expressions with [variables](variables.md) to conditionally set
 values, or to perform arithmetic operations.
 
 The following example uses expressions to set values based on the value of

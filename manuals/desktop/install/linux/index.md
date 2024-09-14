@@ -39,7 +39,7 @@ Docker Desktop for Linux provides a user-friendly graphical interface that simpl
 Docker Desktop for Linux and Docker Engine can be installed side-by-side on the
 same machine. Docker Desktop for Linux stores containers and images in an isolated
 storage location within a VM and offers
-controls to restrict [its resources](../../../manuals/desktop/settings.md#resources). Using a dedicated storage
+controls to restrict [its resources](../settings.md#resources). Using a dedicated storage
 location for Docker Desktop prevents it from interfering with a Docker Engine
 installation on the same machine.
 
@@ -71,7 +71,7 @@ $ sudo systemctl disable docker docker.socket containerd
 
 The Docker CLI can be used to interact with multiple Docker Engines. For example,
 you can use the same Docker CLI to control a local Docker Engine and to control
-a remote Docker Engine instance running in the cloud. [Docker Contexts](../../../manuals/engine/manage-resources/contexts.md)
+a remote Docker Engine instance running in the cloud. [Docker Contexts](../../engine/manage-resources/contexts.md)
 allow you to switch between Docker Engines instances.
 
 When installing Docker Desktop, a dedicated "desktop-linux" context is created to
@@ -108,7 +108,7 @@ $ docker context use desktop-linux
 desktop-linux
 Current context is now "desktop-linux"
 ```
-Refer to the [Docker Context documentation](../../../manuals/engine/manage-resources/contexts.md) for more details.
+Refer to the [Docker Context documentation](../../engine/manage-resources/contexts.md) for more details.
 {{< /accordion >}}
 
 ## Supported platforms
@@ -142,10 +142,10 @@ To install Docker Desktop successfully, your Linux host must meet the following 
 - Gnome, KDE, or MATE Desktop environment.
   - For many Linux distros, the Gnome environment does not support tray icons. To add support for tray icons, you need to install a Gnome extension. For example, [AppIndicator](https://extensions.gnome.org/extension/615/appindicator-support/).
 - At least 4 GB of RAM.
-- Enable configuring ID mapping in user namespaces, see [File sharing](../../../manuals/desktop/faqs/linuxfaqs.md#how-do-i-enable-file-sharing).
-- Recommended: [Initialize `pass`](../../../manuals/desktop/get-started.md#credentials-management-for-linux-users) for credentials management.
+- Enable configuring ID mapping in user namespaces, see [File sharing](../faqs/linuxfaqs.md#how-do-i-enable-file-sharing).
+- Recommended: [Initialize `pass`](../get-started.md#credentials-management-for-linux-users) for credentials management.
 
-Docker Desktop for Linux runs a Virtual Machine (VM). For more information on why, see [Why Docker Desktop for Linux runs a VM](../../../manuals/desktop/faqs/linuxfaqs.md#why-does-docker-desktop-for-linux-run-a-vm).
+Docker Desktop for Linux runs a Virtual Machine (VM). For more information on why, see [Why Docker Desktop for Linux runs a VM](../faqs/linuxfaqs.md#why-does-docker-desktop-for-linux-run-a-vm).
 
 > [!NOTE]
 >

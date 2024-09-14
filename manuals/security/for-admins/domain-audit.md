@@ -18,7 +18,7 @@ Domain audit can't identify the following Docker users in your environment:
 - Users who access Docker Desktop without authenticating
 - Users who authenticate using an account that doesn't have an email address associated with one of your verified domains
 
-Although domain audit can't identify all Docker users in your environment, you can enforce sign-in to prevent unidentifiable users from accessing Docker Desktop in your environment. For more details about enforcing sign-in, see [Configure registry.json to enforce sign-in](../for-admins/enforce-sign-in/).
+Although domain audit can't identify all Docker users in your environment, you can enforce sign-in to prevent unidentifiable users from accessing Docker Desktop in your environment. For more details about enforcing sign-in, see [Configure registry.json to enforce sign-in](enforce-sign-in/).
 
 > [!TIP]
 >
@@ -34,7 +34,7 @@ Although domain audit can't identify all Docker users in your environment, you c
 Before you audit your domains, review the following required prerequisites:
 
 - Your organization must be part of a Docker Business subscription. To upgrade your existing account to a Docker Business subscription, see [Upgrade your subscription](../../subscription/core-subscription/upgrade.md).
-- You must [add and verify your domains](./single-sign-on/configure/index.md#step-one-add-and-verify-your-domain).
+- You must [add and verify your domains](single-sign-on/configure/index.md#step-one-add-and-verify-your-domain).
 
 > [!IMPORTANT]
 >

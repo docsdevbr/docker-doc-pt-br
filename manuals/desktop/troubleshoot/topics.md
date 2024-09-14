@@ -56,8 +56,8 @@ After updating the `settings.json` file, close and restart Docker Desktop to app
 
 If you are using mounted volumes and get runtime errors indicating an
 application file is not found, access to a volume mount is denied, or a service
-cannot start, such as when using [Docker Compose](../../../manuals/compose/gettingstarted.md),
-you might need to turn on [file sharing](../../../manuals/desktop/settings.md#file-sharing).
+cannot start, such as when using [Docker Compose](../../compose/gettingstarted.md),
+you might need to turn on [file sharing](../settings.md#file-sharing).
 
 Volume mounting requires shared drives for projects that live outside of the
 `/home/<user>` directory. From **Settings**, select **Resources** and then **File sharing**. Share the drive that contains the Dockerfile and volume.
@@ -117,7 +117,7 @@ To continue using VPNKit, add `"networkType":"vpnkit"` to your `settings.json` f
 
 #### Permissions errors on data directories for shared volumes
 
-When sharing files from Windows, Docker Desktop sets permissions on [shared volumes](../../../manuals/desktop/settings.md#file-sharing)
+When sharing files from Windows, Docker Desktop sets permissions on [shared volumes](../settings.md#file-sharing)
 to a default value of [0777](https://chmodcommand.com/chmod-0777/)
 (`read`, `write`, `execute` permissions for `user` and for `group`).
 
@@ -135,8 +135,8 @@ in the FAQs.
 
 If you are using mounted volumes and get runtime errors indicating an
 application file is not found, access is denied to a volume mount, or a service
-cannot start, such as when using [Docker Compose](../../../manuals/compose/gettingstarted.md),
-you might need to turn on [shared folders](../../../manuals/desktop/settings.md#file-sharing).
+cannot start, such as when using [Docker Compose](../../compose/gettingstarted.md),
+you might need to turn on [shared folders](../settings.md#file-sharing).
 
 With the Hyper-V backend, mounting files from Windows requires shared folders for Linux containers. From **Settings**, select **Shared Folders** and share the folder that contains the
 Dockerfile and volume.

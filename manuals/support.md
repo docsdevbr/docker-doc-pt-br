@@ -42,7 +42,7 @@ If you have a paid Docker subscription, you can get support for the following ty
    For Windows users, you can also request support on:
    * Turning on virtualization in BIOS
    * Turning on Windows features
-   * Running inside [certain VM or VDI environments](../../../manuals/desktop/vm-vdi.md) (Docker Business customers only)
+   * Running inside [certain VM or VDI environments](../../desktop/vm-vdi.md) (Docker Business customers only)
 
 
 ## What is not supported?
@@ -81,9 +81,9 @@ As a Team user, you can get support for Docker Desktop for the number of machine
 
 Docker Desktop is available for Mac, Linux, and Windows. The supported version information can be found on the following pages:
 
-* [Mac system requirements](../../../manuals/desktop/install/mac-install.md#system-requirements)
-* [Windows system requirements](../../../manuals/desktop/install/windows-install.md#system-requirements)
-* [Linux system requirements](../../../manuals/desktop/install/linux/index.md#system-requirements)
+* [Mac system requirements](../../desktop/install/mac-install.md#system-requirements)
+* [Windows system requirements](../../desktop/install/windows-install.md#system-requirements)
+* [Linux system requirements](../../desktop/install/linux/index.md#system-requirements)
 
 ## How is personal diagnostic data handled in Docker Desktop?
 
@@ -96,6 +96,6 @@ For more information, see [Docker Data Processing Agreement](https://www.docker.
 
 ## What can I do before seeking support?
 
-Before seeking support, you can perform basic troubleshooting. See [Diagnose and troubleshooting](../../../manuals/desktop/troubleshoot/index.md) for more information.
+Before seeking support, you can perform basic troubleshooting. See [Diagnose and troubleshooting](../../desktop/troubleshoot/index.md) for more information.
 
 You can also see if an answer already exists in the [FAQs](/tags/faq/index.md).

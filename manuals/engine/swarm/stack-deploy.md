@@ -26,7 +26,7 @@ To run through this tutorial, you need:
     > `docker stack` and `docker service` commands must be run from a manager
     > node.
 
-2.  A current version of [Docker Compose](../../../manuals/compose/install/index.md).
+2.  A current version of [Docker Compose](../../compose/install/index.md).
 
 ## Set up a Docker registry
 
@@ -64,7 +64,7 @@ a throwaway registry, which you can discard afterward.
 ## Create the example application
 
 The app used in this guide is based on the hit counter app in the
-[Get started with Docker Compose](../../../manuals/compose/gettingstarted.md) guide. It consists
+[Get started with Docker Compose](../../compose/gettingstarted.md) guide. It consists
 of a Python app which maintains a counter in a Redis instance and increments the
 counter whenever you visit it.
 

@@ -43,7 +43,7 @@ When you opt to disable JIT provisioning in your SSO connection, the following a
 
    b) If the user is a member of the organization, or has a pending invitation to join, then sign in is successful.
 
-If you disable JIT provisioning when you create or edit your SSO connection, you can still use group mapping as long as you have also [enabled SCIM](../../../manuals/security/for-admins/provisioning/scim/index.md#enable-scim-in-docker). When JIT provisioning is disabled and SCIM isn't enabled, users won't be auto-provisioned to groups. For instructions on disabling JIT provisioning, see [Manage how users are provisioned](../../../manuals/security/for-admins/single-sign-on/manage/index.md#manage-how-users-are-provisioned).
+If you disable JIT provisioning when you create or edit your SSO connection, you can still use group mapping as long as you have also [enabled SCIM](provisioning/scim/index.md#enable-scim-in-docker). When JIT provisioning is disabled and SCIM isn't enabled, users won't be auto-provisioned to groups. For instructions on disabling JIT provisioning, see [Manage how users are provisioned](single-sign-on/manage/index.md#manage-how-users-are-provisioned).
 
 ![JIT provisioning disabled](../../images/jit-disabled-flow.svg)
 
@@ -56,6 +56,6 @@ You may want to disable JIT provisioning for reasons such as the following:
 
 > [!WARNING]
 >
-> Disabling JIT provisioning could potentially disrupt your users' workflows. Users must already be a member of the organization or have an invitation to the organization when they authenticate with SSO in order to sign in successfully. To auto-provision users with JIT disabled, you can [use SCIM](./scim.md).
+> Disabling JIT provisioning could potentially disrupt your users' workflows. Users must already be a member of the organization or have an invitation to the organization when they authenticate with SSO in order to sign in successfully. To auto-provision users with JIT disabled, you can [use SCIM](scim.md).
 
 See [Manage how users are provisioned](../single-sign-on/manage/index.md#manage-how-users-are-provisioned) to learn how to disable JIT provisioning.

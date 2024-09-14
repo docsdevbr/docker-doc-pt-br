@@ -102,7 +102,7 @@ The `GO_VERSION` argument in `app-release` is set to `1.17`, overriding the
 `GO_VERSION` argument from the `app-dev` target.
 
 For more information about overriding attributes, see the [Overriding
-configurations](./overrides.md) page.
+configurations](overrides.md) page.
 
 ## Inherit from multiple targets
 

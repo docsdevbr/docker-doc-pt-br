@@ -25,7 +25,7 @@ as the Unix socket.
 >
 > Remote access without TLS is **not recommended**, and will require explicit opt-in in a future release.
 > For more information on how to use TLS certificates to secure this connection, see
-> [Protect the Docker daemon socket](../../../manuals/engine/security/protect-access.md).
+> [Protect the Docker daemon socket](../security/protect-access.md).
 
 ## Enable remote access
 
@@ -124,4 +124,4 @@ system down more.
 ## Additional information
 
 For more detailed information on configuration options for remote access to the daemon, refer to the
-[dockerd CLI reference](../../../reference/cli/dockerd/index.md#bind-docker-to-another-hostport-or-a-unix-socket).
+[dockerd CLI reference](../../../reference/cli/dockerd.md#bind-docker-to-another-hostport-or-a-unix-socket).

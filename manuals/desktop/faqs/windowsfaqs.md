@@ -22,7 +22,7 @@ No, running Docker Desktop on Windows Server is not supported.
 ### Can I change permissions on shared volumes for container-specific deployment requirements?
 
 Docker Desktop does not enable you to control (`chmod`)
-the Unix-style permissions on [shared volumes](../../../manuals/desktop/settings.md#file-sharing) for
+the Unix-style permissions on [shared volumes](../settings.md#file-sharing) for
 deployed containers, but rather sets permissions to a default value of
 [0777](https://chmodcommand.com/chmod-0777/)
 (`read`, `write`, `execute` permissions for `user` and for
@@ -54,7 +54,7 @@ Docker Desktop creates a certificate bundle of all user-trusted CAs based on
 the Windows certificate store, and appends it to Moby trusted certificates. Therefore, if an enterprise SSL certificate is trusted by the user on the host, it is trusted by Docker Desktop.
 
 To learn more about how to install a CA root certificate for the registry, see
-[Verify repository client with certificates](../../../manuals/engine/security/certificates.md)
+[Verify repository client with certificates](../../engine/security/certificates.md)
 in the Docker Engine topics.
 
 ### How do I add client certificates?
@@ -71,12 +71,12 @@ You need to restart Docker Desktop after making any changes to the keychain
 or to the `~/.docker/certs.d` directory in order for the changes to take effect.
 
 The registry cannot be listed as an insecure registry (see
-[Docker Daemon](../../../manuals/desktop/settings.md#docker-engine)). Docker Desktop ignores
+[Docker Daemon](../settings.md#docker-engine)). Docker Desktop ignores
 certificates listed under insecure registries, and does not send client
 certificates. Commands like `docker run` that attempt to pull from the registry
 produce error messages on the command line, as well as on the registry.
 
 To learn more about how to set the client TLS certificate for verification, see
-[Verify repository client with certificates](../../../manuals/engine/security/certificates.md)
+[Verify repository client with certificates](../../engine/security/certificates.md)
 in the Docker Engine topics.
 

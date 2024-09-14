@@ -28,7 +28,7 @@ to the Slack channels associated with the webhook.
 > is not by a newly disclosed CVE, then no notification will be triggered.
 
 For more information about Docker Scout notifications,
-see [Notification settings](../../../manuals/scout/explore/dashboard.md#notification-settings)
+see [Notification settings](../explore/dashboard.md#notification-settings)
 
 ## Setup
 

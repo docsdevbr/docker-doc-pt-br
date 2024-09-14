@@ -106,7 +106,7 @@ and `docker network create -d overlay net2` will result in `10.20.0.64/26` as th
 all the subnets are exhausted.
 
 Refer to the following pages for more information:
-- [Swarm networking](./networking.md) for more information about the default address pool usage
+- [Swarm networking](networking.md) for more information about the default address pool usage
 - `docker swarm init` [CLI reference](../../../reference/cli/docker/swarm/init.md) for more detail on the `--default-addr-pool` flag.
 
 ### Configure the advertise address

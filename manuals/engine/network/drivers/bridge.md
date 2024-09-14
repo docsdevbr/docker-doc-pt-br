@@ -92,8 +92,8 @@ network.**
     compose file can define the shared variables.
 
   - You can use swarm services instead of standalone containers, and take
-    advantage of shared [secrets](../../../manuals/engine/swarm/secrets.md) and
-    [configs](../../../manuals/engine/swarm/configs.md).
+    advantage of shared [secrets](../../swarm/secrets.md) and
+    [configs](../../swarm/configs.md).
 
 Containers connected to the same user-defined bridge network effectively expose all ports
 to each other. For a port to be accessible to containers or non-Docker hosts on
@@ -133,7 +133,7 @@ daemon. The following table shows which options have equivalent flags in the
 The Docker daemon supports a `--bridge` flag, which you can use to define
 your own `docker0` bridge. Use this option if you want to run multiple daemon
 instances on the same host. For details, see
-[Run multiple daemons](../../../reference/cli/dockerd.md#run-multiple-daemons).
+[Run multiple daemons](../../../../reference/cli/dockerd.md#run-multiple-daemons).
 
 ### Default host binding address
 
@@ -167,7 +167,7 @@ $ docker network create my-net
 
 You can specify the subnet, the IP address range, the gateway, and other
 options. See the
-[docker network create](../../../reference/cli/docker/network/create.md#specify-advanced-options)
+[docker network create](../../../../reference/cli/docker/network/create.md#specify-advanced-options)
 reference or the output of `docker network create --help` for details.
 
 Use the `docker network rm` command to remove a user-defined bridge
@@ -312,7 +312,7 @@ configured the IP address for the bridge.
 
 ## Next steps
 
-- Go through the [standalone networking tutorial](../../../manuals/engine/network/tutorials/standalone.md)
+- Go through the [standalone networking tutorial](../tutorials/standalone.md)
 - Learn about [networking from the container's point of view](../index.md)
-- Learn about [overlay networks](./overlay.md)
-- Learn about [Macvlan networks](./macvlan.md)
+- Learn about [overlay networks](overlay.md)
+- Learn about [Macvlan networks](macvlan.md)

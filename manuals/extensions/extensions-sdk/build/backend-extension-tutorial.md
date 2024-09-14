@@ -357,5 +357,5 @@ call displayed.
 
 ## What's next?
 
-- Learn how to [share and publish your extension](../extensions/index.md).
+- Learn how to [share and publish your extension](index.md).
 - Learn more about extensions [architecture](../architecture/index.md).

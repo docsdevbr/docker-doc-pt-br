@@ -32,7 +32,7 @@ $ docker run --rm --network none --name no-net-alpine alpine:latest ip addr show
 
 ## Next steps
 
-- Go through the [host networking tutorial](../../../manuals/engine/network/tutorials/host.md)
+- Go through the [host networking tutorial](../tutorials/host.md)
 - Learn about [networking from the container's point of view](../index.md)
 - Learn about [bridge networks](bridge.md)
 - Learn about [overlay networks](overlay.md)

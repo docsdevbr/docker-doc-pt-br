@@ -37,7 +37,7 @@ Use dashes (`-`) or asterisks (`*`) for bullet points.
           Indentation is super important.
 
           | Header 1 | Header 2 |
-          | -------- | -------- |
+          |----------|----------|
           | Thing 1  | Thing 2  |
           | Thing 3  | Thing 4  |
 

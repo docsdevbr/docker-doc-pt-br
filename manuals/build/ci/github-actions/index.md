@@ -69,7 +69,7 @@ Create a GitHub repository and configure the Docker Hub credentials.
 3. Create a new **Repository variable** named `DOCKERHUB_USERNAME` and your Docker ID as value.
 
 4. Create a new
-   [personal access token](../../../manuals/security/for-developers/access-tokens/index.md#create-an-access-token)
+   [personal access token](../../security/for-developers/access-tokens/index.md#create-an-access-token)
    for Docker Hub. You can name this token `clockboxci`.
 
 5. Add the Docker Hub access token as a **Repository secret** in your GitHub repository, with the name

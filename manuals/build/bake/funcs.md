@@ -105,7 +105,7 @@ $ docker buildx bake --print webapp
 
 ## Variables in functions
 
-You can make references to [variables](./variables) and standard library
+You can make references to [variables](variables) and standard library
 functions inside your functions.
 
 You can't reference user-defined functions from other functions.

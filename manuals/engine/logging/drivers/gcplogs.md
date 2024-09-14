@@ -18,7 +18,7 @@ and `log-opt` keys to appropriate values in the `daemon.json` file, which is
 located in `/etc/docker/` on Linux hosts or
 `C:\ProgramData\docker\config\daemon.json` on Windows Server. For more about
 configuring Docker using `daemon.json`, see
-[daemon.json](../../../reference/cli/dockerd.md#daemon-configuration-file).
+[daemon.json](../../../../reference/cli/dockerd.md#daemon-configuration-file).
 
 The following example sets the log driver to `gcplogs` and sets the
 `gcp-meta-name` option.
@@ -61,17 +61,17 @@ server isn't available. They don't override the values from metadata server.
 You can use the `--log-opt NAME=VALUE` flag to specify these additional Google
 Cloud Logging driver options:
 
-| Option          | Required | Description                                                                                                                                                  |
-| :-------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `gcp-project`   | optional | Which Google Cloud project to log to. Defaults to discovering this value from the Google Cloud metadata server.                                                               |
-| `gcp-log-cmd`   | optional | Whether to log the command that the container was started with. Defaults to false.                                                                           |
-| `labels`        | optional | Comma-separated list of keys of labels, which should be included in message, if these labels are specified for the container.                                |
-| `labels-regex`  | optional | Similar to and compatible with `labels`. A regular expression to match logging-related labels. Used for advanced [log tag options](log_tags.md).             |
-| `env`           | optional | Comma-separated list of keys of environment variables, which should be included in message, if these variables are specified for the container.              |
-| `env-regex`     | optional | Similar to and compatible with `env`. A regular expression to match logging-related environment variables. Used for advanced [log tag options](log_tags.md). |
-| `gcp-meta-zone` | optional | Zone name for the instance.                                                                                                                                  |
-| `gcp-meta-name` | optional | Instance name.                                                                                                                                               |
-| `gcp-meta-id`   | optional | Instance ID.                                                                                                                                                 |
+| Option          | Required | Description                                                                                                                                                     |
+| :-------------- | :------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `gcp-project`   | optional | Which Google Cloud project to log to. Defaults to discovering this value from the Google Cloud metadata server.                                                 |
+| `gcp-log-cmd`   | optional | Whether to log the command that the container was started with. Defaults to false.                                                                              |
+| `labels`        | optional | Comma-separated list of keys of labels, which should be included in message, if these labels are specified for the container.                                   |
+| `labels-regex`  | optional | Similar to and compatible with `labels`. A regular expression to match logging-related labels. Used for advanced [log tag options](../log_tags.md).             |
+| `env`           | optional | Comma-separated list of keys of environment variables, which should be included in message, if these variables are specified for the container.                 |
+| `env-regex`     | optional | Similar to and compatible with `env`. A regular expression to match logging-related environment variables. Used for advanced [log tag options](../log_tags.md). |
+| `gcp-meta-zone` | optional | Zone name for the instance.                                                                                                                                     |
+| `gcp-meta-name` | optional | Instance name.                                                                                                                                                  |
+| `gcp-meta-id`   | optional | Instance ID.                                                                                                                                                    |
 
 If there is collision between `label` and `env` keys, the value of the `env`
 takes precedence. Both options add additional fields to the attributes of a

@@ -75,7 +75,7 @@ networks:
     driver: bridge
 ```
 
-For more information on drivers and available options, see [Network drivers](../../../manuals/engine/network/drivers/index.md).
+For more information on drivers and available options, see [Network drivers](../../manuals/engine/network/drivers/index.md).
 
 ### driver_opts
 
@@ -90,7 +90,7 @@ networks:
       com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
 ```
 
-Consult the [network drivers documentation](../../../manuals/engine/network/index.md) for more information.
+Consult the [network drivers documentation](../../manuals/engine/network/index.md) for more information.
 
 ### attachable
 
@@ -107,7 +107,7 @@ networks:
 
 ### enable_ipv6
 
-`enable_ipv6` enables IPv6 networking. For an example, see step four of [Create an IPv6 network](../../../manuals/engine/daemon/ipv6.md).
+`enable_ipv6` enables IPv6 networking. For an example, see step four of [Create an IPv6 network](../../manuals/engine/daemon/ipv6.md).
 
 ### external
 
@@ -221,4 +221,4 @@ networks:
 
 ## Additional resources
 
-For more examples, see [Networking in Compose](../../../manuals/compose/networking.md).
+For more examples, see [Networking in Compose](../../manuals/compose/networking.md).

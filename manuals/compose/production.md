@@ -23,7 +23,7 @@ production. These changes might include:
 - Binding to different ports on the host
 - Setting environment variables differently, such as reducing the verbosity of
   logging, or to specify settings for external services such as an email server
-- Specifying a restart policy like [`restart: always`](../../../reference/compose-file/services.md#restart)to avoid downtime
+- Specifying a restart policy like [`restart: always`](../../reference/compose-file/services.md#restart)to avoid downtime
 - Adding extra services such as a log aggregator
 
 For this reason, consider defining an additional Compose file, for example
@@ -38,7 +38,7 @@ Once you have a second configuration file, you can use it with the
 $ docker compose -f compose.yml -f production.yml up -d
 ```
 
-See [Using multiple compose files](multiple-compose-files/) for a more complete example, and other options.
+See [Using multiple compose files](multiple-compose-files/index.md) for a more complete example, and other options.
 
 ### Deploying changes
 

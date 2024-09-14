@@ -13,7 +13,7 @@ The following section contains step-by-step instructions on how to get started w
 
 Start by creating a [Docker ID](https://hub.docker.com/signup).
 
-A [Docker ID](/accounts/create-account/index.md) grants you access to Docker Hub repositories and lets you explore available images from the community and verified publishers. You also need a Docker ID to share images on Docker Hub.
+A [Docker ID](../accounts/create-account.md) grants you access to Docker Hub repositories and lets you explore available images from the community and verified publishers. You also need a Docker ID to share images on Docker Hub.
 
 > [!TIP]
 >
@@ -35,7 +35,7 @@ You've created your first repository.
 
 You need to download Docker Desktop to build, push, and pull container images.
 
-1. Download and install [Docker Desktop](../../../manuals/desktop/index.md).
+1. Download and install [Docker Desktop](../desktop/index.md).
 
 2. Sign in to Docker Desktop using the Docker ID you created in step one.
 
@@ -81,7 +81,7 @@ You need to download Docker Desktop to build, push, and pull container images.
 
 ### Step 5: Build and push a container image to Docker Hub from your computer
 
-1. Start by creating a [Dockerfile](../../../reference/dockerfile.md) to specify your application as shown below:
+1. Start by creating a [Dockerfile](../../reference/dockerfile.md) to specify your application as shown below:
 
    ```dockerfile
    # syntax=docker/dockerfile:1
@@ -141,8 +141,8 @@ You've successfully:
 
 ### Next steps
 
-- Create an [organization](orgs.md) to use Docker Hub with your team.
-- Automatically build container images from code through [builds](builds/).
+- Create an [organization](../admin/organization/orgs.md) to use Docker Hub with your team.
+- Automatically build container images from code through [builds](builds/index.md).
 - [Explore](https://hub.docker.com/explore) official & publisher images.
 - [Upgrade your subscription](https://www.docker.com/pricing) to push additional private Docker images to
 Docker Hub.

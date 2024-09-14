@@ -29,7 +29,7 @@ The **Troubleshooting** menu contains the following options:
 
 - **Restart Docker Desktop**.
 
-- **Reset Kubernetes cluster**. Select to delete all stacks and Kubernetes resources. For more information, see [Kubernetes](../../../manuals/desktop/settings.md#kubernetes).
+- **Reset Kubernetes cluster**. Select to delete all stacks and Kubernetes resources. For more information, see [Kubernetes](../settings.md#kubernetes).
 
 - **Clean / Purge data**. This option resets all Docker data without a
 reset to factory defaults. Selecting this option results in the loss of existing settings.
@@ -305,7 +305,7 @@ Desktop at `$HOME/.docker/desktop/log/`.
 
 ## View the Docker daemon logs
 
-Refer to the [Read the daemon logs](../../../manuals/engine/daemon/logs.md) section
+Refer to the [Read the daemon logs](../../engine/daemon/logs.md) section
 to learn how to view the Docker Daemon logs.
 
 ## Further resources

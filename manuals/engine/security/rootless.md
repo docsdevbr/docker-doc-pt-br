@@ -171,7 +171,7 @@ testuser:231072:65536
 {{< tabs >}}
 {{< tab name="With packages (RPM/DEB)" >}}
 
-If you installed Docker 20.10 or later with [RPM/DEB packages](../../../manuals/engine/install), you should have `dockerd-rootless-setuptool.sh` in `/usr/bin`.
+If you installed Docker 20.10 or later with [RPM/DEB packages](../install), you should have `dockerd-rootless-setuptool.sh` in `/usr/bin`.
 
 Run `dockerd-rootless-setuptool.sh install` as a non-root user to set up the daemon:
 
@@ -380,7 +380,7 @@ Or add `net.ipv4.ip_unprivileged_port_start=0` to `/etc/sysctl.conf` (or
 
 Limiting resources with cgroup-related `docker run` flags such as `--cpus`, `--memory`, `--pids-limit`
 is supported only when running with cgroup v2 and systemd.
-See [Changing cgroup version](../../../manuals/engine/containers/runmetrics.md) to enable cgroup v2.
+See [Changing cgroup version](../containers/runmetrics.md) to enable cgroup v2.
 
 If `docker info` shows `none` as `Cgroup Driver`, the conditions are not satisfied.
 When these conditions are not satisfied, rootless mode ignores the cgroup-related `docker run` flags.

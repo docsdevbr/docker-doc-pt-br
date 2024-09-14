@@ -10,8 +10,8 @@ aliases:
 
 This series of tutorials deals with networking for swarm services.
 For networking with standalone containers, see
-[Networking with standalone containers](../../../manuals/engine/network/tutorials/standalone.md). If you need to
-learn more about Docker networking in general, see the [overview](../../../manuals/engine/network/index.md).
+[Networking with standalone containers](tutorials/standalone.md). If you need to
+learn more about Docker networking in general, see the [overview](index.md).
 
 This page includes the following tutorials. You can run each of them on
 Linux, Windows, or a Mac, but for the last one, you need a second Docker
@@ -60,7 +60,7 @@ If you don't have three hosts handy, an easy solution is to set up three
 Ubuntu hosts on a cloud provider such as Amazon EC2, all on the same network
 with all communications allowed to all hosts on that network (using a mechanism
 such as EC2 security groups), and then to follow the
-[installation instructions for Docker Engine - Community on Ubuntu](../../../manuals/engine/install/ubuntu.md).
+[installation instructions for Docker Engine - Community on Ubuntu](../install/ubuntu.md).
 
 ### Walkthrough
 
@@ -437,6 +437,6 @@ example also uses Linux hosts, but the same commands work on Windows.
 
 ## Other networking tutorials
 
-- [Host networking tutorial](../../../manuals/engine/network/tutorials/host.md)
-- [Standalone networking tutorial](../../../manuals/engine/network/tutorials/standalone.md)
-- [Macvlan networking tutorial](../../../manuals/engine/network/tutorials/macvlan.md)
+- [Host networking tutorial](tutorials/host.md)
+- [Standalone networking tutorial](tutorials/standalone.md)
+- [Macvlan networking tutorial](tutorials/macvlan.md)

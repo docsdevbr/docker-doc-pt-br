@@ -16,7 +16,7 @@ manually by a user. This makes it easier to automatically start Docker when the
 machine reboots.
 
 The command to start Docker depends on your operating system. Check the correct
-page under [Install Docker](../../../manuals/engine/install/index.md).
+page under [Install Docker](../install/index.md).
 
 ### Start with systemd
 
@@ -28,7 +28,7 @@ $ sudo systemctl start docker
 ```
 
 If you want Docker to start at boot, see
-[Configure Docker to start on boot](../../../manuals/engine/install/linux-postinstall.md#configure-docker-to-start-on-boot-with-systemd).
+[Configure Docker to start on boot](../install/linux-postinstall.md#configure-docker-to-start-on-boot-with-systemd).
 
 ## Start the daemon manually
 

@@ -128,7 +128,7 @@ You can verify that the extension has been properly installed by typing
 `@docker` in the Copilot Chat window. As you type, you should see the Docker
 agent appear in the chat interface.
 
-![Docker agent in chat](/copilot/docker-agent-copilot.png)
+![Docker agent in chat](docker-agent-copilot.png)
 
 ## Using the extension
 
@@ -155,7 +155,7 @@ To use the extension in the GitHub web interface:
 2. Go to any repository.
 3. Select the Copilot logo in the site menu to open the chat interface.
 
-   ![Copilot chat button](/copilot/copilot-button.png?w=400px)
+   ![Copilot chat button](copilot-button.png?w=400px)
 
 4. Interact with the Docker agent by tagging `@docker`.
 
@@ -187,7 +187,7 @@ Before the agent performs any actions on your behalf, such as opening a pull
 request for you, you're prompted to provide your consent to allow the
 operation. You can always roll back or back out of the changes.
 
-![Copilot action prompt](/copilot/copilot-action-prompt.png?w=400px)
+![Copilot action prompt](copilot-action-prompt.png?w=400px)
 
 In the event that the agent encounters an error, for example during PR
 creation, it handles timeouts and lack of responses gracefully.

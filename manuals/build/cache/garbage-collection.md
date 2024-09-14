@@ -18,7 +18,7 @@ parameters by defining garbage collection policies.
 
 ## Configuration
 
-Depending on the [driver](../builders/drivers/) used by your builder instance,
+Depending on the [driver](../builders/drivers/index.md) used by your builder instance,
 the garbage collection will use a different configuration file.
 
 If you're using the [`docker` driver](../builders/drivers/docker.md), garbage collection

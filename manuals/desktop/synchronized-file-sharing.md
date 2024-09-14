@@ -25,7 +25,7 @@ Synchronized file shares is ideal for developers who:
 
 A Synchronized file share behaves just like a virtual file share, but takes advantage of a high-performance, low-latency code synchronization engine to create a synchronized cache of the host files on an ext4 filesystem within the Docker Desktop VM. If you make filesystem changes on the host or in the VM’s containers, it propagates via bidirectional synchronization.
 
-After creating a file share instance, any container using a bind mount that points to a location on the host filesystem matching the specified synchronized file share location, or a subdirectory within it,  utilizes the Synchronized File Shares feature. Bind mounts that don't satisfy this condition are passed to the normal virtual filesystem [bind-mounting mechanism](../../../manuals/engine/storage/bind-mounts.md), for example VirtioFS or gRPC-FUSE.
+After creating a file share instance, any container using a bind mount that points to a location on the host filesystem matching the specified synchronized file share location, or a subdirectory within it,  utilizes the Synchronized File Shares feature. Bind mounts that don't satisfy this condition are passed to the normal virtual filesystem [bind-mounting mechanism](../engine/storage/bind-mounts.md), for example VirtioFS or gRPC-FUSE.
 
 > [!NOTE]
 >
@@ -49,7 +49,7 @@ When the status indicator displays **Watching for filesystem changes**, your fil
 
 >**Note**
 >
-> When you create a new service, setting the [bind mount option consistency](../../../reference/cli/docker/service/create.md#options-for-bind-mounts) to `:consistent` bypasses Synchronized file shares.
+> When you create a new service, setting the [bind mount option consistency](../../reference/cli/docker/service/create.md#options-for-bind-mounts) to `:consistent` bypasses Synchronized file shares.
 
 > [!TIP]
 >
@@ -90,7 +90,7 @@ In general, use your `.syncignore` file to exclude items that aren't critical to
 
 - If you switch from WSL2 to Hyper-V on Windows, Docker Desktop needs to be fully restarted.
 
-- POSIX-style Windows paths are not supported. Avoid setting the [`COMPOSE_CONVERT_WINDOWS_PATHS`](../../../manuals/compose/environment-variables/envvars.md#compose_convert_windows_paths) environment variable in Docker Compose.
+- POSIX-style Windows paths are not supported. Avoid setting the [`COMPOSE_CONVERT_WINDOWS_PATHS`](../compose/environment-variables/envvars.md#compose_convert_windows_paths) environment variable in Docker Compose.
 
 ## Feedback and support
 

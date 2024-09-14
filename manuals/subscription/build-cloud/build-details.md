@@ -12,7 +12,7 @@ You can enhance your teams' builds with a Build Cloud subscription. This page de
 
 ## Docker Build Cloud Starter
 
-If you have an existing [Docker Core subscription](/subscription/core-subscription/details/index.md), a base level of Build Cloud minutes and cache are included. The features available vary depending on your Docker Core subscription tier.
+If you have an existing [Docker Core subscription](../core-subscription/details.md), a base level of Build Cloud minutes and cache are included. The features available vary depending on your Docker Core subscription tier.
 
 ### Docker Personal
 
@@ -46,13 +46,13 @@ You can buy Docker Build Cloud Team if you don’t have a Docker Core subscripti
 - Increased shared cache
 
 The Docker Build Cloud Team subscription is tied to a Docker
-[organization](../../../manuals/admin/organization/index.md). To use the build minutes or
+[organization](../../admin/organization/index.md). To use the build minutes or
 shared cache of a Docker Build Cloud Team subscription, users must be a part of
 the organization associated with the subscription. See Manage seats and invites.
 
-To learn how to buy this subscription for your Docker organization, see [Buy your subscription - existing account or organization](../../../manuals/billing/build-billing.md#existing-account-or-organization).
+To learn how to buy this subscription for your Docker organization, see [Buy your subscription - existing account or organization](../../billing/build-billing.md#existing-account-or-organization).
 
-If you haven’t created a Docker organization yet and don’t have an existing Docker Core subscription, see [Buy your subscription - new organization](../../../manuals/billing/build-billing.md#new-organization). For organizations without a Docker Core subscription, this plan also includes 50 shared minutes in addition to the Docker Build Cloud Team minutes.
+If you haven’t created a Docker organization yet and don’t have an existing Docker Core subscription, see [Buy your subscription - new organization](../../billing/build-billing.md#new-organization). For organizations without a Docker Core subscription, this plan also includes 50 shared minutes in addition to the Docker Build Cloud Team minutes.
 
 ## Docker Build Cloud Enterprise
 

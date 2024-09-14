@@ -18,7 +18,7 @@ and vulnerabilities.
 
 Docker Desktop first analyzes images locally, where it generates a software bill of materials (SBOM).
 Docker Desktop, Docker Hub, and the Docker Scout Dashboard and CLI all use the [package URL (PURL) links](https://github.com/package-url/purl-spec)
-in this SBOM to query for matching Common Vulnerabilities and Exposures (CVEs) in [Docker Scout's advisory database](../../../manuals/scout/deep-dive/advisory-db-sources.md).
+in this SBOM to query for matching Common Vulnerabilities and Exposures (CVEs) in [Docker Scout's advisory database](../deep-dive/advisory-db-sources.md).
 
 ## Image hierarchy
 

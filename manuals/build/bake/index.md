@@ -60,4 +60,4 @@ targets concurrently.
 
 ## Get started
 
-To learn how to get started with Bake, head over to the [Bake introduction](./introduction.md).
+To learn how to get started with Bake, head over to the [Bake introduction](introduction.md).

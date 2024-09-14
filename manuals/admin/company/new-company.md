@@ -48,7 +48,7 @@ To create a new company:
 
 5. Review the company migration details and then select **Create company**.
 
-For more information on how you can add organizations to your company, see [Add organizations to a company](./organizations.md#add-organizations-to-a-company).
+For more information on how you can add organizations to your company, see [Add organizations to a company](organizations.md#add-organizations-to-a-company).
 
 {{< /tab >}}
 
@@ -56,9 +56,9 @@ For more information on how you can add organizations to your company, see [Add 
 
 ## Next steps
 
-- [Manage organizations](./organizations.md)
-- [Manage company users](./users.md)
-- [Manage company owners](./owners.md)
+- [Manage organizations](organizations.md)
+- [Manage company users](users.md)
+- [Manage company owners](owners.md)
 
 ## More resources
 

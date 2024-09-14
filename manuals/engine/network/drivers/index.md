@@ -41,7 +41,7 @@ exist by default, and provide core networking functionality:
   `none` is not available for Swarm services.
   See [None network driver](none.md).
 
-- [Network plugins](../../../manuals/engine/extend/plugins_network/index.md): You can install and use
+- [Network plugins](../../extend/plugins_network.md): You can install and use
   third-party network plugins with Docker.
 
 ### Network driver summary
@@ -71,7 +71,7 @@ exist by default, and provide core networking functionality:
 Now that you understand the basics about Docker networks, deepen your
 understanding using the following tutorials:
 
-- [Standalone networking tutorial](../../../manuals/engine/network/tutorials/standalone.md)
-- [Host networking tutorial](../../../manuals/engine/network/tutorials/host.md)
-- [Overlay networking tutorial](../../../manuals/engine/network/tutorials/overlay.md)
-- [Macvlan networking tutorial](../../../manuals/engine/network/tutorials/macvlan.md)
+- [Standalone networking tutorial](../tutorials/standalone.md)
+- [Host networking tutorial](../tutorials/host.md)
+- [Overlay networking tutorial](../tutorials/overlay.md)
+- [Macvlan networking tutorial](../tutorials/macvlan.md)

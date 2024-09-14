@@ -20,7 +20,7 @@ FROM debian
 
 For most cases, you don't need to create your own base image. Docker Hub
 contains a vast library of Docker images that are suitable for use as a base
-image in your build. [Docker Official Images](../../trusted-content/official-images/)
+image in your build. [Docker Official Images](../../trusted-content/official-images/index.md)
 are specifically designed as a set of hardened, battle-tested images that
 support a wide variety of platforms, languages, and frameworks. There are also
 [Docker Verified Publisher](https://hub.docker.com/search?q=&image_filter=store)
@@ -63,7 +63,7 @@ ADD hello /
 CMD ["/hello"]
 ```
 
-Assuming an executable binary named `hello` exists at the root of the [build context](../../../manuals/build/concepts/context.md).
+Assuming an executable binary named `hello` exists at the root of the [build context](../concepts/context.md).
 You can build this Docker image using the following `docker build` command:
 
 ```console
@@ -122,5 +122,5 @@ There are more example scripts for creating base images in
 For more information about building images and writing Dockerfiles, see:
 
 * [Dockerfile reference](../../../reference/dockerfile.md)
-* [Dockerfile best practices](../../../manuals/build/building/best-practices.md)
-* [Docker Official Images](../../trusted-content/official-images/)
+* [Dockerfile best practices](best-practices.md)
+* [Docker Official Images](../../trusted-content/official-images/index.md)

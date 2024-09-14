@@ -14,7 +14,7 @@ Compose V2, which was first released in 2020, is included with all currently sup
 
 ## How do I switch to Compose V2?
 
-The easiest and recommended way is to make sure you have the latest version of [Docker Desktop](../../../manuals/desktop/release-notes.md), which bundles the Docker Engine and Docker CLI platform including Compose V2.
+The easiest and recommended way is to make sure you have the latest version of [Docker Desktop](../desktop/release-notes.md), which bundles the Docker Engine and Docker CLI platform including Compose V2.
 
 With Docker Desktop, Compose V2 is always accessible as `docker compose`.
 Additionally, the **Use Compose V2** setting is turned on by default, which provides an alias from `docker-compose`.
@@ -78,7 +78,7 @@ The following behave differently between Compose V1 and V2:
 
 Environment variable behavior in Compose V1 wasn't formally documented and behaved inconsistently in some edge cases.
 
-For Compose V2, the [Environment variables](../../../manuals/compose/environment-variables/index.md) section covers both [precedence](../../../manuals/compose/environment-variables/envvars-precedence) as well as [`.env` file interpolation](environment-variables/variable-interpolation.md) and includes many examples covering tricky situations such as escaping nested quotes.
+For Compose V2, the [Environment variables](environment-variables/index.md) section covers both [precedence](environment-variables/envvars-precedence.md) as well as [`.env` file interpolation](environment-variables/variable-interpolation.md) and includes many examples covering tricky situations such as escaping nested quotes.
 
 Check if:
 - Your project uses multiple levels of environment variable overrides, for example `.env` file and `--env` CLI flags.

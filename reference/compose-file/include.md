@@ -119,4 +119,4 @@ override values for customization.
 
 ## Additional resources
 
-For more information on using `include`, see [Working with multiple Compose files](../../../manuals/compose/multiple-compose-files/index.md)
+For more information on using `include`, see [Working with multiple Compose files](../../manuals/compose/multiple-compose-files/index.md)

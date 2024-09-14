@@ -7,7 +7,7 @@ weight: 30
 ---
 
 The **Volumes** view in Docker Dashboard lets you create, delete, and perform
-other actions on your [volumes](../../../manuals/engine/storage/volumes.md). You can also see
+other actions on your [volumes](../../engine/storage/volumes.md). You can also see
 which volumes are being used as well as inspect the files and folders in your
 volumes.
 
@@ -36,7 +36,7 @@ doing the following:
 ## Create a volume
 
 You use the following steps to create an empty volume. Alternatively, if you
-[start a container with a volume](../../../manuals/engine/storage/volumes.md#start-a-container-with-a-volume)
+[start a container with a volume](../../engine/storage/volumes.md#start-a-container-with-a-volume)
 that doesn't yet exist, Docker creates the volume for you.
 
 To create a volume:
@@ -45,7 +45,7 @@ To create a volume:
 2. In the **New Volume** modal, specify a volume name, and then select
    **Create**.
 
-To use the volume with a container, see [Use volumes](../../../manuals/engine/storage/volumes.md#start-a-container-with-a-volume).
+To use the volume with a container, see [Use volumes](../../engine/storage/volumes.md#start-a-container-with-a-volume).
 
 ## Inspect a volume
 
@@ -247,4 +247,4 @@ To import a volume:
 ## Additional resources
 
 - [Persisting container data](/get-started/docker-concepts/running-containers/persisting-container-data.md)
-- [Use volumes](../../../manuals/engine/storage/volumes.md)
+- [Use volumes](../../engine/storage/volumes.md)

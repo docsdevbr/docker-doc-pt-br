@@ -25,7 +25,7 @@ $ docker buildx create --name=<builder-name>
 
 Buildx uses the `docker-container` driver by default if you omit the `--driver`
 flag. For more information about available drivers, see
-[Build drivers](drivers/).
+[Build drivers](drivers/index.md).
 
 ## List available builders
 
@@ -122,5 +122,5 @@ It only removes your connection to the builder.
 ## Manage builders with Docker Desktop
 
 If you have turned on the
-[Docker Desktop Builds view](../../../manuals/desktop/use-desktop/builds.md),
-you can inspect builders in [Docker Desktop settings](../../../manuals/desktop/settings.md#builders).
+[Docker Desktop Builds view](../../desktop/use-desktop/builds.md),
+you can inspect builders in [Docker Desktop settings](../../desktop/settings.md#builders).

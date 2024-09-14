@@ -14,7 +14,7 @@ The downside of inline cache is that it doesn't scale with multi-stage builds
 as well as the other drivers do. It also doesn't offer separation between your
 output artifacts and your cache output. This means that if you're using a
 particularly complex build flow, or not exporting your images directly to a
-registry, then you may want to consider the [registry](./registry.md) cache.
+registry, then you may want to consider the [registry](registry.md) cache.
 
 ## Synopsis
 

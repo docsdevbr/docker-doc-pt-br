@@ -7,7 +7,7 @@ keywords: autobuilds, automated, docker hub, registry
 > [!NOTE]
 >
 > Automated builds require a
-> [Docker Pro, Team, or Business subscription](../../subscription/).
+> [Docker Pro, Team, or Business subscription](../../subscription/index.md).
 
 ## Cancel or retry a build
 
@@ -38,7 +38,7 @@ repository and branch, or tag, the build logs, the build duration, creation time
 > refresh the **Builds** page. With the in-progress build logs, you can debug your
 > builds before they're finished.
 
-![Build report](/docker-hub/images/index-report.png)
+![Build report](../images/index-report.png)
 
 ## Disable an automated build
 

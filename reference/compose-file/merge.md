@@ -220,5 +220,5 @@ If `!override` had not been used, both `8080:80` and `8443:443` would be exposed
 
 ## Additional resources
 
-For more information on how merge can be used to create a composite Compose file, see [Working with multiple Compose files](../../../manuals/compose/multiple-compose-files/index.md)
+For more information on how merge can be used to create a composite Compose file, see [Working with multiple Compose files](../../manuals/compose/multiple-compose-files/index.md)
 

@@ -7,7 +7,7 @@ aliases:
 - /scout/sbom/
 ---
 
-[Image analysis](../../../manuals/scout/explore/analysis.md) uses image SBOMs to understand what packages and versions an image contains.
+[Image analysis](../explore/analysis.md) uses image SBOMs to understand what packages and versions an image contains.
 Docker Scout uses SBOM attestations if available on the image (recommended).
 If no SBOM attestation is available, Docker Scout creates one by indexing the image contents.
 
@@ -62,7 +62,7 @@ reference](../../../reference/cli/docker/scout/sbom.md).
 ## Attach as build attestation {#attest}
 
 You can generate the SBOM and attach it to the image at build-time as an
-[attestation](../../../manuals/build/metadata/attestations/index.md). BuildKit provides a default
+[attestation](../../build/metadata/attestations/index.md). BuildKit provides a default
 SBOM generator which is different from what Docker Scout uses.
 You can configure BuildKit to use the Docker Scout SBOM generator
 using the `--attest` flag for the `docker build` command.
@@ -76,7 +76,7 @@ $ docker build --tag <org>/<image> \
 ```
 
 To build images with SBOM attestations, you must use either the [containerd
-image store](../../../manuals/desktop/containerd.md) feature, or use a `docker-container`
+image store](../../desktop/containerd.md) feature, or use a `docker-container`
 builder together with the `--push` flag to push the image (with attestations)
 directly to a registry. The classic image store doesn't support manifest lists
 or image indices, which is required for adding attestations to an image.

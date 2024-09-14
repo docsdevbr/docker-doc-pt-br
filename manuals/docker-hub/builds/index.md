@@ -12,7 +12,7 @@ aliases:
 > [!NOTE]
 >
 > Automated builds require a
-> [Docker Pro, Team, or Business subscription](../../subscription/).
+> [Docker Pro, Team, or Business subscription](../../subscription/index.md).
 
 This page contains information on:
 - [Configuring Automated builds](#configure-automated-builds)
@@ -69,7 +69,7 @@ when the tests succeed.
 
 9. For each branch or tag, enable or disable the **Build Caching** toggle.
 
-    [Build caching](../../../manuals/build/building/best-practices.md#leverage-build-cache)
+    [Build caching](../../build/building/best-practices.md#leverage-build-cache)
     can save time if you are building a large image frequently or have
     many dependencies. Leave the build caching disabled to
     make sure all of your dependencies are resolved at build time, or if
@@ -227,7 +227,7 @@ sources. For example, you might have
 
 Autobuilds use the BuildKit build system by default. If you want to use the legacy
 Docker build system, add the [environment variable](index.md#environment-variables-for-builds)
-`DOCKER_BUILDKIT=0`. Refer to the [BuildKit](../../../manuals/build/buildkit/index.md)
+`DOCKER_BUILDKIT=0`. Refer to the [BuildKit](../../build/buildkit/index.md)
 page for more information on BuildKit.
 
 ## Autobuild for teams

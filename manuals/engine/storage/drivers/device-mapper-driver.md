@@ -8,7 +8,7 @@ aliases:
 
 > **Deprecated**
 >
-> The Device Mapper driver [has been deprecated](../../../manuals/engine/deprecated.md#device-mapper-storage-driver),
+> The Device Mapper driver [has been deprecated](../../deprecated.md#device-mapper-storage-driver),
 > and is removed in Docker Engine v25.0. If you are using Device Mapper,
 > you must migrate to a supported storage driver before upgrading to Docker
 > Engine v25.0. Read the [Docker storage drivers](select-storage-driver.md)
@@ -79,7 +79,7 @@ For production systems, see
     ```
 
     See all storage options for each storage driver in the
-    [daemon reference documentation](../../../reference/cli/dockerd/index.md#options-per-storage-driver)
+    [daemon reference documentation](../../../../reference/cli/dockerd.md#options-per-storage-driver)
 
     Docker does not start if the `daemon.json` file contains badly-formed JSON.
 
@@ -186,7 +186,7 @@ options in the table above.
 ```
 
 See all storage options for each storage driver in the
-[daemon reference documentation](../../../reference/cli/dockerd/index.md#options-per-storage-driver)
+[daemon reference documentation](../../../../reference/cli/dockerd.md#options-per-storage-driver)
 
 Restart Docker for the changes to take effect. Docker invokes the commands to
 configure the block device for you.
@@ -439,7 +439,7 @@ If you run into repeated problems with thin pool, you can set the storage option
 `/etc/docker/daemon.json`. For instance, setting it to `10` ensures
 that operations fail with a warning when the free space is at or near 10%.
 See the
-[storage driver options in the Engine daemon reference](../../../reference/cli/dockerd/index.md#daemon-storage-driver).
+[storage driver options in the Engine daemon reference](../../../../reference/cli/dockerd.md#daemon-storage-driver).
 
 ### Increase capacity on a running device
 
@@ -836,7 +836,7 @@ storage driver.
   by default `/var/lib/docker`.  If your containers generate lots of log messages,
   this may lead to increased disk usage or the inability to manage your system due
   to a full disk.  You can configure a
-  [log driver](../../../manuals/engine/logging/configure.md) to store your container
+  [log driver](../../logging/configure.md) to store your container
   logs externally.
 
 ## Related Information

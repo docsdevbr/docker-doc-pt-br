@@ -42,7 +42,7 @@ run. The build record archive is a ZIP file containing the details about a build
 (or builds, if you use `docker/bake-action` to build multiple targets). You can
 import this build record archive into Docker Desktop, which gives you a
 powerful, graphical interface for further analyzing the build's performance via
-the [Docker Desktop **Builds** view](../../../manuals/desktop/use-desktop/builds.md).
+the [Docker Desktop **Builds** view](../../desktop/use-desktop/builds.md).
 
 To import the build record archive into Docker Desktop:
 
@@ -104,7 +104,7 @@ contain a link to download the build record archive.
 
 Build summaries are currently not supported for:
 
-- Builds using [Docker Build Cloud](../../../manuals/build-cloud/index.md). Support for Docker
+- Builds using [Docker Build Cloud](../../build-cloud/index.md). Support for Docker
   Build Cloud is planned for a future release.
 - Repositories hosted on GitHub Enterprise Servers. Summaries can only be
   viewed for repositories hosted on GitHub.com.

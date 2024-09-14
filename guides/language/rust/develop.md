@@ -291,7 +291,7 @@ In the cloned repository's directory, create a new directory named `db` and insi
 mysecretpassword
 ```
 
-If you have any other containers running from the previous sections, [stop](./run-containers.md#stop-start-and-name-containers) them now.
+If you have any other containers running from the previous sections, [stop](run-containers.md#stop-start-and-name-containers) them now.
 
 Now, run the following `docker compose up` command to start your application.
 

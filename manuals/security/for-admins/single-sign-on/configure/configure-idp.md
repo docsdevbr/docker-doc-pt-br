@@ -6,10 +6,10 @@ title: Configure your IdP
 
 The steps to set up your SSO configuration are:
 
-1. [Add and verify the domain or domains](../../../manuals/security/for-admins/single-sign-on/configure#step-one-add-and-verify-your-domain) that your members use to sign in to Docker.
-2. [Create your SSO connection](../../../manuals/security/for-admins/single-sign-on/configure#step-two-create-an-sso-connection-in-docker) in Docker.
+1. [Add and verify the domain or domains](../configure/index.md#step-one-add-and-verify-your-domain) that your members use to sign in to Docker.
+2. [Create your SSO connection](../configure/index.md#step-two-create-an-sso-connection-in-docker) in Docker.
 3. [Configure your IdP](#step-three-configure-your-idp-to-work-with-docker) to work with Docker.
-4. [Complete your SSO connection](../../../manuals/security/for-admins/single-sign-on/connect/index.md) in Docker.
+4. [Complete your SSO connection](../connect/index.md) in Docker.
 
 This page walks through step 3 for common IdPs.
 
@@ -42,7 +42,7 @@ If you use SAML for your SSO connection, Docker obtains these attributes from th
 
 > [!TIP]
 >
-> Optional Just-in-Time (JIT) provisioning is available when you use the Admin Console and enable SCIM. With this feature, you can avoid conflicts between SCIM and JIT by disabling JIT provisioning in your SSO connection. See [SSO authentication with JIT provisioning disabled](../../../manuals/security/for-admins/provisioning/just-in-time/index.md#sso-authentication-with-jit-provisioning-disabled).
+> Optional Just-in-Time (JIT) provisioning is available when you use the Admin Console and enable SCIM. With this feature, you can avoid conflicts between SCIM and JIT by disabling JIT provisioning in your SSO connection. See [SSO authentication with JIT provisioning disabled](../../provisioning/just-in-time.md#sso-authentication-with-jit-provisioning-disabled).
 
 You can also configure attributes to override default values, such as default team or organization. See [role mapping](../../provisioning/scim.md#set-up-role-mapping).
 
@@ -174,4 +174,4 @@ The following videos demonstrate how to configure your IdP with your Docker SSO 
 
 ## What's next?
 
-[Complete your connection](../connect/) in the Docker console, then test your connection.
+[Complete your connection](../connect/index.md) in the Docker console, then test your connection.

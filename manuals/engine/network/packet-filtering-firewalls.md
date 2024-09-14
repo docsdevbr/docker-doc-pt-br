@@ -20,9 +20,9 @@ containers or other services running on your host. This page describes how
 to achieve that, and the caveats you need to be aware of.
 
 > [!NOTE]
-> 
+>
 > Docker creates `iptables` rules for bridge networks.
-> 
+>
 > No `iptables` rules are created for `ipvlan`, `macvlan` or `host` networking.
 
 ## Docker and iptables chains
@@ -177,7 +177,7 @@ Then:
   outgoing packets will use the container's IP address.
 - For IPv4, using the default `nat` mode, the container's port 80 will be
   accessible via port 8080 on the host's IP addresses, as well as directly.
-  Connections originating from the container will masquerade, using the 
+  Connections originating from the container will masquerade, using the
   host's IP address.
 
 In `docker inspect`, this port mapping will be shown as follows. Note that
@@ -221,7 +221,7 @@ configure the daemon to use the loopback address (`127.0.0.1`) instead.
 
 To configure this setting for user-defined bridge networks, use
 the `com.docker.network.bridge.host_binding_ipv4`
-[driver option](./drivers/bridge.md#options) when you create the network.
+[driver option](drivers/bridge.md#options) when you create the network.
 
 ```console
 $ docker network create mybridge \

@@ -43,7 +43,7 @@ configuration and a single set of layers. Multi-platform images contain a
 manifest list, pointing to multiple manifests, each of which points to a
 different configuration and set of layers.
 
-![Multi-platform image structure](../../../manuals/build/images/single-vs-multiplatform-image.svg)
+![Multi-platform image structure](../images/single-vs-multiplatform-image.svg)
 
 When you push a multi-platform image to a registry, the registry stores the
 manifest list and all the individual manifests. When you pull the image, the
@@ -232,7 +232,7 @@ $ docker build \
   --push .
 ```
 
-For more information, see [Docker Build Cloud](../../../manuals/build-cloud/index.md).
+For more information, see [Docker Build Cloud](../../build-cloud/index.md).
 
 ### Cross-compilation
 
@@ -322,7 +322,7 @@ do CPU-intensive tasks like compilation.
 
 Prerequisites:
 
-- You've [signed up for Docker Build Cloud and created a builder](../../../manuals/build-cloud/setup.md)
+- You've [signed up for Docker Build Cloud and created a builder](../../build-cloud/setup.md)
 
 Steps:
 

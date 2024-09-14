@@ -30,4 +30,4 @@ Our products focus on inclusive growth and are continuously useful and adapt to 
 ## What's next?
 
 - Take a look at our [UI styling guidelines](index.md).
-- Learn how to [publish your extension](../extensions/).
+- Learn how to [publish your extension](index.md).

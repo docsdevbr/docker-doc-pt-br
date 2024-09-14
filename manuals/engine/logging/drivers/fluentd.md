@@ -36,7 +36,7 @@ To use the `fluentd` driver as the default logging driver, set the `log-driver`
 and `log-opt` keys to appropriate values in the `daemon.json` file, which is
 located in `/etc/docker/` on Linux hosts or
 `C:\ProgramData\docker\config\daemon.json` on Windows Server. For more about
-configuring Docker using `daemon.json`, see [daemon.json](../../../reference/cli/dockerd.md#daemon-configuration-file).
+configuring Docker using `daemon.json`, see [daemon.json](../../../../reference/cli/dockerd.md#daemon-configuration-file).
 
 The following example sets the log driver to `fluentd` and sets the
 `fluentd-address` option.
@@ -97,7 +97,7 @@ Two of the above specify the same address, because `tcp` is default.
 ### tag
 
 By default, Docker uses the first 12 characters of the container ID to tag log messages.
-Refer to the [log tag option documentation](log_tags.md) for customizing
+Refer to the [log tag option documentation](../log_tags.md) for customizing
 the log tag format.
 
 ### labels, labels-regex, env, and env-regex
@@ -110,7 +110,7 @@ logging message.
 The `env-regex` and `labels-regex` options are similar to and compatible with
 respectively `env` and `labels`. Their values are regular expressions to match
 logging-related environment variables and labels. It is used for advanced
-[log tag options](log_tags.md).
+[log tag options](../log_tags.md).
 
 ### fluentd-async
 

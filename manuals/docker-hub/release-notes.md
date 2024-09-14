@@ -19,7 +19,7 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ### New
 
- - You can tag Docker Hub repositories with [categories](./repos/categories.md).
+ - You can tag Docker Hub repositories with [categories](repos/categories.md).
 
 ## 2023-12-11
 
@@ -37,25 +37,25 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ## 2023-08-28
 
-- Organizations with SSO enabled can assign members to roles, organizations, and teams with [SCIM role mapping](scim.md#set-up-role-mapping).
+- Organizations with SSO enabled can assign members to roles, organizations, and teams with [SCIM role mapping](../security/for-admins/provisioning/scim.md#set-up-role-mapping).
 
 ## 2023-07-26
 
 ### New
 
-- Organizations can assign the [editor role](roles-and-permissions.md) to members to grant additional permissions without full administrative access.
+- Organizations can assign the [editor role](../security/for-admins/roles-and-permissions.md) to members to grant additional permissions without full administrative access.
 
 ## 2023-05-09
 
 ### New
 
-- Docker Business subscribers can now [create a company](new-company.md) in Docker Hub to manage organizations and settings.
+- Docker Business subscribers can now [create a company](../admin/company/new-company.md) in Docker Hub to manage organizations and settings.
 
 ## 2023-03-07
 
 ### New
 
--  You can now automatically sync user updates with your Docker organizations and teams with [Group Mapping](group-mapping.md) for SSO and SCIM provisioning.
+-  You can now automatically sync user updates with your Docker organizations and teams with [Group Mapping](../security/for-admins/provisioning/group-mapping.md) for SSO and SCIM provisioning.
 
 ## 2022-12-12
 
@@ -68,19 +68,19 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ### New
 
-- The new [autobuild feature](../docker-hub/builds/manage-builds.md#check-your-active-builds) lets you view your in-progress logs every 30 seconds instead of when the build is complete.
+- The new [autobuild feature](builds/manage-builds.md#check-your-active-builds) lets you view your in-progress logs every 30 seconds instead of when the build is complete.
 
 ## 2022-09-21
 
 ### Bug fixes and enhancements
 
-- In Docker Hub, you can now download a [registry.json](../security/for-admins/enforce-sign-in/) file or copy the commands to create a registry.json file to enforce sign-in for your organization.
+- In Docker Hub, you can now download a [registry.json](../security/for-admins/enforce-sign-in/index.md) file or copy the commands to create a registry.json file to enforce sign-in for your organization.
 
 ## 2022-09-19
 
 ### Bug fixes and enhancements
 
-- You can now [export a CSV file of members](../admin/organization//members.md#export-members) from organizations that you own.
+- You can now [export a CSV file of members](../admin/organization/members.md#export-members) from organizations that you own.
 
 ## 2022-07-22
 
@@ -98,19 +98,19 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ### New
 
-- With [SCIM](scim.md), you can manage users within your Okta identity provider (IdP). In addition, you can enable SCIM on organizations that are part of the Docker Business subscription.
+- With [SCIM](../security/for-admins/provisioning/scim.md), you can manage users within your Okta identity provider (IdP). In addition, you can enable SCIM on organizations that are part of the Docker Business subscription.
 
 ## 2022-05-24
 
 ### New
 
-- [Registry Access Management](../../../manuals/security/for-admins/hardened-desktop/registry-access-management.md) is now available for all Docker Business subscriptions. When enabled, your users can access specific registries in Docker Hub.
+- [Registry Access Management](../security/for-admins/hardened-desktop/registry-access-management.md) is now available for all Docker Business subscriptions. When enabled, your users can access specific registries in Docker Hub.
 
 ## 2022-05-03
 
 ### New
 
-- Organization owners can [invite new members](members.md#invite-members) to an organization via Docker ID or email address.
+- Organization owners can [invite new members](../admin/organization/members.md#invite-members) to an organization via Docker ID or email address.
 
 ## 2021-11-15
 
@@ -133,7 +133,7 @@ The updated [Docker Subscription Service Agreement](https://www.docker.com/legal
 - The existing Docker Free subscription has been renamed **Docker Personal**.
 - **No changes** to Docker Engine or any other upstream **open source** Docker or Moby project.
 
-    To understand how these changes affect you, read the [FAQs](https://www.docker.com/pricing/faq). For more information, see [Docker subscription overview](../subscription/).
+    To understand how these changes affect you, read the [FAQs](https://www.docker.com/pricing/faq). For more information, see [Docker subscription overview](../subscription/index.md).
 
 ## 2021-05-05
 
@@ -141,7 +141,7 @@ The updated [Docker Subscription Service Agreement](https://www.docker.com/legal
 
 When managing the content of your repositories, you can now filter the results based on the currentness of the tags and more easily identify your untagged images.
 
-For Docker Hub API documentation, see [Docker Hub API Reference](../../../reference/api/hub/latest.md#operation/GetNamespacesRepositoriesImages).
+For Docker Hub API documentation, see [Docker Hub API Reference](../../reference/api/hub/latest.md#operation/GetNamespacesRepositoriesImages).
 
 ## 2021-04-13
 
@@ -157,7 +157,7 @@ You can now specify any email address to receive billing-related emails for your
 
 To change the email address receiving billing-related emails, log into Docker Hub and navigate to the **Billing** tab of your organization. Select **Payment Methods** > **Billing Information**. Enter the new email address that you'd like to use in the **Email** field. Click **Update** for the changes to take effect.
 
-For details on how to update your billing information, see [Update billing information](../billing/).
+For details on how to update your billing information, see [Update billing information](../billing/index.md).
 
 ## 2021-03-22
 
@@ -179,7 +179,7 @@ For more information about this feature and for instructions on how to use it, s
 
 ### New feature
 
-The **Repositories** view now shows which images have gone stale because they haven't been pulled or pushed recently. For more information, see [repository tags](repos/access/index.md#view-repository-tags).
+The **Repositories** view now shows which images have gone stale because they haven't been pulled or pushed recently. For more information, see [repository tags](repos/access.md#view-repository-tags).
 
 ## 2020-10-07
 
@@ -191,7 +191,7 @@ Docker introduces Hub Vulnerability Scanning which enables you to automatically 
 
 ### New features
 
-* Docker has announced a new, per-seat pricing model to accelerate developer workflows for cloud-native development. The previous private repository/concurrent autobuild-based plans have been replaced with new **Pro** and **Team** plans that include unlimited private repositories. For more information, see [Docker subscription](../subscription/).
+* Docker has announced a new, per-seat pricing model to accelerate developer workflows for cloud-native development. The previous private repository/concurrent autobuild-based plans have been replaced with new **Pro** and **Team** plans that include unlimited private repositories. For more information, see [Docker subscription](../subscription/index.md).
 
 * Docker has enabled download rate limits for downloads and pull requests on Docker Hub. This caps the number of objects that users can download within a specified timeframe. For more information, see [Download rate limit](download-rate-limit.md).
 
@@ -199,7 +199,7 @@ Docker introduces Hub Vulnerability Scanning which enables you to automatically 
 
 ### Enhancements
 
-* The [repositories page](repos/) and all
+* The [repositories page](repos/index.md) and all
 related settings and tabs have been updated and moved from `cloud.docker.com`
 to `hub.docker.com`. You can access the page at its new URL: [https://hub.docker.com/repositories](https://hub.docker.com/repositories).
 
@@ -254,7 +254,7 @@ Each organization page now breaks down into these tabs:
 
 ### New features
 
-* You can now [create personal access tokens](access-tokens.md) in Docker Hub and use them to authenticate from the Docker CLI. Find them in your account settings, under the new **[Security](https://hub.docker.com/settings/security)** section.
+* You can now [create personal access tokens](../security/for-developers/access-tokens.md) in Docker Hub and use them to authenticate from the Docker CLI. Find them in your account settings, under the new **[Security](https://hub.docker.com/settings/security)** section.
 
 ### Known Issues
 

@@ -46,7 +46,7 @@ syntax for `-p` is `HOST_PORT:CLIENT_PORT`.
 
 ### HTTP/HTTPS Proxy support
 
-See [Proxies](../../../manuals/desktop/settings.md#proxies)
+See [Proxies](settings.md#proxies)
 
 ### SOCKS5 proxy support
 
@@ -179,8 +179,8 @@ container to random ports on the host.
 $ docker run -d -P --name webserver nginx
 ```
 
-Alternatively, you can also use [host networking](../../../manuals/engine/network/drivers/host.md#docker-desktop)
+Alternatively, you can also use [host networking](../engine/network/drivers/host.md#docker-desktop)
 to give the container direct access to the network stack of the host.
 
-See the [run command](../../../reference/cli/docker/container/run.md) for more details on
+See the [run command](../../reference/cli/docker/container/run.md) for more details on
 publish options used with `docker run`.

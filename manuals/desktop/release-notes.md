@@ -60,13 +60,13 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ### New
 
-- [Host networking](../../../manuals/engine/network/drivers/host.md#docker-desktop) support on Docker Desktop is now generally available.
+- [Host networking](../engine/network/drivers/host.md#docker-desktop) support on Docker Desktop is now generally available.
 - If you authenticate via the CLI, you can now authenticate through a browser-based flow, removing the need for manual PAT generation.
-- Windows now supports automatic reclamation of disk space in Docker Desktop for WSL2 installations [using a managed virtual hard disk](../../../manuals/desktop/wsl/best-practices.md).
-- Deploying Docker Desktop via the [MSI installer](../../../manuals/desktop/install/msi/index.md) is now generally available.
-- Two new methods to [enforce sign-in](../../../manuals/security/for-admins/enforce-sign-in/index.md) (windows registry key and `.plist` file) are now generally available.
+- Windows now supports automatic reclamation of disk space in Docker Desktop for WSL2 installations [using a managed virtual hard disk](wsl/best-practices.md).
+- Deploying Docker Desktop via the [MSI installer](install/msi/index.md) is now generally available.
+- Two new methods to [enforce sign-in](../security/for-admins/enforce-sign-in/index.md) (windows registry key and `.plist` file) are now generally available.
 - Fresh installations of Docker Desktop now use the containerd image store by default.
-- [Compose Bridge](../../../manuals/compose/bridge/index.md) (Experimental) is now available from the Compose file viewer. Easily convert and deploy your Compose project to a Kubernetes cluster.
+- [Compose Bridge](../compose/bridge/index.md) (Experimental) is now available from the Compose file viewer. Easily convert and deploy your Compose project to a Kubernetes cluster.
 
 ### Upgrades
 
@@ -111,8 +111,8 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
   > [!NOTE]
   > Using `docker login` with an address that includes URL path segments is not a documented use case and is considered unsupported. The recommended usage is to specify only a registry hostname, and optionally a port, as the address for `docker login`.
 - When running `docker compose up` and Docker Desktop is in the Resource Saver mode, the command is unresponsive. As a workaround, manually exit the Resource Saving mode and Docker Compose becomes responsive again.
-- When [Enhanced Container Isolation (ECI)](../../../manuals/security/for-admins/hardened-desktop/enhanced-container-isolation/index.md) is enabled, Docker Desktop may not enter Resource Saver mode. This will be fixed in a future Docker Desktop release.
-- The new [ECI Docker socket mount permissions for derived images](../../../manuals/security/for-admins/hardened-desktop/enhanced-container-isolation/config.md#docker-socket-mount-permissions-for-derived-images) feature does not yet work when Docker Desktop is configured with the  **Use containerd for pulling and storing images**. This will be fixed in the next Docker Desktop release.
+- When [Enhanced Container Isolation (ECI)](../security/for-admins/hardened-desktop/enhanced-container-isolation/index.md) is enabled, Docker Desktop may not enter Resource Saver mode. This will be fixed in a future Docker Desktop release.
+- The new [ECI Docker socket mount permissions for derived images](../security/for-admins/hardened-desktop/enhanced-container-isolation/config.md#docker-socket-mount-permissions-for-derived-images) feature does not yet work when Docker Desktop is configured with the  **Use containerd for pulling and storing images**. This will be fixed in the next Docker Desktop release.
 
 ## 4.33.1
 
@@ -134,7 +134,7 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ### New
 
-- [Docker Debug](../../../reference/cli/docker/debug.md) is now generally available.
+- [Docker Debug](../../reference/cli/docker/debug.md) is now generally available.
 - BuildKit now evaluates Dockerfile rules to inform you of potential issues.
 - **Resource Allocation** settings can now be accessed directly from the resource usage data displayed in the Dashboard footer.
 
@@ -163,7 +163,7 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 - Docker Desktop now notifies when there is a port conflict in a host networking container.
 - Compose Bridge command line option is now available via Experimental features. When enabled, run `compose-bridge` to convert your Compose configuration to Kubernetes resources.
 - Builds view:
-  - Added [build checks](../../../manuals/build/checks.md) to the build details' **Source** tab.
+  - Added [build checks](../build/checks.md) to the build details' **Source** tab.
   - Added build tags to the build details' **Info** tab under the **Source details** section.
   - Newly imported builds are now highlighted.
   - Improved performance of error message handling.
@@ -226,7 +226,7 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 
 - Improved instructions for `watch` in the Compose File Viewer
 - Added support for Golang projects that don't have dependencies in Docker Init. Addresses [docker/roadmap#611](https://github.com/docker/roadmap/issues/611)
-- [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/index.md) now lets admins set the default value to `ProxyEnableKerberosNTLM`.
+- [Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md) now lets admins set the default value to `ProxyEnableKerberosNTLM`.
 - Removed a temporary compatibility fix for older versions of Visual Studio Code.
 - Builds view:
   - Changed icon for imported build record to a "files" icon.
@@ -244,7 +244,7 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 #### For Windows
 
 - Fixed an issue on the WSL 2 engine where Docker Desktop would not detect the existence of the `docker-desktop-data` distribution if it had been manually moved by the user.
-- The Windows on ARM installer and the [privileged service](../../../manuals/desktop/install/windows-permission-requirements.md#privileged-helper) are now built for ARM64.
+- The Windows on ARM installer and the [privileged service](install/windows-permission-requirements.md#privileged-helper) are now built for ARM64.
 
 #### For Mac
 
@@ -289,7 +289,7 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 
 ### New
 
-- [Air-Gapped Containers](../../../manuals/security/for-admins/hardened-desktop/air-gapped-containers.md) is now generally available.
+- [Air-Gapped Containers](../security/for-admins/hardened-desktop/air-gapped-containers.md) is now generally available.
 - Docker Compose File Viewer shows your Compose YAML with syntax highlighting and contextual links to relevant docs (Beta, progressive rollout).
 - New Sidebar user experience.
 
@@ -313,12 +313,12 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 - Added `proxyEnableKerberosNTLM` config to `settings.json` to enable fallback to basic proxy authentication if Kerberos/NTLM environment is not properly set up.
 - Fixed a bug where Docker Debug was not working properly with Enhanced Container Isolation enabled.
 - Fixed a bug where UDP responses were not truncated properly.
-- Fixed a bug where the **Update** screen was hidden when using [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/index.md).
+- Fixed a bug where the **Update** screen was hidden when using [Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md).
 - Fixed a bug where proxy settings defined in `admin-settings.json` were not applied correctly on startup.
 - Fixed a bug where the **Manage Synchronized file shares with Compose** toggle did not correctly reflect the value with the feature.
 - Fixed a bug where a bind mounted file modified on host is not updated after the container restarts, when gRPC FUSE file sharing is used on macOS and on Windows with Hyper-V. Fixes [docker/for-mac#7274](https://github.com/docker/for-mac/issues/7274), [docker/for-win#14060](https://github.com/docker/for-win/issues/14060).
 - Builds view:
-  - New [Import builds](use-desktop/builds.md#import-builds) feature that lets you import build records for builds by other people, or [builds in a CI environment](../../../manuals/build/ci/github-actions/build-summary.md).
+  - New [Import builds](use-desktop/builds.md#import-builds) feature that lets you import build records for builds by other people, or [builds in a CI environment](../build/ci/github-actions/build-summary.md).
   - Fixed missing OpenTelemetry traces in build results for failed builds.
   - Fixed `default-load` appearing as invalid driver-opt for the container driver.
   - Fixed deep link to build details.
@@ -378,17 +378,17 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 #### For all platforms
 
 - Docker Desktop now supports [SOCKS5 proxies](networking.md#socks5-proxy-support). Requires a Business subscription.
-- Added a new setting to manage the onboarding survey in [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/index.md).
+- Added a new setting to manage the onboarding survey in [Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md).
 
 #### For Windows
 
-- Added support for [Kerberos and NTLM proxy authentication](../../../manuals/desktop/settings.md#proxy-authentication) on Windows. Requires a Business subscription.
+- Added support for [Kerberos and NTLM proxy authentication](settings.md#proxy-authentication) on Windows. Requires a Business subscription.
 
 ### Upgrades
 
 - [Docker Compose v2.27.0](https://github.com/docker/compose/releases/tag/v2.27.0)
 - [Docker Engine v26.1.1](https://docs.docker.com/engine/release-notes/26.1/#2611)
-- [Wasm](../../../manuals/desktop/wasm/index.md) runtimes:
+- [Wasm](wasm.md) runtimes:
   - Updated `runwasi` shims to `v0.4.0`
   - Updated `deislabs` shims to `v0.11.1`
   - Updated `spin` shim to `v0.13.1`
@@ -457,15 +457,15 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- You can now enforce Rosetta usage via [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/configure.md).
-- [Docker socket mount restrictions](../../../manuals/security/for-admins/hardened-desktop/enhanced-container-isolation/config.md) with ECI is now generally available.
+- You can now enforce Rosetta usage via [Settings Management](../security/for-admins/hardened-desktop/settings-management/configure.md).
+- [Docker socket mount restrictions](../security/for-admins/hardened-desktop/enhanced-container-isolation/config.md) with ECI is now generally available.
 - Docker Engine and CLI updated to [Moby 26.0](https://github.com/moby/moby/releases/tag/v26.0.0). This includes Buildkit 0.13, sub volumes mounts, networking updates, and improvements to the containerd multi-platform image store UX.
 - New and improved Docker Desktop error screens: swift troubleshooting, easy diagnostics uploads, and actionable remediation.
 - Compose supports [Synchronized file shares (experimental)](synchronized-file-sharing.md).
-- New [interactive Compose CLI (experimental)](../../../manuals/compose/environment-variables/envvars.md#compose_menu).
+- New [interactive Compose CLI (experimental)](../compose/environment-variables/envvars.md#compose_menu).
 - Beta release of:
-  - Air-Gapped Containers with [Settings Management](../../../manuals/security/for-admins/hardened-desktop/air-gapped-containers/index.md).
-  - [Host networking](../../../manuals/engine/network/drivers/host.md#docker-desktop) in Docker Desktop.
+  - Air-Gapped Containers with [Settings Management](../security/for-admins/hardened-desktop/air-gapped-containers.md).
+  - [Host networking](../engine/network/drivers/host.md#docker-desktop) in Docker Desktop.
   - [Docker Debug](use-desktop/container.md#integrated-terminal) for running containers.
   - [Volumes Backup & Share extension](use-desktop/volumes.md) functionality available in the **Volumes** tab.
 
@@ -537,7 +537,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/index.md) now allows admins to set the default file-sharing implementation and specify which paths developer can add file shares to.
+- [Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md) now allows admins to set the default file-sharing implementation and specify which paths developer can add file shares to.
 - Added support for `socks5://` HTTP and HTTPS proxy URLs when the [`SOCKS` proxy support beta feature](networking.md) is enabled.
 - Users can now filter volumes to see which ones are in use in the **Volumes** tab.
 
@@ -547,7 +547,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 - [Docker Engine v25.0.3](https://docs.docker.com/engine/release-notes/25.0/#2503)
 - [Docker Scout CLI v1.5.0](https://github.com/docker/scout-cli/releases/tag/v1.5.0)
 - [Qemu 8.1.5](https://wiki.qemu.org/ChangeLog/8.1)
-- [Wasm](../../../manuals/desktop/wasm/index.md) runtimes:
+- [Wasm](wasm.md) runtimes:
   - Updated runwasi shims to `v0.4.0`, including:
     - wasmtime `v17.0`, with initial support for WASI preview 2
     - wasmedge `v0.13.5`
@@ -662,10 +662,10 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 - Docker init now supports Java and is generally available to all users.
 - [Synchronized File Shares](synchronized-file-sharing.md) provides fast and flexible host-to-VM file sharing within Docker Desktop. Utilizing the technology behind [Docker’s acquisition of Mutagen](https://www.docker.com/blog/mutagen-acquisition/), this feature provides an alternative to virtual bind mounts that uses synchronized filesystem caches, improving performance for developers working with large codebases.
-- Organization admins can now [configure Docker socket mount permissions](../../../manuals/security/for-admins/hardened-desktop/enhanced-container-isolation/config.md) when ECI is enabled.
+- Organization admins can now [configure Docker socket mount permissions](../security/for-admins/hardened-desktop/enhanced-container-isolation/config.md) when ECI is enabled.
 - [Containerd Image Store](containerd.md) support is now generally available to all users.
-- Get a debug shell into any container or image with the new [`docker debug` command](../../../reference/cli/docker/debug.md) (Beta).
-- Organization admins, with a Docker Business subscription, can now configure a custom list of extensions with [Private Extensions Marketplace](../../../manuals/extensions/private-marketplace.md) enabled (Beta)
+- Get a debug shell into any container or image with the new [`docker debug` command](../../reference/cli/docker/debug.md) (Beta).
+- Organization admins, with a Docker Business subscription, can now configure a custom list of extensions with [Private Extensions Marketplace](../extensions/private-marketplace.md) enabled (Beta)
 
 ### Upgrades
 
@@ -683,7 +683,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 #### For all platforms
 
-- The `docker scan` command has been removed. To continue learning about the vulnerabilities of your images, and many other features, use the [`docker scout` command](../../../reference/cli/docker/scout/index.md).
+- The `docker scan` command has been removed. To continue learning about the vulnerabilities of your images, and many other features, use the [`docker scout` command](../../reference/cli/docker/scout/index.md).
 - Fixed a bug where automatic updates would not download when the **Always download updates** checkbox was selected.
 - Fixed typo in the dashboard tooltip. Fixes [docker/for-mac#7132](https://github.com/docker/for-mac/issues/7132)
 - Improved signal handling behavior (e.g. when pressing Ctrl-C in the terminal while running a `docker` command).
@@ -767,7 +767,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- Administrators can now control access to beta and experimental features in the **Features in development** tab with [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/configure.md).
+- Administrators can now control access to beta and experimental features in the **Features in development** tab with [Settings Management](../security/for-admins/hardened-desktop/settings-management/configure.md).
 - Introduced four new version update states in the footer.
 - `docker init` (Beta) now supports PHP with Apache + Composer.
 - The [**Builds** view](use-desktop/builds.md) is now GA. You can now inspect builds, troubleshoot errors, and optimize build speed.
@@ -777,7 +777,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 - [Compose v2.23.3](https://github.com/docker/compose/releases/tag/v2.23.3)
 - [Docker Scout CLI v1.2.0](https://github.com/docker/scout-cli/releases/tag/v1.2.0).
 - [Buildx v0.12.0](https://github.com/docker/buildx/releases/tag/v0.12.0)
-- [Wasm](../../../manuals/desktop/wasm/index.md) runtimes:
+- [Wasm](wasm.md) runtimes:
   - wasmtime, wasmedge and wasmer `v0.3.1`.
   - lunatic, slight, spin, and wws `v0.10.0`.
   - Wasmtime is now based on wasmtime `v14.0` and supports wasi preview-2 components
@@ -880,10 +880,10 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- Rosetta is now Generally Available for all users on macOS 13 or later. It provides faster emulation of Intel-based images on Apple Silicon. To use Rosetta, see [Settings](../../../manuals/desktop/settings.md). Rosetta is enabled by default on macOS 14.1 and later.
+- Rosetta is now Generally Available for all users on macOS 13 or later. It provides faster emulation of Intel-based images on Apple Silicon. To use Rosetta, see [Settings](settings.md). Rosetta is enabled by default on macOS 14.1 and later.
 - Docker Desktop now detects if a WSL version is out of date. If an out dated version of WSL is detected, you can allow Docker Desktop to automatically update the installation or you can manually update WSL outside of Docker Desktop.
 - New installations of Docker Desktop for Windows now require a Windows version of 19044 or later.
-- Administrators now have the ability to control Docker Scout image analysis  in [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/configure.md).
+- Administrators now have the ability to control Docker Scout image analysis  in [Settings Management](../security/for-admins/hardened-desktop/settings-management/configure.md).
 
 ### Upgrades
 
@@ -941,7 +941,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 #### For Windows
 
-- **Switch to Windows containers** option in the tray menu may not show up on Windows. As a workaround, edit the [`settings.json` file](../../../manuals/desktop/settings.md) and set `"displaySwitchWinLinContainers": true`.
+- **Switch to Windows containers** option in the tray menu may not show up on Windows. As a workaround, edit the [`settings.json` file](settings.md) and set `"displaySwitchWinLinContainers": true`.
 
 #### For all platforms
 
@@ -981,7 +981,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 ### New
 
 - The new Notification center is now available to all users so you can be notified of new releases, installation progress updates, and more. Select the bell icon in the bottom-right corner of the Docker Dashboard to access the notification center.
-- Compose Watch is now available to all users. For more information, see [Use Compose Watch](../../../manuals/compose/file-watch.md).
+- Compose Watch is now available to all users. For more information, see [Use Compose Watch](../compose/file-watch.md).
 - Resource Saver is now available to all users and is enabled by default. To configure this feature, navigate to the **Resources** tab in **Settings**. For more information see [Docker Desktop's Resource Saver mode](use-desktop/resource-saver.md).
 - You can now view and manage the Docker Engine state, with pause, stop, and resume, directly from the Docker Dashboard.
 
@@ -989,7 +989,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 - [Compose v2.22.0](https://github.com/docker/compose/releases/tag/v2.22.0)
 - [Go 1.21.1](https://github.com/golang/go/releases/tag/go1.21.1)
-- [Wasm](../../../manuals/desktop/wasm.md) runtimes:
+- [Wasm](wasm.md) runtimes:
   - wasmtime, wasmedge `v0.2.0`.
   - lunatic, slight, spin, and wws`v0.9.1`.
   - Added wasmer wasm shims.
@@ -1050,25 +1050,25 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 - [Compose v2.21.0](https://github.com/docker/compose/releases/tag/v2.21.0)
 - [Docker Engine v24.0.6](https://docs.docker.com/engine/release-notes/24.0/#2406)
 - [Docker Scout CLI v0.24.1](https://github.com/docker/scout-cli/releases/tag/v0.24.1).
-- [Wasm](../../../manuals/desktop/wasm.md) runtimes:
+- [Wasm](wasm.md) runtimes:
   - wasmtime, wasmedge revision `d0a1a1cd`.
   - slight and spin wasm `v0.9.0`.
 
 ### New
 
 - Added support for new Wasm runtimes: wws and lunatic.
-- [`docker init`](../../../reference/cli/docker/init.md) now supports ASP.NET
+- [`docker init`](../../reference/cli/docker/init.md) now supports ASP.NET
 - Increased performance of exposed ports on macOS, for example with `docker run -p`.
 
 ### Removed
 
-- Removed Compose V1 from Docker Desktop as it has stopped receiving updates.  Compose V2 has replaced it and is now integrated into all current Docker Desktop versions. For more information, see [Migrate to Compose V2](../../../manuals/compose/migrate.md).
+- Removed Compose V1 from Docker Desktop as it has stopped receiving updates.  Compose V2 has replaced it and is now integrated into all current Docker Desktop versions. For more information, see [Migrate to Compose V2](../compose/migrate.md).
 
 ### Bug fixes and enhancements
 
 #### For all platforms
 
-- With [Docker Scout](../scout/), you can now:
+- With [Docker Scout](../scout/index.md), you can now:
   - Manage temporary and cached files with `docker scout cache`.
   - Manage environments with `docker scout environment`.
   - Configure the default organization with `docker scout config`.
@@ -1144,18 +1144,18 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 ### New
 
 - [Resource Usage](use-desktop/container.md) has moved from experimental to GA.
-- You can now split large Compose projects into multiple sub-projects with [`include`](../../../manuals/compose/multiple-compose-files/include.md).
+- You can now split large Compose projects into multiple sub-projects with [`include`](../compose/multiple-compose-files/include.md).
 
 ### Bug fixes and enhancements
 
 #### For all platforms
 
-- [Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/index.md) now lets you turn off Docker Extensions for your organisation.
+- [Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md) now lets you turn off Docker Extensions for your organisation.
 - Fixed a bug where turning on Kubernetes from the UI failed when the system was paused.
 - Fixed a bug where turning on Wasm from the UI failed when the system was paused.
 - Bind mounts are now shown when you [inspect a container](use-desktop/container.md).
 - You can now download Wasm runtimes when the containerd image store is enabled.
-- With [Quick Search](../../../manuals/desktop/use-desktop/index.md#quick-search), you can now:
+- With [Quick Search](use-desktop/index.md#quick-search), you can now:
   - Find any container or Compose app residing on your local system. In
     addition, you can access environment variables and perform essential actions
     such as starting, stopping, or deleting containers.
@@ -1169,13 +1169,13 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 #### For Mac
 
 - Fixed a bug that prevented Docker Desktop from starting. [docker/for-mac#6890](https://github.com/docker/for-mac/issues/6890)
-- Resource Saver is now available on Mac. It optimises Docker Desktop's usage of your system resources when no containers are running. To access this feature, make sure you have [turned on access to experimental features](../../../manuals/desktop/settings.md) in settings.
+- Resource Saver is now available on Mac. It optimises Docker Desktop's usage of your system resources when no containers are running. To access this feature, make sure you have [turned on access to experimental features](settings.md) in settings.
 
 #### For Windows
 
 - Fixed a bug where the self-diagnose tool showed a false-positive failure when vpnkit is expected to be not running. Fixes [docker/for-win#13479](https://github.com/docker/for-win/issues/13479).
 - Fixed a bug where an invalid regular expression in the search bar caused an error. Fixes [docker/for-win#13592](https://github.com/docker/for-win/issues/13592).
-- Resource Saver is now available on Windows Hyper-V. It optimises Docker Desktop's usage of your system resources when no containers are running. To access this feature, make sure you have [turned on access to experimental features](../../../manuals/desktop/settings.md) in settings.
+- Resource Saver is now available on Windows Hyper-V. It optimises Docker Desktop's usage of your system resources when no containers are running. To access this feature, make sure you have [turned on access to experimental features](settings.md) in settings.
 
 ## 4.21.1
 
@@ -1287,7 +1287,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 - Fixed a bug that meant WSL data could not be moved to a different disk. Fixes [docker/for-win#13269](https://github.com/docker/for-win/issues/13269).
 - Fixed a bug where Docker Desktop was not stopping its WSL distros (docker-desktop and docker-desktop-data) when it was shutdown, consuming host memory unnecessarily.
-- Added a new setting that allows the Windows Docker daemon to use Docker Desktop's internal proxy when running Windows containers. See [Windows proxy settings](../../../manuals/desktop/settings.md#proxies).
+- Added a new setting that allows the Windows Docker daemon to use Docker Desktop's internal proxy when running Windows containers. See [Windows proxy settings](settings.md#proxies).
 
 #### For Linux
 
@@ -1308,7 +1308,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### Removed
 
-- Removed `docker scan` command. To continue learning about the vulnerabilities of your images, and many other features, use the new `docker scout` command. Run `docker scout --help`, or [read the docs to learn more](../../../reference/cli/docker/scout/index.md).
+- Removed `docker scan` command. To continue learning about the vulnerabilities of your images, and many other features, use the new `docker scout` command. Run `docker scout --help`, or [read the docs to learn more](../../reference/cli/docker/scout/index.md).
 
 ### Upgrades
 
@@ -1327,7 +1327,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 - Added more details to dashboard errors when a `docker-compose` action fails ([docker/for-win#13378](https://github.com/docker/for-win/issues/13378)).
 - Added support for setting HTTP proxy configuration during installation. This can be done via the `--proxy-http-mode`, `--overrider-proxy-http`, `--override-proxy-https` and `--override-proxy-exclude` installer flags in the case of installation from the CLI on [Mac](install/mac-install.md#install-from-the-command-line) and [Windows](install/windows-install.md#install-from-the-command-line), or alternatively by setting the values in the `install-settings.json` file.
 - Docker Desktop now stops overriding .docker/config.json `credsStore` keys on application start. Note that if you use a custom credential helper then the CLI `docker login` and `docker logout` does not affect whether the UI is signed in to Docker or not. In general, it is better to sign into Docker via the UI since the UI supports multi-factor authentication.
-- Added a warning about the [forthcoming removal of Compose V1 from Docker Desktop](../../../manuals/compose/migrate.md). Can be suppressed with `COMPOSE_V1_EOL_SILENT=1`.
+- Added a warning about the [forthcoming removal of Compose V1 from Docker Desktop](../compose/migrate.md). Can be suppressed with `COMPOSE_V1_EOL_SILENT=1`.
 - In the Compose config, boolean fields in YAML should be either `true` or `false`. Deprecated YAML 1.1 values such as “on” or “no” now produce a warning.
 - Improved UI for image table, allowing rows to use more available space.
 - Fixed various bugs in port-forwarding.
@@ -1451,9 +1451,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- Docker Desktop now ships with Docker Scout. Pull and view analysis for images from Docker Hub and Artifactory repositories, get base image updates and recommended tags and digests, and filter your images on vulnerability information. To learn more, see [Docker Scout](../scout/).
+- Docker Desktop now ships with Docker Scout. Pull and view analysis for images from Docker Hub and Artifactory repositories, get base image updates and recommended tags and digests, and filter your images on vulnerability information. To learn more, see [Docker Scout](../scout/index.md).
 - `docker scan` has been replaced by `docker scout`. See [Docker Scout CLI](../scout/index.md#docker-scout-cli), for more information.
-- You can now discover extensions that have been autonomously published in the Extensions Marketplace. For more information on self-published extensions, see [Marketplace Extensions](../../../manuals/extensions/marketplace.md).
+- You can now discover extensions that have been autonomously published in the Extensions Marketplace. For more information on self-published extensions, see [Marketplace Extensions](../extensions/marketplace.md).
 - **Container File Explorer** is available as an experimental feature. Debug the filesystem within your containers straight from the GUI.
 - You can now search for volumes in **Global Search**.
 
@@ -1634,7 +1634,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 - Substantial performance improvements for macOS users with the option of enabling the new VirtioFS file sharing technology. Available for macOS 12.5 and above.
 - Docker Desktop for Mac no longer needs to install the privileged helper process `com.docker.vmnetd` on install or on the first run. For more information see [Permission requirements for Mac](https://docs.docker.com/desktop/mac/permission-requirements/).
-- Added [WebAssembly capabilities](wasm/). Use with the [containerd integration](containerd/).
+- Added [WebAssembly capabilities](wasm.md). Use with the [containerd integration](containerd.md).
 - Improved the descriptions for beta and experimental settings to clearly explain the differences and how people can access them.
 - Available disk space of VM now displays in the footer of Docker Dashboard for Mac and Linux.
 - A disk space warning now displays in the footer if available space is below 3GB.
@@ -1704,7 +1704,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### Updates
 
-- [Docker Engine v20.10.21](../../../manuals/engine/release-notes/20.10.md#201021),
+- [Docker Engine v20.10.21](../engine/release-notes/20.10.md#201021),
   which contains mitigations against a Git vulnerability, tracked in [CVE-2022-39253](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39253),
   and updates the handling of `image:tag@digest` image references.
 - [Docker Compose v2.12.2](https://github.com/docker/compose/releases/tag/v2.12.2)
@@ -1782,7 +1782,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- Two new security features have been introduced for Docker Business users, Settings Management and Enhanced Container Isolation. Read more about Docker Desktop’s new [Hardened Docker Desktop security model](../../../manuals/security/for-admins/hardened-desktop/index.md).
+- Two new security features have been introduced for Docker Business users, Settings Management and Enhanced Container Isolation. Read more about Docker Desktop’s new [Hardened Docker Desktop security model](../security/for-admins/hardened-desktop/index.md).
 - Added the new Dev Environments CLI `docker dev`, so you can create, list, and run Dev Envs via command line. Now it's easier to integrate Dev Envs into custom scripts.
 - Docker Desktop can now be installed to any drive and folder using the `--installation-dir`. Partially addresses [docker/roadmap#94](https://github.com/docker/roadmap/issues/94).
 
@@ -1790,7 +1790,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 - [Docker Scan v0.21.0](https://github.com/docker/scan-cli-plugin/releases/tag/v0.21.0)
 - [Go 1.19.2](https://github.com/golang/go/releases/tag/go1.19.2) to address [CVE-2022-2879](https://www.cve.org/CVERecord?id=CVE-2022-2879), [CVE-2022-2880](https://www.cve.org/CVERecord?id=CVE-2022-2880) and [CVE-2022-41715](https://www.cve.org/CVERecord?id=CVE-2022-41715)
-- Updated Docker Engine and Docker CLI to [v20.10.20](../../../manuals/engine/release-notes/20.10.md#201020),
+- Updated Docker Engine and Docker CLI to [v20.10.20](../engine/release-notes/20.10.md#201020),
   which contain mitigations against a Git vulnerability, tracked in [CVE-2022-39253](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39253),
   and updated handling of `image:tag@digest` image references, as well as a fix for [CVE-2022-36109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36109).
 - [Docker Credential Helpers v0.7.0](https://github.com/docker/docker-credential-helpers/releases/tag/v0.7.0)
@@ -1888,7 +1888,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 - Compose V2 is now enabled after factory reset.
 - Compose V2 is now enabled by default on new installations of Docker Desktop.
-- Precedence order of environment variables in Compose is more consistent, and clearly [documented](../../../manuals/compose/environment-variables/envvars-precedence.md).
+- Precedence order of environment variables in Compose is more consistent, and clearly [documented](../compose/environment-variables/envvars-precedence.md).
 - Upgraded kernel to 5.10.124.
 - Improved overall performance issues caused by calculating disk size. Related to [docker/for-win#9401](https://github.com/docker/for-win/issues/9401).
 - Docker Desktop now prevents users on ARM macs without Rosetta installed from switching back to Compose V1, which has only intel binaries.
@@ -1939,7 +1939,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- Docker Desktop is now fully supported for Docker Business customers inside VMware ESXi and Azure VMs. For more information, see [Run Docker Desktop inside a VM or VDI environment](../../../manuals/desktop/vm-vdi.md)
+- Docker Desktop is now fully supported for Docker Business customers inside VMware ESXi and Azure VMs. For more information, see [Run Docker Desktop inside a VM or VDI environment](vm-vdi.md)
 - Added two new extensions ([vcluster](https://hub.docker.com/extensions/loftsh/vcluster-dd-extension) and [PGAdmin4](https://hub.docker.com/extensions/mochoa/pgadmin4-docker-extension)) to the Extensions Marketplace.
 - The ability to sort extensions has been added to the Extensions Marketplace.
 - Fixed a bug that caused some users to be asked for feedback too frequently. You'll now only be asked for feedback twice a year.
@@ -2020,7 +2020,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### Updates
 
-- [Docker Engine v20.10.17](../../../manuals/engine/release-notes/20.10.md#201017)
+- [Docker Engine v20.10.17](../engine/release-notes/20.10.md#201017)
 - [Docker Compose v2.6.1](https://github.com/docker/compose/releases/tag/v2.6.1)
 - [Kubernetes v1.24.1](https://github.com/kubernetes/kubernetes/releases/tag/v1.24.1)
 - [cri-dockerd to v0.2.1](https://github.com/Mirantis/cri-dockerd/releases/tag/v0.2.1)
@@ -2101,7 +2101,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 ### Updates
 
 - [Compose v2.6.0](https://github.com/docker/compose/releases/tag/v2.6.0)
-- [Docker Engine v20.10.16](../../../manuals/engine/release-notes/20.10.md#201016)
+- [Docker Engine v20.10.16](../engine/release-notes/20.10.md#201016)
 - [containerd v1.6.4](https://github.com/containerd/containerd/releases/tag/v1.6.4)
 - [runc v1.1.1](https://github.com/opencontainers/runc/releases/tag/v1.1.1)
 - [Go 1.18.2](https://github.com/golang/go/releases/tag/go1.18.2)
@@ -2157,8 +2157,8 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- Released [Docker Desktop for Linux](../../../manuals/desktop/install/linux/index.md).
-- Beta release of [Docker Extensions](../../../manuals/extensions/index.md) and Extensions SDK.
+- Released [Docker Desktop for Linux](install/linux/index.md).
+- Beta release of [Docker Extensions](../extensions/index.md) and Extensions SDK.
 - Created a Docker Homepage where you can run popular images and discover how to use them.
 - [Compose V2 is now GA](https://www.docker.com/blog/announcing-compose-v2-general-availability/)
 
@@ -2178,8 +2178,8 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### New
 
-- Released [Docker Desktop for Linux](../../../manuals/desktop/install/linux/index.md).
-- Beta release of [Docker Extensions](../../../manuals/extensions/index.md) and Extensions SDK.
+- Released [Docker Desktop for Linux](install/linux/index.md).
+- Beta release of [Docker Extensions](../extensions/index.md) and Extensions SDK.
 - Created a Docker Homepage where you can run popular images and discover how to use them.
 - [Compose V2 is now GA](https://www.docker.com/blog/announcing-compose-v2-general-availability/)
 
@@ -2259,7 +2259,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ### Updates
 
-- [Docker Engine v20.10.14](../../../manuals/engine/release-notes/20.10.md#201014)
+- [Docker Engine v20.10.14](../engine/release-notes/20.10.md#201014)
 - [Compose v2.4.1](https://github.com/docker/compose/releases/tag/v2.4.1)
 - [Buildx 0.8.2](https://github.com/docker/buildx/releases/tag/v0.8.2)
 - [containerd v1.5.11](https://github.com/containerd/containerd/releases/tag/v1.5.11)
@@ -2316,13 +2316,13 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 #### For Mac
 
-- Docker Desktop 4.6.0 gives macOS users the option of enabling a new experimental file sharing technology called VirtioFS. During testing VirtioFS has been shown to drastically reduce the time taken to sync changes between the host and VM, leading to substantial performance improvements. For more information, see [VirtioFS](../../../manuals/desktop/settings.md#beta-features).
+- Docker Desktop 4.6.0 gives macOS users the option of enabling a new experimental file sharing technology called VirtioFS. During testing VirtioFS has been shown to drastically reduce the time taken to sync changes between the host and VM, leading to substantial performance improvements. For more information, see [VirtioFS](settings.md#beta-features).
 
 ### Updates
 
 #### For all platforms
 
-- [Docker Engine v20.10.13](../../../manuals/engine/release-notes/20.10.md#201013)
+- [Docker Engine v20.10.13](../engine/release-notes/20.10.md#201013)
 - [Compose v2.3.3](https://github.com/docker/compose/releases/tag/v2.3.3)
 - [Buildx 0.8.0](https://github.com/docker/buildx/releases/tag/v0.8.0)
 - [containerd v1.4.13](https://github.com/containerd/containerd/releases/tag/v1.4.13)
@@ -2479,12 +2479,12 @@ Installing Docker Desktop 4.5.0 from scratch has a bug which defaults Docker Des
 ### New
 
 - Easy, Secure sign in with Auth0 and Single Sign-on
-  - Single Sign-on: Users with a Docker Business subscription can now configure SSO to authenticate using their identity providers (IdPs) to access Docker. For more information, see [Single Sign-on](../security/for-admins/single-sign-on/).
+  - Single Sign-on: Users with a Docker Business subscription can now configure SSO to authenticate using their identity providers (IdPs) to access Docker. For more information, see [Single Sign-on](../security/for-admins/single-sign-on/index.md).
   - Signing in to Docker Desktop now takes you through the browser so that you get all the benefits of auto-filling from password managers.
 
 ### Upgrades
 
-- [Docker Engine v20.10.12](../../../manuals/engine/release-notes/20.10.md#201012)
+- [Docker Engine v20.10.12](../engine/release-notes/20.10.md#201012)
 - [Compose v2.2.3](https://github.com/docker/compose/releases/tag/v2.2.3)
 - [Kubernetes 1.22.5](https://github.com/kubernetes/kubernetes/releases/tag/v1.22.5)
 - [docker scan v0.16.0](https://github.com/docker/scan-cli-plugin/releases/tag/v0.16.0)
@@ -2575,7 +2575,7 @@ CVE-2021-44228](https://www.docker.com/blog/apache-log4j-2-cve-2021-44228/).
 
 ### Upgrades
 
-- [Docker Engine v20.10.11](../../../manuals/engine/release-notes/20.10.md#201011)
+- [Docker Engine v20.10.11](../engine/release-notes/20.10.md#201011)
 - [containerd v1.4.12](https://github.com/containerd/containerd/releases/tag/v1.4.12)
 - [Buildx 0.7.1](https://github.com/docker/buildx/releases/tag/v0.7.1)
 - [Compose v2.2.1](https://github.com/docker/compose/releases/tag/v2.2.1)
@@ -2605,7 +2605,7 @@ CVE-2021-44228](https://www.docker.com/blog/apache-log4j-2-cve-2021-44228/).
 
 Docker Dashboard incorrectly displays the container memory usage as zero on
 Hyper-V based machines.
-You can use the [`docker stats`](../../../reference/cli/docker/container/stats.md)
+You can use the [`docker stats`](../../reference/cli/docker/container/stats.md)
 command on the command line as a workaround to view the
 actual memory usage. See
 [docker/for-mac#6076](https://github.com/docker/for-mac/issues/6076).
@@ -2633,7 +2633,7 @@ actual memory usage. See
 
 ### Upgrades
 
-- [Docker Engine v20.10.10](../../../manuals/engine/release-notes/20.10.md#201010)
+- [Docker Engine v20.10.10](../engine/release-notes/20.10.md#201010)
 - [containerd v1.4.11](https://github.com/containerd/containerd/releases/tag/v1.4.11)
 - [runc v1.0.2](https://github.com/opencontainers/runc/releases/tag/v1.0.2)
 - [Go 1.17.2](https://golang.org/doc/go1.17)
@@ -2758,7 +2758,7 @@ The updated [Docker Subscription Service Agreement](https://www.docker.com/legal
 - **No changes** to Docker Engine or any other upstream **open source** Docker or Moby project.
 
 To understand how these changes affect you, read the [FAQs](https://www.docker.com/pricing/faq).
-For more information, see [Docker subscription overview](../subscription/).
+For more information, see [Docker subscription overview](../subscription/index.md).
 
 ### Upgrades
 

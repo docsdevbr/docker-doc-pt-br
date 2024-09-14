@@ -5,7 +5,7 @@ keywords: Docker, Docker Scout, vulnerability, exception, create, GUI
 ---
 
 The Docker Scout Dashboard provides a user-friendly interface for creating
-[exceptions](../../../manuals/scout/explore/exceptions.md) for vulnerabilities found in
+[exceptions](../explore/exceptions.md) for vulnerabilities found in
 container images. Exceptions let you acknowledge accepted risks or address
 false positives in image analysis.
 

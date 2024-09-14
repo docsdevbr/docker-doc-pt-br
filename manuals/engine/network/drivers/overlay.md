@@ -27,18 +27,18 @@ Swarm mode to establish a connection between the hosts.
 
 This page describes overlay networks in general, and when used with standalone
 containers. For information about overlay for Swarm services, see
-[Manage Swarm service networks](../../../manuals/engine/swarm/networking.md).
+[Manage Swarm service networks](../../swarm/networking.md).
 
 ## Create an overlay network
 
 Before you start, you must ensure that participating nodes can communicate over the network.
 The following table lists ports that need to be open to each host participating in an overlay network:
 
-| Ports                  | Description                                                                                                                                                          |
-| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `2377/tcp`             | The default Swarm control plane port, is configurable with [`docker swarm join --listen-addr`](../../../reference/cli/docker/swarm/join.md#--listen-addr-value) |
-| `4789/udp`             | The default overlay traffic port, configurable with [`docker swarm init --data-path-addr`](../../../reference/cli/docker/swarm/init.md#data-path-port)          |
-| `7946/tcp`, `7946/udp` | Used for communication among nodes, not configurable                                                                                                                 |
+| Ports                  | Description                                                                                                                                                        |
+| :--------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `2377/tcp`             | The default Swarm control plane port, is configurable with [`docker swarm join --listen-addr`](../../../../reference/cli/docker/swarm/join.md#--listen-addr-value) |
+| `4789/udp`             | The default overlay traffic port, configurable with [`docker swarm init --data-path-addr`](../../../../reference/cli/docker/swarm/init.md#data-path-port)          |
+| `7946/tcp`, `7946/udp` | Used for communication among nodes, not configurable                                                                                                               |
 
 To create an overlay network that containers on other Docker hosts can connect to,
 run the following command:
@@ -124,7 +124,7 @@ For more information about this limitation, see
 
 ## Next steps
 
-- Go through the [overlay networking tutorial](../../../manuals/engine/network/tutorials/overlay.md)
+- Go through the [overlay networking tutorial](../tutorials/overlay.md)
 - Learn about [networking from the container's point of view](../index.md)
 - Learn about [standalone bridge networks](bridge.md)
 - Learn about [Macvlan networks](macvlan.md)

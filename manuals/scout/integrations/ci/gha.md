@@ -19,7 +19,7 @@ stack up against the image you run in production.
 
 - This example assumes that you have an existing image repository, in Docker Hub
   or in another registry, where you've enabled Docker Scout.
-- This example makes use of [environments](../environment/), to compare
+- This example makes use of [environments](../environment/index.md), to compare
   the image built in the pull request with a different version of the same image
   in an environment called `production`.
 

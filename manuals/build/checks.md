@@ -59,7 +59,7 @@ $ docker build .
 ```
 
 In this example, the build ran successfully, but a
-[JSONArgsRecommended](../../../reference/build-checks/json-args-recommended/index.md) warning
+[JSONArgsRecommended](../../reference/build-checks/json-args-recommended.md) warning
 was reported, because `CMD` instructions should use JSON array syntax.
 
 With the GitHub Actions, the checks display in the diff view of pull requests.
@@ -77,7 +77,7 @@ jobs:
         uses: docker/build-push-action@v6.6.0
 ```
 
-![GitHub Actions build check annotations](./images/gha-check-annotations.png)
+![GitHub Actions build check annotations](images/gha-check-annotations.png)
 
 ### More verbose output
 
@@ -243,7 +243,7 @@ $ docker build --check --build-arg "BUILDKIT_DOCKERFILE_CHECK=skip=JSONArgsRecom
 
 Before checks are promoted to stable, they may be available as experimental
 checks. Experimental checks are disabled by default. To see the list of
-experimental checks available, refer to the [Build checks reference](../../../reference/build-checks/index.md).
+experimental checks available, refer to the [Build checks reference](../../reference/build-checks/index.md).
 
 To enable all experimental checks, set the `BUILDKIT_DOCKERFILE_CHECK` build
 argument to `experimental=all`:

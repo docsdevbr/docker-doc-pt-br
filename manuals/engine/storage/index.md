@@ -16,7 +16,7 @@ container layer. This means that:
 - A container's writable layer is tightly coupled to the host machine
   where the container is running. You can't easily move the data somewhere else.
 - Writing into a container's writable layer requires a
-  [storage driver](../../../manuals/engine/storage/drivers/index.md) to manage the
+  [storage driver](drivers/index.md) to manage the
   filesystem. The storage driver provides a union filesystem, using the Linux
   kernel. This extra abstraction reduces performance as compared to using
   _data volumes_, which write directly to the host filesystem.
@@ -114,7 +114,7 @@ You can't use Docker CLI commands to directly manage bind mounts.
 > [!TIP]
 >
 > Working with large repositories or monorepos, or with virtual file systems that are no longer scaling with your codebase?
-> Check out [Synchronized file shares](../../../manuals/desktop/synchronized-file-sharing.md). It provides fast and flexible host-to-VM file sharing by enhancing bind mount performance through the use of synchronized filesystem caches.
+> Check out [Synchronized file shares](../../desktop/synchronized-file-sharing.md). It provides fast and flexible host-to-VM file sharing by enhancing bind mount performance through the use of synchronized filesystem caches.
 
 ### tmpfs
 
@@ -122,7 +122,7 @@ A `tmpfs` mount isn't persisted on disk, either on the Docker host or within a
 container. It can be used by a container during the lifetime of the container,
 to store non-persistent state or sensitive information. For instance,
 internally, Swarm services use `tmpfs` mounts to mount
-[secrets](../../../manuals/engine/swarm/secrets.md) into a service's containers.
+[secrets](../swarm/secrets.md) into a service's containers.
 
 ### Named pipes
 
@@ -212,9 +212,9 @@ If you use either bind mounts or volumes, keep the following in mind:
 
 ## Next steps
 
-- Learn more about [volumes](./volumes.md).
-- Learn more about [bind mounts](./bind-mounts.md).
-- Learn more about [tmpfs mounts](./tmpfs.md).
-- Learn more about [storage drivers](../../../manuals/engine/storage/drivers/index.md), which
+- Learn more about [volumes](volumes.md).
+- Learn more about [bind mounts](bind-mounts.md).
+- Learn more about [tmpfs mounts](tmpfs.md).
+- Learn more about [storage drivers](drivers/index.md), which
   are not related to bind mounts or volumes, but allow you to store data in a
   container's writable layer.

@@ -106,7 +106,7 @@ The next time you sync your groups with Docker, your users will map to the Docke
 
 ### Use group mapping with SCIM
 
-The following steps describe how to set up and use group mapping with SCIM. Before you begin, make sure you [set up SCIM](./scim.md#enable-scim) first.
+The following steps describe how to set up and use group mapping with SCIM. Before you begin, make sure you [set up SCIM](scim.md#enable-scim) first.
 
 {{< tabs >}}
 {{< tab name="Okta" >}}

@@ -12,10 +12,10 @@ This page describes how to configure the Docker CLI to use proxies via
 environment variables in containers.
 
 This page doesn't describe how to configure proxies for Docker Desktop.
-For instructions, see [configuring Docker Desktop to use HTTP/HTTPS proxies](../../../manuals/desktop/settings.md#proxies).
+For instructions, see [configuring Docker Desktop to use HTTP/HTTPS proxies](../../desktop/settings.md#proxies).
 
 If you're running Docker Engine without Docker Desktop, refer to
-[Configure the Docker daemon to use a proxy](../../../manuals/engine/daemon/proxy.md)
+[Configure the Docker daemon to use a proxy](../daemon/proxy.md)
 to learn how to configure a proxy server for the Docker daemon (`dockerd`) itself.
 
 If your container needs to use an HTTP, HTTPS, or FTP proxy server, you can
@@ -79,7 +79,7 @@ These settings are used to configure proxy environment variables for containers
 only, and not used as proxy settings for the Docker CLI or the Docker Engine
 itself.
 Refer to the [environment variables](../../../reference/cli/docker/index.md#environment-variables)
-and [configure the Docker daemon to use a proxy server](../../../manuals/engine/daemon/proxy.md)
+and [configure the Docker daemon to use a proxy server](../daemon/proxy.md)
 sections for configuring proxy settings for the CLI and daemon.
 
 ### Run containers with a proxy configuration

@@ -118,7 +118,7 @@ Make sure you have:
    >
    >Check that the `Dockerfile` has no file extension like `.txt`. Some editors may append this file extension automatically which results in an error when you run the application.
 
-   For more information on how to write Dockerfiles, see the [Dockerfile reference](../../../reference/dockerfile.md).
+   For more information on how to write Dockerfiles, see the [Dockerfile reference](../../reference/dockerfile.md).
 
 ## Step 2: Define services in a Compose file
 
@@ -241,7 +241,7 @@ services:
 
 Whenever a file is changed, Compose syncs the file to the corresponding location under `/code` inside the container. Once copied, the bundler updates the running application without a restart.
 
-For more information on how Compose Watch works, see [Use Compose Watch](file-watch.md). Alternatively, see [Manage data in containers](../../../manuals/engine/storage/volumes.md) for other options.
+For more information on how Compose Watch works, see [Use Compose Watch](file-watch.md). Alternatively, see [Manage data in containers](../engine/storage/volumes.md) for other options.
 
 > [!NOTE]
 >
@@ -316,7 +316,7 @@ Using multiple Compose files lets you customize a Compose application for differ
 
 4. Run `docker compose up` to build the app with the updated Compose files, and run it. You should see the `Hello world` message in your browser.
 
-This is a simplified example, but it demonstrates the basic principle of `include` and how it can make it easier to modularize complex applications into sub-Compose files. For more information on `include` and working with multiple Compose files, see [Working with multiple Compose files](multiple-compose-files/).
+This is a simplified example, but it demonstrates the basic principle of `include` and how it can make it easier to modularize complex applications into sub-Compose files. For more information on `include` and working with multiple Compose files, see [Working with multiple Compose files](multiple-compose-files/index.md).
 
 ## Step 8: Experiment with some other commands
 
@@ -349,6 +349,6 @@ This is a simplified example, but it demonstrates the basic principle of `includ
 ## Where to go next
 
 - Try the [Sample apps with Compose](https://github.com/docker/awesome-compose)
-- [Explore the full list of Compose commands](reference/)
-- [Explore the Compose file reference](../../../reference/compose-file/index.md)
+- [Explore the full list of Compose commands](../../reference/cli/docker/compose/index.md)
+- [Explore the Compose file reference](../../reference/compose-file/index.md)
 - [Check out the Learning Docker Compose video on LinkedIn Learning](https://www.linkedin.com/learning/learning-docker-compose/)

@@ -7,10 +7,10 @@ title: Automated repository tests
 > [!NOTE]
 >
 > Automated builds require a
-> [Docker Pro, Team, or Business subscription](../../subscription/).
+> [Docker Pro, Team, or Business subscription](../../subscription/index.md).
 
 Docker Hub can automatically test changes to your source code repositories
-using containers. You can enable `Autotest` on [any Docker Hub repository](../repos/)
+using containers. You can enable `Autotest` on [any Docker Hub repository](../repos/index.md)
 to run tests on each pull request to the source code repository to create a
 continuous integration testing service.
 

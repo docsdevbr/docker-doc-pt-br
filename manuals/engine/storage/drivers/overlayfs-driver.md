@@ -13,7 +13,7 @@ storage driver as `overlay2`.
 
 > [!NOTE]
 >
-> For `fuse-overlayfs` driver, check [Rootless mode documentation](../../../manuals/engine/security/rootless.md).
+> For `fuse-overlayfs` driver, check [Rootless mode documentation](../../security/rootless.md).
 
 ## Prerequisites
 

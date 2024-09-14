@@ -27,13 +27,13 @@ For Compose standalone, see [Install Compose Standalone](standalone.md).
 
 1. Set up the repository. Find distro-specific instructions in:
 
-    [Ubuntu](../../../manuals/engine/install/ubuntu.md#install-using-the-repository) |
-    [CentOS](../../../manuals/engine/install/centos.md#set-up-the-repository) |
-    [Debian](../../../manuals/engine/install/debian.md#install-using-the-repository) |
-    [Raspberry Pi OS](../../../manuals/engine/install/raspberry-pi-os.md#install-using-the-repository) |
-    [Fedora](../../../manuals/engine/install/fedora.md#set-up-the-repository) |
-    [RHEL](../../../manuals/engine/install/rhel.md#set-up-the-repository) |
-    [SLES](../../../manuals/engine/install/sles.md#set-up-the-repository).
+    [Ubuntu](../../engine/install/ubuntu.md#install-using-the-repository) |
+    [CentOS](../../engine/install/centos.md#set-up-the-repository) |
+    [Debian](../../engine/install/debian.md#install-using-the-repository) |
+    [Raspberry Pi OS](../../engine/install/raspberry-pi-os.md#install-using-the-repository) |
+    [Fedora](../../engine/install/fedora.md#set-up-the-repository) |
+    [RHEL](../../engine/install/rhel.md#set-up-the-repository) |
+    [SLES](../../engine/install/sles.md#set-up-the-repository).
 
 2. Update the package index, and install the latest version of Docker Compose:
 

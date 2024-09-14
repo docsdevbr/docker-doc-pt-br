@@ -32,9 +32,9 @@ additional BuildKit parameters to a builder using the Docker driver. The
 BuildKit version and parameters are preset by the Docker Engine internally.
 
 If you need additional configuration and flexibility, consider using the
-[Docker container driver](./docker-container.md).
+[Docker container driver](docker-container.md).
 
 ## Further reading
 
 For more information on the Docker driver, see the
-[buildx reference](../../../reference/cli/docker/buildx/create.md#driver).
+[buildx reference](../../../../reference/cli/docker/buildx/create.md#driver).

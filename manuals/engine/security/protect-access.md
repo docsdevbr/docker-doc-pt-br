@@ -19,7 +19,7 @@ optionally communicate using SSH or a TLS (HTTPS) socket.
 > remote machine. Refer to [manage Docker as a non-root user](../install/linux-postinstall.md#manage-docker-as-a-non-root-user)
 > to learn how to give a non-root user access to the docker socket.
 
-The following example creates a [`docker context`](../../../manuals/engine/manage-resources/contexts.md)
+The following example creates a [`docker context`](../manage-resources/contexts.md)
 to connect with a remote `dockerd` daemon on `host1.example.com` using SSH, and
 as the `docker-user` user on the remote machine:
 
@@ -173,7 +173,7 @@ Getting CA Private Key
 Enter pass phrase for ca-key.pem:
 ```
 
-[Authorization plugins](../../../manuals/engine/extend/plugins_authorization/index.md) offer more
+[Authorization plugins](../extend/plugins_authorization/index.md) offer more
 fine-grained control to supplement authentication from mutual TLS. In addition
 to other information described in the above document, authorization plugins
 running on a Docker daemon receive the certificate information for connecting

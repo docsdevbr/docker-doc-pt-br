@@ -43,7 +43,7 @@ manifest or index.
 > The Docker Engine image store doesn't support loading images with
 > annotations. To build with annotations, make sure to push the image directly
 > to a registry, using the `--push` CLI flag or the
-> [registry exporter](../../../manuals/build/exporters/image-registry.md).
+> [registry exporter](../exporters/image-registry.md).
 
 To specify annotations on the command line, use the `--annotation` flag for the
 `docker build` command:
@@ -52,7 +52,7 @@ To specify annotations on the command line, use the `--annotation` flag for the
 $ docker build --push --annotation "foo=bar" .
 ```
 
-If you're using [Bake](../../../manuals/build/bake/index.md), you can use the `annotations`
+If you're using [Bake](../bake/index.md), you can use the `annotations`
 attribute to specify annotations for a given target:
 
 ```hcl
@@ -63,7 +63,7 @@ target "default" {
 ```
 
 For examples on how to add annotations to images built with GitHub Actions, see
-[Add image annotations with GitHub Actions](../../../manuals/build/ci/github-actions/annotations.md)
+[Add image annotations with GitHub Actions](../ci/github-actions/annotations.md)
 
 You can also add annotations to an image created using `docker buildx
 imagetools create`. This command only supports adding annotations to an index
@@ -197,21 +197,21 @@ $ docker build --tag <IMAGE> --push --annotation "manifest[linux/amd64]:foo=bar"
 
 Related articles:
 
-- [Add image annotations with GitHub Actions](../../../manuals/build/ci/github-actions/annotations.md)
+- [Add image annotations with GitHub Actions](../ci/github-actions/annotations.md)
 - [Annotations OCI specification][specification]
 
 Reference information:
 
 - [`docker buildx build --annotation`](../../../reference/cli/docker/buildx/build.md#annotation)
-- [Bake file reference: `annotations`](../../../manuals/build/bake/reference.md#targetannotations)
+- [Bake file reference: `annotations`](../bake/reference.md#targetannotations)
 - [`docker buildx imagetools create --annotation`](../../../reference/cli/docker/buildx/imagetools/create.md#annotation)
 
 <!-- links -->
 
 [specification]: https://github.com/opencontainers/image-spec/blob/main/annotations.md
-[attestations]: /manuals/build/metadata/attestations/
+[attestations]: attestations/index.md
 [config]: https://github.com/opencontainers/image-spec/blob/main/config.md
 [descriptors]: https://github.com/opencontainers/image-spec/blob/main/descriptor.md
 [indexes]: https://github.com/opencontainers/image-spec/blob/main/image-index.md
-[labels]: /manuals/engine/manage-resources/labels.md
+[labels]: ../../engine/manage-resources/labels.md
 [manifests]: https://github.com/opencontainers/image-spec/blob/main/manifest.md

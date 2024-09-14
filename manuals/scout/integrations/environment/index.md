@@ -36,15 +36,15 @@ To add environments to Docker Scout, you can:
 Docker Scout supports the following runtime integrations:
 
 - [Docker Scout GitHub Action](https://github.com/marketplace/actions/docker-scout#record-an-image-deployed-to-an-environment)
-- [CLI client](./cli.md)
-- [Sysdig integration](./sysdig.md)
+- [CLI client](cli.md)
+- [Sysdig integration](sysdig.md)
 
 > [!NOTE]
 >
 > Only organization owners can create new environments and set up integrations.
 > Additionally, Docker Scout only assigns an image to an environment if the
-> image [has been analyzed](../../../manuals/scout/explore/analysis.md), either manually or
-> through a [registry integration](../../../manuals/scout/integrations/index.md#container-registries).
+> image [has been analyzed](../explore/analysis.md), either manually or
+> through a [registry integration](index.md#container-registries).
 
 ## List environments
 

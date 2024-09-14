@@ -255,7 +255,7 @@ cgroup_parent: m-executor-abcd
 command: bundle exec thin -p 3000
 ```
 
-The value can also be a list, in a manner similar to [Dockerfile](https://docs.docker.com/reference/dockerfile/#cmd):
+The value can also be a list, in a manner similar to [Dockerfile](../dockerfile.md#cmd):
 
 ```yaml
 command: [ "bundle", "exec", "thin", "-p", "3000" ]
@@ -439,7 +439,7 @@ expressed in the short form.
 
 - `restart`: When set to `true` Compose restarts this service after it updates the dependency service.
   This applies to an explicit restart controlled by a Compose operation, and excludes automated restart by the container runtime
-  after the container dies. Introduced in Docker Compose version [2.17.0](../../../manuals/compose/release-notes.md#2170).
+  after the container dies. Introduced in Docker Compose version [2.17.0](../../manuals/compose/release-notes.md#2170).
 
 - `condition`: Sets the condition under which dependency is considered satisfied
   - `service_started`: An equivalent of the short syntax described above
@@ -449,7 +449,7 @@ expressed in the short form.
   - `service_completed_successfully`: Specifies that a dependency is expected to run
     to successful completion before starting a dependent service.
 - `required`: When set to `false` Compose only warns you when the dependency service isn't started or available. If it's not defined
-    the default value of `required` is `true`. Introduced in Docker Compose version [2.20.0](../../../manuals/compose/release-notes.md#2200).
+    the default value of `required` is `true`. Introduced in Docker Compose version [2.20.0](../../manuals/compose/release-notes.md#2200).
 
 Service dependencies cause the following behaviors:
 
@@ -575,7 +575,7 @@ services:
           com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
 ```
 
-Consult the [network drivers documentation](../../../manuals/engine/network/index.md) for more information.
+Consult the [network drivers documentation](../../manuals/engine/network/index.md) for more information.
 
 ### entrypoint
 
@@ -593,7 +593,7 @@ entrypoint: /code/entrypoint.sh
 ```
 
 Alternatively, the value can also be a list, in a manner similar to the
-[Dockerfile](https://docs.docker.com/reference/dockerfile/#cmd):
+[Dockerfile](../dockerfile.md#cmd):
 
 ```yml
 entrypoint:
@@ -954,7 +954,7 @@ extra_hosts:
   - "myhostv6=[::1]"
 ```
 
-The separator `=` is preferred, but `:` can also be used. Introduced in Docker Compose version [2.24.1](../../../manuals/compose/release-notes.md#2241). For example:
+The separator `=` is preferred, but `:` can also be used. Introduced in Docker Compose version [2.24.1](../../manuals/compose/release-notes.md#2241). For example:
 
 ```yml
 extra_hosts:
@@ -1005,7 +1005,7 @@ been the case if `group_add` were not declared.
 
 {{< include "compose/services-healthcheck.md" >}}
 
-For more information on `HEALTHCHECK`, see the [Dockerfile reference](../../../reference/dockerfile.md#healthcheck).
+For more information on `HEALTHCHECK`, see the [Dockerfile reference](../dockerfile.md#healthcheck).
 
 ```yml
 healthcheck:
@@ -1017,7 +1017,7 @@ healthcheck:
   start_interval: 5s
 ```
 
-`interval`, `timeout`, `start_period`, and `start_interval` are [specified as durations](extension.md#specifying-durations). Introduced in Docker Compose version [2.20.2](../../../manuals/compose/release-notes.md#2202)
+`interval`, `timeout`, `start_period`, and `start_interval` are [specified as durations](extension.md#specifying-durations). Introduced in Docker Compose version [2.20.2](../../manuals/compose/release-notes.md#2202)
 
 `test` defines the command Compose runs to check container health. It can be
 either a string or a list. If it's a list, the first item must be either `NONE`, `CMD` or `CMD-SHELL`.
@@ -1221,7 +1221,7 @@ There is a performance penalty for applications that swap memory to disk often.
 
 - `none`: Turns off all container networking.
 - `host`: Gives the container raw access to the host's network interface.
-- `service:{name}`: Gives the containers access to the specified service only. For more information, see [Container networks](../../../manuals/engine/network/index.md#container-networks).
+- `service:{name}`: Gives the containers access to the specified service only. For more information, see [Container networks](../../manuals/engine/network/index.md#container-networks).
 
 ```yml
     network_mode: "host"
@@ -1479,7 +1479,7 @@ expressed in the short form.
 - `published`: The publicly exposed port. It is defined as a string and can be set as a range using syntax `start-end`. It means the actual port is assigned a remaining available port, within the set range.
 - `host_ip`: The Host IP mapping, unspecified means all network interfaces (`0.0.0.0`).
 - `protocol`: The port protocol (`tcp` or `udp`). Defaults to `tcp`.
-- `app_protocol`: The application protocol (TCP/IP level 4 / OSI level 7) this port is used for. This is optional and can be used as a hint for Compose to offer richer behavior for protocols that it understands. Introduced in Docker Compose version [2.26.0](../../../manuals/compose/release-notes.md#2260).
+- `app_protocol`: The application protocol (TCP/IP level 4 / OSI level 7) this port is used for. This is optional and can be used as a hint for Compose to offer richer behavior for protocols that it understands. Introduced in Docker Compose version [2.26.0](../../manuals/compose/release-notes.md#2260).
 - `mode`: `host`: For publishing a host port on each node, or `ingress` for a port to be load balanced. Defaults to `ingress`.
 - `name`: A human-readable name for the port, used to document it's usage within the service.
 
@@ -1562,7 +1562,7 @@ Optionally, limit the number of restart retries the Docker daemon attempts.
 ```
 
 You can find more detailed information on restart policies in the
-[Restart Policies (--restart)](../../../reference/cli/docker/container/run.md#restart)
+[Restart Policies (--restart)](../cli/docker/container/run.md#restart)
 section of the Docker run reference page.
 
 ### runtime
@@ -1578,7 +1578,7 @@ web:
   runtime: runc
 ```
 
-The default is `runc`. To use a different runtime, see [Alternative runtimes](../../../manuals/engine/daemon/alternative-runtimes.md).
+The default is `runc`. To use a different runtime, see [Alternative runtimes](../../manuals/engine/daemon/alternative-runtimes.md).
 
 ### scale
 
@@ -1664,7 +1664,7 @@ security_opt:
   - label:role:ROLE
 ```
 
-For further default labeling schemes you can override, see [Security configuration](../../../reference/cli/docker/container/run.md#security-opt).
+For further default labeling schemes you can override, see [Security configuration](../cli/docker/container/run.md#security-opt).
 
 ### shm_size
 
@@ -1674,7 +1674,7 @@ It's specified as a [byte value](extension.md#specifying-byte-values).
 ### stdin_open
 
 `stdin_open` configures a service's container to run with an allocated stdin. This is the same as running a container with the
-`-i` flag. For more information, see [Keep STDIN open](../../../reference/cli/docker/container/run.md#interactive).
+`-i` flag. For more information, see [Keep STDIN open](../cli/docker/container/run.md#interactive).
 
 Supported values are `true` or `false`.
 
@@ -1729,7 +1729,7 @@ sysctls:
 You can only use sysctls that are namespaced in the kernel. Docker does not
 support changing sysctls inside a container that also modify the host system.
 For an overview of supported sysctls, refer to [configure namespaced kernel
-parameters (sysctls) at runtime](../../../reference/cli/docker/container/run.md#sysctl).
+parameters (sysctls) at runtime](../cli/docker/container/run.md#sysctl).
 
 ### tmpfs
 
@@ -1748,7 +1748,7 @@ tmpfs:
 ### tty
 
 `tty` configures a service's container to run with a TTY. This is the same as running a container with the
-`-t` or `--tty` flag. For more information, see [Allocate a pseudo-TTY](../../../reference/cli/docker/container/run.md#tty).
+`-t` or `--tty` flag. For more information, see [Allocate a pseudo-TTY](../cli/docker/container/run.md#tty).
 
 Supported values are `true` or `false`.
 
@@ -1865,13 +1865,13 @@ expressed in the short form.
   - `subpath`: Path inside a volume to mount instead of the volume root.
 - `tmpfs`: Configures additional tmpfs options:
   - `size`: The size for the tmpfs mount in bytes (either numeric or as bytes unit).
-  - `mode`: The file mode for the tmpfs mount as Unix permission bits as an octal number. Introduced in Docker Compose version [2.14.0](../../../manuals/compose/release-notes.md#2260).
+  - `mode`: The file mode for the tmpfs mount as Unix permission bits as an octal number. Introduced in Docker Compose version [2.14.0](../../manuals/compose/release-notes.md#2260).
 - `consistency`: The consistency requirements of the mount. Available values are platform specific.
 
 > [!TIP]
 >
 > Working with large repositories or monorepos, or with virtual file systems that are no longer scaling with your codebase?
-> Compose now takes advantage of [Synchronized file shares](../../../manuals/desktop/synchronized-file-sharing.md) and automatically creates file shares for bind mounts.
+> Compose now takes advantage of [Synchronized file shares](../../manuals/desktop/synchronized-file-sharing.md) and automatically creates file shares for bind mounts.
 > Ensure you're signed in to Docker with a paid subscription and have enabled both **Access experimental features** and **Manage Synchronized file shares with Compose** in Docker Desktop's settings.
 
 ### volumes_from

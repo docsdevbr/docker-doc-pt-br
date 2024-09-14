@@ -10,7 +10,7 @@ aliases:
 
 This section describes how to create an organization. Before you begin:
 
-- You need a [Docker ID](/accounts/create-account/index.md).
+- You need a [Docker ID](../../accounts/create-account.md).
 - Review the [Docker subscriptions and features](../../subscription/core-subscription/details.md) to determine what plan to choose for your organization.
 
 ## Create an organization
@@ -83,10 +83,10 @@ The organization landing page displays various options that allow you to
 configure your organization.
 
 - **Members**: Displays a list of team members. You
-  can invite new members using the **Invite members** button. See [Manage members](./members.md) for details.
+  can invite new members using the **Invite members** button. See [Manage members](members.md) for details.
 
 - **Teams**: Displays a list of existing teams and the number of
-  members in each team. See [Create a team](./manage-a-team.md) for details.
+  members in each team. See [Create a team](manage-a-team.md) for details.
 
 - **Repositories**: Displays a list of repositories associated with the
   organization. See [Repositories](../../docker-hub/repos/) for detailed information about
@@ -94,17 +94,17 @@ configure your organization.
 
 - **Activity** Displays the audit logs, a chronological list of activities that
   occur at organization and repository levels. It provides the org owners a
-  report of all their team member activities. See [Audit logs](./activity-logs.md) for
+  report of all their team member activities. See [Audit logs](activity-logs.md) for
   details.
 
 - **Settings**: Displays information about your
   organization, and allows you to view and change your repository privacy
   settings, configure org permissions such as
-  [Image Access Management](../../../manuals/security/for-admins/hardened-desktop/image-access-management.md), configure notification settings, and [deactivate](../deactivate-account.md#deactivate-an-organization) You can also update your organization name and company name that appear on your organization landing page. You must be an owner to access the
+  [Image Access Management](../../security/for-admins/hardened-desktop/image-access-management.md), configure notification settings, and [deactivate](../deactivate-account.md#deactivate-an-organization) You can also update your organization name and company name that appear on your organization landing page. You must be an owner to access the
    organization's **Settings** page.
 
 - **Billing**: Displays information about your existing
-[Docker subscription (plan)](../../subscription/), including the number of seats and next payment due date. For how to access the billing history and payment methods for your organization, see [View billing history](../../billing/core-billing/history.md).
+[Docker subscription (plan)](../../subscription/index.md), including the number of seats and next payment due date. For how to access the billing history and payment methods for your organization, see [View billing history](../../billing/core-billing/history.md).
 
 ## Merge organizations
 

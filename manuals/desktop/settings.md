@@ -34,11 +34,11 @@ On the **General** tab, you can configure when to start Docker and specify other
 - **Choose theme for Docker Desktop**. Choose whether you want to apply a **Light** or **Dark** theme to Docker Desktop. Alternatively you can set Docker Desktop to **Use system settings**.
 
 - **Choose container terminal**. Determines which terminal is launched when opening the terminal from a container.
-If you choose the integrated terminal, you can run commands in a running container straight from the Docker Dashboard. For more information, see [Explore containers](../../../manuals/desktop/use-desktop/container.md).
+If you choose the integrated terminal, you can run commands in a running container straight from the Docker Dashboard. For more information, see [Explore containers](use-desktop/container.md).
 
 - **Enable Docker terminal**. Interact with your host machine and execute commands directly from Docker Desktop.
 
-- **Enable Docker Debug by default**. Check this option to use Docker Debug by default when accessing the integrated terminal. For more information, see [Explore containers](../../../manuals/desktop/use-desktop/container.md#integrated-terminal).
+- **Enable Docker Debug by default**. Check this option to use Docker Debug by default when accessing the integrated terminal. For more information, see [Explore containers](use-desktop/container.md#integrated-terminal).
 
 - {{< badge color=blue text="Mac only" >}}**Include VM in Time Machine backups**. Select to back up the Docker Desktop
   virtual machine. This option is turned off by default.
@@ -49,7 +49,7 @@ If you choose the integrated terminal, you can run commands in a running contain
   execution attacks.
 
 - {{< badge color=blue text="Windows only" >}}**Use the WSL 2 based engine**. WSL 2 provides better performance than the
-  Hyper-V backend. For more information, see [Docker Desktop WSL 2 backend](../../../manuals/desktop/wsl/index.md).
+  Hyper-V backend. For more information, see [Docker Desktop WSL 2 backend](wsl/index.md).
 
 - {{< badge color=blue text="Windows only" >}}**Add the `*.docker.internal` names to the host's `/etc/hosts` file (Password required)**. Lets you resolve `*.docker.internal` DNS names from both the host and your containers.
 
@@ -76,7 +76,7 @@ If you choose the integrated terminal, you can run commands in a running contain
   troubleshoot the application. Clear the checkbox to opt out. Docker may
   periodically prompt you for more information.
 
-- **Use Enhanced Container Isolation**. Select to enhance security by preventing containers from breaching the Linux VM. For more information, see [Enhanced Container Isolation](../../../manuals/security/for-admins/hardened-desktop/enhanced-container-isolation/index.md).
+- **Use Enhanced Container Isolation**. Select to enhance security by preventing containers from breaching the Linux VM. For more information, see [Enhanced Container Isolation](../security/for-admins/hardened-desktop/enhanced-container-isolation/index.md).
     > [!NOTE]
     >
     > This setting is only available if you are signed in to Docker Desktop and have a Docker Business subscription.
@@ -94,7 +94,7 @@ If you choose the integrated terminal, you can run commands in a running contain
     - The symlink of the default Docker socket.
   Additionally, Docker Desktop ensures that the context is switched to `desktop-linux` on startup.
 
-  You are notified if changes are found and are able to restore the configuration directly from the notification. For more information, see the [FAQs](../../../manuals/desktop/faqs/macfaqs.md#why-do-i-keep-getting-a-notification-telling-me-an-application-has-changed-my-desktop-configurations).
+  You are notified if changes are found and are able to restore the configuration directly from the notification. For more information, see the [FAQs](faqs/macfaqs.md#why-do-i-keep-getting-a-notification-telling-me-an-application-has-changed-my-desktop-configurations).
 
 ## Resources
 
@@ -136,7 +136,7 @@ Advanced settings are:
 > If you feel Docker Desktop starting to get slow or you're running
 > multi-container workloads, increase the memory and disk image space allocation
 
-- **Resource Saver**. Enable or disable [Resource Saver mode](../../../manuals/desktop/use-desktop/resource-saver.md),
+- **Resource Saver**. Enable or disable [Resource Saver mode](use-desktop/resource-saver.md),
   which significantly reduces CPU and memory utilization on the host by
   automatically turning off the Linux VM when Docker Desktop is idle (i.e., no
   containers are running).
@@ -166,7 +166,7 @@ the host while running and testing the code in a container.
 
 Synchronized file shares is an alternative file sharing mechanism that provides fast and flexible host-to-VM file sharing, enhancing bind mount performance through the use of synchronized filesystem caches. Available with Pro, Team, and Business subscriptions.
 
-To learn more, see [Synchronized file share](../../../manuals/desktop/synchronized-file-sharing.md).
+To learn more, see [Synchronized file share](synchronized-file-sharing.md).
 
 #### Virtual file shares
 
@@ -192,8 +192,8 @@ File share settings are:
 > * Shared folders are designed to allow application code to be edited
 >   on the host while being executed in containers. For non-code items
 >   such as cache directories or databases, the performance will be much
->   better if they are stored in the Linux VM, using a [data volume](../../../manuals/engine/storage/volumes.md)
->   (named volume) or [data container](../../../manuals/engine/storage/volumes.md).
+>   better if they are stored in the Linux VM, using a [data volume](../engine/storage/volumes.md)
+>   (named volume) or [data container](../engine/storage/volumes.md).
 > * If you share the whole of your home directory into a container, MacOS may
 >   prompt you to give Docker access to personal areas of your home directory such as
 >   your Reminders or Downloads.
@@ -209,7 +209,7 @@ File share settings are:
 >   once a file called `test` is created, attempts to create a second file called
 >   `Test` will fail.
 >
-> For more information, see [Volume mounting requires file sharing for any project directories outside of `/Users`](../../../manuals/desktop/troubleshoot/topics.md)
+> For more information, see [Volume mounting requires file sharing for any project directories outside of `/Users`](troubleshoot/topics.md)
 
 #### Shared folders on demand
 
@@ -226,7 +226,7 @@ containers. Alternatively, you can opt not to share it by selecting **Cancel**.
 
 ### Proxies
 
-Docker Desktop supports the use of HTTP/HTTPS and [SOCKS5 proxies](../../../manuals/desktop/networking.md#socks5-proxy-support).
+Docker Desktop supports the use of HTTP/HTTPS and [SOCKS5 proxies](networking.md#socks5-proxy-support).
 
 HTTP/HTTPS proxies can be used when:
 
@@ -249,7 +249,7 @@ To set a different proxy for Docker Desktop, turn on **Manual proxy configuratio
 upstream proxy URL of the form `http://proxy:port` or `https://proxy:port`.
 
 To prevent developers from accidentally changing the proxy settings, see
-[Settings Management](../../../manuals/security/for-admins/hardened-desktop/settings-management/index.md#what-features-can-i-configure-with-settings-management).
+[Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md#what-features-can-i-configure-with-settings-management).
 
 The HTTPS proxy settings used for scanning images are set using the `HTTPS_PROXY` environment variable.
 
@@ -310,7 +310,7 @@ to set Ubuntu as your default WSL distro, run `wsl --set-default ubuntu`).
 You can also select any additional distributions you would like to enable the WSL 2 integration on.
 
 For more details on configuring Docker Desktop to use WSL 2, see
-[Docker Desktop WSL 2 backend](../../../manuals/desktop/wsl/index.md).
+[Docker Desktop WSL 2 backend](wsl/index.md).
 
 ## Docker Engine
 
@@ -335,14 +335,14 @@ edit the JSON configuration directly from the dashboard in Docker Desktop, or op
 edit the file using your favorite text editor.
 
 To see the full list of possible configuration options, see the
-[dockerd command reference](../../../reference/cli/dockerd/index.md).
+[dockerd command reference](../../reference/cli/dockerd.md).
 
 Select **Apply & Restart** to save your settings and restart Docker Desktop.
 
 ## Builders
 
 If you have turned on the
-[Docker Desktop Builds view](../../../manuals/desktop/use-desktop/builds.md), you can use the
+[Docker Desktop Builds view](use-desktop/builds.md), you can use the
 **Builders** tab to inspect and manage builders in the Docker Desktop settings.
 
 ### Inspect
@@ -373,14 +373,14 @@ Your build commands now use the selected builder by default.
 ### Create a builder
 
 To create a builder, use the Docker CLI. See
-[Create a new builder](../../../manuals/build/builders/manage/index.md#create-a-new-builder)
+[Create a new builder](../build/builders/manage.md#create-a-new-builder)
 
 ### Remove a builder
 
 You can remove a builder if:
 
-- The builder isn't your [selected builder](../../../manuals/build/builders/index.md#selected-builder)
-- The builder isn't [associated with a Docker context](../../../manuals/build/builders/index.md#default-builder).
+- The builder isn't your [selected builder](../build/builders/index.md#selected-builder)
+- The builder isn't [associated with a Docker context](../build/builders/index.md#default-builder).
 
   To remove builders associated with a Docker context, remove the context using
   the `docker context rm` command.
@@ -397,7 +397,7 @@ the build cache is also removed, along with the builder.
 ### Stop and start a builder
 
 Builders that use the
-[`docker-container` driver](../../../manuals/build/builders/drivers/docker-container/index.md)
+[`docker-container` driver](../build/builders/drivers/docker-container.md)
 run the BuildKit daemon in a container.
 You can start and stop the BuildKit container using the drop-down menu.
 
@@ -422,7 +422,7 @@ using Docker commands.
 Select **Reset Kubernetes cluster** to delete all stacks and Kubernetes resources.
 
 For more information about using the Kubernetes integration with Docker Desktop,
-see [Deploy on Kubernetes](../../../manuals/desktop/kubernetes.md).
+see [Deploy on Kubernetes](kubernetes.md).
 
 ## Software Updates
 
@@ -449,7 +449,7 @@ Use the **Extensions** tab to:
 - **Allow only extensions distributed through the Docker Marketplace**
 - **Show Docker Extensions system containers**
 
-For more information about Docker extensions, see [Extensions](../../../manuals/extensions/index.md).
+For more information about Docker extensions, see [Extensions](../extensions/index.md).
 
 ## Features in development
 
@@ -501,8 +501,8 @@ On Mac, you can reconfigure your initial installation settings  on the **Advance
             ```
      3. Save and the close the file. Restart your shell to apply the changes to the PATH variable.
 
-- **Enable default Docker socket (Requires password)**. Creates `/var/run/docker.sock` which some third party clients may use to communicate with Docker Desktop. For more information, see [permission requirements for macOS](../../../manuals/desktop/install/mac-permission-requirements.md#installing-symlinks).
+- **Enable default Docker socket (Requires password)**. Creates `/var/run/docker.sock` which some third party clients may use to communicate with Docker Desktop. For more information, see [permission requirements for macOS](install/mac-permission-requirements.md#installing-symlinks).
 
-- **Enable privileged port mapping (Requires password)**. Starts the privileged helper process which binds the ports that are between 1 and 1024. For more information, see [permission requirements for macOS](../../../manuals/desktop/install/mac-permission-requirements.md#binding-privileged-ports).
+- **Enable privileged port mapping (Requires password)**. Starts the privileged helper process which binds the ports that are between 1 and 1024. For more information, see [permission requirements for macOS](install/mac-permission-requirements.md#binding-privileged-ports).
 
-  For more information on each configuration and use case, see [Permission requirements](../../../manuals/desktop/install/mac-permission-requirements.md).
+  For more information on each configuration and use case, see [Permission requirements](install/mac-permission-requirements.md).

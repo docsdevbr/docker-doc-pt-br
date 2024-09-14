@@ -146,7 +146,7 @@ The legacy Docker Engine builder processes all stages of a Dockerfile leading
 up to the selected `--target`. It will build a stage even if the selected
 target doesn't depend on that stage.
 
-[BuildKit](../buildkit/) only builds the stages that the target stage
+[BuildKit](../buildkit/index.md) only builds the stages that the target stage
 depends on.
 
 For example, given the following Dockerfile:

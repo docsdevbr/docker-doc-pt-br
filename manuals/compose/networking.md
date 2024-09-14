@@ -9,7 +9,7 @@ weight: 130
 {{< include "compose-eol.md" >}}
 
 By default Compose sets up a single
-[network](../../../reference/cli/docker/network/create.md) for your app. Each
+[network](../../reference/cli/docker/network/create.md) for your app. Each
 container for a service joins the default network and is both reachable by
 other containers on that network, and discoverable by the service's name.
 
@@ -17,7 +17,7 @@ other containers on that network, and discoverable by the service's name.
 >
 > Your app's network is given a name based on the "project name",
 > which is based on the name of the directory it lives in. You can override the
-> project name with either the [`--project-name` flag](reference/)
+> project name with either the [`--project-name` flag](../../reference/cli/docker/compose/index.md)
 > or the [`COMPOSE_PROJECT_NAME` environment variable](environment-variables/envvars.md#compose_project_name).
 
 For example, suppose your app is in a directory called `myapp`, and your `compose.yml` looks like this:
@@ -82,22 +82,22 @@ services:
     image: postgres
 ```
 
-See the [links reference](../../../reference/compose-file/services.md#links) for more information.
+See the [links reference](../../reference/compose-file/services.md#links) for more information.
 
 ## Multi-host networking
 
-When deploying a Compose application on a Docker Engine with [Swarm mode enabled](../../../manuals/engine/swarm/index.md),
+When deploying a Compose application on a Docker Engine with [Swarm mode enabled](../engine/swarm/index.md),
 you can make use of the built-in `overlay` driver to enable multi-host communication.
 
-Overlay networks are always created as `attachable`. You can optionally set the [`attachable`](../../../reference/compose-file/networks.md#attachable) property to `false`.
+Overlay networks are always created as `attachable`. You can optionally set the [`attachable`](../../reference/compose-file/networks.md#attachable) property to `false`.
 
-Consult the [Swarm mode section](../../../manuals/engine/swarm/index.md), to see how to set up
-a Swarm cluster, and the [Getting started with multi-host networking](../../../manuals/engine/network/tutorials/overlay.md)
+Consult the [Swarm mode section](../engine/swarm/index.md), to see how to set up
+a Swarm cluster, and the [Getting started with multi-host networking](../engine/network/tutorials/overlay.md)
 to learn about multi-host overlay networks.
 
 ## Specify custom networks
 
-Instead of just using the default app network, you can specify your own networks with the top-level `networks` key. This lets you create more complex topologies and specify [custom network drivers](../../../manuals/engine/extend/plugins_network/index.md) and options. You can also use it to connect services to externally-created networks which aren't managed by Compose.
+Instead of just using the default app network, you can specify your own networks with the top-level `networks` key. This lets you create more complex topologies and specify [custom network drivers](../engine/extend/plugins_network.md) and options. You can also use it to connect services to externally-created networks which aren't managed by Compose.
 
 Each service can specify what networks to connect to with the service-level `networks` key, which is a list of names referencing entries under the top-level `networks` key.
 
@@ -130,9 +130,9 @@ networks:
     driver: custom-driver
 ```
 
-Networks can be configured with static IP addresses by setting the [ipv4_address and/or ipv6_address](../../../reference/compose-file/services.md#ipv4_address-ipv6_address) for each attached network.
+Networks can be configured with static IP addresses by setting the [ipv4_address and/or ipv6_address](../../reference/compose-file/services.md#ipv4_address-ipv6_address) for each attached network.
 
-Networks can also be given a [custom name](../../../reference/compose-file/networks.md#name):
+Networks can also be given a [custom name](../../reference/compose-file/networks.md#name):
 
 ```yaml
 services:
@@ -164,7 +164,7 @@ networks:
 
 ## Use a pre-existing network
 
-If you want your containers to join a pre-existing network, use the [`external` option](../../../reference/compose-file/networks.md#external)
+If you want your containers to join a pre-existing network, use the [`external` option](../../reference/compose-file/networks.md#external)
 ```yaml
 services:
   # ...
@@ -180,5 +180,5 @@ Instead of attempting to create a network called `[projectname]_default`, Compos
 
 For full details of the network configuration options available, see the following references:
 
-- [Top-level `networks` element](../../../reference/compose-file/networks.md)
-- [Service-level `networks` attribute](../../../reference/compose-file/services.md#networks)
+- [Top-level `networks` element](../../reference/compose-file/networks.md)
+- [Service-level `networks` attribute](../../reference/compose-file/services.md#networks)

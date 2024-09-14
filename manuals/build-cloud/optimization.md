@@ -32,11 +32,11 @@ more efficient:
 - [Multi-threaded tools](#multi-threaded-tools)
 
 For more information on how to optimize your builds, see
-[Building best practices](../../../manuals/build/building/best-practices.md).
+[Building best practices](../build/building/best-practices.md).
 
 ### Dockerignore files
 
-Using a [`.dockerignore` file](../../../manuals/build/concepts/context.md#dockerignore-files),
+Using a [`.dockerignore` file](../build/concepts/context.md#dockerignore-files),
 you can be explicit about which local files you don’t want to include in the
 build context. Files caught by the glob patterns you specify in your
 ignore-file aren't transferred to the remote builder.
@@ -66,14 +66,14 @@ binaries, for example.
 
 ### Multi-stage builds
 
-[Multi-stage builds](../../../manuals/build/building/multi-stage/index.md) can make your build run faster,
+[Multi-stage builds](../build/building/multi-stage.md) can make your build run faster,
 because stages can run in parallel. It can also make your end-result smaller.
 Write your Dockerfile in such a way that the final runtime stage uses the
 smallest possible base image, with only the resources that your program requires
 to run.
 
 It’s also possible to
-[copy resources from other images or stages](../../../manuals/build/building/multi-stage/index.md#name-your-build-stages),
+[copy resources from other images or stages](../build/building/multi-stage.md#name-your-build-stages),
 using the Dockerfile `COPY --from` instruction. This technique can reduce the
 number of layers, and the size of those layers, in the final stage.
 

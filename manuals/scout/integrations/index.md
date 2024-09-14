@@ -25,9 +25,9 @@ aren't hosted on Docker Hub.
 
 The following container registry integrations are available:
 
-- [Artifactory](./registry/artifactory.md)
-- [Amazon Elastic Container Registry](./registry/ecr.md)
-- [Azure Container Registry](./registry/acr.md)
+- [Artifactory](registry/artifactory.md)
+- [Amazon Elastic Container Registry](registry/ecr.md)
+- [Azure Container Registry](registry/acr.md)
 
 ### Continuous Integration
 
@@ -38,11 +38,11 @@ useful for getting even more insights.
 
 The following CI integrations are available:
 
-- [GitHub Actions](./ci/gha.md)
-- [GitLab](./ci/gitlab.md)
-- [Microsoft Azure DevOps Pipelines](./ci/azure.md)
-- [Circle CI](./ci/circle-ci.md)
-- [Jenkins](./ci/jenkins.md)
+- [GitHub Actions](ci/gha.md)
+- [GitLab](ci/gitlab.md)
+- [Microsoft Azure DevOps Pipelines](ci/azure.md)
+- [Circle CI](ci/circle-ci.md)
+- [Jenkins](ci/jenkins.md)
 
 ### Environment monitoring
 
@@ -54,10 +54,10 @@ versions, in your image repositories or in your other environments.
 
 The following environment monitoring integrations are available
 
-- [Sysdig](./environment/sysdig.md)
+- [Sysdig](environment/sysdig.md)
 
 For more information about environment integrations, see
-[Environments](./environment/).
+[Environments](environment/).
 
 ### Code quality
 
@@ -93,4 +93,4 @@ real-time to team communication platforms.
 
 The following team collaboration integrations are available:
 
-- [Slack](./team-collaboration/slack.md)
+- [Slack](team-collaboration/slack.md)

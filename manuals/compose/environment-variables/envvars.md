@@ -170,7 +170,7 @@ When enabled, Compose displays a navigation menu where you can choose to open th
 
 ### COMPOSE\_EXPERIMENTAL
 
-This is an opt-out variable. When turned off it deactivates the experimental features such as the navigation menu or [Synchronized file shares](../../../manuals/desktop/synchronized-file-sharing.md).
+This is an opt-out variable. When turned off it deactivates the experimental features such as the navigation menu or [Synchronized file shares](../../desktop/synchronized-file-sharing.md).
 
 * Supported values:
   * `true` or `1`, to enable,

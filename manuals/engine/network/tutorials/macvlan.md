@@ -11,7 +11,7 @@ This series of tutorials deals with networking standalone containers which
 connect to `macvlan` networks. In this type of network, the Docker host accepts
 requests for multiple MAC addresses at its IP address, and routes those requests
 to the appropriate container. For other networking topics, see the
-[overview](../../../manuals/engine/network/index.md).
+[overview](index.md).
 
 ## Goal
 
@@ -220,6 +220,6 @@ be physically attached to the network.
 
 ## Other networking tutorials
 
-- [Standalone networking tutorial](../../../manuals/engine/network/tutorials/standalone.md)
-- [Overlay networking tutorial](../../../manuals/engine/network/tutorials/overlay.md)
-- [Host networking tutorial](../../../manuals/engine/network/tutorials/host.md)
+- [Standalone networking tutorial](tutorials/standalone.md)
+- [Overlay networking tutorial](tutorials/overlay.md)
+- [Host networking tutorial](tutorials/host.md)

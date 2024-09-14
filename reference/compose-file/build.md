@@ -273,7 +273,7 @@ extra_hosts:
   - "myhostv6=[::1]"
 ```
 
-The separator `=` is preferred, but `:` can also be used. Introduced in Docker Compose version [2.24.1](../../../manuals/compose/release-notes.md#2241). For example:
+The separator `=` is preferred, but `:` can also be used. Introduced in Docker Compose version [2.24.1](../../manuals/compose/release-notes.md#2241). For example:
 
 ```yml
 extra_hosts:
@@ -508,7 +508,7 @@ build:
 ```
 
 The image builder can then rely on this to mount the SSH key during build.
-For more information, see the [`RUN --mount=type=ssh` Dockerfile reference](../../../reference/dockerfile.md#run---mounttypessh).
+For more information, see the [`RUN --mount=type=ssh` Dockerfile reference](../dockerfile.md#run---mounttypessh).
 
 ### shm_size
 

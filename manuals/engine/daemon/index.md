@@ -33,7 +33,7 @@ This page shows you how to customize the Docker daemon, `dockerd`.
 > [!NOTE]
 >
 > This page is for users who've installed Docker Engine manually. If you're
-> using Docker Desktop, refer to the [settings page](../../../manuals/desktop/settings.md#docker-engine).
+> using Docker Desktop, refer to the [settings page](../../desktop/settings.md#docker-engine).
 
 ## Configure the Docker daemon
 
@@ -122,8 +122,8 @@ to troubleshoot.
 Many specific configuration options are discussed throughout the Docker
 documentation. Some places to go next include:
 
-- [Automatically start containers](../../../manuals/engine/containers/start-containers-automatically.md)
-- [Limit a container's resources](../../../manuals/engine/containers/resource_constraints.md)
-- [Configure storage drivers](../../../manuals/engine/storage/drivers/select-storage-driver.md)
-- [Container security](../../../manuals/engine/security/index.md)
-- [Configure the Docker daemon to use a proxy](./proxy.md)
+- [Automatically start containers](../containers/start-containers-automatically.md)
+- [Limit a container's resources](../containers/resource_constraints.md)
+- [Configure storage drivers](../storage/drivers/select-storage-driver.md)
+- [Container security](../security/index.md)
+- [Configure the Docker daemon to use a proxy](proxy.md)

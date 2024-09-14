@@ -186,13 +186,13 @@ This section contains instructions on how to resolve common issues.
 ### Unknown runtime specified
 
 If you try to run a Wasm container without the [containerd image
-store](./containerd.md), an error similar to the following displays:
+store](containerd.md), an error similar to the following displays:
 
 ```text
 docker: Error response from daemon: Unknown runtime specified io.containerd.wasmedge.v1.
 ```
 
-[Turn on the containerd feature](./containerd.md#enable-the-containerd-image-store)
+[Turn on the containerd feature](containerd.md#enable-the-containerd-image-store)
 in Docker Desktop settings and try again.
 
 ### Failed to start shim: failed to resolve runtime path

@@ -18,7 +18,7 @@ First create a Jaeger container:
 $ docker run -d --name jaeger -p "6831:6831/udp" -p "16686:16686" --restart unless-stopped jaegertracing/all-in-one
 ```
 
-Then [create a `docker-container` builder](../../../manuals/build/builders/drivers/docker-container.md)
+Then [create a `docker-container` builder](../builders/drivers/docker-container.md)
 that will use the Jaeger instance via the `JAEGER_TRACE` environment variable:
 
 ```console

@@ -80,7 +80,7 @@ both individuals and organizations.
 3. Optimize image pulls by doing the following:
 
    - Use caching: Implement local image caching via
-     [mirroring](/docker-hub/mirror/index.md) or within your CI/CD pipelines to reduce
+     [mirroring](mirror.md) or within your CI/CD pipelines to reduce
      redundant pulls.
    - Automate manual workflows: Avoid unnecessary pulls by configuring automated
      systems to pull only when a new version of an image is available.
@@ -95,7 +95,7 @@ both individuals and organizations.
    following:
 
    - Routinely [view Docker Hub usage](#view-docker-hub-usage) to monitor usage.
-   - [Enforce sign-in](../../../manuals/security/for-admins/enforce-sign-in/index.md) to ensure that you
+   - [Enforce sign-in](../security/for-admins/enforce-sign-in/index.md) to ensure that you
      can monitor the usage of your users and users receive higher usage limits.
 
 ## Rate limit
@@ -231,7 +231,7 @@ organization. It could also mean that the user you are pulling as is part of a
 paid Docker plan. Pulling that image won’t count toward pull limits if you don’t
 see these headers. However, users with a paid Docker subscription pulling more
 than 5000 times daily require a [Service
-Account](../docker-hub/service-accounts.md) subscription.
+Account](service-accounts.md) subscription.
 
 ### I'm being limited to a lower rate even though I have a paid Docker subscription
 
@@ -275,15 +275,15 @@ the on-screen instructions to complete the sign-in process.
 
 If you're using a standalone version of Docker Engine, run the `docker login`
 command from a terminal to authenticate with Docker Hub. For information on how
-to use the command, see [docker login](../../../reference/cli/docker/login.md).
+to use the command, see [docker login](../../reference/cli/docker/login.md).
 
 ### Docker Swarm
 
 If you're running Docker Swarm, you must use the `--with-registry-auth` flag to
 authenticate with Docker Hub. For more information, see [Create a
-service](../../../reference/cli/docker/service/create.md#with-registry-auth). If you
+service](../../reference/cli/docker/service/create.md#with-registry-auth). If you
 are using a Docker Compose file to deploy an application stack, see [docker
-stack deploy](../../../reference/cli/docker/stack/deploy.md).
+stack deploy](../../reference/cli/docker/stack/deploy.md).
 
 ### GitHub Actions
 

@@ -26,7 +26,7 @@ resulting output only contains the files that's needed to run the application.
 Using multiple stages can also let you build more efficiently by executing
 build steps in parallel.
 
-See [Multi-stage builds](../../../manuals/build/building/multi-stage.md) for more
+See [Multi-stage builds](multi-stage.md) for more
 information.
 
 ### Create reusable stages
@@ -116,7 +116,7 @@ For example, to exclude all files with the `.md` extension:
 ```
 
 For information on creating one, see
-[Dockerignore file](../../../manuals/build/concepts/context.md#dockerignore-files).
+[Dockerignore file](../concepts/context.md#dockerignore-files).
 
 ## Create ephemeral containers
 
@@ -145,14 +145,14 @@ database, and an in-memory cache in a decoupled manner.
 
 Limiting each container to one process is a good rule of thumb, but it's not a
 hard and fast rule. For example, not only can containers be
-[spawned with an init process](../../../manuals/engine/containers/run.md#specify-an-init-process),
+[spawned with an init process](../../engine/containers/run.md#specify-an-init-process),
 some programs might spawn additional processes of their own accord. For
 instance, [Celery](https://docs.celeryproject.org/) can spawn multiple worker
 processes, and [Apache](https://httpd.apache.org/) can create one process per
 request.
 
 Use your best judgment to keep containers as clean and modular as possible. If
-containers depend on each other, you can use [Docker container networks](../../../manuals/engine/network/index.md)
+containers depend on each other, you can use [Docker container networks](../../engine/network/index.md)
 to ensure that these containers can communicate.
 
 ## Sort multi-line arguments
@@ -183,7 +183,7 @@ checks whether it can reuse the instruction from the build cache.
 Understanding how the build cache works, and how cache invalidation occurs,
 is critical for ensuring faster builds.
 For more information about the Docker build cache and how to optimize your builds,
-see [Docker build cache](../../../manuals/build/cache/index.md).
+see [Docker build cache](../cache/index.md).
 
 ## Pin base image versions
 
@@ -251,7 +251,7 @@ Scout, see
 ## Build and test your images in CI
 
 When you check in a change to source control or create a pull request, use
-[GitHub Actions](../ci/github-actions/) or another CI/CD pipeline to
+[GitHub Actions](../ci/github-actions/index.md) or another CI/CD pipeline to
 automatically build and tag a Docker image and test it.
 
 ## Dockerfile instructions
@@ -308,10 +308,10 @@ LABEL vendor=ACME\ Incorporated \
       com.example.release-date="2015-02-12"
 ```
 
-See [Understanding object labels](../../../manuals/engine/manage-resources/labels.md)
+See [Understanding object labels](../../engine/manage-resources/labels.md)
 for guidelines about acceptable label keys and values. For information about
 querying labels, refer to the items related to filtering in
-[Managing labels on objects](../../../manuals/engine/manage-resources/labels.md#manage-labels-on-objects).
+[Managing labels on objects](../../engine/manage-resources/labels.md#manage-labels-on-objects).
 See also [LABEL](../../../reference/dockerfile.md#label) in the Dockerfile reference.
 
 ### RUN
@@ -580,8 +580,8 @@ For more information about `ENV`, see [Dockerfile reference for the ENV instruct
 ### ADD or COPY
 
 `ADD` and `COPY` are functionally similar. `COPY` supports basic copying of
-files into the container, from the [build context](../../../manuals/build/concepts/context.md)
-or from a stage in a [multi-stage build](../../../manuals/build/building/multi-stage.md).
+files into the container, from the [build context](../concepts/context.md)
+or from a stage in a [multi-stage build](multi-stage.md).
 `ADD` supports features for fetching files from remote HTTPS and Git URLs, and
 extracting tar files automatically when adding files from the build context.
 
