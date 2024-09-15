@@ -238,5 +238,5 @@ Cada aspecto de um contêiner é executado em um _namespace_ separado e seu aces
 
 ## Próximos passos
 
-- [Instale o Docker](obtenha-o-docker)
-- [Comece a usar o Docker](../get-started/introduction)
+- [Instale o Docker](obtenha-o-docker.md)
+- [Comece a usar o Docker](../get-started/introduction/index.md)
