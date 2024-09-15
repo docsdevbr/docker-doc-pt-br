@@ -1,4 +1,9 @@
 ---
+source_url: https://github.com/docker/buildx/blob/master/docs/reference/buildx_build.md
+revision: 479177eaf93288633b0af23a4f3a831c511fdc27
+status: untranslated
+license: https://github.com/docker/buildx/blob/master/LICENSE
+
 datafolder: engine-cli
 datafile: docker_container_run
 linkTitle: docker run

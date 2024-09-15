@@ -12,7 +12,7 @@ aliases:
 
 > [!NOTE]
 >
-> You must have a [company](../../admin/company/index.md) to manage more than one organization.
+> You must have a [company](../../../../admin/company/index.md) to manage more than one organization.
 
 {{< tabs >}}
 {{< tab name="Admin Console" >}}

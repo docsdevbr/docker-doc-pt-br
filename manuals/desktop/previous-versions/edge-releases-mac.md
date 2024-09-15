@@ -81,7 +81,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
 
 ### New
 
-- If you have enabled [Vulnerability Scanning](/docker-hub/vulnerability-scanning/index.md) in Docker Hub, the scan results will now appear in Docker Desktop.
+- If you have enabled [Vulnerability Scanning](../../docker-hub/vulnerability-scanning.md) in Docker Hub, the scan results will now appear in Docker Desktop.
 
 ### Upgrades
 
@@ -268,7 +268,7 @@ the `--privileged` flag. See [docker/for-win#8326](https://github.com/docker/for
 - [Docker 19.03.12](https://github.com/docker/docker-ce/releases/tag/v19.03.12)
 - [Docker Compose 1.26.0](https://github.com/docker/compose/releases/tag/1.26.0)
 - [Kubernetes 1.18.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.18.3)
-- Beta release of the [Docker ACI integration](../../engine/context/aci-integration/index.md)
+- Beta release of the [Docker ACI integration](../../cloud/index.md)
 
 ### Bug fixes and minor changes
 
@@ -732,7 +732,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
   - Add an experimental SOCKS server to allow access to container networks, see [docker/for-mac#2670](https://github.com/docker/for-mac/issues/2670#issuecomment-372365274). Also see [docker/for-mac#2721](https://github.com/docker/for-mac/issues/2721)
 
 * Bug fixes and minor changes
-  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Preferences > Reset menu) before updating to the next major update. You can check documentation to [save images](../../../reference/cli/docker/image/save/index.md#examples) and [back up volumes](../../engine/storage/volumes.md#back-up-restore-or-migrate-data-volumes)
+  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Preferences > Reset menu) before updating to the next major update. You can check documentation to [save images](../../../reference/cli/docker/image/save.md#examples) and [back up volumes](../../engine/storage/volumes.md#back-up-restore-or-migrate-data-volumes)
   - Fix startup issue with AUFS [docker/for-mac#2804](https://github.com/docker/for-mac/issues/2804)
   - Fix status bug which could prevent the Kubernetes cluster from starting. Fixes [docker/for-mac#2990](https://github.com/docker/for-mac/issues/2990)
   - Fix bug which would cause virtual machine logs to be written to RAM rather than disk in some cases, and the virtual machine to hang. See [docker/for-mac#2984](https://github.com/docker/for-mac/issues/2984)
@@ -1125,7 +1125,7 @@ TCP connection is idle for more than five minutes (related to
 
 - Add daemon options validation
 - Diagnose can be cancelled & Improved help information. Fixes [docker/for-mac#1134](https://github.com/docker/for-mac/issues/1134), [docker/for-mac#1474](https://github.com/docker/for-mac/issues/1474)
-- Support paging of Docker Cloud [repositories](../../docker-hub/repos/) and [organizations](../../admin/organization/orgs.md). Fixes [docker/for-mac#1538](https://github.com/docker/for-mac/issues/1538)
+- Support paging of Docker Cloud [repositories](../../docker-hub/repos/index.md) and [organizations](../../admin/organization/orgs.md). Fixes [docker/for-mac#1538](https://github.com/docker/for-mac/issues/1538)
 
 ### Docker Community Edition 17.06.1-ce-mac20, 2017-07-18
 
@@ -1877,7 +1877,7 @@ events or unexpected unmounts.
 
 * Docker.app sometimes uses 200% CPU after macOS wakes up from sleep mode. The issue is being investigated. The workaround is to restart Docker.app
 
-* There are a number of issues with the performance of directories bind-mounted with `osxfs`.  In particular, writes of small blocks, and traversals of large directories are currently slow.  Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. For more information and workarounds, see [Known Issues](../troubleshoot/known-issues.md) in [Logs and Troubleshooting](../troubleshoot/).
+* There are a number of issues with the performance of directories bind-mounted with `osxfs`.  In particular, writes of small blocks, and traversals of large directories are currently slow.  Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. For more information and workarounds, see [Known Issues](../troubleshoot/known-issues.md) in [Logs and Troubleshooting](../troubleshoot/index.md).
 
 * Under some unhandled error conditions, `inotify` event delivery can fail and become permanently disabled. The workaround is to restart Docker.app
 

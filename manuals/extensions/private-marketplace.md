@@ -9,14 +9,14 @@ aliases:
 ---
 
 {{% experimental title="Beta" %}}
-This feature is currently in [Beta](../../release-lifecycle.md#beta). It is available to Docker Business customers only.
+This feature is currently in [Beta](../release-lifecycle.md#beta). It is available to Docker Business customers only.
 {{% /experimental %}}
 
 Learn how to configure and set up a private marketplace with a curated list of extensions for your Docker Desktop users.
 
 It is designed specifically
 
-Docker Extensions' private marketplace is designed specifically for organizations who don’t give developers root access to their machines. It makes use of [Settings Management](../../security/for-admins/hardened-desktop/settings-management/index.md) so administrators have complete control over the private marketplace.
+Docker Extensions' private marketplace is designed specifically for organizations who don’t give developers root access to their machines. It makes use of [Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md) so administrators have complete control over the private marketplace.
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ Each setting has a `value` that you can set, including a `locked` field that let
   }
   ```
 
-To find out more information about the `admin-settings.json` file, see [Settings Management](../../security/for-admins/hardened-desktop/settings-management/index.md).
+To find out more information about the `admin-settings.json` file, see [Settings Management](../security/for-admins/hardened-desktop/settings-management/index.md).
 
 ## Step three: List allowed extensions
 
@@ -179,7 +179,7 @@ It's recommended that you try the private marketplace on your Docker Desktop ins
 
 When you select the **Extensions** tab, you should see the private marketplace listing only the extensions you have allowed in `extensions.txt`.
 
-![Extensions Private Marketplace](/assets/images/extensions-private-marketplace.webp)
+![Extensions Private Marketplace](../../assets/img/extensions-private-marketplace.webp)
 
 ## Step six: Distribute the private marketplace
 
@@ -195,7 +195,7 @@ These files must be placed on developer's machines. Depending on your operating 
 - Windows: `C:\ProgramData\DockerDesktop`
 - Linux: `/usr/share/docker-desktop`
 
-Make sure your developers are signed in to Docker Desktop in order for the private marketplace configuration to take effect. As an administrator, you should [enforce sign-in](../../security/for-admins/enforce-sign-in/index.md).
+Make sure your developers are signed in to Docker Desktop in order for the private marketplace configuration to take effect. As an administrator, you should [enforce sign-in](../security/for-admins/enforce-sign-in/index.md).
 
 ## Feedback
 

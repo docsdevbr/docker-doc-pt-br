@@ -97,5 +97,5 @@ If the Docker registry is accessed without a port number, do not add the port to
 
 ## Related information
 
-* [Use trusted images](trust/)
+* [Use trusted images](trust/index.md)
 * [Protect the Docker daemon socket](protect-access.md)

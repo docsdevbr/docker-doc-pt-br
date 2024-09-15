@@ -10,7 +10,7 @@ aliases:
 
 This series of tutorials deals with networking for swarm services.
 For networking with standalone containers, see
-[Networking with standalone containers](tutorials/standalone.md). If you need to
+[Networking with standalone containers](../tutorials/standalone.md). If you need to
 learn more about Docker networking in general, see the [overview](index.md).
 
 This page includes the following tutorials. You can run each of them on
@@ -60,7 +60,7 @@ If you don't have three hosts handy, an easy solution is to set up three
 Ubuntu hosts on a cloud provider such as Amazon EC2, all on the same network
 with all communications allowed to all hosts on that network (using a mechanism
 such as EC2 security groups), and then to follow the
-[installation instructions for Docker Engine - Community on Ubuntu](../install/ubuntu.md).
+[installation instructions for Docker Engine - Community on Ubuntu](../../install/ubuntu.md).
 
 ### Walkthrough
 
@@ -399,7 +399,7 @@ example also uses Linux hosts, but the same commands work on Windows.
     The two containers communicate with the overlay network connecting the two
     hosts. If you run another alpine container on `host2` that is _not detached_,
     you can ping `alpine1` from `host2` (and here we add the
-    [remove option](../../../reference/cli/docker/container/run/index.md#rm) for automatic container cleanup):
+    [remove option](../../../../reference/cli/docker/container/run.md#rm) for automatic container cleanup):
 
     ```sh
     $ docker run -it --rm --name alpine3 --network test-net alpine
@@ -437,6 +437,6 @@ example also uses Linux hosts, but the same commands work on Windows.
 
 ## Other networking tutorials
 
-- [Host networking tutorial](tutorials/host.md)
-- [Standalone networking tutorial](tutorials/standalone.md)
-- [Macvlan networking tutorial](tutorials/macvlan.md)
+- [Host networking tutorial](../tutorials/host.md)
+- [Standalone networking tutorial](../tutorials/standalone.md)
+- [Macvlan networking tutorial](../tutorials/macvlan.md)

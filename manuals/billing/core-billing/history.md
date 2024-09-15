@@ -72,11 +72,11 @@ From here you can download an invoice.
 
 > [!NOTE]
 >
-> You must be an owner of the organization to view the billing history. 
+> You must be an owner of the organization to view the billing history.
 
 1. Select your avatar in the top-right corner of Docker Hub.
 2. From the drop-down menu select **Billing**.
-3. Select the organization that you want to change the payment method for. 
+3. Select the organization that you want to change the payment method for.
 4. Select the **Payment methods and billing history** link.
     You can find your past invoices in the **Invoice History** section.
 

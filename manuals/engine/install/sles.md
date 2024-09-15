@@ -128,7 +128,7 @@ $ sudo zypper addrepo {{% param "download-url-base" %}}/docker-ce.repo
 
    This command installs Docker, but it doesn't start Docker. It also creates a
    `docker` group, however, it doesn't add any users to the group by default.
-  
+
    {{< /tab >}}
    {{< tab name="Specific version" >}}
 
@@ -137,7 +137,7 @@ $ sudo zypper addrepo {{% param "download-url-base" %}}/docker-ce.repo
 
    ```console
    $ sudo zypper search -s --match-exact docker-ce | sort -r
- 
+
      v  | docker-ce | package | 3:27.0.3-1 | s390x | Docker CE Stable - s390x
      v  | docker-ce | package | 3:27.0.2-1 | s390x | Docker CE Stable - s390x
    ```
@@ -158,7 +158,7 @@ $ sudo zypper addrepo {{% param "download-url-base" %}}/docker-ce.repo
 
    This command installs Docker, but it doesn't start Docker. It also creates a
    `docker` group, however, it doesn't add any users to the group by default.
-  
+
    {{< /tab >}}
    {{< /tabs >}}
 

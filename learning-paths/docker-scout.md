@@ -138,7 +138,7 @@ The following container registry integrations are available:
 - Amazon Elastic Container Registry
 - Azure Container Registry
 
-Learn more about configuring Scout with your registries in [Integrating Docker Scout with third-party registries](/scout/integrations/index.md#container-registries).
+Learn more about configuring Scout with your registries in [Integrating Docker Scout with third-party registries](../manuals/scout/integrations/index.md#container-registries).
 
 ### Does Docker Scout CLI come by default with Docker Desktop?
 
@@ -147,12 +147,12 @@ Yes, the Docker Scout CLI plugin comes pre-installed with Docker Desktop.
 ### Is it possible to run `docker scout` commands on a Linux system without Docker Desktop?
 
 If you run Docker Engine without Docker Desktop, Docker Scout doesn't come
-pre-installed, but you can [install it as a standalone binary](/scout/install/index.md).
+pre-installed, but you can [install it as a standalone binary](../manuals/scout/install.md).
 
 ### How is Docker Scout using an SBOM?
 
 An SBOM, or software bill of materials, is a list of ingredients that make up
-software components. [Docker Scout uses SBOMs](/scout/concepts/sbom/index.md) to
+software components. [Docker Scout uses SBOMs](../manuals/scout/concepts/sbom.md) to
 determine the components that are used in a Docker image. When you analyze an
 image, Docker Scout will either use the SBOM that is attached to the image (as
 an attestation), or generate an SBOM on the fly by analyzing the contents of
@@ -165,10 +165,10 @@ the components in the image have known vulnerabilities.
 
 {{< accordion large=true title=`Resources` icon=`link` >}}
 
-- [Docker Scout overview](/scout/index.md)
-- [Docker Scout quickstart](/scout/quickstart/index.md)
-- [Install Docker Scout](/scout/install/index.md)
-- [Software Bill of Materials](/scout/concepts/sbom/index.md)
+- [Docker Scout overview](../manuals/scout/index.md)
+- [Docker Scout quickstart](../manuals/scout/quickstart.md)
+- [Install Docker Scout](../manuals/scout/install.md)
+- [Software Bill of Materials](../manuals/scout/concepts/sbom.md)
 
 <!-- vale Docker.HeadingLength = YES -->
 

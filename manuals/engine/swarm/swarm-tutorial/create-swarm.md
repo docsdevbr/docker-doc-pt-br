@@ -11,7 +11,7 @@ to create a swarm. Make sure the Docker Engine daemon is started on the host
 machines.
 
 1.  Open a terminal and ssh into the machine where you want to run your manager
-    node. This tutorial uses a machine named `manager1`. 
+    node. This tutorial uses a machine named `manager1`.
 
 2.  Run the following command to create a new swarm:
 
@@ -79,6 +79,6 @@ machines.
 
 ## Next steps
 
-Next, you'll add two more nodes to the cluster. 
+Next, you'll add two more nodes to the cluster.
 
 {{< button text="Add two more nodes" url="add-nodes.md" >}}

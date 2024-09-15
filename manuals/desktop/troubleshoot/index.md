@@ -64,7 +64,7 @@ This opens a new in-app page and starts collecting the diagnostics.
     - If you have a paid Docker subscription, select **Contact support** from the **Troubleshooting** menu. This opens the Docker Desktop support form. Fill in the information required. Your diagnostics ID is gathered automatically. Then, select **Submit ticket** to request Docker Desktop support.
         > [!NOTE]
         >
-        > You must be signed in to Docker Desktop to access the support form. For information on what's covered as part of Docker Desktop support, see [Support](../../support/).
+        > You must be signed in to Docker Desktop to access the support form. For information on what's covered as part of Docker Desktop support, see [Support](../../support.md).
     - If you don't have a paid Docker subscription, follow the GitHub repository link to open a new Docker Desktop issue on GitHub. Complete the information required on the GitHub issue and ensure you add the diagnostic ID printed in step two.
 
 ### Diagnose from an error message
@@ -75,7 +75,7 @@ This opens a new in-app page and starts collecting the diagnostics.
     - Select **Contact support** from the **Troubleshooting** menu. This opens the Docker Desktop support form. Fill in the information required. Your diagnostics ID is gathered automatically. Then, select **Submit ticket** to request Docker Desktop support.
         > [!NOTE]
         >
-        > You must be signed in to Docker Desktop to access the support form. For information on what's covered as part of Docker Desktop support, see [Support](../../support/).
+        > You must be signed in to Docker Desktop to access the support form. For information on what's covered as part of Docker Desktop support, see [Support](../../support.md).
     - If you don't have a paid Docker subscription, you can open a new Docker Desktop issue on GitHub for [Mac](https://github.com/docker/for-mac/issues), [Windows](https://github.com/docker/for-win/issues), or [Linux](https://github.com/docker/for-linux/issues). Complete the information required and ensure you add the diagnostic ID printed in step two.
 
 ### Diagnose from the terminal

@@ -6,7 +6,7 @@ keywords: ci, github actions, gha, buildkit, buildx, attestations, sbom, provena
 ---
 
 Software Bill of Material (SBOM) and provenance
-[attestations](../../metadata/attestations/) add metadata about the contents of
+[attestations](../../metadata/attestations/index.md) add metadata about the contents of
 your image, and how it was built.
 
 Attestations are supported with version 4 and later of the
@@ -34,7 +34,7 @@ attestations to your image, with the following conditions:
 > arguments to pass secrets to your build, such as user credentials or
 > authentication tokens, those secrets are exposed in the provenance
 > attestation. Refactor your build to pass those secrets using
-> [secret mounts](../../../reference/cli/docker/buildx/build.md#secret)
+> [secret mounts](../../../../reference/cli/docker/buildx/build.md#secret)
 > instead. Also remember to rotate any secrets you may have exposed.
 
 ## Max-level provenance

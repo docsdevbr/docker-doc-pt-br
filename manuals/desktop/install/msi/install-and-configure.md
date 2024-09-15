@@ -176,24 +176,24 @@ msiexec /x "DockerDesktop.msi" /quiet
 >
 > In addition to the following custom properties, the Docker Desktop MSI installer also supports the standard [Windows Installer command line options](https://learn.microsoft.com/en-us/windows/win32/msi/standard-installer-command-line-options).
 
-| Property | Description | Default |
-| :--- | :--- | :--- |
-| `ENABLEDESKTOPSHORTCUT` | Creates a desktop shortcut. | 1 |
-| `INSTALLFOLDER` | Specifies a custom location where Docker Desktop will be installed. | C:\Program Files\Docker |
-| `ADMINSETTINGS` | Automatically creates an `admin-settings.json` file which is used to [control certain Docker Desktop settings](../../security/for-admins/hardened-desktop/settings-management/index.md) on client machines within organizations. It must be used together with the `ALLOWEDORG` property. | None |
-| `ALLOWEDORG` | Requires the user to sign in and be part of the specified Docker Hub organization when running the application. This creates a registry key called `allowedOrgs` in `HKLM\Software\Policies\Docker\Docker Desktop`. | None |
-| `ALWAYSRUNSERVICE` | Lets users switch to Windows containers without needing admin rights | 0 |
-| `DISABLEWINDOWSCONTAINERS` | Disables the Windows containers integration | 0 |
-| `ENGINE` | Sets the Docker Engine that's used to run containers. This can be either `wsl` , `hyperv`, or `windows` | `wsl` |
-| `PROXYENABLEKERBEROSNTLM` | When set to 1, enables support for Kerberos and NTLM proxy authentication. Available with Docker Desktop 4.33 and later| 0 |
-| `PROXYHTTPMODE` | Sets the HTTP Proxy mode. This can be either `system` or `manual` | `system` |
-| `OVERRIDEPROXYHTTP` | Sets the URL of the HTTP proxy that must be used for outgoing HTTP requests. | None |
-| `OVERRIDEPROXYHTTPS` | Sets the URL of the HTTP proxy that must be used for outgoing HTTPS requests. | None |
-| `OVERRIDEPROXYEXCLUDE` | Bypasses proxy settings for the hosts and domains. Uses a comma-separated list. | None |
-| `HYPERVDEFAULTDATAROOT` | Specifies the default location for the Hyper-V VM disk. | None |
-| `WINDOWSCONTAINERSDEFAULTDATAROOT` | Specifies the default location for Windows containers. | None |
-| `WSLDEFAULTDATAROOT` | Specifies the default location for the WSL distribution disk. | None |
-| `DISABLEANALYTICS` | When set to 1, analytics collection will be disabled for the MSI. For more information, see [Analytics](#analytics). | 0 |
+| Property | Description                                                                                                                                                                                                                                                                                  | Default |
+| :--- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :--- |
+| `ENABLEDESKTOPSHORTCUT` | Creates a desktop shortcut.                                                                                                                                                                                                                                                                  | 1 |
+| `INSTALLFOLDER` | Specifies a custom location where Docker Desktop will be installed.                                                                                                                                                                                                                          | C:\Program Files\Docker |
+| `ADMINSETTINGS` | Automatically creates an `admin-settings.json` file which is used to [control certain Docker Desktop settings](../../../security/for-admins/hardened-desktop/settings-management/index.md) on client machines within organizations. It must be used together with the `ALLOWEDORG` property. | None |
+| `ALLOWEDORG` | Requires the user to sign in and be part of the specified Docker Hub organization when running the application. This creates a registry key called `allowedOrgs` in `HKLM\Software\Policies\Docker\Docker Desktop`.                                                                          | None |
+| `ALWAYSRUNSERVICE` | Lets users switch to Windows containers without needing admin rights                                                                                                                                                                                                                         | 0 |
+| `DISABLEWINDOWSCONTAINERS` | Disables the Windows containers integration                                                                                                                                                                                                                                                  | 0 |
+| `ENGINE` | Sets the Docker Engine that's used to run containers. This can be either `wsl` , `hyperv`, or `windows`                                                                                                                                                                                      | `wsl` |
+| `PROXYENABLEKERBEROSNTLM` | When set to 1, enables support for Kerberos and NTLM proxy authentication. Available with Docker Desktop 4.33 and later                                                                                                                                                                      | 0 |
+| `PROXYHTTPMODE` | Sets the HTTP Proxy mode. This can be either `system` or `manual`                                                                                                                                                                                                                            | `system` |
+| `OVERRIDEPROXYHTTP` | Sets the URL of the HTTP proxy that must be used for outgoing HTTP requests.                                                                                                                                                                                                                 | None |
+| `OVERRIDEPROXYHTTPS` | Sets the URL of the HTTP proxy that must be used for outgoing HTTPS requests.                                                                                                                                                                                                                | None |
+| `OVERRIDEPROXYEXCLUDE` | Bypasses proxy settings for the hosts and domains. Uses a comma-separated list.                                                                                                                                                                                                              | None |
+| `HYPERVDEFAULTDATAROOT` | Specifies the default location for the Hyper-V VM disk.                                                                                                                                                                                                                                      | None |
+| `WINDOWSCONTAINERSDEFAULTDATAROOT` | Specifies the default location for Windows containers.                                                                                                                                                                                                                                       | None |
+| `WSLDEFAULTDATAROOT` | Specifies the default location for the WSL distribution disk.                                                                                                                                                                                                                                | None |
+| `DISABLEANALYTICS` | When set to 1, analytics collection will be disabled for the MSI. For more information, see [Analytics](#analytics).                                                                                                                                                                         | 0 |
 
 
 Additionally, you can also use `/norestart` or `/forcerestart` to control reboot behaviour.

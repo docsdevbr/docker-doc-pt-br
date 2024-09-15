@@ -15,7 +15,7 @@ Engine.
 There are two types of nodes: [managers](#manager-nodes) and
 [workers](#worker-nodes).
 
-![Swarm mode cluster](images/swarm-diagram.webp)
+![Swarm mode cluster](../images/swarm-diagram.webp)
 
 If you haven't already, read through the
 [Swarm mode overview](../index.md) and
@@ -27,7 +27,7 @@ Manager nodes handle cluster management tasks:
 
 * Maintaining cluster state
 * Scheduling services
-* Serving Swarm mode [HTTP API endpoints](../../../reference/api/engine/index.md)
+* Serving Swarm mode [HTTP API endpoints](../../../../reference/api/engine/index.md)
 
 Using a [Raft](https://raft.github.io/raft.pdf) implementation, the managers
 maintain a consistent internal state of the entire swarm and all the services
@@ -68,17 +68,17 @@ gracefully stops tasks on nodes in `Drain` mode and schedules the tasks on an
 `Active` node. The scheduler does not assign new tasks to nodes with `Drain`
 availability.
 
-Refer to the [`docker node update`](../../../reference/cli/docker/node/update.md)
+Refer to the [`docker node update`](../../../../reference/cli/docker/node/update.md)
 command line reference to see how to change node availability.
 
 ## Change roles
 
 You can promote a worker node to be a manager by running `docker node promote`.
 For example, you may want to promote a worker node when you
-take a manager node offline for maintenance. See [node promote](../../../reference/cli/docker/node/promote.md).
+take a manager node offline for maintenance. See [node promote](../../../../reference/cli/docker/node/promote.md).
 
 You can also demote a manager node to a worker node. See
-[node demote](../../../reference/cli/docker/node/demote.md).
+[node demote](../../../../reference/cli/docker/node/demote.md).
 
 
 ## Learn more

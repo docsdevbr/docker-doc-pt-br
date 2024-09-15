@@ -282,7 +282,7 @@ the `--privileged` flag. See [docker/for-win#8326](https://github.com/docker/for
 - [Docker 19.03.12](https://github.com/docker/docker-ce/releases/tag/v19.03.12)
 - [Docker Compose 1.26.0](https://github.com/docker/compose/releases/tag/1.26.0)
 - [Kubernetes 1.18.3](https://github.com/kubernetes/kubernetes/releases/tag/v1.18.3)
-- Beta release of the [Docker ACI integration](../../engine/context/aci-integration/index.md)
+- Beta release of the [Docker ACI integration](../../cloud/index.md)
 
 ### Bug fixes and minor changes
 
@@ -623,7 +623,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
 
   To access the Dashboard UI, select the Docker menu from the system tray and then click **Dashboard**.
 
-- **WSL 2 backend:** The new Docker Desktop WSL 2 backend replaces the Docker Desktop WSL 2 Tech Preview. The WSL 2 backend architecture introduces support for Kubernetes, provides an updated Docker daemon, offers VPN-friendly networking, and additional features. For more information, see [Docker Desktop WSL 2 backend](../wsl/).
+- **WSL 2 backend:** The new Docker Desktop WSL 2 backend replaces the Docker Desktop WSL 2 Tech Preview. The WSL 2 backend architecture introduces support for Kubernetes, provides an updated Docker daemon, offers VPN-friendly networking, and additional features. For more information, see [Docker Desktop WSL 2 backend](../wsl/index.md).
 
 - **New file sharing implementation:** Docker Desktop introduces a new file sharing implementation which uses gRPC, FUSE, and Hypervisor sockets instead of Samba, CIFS, and Hyper-V networking. The new implementation  offers improved I/O performance. Additionally, when using the new file system:
 
@@ -698,7 +698,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
 
 #### New
 
-- [Docker Desktop WSL 2 Tech Preview](../wsl/)
+- [Docker Desktop WSL 2 Tech Preview](../wsl/index.md)
 
 #### Bug fixes and minor changes
 
@@ -953,7 +953,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
   - New Kubernetes menu item allowing to switch Kubernetes context & connect to clusters other than the local one.
 
 * Bug fixes and minor changes
-  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Settings > Reset menu) before updating to the next major update. You can check documentation to [save images](../../../reference/cli/docker/image/save/index.md#examples) and [back up volumes](../../engine/storage/volumes.md#back-up-restore-or-migrate-data-volumes)
+  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Settings > Reset menu) before updating to the next major update. You can check documentation to [save images](../../../reference/cli/docker/image/save.md#examples) and [back up volumes](../../engine/storage/volumes.md#back-up-restore-or-migrate-data-volumes)
   - Fix startup issue with AUFS
   - Fix status bug which could prevent the kubernetes cluster from starting.
   - Fix bug which would cause VM logs to be written to RAM rather than disk in some cases, and the VM to hang.
@@ -2274,7 +2274,7 @@ This Beta release includes some significant changes:
 * The GUI now runs in non-elevated mode and connects to an elevated Windows service
 * Allocate virtual machine memory by 256 MB increments, instead of 1 GB
 * Show a meaningful error when the user has an empty password
-* Improved [Troubleshooting](../troubleshoot/) page
+* Improved [Troubleshooting](../troubleshoot/index.md) page
 
 **Upgrades**
 
@@ -2326,7 +2326,7 @@ This Beta release includes some significant changes:
 
 **Known issues**
 
-*  Due to limitation in the Windows NAT implementation, co-existence with other NAT prefixes needs to be carefully managed. See [Troubleshooting](../troubleshoot/) for more details.
+*  Due to limitation in the Windows NAT implementation, co-existence with other NAT prefixes needs to be carefully managed. See [Troubleshooting](../troubleshoot/index.md) for more details.
 
 
 ### Beta 9 Release (2016-04-26 1.11.0-beta9)

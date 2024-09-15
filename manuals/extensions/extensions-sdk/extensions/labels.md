@@ -14,7 +14,7 @@ This information is then displayed as an overview of the extension, so users can
 
 ![An extension overview, generated from labels](images/marketplace-details.png)
 
-You can define [image labels](../../../reference/dockerfile.md#label) in the extension's `Dockerfile`.
+You can define [image labels](../../../../reference/dockerfile.md#label) in the extension's `Dockerfile`.
 
 > [!IMPORTANT]
 >
@@ -42,7 +42,7 @@ Here is the list of labels you can or need to specify when building your extensi
 >
 > Docker Desktop applies CSS styles to the provided HTML content. You can make sure that it renders correctly
 > [within the Marketplace](#preview-the-extension-in-the-marketplace). It is recommended that you follow the
-> [styling guidelines](../design/).
+> [styling guidelines](../design/index.md).
 
 ## Preview the extension in the Marketplace
 

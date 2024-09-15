@@ -32,7 +32,7 @@ Either build or pull the image, and then run the evaluation.
 To run policy evaluation and trigger failure if compliance for your local image
 is worse than your comparison baseline, you need to specify the image version
 to use as a baseline. You can hard-code a specific image reference, but a
-better solution is to use [environments](../integrations/environment/)
+better solution is to use [environments](../integrations/environment/index.md)
 to automatically infer the image version from an environment. The example that
 follows uses environments to compare the CI image with the image in the
 `production` environment.

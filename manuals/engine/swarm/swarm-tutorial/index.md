@@ -48,7 +48,7 @@ workers (`worker1` and `worker2`).
 #### Install Docker Engine on Linux machines
 
 If you are using Linux based physical computers or cloud-provided computers as
-hosts, simply follow the [Linux install instructions](../../install/)
+hosts, simply follow the [Linux install instructions](../../install/index.md)
 for your platform. Spin up the three machines, and you are ready. You can test both
 single-node and multi-node swarm scenarios on Linux machines.
 

@@ -477,6 +477,6 @@ preferred because it is somewhat self-documenting.
 
 * [Deploy services to a swarm](services.md)
 * [Swarm administration guide](admin_guide.md)
-* [Swarm mode tutorial](swarm-tutorial/)
+* [Swarm mode tutorial](swarm-tutorial/index.md)
 * [Networking overview](../network/index.md)
 * [Docker CLI reference](../../../reference/cli/docker/index.md)

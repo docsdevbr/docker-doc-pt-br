@@ -32,7 +32,7 @@ default, then allowlists specific system calls. The profile works by defining a
 system calls. The effect of `SCMP_ACT_ERRNO` is to cause a `Permission Denied`
 error. Next, the profile defines a specific list of system calls which are fully
 allowed, because their `action` is overridden to be `SCMP_ACT_ALLOW`. Finally,
-some specific rules are for individual system calls such as `personality`, and others, 
+some specific rules are for individual system calls such as `personality`, and others,
 to allow variants of those system calls with specific arguments.
 
 `seccomp` is instrumental for running Docker containers with least privilege. It

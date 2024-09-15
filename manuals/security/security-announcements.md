@@ -24,7 +24,7 @@ We strongly encourage you to update to Docker Desktop [4.34.2](https://docs.dock
 
 _Last updated July, 2024_
 
-When [SSO enforcement](../for-admins/single-sign-on/connect/index.md#optional-enforce-sso) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](../for-admins/single-sign-on/index.md#prerequisites) in anticipation of this grace period ending.
+When [SSO enforcement](for-admins/single-sign-on/connect/index.md#optional-enforce-sso) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](for-admins/single-sign-on/index.md#prerequisites) in anticipation of this grace period ending.
 
 On September 16, 2024 the grace period will end and passwords will no longer be able to authenticate to Docker Hub via the Docker CLI when SSO is enforced. Affected users are required to switch over to using PATs to continue signing in.
 
@@ -54,16 +54,16 @@ If you are using affected versions of runc, BuildKit, Moby, or Docker Desktop, m
 | `runc`                 | >= [1.1.12](https://github.com/opencontainers/runc/releases/tag/v1.1.12)                 |
 | `BuildKit`             | >= [0.12.5](https://github.com/moby/buildkit/releases/tag/v0.12.5)                 |
 | `Moby (Docker Engine)` | >= [25.0.2](https://github.com/moby/moby/releases/tag/v25.0.2) and >= [24.0.9](https://github.com/moby/moby/releases/tag/v24.0.9)   |
-| `Docker Desktop`       | >= [4.27.1](../../desktop/release-notes.md#4271)                 |
+| `Docker Desktop`       | >= [4.27.1](../desktop/release-notes.md#4271)                 |
 
 
 If you are unable to update to an unaffected version promptly, follow these best practices to mitigate risk:
 
-* Only use trusted Docker images (such as [Docker Official Images](../trusted-content/official-images/)).
+* Only use trusted Docker images (such as [Docker Official Images](../trusted-content/official-images/index.md)).
 * Don’t build Docker images from untrusted sources or untrusted Dockerfiles.
-* If you are a Docker Business customer using Docker Desktop and unable to update to v4.27.1, make sure to enable [Hardened Docker Desktop](../for-admins/hardened-desktop/index.md) features such as:
-  * [Enhanced Container Isolation](../for-admins/hardened-desktop/enhanced-container-isolation/index.md), which mitigates the impact of CVE-2024-21626 in the case of running containers from malicious images.
-  * [Image Access Management](for-admins/hardened-desktop/image-access-management.md), and [Registry Access Management](../for-admins/hardened-desktop/registry-access-management.md), which give organizations control over which images and repositories their users can access.
+* If you are a Docker Business customer using Docker Desktop and unable to update to v4.27.1, make sure to enable [Hardened Docker Desktop](for-admins/hardened-desktop/index.md) features such as:
+  * [Enhanced Container Isolation](for-admins/hardened-desktop/enhanced-container-isolation/index.md), which mitigates the impact of CVE-2024-21626 in the case of running containers from malicious images.
+  * [Image Access Management](for-admins/hardened-desktop/image-access-management.md), and [Registry Access Management](for-admins/hardened-desktop/registry-access-management.md), which give organizations control over which images and repositories their users can access.
 * For CVE-2024-23650, CVE-2024-23651, CVE-2024-23652, and CVE-2024-23653, avoid using BuildKit frontend from an untrusted source. A frontend image is usually specified as the #syntax line on your Dockerfile, or with `--frontend` flag when using the `buildctl build` command.
 * To mitigate CVE-2024-24557, make sure to either use BuildKit or disable caching when building images. From the CLI this can be done via the `DOCKER_BUILDKIT=1` environment variable (default for Moby >= v23.0 if the buildx plugin is installed) or the `--no-cache flag`. If you are using the http API directly or through a client, the same can be done by setting `nocache` to `true` or `version` to `2` for the [/build API endpoint](https://docs.docker.com/engine/api/v1.44/#tag/Image/operation/ImageBuild).
 
@@ -111,7 +111,7 @@ _The issue has been fixed in Moby >= v25.0.2 and >= v24.0.9._
 
 Docker Desktop v4.27.0 and earlier are affected. Docker Desktop v4.27.1 was released on February 1 and includes runc, BuildKit, and dockerd binaries patches. In addition to updating to this new version, we encourage all Docker users to diligently use Docker images and Dockerfiles and ensure you only use trusted content in your builds.
 
-As always, you should check Docker Desktop system requirements for your operating system ([Windows](../../desktop/install/windows-install.md#system-requirements), [Linux](../../desktop/install/linux/index.md#general-system-requirements), [Mac](../../desktop/install/mac-install.md#system-requirements)) before updating to ensure full compatibility.
+As always, you should check Docker Desktop system requirements for your operating system ([Windows](../desktop/install/windows-install.md#system-requirements), [Linux](../desktop/install/linux/index.md#general-system-requirements), [Mac](../desktop/install/mac-install.md#system-requirements)) before updating to ensure full compatibility.
 
 #### Docker Build Cloud
 
@@ -149,7 +149,7 @@ the Text4Shell CVE in the vulnerability report. For detailed instructions, see [
 
 ### Docker Official Images impacted by CVE-2022-42889
 
-A number of [Docker Official Images](../trusted-content/official-images/) contain the vulnerable versions of
+A number of [Docker Official Images](../trusted-content/official-images/index.md) contain the vulnerable versions of
 Apache Commons Text. The following lists Docker Official Images that
 may contain the vulnerable versions of Apache Commons Text:
 
@@ -201,7 +201,7 @@ Log4j 2 CVE in the vulnerability report. For detailed instructions, see [Scan im
 
 _Last updated December 2021_
 
-A number of [Docker Official Images](../trusted-content/official-images/) contain the vulnerable versions of
+A number of [Docker Official Images](../trusted-content/official-images/index.md) contain the vulnerable versions of
 Log4j 2 CVE-2021-44228. The following table lists Docker Official Images that
 may contained the vulnerable versions of Log4j 2. We updated Log4j 2 in these images to the latest version. Some of these images may not be
 vulnerable for other reasons. We recommend that you also review the guidelines published on the upstream websites.

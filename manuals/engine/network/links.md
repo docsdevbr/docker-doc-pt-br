@@ -10,7 +10,7 @@ aliases:
 ---
 
 >**Warning**
-> 
+>
 >The `--link` flag is a legacy feature of Docker. It may eventually
 be removed. Unless you absolutely need to continue using it, we recommend that you use
 user-defined networks to facilitate communication between two containers instead of using

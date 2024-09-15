@@ -49,13 +49,13 @@ For more information, see [Docker Engine Python SDK reference](https://docker-py
 ## View the API reference
 
 You can
-[view the reference for the latest version of the API](../../../reference/api/engine/latest/index.md)
-or [choose a specific version](../../../reference/api/engine/version-history/index.md).
+[view the reference for the latest version of the API](../../../api/engine/latest.md)
+or [choose a specific version](../../../reference/api/engine/version-history.md).
 
 ## Versioned API and SDK
 
 The version of the Docker Engine API you should use depends on the version of
-your Docker daemon and Docker client. See the [versioned API and SDK](../../../reference/api/engine/index.md#versioned-api-and-sdk)
+your Docker daemon and Docker client. See the [versioned API and SDK](../../../api/engine/index.md#versioned-api-and-sdk)
 section in the API documentation for details.
 
 ## SDK and API quickstart
@@ -63,7 +63,7 @@ section in the API documentation for details.
 Use the following guidelines to choose the SDK or API version to use in your
 code:
 
-- If you're starting a new project, use the [latest version](../../../reference/api/engine/latest/index.md),
+- If you're starting a new project, use the [latest version](../../../api/engine/latest.md),
   but use API version negotiation or specify the version you are using. This
   helps prevent surprises.
 - If you need a new feature, update your code to use at least the minimum version

@@ -12,7 +12,7 @@ weight: 40
 
 > [!NOTE]
 >
-> Image Access Management is available to [Docker Business](../../subscription/core-subscription/details.md#docker-business) customers only.
+> Image Access Management is available to [Docker Business](../../../subscription/core-subscription/details.md#docker-business) customers only.
 
 Image Access Management gives administrators control over which types of images, such as Docker Official Images, Docker Verified Publisher Images, or community images, their developers can pull from Docker Hub.
 
@@ -20,7 +20,7 @@ For example, a developer, who is part of an organization, building a new contain
 
 ## Prerequisites
 
-You need to [enforce sign-in](../enforce-sign-in/). For Image Access
+You need to [enforce sign-in](../enforce-sign-in/index.md). For Image Access
 Management to take effect, Docker Desktop users must authenticate to your
 organization. Enforcing sign-in ensures that your Docker Desktop developers
 always authenticate to your organization, even though they can authenticate

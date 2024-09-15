@@ -173,7 +173,7 @@ Getting CA Private Key
 Enter pass phrase for ca-key.pem:
 ```
 
-[Authorization plugins](../extend/plugins_authorization/index.md) offer more
+[Authorization plugins](../extend/plugins_authorization.md) offer more
 fine-grained control to supplement authentication from mutual TLS. In addition
 to other information described in the above document, authorization plugins
 running on a Docker daemon receive the certificate information for connecting
@@ -347,4 +347,4 @@ $ curl https://$HOST:2376/images/json \
 ## Related information
 
 * [Using certificates for repository client verification](certificates.md)
-* [Use trusted images](trust/)
+* [Use trusted images](trust/index.md)

@@ -36,7 +36,7 @@ $ docker buildx build --push --platform=linux/amd64,linux/arm64 --tag=username/m
 ```
 
 You can then check the image manifest to see if the image is available for both
-architectures using the [`docker buildx imagetools` command](../../../reference/cli/docker/buildx/imagetools/index.md):
+architectures using the [`docker buildx imagetools` command](../../../../reference/cli/docker/buildx/imagetools/index.md):
 
 ```console
 $ docker buildx imagetools inspect username/my-extension:0.0.1
@@ -58,7 +58,7 @@ Manifests:
 >
 > If you're having trouble pushing the image, make sure you're signed in to Docker Hub. Otherwise, run `docker login` to authenticate.
 
-For more information, see [Multi-platform images](../../build/building/multi-platform.md) page.
+For more information, see [Multi-platform images](../../../build/building/multi-platform.md) page.
 
 ## Adding multi-arch binaries
 

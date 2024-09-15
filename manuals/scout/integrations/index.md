@@ -57,7 +57,7 @@ The following environment monitoring integrations are available
 - [Sysdig](environment/sysdig.md)
 
 For more information about environment integrations, see
-[Environments](environment/).
+[Environments](environment/index.md).
 
 ### Code quality
 
@@ -73,7 +73,7 @@ you've enabled the integration.
 
 The following code quality integrations are available:
 
-- [SonarQube](sonarqube.md)
+- [SonarQube](code-quality/sonarqube.md)
 
 ### Source code management
 

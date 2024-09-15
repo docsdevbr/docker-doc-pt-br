@@ -93,7 +93,7 @@ the Azure resources.
 7. Wait until the deployment is complete.
 8. In the **Deployment details** section click on the newly created resource
     of the type **Container registry token**. Generate a new password for this token.
-    
+
     Alternatively, use the search function in Azure to navigate to the
     **Container registry** resource that you're looking to integrate, and
     generate the new password for the created access token.

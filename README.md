@@ -61,13 +61,15 @@
 | /reference/cli/docker/buildx/stop.md                           | https://github.com/docker/buildx/blob/master/docs/reference/buildx_stop.md                                      |
 | /reference/cli/docker/buildx/use.md                            | https://github.com/docker/buildx/blob/master/docs/reference/buildx_use.md                                       |
 | /reference/cli/docker/buildx/version.md                        | https://github.com/docker/buildx/blob/master/docs/reference/buildx_version.md                                   |
+| /reference/cli/docker/compose/index.md                         | https://github.com/docker/compose/blob/main/docs/reference/compose.md                                           |
 | /reference/cli/dockerd.md                                      | https://github.com/docker/cli/blob/master/docs/reference/dockerd.md                                             |
 | /reference/cli/docker/container/                               | https://github.com/docker/compose/tree/main/docs/reference/?                                                    |
-| /reference/cli/docker/compose/                                 | https://github.com/docker/compose/tree/main/docs/reference/?                                                    |
 
 ### Images
 
-| Image                              | Source                                                                               |
-|------------------------------------|--------------------------------------------------------------------------------------|
-| /assets/img/footer-moby-icon.png   | https://github.com/docker/docs/blob/main/static/assets/images/footer_moby_icon.png   |
-| /assets/img/banner-image-24512.png | https://github.com/docker/docs/blob/main/static/assets/images/banner_image_24512.png |
+| Image                                           | Source                                                                                            |
+|-------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| /assets/img/banner-image-24512.png              | https://github.com/docker/docs/blob/main/static/assets/images/banner_image_24512.png              |
+| /assets/img/extensions.webp                     | https://github.com/docker/docs/blob/main/static/assets/images/extensions.webp                     |
+| /assets/img/extensions-private-marketplace.webp | https://github.com/docker/docs/blob/main/static/assets/images/extensions-private-marketplace.webp |
+| /assets/img/footer-moby-icon.png                | https://github.com/docker/docs/blob/main/static/assets/images/footer-moby-icon.png                |

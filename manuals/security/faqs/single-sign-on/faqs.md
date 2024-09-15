@@ -15,7 +15,7 @@ aliases:
 
 ### Is Docker SSO available for all paid subscriptions?
 
-Docker single sign-on (SSO) is only available with the Docker Business subscription. [Upgrade your existing subscription](/subscription/core-subscription/upgrade/index.md) to start using Docker SSO.
+Docker single sign-on (SSO) is only available with the Docker Business subscription. [Upgrade your existing subscription](../../../subscription/core-subscription/upgrade.md) to start using Docker SSO.
 
 ### How does Docker SSO work?
 
@@ -27,7 +27,7 @@ Docker supports Service Provider Initiated (SP-initiated) SSO flow. This means u
 
 ### Where can I find detailed instructions on how to configure Docker SSO?
 
-You first need to establish an SSO connection with your identity provider, and the company email domain needs to be verified prior to establishing an SSO connection for your users. For detailed step-by-step instructions on how to configure Docker SSO, see [Single Sign-on](../../for-admins/single-sign-on/configure/).
+You first need to establish an SSO connection with your identity provider, and the company email domain needs to be verified prior to establishing an SSO connection for your users. For detailed step-by-step instructions on how to configure Docker SSO, see [Single Sign-on](../../for-admins/single-sign-on/configure/index.md).
 
 ### Does Docker SSO support multi-factor authentication (MFA)?
 
@@ -57,4 +57,4 @@ Directory.Read.All permission, which provides access to all users, groups, and
 other sensitive data in the directory. Due to potential security risks, Docker
 doesn't support this configuration. Instead, Docker recommends [configuring SCIM
 to enable group sync
-securely](../for-admins/provisioning/group-mapping/index.md#use-group-mapping-with-scim).
+securely](../../for-admins/provisioning/group-mapping.md#use-group-mapping-with-scim).

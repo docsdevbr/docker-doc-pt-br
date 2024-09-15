@@ -59,7 +59,7 @@ _For checksums, see [Release notes](../release-notes.md)_
   - Enable hardware virtualization in BIOS. For more information, see
     [Virtualization](../troubleshoot/topics.md#virtualization).
 
-For more information on setting up WSL 2 with Docker Desktop, see [WSL](../wsl/).
+For more information on setting up WSL 2 with Docker Desktop, see [WSL](../wsl/index.md).
 
 > [!NOTE]
 >
@@ -265,7 +265,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 > [!TIP]
 >
-> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](../../security/for-admins/enforce-sign-in/).
+> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](../../security/for-admins/enforce-sign-in/index.md).
 > - [Intune](https://learn.microsoft.com/en-us/mem/intune/apps/app-discovered-apps)
 > - [Jamf](https://docs.jamf.com/10.25.0/jamf-pro/administrator-guide/Application_Usage.html)
 > - [Kandji](https://support.kandji.io/support/solutions/articles/72000559793-view-a-device-application-list)
@@ -276,7 +276,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 - Explore [Docker's core subscriptions](https://www.docker.com/pricing/) to see what Docker can offer you.
 - [Get started with Docker](/get-started/introduction/index.md).
-- [Explore Docker Desktop](../use-desktop/) and all its features.
+- [Explore Docker Desktop](../use-desktop/index.md) and all its features.
 - [Troubleshooting](../troubleshoot/index.md) describes common problems, workarounds, and
   how to get support.
 - [FAQs](../faqs/general.md) provide answers to frequently asked questions.

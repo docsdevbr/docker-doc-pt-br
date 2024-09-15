@@ -88,10 +88,10 @@ and select the **System default** option under **Choose your terminal**.
 
 #### Open the integrated terminal in debug mode
 
-Debug mode requires a [Pro, Team, or Business subcription](/subscription/details/index.md). Debug mode has several advantages, such as:
+Debug mode requires a [Pro, Team, or Business subcription](../../subscription/core-subscription/details.md). Debug mode has several advantages, such as:
 
 - A customizable toolbox. The toolbox comes with many standard Linux tools
-  pre-installed, such as `vim`, `nano`, `htop`, and `curl`. For more details, see the [`docker debug` CLI reference](../../../reference/cli/docker/debug/index.md).
+  pre-installed, such as `vim`, `nano`, `htop`, and `curl`. For more details, see the [`docker debug` CLI reference](../../../reference/cli/docker/debug.md).
 - The ability to access containers that don't have a shell, for example, slim or
   distroless containers.
 

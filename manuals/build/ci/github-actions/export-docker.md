@@ -20,13 +20,13 @@ jobs:
     steps:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      
+
       - name: Build
         uses: docker/build-push-action@v6
         with:
           load: true
           tags: myimage:latest
-      
+
       - name: Inspect
         run: |
           docker image inspect myimage:latest

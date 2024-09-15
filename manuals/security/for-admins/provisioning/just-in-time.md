@@ -5,7 +5,7 @@ title: Just-in-Time provisioning
 linkTitle: Just-in-Time
 ---
 
-Just-in-Time (JIT) provisioning runs after every successful single sign-on (SSO) sign-in. JIT verifies that the user that signs in is a member of the organization and teams that they are assigned to in the IdP. When you [create your SSO connection](../single-sign-on/), JIT provisioning is turned on by default.
+Just-in-Time (JIT) provisioning runs after every successful single sign-on (SSO) sign-in. JIT verifies that the user that signs in is a member of the organization and teams that they are assigned to in the IdP. When you [create your SSO connection](../single-sign-on/index.md), JIT provisioning is turned on by default.
 
 ## SSO authentication with JIT provisioning enabled
 
@@ -43,7 +43,7 @@ When you opt to disable JIT provisioning in your SSO connection, the following a
 
    b) If the user is a member of the organization, or has a pending invitation to join, then sign in is successful.
 
-If you disable JIT provisioning when you create or edit your SSO connection, you can still use group mapping as long as you have also [enabled SCIM](provisioning/scim/index.md#enable-scim-in-docker). When JIT provisioning is disabled and SCIM isn't enabled, users won't be auto-provisioned to groups. For instructions on disabling JIT provisioning, see [Manage how users are provisioned](single-sign-on/manage/index.md#manage-how-users-are-provisioned).
+If you disable JIT provisioning when you create or edit your SSO connection, you can still use group mapping as long as you have also [enabled SCIM](scim.md#enable-scim-in-docker). When JIT provisioning is disabled and SCIM isn't enabled, users won't be auto-provisioned to groups. For instructions on disabling JIT provisioning, see [Manage how users are provisioned](../single-sign-on/manage/index.md#manage-how-users-are-provisioned).
 
 ![JIT provisioning disabled](../../images/jit-disabled-flow.svg)
 

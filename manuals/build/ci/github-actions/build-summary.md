@@ -10,7 +10,7 @@ for your build that outlines the execution and materials used:
 
 - A summary showing the Dockerfile used, the build duration, and cache utilization
 - Inputs for the build, such as build arguments, tags, labels, and build contexts
-- For builds with [Bake](../../bake/), the full bake definition for the build
+- For builds with [Bake](../../bake/index.md), the full bake definition for the build
 
 ![A GitHub Actions build summary](../images/gha_build_summary.png)
 
@@ -42,7 +42,7 @@ run. The build record archive is a ZIP file containing the details about a build
 (or builds, if you use `docker/bake-action` to build multiple targets). You can
 import this build record archive into Docker Desktop, which gives you a
 powerful, graphical interface for further analyzing the build's performance via
-the [Docker Desktop **Builds** view](../../desktop/use-desktop/builds.md).
+the [Docker Desktop **Builds** view](../../../desktop/use-desktop/builds.md).
 
 To import the build record archive into Docker Desktop:
 
@@ -104,7 +104,7 @@ contain a link to download the build record archive.
 
 Build summaries are currently not supported for:
 
-- Builds using [Docker Build Cloud](../../build-cloud/index.md). Support for Docker
+- Builds using [Docker Build Cloud](../../../build-cloud/index.md). Support for Docker
   Build Cloud is planned for a future release.
 - Repositories hosted on GitHub Enterprise Servers. Summaries can only be
   viewed for repositories hosted on GitHub.com.

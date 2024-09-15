@@ -80,7 +80,7 @@ to identify projects that Docker has verified as high quality publishers and wit
 
 ### Insights and analytics
 
-The [insights and analytics](/docker-hub/publish/insights-analytics) service provides usage metrics for how
+The [insights and analytics](insights-analytics.md) service provides usage metrics for how
 the community uses Docker images, granting insight into user behavior.
 
 The usage metrics show the number of image pulls by tag or by digest, and breakdowns by
@@ -92,13 +92,13 @@ You can select the time span for which you want to view analytics data. You can 
 
 ### Vulnerability analysis
 
-[Docker Scout](/scout/index.md) provides automatic vulnerability analysis
+[Docker Scout](../scout/index.md) provides automatic vulnerability analysis
 for DVP images published to Docker Hub.
 Scanning images ensures that the published content is secure, and proves to
 developers that they can trust the image.
 
 You can enable analysis on a per-repository
-basis. For more about using this feature, see [Basic vulnerability scanning](/docker-hub/vulnerability-scanning/index.md).
+basis. For more about using this feature, see [Basic vulnerability scanning](../docker-hub/vulnerability-scanning.md).
 
 ### Who's eligible to become a verified publisher?
 

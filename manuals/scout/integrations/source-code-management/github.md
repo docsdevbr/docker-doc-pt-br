@@ -20,7 +20,7 @@ When you enable the GitHub integration, Docker Scout can make a direct link
 between the image analysis results and the source.
 
 When analyzing your image, Docker Scout checks for [provenance
-attestations](../../build/metadata/attestations/slsa-provenance.md) to detect the
+attestations](../../../build/metadata/attestations/slsa-provenance.md) to detect the
 location of the source code repository for the image. If the source location is
 found, and you've enabled the GitHub app, Docker Scout parses the Dockerfile
 used to create the image.
@@ -34,7 +34,7 @@ containing security fixes. The `alpine:3.18` tag you've been using becomes
 out-of-date; the `alpine:3.18` you're using is no longer the latest.
 
 When this happens, Docker Scout detects the discrepancy and surfaces it through
-the [No outdated base images](/scout/policy/index.md#no-outdated-base-images) policy.
+the [No outdated base images](../../policy/index.md#no-outdated-base-images) policy.
 When the GitHub integration's enabled, you'll also get automated suggestions on
 how to update your base image. For more information about how Docker Scout can
 help you automatically improve your supply chain conduct and security posture,

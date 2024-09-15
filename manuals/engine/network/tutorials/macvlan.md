@@ -220,6 +220,6 @@ be physically attached to the network.
 
 ## Other networking tutorials
 
-- [Standalone networking tutorial](tutorials/standalone.md)
-- [Overlay networking tutorial](tutorials/overlay.md)
-- [Host networking tutorial](tutorials/host.md)
+- [Standalone networking tutorial](../tutorials/standalone.md)
+- [Overlay networking tutorial](../tutorials/overlay.md)
+- [Host networking tutorial](../tutorials/host.md)

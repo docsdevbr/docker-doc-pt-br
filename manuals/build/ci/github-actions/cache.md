@@ -9,7 +9,7 @@ Actions.
 
 > [!NOTE]
 >
-> See [Cache storage backends](../../cache/backends/) for more
+> See [Cache storage backends](../../cache/backends/index.md) for more
 > details about cache storage backends.
 
 ## Inline cache

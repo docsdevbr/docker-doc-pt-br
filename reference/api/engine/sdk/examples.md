@@ -609,7 +609,7 @@ func main() {
 {{< tab name="Python" >}}
 
 The Python SDK retrieves authentication information from the [credentials
-store](../../../reference/cli/docker/login/index.md#credential-stores) file and
+store](../../../cli/docker/login.md#credential-stores) file and
 integrates with [credential
 helpers](https://github.com/docker/docker-credential-helpers). It's possible to override these credentials, but that's out of
 scope for this example guide. After using `docker login`, the Python SDK

@@ -46,7 +46,7 @@ a vulnerable Node.js application that you can use to follow along.
 Docker Scout analyzes all local images by default. To analyze images in
 remote repositories, you need to enable it first.
 You can do this from Docker Hub, the Docker Scout Dashboard, and CLI.
-[Find out how in the overview guide](/scout).
+[Find out how in the overview guide](index.md).
 
 1. Sign in to your Docker account with the `docker login` command or use the
    **Sign in** button in Docker Desktop.
@@ -81,7 +81,7 @@ Docker Scout analyzes the image you built most recently by default,
 so there's no need to specify the name of the image in this case.
 
 Learn more about the `docker scout cves` command in the
-[`CLI reference documentation`](../../../reference/cli/docker/scout/cves).
+[`CLI reference documentation`](../../reference/cli/docker/scout/cves.md).
 
 ## Step 4: Fix application vulnerabilities
 
@@ -204,7 +204,7 @@ Docker Scout uses the provenance attestations to determine how the image was
 built so that it can provide a better evaluation result.
 
 Before you can build an image with attestations,
-you must enable the [containerd image store](../../desktop/containerd.md)
+you must enable the [containerd image store](../desktop/containerd.md)
 (or create a custom builder using the `docker-container` driver).
 The classic image store doesn't support manifest lists,
 which is how the provenance attestations are attached to an image.
@@ -274,8 +274,8 @@ to policy customization, and runtime environment monitoring in real-time.
 
 Check out the following sections:
 
-- [Image analysis](../explore/analysis.md)
-- [Data sources](/scout/advisory-db-sources)
-- [Docker Scout Dashboard](/scout/dashboard)
-- [Integrations](integrations/)
-- [Policy evaluation](policy/)
+- [Image analysis](explore/analysis.md)
+- [Data sources](deep-dive/advisory-db-sources.md)
+- [Docker Scout Dashboard](explore/dashboard.md)
+- [Integrations](integrations/index.md)
+- [Policy evaluation](policy/index.md)

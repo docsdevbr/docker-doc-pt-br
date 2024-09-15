@@ -164,12 +164,12 @@ tests or perform one-off tasks within that container.
 
 {{< accordion large=true title=`Resources` icon=`link` >}}
 
-- [Overview of Docker Compose CLI](../manuals/compose/reference/index.md)
+- [Overview of Docker Compose CLI](../reference/cli/docker/compose/index.md)
 - [Overview of Docker Compose](../manuals/compose/index.md)
-- [How Compose works](../manuals/compose/compose-application-model/index.md)
-- [Using profiles with Compose](../manuals/compose/profiles/index.md)
-- [Control startup and shutdown order with Compose](../manuals/compose/startup-order/index.md)
-- [Compose Build Specification](../manuals/compose/compose-file/build/index.md)
+- [How Compose works](../manuals/compose/compose-application-model.md)
+- [Using profiles with Compose](../manuals/compose/profiles.md)
+- [Control startup and shutdown order with Compose](../manuals/compose/startup-order.md)
+- [Compose Build Specification](../reference/compose-file/build.md)
 
 {{< /accordion >}}
 

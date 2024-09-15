@@ -108,4 +108,4 @@ the service.
 ## What's next?
 
 * Read the [Swarm mode overview](index.md).
-* Get started with the [Swarm mode tutorial](swarm-tutorial/).
+* Get started with the [Swarm mode tutorial](swarm-tutorial/index.md).

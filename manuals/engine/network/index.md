@@ -61,7 +61,7 @@ networking functionality:
 | `macvlan` | Assign a MAC address to a container.                                     |
 
 For more information about the different drivers, see [Network drivers
-overview](drivers/).
+overview](drivers/index.md).
 
 ## Container networks
 

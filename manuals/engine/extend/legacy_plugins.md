@@ -15,7 +15,7 @@ keywords: "Examples, Usage, plugins, docker, documentation, user guide"
 
 This document describes the Docker Engine plugins generally available in Docker
 Engine. To view information on plugins managed by Docker,
-refer to [Docker Engine plugin system](_index.md).
+refer to [Docker Engine plugin system](index.md).
 
 You can extend the capabilities of the Docker Engine by loading third-party
 plugins. This page explains the types of plugins and provides links to several

@@ -57,7 +57,7 @@ You can get the authorization code from the extension UI by listing `docker-desk
 
 > [!IMPORTANT]
 >
-> Using this feature requires the extension SDK 0.3.3 in Docker Desktop. You need to ensure that the required SDK version for your extension set with `com.docker.desktop.extension.api.version` in [image labels](labels.md) is higher than 0.3.3.
+> Using this feature requires the extension SDK 0.3.3 in Docker Desktop. You need to ensure that the required SDK version for your extension set with `com.docker.desktop.extension.api.version` in [image labels](../extensions/labels.md) is higher than 0.3.3.
 
 #### Authorization
 

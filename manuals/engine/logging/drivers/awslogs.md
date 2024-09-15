@@ -264,7 +264,7 @@ INFO Another message was logged
 Specify `tag` as an alternative to the `awslogs-stream` option. `tag` interprets
 Go template markup, such as `{{.ID}}`, `{{.FullID}}`
 or `{{.Name}}` `docker.{{.ID}}`. See
-the [tag option documentation](log_tags.md) for details on supported template
+the [tag option documentation](../log_tags.md) for details on supported template
 substitutions.
 
 When both `awslogs-stream` and `tag` are specified, the value supplied for

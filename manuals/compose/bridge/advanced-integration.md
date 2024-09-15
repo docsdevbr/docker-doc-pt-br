@@ -12,7 +12,7 @@ Compose Bridge can also function as a `kubectl` plugin, allowing you to integrat
 
 ## Use `compose-bridge` as a `kubectl` plugin
 
-To use the `compose-bridge` binary as a `kubectl` plugin, you need to make sure that the binary is available in your PATH and the name of the binary is prefixed with `kubectl-`. 
+To use the `compose-bridge` binary as a `kubectl` plugin, you need to make sure that the binary is available in your PATH and the name of the binary is prefixed with `kubectl-`.
 
 1. Rename or copy the `compose-bridge` binary to `kubectl-compose_bridge`:
 
@@ -21,7 +21,7 @@ To use the `compose-bridge` binary as a `kubectl` plugin, you need to make sure 
     ```
 
 2. Ensure that the binary is executable:
-    
+
     ```console
     $ chmod +x /usr/local/bin/kubectl-compose_bridge
     ```

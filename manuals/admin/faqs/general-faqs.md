@@ -26,7 +26,7 @@ All Docker IDs are first-come, first-served except for companies that have a US 
 
 ### What’s an organization?
 
-An organization in Docker is a collection of teams and repositories that are managed together. Docker users become members of an organization once they're associated with that organization by an organization owner. An [organization owner](#who-is-an-organization-owner) is a user with administrative access to the organization. For more information on creating organizations, see [Create your organization](orgs.md).
+An organization in Docker is a collection of teams and repositories that are managed together. Docker users become members of an organization once they're associated with that organization by an organization owner. An [organization owner](#who-is-an-organization-owner) is a user with administrative access to the organization. For more information on creating organizations, see [Create your organization](../organization/orgs.md).
 
 ### What's an organization name or namespace?
 
@@ -34,11 +34,11 @@ The organization name, sometimes referred to as the organization namespace or th
 
 ### What are roles?
 
-A role is a collection of permissions granted to members. Roles define access to perform actions in Docker Hub like creating repositories, managing tags, or viewing teams. See [Roles and permissions](roles-and-permissions.md).
+A role is a collection of permissions granted to members. Roles define access to perform actions in Docker Hub like creating repositories, managing tags, or viewing teams. See [Roles and permissions](../../security/for-admins/roles-and-permissions.md).
 
 ### What’s a team?
 
-A team is a group of Docker users that belong to an organization. An organization can have multiple teams. An organization owner can then create new teams and add members to an existing team using Docker IDs or email address and by selecting a team the user should be part of. See [Create and manage a team](manage-a-team.md).
+A team is a group of Docker users that belong to an organization. An organization can have multiple teams. An organization owner can then create new teams and add members to an existing team using Docker IDs or email address and by selecting a team the user should be part of. See [Create and manage a team](../organization/manage-a-team.md).
 
 ### What's a company?
 
@@ -49,7 +49,7 @@ A company is a management layer that centralizes administration of multiple orga
 An organization owner is an administrator who has permissions to manage
 repositories, add members, and manage member roles. They have full access to
 private repositories, all teams, billing information, and organization settings.
-An organization owner can also specify [repository permissions](manage-a-team.md#configure-repository-permissions-for-a-team) for each team in the
+An organization owner can also specify [repository permissions](../organization/manage-a-team.md#configure-repository-permissions-for-a-team) for each team in the
 organization. Only an organization owner can enable SSO for the organization.
 When SSO is enabled for your organization, the organization owner can also
 manage users.
@@ -62,7 +62,7 @@ The organization owner can also add additional owners to help them manage users,
 ### Can I configure multiple SSO identity providers (IdPs) to authenticate users to a single org?
 
 Docker SSO allows only one IdP configuration per organization. For more
-information, see [Configure SSO](../../security/for-admins/single-sign-on/configure/) and [SSO FAQs](../../security/faqs/single-sign-on/faqs.md).
+information, see [Configure SSO](../../security/for-admins/single-sign-on/configure/index.md) and [SSO FAQs](../../security/faqs/single-sign-on/faqs.md).
 
 ### What is a service account?
 
@@ -76,4 +76,4 @@ If the user is a member of your organization, you can remove the user from your 
 
 ### How do I manage settings for a user account?
 
-You can manage your account settings any time when you sign in to your [Docker account](https://app.docker.com/login). In Docker Home, select your avatar in the top-right navigation, then select **My Account**. You can also access this menu from any Docker web applications when you're signed in to your account. See [Manage your Docker account](/accounts/manage-account). If your account is associated with an organization that uses SSO, you may have limited access to the settings that you can control.
+You can manage your account settings any time when you sign in to your [Docker account](https://app.docker.com/login). In Docker Home, select your avatar in the top-right navigation, then select **My Account**. You can also access this menu from any Docker web applications when you're signed in to your account. See [Manage your Docker account](../../accounts/manage-account.md). If your account is associated with an organization that uses SSO, you may have limited access to the settings that you can control.

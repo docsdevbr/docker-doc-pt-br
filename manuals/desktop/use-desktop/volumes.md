@@ -151,7 +151,7 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    - **Registry**: Specify a Docker Hub repository. Note that Docker Hub
      repositories can be publicly accessible which means your data can be
      publicly accessible. For more details, see
-     [Change a repository from public to private](/docker-hub/repos/index.md#change-a-repository-from-public-to-private).
+     [Change a repository from public to private](../../docker-hub/repos/index.md#change-a-repository-from-public-to-private).
 
    {{< /tab >}}
    {{< tab name="External cloud storage" >}}
@@ -200,7 +200,7 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    - **Registry**: Specify a Docker Hub repository. Note that Docker Hub
      repositories can be publicly accessible which means your data can be
      publicly accessible. For more details, see
-     [Change a repository from public to private](/docker-hub/repos/index.md#change-a-repository-from-public-to-private).
+     [Change a repository from public to private](../../docker-hub/repos/index.md#change-a-repository-from-public-to-private).
 
    {{< /tab >}}
    {{< tab name="External cloud storage" >}}

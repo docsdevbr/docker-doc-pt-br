@@ -8,7 +8,7 @@ aliases:
 
 This series of tutorials deals with networking for standalone Docker containers.
 For networking with swarm services, see
-[Networking with swarm services](tutorials/overlay.md). If you need to
+[Networking with swarm services](../tutorials/overlay.md). If you need to
 learn more about Docker networking in general, see the [overview](index.md).
 
 This topic includes two different tutorials. You can run each of them on
@@ -24,9 +24,9 @@ host running elsewhere.
   running on the same Docker host. This is recommended for standalone containers
   running in production.
 
-Although [overlay networks](drivers/overlay.md) are generally used for swarm services,
+Although [overlay networks](../drivers/overlay.md) are generally used for swarm services,
 you can also use an overlay network for standalone containers. That's covered as
-part of the [tutorial on using overlay networks](tutorials/overlay.md#use-an-overlay-network-for-standalone-containers).
+part of the [tutorial on using overlay networks](../tutorials/overlay.md#use-an-overlay-network-for-standalone-containers).
 
 ## Use the default bridge network
 
@@ -617,6 +617,6 @@ connected to both networks.
 
 ## Other networking tutorials
 
-- [Host networking tutorial](tutorials/host.md)
-- [Overlay networking tutorial](tutorials/overlay.md)
-- [Macvlan networking tutorial](tutorials/macvlan.md)
+- [Host networking tutorial](../tutorials/host.md)
+- [Overlay networking tutorial](../tutorials/overlay.md)
+- [Macvlan networking tutorial](../tutorials/macvlan.md)

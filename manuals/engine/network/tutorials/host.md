@@ -26,7 +26,7 @@ host.
   [documentation for the `nginx` image](https://hub.docker.com/_/nginx/)
 
 - The `host` networking driver only works on Linux hosts, but is available as a
-  [beta feature](../../release-lifecycle.md#beta) on Docker Desktop version 4.29
+  [beta feature](../../../release-lifecycle.md#beta) on Docker Desktop version 4.29
   and later for Mac, Windows, and Linux. To enable this feature, navigate to the
   **Features in development** tab in **Settings**, and then select **Enable host networking**.
 
@@ -65,6 +65,6 @@ host.
 
 ## Other networking tutorials
 
-- [Standalone networking tutorial](tutorials/standalone.md)
-- [Overlay networking tutorial](tutorials/overlay.md)
-- [Macvlan networking tutorial](tutorials/macvlan.md)
+- [Standalone networking tutorial](../tutorials/standalone.md)
+- [Overlay networking tutorial](../tutorials/overlay.md)
+- [Macvlan networking tutorial](../tutorials/macvlan.md)

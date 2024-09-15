@@ -33,7 +33,7 @@ Add the following to the YAML file to define the steps for the workflow:
 steps:
   # Checkout the repository files
   - checkout
-  
+
   # Set up a separate Docker environment to run `docker` commands in
   - setup_remote_docker:
       version: 20.10.24
@@ -50,8 +50,8 @@ steps:
   - run:
       name: Build Docker image
       command: docker build -t $IMAGE_TAG .
-  
-  # Run Docker Scout          
+
+  # Run Docker Scout
   - run:
       name: Scan image for CVEs
       command: |

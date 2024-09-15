@@ -30,8 +30,8 @@ docker-build:
     # Install curl and the Docker Scout CLI
     - |
       apk add --update curl
-      curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | sh -s -- 
-      apk del curl 
+      curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | sh -s --
+      apk del curl
       rm -rf /var/cache/apk/*
     # Login to Docker Hub required for Docker Scout CLI
     - docker login -u "$DOCKER_HUB_USER" -p "$DOCKER_HUB_PAT"
@@ -59,7 +59,7 @@ script:
   - |
     if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
       # Get a CVE report for the built image and fail the pipeline when critical or high CVEs are detected
-      docker scout cves "$CI_REGISTRY_IMAGE${tag}" --exit-code --only-severity critical,high    
+      docker scout cves "$CI_REGISTRY_IMAGE${tag}" --exit-code --only-severity critical,high
     else
       # Compare image from branch with latest image from the default branch and fail if new critical or high CVEs are detected
       docker scout compare "$CI_REGISTRY_IMAGE${tag}" --to "$CI_REGISTRY_IMAGE:latest" --exit-code --only-severity critical,high --ignore-unchanged

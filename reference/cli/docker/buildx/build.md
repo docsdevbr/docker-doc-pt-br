@@ -234,7 +234,7 @@ $ export HTTP_PROXY=http://10.20.30.2:1234
 $ docker buildx build --build-arg HTTP_PROXY .
 ```
 
-This example is similar to how `docker run -e` works. Refer to the [`docker run` documentation](container_run.md#env)
+This example is similar to how `docker run -e` works. Refer to the [`docker run` documentation](../container/run.md#env)
 for more information.
 
 There are also useful built-in build arguments, such as:

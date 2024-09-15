@@ -17,7 +17,7 @@ You can switch to **Active builds** to view any ongoing builds.
 
 ![Build UI screenshot active builds](../images/build-ui-active-builds.webp)
 
-If you're connected to a cloud builder through [Docker Build Cloud](../../build-cloud/),
+If you're connected to a cloud builder through [Docker Build Cloud](../../build-cloud/index.md),
 the Builds view also lists any active or completed cloud builds by other team members
 connected to the same cloud builder.
 
@@ -115,7 +115,7 @@ The **Configuration** section of the Info tab shows parameters passed to the bui
 - Secrets, including their IDs (but not their values)
 - SSH sockets
 - Labels
-- [Additional contexts](../../../reference/cli/docker/buildx/build/index.md#build-context)
+- [Additional contexts](../../../reference/cli/docker/buildx/build.md#build-context)
 
 ### Outputs and artifacts
 

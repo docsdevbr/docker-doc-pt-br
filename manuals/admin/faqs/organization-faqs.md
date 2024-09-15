@@ -42,13 +42,13 @@ Yes. When SSO is enabled for your organization, each user must sign in with the 
 Yes. You can convert your user account to an organization account. Once you
 convert a user account into an organization, it's not possible to
 revert it to a personal user account. For prerequisites and instructions, see
-[Convert an account into an organization](convert-account.md).
+[Convert an account into an organization](../convert-account.md).
 
 ### Our users create Docker Hub accounts through self-service. How do we know when the total number of users for the requested licenses has been met? Is it possible to add more members to the organization than the total number of licenses?
 
 There isn't any automatic notification when the total number of users for the requested licenses has been met. However, if the number of team
 members exceed the number of licenses, you will receive an error informing you
-to contact the administrator due to lack of seats. You can [add seats](/subscription/core-subscription/add-seats/index.md) if needed.
+to contact the administrator due to lack of seats. You can [add seats](../../subscription/core-subscription/add-seats.md) if needed.
 
 ### How can I merge organization accounts?
 
@@ -84,7 +84,7 @@ Yes. You can configure repository access on a per-team basis. For example, you
 can specify that all teams within an organization have **Read and Write** access
 to repositories A and B, whereas only specific teams have **Admin** access. Org
 owners have full administrative access to all repositories within the
-organization. See [Configure repository permissions for a team](manage-a-team.md#configure-repository-permissions-for-a-team). Administrators can also assign members the editor role, which grants administrative permissions for repositories across the namespace of the organization. See [Roles and permissions](../../security/for-admins/roles-and-permissions.md).
+organization. See [Configure repository permissions for a team](../organization/manage-a-team.md#configure-repository-permissions-for-a-team). Administrators can also assign members the editor role, which grants administrative permissions for repositories across the namespace of the organization. See [Roles and permissions](../../security/for-admins/roles-and-permissions.md).
 
 ### Does my organization need to use Docker's registry?
 

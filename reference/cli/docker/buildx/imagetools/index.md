@@ -22,10 +22,10 @@ Commands to work on images in registry
 
 ### Subcommands
 
-| Name                                      | Description                               |
-|:------------------------------------------|:------------------------------------------|
-| [`create`](imagetools_create.md)   | Create a new image based on source images |
-| [`inspect`](imagetools_inspect.md) | Show details of an image in the registry  |
+| Name                    | Description                               |
+|:------------------------|:------------------------------------------|
+| [`create`](create.md)   | Create a new image based on source images |
+| [`inspect`](inspect.md) | Show details of an image in the registry  |
 
 
 ### Options

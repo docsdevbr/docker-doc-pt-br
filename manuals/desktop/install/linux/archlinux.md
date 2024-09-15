@@ -32,10 +32,10 @@ $ sudo pacman -S gnome-terminal
 
 1. Install client binaries. Docker does not have an Arch package repository. Binaries not included in the package must be installed manually before installing Docker Desktop.
 
-2. [Install Docker client binary on Linux](../../engine/install/binaries.md#install-daemon-and-client-binaries-on-linux). On Arch-based distributions, users must install the Docker client binary.
+2. [Install Docker client binary on Linux](../../../engine/install/binaries.md#install-daemon-and-client-binaries-on-linux). On Arch-based distributions, users must install the Docker client binary.
    Static binaries for the Docker client are available for Linux (as `docker`).
 
-3. Download the latest Arch package from the [Release notes](../release-notes.md).
+3. Download the latest Arch package from the [Release notes](../../release-notes.md).
 
 4. Install the package:
 
@@ -55,9 +55,9 @@ $ sudo pacman -S gnome-terminal
 
 - Explore [Docker's core subscriptions](https://www.docker.com/pricing/) to see what Docker can offer you.
 - Take a look at the [Docker workshop](/get-started/workshop/index.md) to learn how to build an image and run it as a containerized application.
-- [Explore Docker Desktop](../use-desktop/index.md) and all its features.
-- [Troubleshooting](../troubleshoot/index.md) describes common problems, workarounds, how to run and submit diagnostics, and submit issues.
-- [FAQs](../faqs/general.md) provide answers to frequently asked questions.
-- [Release notes](../release-notes.md) lists component updates, new features, and improvements associated with Docker Desktop releases.
-- [Back up and restore data](../backup-and-restore.md) provides instructions
+- [Explore Docker Desktop](../../use-desktop/index.md) and all its features.
+- [Troubleshooting](../../troubleshoot/index.md) describes common problems, workarounds, how to run and submit diagnostics, and submit issues.
+- [FAQs](../../faqs/general.md) provide answers to frequently asked questions.
+- [Release notes](../../release-notes.md) lists component updates, new features, and improvements associated with Docker Desktop releases.
+- [Back up and restore data](../../backup-and-restore.md) provides instructions
   on backing up and restoring data related to Docker.

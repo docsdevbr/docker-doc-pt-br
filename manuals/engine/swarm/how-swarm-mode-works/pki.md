@@ -14,7 +14,7 @@ as a manager node. By default, the manager node generates a new root Certificate
 Authority (CA) along with a key pair, which are used to secure communications
 with other nodes that join the swarm. If you prefer, you can specify your own
 externally-generated root CA, using the `--external-ca` flag of the
-[docker swarm init](../../../reference/cli/docker/swarm/init.md) command.
+[docker swarm init](../../../../reference/cli/docker/swarm/init.md) command.
 
 The manager node also generates two tokens to use when you join additional nodes
 to the swarm: one worker token and one manager token. Each token
@@ -32,7 +32,7 @@ the lifetime of the node in the current swarm.
 The diagram below illustrates how manager nodes and worker nodes encrypt
 communications using a minimum of TLS 1.2.
 
-![TLS diagram](images/tls.webp?w=600)
+![TLS diagram](../images/tls.webp?w=600)
 
 The example below shows the information from a certificate from a worker node:
 
@@ -55,7 +55,7 @@ By default, each node in the swarm renews its certificate every three months.
 You can configure this interval by running the `docker swarm update
 --cert-expiry <TIME PERIOD>` command. The minimum rotation value is 1 hour.
 Refer to the
-[docker swarm update](../../../reference/cli/docker/swarm/update.md) CLI
+[docker swarm update](../../../../reference/cli/docker/swarm/update.md) CLI
 reference for details.
 
 ## Rotating the CA certificate

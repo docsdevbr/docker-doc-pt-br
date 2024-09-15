@@ -28,7 +28,7 @@ In addition, the Docker Dashboard allows you to:
 - Access the **Learning center** from the Dashboard header. It helps you get started with quick in-app walkthroughs and provides other resources for learning about Docker.
 
   For a more detailed guide about getting started, see [Get started](/get-started/introduction/index.md).
-- Get to the [Docker Scout](../../scout/) dashboard.
+- Get to the [Docker Scout](../../scout/index.md) dashboard.
 - Check the status of Docker services.
 
 ## Quick search
