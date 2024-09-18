@@ -27,15 +27,12 @@ Commands to work on images in registry
 | [`create`](create.md)   | Create a new image based on source images |
 | [`inspect`](inspect.md) | Show details of an image in the registry  |
 
-
 ### Options
 
 | Name                    | Type     | Default | Description                              |
 |:------------------------|:---------|:--------|:-----------------------------------------|
 | [`--builder`](#builder) | `string` |         | Override the configured builder instance |
 | `-D`, `--debug`         | `bool`   |         | Enable debug logging                     |
-
-
 
 ## Description
 

@@ -1,27 +1,4 @@
 # comecando
 
-/install/ /comecando/obtenha-o-docker
-/install/overview/ /comecando/obtenha-o-docker
-/installation/ /comecando/obtenha-o-docker
-/get-docker/ /comecando/obtenha-o-docker
-
-/introduction/understanding-docker/ /comecando/o-que-e-docker
-/engine/userguide/basics/ /comecando/o-que-e-docker
-/engine/introduction/understanding-docker/ /comecando/o-que-e-docker
-/engine/understanding-docker/ /comecando/o-que-e-docker
-/engine/docker-overview/ /comecando/o-que-e-docker
-/get-started/overview/ /comecando/o-que-e-docker
-/guides/docker-overview/ /comecando/o-que-e-docker
-
-# engine
-
-/engine/edge/ engine/index.html
-/engine/edge.html engine/index.html
-/engine/ce-ee-node-activate/ engine/index.html
-/engine/ce-ee-node-activate.html engine/index.html
-/engine/migration/ engine/index.html
-/engine/migration.html engine/index.html
-/engine/misc/ engine/index.html
-/engine/misc.html engine/index.html
-/linux/ engine/index.html
-/linux/index.html engine/index.html
+/get-started/get-docker/ /comecando/obtenha-o-docker
+/get-started/docker-overview/ /comecando/o-que-e-docker

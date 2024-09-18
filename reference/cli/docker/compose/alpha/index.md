@@ -1,4 +1,9 @@
 ---
+source_url: https://github.com/docker/compose/blob/main/docs/reference/compose_alpha.md
+revision: 312f0d1d6174ef2e334fbbbd6e8d513ec4d61e2b
+status: untranslated
+license: https://github.com/docker/compose/blob/master/LICENSE
+
 datafolder: compose-cli
 datafile: docker_compose_alpha
 title: docker compose alpha
@@ -7,9 +12,20 @@ aliases:
 - /engine/reference/commandline/compose_alpha
 ---
 
-<!--
-Sorry, but the contents of this page are automatically generated from
-Docker's source code. If you want to suggest a change to the text that appears
-here, you'll need to find the string by searching this repo:
-https://github.com/docker/compose
--->
+# docker compose alpha
+
+Experimental commands
+
+### Subcommands
+
+| Name                  | Description                                                     |
+|:----------------------|:----------------------------------------------------------------|
+| [`publish`](publish.md) | EXPERIMENTAL - Publish compose application                      |
+| [`viz`](viz.md)       | EXPERIMENTAL - Generate a graphviz graph from your compose file |
+
+
+### Options
+
+| Name        | Type | Default | Description                     |
+|:------------|:-----|:--------|:--------------------------------|
+| `--dry-run` |      |         | Execute command in dry run mode |

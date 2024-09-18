@@ -26,8 +26,6 @@ Show buildx version information
 |:----------------|:-------|:--------|:---------------------|
 | `-D`, `--debug` | `bool` |         | Enable debug logging |
 
-
-
 ## Description
 
 View version information

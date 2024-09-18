@@ -1,4 +1,9 @@
 ---
+source_url: https://github.com/docker/compose/blob/main/docs/reference/compose_wait.md
+revision: 98e261ba3258354e7c40053aa32004a246cd6333
+status: untranslated
+license: https://github.com/docker/compose/blob/master/LICENSE
+
 datafolder: compose-cli
 datafile: docker_compose_wait
 title: docker compose wait
@@ -7,9 +12,13 @@ aliases:
 - /engine/reference/commandline/compose_wait/
 ---
 
-<!--
-Sorry, but the contents of this page are automatically generated from
-Docker's source code. If you want to suggest a change to the text that appears
-here, you'll need to find the string by searching this repo:
-https://github.com/docker/compose
--->
+# docker compose wait
+
+Block until containers of all (or specified) services stop.
+
+### Options
+
+| Name             | Type   | Default | Description                                  |
+|:-----------------|:-------|:--------|:---------------------------------------------|
+| `--down-project` | `bool` |         | Drops project when the first container stops |
+| `--dry-run`      | `bool` |         | Execute command in dry run mode              |

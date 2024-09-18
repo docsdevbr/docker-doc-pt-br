@@ -120,7 +120,7 @@ pattern. Base images whose image reference don't match the specified patterns
 cause the policy to fail.
 
 For more information, see
-[No unapproved base images](/scout/policy/index.md#no-unapproved-base-images).
+[No unapproved base images](../policy/index.md#no-unapproved-base-images).
 
 ### 2024-01-12
 
@@ -129,7 +129,7 @@ New **Default non-root user** policy, which flags images that would run as the
 Specifying a non-root default user for your images can help strengthen your
 runtime security.
 
-For more information, see [Default non-root user](/scout/policy/index.md#default-non-root-user).
+For more information, see [Default non-root user](../policy/index.md#default-non-root-user).
 
 ### 2024-01-11
 
@@ -179,7 +179,7 @@ images, and see the SonarQube quality gate conditions surfaced in the new
 For more information, see:
 
 - [Integration and setup instructions](../integrations/code-quality/sonarqube.md)
-- [SonarQube quality gates passed policy](/scout/policy/index.md#sonarqube-quality-gates-passed)
+- [SonarQube quality gates passed policy](../policy/index.md#sonarqube-quality-gates-passed)
 
 ### 2023-12-01
 
@@ -210,7 +210,7 @@ images are built with SBOM and provenance attestations. Adding attestations to
 images is a good first step in improving your supply chain conduct, and is
 often a prerequisite for doing more.
 
-See [Supply chain attestations policy](/scout/policy/index.md#supply-chain-attestations)
+See [Supply chain attestations policy](../policy/index.md#supply-chain-attestations)
 for details.
 
 ### 2023-11-01
@@ -219,7 +219,7 @@ New **No high-profile vulnerabilities** policy, which ensures your artifacts are
 free from a curated list of vulnerabilities widely recognized to be risky.
 
 For more information, see
-[No high-profile vulnerabilities policy](/scout/policy/index.md#no-high-profile-vulnerabilities).
+[No high-profile vulnerabilities policy](../policy/index.md#no-high-profile-vulnerabilities).
 
 ### 2023-10-04
 
@@ -253,7 +253,7 @@ with four out-of-the-box policies, enabled by default for all organizations.
 
 You can view and evaluate policy status for images using the Docker Scout
 Dashboard and the `docker scout policy` CLI command. For more information,
-refer to the [Policy Evaluation documentation](/scout/policy/index.md).
+refer to the [Policy Evaluation documentation](../policy/index.md).
 
 #### Amazon ECR integration
 

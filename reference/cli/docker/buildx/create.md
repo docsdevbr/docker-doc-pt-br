@@ -72,7 +72,8 @@ eager_beaver
 
 Specifies the configuration file for the BuildKit daemon to use. The
 configuration can be overridden by [`--buildkitd-flags`](#buildkitd-flags).
-See an [example BuildKit daemon configuration file](https://github.com/moby/buildkit/blob/master/docs/buildkitd.toml.md).
+See
+an [example BuildKit daemon configuration file](https://github.com/moby/buildkit/blob/master/docs/buildkitd.toml.md).
 
 If you don't specify a configuration file, Buildx looks for one by default in:
 
@@ -102,7 +103,8 @@ configuration file specified by [`--buildkitd-config`](#buildkitd-config). See
 #### BuildKit daemon network mode
 
 You can specify the network mode for the BuildKit daemon with either the
-configuration file specified by [`--buildkitd-config`](#buildkitd-config) using the
+configuration file specified by [`--buildkitd-config`](#buildkitd-config) using
+the
 `worker.oci.networkMode` option or `--oci-worker-net` flag here. The default
 value is `auto` and can be one of `bridge`, `cni`, `host`:
 
@@ -128,7 +130,8 @@ backend. Buildx supports the following drivers:
 * `kubernetes`
 * `remote`
 
-For more information about build drivers, see [here](https://docs.docker.com/build/builders/drivers/).
+For more information about build drivers,
+see [here](https://docs.docker.com/build/builders/drivers/).
 
 #### `docker` driver
 
@@ -176,14 +179,17 @@ For information about available driver options, refer to the detailed
 documentation for the specific driver:
 
 * [`docker` driver](https://docs.docker.com/build/builders/drivers/docker/)
-* [`docker-container` driver](https://docs.docker.com/build/builders/drivers/docker-container/)
-* [`kubernetes` driver](https://docs.docker.com/build/builders/drivers/kubernetes/)
+* [
+  `docker-container` driver](https://docs.docker.com/build/builders/drivers/docker-container/)
+* [
+  `kubernetes` driver](https://docs.docker.com/build/builders/drivers/kubernetes/)
 * [`remote` driver](https://docs.docker.com/build/builders/drivers/remote/)
 
 ### <a name="leave"></a> Remove a node from a builder (--leave)
 
 The `--leave` flag changes the action of the command to remove a node from a
-builder. The builder needs to be specified with `--name` and node that is removed
+builder. The builder needs to be specified with `--name` and node that is
+removed
 is set with `--node`.
 
 ```console

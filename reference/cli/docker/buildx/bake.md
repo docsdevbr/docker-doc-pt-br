@@ -29,7 +29,8 @@ Read [High-level build options with Bake](https://docs.docker.com/build/bake/)
 guide for introduction to writing bake files.
 
 > [!NOTE]
-> `buildx bake` command may receive backwards incompatible features in the future
+> `buildx bake` command may receive backwards incompatible features in the
+> future
 > if needed. We are looking for feedback on improving the command and extending
 > the functionality further.
 
@@ -74,7 +75,8 @@ Use the `-f` / `--file` option to specify the build definition file to use.
 The file can be an HCL, JSON or Compose file. If multiple files are specified,
 all are read and the build configurations are combined.
 
-You can pass the names of the targets to build, to build only specific target(s).
+You can pass the names of the targets to build, to build only specific target(
+s).
 The following example builds the `db` and `webapp-release` targets that are
 defined in the `docker-bake.dev.hcl` file:
 
@@ -171,7 +173,8 @@ $ cat metadata.json
 ```
 
 > [!NOTE]
-> Build record [provenance](https://docs.docker.com/build/metadata/attestations/slsa-provenance/#provenance-attestation-example)
+> Build
+> record [provenance](https://docs.docker.com/build/metadata/attestations/slsa-provenance/#provenance-attestation-example)
 > (`buildx.build.provenance`) includes minimal provenance by default. Set the
 > `BUILDX_METADATA_PROVENANCE` environment variable to customize this behavior:
 > * `min` sets minimal provenance (default).

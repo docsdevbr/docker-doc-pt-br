@@ -29,8 +29,6 @@ Disk usage
 | `--filter`              | `filter` |         | Provide filter values                    |
 | [`--verbose`](#verbose) | `bool`   |         | Provide a more verbose output            |
 
-
-
 ## Examples
 
 ### Show disk usage
@@ -64,9 +62,12 @@ use by some component of the builder.
 
 The asterisks (\*) in the default output indicate the following:
 
-- An asterisk next to an ID (`zu7m6evdpebh5h8kfkpw9dlf2*`) indicates that the record
-  is mutable. The size of the record may change, or another build can take ownership of
-  it and change or commit to it. If you run the `du` command again, this item may
+- An asterisk next to an ID (`zu7m6evdpebh5h8kfkpw9dlf2*`) indicates that the
+  record
+  is mutable. The size of the record may change, or another build can take
+  ownership of
+  it and change or commit to it. If you run the `du` command again, this item
+  may
   not be there anymore, or the size might be different.
 - An asterisk next to a size (`8.288kB*`) indicates that the record is shared.
   Storage of the record is shared with some other resource, typically an image.

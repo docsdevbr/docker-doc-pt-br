@@ -1,4 +1,9 @@
 ---
+source_url: https://github.com/docker/compose/blob/main/docs/reference/compose_kill.md
+revision: 1601ead7bcb831dafe5ea0d675581df8b89917ab
+status: untranslated
+license: https://github.com/docker/compose/blob/master/LICENSE
+
 datafolder: compose-cli
 datafile: docker_compose_kill
 title: docker compose kill
@@ -8,9 +13,28 @@ aliases:
 layout: cli
 ---
 
-<!--
-Sorry, but the contents of this page are automatically generated from
-Docker's source code. If you want to suggest a change to the text that appears
-here, you'll need to find the string by searching this repo:
-https://github.com/docker/compose
--->
+# docker compose kill
+
+Forces running containers to stop by sending a `SIGKILL` signal. Optionally the signal can be passed, for example:
+
+```console
+$ docker compose kill -s SIGINT
+```
+
+### Options
+
+| Name               | Type     | Default   | Description                                                    |
+|:-------------------|:---------|:----------|:---------------------------------------------------------------|
+| `--dry-run`        | `bool`   |           | Execute command in dry run mode                                |
+| `--remove-orphans` | `bool`   |           | Remove containers for services not defined in the Compose file |
+| `-s`, `--signal`   | `string` | `SIGKILL` | SIGNAL to send to the container                                |
+
+
+
+## Description
+
+Forces running containers to stop by sending a `SIGKILL` signal. Optionally the signal can be passed, for example:
+
+```console
+$ docker compose kill -s SIGINT
+```

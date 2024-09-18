@@ -1,17 +1,19 @@
 ---
-datafolder: engine-cli
-datafile: docker_checkpoint_create
+source_url: https://github.com/docker/cli/blob/master/docs/reference/commandline/checkpoint_create.md
+revision: dc22572e3ebee23b2a1435141217ff55b492f1ca
+status: untranslated
+license: https://github.com/docker/cli/blob/master/LICENSE
+
 title: docker checkpoint create
-aliases:
-- /edge/engine/reference/commandline/checkpoint_create/
-- /engine/reference/commandline/checkpoint_create/
-layout: cli
 ---
 
-<!--
-This page is automatically generated from Docker's source code. If you want to
-suggest a change to the text that appears here, open a ticket or pull request
-in the source repository on GitHub:
+# docker checkpoint create
 
-https://github.com/docker/cli
--->
+Create a checkpoint from a running container
+
+### Options
+
+| Name               | Type     | Default | Description                                  |
+|:-------------------|:---------|:--------|:---------------------------------------------|
+| `--checkpoint-dir` | `string` |         | Use a custom checkpoint storage directory    |
+| `--leave-running`  | `bool`   |         | Leave the container running after checkpoint |

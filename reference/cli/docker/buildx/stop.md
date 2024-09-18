@@ -27,8 +27,6 @@ Stop builder instance
 | [`--builder`](#builder) | `string` |         | Override the configured builder instance |
 | `-D`, `--debug`         | `bool`   |         | Enable debug logging                     |
 
-
-
 ## Description
 
 Stops the specified or current builder. This does not prevent buildx build to

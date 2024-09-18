@@ -34,18 +34,20 @@ Create a new image based on source images
 | `--progress`                     | `string`      | `auto`  | Set type of progress output (`auto`, `plain`, `tty`, `rawjson`). Use plain to show container output                           |
 | [`-t`](#tag), [`--tag`](#tag)    | `stringArray` |         | Set reference for new image                                                                                                   |
 
-
-
 ## Description
 
 Create a new manifest list based on source manifests. The source manifests can
 be manifest lists or single platform distribution manifests and must already
 exist in the registry where the new manifest is created.
 
-If only one source is specified and that source is a manifest list or image index,
-create performs a carbon copy. If one source is specified and that source is *not*
-a list or index, the output will be a manifest list, however you can disable this
-behavior with `--prefer-index=false` which attempts to preserve the source manifest
+If only one source is specified and that source is a manifest list or image
+index,
+create performs a carbon copy. If one source is specified and that source is
+*not*
+a list or index, the output will be a manifest list, however you can disable
+this
+behavior with `--prefer-index=false` which attempts to preserve the source
+manifest
 format in the output.
 
 ## Examples
@@ -99,7 +101,8 @@ Use the `--dry-run` flag to not push the image, just show it.
 Reads source from files. A source can be a manifest digest, manifest reference,
 or a JSON of OCI descriptor object.
 
-In order to define annotations or additional platform properties like `os.version` and
+In order to define annotations or additional platform properties like
+`os.version` and
 `os.features` you need to add them in the OCI descriptor object encoded in JSON.
 
 ```console
@@ -107,9 +110,11 @@ $ docker buildx imagetools inspect --raw alpine | jq '.manifests[0] | .platform.
 $ docker buildx imagetools create -f descr.json myuser/image
 ```
 
-The descriptor in the file is merged with existing descriptor in the registry if it exists.
+The descriptor in the file is merged with existing descriptor in the registry if
+it exists.
 
-The supported fields for the descriptor are defined in [OCI spec](https://github.com/opencontainers/image-spec/blob/master/descriptor.md#properties) .
+The supported fields for the descriptor are defined
+in [OCI spec](https://github.com/opencontainers/image-spec/blob/master/descriptor.md#properties) .
 
 ### <a name="tag"></a> Set reference for new image  (-t, --tag)
 

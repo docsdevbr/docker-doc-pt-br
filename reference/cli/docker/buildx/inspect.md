@@ -28,8 +28,6 @@ Inspect current builder instance
 | [`--builder`](#builder)     | `string` |         | Override the configured builder instance    |
 | `-D`, `--debug`             | `bool`   |         | Enable debug logging                        |
 
-
-
 ## Description
 
 Shows information about the current or specified builder.

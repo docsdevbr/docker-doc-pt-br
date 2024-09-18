@@ -29,8 +29,6 @@ Show details of an image in the registry
 | [`--format`](#format)   | `string` | `{{.Manifest}}` | Format the output using the given Go template |
 | [`--raw`](#raw)         | `bool`   |                 | Show original, unformatted JSON manifest      |
 
-
-
 ## Description
 
 Show details of an image in the registry.
@@ -367,7 +365,8 @@ $ docker buildx imagetools inspect moby/buildkit:master --format "{{json .Manife
 }
 ```
 
-The following command provides [SLSA](https://github.com/moby/buildkit/blob/master/docs/attestations/slsa-provenance.md)
+The following command
+provides [SLSA](https://github.com/moby/buildkit/blob/master/docs/attestations/slsa-provenance.md)
 JSON output:
 
 ```console
@@ -428,7 +427,8 @@ $ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .Pr
 }
 ```
 
-The following command provides [SBOM](https://github.com/moby/buildkit/blob/master/docs/attestations/sbom.md)
+The following command
+provides [SBOM](https://github.com/moby/buildkit/blob/master/docs/attestations/sbom.md)
 JSON output:
 
 ```console

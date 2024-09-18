@@ -27,8 +27,6 @@ List builder instances
 | `-D`, `--debug`       | `bool`   |         | Enable debug logging |
 | [`--format`](#format) | `string` | `table` | Format the output    |
 
-
-
 ## Description
 
 Lists all builder instances and the nodes for each instance.

@@ -1,17 +1,22 @@
 ---
-datafolder: engine-cli
-datafile: docker_checkpoint_rm
+source_url: https://github.com/docker/cli/blob/master/docs/reference/commandline/checkpoint_rm.md
+revision: 79c9e527a35c0c2dad8f11cde74ecec77ac59b27
+status: untranslated
+license: https://github.com/docker/cli/blob/master/LICENSE
+
 title: docker checkpoint rm
-aliases:
-- /edge/engine/reference/commandline/checkpoint_rm/
-- /engine/reference/commandline/checkpoint_rm/
-layout: cli
 ---
 
-<!--
-This page is automatically generated from Docker's source code. If you want to
-suggest a change to the text that appears here, open a ticket or pull request
-in the source repository on GitHub:
+# checkpoint rm
 
-https://github.com/docker/cli
--->
+Remove a checkpoint
+
+### Aliases
+
+`docker checkpoint rm`, `docker checkpoint remove`
+
+### Options
+
+| Name               | Type     | Default | Description                               |
+|:-------------------|:---------|:--------|:------------------------------------------|
+| `--checkpoint-dir` | `string` |         | Use a custom checkpoint storage directory |

@@ -1,4 +1,9 @@
 ---
+source_url: https://github.com/docker/compose/blob/main/docs/reference/compose_cp.md
+revision: 231ea10058c95ed6308fe4f6ccc1327a553a40ca
+status: untranslated
+license: https://github.com/docker/compose/blob/master/LICENSE
+
 datafolder: compose-cli
 datafile: docker_compose_cp
 title: docker compose cp
@@ -7,9 +12,15 @@ aliases:
 - /engine/reference/commandline/compose_cp/
 ---
 
-<!--
-Sorry, but the contents of this page are automatically generated from
-Docker's source code. If you want to suggest a change to the text that appears
-here, you'll need to find the string by searching this repo:
-https://github.com/docker/compose
--->
+# docker compose cp
+
+Copy files/folders between a service container and the local filesystem
+
+### Options
+
+| Name                  | Type   | Default | Description                                             |
+|:----------------------|:-------|:--------|:--------------------------------------------------------|
+| `-a`, `--archive`     | `bool` |         | Archive mode (copy all uid/gid information)             |
+| `--dry-run`           | `bool` |         | Execute command in dry run mode                         |
+| `-L`, `--follow-link` | `bool` |         | Always follow symbol link in SRC_PATH                   |
+| `--index`             | `int`  | `0`     | Index of the container if service has multiple replicas |

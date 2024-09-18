@@ -29,8 +29,6 @@ Set the current builder instance
 | `--default`             | `bool`   |         | Set builder as default for current context |
 | `--global`              | `bool`   |         | Builder persists context changes           |
 
-
-
 ## Description
 
 Switches the current builder instance. Build commands invoked after this command

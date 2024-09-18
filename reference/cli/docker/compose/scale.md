@@ -1,30 +1,24 @@
 ---
-source_url: https://github.com/docker/compose/blob/main/docs/reference/compose_start.md
+source_url: https://github.com/docker/compose/blob/main/docs/reference/compose_scale.md
 revision: 231ea10058c95ed6308fe4f6ccc1327a553a40ca
 status: untranslated
 license: https://github.com/docker/compose/blob/master/LICENSE
 
 datafolder: compose-cli
-datafile: docker_compose_start
-title: docker compose start
+datafile: docker_compose_scale
+title: docker compose scale
 aliases:
-- /compose/reference/start/
-- /engine/reference/commandline/compose_start/
+- /compose/reference/scale/
 layout: cli
 ---
 
-# docker compose start
+# docker compose scale
 
-Starts existing containers for a service
+Scale services
 
 ### Options
 
 | Name        | Type   | Default | Description                     |
 |:------------|:-------|:--------|:--------------------------------|
 | `--dry-run` | `bool` |         | Execute command in dry run mode |
-
-
-
-## Description
-
-Starts existing containers for a service
+| `--no-deps` | `bool` |         | Don't start linked services     |

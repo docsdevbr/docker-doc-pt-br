@@ -16,7 +16,7 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 ### New
 
 - Add `--only-policy` filter option to the `docker scout quickview`, `docker scout policy` and `docker scout compare` commands.
-- Add `--ignore-suppressed` filter option to `docker scout cves` and `docker scout quickview`  commands to filter out CVEs affected by [exceptions](/scout/explore/exceptions/index.md).
+- Add `--ignore-suppressed` filter option to `docker scout cves` and `docker scout quickview`  commands to filter out CVEs affected by [exceptions]../scout/explore/exceptions/index.md).
 
 ### Bug fixes and enhancements
 
@@ -259,7 +259,7 @@ Discarded in favor of [1.9.1](#191).
 
 ### New
 
-- The [`docker scout push` command](../../../reference/cli/docker/scout/push/index.md) is now fully available: analyze images locally and push the SBOM to Docker Scout.
+- The [`docker scout push` command](../../../reference/cli/docker/scout/push.md) is now fully available: analyze images locally and push the SBOM to Docker Scout.
 
 ### Bug fixes and enhancements
 

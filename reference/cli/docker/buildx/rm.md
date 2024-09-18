@@ -31,8 +31,6 @@ Remove one or more builder instances
 | [`--keep-daemon`](#keep-daemon)     | `bool`   |         | Keep the BuildKit daemon running         |
 | [`--keep-state`](#keep-state)       | `bool`   |         | Keep BuildKit state                      |
 
-
-
 ## Description
 
 Removes the specified or current builder. It is a no-op attempting to remove the
@@ -72,5 +70,6 @@ and [`kubernetes`](https://docs.docker.com/build/drivers/kubernetes/) drivers.
 ### <a name="keep-state"></a> Keep BuildKit state (--keep-state)
 
 Keep BuildKit state, so it can be reused by a new builder with the same name.
-Currently, only supported by the [`docker-container` driver](https://docs.docker.com/build/drivers/docker-container/).
+Currently, only supported by the [
+`docker-container` driver](https://docs.docker.com/build/drivers/docker-container/).
 

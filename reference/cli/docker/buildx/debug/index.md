@@ -39,6 +39,6 @@ Start debugger
 
 ## Subcommands
 
-| Name                                    | Description    |
-|:----------------------------------------|:---------------|
-| [`docker buildx debug build`](build.md) | Start a build  |
+| Name                                    | Description   |
+|:----------------------------------------|:--------------|
+| [`docker buildx debug build`](build.md) | Start a build |

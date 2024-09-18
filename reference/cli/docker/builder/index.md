@@ -1,16 +1,19 @@
 ---
-datafolder: engine-cli
-datafile: docker_builder
+source_url: https://github.com/docker/cli/blob/master/docs/reference/commandline/builder.md
+revision: 79c9e527a35c0c2dad8f11cde74ecec77ac59b27
+status: untranslated
+license: https://github.com/docker/cli/blob/master/LICENSE
+
 title: docker builder
-layout: cli
-aliases:
-- /engine/reference/commandline/builder/
 ---
 
-<!--
-This page is automatically generated from Docker's source code. If you want to
-suggest a change to the text that appears here, open a ticket or pull request
-in the source repository on GitHub:
+# builder
 
-https://github.com/docker/cli
--->
+Manage builds
+
+### Subcommands
+
+| Name                | Description                      |
+|:--------------------|:---------------------------------|
+| [`build`](build.md) | Build an image from a Dockerfile |
+| [`prune`](prune.md) | Remove build cache               |

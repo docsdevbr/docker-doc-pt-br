@@ -168,7 +168,7 @@ The following resources will help you learn more about volumes:
 
 - [Manage data in Docker](../../../manuals/engine/storage/index.md)
 - [Volumes](../../../manuals/engine/storage/volumes.md)
-- [Volume mounts](../../../manuals/engine/containers/run/index.md#volume-mounts)
+- [Volume mounts](../../../manuals/engine/containers/run.md#volume-mounts)
 
 
 ## Next steps

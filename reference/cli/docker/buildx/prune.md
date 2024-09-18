@@ -32,8 +32,6 @@ Remove build cache
 | `--keep-storage`        | `bytes`  | `0`     | Amount of disk space to keep for cache    |
 | `--verbose`             | `bool`   |         | Provide a more verbose output             |
 
-
-
 ## Description
 
 Clears the build cache of the selected builder.
