@@ -17,3 +17,4 @@ nav:
       - comecando/o-que-e-docker.md
       - Introdução:
           - comecando/introducao/index.md
+          - comecando/introducao/obtenha-o-docker-desktop.md
