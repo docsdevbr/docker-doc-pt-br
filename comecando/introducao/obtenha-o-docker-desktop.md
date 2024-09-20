@@ -39,7 +39,7 @@ ambientes.
 
 O Docker Desktop é o pacote completo para criar imagens, executar contêineres e
 muito mais.
-Este guia o guiará pelo processo de instalação, permitindo que você experimente
+Este guia te guiará pelo processo de instalação, permitindo que você experimente
 o Docker Desktop em primeira mão.
 
 > **Termos do Docker Desktop**
@@ -75,20 +75,20 @@ Abra seu terminal CLI e inicie um contêiner executando o comando `docker run`:
 docker run -d -p 8080:80 docker/welcome-to-docker
 ```
 
-## Acesse o _front-end_
+## Acesse o _frontend_
 
-Para este contêiner, o _front-end_ é acessível na porta `8080`.
-Para abrir o site, visite [http://localhost:8080](http://localhost:8080) no seu
-navegador.
+Para este contêiner, o _frontend_ é acessível na porta `8080`.
+Para abrir o _site_, visite [http://localhost:8080](http://localhost:8080) no
+seu navegador.
 
 ![Captura de tela da página inicial do servidor _web_ Nginx, vinda do contêiner em execução](../../get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
 
 ## Gerencie contêineres usando o Docker Desktop
 
 1. Abra o Docker Desktop e selecione o campo **Containers** na barra lateral
-   esquerda.
+   esquerda;
 2. Você pode visualizar informações sobre seu contêiner, incluindo _logs_ e
-   arquivos, e até mesmo acessar o _shell_ selecionando a guia **Exec**.
+   arquivos, e até mesmo acessar o _shell_ selecionando a guia **Exec**;
    ![Captura de tela do exec no contêiner em execução no Docker Desktop](images/exec-into-docker-container.webp?border=true)
 3. Selecione o campo **Inspect** para obter informações detalhadas sobre o
    contêiner.
