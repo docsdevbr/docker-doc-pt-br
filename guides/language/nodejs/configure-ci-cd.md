@@ -83,8 +83,8 @@ to Docker Hub.
            name: Login to Docker Hub
            uses: docker/login-action@v3
            with:
-             username: ${{ vars.DOCKER_USERNAME }}
-             password: ${{ secrets.DOCKERHUB_TOKEN }}
+             username: $\{\{ vars.DOCKER_USERNAME }}
+             password: $\{\{ secrets.DOCKERHUB_TOKEN }}
          -
            name: Set up Docker Buildx
            uses: docker/setup-buildx-action@v3
@@ -101,7 +101,7 @@ to Docker Hub.
              platforms: linux/amd64,linux/arm64/v8
              push: true
              target: prod
-             tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+             tags: $\{\{ vars.DOCKER_USERNAME }}/$\{\{ github.event.repository.name }}:latest
    ```
 
    For more information about the YAML syntax for `docker/build-push-action`,
@@ -137,4 +137,4 @@ Related information:
 
 Next, learn how you can locally test and debug your workloads on Kubernetes before deploying.
 
-{{< button text="Test your deployment" url="./deploy.md" >}}
+{ { < button text="Test your deployment" url="./deploy.md" > } }

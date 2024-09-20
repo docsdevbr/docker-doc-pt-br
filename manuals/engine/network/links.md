@@ -232,7 +232,7 @@ Next, inspect your linked containers with `docker inspect`:
 
 
 ```console
-$ docker inspect -f "{{ .HostConfig.Links }}" web
+$ docker inspect -f "\{\{\.HostConfig.Links }}" web
 
 [/db:/web/db]
 ```

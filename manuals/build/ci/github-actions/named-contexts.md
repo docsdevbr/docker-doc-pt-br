@@ -39,7 +39,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           build-contexts: |
-            alpine=docker-image://alpine:{{% param "example_alpine_version" %}}
+            alpine=docker-image://alpine:\{\{\% param "example_alpine_version" \%\}\}
           tags: myimage:latest
 ```
 
@@ -75,7 +75,7 @@ jobs:
       - name: Build base image
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:base"
+          context: "\{\{defaultContext}}:base"
           load: true
           tags: my-base-image:latest
 
@@ -128,7 +128,7 @@ jobs:
       - name: Build base image
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:base"
+          context: "\{\{defaultContext}}:base"
           tags: localhost:5000/my-base-image:latest
           push: true
 

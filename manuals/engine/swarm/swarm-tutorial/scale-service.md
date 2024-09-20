@@ -63,4 +63,4 @@ the service. Containers running in a service are called tasks.
 
 At this point in the tutorial, you're finished with the `helloworld` service. Next, you'll delete the service
 
-{{< button text="Delete the service" url="delete-service.md" >}}
+{ { < button text="Delete the service" url="delete-service.md" > } }

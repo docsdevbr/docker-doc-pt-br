@@ -8,7 +8,7 @@ aliases:
 weight: 10
 ---
 
-{{< include "new-plans.md" >}}
+{ { < include "new-plans.md" > } }
 
 You can do more with Docker with a Docker Core subscription, such as add collaborators, create scoped access tokens, and create private repositories. This page provides an overview of each subscription tier. To compare features available in each tier, see [Docker Pricing](https://www.docker.com/pricing/).
 

@@ -1,5 +1,5 @@
 ---
-title: What's next 
+title: What's next
 keywords: concepts, build, images, container, docker desktop
 description: Explore step-by-step guides to hep you understand core Docker concepts, building images, and running containers.
 aliases:
@@ -16,17 +16,17 @@ the-basics:
   description: Learn how to run your first container.
   link: /get-started/docker-concepts/the-basics/what-is-a-container/
 - title: What is an image?
-  description: Learn the basics of image layers. 
+  description: Learn the basics of image layers.
   link: /get-started/docker-concepts/the-basics/what-is-an-image/
 - title: What is a registry?
-  description: Learn about container registries, explore their interoperability, and interact with registries. 
+  description: Learn about container registries, explore their interoperability, and interact with registries.
   link: /get-started/docker-concepts/the-basics/what-is-a-registry/
 - title: What is Docker Compose?
   description: Gain a better understanding of Docker Compose.
   link: /get-started/docker-concepts/the-basics/what-is-docker-compose/
 
 building-images:
-- title: Understanding image layers 
+- title: Understanding image layers
   description: Learn about the layers of container images.
   link: /get-started/docker-concepts/building-images/understanding-image-layers/
 - title: Writing a Dockerfile
@@ -66,16 +66,16 @@ The following sections provide step-by-step guides to help you understand core D
 
 Get started learning the core concepts of containers, images, registries, and Docker Compose.
 
-{{< grid items="the-basics" >}}
+{ { < grid items="the-basics" > } }
 
 ## Building images
 
 Craft optimized container images with Dockerfiles, build cache, and multi-stage builds.
 
-{{< grid items="building-images" >}}
+{ { < grid items="building-images" > } }
 
 ## Running containers
 
 Master essential techniques for exposing ports, overriding defaults, persisting data, sharing files, and managing multi-container applications.
 
-{{< grid items="running-containers" >}}
+{ { < grid items="running-containers" > } }

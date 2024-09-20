@@ -13,7 +13,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.29.3
 
-{{< release-date date="2024-09-12" >}}
+{ { < release-date date="2024-09-12" > } }
 
 ### Update
 
@@ -29,7 +29,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.29.2
 
-{{< release-date date="2024-08-16" >}}
+{ { < release-date date="2024-08-16" > } }
 
 ### Update
 
@@ -50,7 +50,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.29.1
 
-{{< release-date date="2024-07-23" >}}
+{ { < release-date date="2024-07-23" > } }
 
 ### Update
 
@@ -64,7 +64,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.29.0
 
-{{< release-date date="2024-07-17" >}}
+{ { < release-date date="2024-07-17" > } }
 
 ### Update
 
@@ -83,7 +83,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.28.1
 
-{{< release-date date="2024-06-24" >}}
+{ { < release-date date="2024-06-24" > } }
 
 ### Bug fixes and enhancements
 
@@ -91,7 +91,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.28.0
 
-{{< release-date date="2024-06-21" >}}
+{ { < release-date date="2024-06-21" > } }
 
 ### Update
 
@@ -100,7 +100,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.27.3
 
-{{< release-date date="2024-06-21" >}}
+{ { < release-date date="2024-06-21" > } }
 
 ### Update
 
@@ -109,7 +109,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.27.2
 
-{{< release-date date="2024-06-20" >}}
+{ { < release-date date="2024-06-20" > } }
 
 ### Update
 
@@ -127,7 +127,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.27.1
 
-{{< release-date date="2024-05-24" >}}
+{ { < release-date date="2024-05-24" > } }
 
 ### Update
 
@@ -145,7 +145,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.27.0
 
-{{< release-date date="2024-04-24" >}}
+{ { < release-date date="2024-04-24" > } }
 
 ### Update
 
@@ -163,7 +163,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.26.1
 
-{{< release-date date="2024-03-29" >}}
+{ { < release-date date="2024-03-29" > } }
 
 ### Update
 
@@ -178,7 +178,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.26.0
 
-{{< release-date date="2024-03-22" >}}
+{ { < release-date date="2024-03-22" > } }
 
 ### Update
 
@@ -197,7 +197,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.25.0
 
-{{< release-date date="2024-03-15" >}}
+{ { < release-date date="2024-03-15" > } }
 
 ### Update
 
@@ -211,7 +211,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.24.7
 
-{{< release-date date="2024-03-06" >}}
+{ { < release-date date="2024-03-06" > } }
 
 ### Update
 
@@ -236,7 +236,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.24.6
 
-{{< release-date date="2024-02-15" >}}
+{ { < release-date date="2024-02-15" > } }
 
 ### Update
 
@@ -251,7 +251,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.24.5
 
-{{< release-date date="2024-01-30" >}}
+{ { < release-date date="2024-01-30" > } }
 
 ### Bug fixes and enhancements
 
@@ -259,7 +259,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.24.4
 
-{{< release-date date="2024-01-29" >}}
+{ { < release-date date="2024-01-29" > } }
 
 ### Update
 
@@ -274,7 +274,7 @@ For more detailed information, see the [release notes in the Compose repo](https
 
 ## 2.24.3
 
-{{< release-date date="2024-01-24" >}}
+{ { < release-date date="2024-01-24" > } }
 
 This release fixes a build issue with Docker Desktop for Windows introduced in Compose v2.24.0.
 
@@ -284,7 +284,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.24.2
 
-{{< release-date date="2024-01-22" >}}
+{ { < release-date date="2024-01-22" > } }
 
 ### Update
 
@@ -293,7 +293,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.24.1
 
-{{< release-date date="2024-01-18" >}}
+{ { < release-date date="2024-01-18" > } }
 
 ### Update
 
@@ -311,7 +311,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.24.0
 
-{{< release-date date="2024-01-11" >}}
+{ { < release-date date="2024-01-11" > } }
 
 ### Update
 
@@ -340,7 +340,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.23.3
 
-{{< release-date date="2023-11-22" >}}
+{ { < release-date date="2023-11-22" > } }
 
 ### Update
 
@@ -348,7 +348,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.23.2
 
-{{< release-date date="2023-11-21" >}}
+{ { < release-date date="2023-11-21" > } }
 
 ### Update
 
@@ -366,7 +366,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.23.1
 
-{{< release-date date="2023-11-16" >}}
+{ { < release-date date="2023-11-16" > } }
 
 ### Update
 
@@ -389,7 +389,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.23.0
 
-{{< release-date date="2023-10-18" >}}
+{ { < release-date date="2023-10-18" > } }
 
 ### Update
 
@@ -408,7 +408,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.22.0
 
-{{< release-date date="2023-09-21" >}}
+{ { < release-date date="2023-09-21" > } }
 
 > [!NOTE]
 >
@@ -434,7 +434,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.21.0
 
-{{< release-date date="2023-08-30" >}}
+{ { < release-date date="2023-08-30" > } }
 
 > [!NOTE]
 >
@@ -456,7 +456,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.20.3
 
-{{< release-date date="2023-08-11" >}}
+{ { < release-date date="2023-08-11" > } }
 
 ### Update
 
@@ -474,7 +474,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.20.2
 
-{{< release-date date="2023-07-19" >}}
+{ { < release-date date="2023-07-19" > } }
 
 ### Bug fixes and enhancements
 
@@ -485,7 +485,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.20.1
 
-{{< release-date date="2023-07-18" >}}
+{ { < release-date date="2023-07-18" > } }
 
 ### Update
 
@@ -496,7 +496,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.20.0
 
-{{< release-date date="2023-07-11" >}}
+{ { < release-date date="2023-07-11" > } }
 
 ### Update
 
@@ -520,7 +520,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.19.1
 
-{{< release-date date="2023-06-29" >}}
+{ { < release-date date="2023-06-29" > } }
 
 ### Update
 
@@ -534,7 +534,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.19.0
 
-{{< release-date date="2023-06-21" >}}
+{ { < release-date date="2023-06-21" > } }
 
 ### Update
 
@@ -575,7 +575,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.18.1
 
-{{< release-date date="2023-05-17" >}}
+{ { < release-date date="2023-05-17" > } }
 
 ### Bug fixes and enhancements
 
@@ -583,7 +583,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.18.0
 
-{{< release-date date="2023-05-16" >}}
+{ { < release-date date="2023-05-16" > } }
 
 ### Update
 
@@ -615,7 +615,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.17.2
 
-{{< release-date date="2023-03-26" >}}
+{ { < release-date date="2023-03-26" > } }
 
 ### Update
 
@@ -627,7 +627,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.17.1
 
-{{< release-date date="2023-03-24" >}}
+{ { < release-date date="2023-03-24" > } }
 
 ### Update
 
@@ -643,7 +643,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.17.0
 
-{{< release-date date="2023-03-23" >}}
+{ { < release-date date="2023-03-23" > } }
 
 ### Upgrade notes
 
@@ -690,7 +690,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.16.0
 
-{{< release-date date="2023-02-08" >}}
+{ { < release-date date="2023-02-08" > } }
 
 ### Update
 
@@ -732,7 +732,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.15.1
 
-{{< release-date date="2023-01-09" >}}
+{ { < release-date date="2023-01-09" > } }
 
 ### Update
 
@@ -747,7 +747,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.15.0
 
-{{< release-date date="2023-01-05" >}}
+{ { < release-date date="2023-01-05" > } }
 
 ### Update
 
@@ -771,7 +771,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.14.2
 
-{{< release-date date="2022-12-20" >}}
+{ { < release-date date="2022-12-20" > } }
 
 ### Update
 
@@ -790,7 +790,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.14.1
 
-{{< release-date date="2022-12-15" >}}
+{ { < release-date date="2022-12-15" > } }
 
 ### Updates
 
@@ -816,7 +816,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.14.0
 
-{{< release-date date="2022-12-02" >}}
+{ { < release-date date="2022-12-02" > } }
 
 ### Updates
 
@@ -837,7 +837,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.13.0
 
-{{< release-date date="2022-11-23" >}}
+{ { < release-date date="2022-11-23" > } }
 
 ### Updates
 
@@ -860,7 +860,7 @@ This release fixes a build issue with Docker Desktop for Windows introduced in C
 
 ## 2.12.2
 
-{{< release-date date="2022-10-21" >}}
+{ { < release-date date="2022-10-21" > } }
 
 ### Updates
 
@@ -870,7 +870,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.12.1
 
-{{< release-date date="2022-10-21" >}}
+{ { < release-date date="2022-10-21" > } }
 
 ### Security
 
@@ -880,7 +880,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.12.0
 
-{{< release-date date="2022-10-18" >}}
+{ { < release-date date="2022-10-18" > } }
 
 ### Updates
 
@@ -900,7 +900,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.11.2
 
-{{< release-date date="2022-09-27" >}}
+{ { < release-date date="2022-09-27" > } }
 
 > [!NOTE]
 >
@@ -931,7 +931,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.11.1
 
-{{< release-date date="2022-09-20" >}}
+{ { < release-date date="2022-09-20" > } }
 
 ### Bug fixes and enhancements
 
@@ -943,7 +943,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.11.0
 
-{{< release-date date="2022-09-14" >}}
+{ { < release-date date="2022-09-14" > } }
 
 ### Updates
 
@@ -972,7 +972,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.10.2
 
-{{< release-date date="2022-08-26" >}}
+{ { < release-date date="2022-08-26" > } }
 
 ### Bug fixes and enhancements
 
@@ -983,7 +983,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.10.1
 
-{{< release-date date="2022-08-24" >}}
+{ { < release-date date="2022-08-24" > } }
 
 ### Updates
 
@@ -1001,7 +1001,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.10.0
 
-{{< release-date date="2022-08-19" >}}
+{ { < release-date date="2022-08-19" > } }
 
 ### New
 
@@ -1038,7 +1038,7 @@ For the full change log, check the [Compose repository 2.10.0 release page](http
 
 ## 2.9.0
 
-{{< release-date date="2022-08-7" >}}
+{ { < release-date date="2022-08-7" > } }
 
 > [!IMPORTANT]
 >
@@ -1063,7 +1063,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.8.0
 
-{{< release-date date="2022-07-29" >}}
+{ { < release-date date="2022-07-29" > } }
 
 > [!IMPORTANT]
 >
@@ -1095,7 +1095,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.7.0
 
-{{< release-date date="2022-07-20" >}}
+{ { < release-date date="2022-07-20" > } }
 
 ### New
 
@@ -1129,7 +1129,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.6.1
 
-{{< release-date date="2022-06-23" >}}
+{ { < release-date date="2022-06-23" > } }
 
 ### New
 
@@ -1174,7 +1174,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.6.0
 
-{{< release-date date="2022-05-30" >}}
+{ { < release-date date="2022-05-30" > } }
 
 ### New
 
@@ -1200,7 +1200,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.5.1
 
-{{< release-date date="2022-05-17" >}}
+{ { < release-date date="2022-05-17" > } }
 
 ### Updates
 
@@ -1219,7 +1219,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.5.0
 
-{{< release-date date="2022-04-29" >}}
+{ { < release-date date="2022-04-29" > } }
 
 ### Bug fixes and enhancements
 
@@ -1241,7 +1241,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.4.1
 
-{{< release-date date="2022-04-04" >}}
+{ { < release-date date="2022-04-04" > } }
 
 ### Bug fixes and enhancements
 
@@ -1254,7 +1254,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.4.0
 
-{{< release-date date="2022-04-1" >}}
+{ { < release-date date="2022-04-1" > } }
 
 ### Updates
 
@@ -1279,7 +1279,7 @@ For the full change log or additional information, check the [Compose repository
 
 ## 2.3.4
 
-{{< release-date date="2022-03-25" >}}
+{ { < release-date date="2022-03-25" > } }
 
 ### New
 

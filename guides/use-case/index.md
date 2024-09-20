@@ -50,33 +50,33 @@ how Docker can streamline your projects and workflows.
 
 ## Data science
 
-{{< card
+{ { <card
   title="Data science with JupyterLab"
   icon=analytics
   link=/guides/use-case/jupyter/
   description="Set up a JupyterLab environment to conduct and share data science research, making your projects more reproducible and scalable."
->}}
+> } }
 
 ## Databases & storage
 
-{{< card
+{ { <card
   title="Use containerized databases"
   icon=storage
   link=/guides/use-case/databases/
   description="Learn how to run and manage containerized databases."
->}}
+> } }
 
 ## Machine learning & AI
 
-{{< grid items="grid_genai" >}}
+{ { < grid items="grid_genai" > } }
 
 
 ## Security
 
-{{< card
+{ { <card
   title="Suppress CVEs with VEX"
   icon=verified_user
   link=/scout/guides/vex/
   description="Learn how to suppress non-applicable or fixed vulnerabilities found in your images."
->}}
+> } }
 

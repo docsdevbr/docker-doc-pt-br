@@ -50,4 +50,4 @@ The Compose Specification on Docker Docs is the Docker Compose implementation. I
 
 Use the following links to navigate key sections of the Compose Specification.
 
-{{< grid >}}
+{ { < grid > } }

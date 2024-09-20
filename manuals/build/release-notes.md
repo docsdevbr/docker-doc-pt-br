@@ -12,7 +12,7 @@ fixes in [Docker Buildx](https://github.com/docker/buildx).
 
 ## 0.16.2
 
-{{< release-date date="2024-07-25" >}}
+{ { < release-date date="2024-07-25" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.16.2).
@@ -23,7 +23,7 @@ The full release note for this release is available
 
 ## 0.16.1
 
-{{< release-date date="2024-07-18" >}}
+{ { < release-date date="2024-07-18" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.16.1).
@@ -35,7 +35,7 @@ The full release note for this release is available
 
 ## 0.16.0
 
-{{< release-date date="2024-07-11" >}}
+{ { < release-date date="2024-07-11" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.16.0).
@@ -43,7 +43,7 @@ The full release note for this release is available
 ### New
 
 - Bake command now supports `--call` and `--check` flags and `call` attribute in target definitions for selecting custom frontend methods. [docker/buildx#2556](https://github.com/docker/buildx/pull/2556/), [docker/buildx#2576](https://github.com/docker/buildx/pull/2576/)
-- {{< badge color=violet text=Experimental >}} Bake now supports `--list-targets` and `--list-variables` flags for inspecting the definition and possible configuration options for your project. [docker/buildx#2556](https://github.com/docker/buildx/pull/2556/)
+- { { < badge color=violet text=Experimental > } } Bake now supports `--list-targets` and `--list-variables` flags for inspecting the definition and possible configuration options for your project. [docker/buildx#2556](https://github.com/docker/buildx/pull/2556/)
 - Bake definition variables and targets supports new `description` attribute for defining text-based description that can be inspected using e.g. `--list-targets` and `--list-variables`. [docker/buildx#2556](https://github.com/docker/buildx/pull/2556/)
 - Bake now supports printing warnings for build check violations. [docker/buildx#2501](https://github.com/docker/buildx/pull/2501/)
 
@@ -69,7 +69,7 @@ The full release note for this release is available
 
 ## 0.15.1
 
-{{< release-date date="2024-06-18" >}}
+{ { < release-date date="2024-06-18" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.15.1).
@@ -81,7 +81,7 @@ The full release note for this release is available
 
 ## 0.15.0
 
-{{< release-date date="2024-06-11" >}}
+{ { < release-date date="2024-06-11" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.15.0).
@@ -110,7 +110,7 @@ The full release note for this release is available
 
 ## 0.14.0
 
-{{< release-date date="2024-04-18" >}}
+{ { < release-date date="2024-04-18" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.14.0).
@@ -158,7 +158,7 @@ The full release note for this release is available
 
 ## 0.13.1
 
-{{< release-date date="2024-03-13" >}}
+{ { < release-date date="2024-03-13" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.13.1).
@@ -170,7 +170,7 @@ The full release note for this release is available
 
 ## 0.13.0
 
-{{< release-date date="2024-03-06" >}}
+{ { < release-date date="2024-03-06" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.13.0).
@@ -180,7 +180,7 @@ The full release note for this release is available
 - New `docker buildx dial-stdio` command for directly contacting BuildKit daemon of the configured builder instance. [docker/buildx#2112](https://github.com/docker/buildx/pull/2112)
 - Windows container builders can now be created using the `remote` driver and npipe connections. [docker/buildx#2287](https://github.com/docker/buildx/pull/2287)
 - Npipe URL scheme is now supported on Windows. [docker/buildx#2250](https://github.com/docker/buildx/pull/2250)
-- {{< badge color=violet text=Experimental >}} Buildx can now export OpenTelemetry metrics for build duration and transfer sizes. [docker/buildx#2235](https://github.com/docker/buildx/pull/2235), [docker/buildx#2258](https://github.com/docker/buildx/pull/2258) [docker/buildx#2225](https://github.com/docker/buildx/pull/2225) [docker/buildx#2224](https://github.com/docker/buildx/pull/2224) [docker/buildx#2155](https://github.com/docker/buildx/pull/2155)
+- { { < badge color=violet text=Experimental > } } Buildx can now export OpenTelemetry metrics for build duration and transfer sizes. [docker/buildx#2235](https://github.com/docker/buildx/pull/2235), [docker/buildx#2258](https://github.com/docker/buildx/pull/2258) [docker/buildx#2225](https://github.com/docker/buildx/pull/2225) [docker/buildx#2224](https://github.com/docker/buildx/pull/2224) [docker/buildx#2155](https://github.com/docker/buildx/pull/2155)
 
 ### Enhancements
 
@@ -212,7 +212,7 @@ The full release note for this release is available
 
 ## 0.12.1
 
-{{< release-date date="2024-01-12" >}}
+{ { < release-date date="2024-01-12" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.12.1).
@@ -224,7 +224,7 @@ The full release note for this release is available
 
 ## 0.12.0
 
-{{< release-date date="2023-11-16" >}}
+{ { < release-date date="2023-11-16" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.12.0).
@@ -317,7 +317,7 @@ The full release note for this release is available
 
 ## 0.11.2
 
-{{< release-date date="2023-07-18" >}}
+{ { < release-date date="2023-07-18" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.11.2).
@@ -331,7 +331,7 @@ The full release note for this release is available
 
 ## 0.11.1
 
-{{< release-date date="2023-07-05" >}}
+{ { < release-date date="2023-07-05" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.11.1).
@@ -349,7 +349,7 @@ The full release note for this release is available
 
 ## 0.11.0
 
-{{< release-date date="2023-06-13" >}}
+{ { < release-date date="2023-06-13" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/docker/buildx/releases/tag/v0.11.0).
@@ -428,9 +428,9 @@ The full release note for this release is available
 
 ## 0.10.4
 
-{{< release-date date="2023-03-06" >}}
+{ { < release-date date="2023-03-06" > } }
 
-{{< include "buildx-v0.10-disclaimer.md" >}}
+{ { < include "buildx-v0.10-disclaimer.md" > } }
 
 ### Bug fixes and enhancements
 
@@ -440,9 +440,9 @@ The full release note for this release is available
 
 ## 0.10.3
 
-{{< release-date date="2023-02-16" >}}
+{ { < release-date date="2023-02-16" > } }
 
-{{< include "buildx-v0.10-disclaimer.md" >}}
+{ { < include "buildx-v0.10-disclaimer.md" > } }
 
 ### Bug fixes and enhancements
 
@@ -454,9 +454,9 @@ The full release note for this release is available
 
 ## 0.10.2
 
-{{< release-date date="2023-01-30" >}}
+{ { < release-date date="2023-01-30" > } }
 
-{{< include "buildx-v0.10-disclaimer.md" >}}
+{ { < include "buildx-v0.10-disclaimer.md" > } }
 
 ### Bug fixes and enhancements
 
@@ -468,9 +468,9 @@ The full release note for this release is available
 
 ## 0.10.1
 
-{{< release-date date="2023-01-27" >}}
+{ { < release-date date="2023-01-27" > } }
 
-{{< include "buildx-v0.10-disclaimer.md" >}}
+{ { < include "buildx-v0.10-disclaimer.md" > } }
 
 ### Bug fixes and enhancements
 
@@ -485,9 +485,9 @@ The full release note for this release is available
 
 ## 0.10.0
 
-{{< release-date date="2023-01-10" >}}
+{ { < release-date date="2023-01-10" > } }
 
-{{< include "buildx-v0.10-disclaimer.md" >}}
+{ { < include "buildx-v0.10-disclaimer.md" > } }
 
 ### New
 
@@ -560,7 +560,7 @@ The full release note for this release is available
 
 ## 0.9.1
 
-{{< release-date date="2022-08-18" >}}
+{ { < release-date date="2022-08-18" > } }
 
 ### Bug fixes and enhancements
 
@@ -572,7 +572,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.9.0
 
-{{< release-date date="2022-08-17" >}}
+{ { < release-date date="2022-08-17" > } }
 
 ### New
 
@@ -672,7 +672,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.8.2
 
-{{< release-date date="2022-04-04" >}}
+{ { < release-date date="2022-04-04" > } }
 
 ### Updates
 
@@ -687,7 +687,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.8.1
 
-{{< release-date date="2022-03-21" >}}
+{ { < release-date date="2022-03-21" > } }
 
 ### Bug fixes and enhancements
 
@@ -698,7 +698,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.8.0
 
-{{< release-date date="2022-03-09" >}}
+{ { < release-date date="2022-03-09" > } }
 
 ### New
 
@@ -751,7 +751,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.7.1
 
-{{< release-date date="2021-08-25" >}}
+{ { < release-date date="2021-08-25" > } }
 
 ### Fixes
 
@@ -762,7 +762,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.7.0
 
-{{< release-date date="2021-11-10" >}}
+{ { < release-date date="2021-11-10" > } }
 
 ### New features
 
@@ -807,7 +807,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.6.3
 
-{{< release-date date="2021-08-30" >}}
+{ { < release-date date="2021-08-30" > } }
 
 ### Fixes
 
@@ -817,7 +817,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.6.2
 
-{{< release-date date="2021-08-21" >}}
+{ { < release-date date="2021-08-21" > } }
 
 For more details, see the complete release notes in the [Buildx GitHub repository](https://github.com/docker/buildx/releases/tag/v0.6.2).
 
@@ -827,7 +827,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.6.1
 
-{{< release-date date="2021-07-30" >}}
+{ { < release-date date="2021-07-30" > } }
 
 ### Enhancements
 
@@ -842,7 +842,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.6.0
 
-{{< release-date date="2021-07-16" >}}
+{ { < release-date date="2021-07-16" > } }
 
 ### New features
 
@@ -893,7 +893,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.5.1
 
-{{< release-date date="2020-12-15" >}}
+{ { < release-date date="2020-12-15" > } }
 
 ### Fixes
 
@@ -904,7 +904,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.5.0
 
-{{< release-date date="2020-12-15" >}}
+{ { < release-date date="2020-12-15" > } }
 
 ### New features
 
@@ -948,7 +948,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.4.2
 
-{{< release-date date="2020-08-22" >}}
+{ { < release-date date="2020-08-22" > } }
 
 ### New features
 
@@ -969,7 +969,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.4.1
 
-{{< release-date date="2020-05-01" >}}
+{ { < release-date date="2020-05-01" > } }
 
 ### Fixes
 
@@ -980,7 +980,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.4.0
 
-{{< release-date date="2020-04-30" >}}
+{ { < release-date date="2020-04-30" > } }
 
 ### New features
 
@@ -1000,7 +1000,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.3.1
 
-{{< release-date date="2019-09-27" >}}
+{ { < release-date date="2019-09-27" > } }
 
 ### Enhancements
 
@@ -1017,7 +1017,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.3.0
 
-{{< release-date date="2019-08-02" >}}
+{ { < release-date date="2019-08-02" > } }
 
 ### New features
 
@@ -1039,7 +1039,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.2.2
 
-{{< release-date date="2019-05-30" >}}
+{ { < release-date date="2019-05-30" > } }
 
 ### Enhancements
 
@@ -1049,7 +1049,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.2.1
 
-{{< release-date date="2019-05-25" >}}
+{ { < release-date date="2019-05-25" > } }
 
 ### New features
 
@@ -1069,7 +1069,7 @@ For more details, see the complete release notes in the [Buildx GitHub repositor
 
 ## 0.2.0
 
-{{< release-date date="2019-04-25" >}}
+{ { < release-date date="2019-04-25" > } }
 
 ### New features
 

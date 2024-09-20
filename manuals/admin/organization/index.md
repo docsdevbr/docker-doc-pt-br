@@ -45,10 +45,10 @@ grid:
   icon: help
 ---
 
-{{< include "admin-org-overview.md" >}}
+{ { < include "admin-org-overview.md" > } }
 
 To create an organization, see [Create your organization](orgs.md).
 
 Learn how to administer an organization in the following sections.
 
-{{< grid >}}
+{ { < grid > } }

@@ -66,7 +66,7 @@ To build an image using a non-default driver and load it to the image store,
 
 ### Load by default
 
-{{< introduced buildx 0.14.0 >}}
+{ { < introduced buildx 0.14.0 > } }
 
 You can configure the custom build drivers to behave in a similar way to the
 default `docker` driver, and load images to the local image store by default.

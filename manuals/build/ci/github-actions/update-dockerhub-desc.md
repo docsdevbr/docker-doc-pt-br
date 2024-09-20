@@ -28,8 +28,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -40,7 +40,7 @@ jobs:
       - name: Update repo description
         uses: peter-evans/dockerhub-description@e98e4d1628a5f3be2be7c231e50981aee98723ae # v4.0.0
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
           repository: user/app
 ```

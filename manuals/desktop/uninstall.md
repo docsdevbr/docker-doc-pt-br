@@ -12,8 +12,8 @@ weight: 210
 > other Docker-related data local to the machine, and removes the files generated
 > by the application. To learn how to preserve important data before uninstalling, refer to the [back up and restore data](backup-and-restore.md) section .
 
-{{< tabs >}}
-{{< tab name="Windows" >}}
+{ { < tabs > } }
+{ { < tab name="Windows" > } }
 
 To uninstall Docker Desktop from your Windows machine:
 
@@ -27,7 +27,7 @@ You can also uninstall Docker Desktop from the CLI:
    ```console
    $ C:\Program Files\Docker\Docker\Docker Desktop Installer.exe
    ```
-2. Uninstall Docker Desktop. 
+2. Uninstall Docker Desktop.
  - In PowerShell, run:
     ```console
     $ Start-Process 'Docker Desktop Installer.exe' -Wait uninstall
@@ -48,9 +48,9 @@ C:\Users\<your user name>\AppData\Roaming\Docker
 C:\Users\<your user name>\AppData\Roaming\Docker Desktop
 C:\Users\<your user name>\.docker
 ```
- 
-{{< /tab >}}
-{{< tab name="Mac" >}}
+
+{ { < /tab > } }
+{ { < tab name="Mac" > } }
 
 To uninstall Docker Desktop from your Mac:
 
@@ -71,17 +71,17 @@ $ rm -rf ~/Library/Containers/com.docker.docker
 $ rm -rf ~/.docker
 ```
 
-You can also move the Docker application to the trash. 
+You can also move the Docker application to the trash.
 
-{{< /tab >}}
-{{< tab name="Linux" >}}
+{ { < /tab > } }
+{ { < tab name="Linux" > } }
 
 Docker Desktop is removed from a Linux host using the package manager.
 
 Once Docker Desktop is removed, users must delete the `credsStore` and `currentContext` properties from the `~/.docker/config.json`.
 
-{{< /tab >}}
-{{< tab name="Ubuntu" >}}
+{ { < /tab > } }
+{ { < tab name="Ubuntu" > } }
 
 To remove Docker Desktop for Ubuntu, run:
 
@@ -98,10 +98,10 @@ $ sudo rm /usr/local/bin/com.docker.cli
 $ sudo apt purge docker-desktop
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
-{{< /tab >}}
-{{< tab name="Debian" >}}
+{ { < /tab > } }
+{ { < tab name="Debian" > } }
 
 To remove Docker Desktop for Debian, run:
 
@@ -120,8 +120,8 @@ $ sudo apt purge docker-desktop
 
 Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
-{{< /tab >}}
-{{< tab name="Fedora" >}}
+{ { < /tab > } }
+{ { < tab name="Fedora" > } }
 
 To remove Docker Desktop for Fedora, run:
 
@@ -137,10 +137,10 @@ $ rm -r $HOME/.docker/desktop
 $ sudo rm /usr/local/bin/com.docker.cli
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
-{{< /tab >}}
-{{< tab name="Arch" >}}
+{ { < /tab > } }
+{ { < tab name="Arch" > } }
 
 To remove Docker Desktop for Arch, run:
 
@@ -157,9 +157,9 @@ $ sudo rm /usr/local/bin/com.docker.cli
 $ sudo pacman -Rns docker-desktop
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 

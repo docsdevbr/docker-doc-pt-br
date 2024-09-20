@@ -29,8 +29,8 @@ aliases:
 
 This page contains the download URL, information about system requirements, and instructions on how to install Docker Desktop for Windows.
 
-{{< button text="Docker Desktop for Windows - x86_64" url="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-amd64" >}}
-{{< button text="Docker Desktop for Windows - Arm (Beta)" url="https://desktop.docker.com/win/main/arm64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-arm64" >}}
+{ { < button text="Docker Desktop for Windows - x86_64" url="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-amd64" > } }
+{ { < button text="Docker Desktop for Windows - Arm (Beta)" url="https://desktop.docker.com/win/main/arm64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-arm64" > } }
 
 _For checksums, see [Release notes](../release-notes.md)_
 
@@ -42,8 +42,8 @@ _For checksums, see [Release notes](../release-notes.md)_
 >
 > Docker Desktop's functionality remains consistent on both WSL and Hyper-V, without a preference for either architecture. Hyper-V and WSL have their own advantages and disadvantages, depending on your specific set up and your planned use case.
 
-{{< tabs >}}
-{{< tab name="WSL 2 backend, x86_64" >}}
+{ { < tabs > } }
+{ { < tab name="WSL 2 backend, x86_64" > } }
 
 - WSL version 1.1.3.0 or later.
 - Windows 11 64-bit: Home or Pro version 21H2 or higher, or Enterprise or Education version 21H2 or higher.
@@ -70,8 +70,8 @@ For more information on setting up WSL 2 with Docker Desktop, see [WSL](../wsl/i
 > To run Windows containers, you need Windows 10 or Windows 11 Professional or Enterprise edition.
 > Windows Home or Education editions only allow you to run Linux containers.
 
-{{< /tab >}}
-{{< tab name="Hyper-V backend, x86_64" >}}
+{ { < /tab > } }
+{ { < tab name="Hyper-V backend, x86_64" > } }
 
 - Windows 11 64-bit: Home or Pro version 21H2 or higher, or Enterprise or Education version 21H2 or higher.
 - Windows 10 64-bit:
@@ -96,8 +96,8 @@ For more information on setting up WSL 2 with Docker Desktop, see [WSL](../wsl/i
 > To run Windows containers, you need Windows 10 or Windows 11 Professional or Enterprise edition.
 > Windows Home or Education editions only allow you to run Linux containers.
 
-{{< /tab >}}
-{{< tab name="WSL 2 backend, Arm (Beta)" >}}
+{ { < /tab > } }
+{ { < tab name="WSL 2 backend, Arm (Beta)" > } }
 
 - WSL version 1.1.3.0 or later.
 - Windows 11 64-bit: Home or Pro version 21H2 or higher, or Enterprise or Education version 21H2 or higher.
@@ -117,8 +117,8 @@ For more information on setting up WSL 2 with Docker Desktop, see [WSL](../wsl/i
 >
 > Windows containers are not supported.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Containers and images created with Docker Desktop are shared between all
 user accounts on machines where it is installed. This is because all Windows
@@ -128,7 +128,7 @@ Running Docker Desktop inside a VMware ESXi or Azure VM is supported for Docker 
 It requires enabling nested virtualization on the hypervisor first.
 For more information, see [Running Docker Desktop in a VM or VDI environment](../vm-vdi.md).
 
-{{< accordion title="How do I switch between Windows and Linux containers?" >}}
+{ { < accordion title="How do I switch between Windows and Linux containers?" > } }
 
 From the Docker Desktop menu, you can toggle which daemon (Linux or Windows)
 the Docker CLI talks to. Select **Switch to Windows containers** to use Windows
@@ -160,7 +160,7 @@ proxies and daemon configurations return to what you had set for Linux
 containers. Your Windows container settings are retained and become available
 again when you switch back.
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ## Install Docker Desktop on Windows
 
@@ -253,9 +253,9 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 1. Search for Docker, and select **Docker Desktop** in the search results.
 
-2. The Docker menu ({{< inline-image src="images/whale-x.svg" alt="whale menu" >}}) displays the Docker Subscription Service Agreement.
+2. The Docker menu ({ { < inline-image src="images/whale-x.svg" alt="whale menu" > } }) displays the Docker Subscription Service Agreement.
 
-   {{< include "desktop-license-update.md" >}}
+   { { < include "desktop-license-update.md" > } }
 
 3. Select **Accept** to continue. Docker Desktop starts after you accept the terms.
 

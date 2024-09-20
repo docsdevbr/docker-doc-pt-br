@@ -68,7 +68,7 @@ such as images, containers, networks, and volumes.
 For more details, see
 [Docker Architecture](../../comecando/o-que-e-docker.md#arquitetura-do-docker).
 
-{{< grid >}}
+{ { < grid > } }
 
 ## Licensing
 

@@ -91,8 +91,8 @@ name of the volume.
 
 You can create the volume and start the container using the CLI or Docker Desktop's graphical interface.
 
-{{< tabs >}}
-{{< tab name="CLI" >}}
+{ { < tabs > } }
+{ { < tab name="CLI" > } }
 
 1. Create a volume by using the `docker volume create` command.
 
@@ -123,8 +123,8 @@ You can create the volume and start the container using the CLI or Docker Deskto
    > [Working with Git Bash](../../manuals/desktop/troubleshoot/topics.md#working-with-git-bash).
 
 
-{{< /tab >}}
-{{< tab name="Docker Desktop" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Desktop" > } }
 
 To create a volume:
 
@@ -154,8 +154,8 @@ To start the todo app container with the volume mounted:
 8. In **Container path**, specify `/etc/todos`.
 9. Select **Run**.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Verify that the data persists
 
@@ -212,4 +212,4 @@ Related information:
 
 Next, you'll learn how you can develop your app more efficiently using bind mounts.
 
-{{< button text="Use bind mounts" url="06_bind_mounts.md" >}}
+{ { < button text="Use bind mounts" url="06_bind_mounts.md" > } }

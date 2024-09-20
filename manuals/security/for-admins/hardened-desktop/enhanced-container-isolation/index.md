@@ -172,7 +172,7 @@ This means that the root user in the container (0) is in fact the root user in t
 Since Enhanced Container Isolation [uses the Sysbox container runtime](how-eci-works.md) embedded in the Docker Desktop Linux VM, another way to determine if a container is running with Enhanced Container Isolation is by using `docker inspect`:
 
 ```console
-$ docker inspect --format='{{.HostConfig.Runtime}}' my_container
+$ docker inspect --format='\{\{\.HostConfig.Runtime}}' my_container
 ```
 
 It outputs:

@@ -5,7 +5,7 @@ description: scout, sysdig, integration, image analysis, environments, supply ch
 keywords: Integrate your runtime environments with Docker Scout using Sysdig
 ---
 
-{{< include "scout-early-access.md" >}}
+{ { < include "scout-early-access.md" > } }
 
 The Sysdig integration enables Docker Scout to automatically detect the images
 you're using for your running workloads. Activating this integration gives you
@@ -23,7 +23,7 @@ integration uses Sysdig's Risk Spotlight feature. For more information, see
 >
 > Sysdig offers a free trial for Docker users to try out the new Docker Scout integration.
 >
-> {{< button url=`https://sysdig.com/free-trial-for-docker-customers/` text="Sign up" >}}
+> { { < button url=`https://sysdig.com/free-trial-for-docker-customers/` text="Sign up" > } }
 
 Each Sysdig integration maps to an environment. When you enable a Sysdig
 integration, you specify the environment name for that cluster, such as

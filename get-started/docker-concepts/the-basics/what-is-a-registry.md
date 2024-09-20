@@ -9,7 +9,7 @@ aliases:
 - /guides/docker-concepts/the-basics/what-is-a-registry/
 ---
 
-{{< youtube-embed 2WDl10Wv5rs >}}
+{ { < youtube-embed 2WDl10Wv5rs > } }
 
 ## Explanation
 
@@ -164,4 +164,4 @@ In this walkthrough, you signed up for a Docker account, created your first Dock
 
 Now that you understand the basics of containers and images, you're ready to learn about Docker Compose.
 
-{{< button text="What is Docker Compose?" url="what-is-Docker-Compose" >}}
+{ { < button text="What is Docker Compose?" url="what-is-Docker-Compose" > } }

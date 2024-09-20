@@ -6,8 +6,8 @@ title: Manage organizations
 
 You can manage the organizations in a company in Docker Hub and the Docker Admin Console. In Docker Hub, you can manage seats and members at the organization-level. When you use the Admin Console, you can do more to manage organizations at the company-level.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
 ## View all organizations
 
@@ -33,10 +33,10 @@ There is no limit to the number of organizations you can have under a company la
 4. Choose the organization you want to add from the drop-down menu.
 5. Select **Add organization** to confirm.
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
 ## View all organizations
 
@@ -78,9 +78,9 @@ There is no limit to the number of organizations you can have under a company la
 3. Select the organization that you want to manage.
 
 For more details about managing an organization, see [Organization administration](../organization/index.md).
-{{< /tab >}}
+{ { < /tab > } }
 
-{{< /tabs >}}
+{ { < /tabs > } }
 
 ## More resources
 

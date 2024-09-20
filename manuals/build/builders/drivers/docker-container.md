@@ -160,7 +160,7 @@ $ docker buildx inspect --bootstrap
 and see what network is being used:
 
 ```console
-$ docker inspect buildx_buildkit_mybuilder0 --format={{.NetworkSettings.Networks}}
+$ docker inspect buildx_buildkit_mybuilder0 --format=\{\{\.NetworkSettings.Networks}}
 map[foonet:0xc00018c0c0]
 ```
 

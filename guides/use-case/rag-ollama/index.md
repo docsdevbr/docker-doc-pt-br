@@ -14,4 +14,4 @@ The Retrieval Augmented Generation (RAG) guide teaches you how to containerize a
 
 Start by containerizing an existing RAG application.
 
-{{< button text="Containerize a RAG app" url="containerize.md" >}}
+{ { < button text="Containerize a RAG app" url="containerize.md" > } }

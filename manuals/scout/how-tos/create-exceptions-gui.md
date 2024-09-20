@@ -32,7 +32,7 @@ Dashboard:
    expand the package.
 6. Select the **Create exception** button next to the vulnerability.
 
-{{% create_panel.inline %}}
+{ { % create_panel.inline \%\}\}
 Selecting the **Create exception** button opens the **Create exception** side panel.
 In this panel, you can provide the details of the exception:
 
@@ -75,4 +75,4 @@ images that you selected. The exception is also listed on the **Exceptions**
 tab of the [Vulnerabilities page](https://scout.docker.com/reports/vulnerabilities/exceptions)
 in the Docker Scout Dashboard.
 
-{{% /create_panel.inline %}}
+{ { % /create_panel.inline \%\}\}

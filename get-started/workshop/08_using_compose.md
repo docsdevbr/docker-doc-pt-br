@@ -289,4 +289,4 @@ Related information:
 
 Next, you'll learn about a few best practices you can use to improve your Dockerfile.
 
-{{< button text="Image-building best practices" url="09_image_best.md" >}}
+{ { < button text="Image-building best practices" url="09_image_best.md" > } }

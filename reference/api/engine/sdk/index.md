@@ -73,8 +73,8 @@ code:
 As an example, the `docker run` command can be implemented using the
 Docker API directly, or using the Python or Go SDK.
 
-{{< tabs >}}
-{{< tab name="Go" >}}
+{ { < tabs > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -135,8 +135,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -144,21 +144,21 @@ client = docker.from_env()
 print(client.containers.run("alpine", ["echo", "hello", "world"]))
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
 $ curl --unix-socket /var/run/docker.sock -H "Content-Type: application/json" \
   -d '{"Image": "alpine", "Cmd": ["echo", "hello world"]}' \
-  -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/create
+  -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/create
 {"Id":"1c6594faf5","Warnings":null}
 
-$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/start
+$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/start
 
-$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/wait
+$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/wait
 {"StatusCode":0}
 
-$ curl --unix-socket /var/run/docker.sock "http://localhost/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/logs?stdout=1"
+$ curl --unix-socket /var/run/docker.sock "http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/logs?stdout=1"
 hello world
 ```
 
@@ -172,10 +172,10 @@ examples use `localhost`, but any hostname would work.
 > when using a socket connection.
 >
 > If you're' using an older version of cURL, use `http:/<API version>/` instead,
-> for example: `http:/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/start`.
+> for example: `http:/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/start`.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 For more examples, take a look at the [SDK examples](examples.md).
 

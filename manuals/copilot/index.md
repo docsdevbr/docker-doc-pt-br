@@ -11,14 +11,14 @@ description: Learn how to use the Docker Extension for GitHub Copilot to streaml
 keywords: Docker, GitHub Copilot, extension, Visual Studio Code, chat, ai, containerization
 ---
 
-{{% restricted title="Early access" %}}
+{ { % restricted title="Early access" \%\}\}
 
 The Docker Extension for GitHub Copilot is a part of the [Limited Public Beta](https://github.blog/changelog/2024-05-21-copilot-extensions-now-in-limited-public-beta/)
 for GitHub Copilot Extensions.
 
 To get access, [sign up for the Copilot Extensions waitlist](https://github.com/github-copilot/copilot_extensions_waitlist_signup).
 
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 The Docker Extension for GitHub Copilot integrates Docker's capabilities with
 GitHub Copilot, providing assistance with containerizing applications and
@@ -104,8 +104,8 @@ Once you've installed the Docker Extension for GitHub Copilot and enabled the
 Copilot Extensions policy, you can use the extension in your editor or IDE, or
 on GitHub.com.
 
-{{< tabs >}}
-{{< tab name="Editor or IDE" >}}
+{ { < tabs > } }
+{ { < tab name="Editor or IDE" > } }
 
 For instructions on how to use the Docker Extension for GitHub Copilot in
 your editor, see:
@@ -114,15 +114,15 @@ your editor, see:
 - [Visual Studio](https://docs.github.com/en/copilot/github-copilot-chat/copilot-chat-in-ides/using-github-copilot-chat-in-your-ide?tool=visualstudio)
 - [Codespaces](https://docs.github.com/en/codespaces/reference/using-github-copilot-in-github-codespaces)
 
-{{< /tab >}}
-{{< tab name="GitHub.com" >}}
+{ { < /tab > } }
+{ { < tab name="GitHub.com" > } }
 
 No setup is needed for the Docker Extension for GitHub Copilot on GitHub.com.
 Simply go to any repository and start using the chat interface,
 see [Using the extension](#using-the-extension).
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 You can verify that the extension has been properly installed by typing
 `@docker` in the Copilot Chat window. As you type, you should see the Docker

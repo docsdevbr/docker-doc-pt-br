@@ -9,7 +9,7 @@ params:
   prereq: None
 ---
 
-{{< columns >}}
+{ { < columns > } }
 
 Developers face challenges with multi-container Docker applications, including
 complex configuration, dependency management, and maintaining consistent
@@ -46,11 +46,11 @@ orchestrated.
 
 Works well with Docker CLI, CI/CD tools, and container orchestration tools.
 
-{{< /columns >}}
+{ { < /columns > } }
 
 ## Modules
 
-{{< accordion large=true title=`Why Docker Compose?` icon=`play_circle` >}}
+{ { < accordion large=true title=`Why Docker Compose?` icon=`play_circle` > } }
 
 Docker Compose is an essential tool for defining and running multi-container
 Docker applications. Docker Compose simplifies the Docker experience, making it
@@ -67,11 +67,11 @@ Docker Compose provides several benefits:
 
 **Duration**: 2.5 minutes
 
-{{< youtube-embed 2EqarOM2V4U >}}
+{ { < youtube-embed 2EqarOM2V4U > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Demo: Set up and use Docker Compose` icon=`play_circle` >}}
+{ { < accordion large=true title=`Demo: Set up and use Docker Compose` icon=`play_circle` > } }
 
 This Docker Compose demo shows how to orchestrate a multi-container application
 environment, streamlining development and deployment processes.
@@ -82,11 +82,11 @@ environment, streamlining development and deployment processes.
 
 **Duration**: 2.5 minutes
 
-{{< youtube-embed P5RBKmOLPH4 >}}
+{ { < youtube-embed P5RBKmOLPH4 > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Common challenges and questions` icon=`quiz` >}}
+{ { < accordion large=true title=`Common challenges and questions` icon=`quiz` > } }
 
 <!-- vale Docker.HeadingLength = NO -->
 
@@ -160,9 +160,9 @@ tests or perform one-off tasks within that container.
 
 <!-- vale Docker.HeadingLength = YES -->
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Resources` icon=`link` >}}
+{ { < accordion large=true title=`Resources` icon=`link` > } }
 
 - [Overview of Docker Compose CLI](../reference/cli/docker/compose/index.md)
 - [Overview of Docker Compose](../manuals/compose/index.md)
@@ -171,6 +171,6 @@ tests or perform one-off tasks within that container.
 - [Control startup and shutdown order with Compose](../manuals/compose/startup-order.md)
 - [Compose Build Specification](../reference/compose-file/build.md)
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 <div id="compose-lp-survey-anchor"></div>

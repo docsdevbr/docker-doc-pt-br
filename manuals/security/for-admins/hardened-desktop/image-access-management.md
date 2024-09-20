@@ -29,20 +29,20 @@ feature always takes effect.
 
 ## Configure Image Access Management permissions
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-image-access product="hub" %}}
+{ { % admin-image-access product="hub" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-image-access product="admin" %}}
+{ { % admin-image-access product="admin" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## More resources
 

@@ -39,7 +39,7 @@ Hardened Docker Desktop is a group of security features, designed to improve the
 
 It lets administrators enforce strict security settings, preventing developers and their containers from bypassing these controls, either intentionally or unintentionally. Additionally, you can enhance container isolation, to mitigate potential security threats such as malicious payloads breaching the Docker Desktop Linux VM and the underlying host.
 
-Hardened Docker Desktop moves the ownership boundary for Docker Desktop configuration to the organization, meaning that any security controls administrators set cannot be altered by the user of Docker Desktop. 
+Hardened Docker Desktop moves the ownership boundary for Docker Desktop configuration to the organization, meaning that any security controls administrators set cannot be altered by the user of Docker Desktop.
 
 It is for security conscious organizations who:
 - Don’t give their users root or administrator access on their machines
@@ -54,4 +54,4 @@ Hardened Desktop features work independently but collectively to create a defens
  - Lateral movement: Air-Gapped Containers lets administrators configure network access restrictions for containers, thereby preventing malicious containers from performing lateral movement within the organization's network.
  - Insider threats: Settings Management configures and locks various Docker Desktop settings so administrators can enforce company policies and prevent developers from introducing insecure configurations, intentionally or unintentionally.
 
-{{< grid >}}
+{ { < grid > } }

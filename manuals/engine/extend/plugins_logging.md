@@ -215,7 +215,7 @@ to determine what set of logs to read.
 Response:
 
 ```text
-{{ log stream }}
+\{\{ log stream }}
 ```
 
 The response should be the encoded log message using the same format as the

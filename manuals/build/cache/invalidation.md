@@ -50,7 +50,7 @@ The cache for `RUN` instructions isn't invalidated automatically between builds.
 Suppose you have a step in your Dockerfile to install `curl`:
 
 ```dockerfile
-FROM alpine:{{% param "example_alpine_version" %}} AS install
+FROM alpine:\{\{\% param "example_alpine_version" \%\}\} AS install
 RUN apk add curl
 ```
 

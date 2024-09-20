@@ -7,7 +7,7 @@ aliases:
  - /guides/docker-concepts/the-basics/what-is-an-image/
 ---
 
-{{< youtube-embed NyvT9REqLe4 >}}
+{ { < youtube-embed NyvT9REqLe4 > } }
 
 ## Explanation
 
@@ -41,8 +41,8 @@ For example, [Redis](https://hub.docker.com/_/redis) and [Memcached](https://hub
 
 ## Try it out
 
-{{< tabs group=concept-usage persist=true >}}
-{{< tab name="Using the GUI" >}}
+{ { < tabs group=concept-usage persist=true > } }
+{ { < tab name="Using the GUI" > } }
 
 In this hands-on, you will learn how to search and pull a container image using the Docker Desktop GUI.
 
@@ -79,9 +79,9 @@ Once you have an image downloaded, you can learn quite a few details about the i
 
 
 
-{{< /tab >}}
+{ { < /tab > } }
 
-{{< tab name="Using the CLI" >}}
+{ { < tab name="Using the CLI" > } }
 
 Follow the instructions to search and pull a Docker image using CLI to view its layers.
 
@@ -185,8 +185,8 @@ Follow the instructions to search and pull a Docker image using CLI to view its 
     > If you add the `--no-trunc` flag to the command, you will see the full command. Note that, since the output is in a table-like format, longer commands will cause the output to be very difficult to navigate.
 
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 In this walkthrough, you searched and pulled a Docker image. In addition to pulling a Docker image, you also learned about the layers of a Docker Image.
 
@@ -206,4 +206,4 @@ The following resources will help you learn more about exploring, finding, and b
 
 Now that you have learned the basics of images, it's time to learn about distributing images through registries.
 
-{{< button text="What is a registry?" url="what-is-a-registry" >}}
+{ { < button text="What is a registry?" url="what-is-a-registry" > } }

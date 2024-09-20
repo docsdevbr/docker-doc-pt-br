@@ -6,22 +6,22 @@ toc_max: 3
 
 ## Example
 
-{{< accordion title="Accordion example" >}}
+{ { < accordion title="Accordion example" > } }
 
 ```console
 $ docker run hello-world
 ```
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ## Markup
 
 ````markdown
-{{</* accordion title="Accordion example" */>}}
+{ { < /* accordion title="Accordion example" */ > } }
 
 ```console
 $ docker run hello-world
 ```
 
-{{</* /accordion */>}}
+{ { < /* /accordion */ > } }
 ````

@@ -7,7 +7,7 @@ aliases:
  - /guides/docker-concepts/running-containers/multi-container-applications/
 ---
 
-{{< youtube-embed 1jUwR6F9hvM >}}
+{ { < youtube-embed 1jUwR6F9hvM > } }
 
 ## Explanation
 
@@ -48,8 +48,8 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
 
 1. Get the sample application. If you have Git, you can clone the repository for the sample application. Otherwise, you can download the sample application. Choose one of the following options.
 
-   {{< tabs >}}
-   {{< tab name="Clone with git" >}}
+   { { < tabs > } }
+   { { < tab name="Clone with git" > } }
 
    Use the following command in a terminal to clone the sample application repository.
 
@@ -65,12 +65,12 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
 
    Inside this directory, you'll find two sub-directories - `nginx` and `web`.
 
-   {{< /tab >}}
-   {{< tab name="Download" >}}
+   { { < /tab > } }
+   { { < tab name="Download" > } }
 
    Download the source and extract it.
 
-   {{< button url="https://github.com/dockersamples/nginx-node-redis/archive/refs/heads/main.zip" text="Download the source" >}}
+   { { < button url="https://github.com/dockersamples/nginx-node-redis/archive/refs/heads/main.zip" text="Download the source" > } }
 
    Navigate into the `nginx-node-redis-main` directory:
 
@@ -80,8 +80,8 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
 
    Inside this directory, you'll find two sub-directories - `nginx` and `web`.
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 2. [Download and install](../../../comecando/obtenha-o-docker.md) Docker Desktop.
 

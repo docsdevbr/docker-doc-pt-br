@@ -8,7 +8,7 @@ aliases:
  - /guides/docker-concepts/the-basics/what-is-docker-compose/
 ---
 
-{{< youtube-embed xhcUIK4fGtY >}}
+{ { < youtube-embed xhcUIK4fGtY > } }
 
 ## Explanation
 

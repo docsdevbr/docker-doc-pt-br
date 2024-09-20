@@ -12,7 +12,7 @@ aliases:
  - /guides/getting-started/build-and-push-first-image/
 ---
 
-{{< youtube-embed 7ge1s5nAa34 >}}
+{ { < youtube-embed 7ge1s5nAa34 > } }
 
 ## Explanation
 
@@ -92,8 +92,8 @@ Now that you have a repository, you are ready to build and push your image. An i
 > the image. For this quick start, the repository already contains the Dockerfile.
 
 
-{{< tabs group="cli-or-vs-code" persist=true >}}
-{{< tab name="CLI" >}}
+{ { < tabs group="cli-or-vs-code" persist=true > } }
+{ { < tab name="CLI" > } }
 
 1. To get started, either clone or [download the project as a ZIP file](https://github.com/docker/getting-started-todo-app/archive/refs/heads/main.zip) to your local machine.
 
@@ -141,8 +141,8 @@ Now that you have a repository, you are ready to build and push your image. An i
 
     Depending on your upload speeds, this may take a moment to push.
 
-{{< /tab >}}
-{{< tab name="VS Code" >}}
+{ { < /tab > } }
+{ { < tab name="VS Code" > } }
 
 1. Open Visual Studio Code. In the **File** menu, select **Open Folder**. Choose **Clone Git Repository** and paste this URL: [https://github.com/docker/getting-started-todo-app](https://github.com/docker/getting-started-todo-app)
 
@@ -170,8 +170,8 @@ Now that you have a repository, you are ready to build and push your image. An i
 
     Once the upload is finished, feel free to close the terminal.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 
 ## Recap
@@ -198,6 +198,6 @@ Going forward, you’ll want to remember that:
 
 Now that you’ve built an image, it's time to discuss why you as a developer should learn more about Docker and how it will help you in your day-to-day tasks.
 
-{{< button text="What's Next" url="whats-next" >}}
+{ { < button text="What's Next" url="whats-next" > } }
 
 

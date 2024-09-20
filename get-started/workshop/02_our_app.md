@@ -51,8 +51,8 @@ To build the image, you'll need to use a Dockerfile. A Dockerfile is simply a te
 
 1. In the `getting-started-app` directory, the same location as the `package.json` file, create a file named `Dockerfile`. You can use the following commands to create a Dockerfile based on your operating system.
 
-   {{< tabs >}}
-   {{< tab name="Mac / Linux / Windows (Git Bash)" >}}
+   { { < tabs > } }
+   { { < tab name="Mac / Linux / Windows (Git Bash)" > } }
 
    In the terminal, run the following commands.
 
@@ -68,8 +68,8 @@ To build the image, you'll need to use a Dockerfile. A Dockerfile is simply a te
    $ touch Dockerfile
    ```
 
-   {{< /tab >}}
-   {{< tab name="Windows (Command Prompt)" >}}
+   { { < /tab > } }
+   { { < tab name="Windows (Command Prompt)" > } }
 
    In the Windows Command Prompt, run the following commands.
 
@@ -85,8 +85,8 @@ To build the image, you'll need to use a Dockerfile. A Dockerfile is simply a te
    $ type nul > Dockerfile
    ```
 
-   {{< /tab >}}
-   {{< tab name="Windows (PowerShell)" >}}
+   { { < /tab > } }
+   { { < tab name="Windows (PowerShell)" > } }
 
    In PowerShell, run the following commands.
 
@@ -102,8 +102,8 @@ To build the image, you'll need to use a Dockerfile. A Dockerfile is simply a te
    $ New-Item -Path . -Name Dockerfile -ItemType File
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 2. Using a text editor or code editor, add the following contents to the Dockerfile:
 
@@ -172,8 +172,8 @@ At this point, you have a running todo list manager with a few items.
 
 If you take a quick look at your containers, you should see at least one container running that's using the `getting-started` image and on port `3000`. To see your containers, you can use the CLI or Docker Desktop's graphical interface.
 
-{{< tabs >}}
-{{< tab name="CLI" >}}
+{ { < tabs > } }
+{ { < tab name="CLI" > } }
 
 Run the following `docker ps` command in a terminal to list your containers.
 
@@ -186,15 +186,15 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 df784548666d        getting-started     "docker-entrypoint.s…"   2 minutes ago       Up 2 minutes        127.0.0.1:3000->3000/tcp   priceless_mcclintock
 ```
 
-{{< /tab >}}
-{{< tab name="Docker Desktop" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Desktop" > } }
 
 In Docker Desktop, select the **Containers** tab to see a list of your containers.
 
 ![Docker Desktop with get-started container running](images/dashboard-two-containers.webp)
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Summary
 
@@ -209,4 +209,4 @@ Related information:
 
 Next, you're going to make a modification to your app and learn how to update your running application with a new image. Along the way, you'll learn a few other useful commands.
 
-{{< button text="Update the application" url="03_updating_app.md" >}}
+{ { < button text="Update the application" url="03_updating_app.md" > } }

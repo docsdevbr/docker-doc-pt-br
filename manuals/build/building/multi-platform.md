@@ -35,7 +35,7 @@ same application into a single image. This enables you to run the same image on
 different types of hardware, such as development machines running x86-64 or
 ARM-based Amazon EC2 instances in the cloud, without the need for emulation.
 
-{{< accordion title="How it works" >}}
+{ { < accordion title="How it works" > } }
 
 Multi-platform images have a different structure than single-platform images.
 Single-platform images contain a single manifest that points to a single
@@ -53,7 +53,7 @@ multi-platform image on an ARM-based Raspberry Pi, Docker selects the
 `linux/arm64` variant. If you run the same image on an x86-64 laptop, Docker
 selects the `linux/amd64` variant (if you're using Linux containers).
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ## Prerequisites
 
@@ -66,8 +66,8 @@ uses the `docker-container` driver, which supports multi-platform builds.
 
 ### Enable the containerd image store
 
-{{< tabs >}}
-{{< tab name="Docker Desktop" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Desktop" > } }
 
 To enable the containerd image store in Docker Desktop,
 go to **Settings** and select **Use containerd for pulling and storing images**
@@ -78,8 +78,8 @@ images and containers in the classic image store.
 Those resources still exist, but to view them, you'll need to
 disable the containerd image store.
 
-{{< /tab >}}
-{{< tab name="Docker Engine" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Engine" > } }
 
 If you're not using Docker Desktop,
 enable the containerd image store by adding the following feature configuration
@@ -99,8 +99,8 @@ Restart the daemon after updating the configuration file.
 $ systemctl restart docker
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Create a custom builder
 
@@ -443,8 +443,8 @@ Steps:
      `TARGETOS` and `TARGETARCH`. The Go compiler uses these variables to do
      cross-compilation.
 
-   {{< tabs >}}
-   {{< tab name="Updated Dockerfile" >}}
+   { { < tabs > } }
+   { { < tab name="Updated Dockerfile" > } }
 
    ```dockerfile
    # syntax=docker/dockerfile:1
@@ -460,8 +460,8 @@ Steps:
    ENTRYPOINT ["/server"]
    ```
 
-   {{< /tab >}}
-   {{< tab name="Old Dockerfile" >}}
+   { { < /tab > } }
+   { { < tab name="Old Dockerfile" > } }
 
    ```dockerfile
    # syntax=docker/dockerfile:1
@@ -475,8 +475,8 @@ Steps:
    ENTRYPOINT ["/server"]
    ```
 
-   {{< /tab >}}
-   {{< tab name="Diff" >}}
+   { { < /tab > } }
+   { { < tab name="Diff" > } }
 
    ```diff
    # syntax=docker/dockerfile:1
@@ -494,8 +494,8 @@ Steps:
    ENTRYPOINT ["/server"]
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 4. Build the image for `linux/amd64` and `linux/arm64`:
 

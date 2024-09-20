@@ -46,12 +46,12 @@ Use the resources here to decide what subscription you need, manage an existing 
 
 ## Docker subscriptions and features
 
-{{< grid items="grid_subscriptions" >}}
+{ { < grid items="grid_subscriptions" > } }
 
 ## Manage your Docker Core subscription
 
-{{< grid items="grid_core" >}}
+{ { < grid items="grid_core" > } }
 
 ## Resources
 
-{{< grid items="grid_resources" >}}
+{ { < grid items="grid_resources" > } }

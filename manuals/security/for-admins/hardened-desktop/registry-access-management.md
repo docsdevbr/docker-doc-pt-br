@@ -39,20 +39,20 @@ feature always takes effect.
 
 ## Configure Registry Access Management permissions
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-registry-access product="hub" %}}
+{ { % admin-registry-access product="hub" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-registry-access product="admin" %}}
+{ { % admin-registry-access product="admin" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Verify the restrictions
 

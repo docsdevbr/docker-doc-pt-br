@@ -31,8 +31,8 @@ You'll need to clone a new repository to get a sample application that includes 
 
 2. In the cloned repository's directory, manually create the Docker assets or run `docker init` to create the necessary Docker assets.
 
-   {{< tabs >}}
-   {{< tab name="Use Docker Init" >}}
+   { { < tabs > } }
+   { { < tab name="Use Docker Init" > } }
 
    In the cloned repository's directory, run `docker init`. Refer to the
    following example to answer the prompts from `docker init`.
@@ -114,8 +114,8 @@ You'll need to clone a new repository to get a sample application that includes 
    venv.bak/
    ```
 
-   {{< /tab >}}
-   {{< tab name="Manually create assets" >}}
+   { { < /tab > } }
+   { { < tab name="Manually create assets" > } }
 
    If you don't have Docker Desktop installed or prefer creating the assets
    manually, you can create the following files in your project directory.
@@ -326,8 +326,8 @@ You'll need to clone a new repository to get a sample application that includes 
    venv.bak/
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 ## Add a local database and persist data
 
@@ -569,4 +569,4 @@ Related information:
 
 In the next section, you'll take a look at how to set up a CI/CD pipeline using GitHub Actions.
 
-{{< button text="Configure CI/CD" url="configure-ci-cd.md" >}}
+{ { < button text="Configure CI/CD" url="configure-ci-cd.md" > } }

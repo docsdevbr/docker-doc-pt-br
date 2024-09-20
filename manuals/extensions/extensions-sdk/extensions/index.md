@@ -2,7 +2,7 @@
 title: "Part two: Publish"
 description: General steps in how to publish an extension
 keywords: Docker, Extensions, sdk, publish
-aliases: 
+aliases:
  - /desktop/extensions-sdk/extensions/
 weight: 40
 ---
@@ -44,4 +44,4 @@ Extensions published in the Marketplace benefit from update notifications to all
 
 In addition to providing a description of your extension's features and screenshots, you should also specify additional URLs using [extension labels](labels.md). This direct users to your website for reporting bugs and feedback, and accessing documentation and support.
 
-{{< include "extensions-form.md" >}}
+{ { < include "extensions-form.md" > } }

@@ -161,7 +161,7 @@ example, to get the raw contents of the Provenance in the SLSA format:
 
 ```console
 $ docker buildx imagetools inspect <namespace>/<image>:<version> \
-    --format "{{ json .Provenance.SLSA }}"
+    --format "\{\{ json .Provenance.SLSA }}"
 {
   "buildType": "https://mobyproject.org/buildkit@v1",
   ...
@@ -174,7 +174,7 @@ extract the full source code of the Dockerfile used to build the image:
 
 ```console
 $ docker buildx imagetools inspect <namespace>/<image>:<version> \
-    --format '{{ range (index .Provenance.SLSA.metadata "https://mobyproject.org/buildkit@v1#metadata").source.infos }}{{ if eq .filename "Dockerfile" }}{{ .data }}{{ end }}{{ end }}' | base64 -d
+    --format '\{\{ range (index .Provenance.SLSA.metadata "https://mobyproject.org/buildkit@v1#metadata").source.infos }}\{\{ if eq .filename "Dockerfile" }}\{\{\.data }}\{\{ end }}\{\{ end }}' | base64 -d
 FROM ubuntu:20.04
 RUN apt-get update
 ...

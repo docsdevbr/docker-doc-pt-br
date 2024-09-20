@@ -243,7 +243,7 @@ If you need more than 256 IP addresses, do not increase the IP block size. You c
 endpoint mode with an external load balancer, or use multiple smaller overlay networks. See
 [Configure service discovery](#configure-service-discovery) for more information about different endpoint modes.
 
-#### Configure encryption of application data {#encryption}
+#### Configure encryption of application data { #encryption }
 
 Management and control plane data related to a swarm is always encrypted.
 For more details about the encryption mechanisms, see the
@@ -315,7 +315,7 @@ round robin (DNSRR). You can configure this per service.
   `--endpoint-mode dnsrr` when creating a new service or updating an existing
   one.
 
-## Customize the ingress network {#customize-ingress}
+## Customize the ingress network { #customize-ingress }
 
 Most users never need to configure the `ingress` network, but Docker allows you
 to do so. This can be useful if the automatically-chosen subnet

@@ -49,8 +49,8 @@ It provides a straightforward GUI (Graphical User Interface) that lets you manag
 
 Docker Desktop reduces the time spent on complex setups so you can focus on writing code. It takes care of port mappings, file system concerns, and other default settings, and is regularly updated with bug fixes and security updates.
 
-{{< tabs >}}
-{{< tab name="What's included in Docker Desktop?" >}}
+{ { < tabs > } }
+{ { < tab name="What's included in Docker Desktop?" > } }
 
 - [Docker Engine](../engine/index.md)
 - Docker CLI client
@@ -62,8 +62,8 @@ Docker Desktop reduces the time spent on complex setups so you can focus on writ
 - [Kubernetes](https://github.com/kubernetes/kubernetes/)
 - [Credential Helper](https://github.com/docker/docker-credential-helpers/)
 
-{{< /tab >}}
-{{< tab name="What are the key features of Docker Desktop?">}}
+{ { < /tab > } }
+{ { < tab name="What are the key features of Docker Desktop?"> } }
 
 * Ability to containerize and share any application on any cloud platform, in multiple languages and frameworks.
 * Quick installation and setup of a complete Docker development environment.
@@ -73,8 +73,8 @@ Docker Desktop reduces the time spent on complex setups so you can focus on writ
 * Ability to work natively on Linux through WSL 2 on Windows machines.
 * Volume mounting for code and data, including file change notifications and easy access to running containers on the localhost network.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Docker Desktop works with your choice of development tools and languages and
 gives you access to a vast library of certified images and templates in
@@ -82,4 +82,4 @@ gives you access to a vast library of certified images and templates in
 their environment to rapidly auto-build, continuously integrate, and collaborate
 using a secure repository.
 
-{{< grid >}}
+{ { < grid > } }

@@ -490,4 +490,4 @@ for it.
 
 In the next module, you’ll take a look at how to run your image as a container.
 
-{{< button text="Run your image as a container" url="run-containers.md" >}}
+{ { < button text="Run your image as a container" url="run-containers.md" > } }

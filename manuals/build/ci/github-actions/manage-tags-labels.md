@@ -40,9 +40,9 @@ jobs:
             type=schedule
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
+            type=semver,pattern=\{\{version}}
+            type=semver,pattern=\{\{major}}.\{\{minor}}
+            type=semver,pattern=\{\{major}}
             type=sha
 
       - name: Set up QEMU
@@ -55,21 +55,21 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Login to GHCR
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: $\{\{ github.repository_owner }}
+          password: $\{\{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          push: $\{\{ github.event_name != 'pull_request' }}
+          tags: $\{\{ steps.meta.outputs.tags }}
+          labels: $\{\{ steps.meta.outputs.labels }}
 ```

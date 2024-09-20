@@ -46,4 +46,4 @@ In this section, you learned about containers and images.
 
 Next, you'll containerize a simple application and get hands-on with the concepts.
 
-{{< button text="Containerize an application" url="02_our_app.md" >}}
+{ { < button text="Containerize an application" url="02_our_app.md" > } }

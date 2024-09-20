@@ -6,10 +6,10 @@ aliases:
   - /build/building/cache/backends/azblob/
 ---
 
-{{% experimental %}}
+{ { % experimental \%\}\}
 This is an experimental feature. The interface and behavior are unstable and
 may change in future releases.
-{{% /experimental %}}
+{ { % /experimental \%\}\}
 
 The `azblob` cache store uploads your resulting build cache to
 [Azure's blob storage service](https://azure.microsoft.com/en-us/services/storage/blobs/).

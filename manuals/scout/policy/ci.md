@@ -97,47 +97,47 @@ jobs:
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Log into registry ${{ env.REGISTRY }}
+      - name: Log into registry $\{\{ env.REGISTRY }}
         uses: docker/login-action@v3
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.REGISTRY_USER }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          registry: $\{\{ env.REGISTRY }}
+          username: $\{\{ secrets.REGISTRY_USER }}
+          password: $\{\{ secrets.REGISTRY_TOKEN }}
 
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.IMAGE_NAME }}
+          images: $\{\{ env.IMAGE_NAME }}
 
       - name: Build image
         id: build-and-push
         uses: docker/build-push-action@v4
         with:
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          sbom: ${{ github.event_name != 'pull_request' }}
-          provenance: ${{ github.event_name != 'pull_request' }}
-          push: ${{ github.event_name != 'pull_request' }}
-          load: ${{ github.event_name == 'pull_request' }}
+          tags: $\{\{ steps.meta.outputs.tags }}
+          labels: $\{\{ steps.meta.outputs.labels }}
+          sbom: $\{\{ github.event_name != 'pull_request' }}
+          provenance: $\{\{ github.event_name != 'pull_request' }}
+          push: $\{\{ github.event_name != 'pull_request' }}
+          load: $\{\{ github.event_name == 'pull_request' }}
 
       - name: Authenticate with Docker
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_PAT }}
+          username: $\{\{ secrets.DOCKER_USER }}
+          password: $\{\{ secrets.DOCKER_PAT }}
 
       - name: Compare
-        if: ${{ github.event_name == 'pull_request' }}
+        if: $\{\{ github.event_name == 'pull_request' }}
         uses: docker/scout-action@v1
         with:
           command: compare
-          image: ${{ steps.meta.outputs.tags }}
+          image: $\{\{ steps.meta.outputs.tags }}
           to-env: production
           platform: "linux/amd64"
           ignore-unchanged: true
           only-severities: critical,high
-          organization: ${{ env.DOCKER_ORG }}
+          organization: $\{\{ env.DOCKER_ORG }}
           exit-on: policy
 ```
 

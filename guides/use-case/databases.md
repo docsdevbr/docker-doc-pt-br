@@ -40,8 +40,8 @@ your needs. For more information about the MySQL image used in this guide, see t
 To run a database container, you can use either the Docker Desktop GUI or
 CLI.
 
-{{< tabs group="ui" >}}
-{{< tab name="CLI" >}}
+{ { < tabs group="ui" > } }
+{ { < tab name="CLI" > } }
 
 To run a container using the CLI, run the following command in a terminal:
 
@@ -63,8 +63,8 @@ In this command:
 
  To verify that you container is running, run `docker ps` in a terminal
 
-{{< /tab >}}
-{{< tab name="GUI" >}}
+{ { < /tab > } }
+{ { < tab name="GUI" > } }
 
 To run a container using the GUI:
 
@@ -86,8 +86,8 @@ To run a container using the GUI:
 7. Open the **Container** view in the Docker Dashboard to verify that your
    container is running.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Access the shell of a containerized database
 
@@ -100,8 +100,8 @@ can use Docker Desktop's GUI.
 If you don't yet have a database container running, see
 [Run a local containerized database](#run-a-local-containerized-database).
 
-{{< tabs group="ui" >}}
-{{< tab name="CLI" >}}
+{ { < tabs group="ui" > } }
+{ { < tab name="CLI" > } }
 
 To access the terminal of a MySQL container using the CLI, you can use the
 following `docker exec` command.
@@ -126,8 +126,8 @@ After executing this command, you will be given access to the bash shell inside
 your MySQL container, from which you can manage your MySQL server directly. You
 can run `exit` to return to your terminal.
 
-{{< /tab >}}
-{{< tab name="GUI" >}}
+{ { < /tab > } }
+{ { < tab name="GUI" > } }
 
 1. Open the Docker Dashboard and select the **Containers** view.
 2. In the **Actions** column for your container, select **Show container
@@ -136,8 +136,8 @@ can run `exit` to return to your terminal.
 In this terminal you can access to the shell inside your MySQL container, from
 which you can manage your MySQL server directly.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Once you've accessed the container's terminal, you can run any tools available
 in that container. The following example shows using `mysql` in the container to
@@ -182,8 +182,8 @@ guide. To stop and remove a container, either:
 Next, you can use either the Docker Desktop GUI or CLI to run the container with
 the port mapped.
 
-{{< tabs group="ui" >}}
-{{< tab name="CLI" >}}
+{ { < tabs group="ui" > } }
+{ { < tab name="CLI" > } }
 
 Run the following command in a terminal.
 
@@ -206,8 +206,8 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 6eb776cfd73c   mysql:latest   "docker-entrypoint.s…"   17 minutes ago   Up 17 minutes   33060/tcp, 0.0.0.0:3307->3306/tcp   my-mysql
 ```
 
-{{< /tab >}}
-{{< tab name="GUI" >}}
+{ { < /tab > } }
+{ { < tab name="GUI" > } }
 
 To run a container using the GUI:
 
@@ -232,8 +232,8 @@ To run a container using the GUI:
    **Port(s)** column. You should see **3307:3306** for the **my-mysql**
    container.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 At this point, any application running on your host can access the MySQL service in the container at `localhost:3307`.
 
@@ -311,8 +311,8 @@ guide. To stop and remove a container, either:
 
 Next, you can use either the Docker Desktop GUI or CLI to run the container with a volume.
 
-{{< tabs group="ui" >}}
-{{< tab name="CLI" >}}
+{ { < tabs group="ui" > } }
+{ { < tab name="CLI" > } }
 
 To run your database container with a volume attached, include the `-v` option
 with your `docker run` command, specifying a volume name and the path where the
@@ -371,8 +371,8 @@ data persists:
    value
    ```
 
-{{< /tab >}}
-{{< tab name="GUI" >}}
+{ { < /tab > } }
+{ { < tab name="GUI" > } }
 
 To run a database container with a volume attached, and then verify that the
 data persists:
@@ -456,8 +456,8 @@ data persists:
       value
       ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 At this point, any MySQL container that mounts the `my-db-volume` will be able
 to access and save persisted data.

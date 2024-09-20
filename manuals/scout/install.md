@@ -29,8 +29,8 @@ $ sh install-scout.sh
 
 ## Manual installation
 
-{{< tabs >}}
-{{< tab name="Linux" >}}
+{ { < tabs > } }
+{ { < tab name="Linux" > } }
 
 1. Download the latest release from the [releases page](https://github.com/docker/scout-cli/releases).
 2. Create a subdirectory under `$HOME/.docker` called `scout`.
@@ -51,8 +51,8 @@ $ sh install-scout.sh
    }
    ```
 
-{{< /tab >}}
-{{< tab name="macOS" >}}
+{ { < /tab > } }
+{ { < tab name="macOS" > } }
 
 1. Download the latest release from the [releases page](https://github.com/docker/scout-cli/releases).
 2. Create a subdirectory under `$HOME/.docker` called `scout`.
@@ -84,8 +84,8 @@ $ sh install-scout.sh
    }
    ```
 
-{{< /tab >}}
-{{< tab name="Windows" >}}
+{ { < /tab > } }
+{ { < tab name="Windows" > } }
 
 1. Download the latest release from the [releases page](https://github.com/docker/scout-cli/releases).
 2. Create a subdirectory under `%USERPROFILE%/.docker` called `scout`.
@@ -105,8 +105,8 @@ $ sh install-scout.sh
    }
    ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Container image
 

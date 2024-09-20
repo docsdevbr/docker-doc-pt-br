@@ -126,4 +126,4 @@ the Docker CLI to see details about the service running in the swarm.
 
 Next, you'll change the scale for the service running in the swarm.
 
-{{< button text="Change the scale" url="scale-service.md" >}}
+{ { < button text="Change the scale" url="scale-service.md" > } }

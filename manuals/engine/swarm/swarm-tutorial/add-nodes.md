@@ -73,4 +73,4 @@ to add worker nodes.
 
 Now your swarm consists of a manager and two worker nodes. Next, you'll deploy a service.
 
-{{< button text="Deploy a service" url="deploy-service.md" >}}
+{ { < button text="Deploy a service" url="deploy-service.md" > } }

@@ -183,7 +183,7 @@ the raw contents of an SBOM in SPDX format:
 
 ```console
 $ docker buildx imagetools inspect <namespace>/<image>:<version> \
-    --format "{{ json .SBOM.SPDX }}"
+    --format "\{\{ json .SBOM.SPDX }}"
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   ...
@@ -192,7 +192,7 @@ $ docker buildx imagetools inspect <namespace>/<image>:<version> \
 
 > [!TIP]
 >
-> If the image is multi-platform, you can check the SBOM for a platform-specific index using `--format '{{ json (index .SBOM "linux/amd64").SPDX }}'`.
+> If the image is multi-platform, you can check the SBOM for a platform-specific index using `--format '\{\{ json (index .SBOM "linux/amd64").SPDX }}'`.
 
 You can also construct more complex expressions using the full functionality
 of Go templates. For example, you can list all the installed packages and their
@@ -200,7 +200,7 @@ version identifiers:
 
 ```console
 $ docker buildx imagetools inspect <namespace>/<image>:<version> \
-    --format "{{ range .SBOM.SPDX.packages }}{{ .name }}@{{ .versionInfo }}{{ println }}{{ end }}"
+    --format "\{\{ range .SBOM.SPDX.packages }}\{\{\.name }}@\{\{\.versionInfo }}\{\{ println }}\{\{ end }}"
 adduser@3.118ubuntu2
 apt@2.0.9
 base-files@11ubuntu5.6

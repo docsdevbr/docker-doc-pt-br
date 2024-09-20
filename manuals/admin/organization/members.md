@@ -9,20 +9,20 @@ aliases:
 
 Learn how to manage members for your organization in Docker Hub and the Docker Admin Console.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-users product="hub" %}}
+{ { % admin-users product="hub" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-users product="admin" %}}
+{ { % admin-users product="admin" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Manage members on a team
 
@@ -32,8 +32,8 @@ Use Docker Hub to add a member to a team or remove a member from a team.
 
 Organization owners can add a member to one or more teams within an organization.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
 To add a member to a team:
 
@@ -50,10 +50,10 @@ To add a member to a team:
    >
    > An invitee must first accept the invitation to join the organization before being added to the team.
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
 To add a member to a team:
 
@@ -65,15 +65,15 @@ To add a member to a team:
    >
    > An invitee must first accept the invitation to join the organization before being added to the team.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Remove a member from a team
 
 Organization owners can remove a member from a team in Docker Hub or Admin Console. Removing the member from the team will revoke their access to the permitted resources.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
 To add a member to a team:
 
@@ -84,10 +84,10 @@ To remove a member from a specific team:
 3. Select the **X** next to the user’s name to remove them from the team.
 4. When prompted, select **Remove** to confirm.
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
 To remove a member from a specific team:
 
@@ -96,5 +96,5 @@ To remove a member from a specific team:
 3. Select the **X** next to the user's name to remove them from the team.
 4. When prompted, select **Remove** to confirm.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }

@@ -24,8 +24,8 @@ Docker Desktop for Mac is run as an unprivileged user. However, Docker Desktop r
 
 Depending on which version of Docker Desktop for Mac is used, privileged access is granted either during installation, first run, or only when it's needed.
 
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
+{ { < tabs > } }
+{ { < tab name="Version 4.18 and later" > } }
 
 From version 4.18 and later, Docker Desktop for Mac provides greater control over functionality that's enabled during installation.
 
@@ -40,27 +40,27 @@ Depending on which advanced settings you configure, you must enter your password
 
 You can change these configurations at a later date from the **Advanced** page in **Settings**.
 
-{{< /tab >}}
-{{< tab name="Version 4.15 - 4.17" >}}
+{ { < /tab > } }
+{ { < tab name="Version 4.15 - 4.17" > } }
 
 Versions 4.15 to 4.17 of Docker Desktop for Mac don't require the privileged process to run permanently. Whenever elevated privileges are needed for a configuration, Docker Desktop prompts you with information on the task it needs to perform. Most configurations are applied once, subsequent runs don't prompt for privileged access anymore.
 The only time Docker Desktop may start the privileged process is for binding privileged ports that aren't allowed by default on the host OS.
 
-{{< /tab >}}
-{{< tab name="Versions prior to 4.15" >}}
+{ { < /tab > } }
+{ { < tab name="Versions prior to 4.15" > } }
 
 Versions prior to 4.15 of Docker Desktop for Mac require `root` access to be granted on the first run. The first time that Docker Desktop launches you receive an admin prompt to grant permission for the installation of the `com.docker.vmnetd` privileged helper service. For subsequent runs, `root` privileges aren't required. Following the principle of least privilege, this approach allows `root` access to be used only for the operations for which it's absolutely necessary, while still being able to use Docker Desktop as an unprivileged user.
 All privileged operations are run using the privileged helper process `com.docker.vmnetd`.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Installing symlinks
 
 The Docker binaries are installed by default in `/Applications/Docker.app/Contents/Resources/bin`. Docker Desktop creates symlinks for the binaries in `/usr/local/bin`, which means they're automatically included in `PATH` on most systems.
 
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
+{ { < tabs > } }
+{ { < tab name="Version 4.18 and later" > } }
 
 With version 4.18 and later, you can choose whether to install symlinks either in `/usr/local/bin` or `$HOME/.docker/bin` during installation of Docker Desktop.
 
@@ -70,8 +70,8 @@ You are also given the option to enable the installation of the `/var/run/docker
 
 As the `/var/run` is mounted as a tmpfs, its content is deleted on restart, symlink to the Docker socket included. To ensure the Docker socket exists after restart, Docker Desktop sets up a `launchd` startup task that creates the symlink by running `ln -s -f /Users/<user>/.docker/run/docker.sock /var/run/docker.sock`. This ensures the you aren't prompted on each startup to create the symlink. If you don't enable this option at installation, the symlink and the startup task is not created and you may have to explicitly set the `DOCKER_HOST` environment variable to `/Users/<user>/.docker/run/docker.sock` in the clients it is using. The Docker CLI relies on the current context to retrieve the socket path, the current context is set to `desktop-linux` on Docker Desktop startup.
 
-{{< /tab >}}
-{{< tab name="Version 4.17 and earlier" >}}
+{ { < /tab > } }
+{ { < tab name="Version 4.17 and earlier" > } }
 
 For versions prior to 4.18, installing symlinks in `/usr/local/bin` is a privileged configuration Docker Desktop performs on the first startup. Docker Desktop checks if symlinks exists and takes the following actions:
 - Creates the symlinks without the admin prompt if `/usr/local/bin` is writable by unprivileged users.
@@ -82,18 +82,18 @@ For any failure to ensure binaries are on your PATH, you may need to manually ad
 A particular case is the installation of the `/var/run/docker.sock` symlink. Creating this symlink ensures various Docker clients relying on the default Docker socket path work without additional changes. As the `/var/run` is mounted as a tmpfs, its content is deleted on restart, symlink to Docker socket included.
 To ensure the Docker socket exists after restart, Docker Desktop sets up a `launchd` startup task that creates a symlink by running `ln -s -f /Users/<user>/.docker/run/docker.sock /var/run/docker.sock`. This ensures that you are not prompted on each startup to create the symlink. If you reject the prompt, the symlink and the startup task are not created and you may have to explicitly set the `DOCKER_HOST` to `/Users/<user>/.docker/run/docker.sock` in the clients it is using. The Docker CLI relies on the current context to retrieve the socket path, the current context is set to `desktop-linux` on Docker Desktop startup.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Binding privileged ports
 
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
+{ { < tabs > } }
+{ { < tab name="Version 4.18 and later" > } }
 
 With version 4.18 and later you can choose to enable privileged port mapping during installation, or from the **Advanced** page in **Settings** post-installation. Docker Desktop requires authorization to confirm this choice.
 
-{{< /tab >}}
-{{< tab name="Version 4.17 and earlier" >}}
+{ { < /tab > } }
+{ { < tab name="Version 4.17 and earlier" > } }
 
 For versions below 4.18 , if you run a container that requires binding privileged ports, Docker Desktop first attempts to bind it directly as an unprivileged process. If the OS prevents this and it fails, Docker Desktop checks if the `com.docker.vmnetd` privileged helper process is running to bind the privileged port through it.
 
@@ -114,23 +114,23 @@ ERRO[0003] error waiting for container: context canceled
 >
 > The command may fail with the same error if you take too long to authorize the prompt to start the helper process, as it may timeout.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Ensuring `localhost` and `kubernetes.docker.internal` are defined
 
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
+{ { < tabs > } }
+{ { < tab name="Version 4.18 and later" > } }
 
 With versions 4.18 and later, it is your responsibility to ensure that localhost is resolved to `127.0.0.1` and if Kubernetes is used, that `kubernetes.docker.internal` is resolved to `127.0.0.1`.
 
-{{< /tab >}}
-{{< tab name="Version 4.17 and earlier" >}}
+{ { < /tab > } }
+{ { < tab name="Version 4.17 and earlier" > } }
 
 On first run, Docker Desktop checks if `localhost` is resolved to `127.0.0.1`. In case the resolution fails, it prompts you to allow adding the mapping to `/etc/hosts`. Similarly, when the Kubernetes cluster is installed, it checks that `kubernetes.docker.internal` is resolved to `127.0.0.1` and prompts you to do so.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Installing from the command line
 

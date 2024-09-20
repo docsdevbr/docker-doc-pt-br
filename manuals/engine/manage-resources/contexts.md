@@ -133,22 +133,22 @@ The environment variable overrides the context set with `docker context use`.
 
 Use the appropriate command below to set the context to `docker-test` using an environment variable.
 
-{{< tabs >}}
-{{< tab name="PowerShell" >}}
+{ { < tabs > } }
+{ { < tab name="PowerShell" > } }
 
 ```ps
 > $env:DOCKER_CONTEXT='docker-test'
 ```
 
-{{< /tab >}}
-{{< tab name="Bash" >}}
+{ { < /tab > } }
+{ { < tab name="Bash" > } }
 
 ```console
 $ export DOCKER_CONTEXT=docker-test
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Run `docker context ls` to verify that the `docker-test` context is now the
 active context.

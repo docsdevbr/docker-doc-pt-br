@@ -46,4 +46,4 @@ The Docker Admin Console is available in [Early Access](../release-lifecycle.md#
 - Team: A team is a group of Docker members that belong to an organization. Organization and company owners can group members into additional teams to configure repository permissions on a per-team basis. Using teams to group members is optional.
 - Member: A member is a Docker user that's a member of an organization. Organization and company owners can assign roles to members to define their permissions.
 
-{{< grid >}}
+{ { < grid > } }

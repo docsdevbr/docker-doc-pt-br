@@ -14,71 +14,71 @@ aliases:
 >
 > You must have a [company](../../../../admin/company/index.md) to manage more than one organization.
 
-{{< tabs >}}
-{{< tab name="Admin Console" >}}
+{ { < tabs > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-sso-management-orgs product="admin" %}}
+{ { % admin-sso-management-orgs product="admin" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Docker Hub" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-sso-management-orgs product="hub" %}}
+{ { % admin-sso-management-orgs product="hub" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Manage domains
 
-{{< tabs >}}
-{{< tab name="Admin Console" >}}
+{ { < tabs > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-sso-management product="admin" %}}
+{ { % admin-sso-management product="admin" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Docker Hub" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-sso-management product="hub" %}}
+{ { % admin-sso-management product="hub" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Manage SSO connections
 
-{{< tabs >}}
-{{< tab name="Admin Console" >}}
+{ { < tabs > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-sso-management-connections product="admin" %}}
+{ { % admin-sso-management-connections product="admin" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Docker Hub" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-sso-management-connections product="hub" %}}
+{ { % admin-sso-management-connections product="hub" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Manage users
 
-{{< tabs >}}
-{{< tab name="Admin Console" >}}
+{ { < tabs > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-sso-management-users product="admin" %}}
+{ { % admin-sso-management-users product="admin" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Docker Hub" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-sso-management-users product="hub" %}}
+{ { % admin-sso-management-users product="hub" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## What's next?
 

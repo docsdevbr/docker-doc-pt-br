@@ -11,12 +11,12 @@ On this page you can find instructions on how to install Compose standalone on L
 
 > **Compose standalone**
 >
-> Note that Compose standalone uses the `-compose` syntax instead of the current standard syntax `compose`.  
+> Note that Compose standalone uses the `-compose` syntax instead of the current standard syntax `compose`.
 >For example type `docker-compose up` when using Compose standalone, instead of `docker compose up`.
 
 1. To download and install Compose standalone, run:
    ```console
-   $ curl -SL https://github.com/docker/compose/releases/download/{{% param "compose_version" %}}/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+   $ curl -SL https://github.com/docker/compose/releases/download/\{\{\% param "compose_version" \%\}\}/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
    ```
 2. Apply executable permissions to the standalone binary in the target path for the installation.
 3. Test and execute compose commands using `docker-compose`.
@@ -43,24 +43,24 @@ on Microsoft Windows Server and want to install Docker Compose.
     ```powershell
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     ```
-3. Run the following command to download the latest release of Compose ({{% param "compose_version" %}}):
+3. Run the following command to download the latest release of Compose (\{\{\% param "compose_version" \%\}\}):
 
     ```powershell
-     Start-BitsTransfer -Source "https://github.com/docker/compose/releases/download/{{% param "compose_version" %}}/docker-compose-windows-x86_64.exe" -Destination $Env:ProgramFiles\Docker\docker-compose.exe
+     Start-BitsTransfer -Source "https://github.com/docker/compose/releases/download/\{\{\% param "compose_version" \%\}\}/docker-compose-windows-x86_64.exe" -Destination $Env:ProgramFiles\Docker\docker-compose.exe
     ```
 
     > [!NOTE]
     >
     > On Windows Server 2019 you can add the Compose executable to `$Env:ProgramFiles\Docker`.
-     Because this directory is registered in the system `PATH`, you can run the `docker-compose --version` 
+     Because this directory is registered in the system `PATH`, you can run the `docker-compose --version`
      command on the subsequent step with no additional configuration.
 
-    > To install a different version of Compose, substitute `{{% param "compose_version" %}}`
+    > To install a different version of Compose, substitute `\{\{\% param "compose_version" \%\}\}`
     > with the version of Compose you want to use.
 
 4.  Test the installation.
 
     ```console
     $ docker-compose.exe version
-    Docker Compose version {{% param "compose_version" %}}
+    Docker Compose version \{\{\% param "compose_version" \%\}\}
     ```

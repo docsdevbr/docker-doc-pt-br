@@ -14,7 +14,7 @@ params:
   prereq: None
 ---
 
-{{< columns >}}
+{ { < columns > } }
 
 When container images are insecure, significant risks can arise. Around 60% of
 organizations have reported experiencing at least one security breach or
@@ -45,7 +45,7 @@ compliance with security standards.
 Works well with Docker Desktop, GitHub Actions, Jenkins, Kubernetes, and
 other CI solutions.
 
-{{< /columns >}}
+{ { < /columns > } }
 
 ## Who’s this for?
 
@@ -60,7 +60,7 @@ other CI solutions.
 
 ## Modules
 
-{{< accordion large=true title=`Why Docker Scout?` icon=`play_circle` >}}
+{ { < accordion large=true title=`Why Docker Scout?` icon=`play_circle` > } }
 
 Organizations face significant challenges from data breaches,
 including financial losses, operational disruptions, and long-term damage to
@@ -82,11 +82,11 @@ compliance checks within existing workflows.
 
 **Duration**: 5 minutes
 
-{{< youtube-embed "-omsQ7Uqyc4" >}}
+{ { < youtube-embed "-omsQ7Uqyc4" > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Docker Scout Demo` icon=`play_circle` >}}
+{ { < accordion large=true title=`Docker Scout Demo` icon=`play_circle` > } }
 
 Docker Scout has powerful features for enhancing containerized application
 security and ensuring a robust software supply chain.
@@ -101,11 +101,11 @@ security and ensuring a robust software supply chain.
 
 **Duration**: 5 minutes
 
-{{< youtube-embed "TkLwJ0p46W8" >}}
+{ { < youtube-embed "TkLwJ0p46W8" > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Common challenges and questions` icon=`quiz` >}}
+{ { < accordion large=true title=`Common challenges and questions` icon=`quiz` > } }
 
 <!-- vale Docker.HeadingLength = NO -->
 
@@ -161,9 +161,9 @@ the image.
 The SBOM is cross-referenced with the advisory database to determine if any of
 the components in the image have known vulnerabilities.
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Resources` icon=`link` >}}
+{ { < accordion large=true title=`Resources` icon=`link` > } }
 
 - [Docker Scout overview](../manuals/scout/index.md)
 - [Docker Scout quickstart](../manuals/scout/quickstart.md)
@@ -172,6 +172,6 @@ the components in the image have known vulnerabilities.
 
 <!-- vale Docker.HeadingLength = YES -->
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 <div id="scout-lp-survey-anchor"></div>

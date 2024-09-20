@@ -5,15 +5,15 @@ title: Distribute your dev environment
 weight: 30
 ---
 
-{{< include "dev-envs-changing.md" >}}
+{ { < include "dev-envs-changing.md" > } }
 
 The `compose-dev.yaml` config file makes distributing your dev environment easy so everyone can access the same code and any dependencies.
 
 ### Distribute your dev environment
 
-When you are ready to share your environment, simply copy the link to the Github repo where your project is stored, and share the link with your team members. 
+When you are ready to share your environment, simply copy the link to the Github repo where your project is stored, and share the link with your team members.
 
-You can also create a link that automatically starts your dev environment when opened. This can then be placed on a GitHub README or pasted into a Slack channel, for example. 
+You can also create a link that automatically starts your dev environment when opened. This can then be placed on a GitHub README or pasted into a Slack channel, for example.
 
 To create the link simply join the following link with the link to your dev environment's GitHub repository:
 

@@ -20,21 +20,21 @@ Docker supports some special template markup you can use when specifying a tag's
 
 | Markup             | Description                                          |
 | ------------------ | ---------------------------------------------------- |
-| `{{.ID}}`          | The first 12 characters of the container ID.         |
-| `{{.FullID}}`      | The full container ID.                               |
-| `{{.Name}}`        | The container name.                                  |
-| `{{.ImageID}}`     | The first 12 characters of the container's image ID. |
-| `{{.ImageFullID}}` | The container's full image ID.                       |
-| `{{.ImageName}}`   | The name of the image used by the container.         |
-| `{{.DaemonName}}`  | The name of the Docker program (`docker`).           |
+| `\{\{\.ID}}`          | The first 12 characters of the container ID.         |
+| `\{\{\.FullID}}`      | The full container ID.                               |
+| `\{\{\.Name}}`        | The container name.                                  |
+| `\{\{\.ImageID}}`     | The first 12 characters of the container's image ID. |
+| `\{\{\.ImageFullID}}` | The container's full image ID.                       |
+| `\{\{\.ImageName}}`   | The name of the image used by the container.         |
+| `\{\{\.DaemonName}}`  | The name of the Docker program (`docker`).           |
 
-For example, specifying a `--log-opt tag="{{.ImageName}}/{{.Name}}/{{.ID}}"` value yields `syslog` log lines like:
+For example, specifying a `--log-opt tag="\{\{\.ImageName}}/\{\{\.Name}}/\{\{\.ID}}"` value yields `syslog` log lines like:
 
 ```none
 Aug  7 18:33:19 HOSTNAME hello-world/foobar/5790672ab6a0[9103]: Hello from Docker.
 ```
 
-At startup time, the system sets the `container_name` field and `{{.Name}}` in
+At startup time, the system sets the `container_name` field and `\{\{\.Name}}` in
 the tags. If you use `docker rename` to rename a container, the new name isn't
 reflected in the log messages. Instead, these messages continue to use the
 original container name.

@@ -54,7 +54,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: user/app:latest
           secrets: |
-            "github_token=${{ secrets.GITHUB_TOKEN }}"
+            "github_token=$\{\{ secrets.GITHUB_TOKEN }}"
 ```
 
 > [!NOTE]
@@ -72,7 +72,7 @@ between quotes:
 
 ```yaml
 secrets: |
-  "MYSECRET=${{ secrets.GPG_KEY }}"
+  "MYSECRET=$\{\{ secrets.GPG_KEY }}"
   GIT_AUTH_TOKEN=abcdefghi,jklmno=0123456789
   "MYSECRET=aaaaaaaa
   bbbbbbb
@@ -110,7 +110,7 @@ to fetch Go modules from a private GitHub repository.
 ```dockerfile {collapse=1}
 # syntax=docker/dockerfile:1
 
-ARG GO_VERSION="{{% param example_go_version %}}"
+ARG GO_VERSION="\{\{\% param example_go_version \%\}\}"
 
 FROM golang:${GO_VERSION}-alpine AS base
 ENV CGO_ENABLED=0
@@ -157,8 +157,8 @@ adds it to the SSH agent socket file at `SSH_AUTH_SOCK`. The SSH mount in the
 build step assume `SSH_AUTH_SOCK` by default, so there's no need to specify the
 ID or path for the SSH agent socket explicitly.
 
-{{< tabs >}}
-{{< tab name="`docker/build-push-action`" >}}
+{ { < tabs > } }
+{ { < tab name="`docker/build-push-action`" > } }
 
 ```yaml
 name: ci
@@ -174,7 +174,7 @@ jobs:
         uses: MrSquaare/ssh-setup-action@2d028b70b5e397cf8314c6eaea229a6c3e34977a # v3.1.0
         with:
           host: github.com
-          private-key: ${{ secrets.SSH_GITHUB_PPK }}
+          private-key: $\{\{ secrets.SSH_GITHUB_PPK }}
           private-key-name: github-ppk
 
       - name: Build and push
@@ -185,8 +185,8 @@ jobs:
           tags: user/app:latest
 ```
 
-{{< /tab >}}
-{{< tab name="`docker/bake-action`" >}}
+{ { < /tab > } }
+{ { < tab name="`docker/bake-action`" > } }
 
 ```yaml
 name: ci
@@ -205,7 +205,7 @@ jobs:
         uses: MrSquaare/ssh-setup-action@2d028b70b5e397cf8314c6eaea229a6c3e34977a # v3.1.0
         with:
           host: github.com
-          private-key: ${{ secrets.SSH_GITHUB_PPK }}
+          private-key: $\{\{ secrets.SSH_GITHUB_PPK }}
           private-key-name: github-ppk
 
       - name: Build
@@ -215,5 +215,5 @@ jobs:
             *.ssh=default
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }

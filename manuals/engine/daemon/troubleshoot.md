@@ -325,8 +325,8 @@ configuration file is `/etc/docker/daemon.json`.
 
 ### Turn off `dnsmasq`
 
-{{< tabs >}}
-{{< tab name="Ubuntu" >}}
+{ { < tabs > } }
+{ { < tab name="Ubuntu" > } }
 
 If you prefer not to change the Docker daemon's configuration to use a specific
 IP address, follow these instructions to turn off `dnsmasq` in NetworkManager.
@@ -350,8 +350,8 @@ IP address, follow these instructions to turn off `dnsmasq` in NetworkManager.
    $ sudo systemctl restart docker
    ```
 
-{{< /tab >}}
-{{< tab name="RHEL, CentOS, or Fedora" >}}
+{ { < /tab > } }
+{ { < tab name="RHEL, CentOS, or Fedora" > } }
 
 To turn off `dnsmasq` on RHEL, CentOS, or Fedora:
 
@@ -365,8 +365,8 @@ To turn off `dnsmasq` on RHEL, CentOS, or Fedora:
 2. Configure the DNS servers manually using the
    [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/configuring-the-order-of-dns-servers_configuring-and-managing-networking).
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Docker networks disappearing
 
@@ -399,8 +399,8 @@ In some cases, the network manager will attempt to manage Docker interfaces by
 default. You can try to explicitly flag Docker networks as un-managed by
 editing your system's network configuration settings.
 
-{{< tabs >}}
-{{< tab name="NetworkManager" >}}
+{ { < tabs > } }
+{ { < tab name="NetworkManager" > } }
 
 If you're using `NetworkManager`, edit your system network configuration under
 `/etc/network/interfaces`
@@ -427,8 +427,8 @@ If you're using `NetworkManager`, edit your system network configuration under
    $ nmcli device
    ```
 
-{{< /tab >}}
-{{< tab name="systemd-networkd" >}}
+{ { < /tab > } }
+{ { < tab name="systemd-networkd" > } }
 
 If you're running Docker on a system using `systemd-networkd` as a networking
 daemon, configure the Docker interfaces as un-managed by creating configuration
@@ -465,8 +465,8 @@ files under `/etc/systemd/network`:
    $ networkctl
    ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Prevent Netplan from overriding network configuration
 

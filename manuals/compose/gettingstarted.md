@@ -99,7 +99,7 @@ Make sure you have:
    CMD ["flask", "run", "--debug"]
    ```
 
-   {{< accordion title="Understand the Dockerfile" >}}
+   { { < accordion title="Understand the Dockerfile" > } }
 
    This tells Docker to:
 
@@ -112,7 +112,7 @@ Make sure you have:
    * Copy the current directory `.` in the project to the workdir `.` in the image.
    * Set the default command for the container to `flask run --debug`.
 
-   {{< /accordion >}}
+   { { < /accordion > } }
 
    > [!IMPORTANT]
    >

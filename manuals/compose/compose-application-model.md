@@ -12,7 +12,7 @@ With Docker Compose you use a YAML configuration file, known as the [Compose fil
 
 The Compose file, or `compose.yaml` file, follows the rules provided by the [Compose Specification](../../reference/compose-file/index.md) in how to define multi-container applications. This is the Docker Compose implementation of the formal [Compose Specification](https://github.com/compose-spec/compose-spec).
 
-{{< accordion title="The Compose application model" >}}
+{ { < accordion title="The Compose application model" > } }
 
 Computing components of an application are defined as [services](../../reference/compose-file/services.md). A service is an abstract concept implemented on platforms by running the same container image, and configuration, one or more times.
 
@@ -34,7 +34,7 @@ set the label `com.docker.compose.project`.
 
 Compose offers a way for you to set a custom project name and override this name, so that the same `compose.yaml` file can be deployed twice on the same infrastructure, without changes, by just passing a distinct name.
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ## The Compose file
 

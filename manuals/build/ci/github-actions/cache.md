@@ -35,8 +35,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -68,8 +68,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -84,11 +84,11 @@ jobs:
 
 ### Cache backend API
 
-{{% experimental %}}
+{ { % experimental \%\}\}
 This cache exporter is experimental. Please provide feedback on the
 [BuildKit repository](https://github.com/moby/buildkit)
 if you experience any issues.
-{{% /experimental %}}
+{ { % /experimental \%\}\}
 
 The [GitHub Actions cache exporter](../../cache/backends/gha.md)
 backend uses the [GitHub Cache API](https://github.com/tonistiigi/go-actions-cache/blob/master/api.md)
@@ -113,8 +113,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -179,14 +179,14 @@ jobs:
           tags: |
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern=\{\{version}}
+            type=semver,pattern=\{\{major}}.\{\{minor}}
 
       - name: Go Build Cache for Docker
         uses: actions/cache@v4
         with:
           path: go-build-cache
-          key: ${{ runner.os }}-go-build-cache-${{ hashFiles('**/go.sum') }}
+          key: $\{\{ runner.os }}-go-build-cache-$\{\{ hashFiles('**/go.sum') }}
 
       - name: inject go-build-cache into docker
         uses: reproducible-containers/buildkit-cache-dance@4b2444fec0c0fb9dbf175a96c094720a692ef810 # v2.1.4
@@ -199,9 +199,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           file: build/package/Dockerfile
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          push: $\{\{ github.event_name != 'pull_request' }}
+          tags: $\{\{ steps.meta.outputs.tags }}
+          labels: $\{\{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
 ```
 
@@ -237,15 +237,15 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          key: $\{\{ runner.os }}-buildx-$\{\{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-buildx-
+            $\{\{ runner.os }}-buildx-
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6

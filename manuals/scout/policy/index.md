@@ -9,10 +9,10 @@ description: |
   requirements over time
 ---
 
-{{% restricted title="Early Access" %}}
+{ { % restricted title="Early Access" \%\}\}
 Policy Evaluation is an [Early Access](../../release-lifecycle.md#early-access-ea)
 feature of Docker Scout.
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 In software supply chain management, maintaining the security and reliability
 of artifacts is a top priority. Policy Evaluation in Docker Scout introduces a
@@ -225,8 +225,8 @@ a default user that doesn't have root privileges for the runtime stage.
 The following Dockerfile snippets shows the difference between a compliant and
 non-compliant image.
 
-{{< tabs >}}
-{{< tab name="Non-compliant" >}}
+{ { < tabs > } }
+{ { < tab name="Non-compliant" > } }
 
 ```dockerfile
 FROM alpine AS builder
@@ -238,8 +238,8 @@ COPY --from=builder bin/production /app
 ENTRYPOINT ["/app/production"]
 ```
 
-{{< /tab >}}
-{{< tab name="Compliant" >}}
+{ { < /tab > } }
+{ { < tab name="Compliant" > } }
 
 ```dockerfile {hl_lines=7}
 FROM alpine AS builder
@@ -252,8 +252,8 @@ USER nonroot
 ENTRYPOINT ["/app/production"]
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### No unapproved base images
 

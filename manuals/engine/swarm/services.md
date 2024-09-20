@@ -1031,7 +1031,7 @@ service's name and the ID of the node where the container is running:
 
 ```console
 $ docker service create --name hosttempl \
-                        --hostname="{{.Node.ID}}-{{.Service.Name}}"\
+                        --hostname="\{\{\.Node.ID}}-\{\{\.Service.Name}}"\
                          busybox top
 ```
 
@@ -1048,7 +1048,7 @@ wo41w8hg8qan  hosttempl.1  busybox:latest@sha256:29f5d56d12684887bdfa50dcd29fc31
 
 
 ```console
-$ docker inspect --format="{{.Config.Hostname}}" hosttempl.1.wo41w8hg8qanxwjwsg4kxpprj
+$ docker inspect --format="\{\{\.Config.Hostname}}" hosttempl.1.wo41w8hg8qanxwjwsg4kxpprj
 ```
 
 

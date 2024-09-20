@@ -151,4 +151,4 @@ Redis 3.0.7 container image using rolling updates.
 
 Next, you'll learn how to drain a node in the swarm.
 
-{{< button text="Drain a node" url="drain-node.md" >}}
+{ { < button text="Drain a node" url="drain-node.md" > } }

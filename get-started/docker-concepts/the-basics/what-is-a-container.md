@@ -11,7 +11,7 @@ aliases:
 - /guides/docker-concepts/the-basics/what-is-a-container/
 ---
 
-{{< youtube-embed W1kWqFkiu7k >}}
+{ { < youtube-embed W1kWqFkiu7k > } }
 
 ## Explanation
 
@@ -47,8 +47,8 @@ A container is simply an isolated process with all of the files it needs to run.
 
 In this hands-on, you will see how to run a Docker container using the Docker Desktop GUI.
 
-{{< tabs group=concept-usage persist=true >}}
-{{< tab name="Using the GUI" >}}
+{ { < tabs group=concept-usage persist=true > } }
+{ { < tab name="Using the GUI" > } }
 
 Use the following instructions to run a container.
 
@@ -112,8 +112,8 @@ The `docker/welcome-to-docker` container continues to run until you stop it.
 
     ![Screenshot of the Docker Dashboard with the welcome container selected and being prepared to stop](images/stop-your-container.webp?border)
 
-{{< /tab >}}
-{{< tab name="Using the CLI" >}}
+{ { < /tab > } }
+{ { < tab name="Using the CLI" > } }
 
 Follow the instructions to run a container using the CLI:
 
@@ -177,8 +177,8 @@ The `docker/welcome-to-docker` container continues to run until you stop it. You
 > docker stop a1f
 > ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Additional resources
 
@@ -192,4 +192,4 @@ The following links provide additional guidance into containers:
 
 Now that you have learned the basics of a Docker container, it's time to learn about Docker images.
 
-{{< button text="What is an image?" url="what-is-an-image" >}}
+{ { < button text="What is an image?" url="what-is-an-image" > } }

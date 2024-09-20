@@ -11,7 +11,7 @@ params:
   prereq: None
 ---
 
-{{< columns >}}
+{ { < columns > } }
 
 <!-- vale Vale.Spelling = NO -->
 
@@ -47,11 +47,11 @@ productivity, reduce frustrations, and help you shorten the release cycle.
 
 Works well with Docker Compose, GitHub Actions, and other CI solutions
 
-{{< /columns >}}
+{ { < /columns > } }
 
 ## Modules
 
-{{< accordion large=true title=`Why Docker Build Cloud?` icon=`play_circle` >}}
+{ { < accordion large=true title=`Why Docker Build Cloud?` icon=`play_circle` > } }
 
 Docker Build Cloud is a service that lets you build container images faster,
 both locally and in CI. Builds run on cloud infrastructure optimally
@@ -73,11 +73,11 @@ there are no shared processes or data between cloud builders.
 
 **Duration**: 2.5 minutes
 
-{{< youtube-embed "8AqKhEO2PQA" >}}
+{ { < youtube-embed "8AqKhEO2PQA" > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Demo: set up and use Docker Build Cloud in development` icon=`play_circle` >}}
+{ { < accordion large=true title=`Demo: set up and use Docker Build Cloud in development` icon=`play_circle` > } }
 
 With Docker Build Cloud, you can easily shift the build workload from local machines
 to the cloud, helping you achieve faster build times, especially for multi-platform builds.
@@ -90,11 +90,11 @@ In this demo, you'll see:
 
 **Duration**: 4 minutes
 
-{{< youtube-embed "oPGq2AP5OtQ" >}}
+{ { < youtube-embed "oPGq2AP5OtQ" > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Demo: using Docker Build Cloud in CI` icon=`play_circle` >}}
+{ { < accordion large=true title=`Demo: using Docker Build Cloud in CI` icon=`play_circle` > } }
 
 Docker Build Cloud can significantly decrease the time it takes for your CI builds
 take to run, saving you time and money.
@@ -111,11 +111,11 @@ In this demo, you will see:
 
 **Duration**: 4 minutes
 
-{{< youtube-embed "wvLdInoVBGg" >}}
+{ { < youtube-embed "wvLdInoVBGg" > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Common challenges and questions` icon=`quiz` >}}
+{ { < accordion large=true title=`Common challenges and questions` icon=`quiz` > } }
 
 ### Is Docker Build Cloud a standalone product or a part of Docker Desktop?
 
@@ -179,15 +179,15 @@ one-line change in your GitHub Actions configuration, everything else stays the
 same. You don't need to create new pipelines. Learn more in the [CI
 documentation](../manuals/build-cloud/ci.md) for Docker Build Cloud.
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
-{{< accordion large=true title=`Resources` icon=`link` >}}
+{ { < accordion large=true title=`Resources` icon=`link` > } }
 
 - [Product page](https://www.docker.com/products/build-cloud/)
 - [Docker Build Cloud overview](../manuals/build-cloud/index.md)
 - [Subscriptions and features](../manuals/subscription/build-cloud/build-details.md)
 - [Using Docker Build Cloud](../manuals/build-cloud/usage.md)
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 <div id="dbc-lp-survey-anchor"></div>

@@ -14,7 +14,7 @@ aliases:
  - /guides/docker-concepts/building-images/using-the-build-cache/
 ---
 
-{{< youtube-embed Ri6jMknjprY >}}
+{ { < youtube-embed Ri6jMknjprY > } }
 
 ## Explanation
 
@@ -319,4 +319,4 @@ By following these optimization techniques, you can make your Docker builds fast
 
 Now that you understand how to use the Docker build cache effectively, you're ready to learn about Multi-stage builds.
 
-{{< button text="Multi-stage builds" url="multi-stage-builds" >}}
+{ { < button text="Multi-stage builds" url="multi-stage-builds" > } }

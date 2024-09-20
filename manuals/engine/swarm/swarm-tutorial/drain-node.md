@@ -135,4 +135,4 @@ drained node to an active state:
 
 Next, you'll learn how to use a Swarm mode routing mesh
 
-{{< button text="Use a Swarm mode routing mesh" url="../ingress.md" >}}
+{ { < button text="Use a Swarm mode routing mesh" url="../ingress.md" > } }

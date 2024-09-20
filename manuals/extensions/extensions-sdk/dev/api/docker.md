@@ -45,7 +45,7 @@ Extensions can also directly execute the `docker` command line.
 ```typescript
 const result = await ddClient.docker.cli.exec("info", [
   "--format",
-  '"{{ json . }}"',
+  '"\{\{ json . }}"',
 ]);
 ```
 
@@ -110,7 +110,7 @@ This `exec(streamOptions)` API can also be used to listen to docker events:
 ```typescript
 await ddClient.docker.cli.exec(
   "events",
-  ["--format", "{{ json . }}", "--filter", "container=my-container"],
+  ["--format", "\{\{ json . }}", "--filter", "container=my-container"],
   {
     stream: {
       onOutput(data) {
@@ -146,7 +146,7 @@ See the [Exec API reference](../../../../../reference/api/extensions-sdk/Exec.md
 const output = await window.ddClient.execDockerCmd(
   "info",
   "--format",
-  '"{{ json . }}"'
+  '"\{\{ json . }}"'
 );
 
 window.ddClient.spawnDockerCmd("logs", ["-f", "..."], (data, error) => {

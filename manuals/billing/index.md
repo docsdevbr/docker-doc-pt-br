@@ -49,12 +49,12 @@ Use the resources in this section to manage your billing and payment settings fo
 
 ## Docker Core
 
-{{< grid items="grid_core" >}}
+{ { < grid items="grid_core" > } }
 
 ## Docker products
 
-{{< grid items="grid_products" >}}
+{ { < grid items="grid_products" > } }
 
 ## Resources
 
-{{< grid items="grid_resources" >}}
+{ { < grid items="grid_resources" > } }

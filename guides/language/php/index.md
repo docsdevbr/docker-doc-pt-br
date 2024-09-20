@@ -21,4 +21,4 @@ After completing the PHP language-specific guide, you should be able to containe
 
 Start by containerizing an existing PHP application.
 
-{{< button text="Containerize a PHP app" url="containerize.md" >}}
+{ { < button text="Containerize a PHP app" url="containerize.md" > } }

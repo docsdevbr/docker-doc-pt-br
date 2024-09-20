@@ -66,36 +66,36 @@ To access an existing notebook on your system, you can use a
 change directory to where your existing notebook is. Then,
 run the following command based on your operating system.
 
-{{< tabs >}}
-{{< tab name="Mac / Linux" >}}
+{ { < tabs > } }
+{ { < tab name="Mac / Linux" > } }
 
 ```console
 $ docker run --rm -p 8889:8888 -v "$(pwd):/home/jovyan/work" quay.io/jupyter/base-notebook start-notebook.py --NotebookApp.token='my-token'
 ```
 
-{{< /tab >}}
-{{< tab name="Windows (Command Prompt)" >}}
+{ { < /tab > } }
+{ { < tab name="Windows (Command Prompt)" > } }
 
 ```console
 $ docker run --rm -p 8889:8888 -v "%cd%":/home/jovyan/work quay.io/jupyter/base-notebook start-notebook.py --NotebookApp.token='my-token'
 ```
 
-{{< /tab >}}
-{{< tab name="Windows (PowerShell)" >}}
+{ { < /tab > } }
+{ { < tab name="Windows (PowerShell)" > } }
 
 ```console
 $ docker run --rm -p 8889:8888 -v "$(pwd):/home/jovyan/work" quay.io/jupyter/base-notebook start-notebook.py --NotebookApp.token='my-token'
 ```
 
-{{< /tab >}}
-{{< tab name="Windows (Git Bash)" >}}
+{ { < /tab > } }
+{ { < tab name="Windows (Git Bash)" > } }
 
 ```console
 $ docker run --rm -p 8889:8888 -v "/$(pwd):/home/jovyan/work" quay.io/jupyter/base-notebook start-notebook.py --NotebookApp.token='my-token'
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 The `-v` option tells Docker to mount your current working directory to
 `/home/jovyan/work` inside the container. By default, the Jupyter image's root

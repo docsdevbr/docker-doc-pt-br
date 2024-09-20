@@ -50,8 +50,8 @@ testuser:231072:65536
 >
 > We recommend that you use the Ubuntu kernel.
 
-{{< tabs >}}
-{{< tab name="Ubuntu" >}}
+{ { < tabs > } }
+{ { < tab name="Ubuntu" > } }
 - Install `dbus-user-session` package if not installed. Run `sudo apt-get install -y dbus-user-session` and relogin.
 - Install `uidmap` package if not installed.  Run `sudo apt-get install -y uidmap`.
 - If running in a terminal where the user was not directly logged into, you will need to install `systemd-container` with `sudo apt-get install -y systemd-container`, then switch to TheUser with the command `sudo machinectl shell TheUser@`.
@@ -94,8 +94,8 @@ testuser:231072:65536
      $ systemctl restart apparmor.service
      ```
 
-{{< /tab >}}
-{{< tab name="Debian GNU/Linux" >}}
+{ { < /tab > } }
+{ { < tab name="Debian GNU/Linux" > } }
 - Install `dbus-user-session` package if not installed. Run `sudo apt-get install -y dbus-user-session` and relogin.
 
 - For Debian 10, add `kernel.unprivileged_userns_clone=1` to `/etc/sysctl.conf` (or
@@ -111,14 +111,14 @@ testuser:231072:65536
   $ slirp4netns --version
   ```
   If you do not have this download and install with `sudo apt-get install -y slirp4netns` or download the latest [release](https://github.com/rootless-containers/slirp4netns/releases).
-{{< /tab >}}
-{{< tab name="Arch Linux" >}}
+{ { < /tab > } }
+{ { < tab name="Arch Linux" > } }
 - Installing `fuse-overlayfs` is recommended. Run `sudo pacman -S fuse-overlayfs`.
 
 - Add `kernel.unprivileged_userns_clone=1` to `/etc/sysctl.conf` (or
   `/etc/sysctl.d`) and run `sudo sysctl --system`
-{{< /tab >}}
-{{< tab name="openSUSE and SLES" >}}
+{ { < /tab > } }
+{ { < tab name="openSUSE and SLES" > } }
 - For openSUSE 15 and SLES 15, Installing `fuse-overlayfs` is recommended. Run `sudo zypper install -y fuse-overlayfs`.
   This step is not required on openSUSE Tumbleweed.
 
@@ -126,14 +126,14 @@ testuser:231072:65536
   This might be required on other distros as well depending on the configuration.
 
 - Known to work on openSUSE 15 and SLES 15.
-{{< /tab >}}
-{{< tab name="CentOS, RHEL, and Fedora" >}}
+{ { < /tab > } }
+{ { < tab name="CentOS, RHEL, and Fedora" > } }
 - For RHEL 8 and similar distributions, installing `fuse-overlayfs` is recommended. Run `sudo dnf install -y fuse-overlayfs`.
   This step is not required on RHEL 9 and similar distributions.
 
 - You might need `sudo dnf install -y iptables`.
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Known limitations
 
@@ -168,8 +168,8 @@ testuser:231072:65536
 > parameter in the next section. There are no known issues, but until you shutdown and disable you're
 > still running rootful Docker.
 
-{{< tabs >}}
-{{< tab name="With packages (RPM/DEB)" >}}
+{ { < tabs > } }
+{ { < tab name="With packages (RPM/DEB)" > } }
 
 If you installed Docker 20.10 or later with [RPM/DEB packages](../install), you should have `dockerd-rootless-setuptool.sh` in `/usr/bin`.
 
@@ -195,8 +195,8 @@ If `dockerd-rootless-setuptool.sh` is not present, you may need to install the `
 $ sudo apt-get install -y docker-ce-rootless-extras
 ```
 
-{{< /tab >}}
-{{< tab name="Without packages" >}}
+{ { < /tab > } }
+{ { < tab name="Without packages" > } }
 
 If you do not have permission to run package managers like `apt-get` and `dnf`,
 consider using the installation script available at [https://get.docker.com/rootless](https://get.docker.com/rootless).
@@ -219,8 +219,8 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 The binaries will be installed at `~/bin`.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 See [Troubleshooting](#troubleshooting) if you faced an error.
 
@@ -254,8 +254,8 @@ $ rm -f containerd containerd-shim containerd-shim-runc-v2 ctr docker docker-ini
 
 ### Daemon
 
-{{< tabs >}}
-{{< tab name="With systemd (Highly recommended)" >}}
+{ { < tabs > } }
+{ { < tab name="With systemd (Highly recommended)" > } }
 
 The systemd unit file is installed as  `~/.config/systemd/user/docker.service`.
 
@@ -275,8 +275,8 @@ $ sudo loginctl enable-linger $(whoami)
 Starting Rootless Docker as a systemd-wide service (`/etc/systemd/system/docker.service`)
 is not supported, even with the `User=` directive.
 
-{{< /tab >}}
-{{< tab name="Without systemd" >}}
+{ { < /tab > } }
+{ { < tab name="Without systemd" > } }
 
 To run the daemon directly without systemd, you need to run `dockerd-rootless.sh` instead of `dockerd`.
 
@@ -287,8 +287,8 @@ The following environment variables must be set:
   The directory can be on tmpfs, however, should not be under `/tmp`.
   Locating this directory under `/tmp` might be vulnerable to TOCTOU attack.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Remarks about directory paths:
 

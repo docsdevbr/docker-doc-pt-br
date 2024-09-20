@@ -63,8 +63,8 @@ Once the extension is created, you need to configure the `Dockerfile` to build t
 that are used to populate the extension's card in the Marketplace. Here is an example of a `Dockerfile` for a React
 extension:
 
-{{< tabs group="framework" >}}
-{{< tab name="React" >}}
+{ { < tabs group="framework" > } }
+{ { < tab name="React" > } }
 
 ```Dockerfile
 # syntax=docker/dockerfile:1
@@ -101,32 +101,32 @@ COPY --from=client-builder /ui/build ui
 >
 > In the example Dockerfile, you can see that the image label `com.docker.desktop.extension.icon` is set to an icon URL. The Extensions Marketplace displays this icon without installing the extension. The Dockerfile also includes `COPY docker.svg .` to copy an icon file inside the image. This second icon file is used to display the extension UI in the Dashboard, once the extension is installed.
 
-{{< /tab >}}
-{{< tab name="Vue" >}}
+{ { < /tab > } }
+{ { < tab name="Vue" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working Dockerfile for Vue yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Vue)
 > and let us know if you'd like a Dockerfile for Vue.
 
-{{< /tab >}}
-{{< tab name="Angular" >}}
+{ { < /tab > } }
+{ { < tab name="Angular" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working Dockerfile for Angular yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Angular)
 > and let us know if you'd like a Dockerfile for Angular.
 
-{{< /tab >}}
-{{< tab name="Svelte" >}}
+{ { < /tab > } }
+{ { < tab name="Svelte" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working Dockerfile for Svelte yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Svelte)
 > and let us know if you'd like a Dockerfile for Svelte.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Configure the metadata file
 
@@ -200,8 +200,8 @@ npm install @docker/extension-api-client-types --save-dev
 For example, you can use the `docker.cli.exec` function to get the list of all the containers via the `docker ps --all`
 command and display the result in a table.
 
-{{< tabs group="framework" >}}
-{{< tab name="React" >}}
+{ { < tabs group="framework" > } }
+{ { < tab name="React" > } }
 
 Replace the `ui/src/App.tsx` file with the following code:
 
@@ -230,7 +230,7 @@ export function App() {
 
   useEffect(() => {
     // List all containers
-    ddClient.docker.cli.exec('ps', ['--all', '--format', '"{{json .}}"']).then((result) => {
+    ddClient.docker.cli.exec('ps', ['--all', '--format', '"\{\{json .}}"']).then((result) => {
       // result.parseJsonLines() parses the output of the command into an array of objects
       setContainers(result.parseJsonLines());
     });
@@ -245,11 +245,11 @@ export function App() {
       data-testid="subheading"
       variant="body1"
       color="text.secondary"
-      sx={{ mt: 2 }}
+      sx=\{\{ mt: 2 }}
     >
       Simple list of containers using Docker Extensions SDK.
       </Typography>
-      <TableContainer sx={{mt:2}}>
+      <TableContainer sx=\{\{mt:2}}>
         <Table>
           <TableHead>
             <TableRow>
@@ -264,7 +264,7 @@ export function App() {
             {containers.map((container) => (
               <TableRow
                 key={container.ID}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx=\{\{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell>{container.ID}</TableCell>
                 <TableCell>{container.Image}</TableCell>
@@ -284,32 +284,32 @@ export function App() {
 
 ![Screenshot of the container list.](images/react-extension.png)
 
-{{< /tab >}}
-{{< tab name="Vue" >}}
+{ { < /tab > } }
+{ { < tab name="Vue" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Vue yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Vue)
 > and let us know if you'd like a sample with Vue.
 
-{{< /tab >}}
-{{< tab name="Angular" >}}
+{ { < /tab > } }
+{ { < tab name="Angular" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Angular yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Angular)
 > and let us know if you'd like a sample with Angular.
 
-{{< /tab >}}
-{{< tab name="Svelte" >}}
+{ { < /tab > } }
+{ { < tab name="Svelte" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Svelte yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Svelte)
 > and let us know if you'd like a sample with Svelte.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Policies enforced for the front-end code
 

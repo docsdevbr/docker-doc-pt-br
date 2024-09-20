@@ -90,7 +90,7 @@ instance:
 
 
 ```console
-$ docker service inspect --format="{{json .Endpoint.Spec.Ports}}" my-web
+$ docker service inspect --format="\{\{json .Endpoint.Spec.Ports}}" my-web
 
 [{"Protocol":"tcp","TargetPort":80,"PublishedPort":8080}]
 ```

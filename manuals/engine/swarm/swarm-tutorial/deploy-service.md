@@ -40,4 +40,4 @@ is not a requirement to deploy a service.
 
 Now you're ready to inspect the service.
 
-{{< button text="Inspect the service" url="inspect-service.md" >}}
+{ { < button text="Inspect the service" url="inspect-service.md" > } }

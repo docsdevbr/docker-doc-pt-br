@@ -12,7 +12,7 @@ grid:
   description: Understand Docker Compose's key benefits
   icon: feature_search
   link: /compose/intro/features-uses/
-- title: How Compose works 
+- title: How Compose works
   description: Understand how Compose works
   icon: category
   link: /compose/compose-application-model/
@@ -50,8 +50,8 @@ aliases:
 - /compose/completion/
 ---
 
-Docker Compose is a tool for defining and running multi-container applications. 
-It is the key to unlocking a streamlined and efficient development and deployment experience. 
+Docker Compose is a tool for defining and running multi-container applications.
+It is the key to unlocking a streamlined and efficient development and deployment experience.
 
 Compose simplifies the control of your entire application stack, making it easy to manage services, networks, and volumes in a single, comprehensible YAML configuration file. Then, with a single command, you create and start all the services
 from your configuration file.
@@ -64,4 +64,4 @@ well as CI workflows. It also has commands for managing the whole lifecycle of y
  * Stream the log output of running services
  * Run a one-off command on a service
 
-{{< grid >}}
+{ { < grid > } }

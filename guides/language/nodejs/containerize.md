@@ -39,8 +39,8 @@ Now that you have an application, you can create the necessary Docker assets to
 containerize your application. You can use Docker Desktop's built-in Docker Init
 feature to help streamline the process, or you can manually create the assets.
 
-{{< tabs >}}
-{{< tab name="Use Docker Init" >}}
+{ { < tabs > } }
+{ { < tab name="Use Docker Init" > } }
 
 Inside the `docker-nodejs-sample` directory, run
 the `docker init` command in a terminal. `docker init` provides some default
@@ -67,8 +67,8 @@ Let's get started!
 ? What port does your server listen on? 3000
 ```
 
-{{< /tab >}}
-{{< tab name="Manually create assets" >}}
+{ { < /tab > } }
+{ { < tab name="Manually create assets" > } }
 
 If you don't have Docker Desktop installed or prefer creating the assets manually, you can create the following files in your project directory.
 
@@ -209,8 +209,8 @@ LICENSE
 README.md
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 
 You should now have at least the following contents in your
@@ -286,4 +286,4 @@ Related information:
 In the next section, you'll learn how you can develop your application using
 containers.
 
-{{< button text="Develop your application" url="develop.md" >}}
+{ { < button text="Develop your application" url="develop.md" > } }

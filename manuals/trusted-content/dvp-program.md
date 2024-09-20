@@ -56,16 +56,16 @@ over the repository can change the repository logo.
 
 1. Sign in to [Docker Hub](https://hub.docker.com).
 2. Go to the page of the repository that you want to change the logo for.
-3. Select the upload logo button, represented by a camera icon ({{< inline-image
-   src="./images/upload_logo_sm.png" alt="camera icon" >}}) overlaying the
+3. Select the upload logo button, represented by a camera icon ({ { <inline-image
+   src="./images/upload_logo_sm.png" alt="camera icon" > } }) overlaying the
 current repository logo.
 4. In the dialog that opens, select the PNG image that you want to upload to
    set it as the logo for the repository.
 
 #### Remove the logo
 
-Select the **Clear** button ({{< inline-image src="images/clear_logo_sm.png"
-alt="clear button" >}}) to remove a logo.
+Select the **Clear** button ({ { <inline-image src="images/clear_logo_sm.png"
+alt="clear button" > } }) to remove a logo.
 
 Removing the logo makes the repository default to using the organization logo, if set, or the following default logo if not.
 

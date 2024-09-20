@@ -40,7 +40,7 @@ Find the contribution guidelines in
 the `docker/docs` GitHub repository. Use the following links to review our
 style guide and instructions on how to use our page templates and components.
 
-{{< grid >}}
+{ { < grid > } }
 
 ### Additional resources
 

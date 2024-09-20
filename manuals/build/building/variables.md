@@ -90,8 +90,8 @@ The following example defines the version of `node` and `alpine` using build arg
 ```dockerfile
 # syntax=docker/dockerfile:1
 
-ARG NODE_VERSION="{{% param example_node_version %}}"
-ARG ALPINE_VERSION="{{% param example_alpine_version %}}"
+ARG NODE_VERSION="\{\{\% param example_node_version \%\}\}"
+ARG ALPINE_VERSION="\{\{\% param example_alpine_version \%\}\}"
 
 FROM node:${NODE_VERSION}-alpine${ALPINE_VERSION} AS base
 WORKDIR /src
@@ -224,7 +224,7 @@ RUN echo "hello $NAME!"
 The following diagram further exemplifies how build argument
 and environment variable inheritance works for multi-stage builds.
 
-{{< figure src="../../images/build-variables.svg" class="invertible" >}}
+{ { < figure src="../../images/build-variables.svg" class="invertible" > } }
 
 ## Pre-defined build arguments
 
@@ -350,7 +350,7 @@ Setting `NO_COLOR` to anything turns off colorized output, as recommended by
 
 ### BUILDKIT_HOST
 
-{{< introduced buildx 0.9.0 "../release-notes.md#090" >}}
+{ { < introduced buildx 0.9.0 "../release-notes.md#090" > } }
 
 You use the `BUILDKIT_HOST` to specify the address of a BuildKit daemon to use
 as a remote builder. This is the same as specifying the address as a positional
@@ -435,7 +435,7 @@ Example:
 
 ### BUILDX_BAKE_GIT_AUTH_HEADER
 
-{{< introduced buildx 0.14.0 >}}
+{ { < introduced buildx 0.14.0 > } }
 
 Sets the HTTP authentication scheme when using a remote Bake definition in a private Git repository.
 This is equivalent to the [`GIT_AUTH_HEADER` secret](secrets#http-authentication-scheme),
@@ -450,7 +450,7 @@ $ export BUILDX_BAKE_GIT_AUTH_HEADER=basic
 
 ### BUILDX_BAKE_GIT_AUTH_TOKEN
 
-{{< introduced buildx 0.14.0 >}}
+{ { < introduced buildx 0.14.0 > } }
 
 Sets the HTTP authentication token when using a remote Bake definition in a private Git repository.
 This is equivalent to the [`GIT_AUTH_TOKEN` secret](secrets#git-authentication-for-remote-contexts),
@@ -464,7 +464,7 @@ $ export BUILDX_BAKE_GIT_AUTH_TOKEN=$(cat git-token.txt)
 
 ### BUILDX_BAKE_GIT_SSH
 
-{{< introduced buildx 0.14.0 >}}
+{ { < introduced buildx 0.14.0 > } }
 
 Lets you specify a list of SSH agent socket filepaths to forward to Bake
 for authenticating to a Git server when using a remote Bake definition in a private repository.
@@ -519,7 +519,7 @@ $ export BUILDX_EXPERIMENTAL=1
 
 ### BUILDX_GIT_CHECK_DIRTY
 
-{{< introduced buildx 0.10.4 "../release-notes.md#0104" >}}
+{ { < introduced buildx 0.10.4 "../release-notes.md#0104" > } }
 
 When set to true, checks for dirty state in source control information for
 [provenance attestations](../metadata/attestations/slsa-provenance.md).
@@ -532,7 +532,7 @@ $ export BUILDX_GIT_CHECK_DIRTY=1
 
 ### BUILDX_GIT_INFO
 
-{{< introduced buildx 0.10.0 "../release-notes.md#0100" >}}
+{ { < introduced buildx 0.10.0 "../release-notes.md#0100" > } }
 
 When set to false, removes source control information from
 [provenance attestations](../metadata/attestations/slsa-provenance.md).
@@ -545,7 +545,7 @@ $ export BUILDX_GIT_INFO=0
 
 ### BUILDX_GIT_LABELS
 
-{{< introduced buildx 0.10.0 "../release-notes.md#0100" >}}
+{ { < introduced buildx 0.10.0 "../release-notes.md#0100" > } }
 
 Adds provenance labels, based on Git information, to images that you build. The
 labels are:
@@ -574,7 +574,7 @@ If the repository is in a dirty state, the `revision` gets a `-dirty` suffix.
 
 ### BUILDX_NO_DEFAULT_ATTESTATIONS
 
-{{< introduced buildx 0.10.4 "../release-notes.md#0104" >}}
+{ { < introduced buildx 0.10.4 "../release-notes.md#0104" > } }
 
 By default, BuildKit v0.11 and later adds
 [provenance attestations](../metadata/attestations/slsa-provenance.md) to images you

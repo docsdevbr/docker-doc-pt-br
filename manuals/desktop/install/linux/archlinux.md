@@ -49,7 +49,7 @@ $ sudo pacman -S gnome-terminal
 
 ## Launch Docker Desktop
 
-{{< include "desktop-linux-launch.md" >}}
+{ { < include "desktop-linux-launch.md" > } }
 
 ## Next steps
 

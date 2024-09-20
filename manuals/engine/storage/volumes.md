@@ -162,8 +162,8 @@ The `-v` and `--mount` examples below produce the same result. You can't run
 them both unless you remove the `devtest` container and the `myvol2` volume
 after running the first one.
 
-{{< tabs >}}
-{{< tab name="`--mount`" >}}
+{ { < tabs > } }
+{ { < tab name="`--mount`" > } }
 
 ```console
 $ docker run -d \
@@ -172,8 +172,8 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< tab name="`-v`" >}}
+{ { < /tab > } }
+{ { < tab name="`-v`" > } }
 
 ```console
 $ docker run -d \
@@ -182,8 +182,8 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Use `docker inspect devtest` to verify that Docker created the volume and it mounted
 correctly. Look for the `Mounts` section:
@@ -307,8 +307,8 @@ content.
 
 The `--mount` and `-v` examples have the same end result.
 
-{{< tabs >}}
-{{< tab name="`--mount`" >}}
+{ { < tabs > } }
+{ { < tab name="`--mount`" > } }
 
 ```console
 $ docker run -d \
@@ -317,8 +317,8 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< tab name="`-v`" >}}
+{ { < /tab > } }
+{ { < tab name="`-v`" > } }
 
 ```console
 $ docker run -d \
@@ -327,8 +327,8 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 After running either of these examples, run the following commands to clean up
 the containers and volumes. Note volume removal is a separate step.
@@ -356,8 +356,8 @@ them using commas.
 
 The `--mount` and `-v` examples have the same result.
 
-{{< tabs >}}
-{{< tab name="`--mount`" >}}
+{ { < tabs > } }
+{ { < tab name="`--mount`" > } }
 
 ```console
 $ docker run -d \
@@ -366,8 +366,8 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< tab name="`-v`" >}}
+{ { < /tab > } }
+{ { < tab name="`-v`" > } }
 
 ```console
 $ docker run -d \
@@ -376,8 +376,8 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Use `docker inspect nginxtest` to verify that Docker created the read-only mount
 correctly. Look for the `Mounts` section:

@@ -35,10 +35,10 @@ This section contains more advanced guides to help you learn how Docker can opti
 
 Explore more advanced concepts and scenarios in Docker.
 
-{{< grid items="dive-deeper" >}}
+{ { < grid items="dive-deeper" > } }
 
 ## Educational resources and contributions
 
 Discover community-driven resources and learn how to contribute to Docker docs.
 
-{{< grid items="resources" >}}
+{ { < grid items="resources" > } }

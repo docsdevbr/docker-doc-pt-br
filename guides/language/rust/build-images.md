@@ -185,4 +185,4 @@ Related information:
 
 In the next section learn how to run your image as a container.
 
-{{< button text="Run the image as a container" url="run-containers.md" >}}
+{ { < button text="Run the image as a container" url="run-containers.md" > } }

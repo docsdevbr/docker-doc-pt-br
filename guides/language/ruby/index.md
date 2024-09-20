@@ -18,4 +18,4 @@ The Ruby language-specific guide teaches you how to containerize a Ruby on Rails
 
 Start by containerizing an existing Ruby on Rails application.
 
-{{< button text="Containerize a Ruby on Rails app" url="containerize.md" >}}
+{ { < button text="Containerize a Ruby on Rails app" url="containerize.md" > } }

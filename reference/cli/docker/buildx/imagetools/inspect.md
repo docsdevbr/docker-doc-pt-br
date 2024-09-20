@@ -26,7 +26,7 @@ Show details of an image in the registry
 |:------------------------|:---------|:----------------|:----------------------------------------------|
 | [`--builder`](#builder) | `string` |                 | Override the configured builder instance      |
 | `-D`, `--debug`         | `bool`   |                 | Enable debug logging                          |
-| [`--format`](#format)   | `string` | `{{.Manifest}}` | Format the output using the given Go template |
+| [`--format`](#format)   | `string` | `\{\{\.Manifest}}` | Format the output using the given Go template |
 | [`--raw`](#raw)         | `bool`   |                 | Show original, unformatted JSON manifest      |
 
 ## Description
@@ -77,7 +77,7 @@ Same as [`buildx --builder`](index.md#builder).
 
 ### <a name="format"></a> Format the output (--format)
 
-Format the output using the given Go template. Defaults to `{{.Manifest}}` if
+Format the output using the given Go template. Defaults to `\{\{\.Manifest}}` if
 unset. Following fields are available:
 
 * `.Name`: provides the reference of the image
@@ -87,21 +87,21 @@ unset. Following fields are available:
 #### `.Name`
 
 ```console
-$ docker buildx imagetools inspect alpine --format "{{.Name}}"
+$ docker buildx imagetools inspect alpine --format "\{\{\.Name}}"
 Name: docker.io/library/alpine:latest
 ```
 
 #### `.Manifest`
 
 ```console
-$ docker buildx imagetools inspect crazymax/loop --format "{{.Manifest}}"
+$ docker buildx imagetools inspect crazymax/loop --format "\{\{\.Manifest}}"
 Name:      docker.io/crazymax/loop:latest
 MediaType: application/vnd.docker.distribution.manifest.v2+json
 Digest:    sha256:08602e7340970e92bde5e0a2e887c1fde4d9ae753d1e05efb4c8ef3b609f97f1
 ```
 
 ```console
-$ docker buildx imagetools inspect moby/buildkit:master --format "{{.Manifest}}"
+$ docker buildx imagetools inspect moby/buildkit:master --format "\{\{\.Manifest}}"
 Name:      docker.io/moby/buildkit:master
 MediaType: application/vnd.docker.distribution.manifest.list.v2+json
 Digest:    sha256:3183f7ce54d1efb44c34b84f428ae10aaf141e553c6b52a7ff44cc7083a05a66
@@ -138,7 +138,7 @@ A `json` template function is also available if you want to render fields in
 JSON format:
 
 ```console
-$ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .Manifest}}"
+$ docker buildx imagetools inspect crazymax/buildkit:attest --format "\{\{json .Manifest}}"
 ```
 
 ```json
@@ -175,7 +175,7 @@ $ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .Ma
 ```
 
 ```console
-$ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .Image}}"
+$ docker buildx imagetools inspect crazymax/buildkit:attest --format "\{\{json .Image}}"
 ```
 
 ```json
@@ -218,7 +218,7 @@ $ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .Im
 ```
 
 ```console
-$ docker buildx imagetools inspect moby/buildkit:master --format "{{json .Manifest}}"
+$ docker buildx imagetools inspect moby/buildkit:master --format "\{\{json .Manifest}}"
 ```
 
 ```json
@@ -370,7 +370,7 @@ provides [SLSA](https://github.com/moby/buildkit/blob/master/docs/attestations/s
 JSON output:
 
 ```console
-$ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .Provenance}}"
+$ docker buildx imagetools inspect crazymax/buildkit:attest --format "\{\{json .Provenance}}"
 ```
 
 ```json
@@ -432,7 +432,7 @@ provides [SBOM](https://github.com/moby/buildkit/blob/master/docs/attestations/s
 JSON output:
 
 ```console
-$ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .SBOM}}"
+$ docker buildx imagetools inspect crazymax/buildkit:attest --format "\{\{json .SBOM}}"
 ```
 
 ```json
@@ -457,7 +457,7 @@ $ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .SB
 ```
 
 ```console
-$ docker buildx imagetools inspect crazymax/buildkit:attest --format "{{json .}}"
+$ docker buildx imagetools inspect crazymax/buildkit:attest --format "\{\{json .}}"
 ```
 
 ```json
@@ -539,7 +539,7 @@ If you want to pick up a specific platform, you can specify it using the `index`
 go template function:
 
 ```console
-$ docker buildx imagetools inspect --format '{{json (index .Image "linux/s390x")}}' moby/buildkit:master
+$ docker buildx imagetools inspect --format '\{\{json (index .Image "linux/s390x")}}' moby/buildkit:master
 ```
 
 ```json

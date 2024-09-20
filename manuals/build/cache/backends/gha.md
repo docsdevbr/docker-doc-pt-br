@@ -6,10 +6,10 @@ aliases:
   - /build/building/cache/backends/gha/
 ---
 
-{{% restricted %}}
+{ { % restricted \%\}\}
 This is an experimental feature. The interface and behavior are unstable and
 may change in future releases.
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 The GitHub Actions cache utilizes the
 [GitHub-provided Action's cache](https://github.com/actions/cache) or other
@@ -147,7 +147,7 @@ action. You can also set the `ghtoken` parameter manually using the
     tags: "<registry>/<image>:latest"
     cache-from: type=gha
     cache-to: type=gha,mode=max
-    github-token: ${{ secrets.MY_CUSTOM_TOKEN }}
+    github-token: $\{\{ secrets.MY_CUSTOM_TOKEN }}
 ```
 
 ## Further reading

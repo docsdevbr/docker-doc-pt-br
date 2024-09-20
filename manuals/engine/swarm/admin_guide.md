@@ -162,7 +162,7 @@ For instance, to query the reachability of the node as a manager:
 
 
 ```console
-$ docker node inspect manager1 --format "{{ .ManagerStatus.Reachability }}"
+$ docker node inspect manager1 --format "\{\{\.ManagerStatus.Reachability }}"
 reachable
 ```
 
@@ -171,7 +171,7 @@ To query the status of the node as a worker that accept tasks:
 
 
 ```console
-$ docker node inspect manager1 --format "{{ .Status.State }}"
+$ docker node inspect manager1 --format "\{\{\.Status.State }}"
 ready
 ```
 

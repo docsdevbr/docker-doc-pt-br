@@ -9,9 +9,9 @@ sitemap: false
 download-url-base: https://download.docker.com/linux/rhel
 ---
 
-{{% restricted title="Early Access" %}}
+{ { % restricted title="Early Access" \%\}\}
 Docker Desktop on RHEL is in [Early Access](../../../release-lifecycle.md).
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 > **Docker Desktop terms**
 >
@@ -33,37 +33,37 @@ If you don't have `pass` installed, or it can't be installed, you must enable
 and
 [Extra Packages for Enterprise Linux (EPEL)](https://docs.fedoraproject.org/en-US/epel/).
 
-   {{< tabs group="os_version" >}}
-   {{< tab name="RHEL 9" >}}
+   { { < tabs group="os_version" > } }
+   { { < tab name="RHEL 9" > } }
 ```console
 $ sudo subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms
 $ sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 $ sudo dnf install pass
 ```
 
-   {{< /tab >}}
-   {{< tab name="RHEL 8" >}}
+   { { < /tab > } }
+   { { < tab name="RHEL 8" > } }
 ```console
 $ sudo subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
 $ sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 $ sudo dnf install pass
 ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 Additionally, for a GNOME desktop environment you must install AppIndicator and KStatusNotifierItem [GNOME extensions](https://extensions.gnome.org/extension/615/appindicator-support/). You must also enable EPEL.
 
-   {{< tabs group="os_version" >}}
-   {{< tab name="RHEL 9" >}}
+   { { < tabs group="os_version" > } }
+   { { < tab name="RHEL 9" > } }
 ```console
 $ # enable EPEL as described above
 $ sudo dnf install gnome-shell-extension-appindicator
 $ sudo gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 ```
 
-   {{< /tab >}}
-   {{< tab name="RHEL 8" >}}
+   { { < /tab > } }
+   { { < tab name="RHEL 8" > } }
 ```console
 $ # enable EPEL as described above
 $ sudo dnf install gnome-shell-extension-appindicator
@@ -71,8 +71,8 @@ $ sudo dnf install gnome-shell-extension-desktop-icons
 $ sudo gnome-shell-extension-tool -e appindicatorsupport@rgcjonas.gmail.com
 ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 For non-GNOME desktop environments, `gnome-terminal` must be installed:
 
@@ -87,7 +87,7 @@ To install Docker Desktop on RHEL:
 1. Set up Docker's package repository as follows:
 
    ```console
-   $ sudo dnf config-manager --add-repo {{% param "download-url-base" %}}/docker-ce.repo
+   $ sudo dnf config-manager --add-repo \{\{\% param "download-url-base" \%\}\}/docker-ce.repo
    ```
 
 2. Download the latest RPM package.
@@ -112,7 +112,7 @@ The post-install script:
 
 ## Launch Docker Desktop
 
-{{< include "desktop-linux-launch.md" >}}
+{ { < include "desktop-linux-launch.md" > } }
 
 >**Tip**
 >

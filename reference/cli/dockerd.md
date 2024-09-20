@@ -1360,7 +1360,7 @@ you create use these option configurations as defaults.
 
 ```console
 $ docker network create mynet
-$ docker network inspect mynet --format "{{json .Options}}"
+$ docker network inspect mynet --format "\{\{json .Options}}"
 {"com.docker.network.bridge.host_binding_ipv4":"127.0.0.1","com.docker.network.driver.mtu":"1234"}
 ```
 

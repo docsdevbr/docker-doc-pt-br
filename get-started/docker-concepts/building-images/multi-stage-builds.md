@@ -13,7 +13,7 @@ aliases:
  - /guides/docker-concepts/building-images/multi-stage-builds/
 ---
 
-{{< youtube-embed vR185cjwxZ8 >}}
+{ { < youtube-embed vR185cjwxZ8 > } }
 
 ## Explanation
 

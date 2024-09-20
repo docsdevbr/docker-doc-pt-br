@@ -7,7 +7,7 @@ aliases:
 weight: 10
 ---
 
-{{< include "dev-envs-changing.md" >}}
+{ { < include "dev-envs-changing.md" > } }
 
 You can launch a dev environment from a:
 - Git repository
@@ -41,7 +41,7 @@ To get started with Dev Environments, you must also install the following tools 
 >
 > If you have enabled the WSL 2 integration in Docker Desktop for Windows, make sure you have an SSH agent running in your WSL 2 distribution.
 
-{{< accordion title="How to start an SSH agent in WSL 2" >}}
+{ { < accordion title="How to start an SSH agent in WSL 2" > } }
 
 If your WSL 2 distribution doesn't have an `ssh-agent` running, you can append this script at the end of your profile file (that is: ~/.profile, ~/.zshrc, ...).
 
@@ -65,7 +65,7 @@ else
 fi
 ```
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 To launch a dev environment:
 

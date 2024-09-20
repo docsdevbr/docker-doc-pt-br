@@ -7,7 +7,7 @@ aliases:
 weight: 100
 ---
 
-{{< include "compose/merge.md" >}}
+{ { < include "compose/merge.md" > } }
 
 These rules are outlined below.
 
@@ -182,7 +182,7 @@ services:
 
 ### Replace value
 
-{{< introduced compose 2.24.4 "/manuals/compose/release-notes.md#2244" >}}
+{ { < introduced compose 2.24.4 "/manuals/compose/release-notes.md#2244" > } }
 
 While `!reset` can be used to remove a declaration from a Compose file using an override file, `!override` allows you
 to fully replace an attribute, bypassing the standard merge rules. A typical example is to fully replace a resource definition, to rely on a distinct model but using the same name.

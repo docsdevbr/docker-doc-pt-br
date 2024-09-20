@@ -48,8 +48,8 @@ In the following steps, you'll create the network first and then attach the MySQ
 2. Start a MySQL container and attach it to the network. You're also going to define a few environment variables that the
    database will use to initialize the database. To learn more about the MySQL environment variables, see the "Environment Variables" section in the [MySQL Docker Hub listing](https://hub.docker.com/_/mysql/).
 
-   {{< tabs >}}
-   {{< tab name="Mac / Linux / Git Bash" >}}
+   { { < tabs > } }
+   { { < tab name="Mac / Linux / Git Bash" > } }
 
    ```console
    $ docker run -d \
@@ -60,8 +60,8 @@ In the following steps, you'll create the network first and then attach the MySQ
        mysql:8.0
    ```
 
-   {{< /tab >}}
-   {{< tab name="PowerShell" >}}
+   { { < /tab > } }
+   { { < tab name="PowerShell" > } }
 
    ```powershell
    $ docker run -d `
@@ -72,8 +72,8 @@ In the following steps, you'll create the network first and then attach the MySQ
        mysql:8.0
    ```
 
-   {{< /tab >}}
-   {{< tab name="Command Prompt" >}}
+   { { < /tab > } }
+   { { < tab name="Command Prompt" > } }
 
    ```console
    $ docker run -d ^
@@ -84,8 +84,8 @@ In the following steps, you'll create the network first and then attach the MySQ
        mysql:8.0
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
    In the previous command, you can see the `--network-alias` flag. In a later section, you'll learn more about this flag.
 
@@ -207,8 +207,8 @@ You can now start your dev-ready container.
 
 1. Specify each of the previous environment variables, as well as connect the container to your app network. Make sure that you are in the `getting-started-app` directory when you run this command.
 
-   {{< tabs >}}
-   {{< tab name="Mac / Linux" >}}
+   { { < tabs > } }
+   { { < tab name="Mac / Linux" > } }
 
    ```console
    $ docker run -dp 127.0.0.1:3000:3000 \
@@ -222,8 +222,8 @@ You can now start your dev-ready container.
      sh -c "yarn install && yarn run dev"
    ```
 
-   {{< /tab >}}
-   {{< tab name="PowerShell" >}}
+   { { < /tab > } }
+   { { < tab name="PowerShell" > } }
    In Windows, run this command in PowerShell.
 
    ```powershell
@@ -238,8 +238,8 @@ You can now start your dev-ready container.
      sh -c "yarn install && yarn run dev"
    ```
 
-   {{< /tab >}}
-   {{< tab name="Command Prompt" >}}
+   { { < /tab > } }
+   { { < tab name="Command Prompt" > } }
    In Windows, run this command in Command Prompt.
 
    ```console
@@ -254,8 +254,8 @@ You can now start your dev-ready container.
      sh -c "yarn install && yarn run dev"
    ```
 
-   {{< /tab >}}
-   {{< tab name="Git Bash" >}}
+   { { < /tab > } }
+   { { < tab name="Git Bash" > } }
 
    ```console
    $ docker run -dp 127.0.0.1:3000:3000 \
@@ -269,8 +269,8 @@ You can now start your dev-ready container.
      sh -c "yarn install && yarn run dev"
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 2. If you look at the logs for the container (`docker logs -f <container-id>`), you should see a message similar to the following, which indicates it's
    using the mysql database.
@@ -326,4 +326,4 @@ ports, and more. That's a lot to remember and it's certainly making things harde
 In the next section, you'll learn about Docker Compose. With Docker Compose, you can share your application stacks in a
 much easier way and let others spin them up with a single, simple command.
 
-{{< button text="Use Docker Compose" url="08_using_compose.md" >}}
+{ { < button text="Use Docker Compose" url="08_using_compose.md" > } }

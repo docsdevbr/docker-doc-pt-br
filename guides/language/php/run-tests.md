@@ -115,4 +115,4 @@ Related information:
 
 Next, you’ll learn how to set up a CI/CD pipeline using GitHub Actions.
 
-{{< button text="Configure CI/CD" url="configure-ci-cd.md" >}}
+{ { < button text="Configure CI/CD" url="configure-ci-cd.md" > } }

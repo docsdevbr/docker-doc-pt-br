@@ -34,8 +34,8 @@ It's the world’s largest repository of container images with an array of conte
 
 Docker Hub is also where you can go to [change your Docker account settings and carry out administrative tasks](../admin/index.md). If you have a Docker Team or Business subscription, you can also carry out administrative tasks in the [Docker Admin Console](https://admin.docker.com).
 
-{{< tabs >}}
-{{< tab name="What key features are included in Docker Hub?" >}}
+{ { < tabs > } }
+{ { < tab name="What key features are included in Docker Hub?" > } }
 * [Repositories](repos/index.md): Push and pull container images.
 * [Builds](builds/index.md): Automatically build container images from
 GitHub and Bitbucket and push them to Docker Hub.
@@ -43,8 +43,8 @@ GitHub and Bitbucket and push them to Docker Hub.
   to a repository to integrate Docker Hub with other services.
 * [Docker Hub CLI](https://github.com/docker/hub-tool#readme) tool (currently experimental) and an API that allows you to interact with Docker Hub.
   * Browse through the [Docker Hub API](../../reference/api/hub/latest.md) documentation to explore the supported endpoints.
-{{< /tab >}}
-{{< tab name="What administrative tasks can I perform in Docker Hub?" >}}
+{ { < /tab > } }
+{ { < tab name="What administrative tasks can I perform in Docker Hub?" > } }
 * [Create and manage teams and organizations](../admin/organization/orgs.md)
 * [Create a company](../admin/company/new-company.md)
 * [Enforce sign in](../security/for-admins/enforce-sign-in/index.md)
@@ -53,7 +53,7 @@ GitHub and Bitbucket and push them to Docker Hub.
 * [Carry out domain audits](../security/for-admins/domain-audit.md)
 * [Use Image Access Management](../security/for-admins/hardened-desktop/image-access-management.md) to control developers' access to certain types of images
 * [Turn on Registry Access Management](../security/for-admins/hardened-desktop/registry-access-management.md)
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
-{{< grid >}}
+{ { < grid > } }

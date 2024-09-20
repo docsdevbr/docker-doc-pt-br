@@ -59,8 +59,8 @@ connections that use the SAML authentication method. Note that group mapping
 with SSO isn't supported with the Azure AD (OIDC) authentication method.
 Additionally, SCIM isn't required for these configurations.
 
-{{< tabs >}}
-{{< tab name="Okta" >}}
+{ { < tabs > } }
+{ { < tab name="Okta" > } }
 
 The user interface for your IdP may differ slightly from the following steps. You can refer to the [Okta documentation](https://help.okta.com/oie/en-us/content/topics/apps/define-group-attribute-statements.htm) to verify.
 
@@ -79,8 +79,8 @@ To set up group mapping:
 
 The next time you sync your groups with Docker, your users will map to the Docker groups you defined.
 
-{{< /tab >}}
-{{< tab name="Entra ID" >}}
+{ { < /tab > } }
+{ { < tab name="Entra ID" > } }
 
 The user interface for your IdP may differ slightly from the following steps. You can refer to the [Entra ID documentation](https://learn.microsoft.com/en-us/azure/active-directory/app-provisioning/customize-application-attributes) to verify.
 
@@ -101,15 +101,15 @@ To set up group mapping:
 
 The next time you sync your groups with Docker, your users will map to the Docker groups you defined.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Use group mapping with SCIM
 
 The following steps describe how to set up and use group mapping with SCIM. Before you begin, make sure you [set up SCIM](scim.md#enable-scim) first.
 
-{{< tabs >}}
-{{< tab name="Okta" >}}
+{ { < tabs > } }
+{ { < tab name="Okta" > } }
 
 The user interface for your IdP may differ slightly from the following steps. You can refer to the [Okta documentation](https://help.okta.com/en-us/Content/Topics/users-groups-profiles/usgp-enable-group-push.htm) to verify.
 
@@ -137,8 +137,8 @@ To push the groups from this table:
 2. Select the **Push Status** drop-down.
 3. Select **Push Now**.
 
-{{< /tab >}}
-{{< tab name="Entra ID" >}}
+{ { < /tab > } }
+{ { < tab name="Entra ID" > } }
 
 The user interface for your IdP may differ slightly from the following steps. You can refer to the [Entra ID documentation](https://learn.microsoft.com/en-us/azure/active-directory/app-provisioning/customize-application-attributes) to verify.
 
@@ -164,8 +164,8 @@ Next, set up group mapping:
 
 To verify, go to **Monitor > Provisioning logs** to see that your groups were provisioned successfully. In your Docker organization, you can check that the groups were correctly provisioned and the members were added to the appropriate teams.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Once complete, a user who signs in to Docker through SSO is automatically added to the organizations and teams mapped in the IdP.
 

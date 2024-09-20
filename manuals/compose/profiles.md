@@ -6,7 +6,7 @@ desription: How to use profiles with Docker Compose
 keywords: cli, compose, profile, profiles reference
 ---
 
-{{< include "compose/profiles.md" >}}
+{ { < include "compose/profiles.md" > } }
 
 ## Assigning profiles to services
 

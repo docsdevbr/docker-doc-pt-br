@@ -7,7 +7,7 @@ aliases:
 weight: 20
 ---
 
-{{< include "compose/services.md" >}}
+{ { < include "compose/services.md" > } }
 
 A Compose file must declare a `services` top-level element as a map whose keys are string representations of service names,
 and whose values are service definitions. A service  definition contains the configuration that is applied to each
@@ -89,7 +89,7 @@ annotations:
 
 ### attach
 
-{{< introduced compose 2.20.0 "/manuals/compose/release-notes.md#2200" >}}
+{ { < introduced compose 2.20.0 "/manuals/compose/release-notes.md#2200" > } }
 
 When `attach` is defined and set to `false` Compose does not collect service logs,
 until you explicitly request it to.
@@ -231,7 +231,7 @@ cap_drop:
 
 ### cgroup
 
-{{< introduced compose 2.15.0 "/manuals/compose/release-notes.md#2150" >}}
+{ { < introduced compose 2.15.0 "/manuals/compose/release-notes.md#2150" > } }
 
 `cgroup` specifies the cgroup namespace to join. When unset, it is the container runtime's decision to
 select which cgroup namespace to use, if supported.
@@ -399,7 +399,7 @@ configs:
 
 ### depends_on
 
-{{< include "compose/services-depends-on.md" >}}
+{ { < include "compose/services-depends-on.md" > } }
 
 #### Short syntax
 
@@ -490,7 +490,7 @@ Compose guarantees dependency services marked with
 
 ### develop
 
-{{< introduced compose 2.22.0 "/manuals/compose/release-notes.md#2220" >}}
+{ { < introduced compose 2.22.0 "/manuals/compose/release-notes.md#2220" > } }
 
 `develop` specifies the development configuration for maintaining a container in sync with source, as defined in the [Development Section](develop.md).
 
@@ -561,7 +561,7 @@ dns_search:
 
 ### driver_opts
 
-{{< introduced compose 2.27.1 "/manuals/compose/release-notes.md#2271" >}}
+{ { < introduced compose 2.27.1 "/manuals/compose/release-notes.md#2271" > } }
 
 `driver_opts` specifies a list of options as key-value pairs to pass to the driver. These options are
 driver-dependent.
@@ -612,7 +612,7 @@ i.e. overridden to be empty.
 
 ### env_file
 
-{{< include "compose/services-env-file.md" >}}
+{ { < include "compose/services-env-file.md" > } }
 
 ```yml
 env_file: .env
@@ -685,7 +685,7 @@ VAR="quoted"
 
 ### environment
 
-{{< include "compose/services-environment.md" >}}
+{ { < include "compose/services-environment.md" > } }
 
 Environment variables can be declared by a single key (no value to equals sign). In this case Compose
 relies on you to resolve the value. If the value is not resolved, the variable
@@ -1003,7 +1003,7 @@ been the case if `group_add` were not declared.
 
 ### healthcheck
 
-{{< include "compose/services-healthcheck.md" >}}
+{ { < include "compose/services-healthcheck.md" > } }
 
 For more information on `HEALTHCHECK`, see the [Dockerfile reference](../dockerfile.md#healthcheck).
 
@@ -1234,7 +1234,7 @@ Compose file containing both attributes.
 
 ### networks
 
-{{< include "compose/services-networks.md" >}}
+{ { < include "compose/services-networks.md" > } }
 
 ```yml
 services:
@@ -1352,7 +1352,7 @@ networks:
 
 #### mac_address
 
-{{< introduced compose 2.23.2 "/manuals/compose/release-notes.md#2232" >}}
+{ { < introduced compose 2.23.2 "/manuals/compose/release-notes.md#2232" > } }
 
 `mac_address` sets the MAC address used by the service container when connecting to this particular network.
 
@@ -1423,7 +1423,7 @@ platform: linux/arm64/v8
 
 ### ports
 
-{{< include "compose/services-ports.md" >}}
+{ { < include "compose/services-ports.md" > } }
 
 > [!NOTE]
 >
@@ -1587,7 +1587,7 @@ When both are set, `scale` must be consistent with the `replicas` attribute in t
 
 ### secrets
 
-{{< include "compose/services-secrets.md" >}}
+{ { < include "compose/services-secrets.md" > } }
 
 Two different syntax variants are supported; the short syntax and the long syntax. Long and short syntax for secrets may be used in the same Compose file.
 
@@ -1780,7 +1780,7 @@ userns_mode: "host"
 
 ### uts
 
-{{< introduced compose 2.15.1 "/manuals/compose/release-notes.md#2151" >}}
+{ { < introduced compose 2.15.1 "/manuals/compose/release-notes.md#2151" > } }
 
 `uts` configures the UTS namespace mode set for the service container. When unspecified
 it is the runtime's decision to assign a UTS namespace, if supported. Available values are:
@@ -1793,7 +1793,7 @@ it is the runtime's decision to assign a UTS namespace, if supported. Available 
 
 ### volumes
 
-{{< include "compose/services-volumes.md" >}}
+{ { < include "compose/services-volumes.md" > } }
 
 The following example shows a named volume (`db-data`) being used by the `backend` service,
 and a bind mount defined for a single service.

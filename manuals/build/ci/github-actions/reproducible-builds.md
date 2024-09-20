@@ -19,8 +19,8 @@ use the built-in `env` property on the build step.
 
 The following example sets the `SOURCE_DATE_EPOCH` variable to 0, Unix epoch.
 
-{{< tabs group="action" >}}
-{{< tab name="`docker/build-push-action`" >}}
+{ { < tabs group="action" > } }
+{ { < tab name="`docker/build-push-action`" > } }
 
 ```yaml
 name: ci
@@ -43,8 +43,8 @@ jobs:
           SOURCE_DATE_EPOCH: 0
 ```
 
-{{< /tab >}}
-{{< tab name="`docker/bake-action`" >}}
+{ { < /tab > } }
+{ { < tab name="`docker/bake-action`" > } }
 
 ```yaml
 name: ci
@@ -68,15 +68,15 @@ jobs:
           SOURCE_DATE_EPOCH: 0
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Git commit timestamps
 
 The following example sets `SOURCE_DATE_EPOCH` to the Git commit timestamp.
 
-{{< tabs group="action" >}}
-{{< tab name="`docker/build-push-action`" >}}
+{ { < tabs group="action" > } }
+{ { < tab name="`docker/build-push-action`" > } }
 
 ```yaml
 name: ci
@@ -99,11 +99,11 @@ jobs:
         with:
           tags: user/app:latest
         env:
-          SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
+          SOURCE_DATE_EPOCH: $\{\{ env.TIMESTAMP }}
 ```
 
-{{< /tab >}}
-{{< tab name="`docker/bake-action`" >}}
+{ { < /tab > } }
+{ { < tab name="`docker/bake-action`" > } }
 
 ```yaml
 name: ci
@@ -127,11 +127,11 @@ jobs:
       - name: Build
         uses: docker/bake-action@v5
         env:
-          SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
+          SOURCE_DATE_EPOCH: $\{\{ env.TIMESTAMP }}
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Additional information
 

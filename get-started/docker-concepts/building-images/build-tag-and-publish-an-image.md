@@ -12,7 +12,7 @@ aliases:
  - /guides/docker-concepts/building-images/build-tag-and-publish-an-image/
 ---
 
-{{< youtube-embed chiiGLlYRlY >}}
+{ { < youtube-embed chiiGLlYRlY > } }
 
 ## Explanation
 
@@ -123,23 +123,23 @@ In this hands-on guide, you will build a simple image using a provided Dockerfil
 
    If you have Git, you can clone the repository for the sample application. Otherwise, you can download the sample application. Choose one of the following options.
 
-   {{< tabs >}}
-   {{< tab name="Clone with git" >}}
+   { { < tabs > } }
+   { { < tab name="Clone with git" > } }
 
    Use the following command in a terminal to clone the sample application repository.
 
    ```console
    $ git clone https://github.com/docker/getting-started-todo-app
    ```
-   {{< /tab >}}
-   {{< tab name="Download" >}}
+   { { < /tab > } }
+   { { < tab name="Download" > } }
 
    Download the source and extract it.
 
-   {{< button url="https://github.com/docker/getting-started-todo-app/raw/cd61f824da7a614a8298db503eed6630eeee33a3/app.zip" text="Download the source" >}}
+   { { < button url="https://github.com/docker/getting-started-todo-app/raw/cd61f824da7a614a8298db503eed6630eeee33a3/app.zip" text="Download the source" > } }
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 2. [Download and install](https://www.docker.com/products/docker-desktop/) Docker Desktop.
 
@@ -229,6 +229,6 @@ To learn more about building, tagging, and publishing images, visit the followin
 
 Now that you have learned about building and publishing images, it's time to learn how to speed up the build process using the Docker build cache.
 
-{{< button text="Using the build cache" url="using-the-build-cache" >}}
+{ { < button text="Using the build cache" url="using-the-build-cache" > } }
 
 

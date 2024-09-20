@@ -63,8 +63,8 @@ You can also configure attributes to override default values, such as default te
 
 The user interface for your IdP may differ slightly from the following steps. You can refer to the documentation for your IdP to verify.
 
-{{< tabs >}}
-{{< tab name="Okta" >}}
+{ { < tabs > } }
+{ { < tab name="Okta" > } }
 
 See [More resources](#more-resources) for a video overview on how to set up SSO with SAML in Okta.
 
@@ -90,8 +90,8 @@ See [More resources](#more-resources) for a video overview on how to set up SSO 
 9. After you create the app, go to your app and select **View SAML setup instructions**.
 10. Here you can find the **SAML Sign-in URL** and the **x509 Certificate**. Open the certificate file in a text editor and paste the contents of the file in the **x509 Certificate** field in Docker Hub or Admin Console. Then, copy the value of the **SAML Sign-in URL** and paste it into the corresponding field in Docker Hub or Admin Console.
 
-{{< /tab >}}
-{{< tab name="Entra ID SAML 2.0" >}}
+{ { < /tab > } }
+{ { < tab name="Entra ID SAML 2.0" > } }
 
 > [!TIP]
 >
@@ -114,8 +114,8 @@ See [More resources](#more-resources) for a video overview on how to set up SSO 
 9. Open the certificate file in a text editor and paste the contents of the file in the **x509 Certificate** field in Docker Hub or Admin Console.
 10. From the section **Set up Docker**, copy **Login URL** and paste it into the **SAML Sign-in URL** field in Docker Hub or Admin Console.
 
-{{< /tab >}}
-{{< tab name="Azure Connect (OIDC)" >}}
+{ { < /tab > } }
+{ { < tab name="Azure Connect (OIDC)" > } }
 
 See [More resources](#more-resources) for a video overview on how to set up SSO with Azure Connect (OIDC).
 
@@ -161,8 +161,8 @@ In the Docker console, paste the following values obtained in the previous steps
 - **Client Secret**
 - **Azure AD Domain**
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## More resources
 

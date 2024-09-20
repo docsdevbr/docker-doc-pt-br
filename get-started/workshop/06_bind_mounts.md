@@ -58,29 +58,29 @@ filesystem you can share with containers. For details about accessing the settin
 3. Run the following command to start `bash` in an `ubuntu` container with a
    bind mount.
 
-   {{< tabs >}}
-   {{< tab name="Mac / Linux / PowerShell" >}}
+   { { < tabs > } }
+   { { < tab name="Mac / Linux / PowerShell" > } }
 
    ```console
    $ docker run -it --mount type=bind,src="$(pwd)",target=/src ubuntu bash
    ```
 
-   {{< /tab >}}
-   {{< tab name="Command Prompt" >}}
+   { { < /tab > } }
+   { { < tab name="Command Prompt" > } }
 
    ```console
    $ docker run -it --mount "type=bind,src=%cd%,target=/src" ubuntu bash
    ```
 
-   {{< /tab >}}
-   {{< tab name="Git Bash" >}}
+   { { < /tab > } }
+   { { < tab name="Git Bash" > } }
 
    ```console
    $ docker run -it --mount type=bind,src="/$(pwd)",target=/src ubuntu bash
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
    The `--mount type=bind` option tells Docker to create a bind mount, where `src` is the
    current working directory on your host machine (`getting-started-app`), and
@@ -161,8 +161,8 @@ mount that does the following:
 
 You can use the CLI or Docker Desktop to run your container with a bind mount.
 
-{{< tabs >}}
-{{< tab name="Mac / Linux CLI" >}}
+{ { < tabs > } }
+{ { < tab name="Mac / Linux CLI" > } }
 
 1. Make sure you don't have any `getting-started` containers currently running.
 
@@ -207,8 +207,8 @@ You can use the CLI or Docker Desktop to run your container with a bind mount.
 
    When you're done watching the logs, exit out by hitting `Ctrl`+`C`.
 
-{{< /tab >}}
-{{< tab name="PowerShell CLI" >}}
+{ { < /tab > } }
+{ { < tab name="PowerShell CLI" > } }
 
 1. Make sure you don't have any `getting-started` containers currently running.
 
@@ -253,8 +253,8 @@ You can use the CLI or Docker Desktop to run your container with a bind mount.
 
    When you're done watching the logs, exit out by hitting `Ctrl`+`C`.
 
-{{< /tab >}}
-{{< tab name="Command Prompt CLI" >}}
+{ { < /tab > } }
+{ { < tab name="Command Prompt CLI" > } }
 
 1. Make sure you don't have any `getting-started` containers currently running.
 
@@ -299,8 +299,8 @@ You can use the CLI or Docker Desktop to run your container with a bind mount.
 
    When you're done watching the logs, exit out by hitting `Ctrl`+`C`.
 
-{{< /tab >}}
-{{< tab name="Git Bash CLI" >}}
+{ { < /tab > } }
+{ { < tab name="Git Bash CLI" > } }
 
 1. Make sure you don't have any `getting-started` containers currently running.
 
@@ -345,8 +345,8 @@ You can use the CLI or Docker Desktop to run your container with a bind mount.
 
    When you're done watching the logs, exit out by hitting `Ctrl`+`C`.
 
-{{< /tab >}}
-{{< tab name="Docker Desktop" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Desktop" > } }
 
 Make sure you don't have any `getting-started` containers currently running.
 
@@ -384,8 +384,8 @@ Using sqlite database at /etc/todos/todo.db
 Listening on port 3000
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Develop your app with the development container
 
@@ -438,4 +438,4 @@ simplicity, you'll keep using a relational database and switch your application
 to use MySQL. But, how should you run MySQL? How do you allow the containers to
 talk to each other? You'll learn about that in the next section.
 
-{{< button text="Multi container apps" url="07_multi_container.md" >}}
+{ { < button text="Multi container apps" url="07_multi_container.md" > } }

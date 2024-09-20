@@ -1166,10 +1166,10 @@ $ docker run --name=test -d \
     --health-cmd='stat /etc/passwd || exit 1' \
     --health-interval=2s \
     busybox sleep 1d
-$ sleep 2; docker inspect --format='{{.State.Health.Status}}' test
+$ sleep 2; docker inspect --format='\{\{\.State.Health.Status}}' test
 healthy
 $ docker exec test rm /etc/passwd
-$ sleep 2; docker inspect --format='{{json .State.Health}}' test
+$ sleep 2; docker inspect --format='\{\{json .State.Health}}' test
 {
   "Status": "unhealthy",
   "FailingStreak": 3,

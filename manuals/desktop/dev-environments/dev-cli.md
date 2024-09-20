@@ -4,11 +4,11 @@ keywords: Dev Environments, share, docker dev, Docker Desktop
 title: Use the docker dev CLI plugin
 ---
 
-{{< include "dev-envs-changing.md" >}}
+{ { < include "dev-envs-changing.md" > } }
 
 Use the new `docker dev` CLI plugin to get the full Dev Environments experience from the terminal in addition to the Dashboard.
 
-It is available with [Docker Desktop 4.13.0 and later](../release-notes.md). 
+It is available with [Docker Desktop 4.13.0 and later](../release-notes.md).
 
 ### Usage
 

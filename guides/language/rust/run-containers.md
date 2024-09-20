@@ -202,4 +202,4 @@ Related information:
 
 In the next section, you’ll learn how to run a database in a container and connect it to a Rust application.
 
-{{< button text="How to develop your application" url="develop.md" >}}
+{ { < button text="How to develop your application" url="develop.md" > } }

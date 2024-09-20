@@ -34,18 +34,18 @@ The org owner can also add additional org owners to help them manage users, team
 
 ## Create a team
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
 1. Go to **Organizations** in Docker Hub, and select your organization.
 2. Select the **Teams** tab and then select **Create Team**.
 3. Fill out your team's information and select **Create**.
 4. [Add members to your team](members.md#add-a-member-to-a-team).
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
 1. In Admin Console, select your organization.
 2. In the **User management** section, select **Teams**.
@@ -53,8 +53,8 @@ The org owner can also add additional org owners to help them manage users, team
 4. Fill out your team's information and select **Create**.
 5. [Add members to your team](members.md#add-a-member-to-a-team).
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Configure repository permissions for a team
 
@@ -117,8 +117,8 @@ To view a team's permissions across all repositories:
 
 Organization owners can delete a team in Docker Hub or Admin Console. When you remove a team from your organization, this action revokes the members' access to the team's permitted resources. It won't remove users from other teams that they belong to, nor will it delete any resources.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
 1. Go to **Organizations** in Docker Hub, and select your organization.
 2. Select the **Teams** tab.
@@ -127,10 +127,10 @@ Organization owners can delete a team in Docker Hub or Admin Console. When you r
 5. Select **Delete Team**.
 6. Review the confirmation message, then select **Delete**.
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
 1. In Admin Console, select your organization.
 2. In the **User management** section, select **Teams**.
@@ -138,8 +138,8 @@ Organization owners can delete a team in Docker Hub or Admin Console. When you r
 4. Select **Delete team**.
 5. Review the confirmation message, then select **Delete**.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## More resources
 

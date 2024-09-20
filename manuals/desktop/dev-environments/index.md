@@ -6,11 +6,11 @@ linkTitle: Dev Environments (Beta)
 weight: 40
 ---
 
-{{< include "dev-envs-changing.md" >}}
+{ { < include "dev-envs-changing.md" > } }
 
-{{% experimental title="Beta" %}}
+{ { % experimental title="Beta" \%\}\}
 The Dev Environments feature is currently in [Beta](../../release-lifecycle.md#beta).
-{{% /experimental %}}
+{ { % /experimental \%\}\}
 
 Dev Environments let you create a configurable developer environment with all the code and tools you need to quickly get up and running.
 

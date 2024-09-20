@@ -294,7 +294,7 @@ name as its argument. The template will be rendered when container is created.
     <html lang="en">
       <head><title>Hello Docker</title></head>
       <body>
-        <p>Hello {{ env "HELLO" }}! I'm service {{ .Service.Name }}.</p>
+        <p>Hello \{\{ env "HELLO" }}! I'm service \{\{\.Service.Name }}.</p>
       </body>
     </html>
     ```

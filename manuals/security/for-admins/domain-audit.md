@@ -42,18 +42,18 @@ Before you audit your domains, review the following required prerequisites:
 
 ## Audit your domains for uncaptured users
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-domain-audit product="hub" %}}
+{ { % admin-domain-audit product="hub" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-domain-audit product="admin" %}}
+{ { % admin-domain-audit product="admin" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 

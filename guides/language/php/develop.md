@@ -328,8 +328,8 @@ In the `Dockerfile`, you'll need to update the following:
 
 The following is the `Dockerfile` before and after the changes.
 
-{{< tabs >}}
-{{< tab name="Before" >}}
+{ { < tabs > } }
+{ { < tab name="Before" > } }
 
 ```dockerfile
 # syntax=docker/dockerfile:1
@@ -348,8 +348,8 @@ COPY --from=deps app/vendor/ /var/www/html/vendor
 COPY ./src /var/www/html
 USER www-data
 ```
-{{< /tab >}}
-{{< tab name="After" >}}
+{ { < /tab > } }
+{ { < tab name="After" > } }
 
 ```dockerfile
 # syntax=docker/dockerfile:1
@@ -383,8 +383,8 @@ COPY --from=prod-deps app/vendor/ /var/www/html/vendor
 USER www-data
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 
 Update your `compose.yaml` file by adding an instruction to target the
@@ -430,4 +430,4 @@ Related information:
 
 In the next section, you'll learn how to run unit tests using Docker.
 
-{{< button text="Run your tests" url="run-tests.md" >}}
+{ { < button text="Run your tests" url="run-tests.md" > } }

@@ -147,7 +147,7 @@ in BuildKit as an example. Feel free to include your own CNI configuration.
 ```dockerfile
 # syntax=docker/dockerfile:1
 
-ARG BUILDKIT_VERSION=v{{% param "buildkit_version" %}}
+ARG BUILDKIT_VERSION=v\{\{\% param "buildkit_version" \%\}\}
 ARG CNI_VERSION=v1.0.1
 
 FROM --platform=$BUILDPLATFORM alpine AS cni-plugins

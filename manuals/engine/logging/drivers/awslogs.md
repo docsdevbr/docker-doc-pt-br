@@ -262,8 +262,8 @@ INFO Another message was logged
 ### tag
 
 Specify `tag` as an alternative to the `awslogs-stream` option. `tag` interprets
-Go template markup, such as `{{.ID}}`, `{{.FullID}}`
-or `{{.Name}}` `docker.{{.ID}}`. See
+Go template markup, such as `\{\{\.ID}}`, `\{\{\.FullID}}`
+or `\{\{\.Name}}` `docker.\{\{\.ID}}`. See
 the [tag option documentation](../log_tags.md) for details on supported template
 substitutions.
 
@@ -275,13 +275,13 @@ If not specified, the container ID is used as the log stream.
 > [!NOTE]
 >
 > The CloudWatch log API doesn't support `:` in the log name. This can cause
-> some issues when using the `{{ .ImageName }}` as a tag,
+> some issues when using the `\{\{\.ImageName }}` as a tag,
 > since a Docker image has a format of `IMAGE:TAG`, such as `alpine:latest`.
 > Template markup can be used to get the proper format. To get the image name
 > and the first 12 characters of the container ID, you can use:
 >
 > ```bash
-> --log-opt tag='{{ with split .ImageName ":" }}{{join . "_"}}{{end}}-{{.ID}}'
+> --log-opt tag='\{\{ with split .ImageName ":" }}\{\{join . "_"}}\{\{end}}-\{\{\.ID}}'
 > ```
 >
 > the output is something like: `alpine_latest-bf0072049c76`

@@ -45,12 +45,12 @@ various APIs, CLIs, drivers and specifications, and file formats.
 
 ## File formats
 
-{{< grid items="grid_files" >}}
+{ { < grid items="grid_files" > } }
 
 ## Command-line interfaces (CLIs)
 
-{{< grid items="grid_clis" >}}
+{ { < grid items="grid_clis" > } }
 
 ## Application programming interfaces (APIs)
 
-{{< grid items="grid_apis" >}}
+{ { < grid items="grid_apis" > } }

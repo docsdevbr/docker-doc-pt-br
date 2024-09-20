@@ -35,8 +35,8 @@ Now that you have an application, you can create the necessary Docker assets to
 containerize your application. You can use Docker Desktop's built-in Docker Init
 feature to help streamline the process, or you can manually create the assets.
 
-{{< tabs >}}
-{{< tab name="Use Docker Init" >}}
+{ { < tabs > } }
+{ { < tab name="Use Docker Init" > } }
 
 Inside the `python-docker-example` directory, run the `docker init` command. `docker
 init` provides some default configuration, but you'll need to answer a few
@@ -121,8 +121,8 @@ env.bak/
 venv.bak/
 ```
 
-{{< /tab >}}
-{{< tab name="Manually create assets" >}}
+{ { < /tab > } }
+{ { < tab name="Manually create assets" > } }
 
 If you don't have Docker Desktop installed or prefer creating the assets
 manually, you can create the following files in your project directory.
@@ -300,8 +300,8 @@ env.bak/
 venv.bak/
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 You should now have the following contents in your `python-docker-example`
 directory.
@@ -374,4 +374,4 @@ Related information:
 In the next section, you'll learn how you can develop your application using
 containers.
 
-{{< button text="Develop your application" url="develop.md" >}}
+{ { < button text="Develop your application" url="develop.md" > } }

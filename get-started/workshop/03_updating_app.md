@@ -49,8 +49,8 @@ The error occurred because you aren't able to start the new container while your
 
 To remove a container, you first need to stop it. Once it has stopped, you can remove it. You can remove the old container using the CLI or Docker Desktop's graphical interface. Choose the option that you're most comfortable with.
 
-{{< tabs >}}
-{{< tab name="CLI" >}}
+{ { < tabs > } }
+{ { < tab name="CLI" > } }
 
 ### Remove a container using the CLI
 
@@ -76,8 +76,8 @@ To remove a container, you first need to stop it. Once it has stopped, you can r
 >
 >You can stop and remove a container in a single command by adding the `force` flag to the `docker rm` command. For example: `docker rm -f <the-container-id>`
 
-{{< /tab >}}
-{{< tab name="Docker Desktop" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Desktop" > } }
 
 ### Remove a container using Docker Desktop
 
@@ -85,8 +85,8 @@ To remove a container, you first need to stop it. Once it has stopped, you can r
 2. Select the trash can icon under the **Actions** column for the container that you want to delete.
 3. In the confirmation dialog, select **Delete forever**.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Start the updated app container
 
@@ -109,4 +109,4 @@ Related information:
 
 Next, you'll learn how to share images with others.
 
-{{< button text="Share the application" url="04_sharing_app.md" >}}
+{ { < button text="Share the application" url="04_sharing_app.md" > } }

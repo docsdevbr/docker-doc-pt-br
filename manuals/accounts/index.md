@@ -31,4 +31,4 @@ You can create a Docker account to secure a Docker ID, which is a username for y
 
 In this section, explore how you can create, manage, or update your account.
 
-{{< grid >}}
+{ { < grid > } }

@@ -13,7 +13,7 @@ image for a development environment:
 ```hcl
 target "app-dev" {
   args = {
-    GO_VERSION = "{{% param example_go_version %}}"
+    GO_VERSION = "\{\{\% param example_go_version \%\}\}"
   }
   tags = ["docker.io/username/myapp:dev"]
   labels = {
@@ -46,7 +46,7 @@ arguments:
 ```hcl
 target "_common" {
   args = {
-    GO_VERSION = "{{% param example_go_version %}}"
+    GO_VERSION = "\{\{\% param example_go_version \%\}\}"
     BUILDKIT_CONTEXT_KEEP_GIT_DIR = 1
   }
 }
@@ -113,7 +113,7 @@ attributes from both the `app-dev` and `_common` targets.
 ```hcl
 target "_common" {
   args = {
-    GO_VERSION = "{{% param example_go_version %}}"
+    GO_VERSION = "\{\{\% param example_go_version \%\}\}"
     BUILDKIT_CONTEXT_KEEP_GIT_DIR = 1
   }
 }

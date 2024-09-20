@@ -68,8 +68,8 @@ GPU support may vary. You can use the following guidelines to help you choose th
 
 Choose one of the following options for your LLM service.
 
-{{< tabs >}}
-{{< tab name="Run Ollama in a container" >}}
+{ { < tabs > } }
+{ { < tab name="Run Ollama in a container" > } }
 
 When running Ollama in a container, you should have a CUDA-supported GPU. While you can run Ollama in a container without a supported GPU, the performance may not be acceptable. Only Linux and Windows 11 support GPU access to containers.
 
@@ -106,8 +106,8 @@ To run Ollama in a container and provide GPU access:
 
 Pulling an Ollama model can take several minutes.
 
-{{< /tab >}}
-{{< tab name="Run Ollama outside of a container" >}}
+{ { < /tab > } }
+{ { < tab name="Run Ollama outside of a container" > } }
 
 To run Ollama outside of a container:
 
@@ -126,8 +126,8 @@ To run Ollama outside of a container:
    + OLLAMA=<your-url>
    ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Run your RAG application
 

@@ -26,7 +26,7 @@ This page contains information about general system requirements, supported plat
 >
 >This means images and containers deployed on the Linux Docker Engine (before installation) are not available in Docker Desktop for Linux.
 >
-> {{< accordion title=" What is the difference between Docker Desktop for Linux and Docker Engine?" >}}
+> { { < accordion title=" What is the difference between Docker Desktop for Linux and Docker Engine?" > } }
 
 > [!IMPORTANT]
 >
@@ -109,7 +109,7 @@ desktop-linux
 Current context is now "desktop-linux"
 ```
 Refer to the [Docker Context documentation](../../../engine/manage-resources/contexts.md) for more details.
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ## Supported platforms
 

@@ -15,7 +15,7 @@ For usage, see the [Dockerfile frontend syntax](frontend.md) page.
 
 ## 1.9.0
 
-{{< release-date date="2024-07-11" >}}
+{ { < release-date date="2024-07-11" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/moby/buildkit/releases/tag/dockerfile%2F1.9.0).
@@ -38,7 +38,7 @@ The full release note for this release is available
 
 ## 1.8.1
 
-{{< release-date date="2024-06-18" >}}
+{ { < release-date date="2024-06-18" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/moby/buildkit/releases/tag/dockerfile%2F1.8.1).
@@ -55,7 +55,7 @@ The full release note for this release is available
 
 ## 1.8.0
 
-{{< release-date date="2024-06-11" >}}
+{ { < release-date date="2024-06-11" > } }
 
 The full release note for this release is available
 [on GitHub](https://github.com/moby/buildkit/releases/tag/dockerfile%2F1.8.0).
@@ -74,7 +74,7 @@ The full release note for this release is available
 
 ## 1.7.0
 
-{{< release-date date="2024-03-06" >}}
+{ { < release-date date="2024-03-06" > } }
 
 ### Stable
 
@@ -113,7 +113,7 @@ The full release note for this release is available
 
 ## 1.6.0
 
-{{< release-date date="2023-06-13" >}}
+{ { < release-date date="2023-06-13" > } }
 
 ### New
 
@@ -137,7 +137,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.5.2
 
-{{< release-date date="2023-02-14" >}}
+{ { < release-date date="2023-02-14" > } }
 
 ### Bug fixes and enhancements
 
@@ -147,7 +147,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.5.1
 
-{{< release-date date="2023-01-18" >}}
+{ { < release-date date="2023-01-18" > } }
 
 ### Bug fixes and enhancements
 
@@ -155,9 +155,9 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.5.0 (labs)
 
-{{< release-date date="2023-01-10" >}}
+{ { < release-date date="2023-01-10" > } }
 
-{{< include "dockerfile-labs-channel.md" >}}
+{ { < include "dockerfile-labs-channel.md" > } }
 
 ### New
 
@@ -166,7 +166,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.5.0
 
-{{< release-date date="2023-01-10" >}}
+{ { < release-date date="2023-01-10" > } }
 
 ### New
 
@@ -187,7 +187,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.4.3
 
-{{< release-date date="2022-08-23" >}}
+{ { < release-date date="2022-08-23" > } }
 
 ### Bug fixes and enhancements
 
@@ -198,7 +198,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.4.2
 
-{{< release-date date="2022-05-06" >}}
+{ { < release-date date="2022-05-06" > } }
 
 ### Bug fixes and enhancements
 
@@ -207,7 +207,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.4.1
 
-{{< release-date date="2022-04-08" >}}
+{ { < release-date date="2022-04-08" > } }
 
 ### Bug fixes and enhancements
 
@@ -216,7 +216,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.4.0
 
-{{< release-date date="2022-03-09" >}}
+{ { < release-date date="2022-03-09" > } }
 
 ### New
 
@@ -241,7 +241,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.3.1
 
-{{< release-date date="2021-10-04" >}}
+{ { < release-date date="2021-10-04" > } }
 
 ### Bug fixes and enhancements
 
@@ -249,9 +249,9 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.3.0 (labs)
 
-{{< release-date date="2021-07-16" >}}
+{ { < release-date date="2021-07-16" > } }
 
-{{< include "dockerfile-labs-channel.md" >}}
+{ { < include "dockerfile-labs-channel.md" > } }
 
 ### New
 
@@ -260,7 +260,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.3.0
 
-{{< release-date date="2021-07-16" >}}
+{ { < release-date date="2021-07-16" > } }
 
 ### New
 
@@ -280,9 +280,9 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.2.1 (labs)
 
-{{< release-date date="2020-12-12" >}}
+{ { < release-date date="2020-12-12" > } }
 
-{{< include "dockerfile-labs-channel.md" >}}
+{ { < include "dockerfile-labs-channel.md" > } }
 
 ### Bug fixes and enhancements
 
@@ -292,7 +292,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.2.1
 
-{{< release-date date="2020-12-12" >}}
+{ { < release-date date="2020-12-12" > } }
 
 ### Bug fixes and enhancements
 
@@ -301,9 +301,9 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.2.0 (labs)
 
-{{< release-date date="2020-12-03" >}}
+{ { < release-date date="2020-12-03" > } }
 
-{{< include "dockerfile-labs-channel.md" >}}
+{ { < include "dockerfile-labs-channel.md" > } }
 
 ### Bug fixes and enhancements
 
@@ -311,7 +311,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.2.0
 
-{{< release-date date="2020-12-03" >}}
+{ { < release-date date="2020-12-03" > } }
 
 ### New
 
@@ -330,7 +330,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.1.7
 
-{{< release-date date="2020-04-18" >}}
+{ { < release-date date="2020-04-18" > } }
 
 ### Bug fixes and enhancements
 
@@ -338,9 +338,9 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.1.2 (experimental)
 
-{{< release-date date="2019-07-31" >}}
+{ { < release-date date="2019-07-31" > } }
 
-{{< include "dockerfile-labs-channel.md" >}}
+{ { < include "dockerfile-labs-channel.md" > } }
 
 ### Bug fixes and enhancements
 
@@ -352,7 +352,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.1.2
 
-{{< release-date date="2019-07-31" >}}
+{ { < release-date date="2019-07-31" > } }
 
 ### Bug fixes and enhancements
 
@@ -362,7 +362,7 @@ The following features have graduated from the labs channel to stable:
 
 ## 1.1.0
 
-{{< release-date date="2019-04-27" >}}
+{ { < release-date date="2019-04-27" > } }
 
 ### New
 

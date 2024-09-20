@@ -26,7 +26,7 @@ and another where the binary gets copied from the first stage into the next stag
 
 ```dockerfile
 # syntax=docker/dockerfile:1
-FROM golang:{{% param "example_go_version" %}}
+FROM golang:\{\{\% param "example_go_version" \%\}\}
 WORKDIR /src
 COPY <<EOF ./main.go
 package main
@@ -71,7 +71,7 @@ Dockerfile are re-ordered later, the `COPY` doesn't break.
 
 ```dockerfile
 # syntax=docker/dockerfile:1
-FROM golang:{{% param "example_go_version" %}} AS build
+FROM golang:\{\{\% param "example_go_version" \%\}\} AS build
 WORKDIR /src
 COPY <<EOF /src/main.go
 package main

@@ -29,15 +29,15 @@ To pass a secret to a build, use the [`docker build --secret`
 flag](../../../reference/cli/docker/buildx/build.md#secret), or the
 equivalent options for [Bake](../bake/reference.md#targetsecret).
 
-{{< tabs >}}
-{{< tab name="CLI" >}}
+{ { < tabs > } }
+{ { < tab name="CLI" > } }
 
 ```console
 $ docker build --secret id=mytoken,src=$HOME/.aws/credentials .
 ```
 
-{{< /tab >}}
-{{< tab name="Bake" >}}
+{ { < /tab > } }
+{ { < tab name="Bake" > } }
 
 ```hcl
 variable "HOME" {
@@ -51,8 +51,8 @@ target "default" {
 }
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Sources
 

@@ -96,7 +96,7 @@ You can install Docker Engine in different ways, depending on your needs:
 - In testing and development environments, you can use automated
   [convenience scripts](#install-using-the-convenience-script) to install Docker.
 
-### Install using the rpm repository {#install-using-the-repository}
+### Install using the rpm repository { #install-using-the-repository }
 
 Before you install Docker Engine for the first time on a new host machine, you
 need to set up the Docker repository. Afterward, you can install and update
@@ -107,15 +107,15 @@ Docker from the repository.
 Set up the repository.
 
 ```console
-$ sudo zypper addrepo {{% param "download-url-base" %}}/docker-ce.repo
+$ sudo zypper addrepo \{\{\% param "download-url-base" \%\}\}/docker-ce.repo
 ```
 
 #### Install Docker Engine
 
 1. Install Docker Engine, containerd, and Docker Compose:
 
-   {{< tabs >}}
-   {{< tab name="Latest" >}}
+   { { < tabs > } }
+   { { < tab name="Latest" > } }
 
    To install the latest version, run:
 
@@ -129,8 +129,8 @@ $ sudo zypper addrepo {{% param "download-url-base" %}}/docker-ce.repo
    This command installs Docker, but it doesn't start Docker. It also creates a
    `docker` group, however, it doesn't add any users to the group by default.
 
-   {{< /tab >}}
-   {{< tab name="Specific version" >}}
+   { { < /tab > } }
+   { { < tab name="Specific version" > } }
 
    To install a specific version, start by listing the available versions in
    the repository:
@@ -159,8 +159,8 @@ $ sudo zypper addrepo {{% param "download-url-base" %}}/docker-ce.repo
    This command installs Docker, but it doesn't start Docker. It also creates a
    `docker` group, however, it doesn't add any users to the group by default.
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 2. Start Docker.
 
@@ -180,7 +180,7 @@ $ sudo zypper addrepo {{% param "download-url-base" %}}/docker-ce.repo
 
 You have now successfully installed and started Docker Engine.
 
-{{< include "root-errors.md" >}}
+{ { < include "root-errors.md" > } }
 
 #### Upgrade Docker Engine
 
@@ -194,7 +194,7 @@ download the `.rpm` file for your release and install it manually. You need to
 download a new file each time you want to upgrade Docker Engine.
 
 <!-- markdownlint-disable-next-line -->
-1. Go to [{{% param "download-url-base" %}}/]({{% param "download-url-base" %}}/)
+1. Go to [\{\{\% param "download-url-base" %}}/](\{\\{\% param "download-url-base" \%\}\}/)
    and choose your version of SLES. Then browse to `s390x/stable/Packages/`
    and download the `.rpm` file for the Docker version you want to install.
 
@@ -226,7 +226,7 @@ download a new file each time you want to upgrade Docker Engine.
 
 You have now successfully installed and started Docker Engine.
 
-{{< include "root-errors.md" >}}
+{ { < include "root-errors.md" > } }
 
 #### Upgrade Docker Engine
 
@@ -234,7 +234,7 @@ To upgrade Docker Engine, download the newer package files and repeat the
 [installation procedure](#install-from-a-package), using `zypper -y upgrade`
 instead of `zypper -y install`, and point to the new files.
 
-{{< include "install-script.md" >}}
+{ { < include "install-script.md" > } }
 
 ## Uninstall Docker Engine
 

@@ -13,7 +13,7 @@ weight: 150
 
 To navigate to **Settings** either:
 
-- Select the Docker menu {{< inline-image src="images/whale-x.svg" alt="whale menu" >}} and then **Settings**
+- Select the Docker menu { { < inline-image src="images/whale-x.svg" alt="whale menu" > } } and then **Settings**
 - Select the **Settings** icon from the Docker Dashboard.
 
 You can also locate the `settings.json` file at:
@@ -40,18 +40,18 @@ If you choose the integrated terminal, you can run commands in a running contain
 
 - **Enable Docker Debug by default**. Check this option to use Docker Debug by default when accessing the integrated terminal. For more information, see [Explore containers](use-desktop/container.md#integrated-terminal).
 
-- {{< badge color=blue text="Mac only" >}}**Include VM in Time Machine backups**. Select to back up the Docker Desktop
+- { { < badge color=blue text="Mac only" > } }**Include VM in Time Machine backups**. Select to back up the Docker Desktop
   virtual machine. This option is turned off by default.
 
-- {{< badge color=blue text="Windows only" >}}**Expose daemon on tcp://localhost:2375 without TLS**. Check this option to
+- { { < badge color=blue text="Windows only" > } }**Expose daemon on tcp://localhost:2375 without TLS**. Check this option to
   enable legacy clients to connect to the Docker daemon. You must use this option
   with caution as exposing the daemon without TLS can result in remote code
   execution attacks.
 
-- {{< badge color=blue text="Windows only" >}}**Use the WSL 2 based engine**. WSL 2 provides better performance than the
+- { { < badge color=blue text="Windows only" > } }**Use the WSL 2 based engine**. WSL 2 provides better performance than the
   Hyper-V backend. For more information, see [Docker Desktop WSL 2 backend](wsl/index.md).
 
-- {{< badge color=blue text="Windows only" >}}**Add the `*.docker.internal` names to the host's `/etc/hosts` file (Password required)**. Lets you resolve `*.docker.internal` DNS names from both the host and your containers.
+- { { < badge color=blue text="Windows only" > } }**Add the `*.docker.internal` names to the host's `/etc/hosts` file (Password required)**. Lets you resolve `*.docker.internal` DNS names from both the host and your containers.
 
 - **Use containerd for pulling and storing images**.
   Turns on the containerd image store.
@@ -59,17 +59,17 @@ If you choose the integrated terminal, you can run commands in a running contain
   and the ability to run Wasm applications with Docker.
   For more information, see [containerd image store](containerd.md).
 
-- {{< badge color=blue text="Mac only" >}} **Use Virtualization framework**. Select to allow Docker Desktop to use the `virtualization.framework` instead of the `hypervisor.framework`.
+- { { < badge color=blue text="Mac only" > } } **Use Virtualization framework**. Select to allow Docker Desktop to use the `virtualization.framework` instead of the `hypervisor.framework`.
     > [!TIP]
     >
     > Turn this setting on to make Docker Desktop run faster.
 
-- {{< badge color=blue text="Mac only" >}}**Choose file sharing implementation for your containers**. Choose whether you want to share files using **VirtioFS**, **gRPC FUSE**, or **osxfs (Legacy)**. VirtioFS is only available for macOS versions 12.5 and above, and is turned on by default.
+- { { < badge color=blue text="Mac only" > } }**Choose file sharing implementation for your containers**. Choose whether you want to share files using **VirtioFS**, **gRPC FUSE**, or **osxfs (Legacy)**. VirtioFS is only available for macOS versions 12.5 and above, and is turned on by default.
     >**Tip**
     >
     > Use VirtioFS for speedy file sharing. VirtioFS has reduced the time taken to complete filesystem operations by [up to 98%](https://github.com/docker/roadmap/issues/7#issuecomment-1044452206)
 
-- {{< badge color=blue text="Mac only" >}}**Use Rosetta for x86_64/amd64 emulation on Apple Silicon**. Turns on Rosetta to accelerate x86/AMD64 binary emulation on Apple Silicon. This option is only available if you have turned on **Virtualization framework** in the **General** settings tab. You must also be on macOS Ventura or later.
+- { { < badge color=blue text="Mac only" > } }**Use Rosetta for x86_64/amd64 emulation on Apple Silicon**. Turns on Rosetta to accelerate x86/AMD64 binary emulation on Apple Silicon. This option is only available if you have turned on **Virtualization framework** in the **General** settings tab. You must also be on macOS Ventura or later.
 
 - **Send usage statistics**. Select so Docker Desktop sends diagnostics,
   crash reports, and usage data. This information helps Docker improve and
@@ -87,7 +87,7 @@ If you choose the integrated terminal, you can run commands in a running contain
 
 - **Enable background SBOM indexing**. When this option is enabled, Docker Scout automatically analyzes images that you build or pull.
 
-- {{< badge color=blue text="Mac only" >}}**Automatically check configuration**. Regularly checks your configuration to ensure no unexpected changes have been made by another application.
+- { { < badge color=blue text="Mac only" > } }**Automatically check configuration**. Regularly checks your configuration to ensure no unexpected changes have been made by another application.
 
   Docker Desktop checks if your setup, configured during installation, has been altered by external apps like Orbstack. Docker Desktop checks:
     - The symlinks of Docker binaries to `/usr/local/bin`.
@@ -485,7 +485,7 @@ Use the **Notifications** tab to turn on or turn off notifications for the follo
 
 By default, all notifications are turned on. You'll always receive error notifications and notifications about new Docker Desktop releases and updates.
 
-Notifications momentarily appear in the lower-right of the Docker Dashboard and then move to the **Notifications** drawer. To open the **Notifications** drawer, select {{< inline-image src="images/notifications.svg" alt="notifications" >}}.
+Notifications momentarily appear in the lower-right of the Docker Dashboard and then move to the **Notifications** drawer. To open the **Notifications** drawer, select { { < inline-image src="images/notifications.svg" alt="notifications" > } }.
 
 ## Advanced
 

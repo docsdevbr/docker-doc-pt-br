@@ -8,9 +8,9 @@ aliases:
 
 You can create a new company in Docker Hub or Docker Admin Console. Before you begin, make sure you're the owner of the organization you want to add to the new company. The organization also needs to have a Docker Business subscription.
 
-{{< tabs >}}
+{ { < tabs > } }
 
-{{< tab name="Docker Hub" >}}
+{ { < tab name="Docker Hub" > } }
 
 ## Create a company
 
@@ -27,11 +27,11 @@ To create a new company:
 
 5. Review the company migration details and then select **Create company**.
 
-{{< /tab >}}
+{ { < /tab > } }
 
-{{< tab name="Admin Console" >}}
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
 ## Create a company
 
@@ -50,9 +50,9 @@ To create a new company:
 
 For more information on how you can add organizations to your company, see [Add organizations to a company](organizations.md#add-organizations-to-a-company).
 
-{{< /tab >}}
+{ { < /tab > } }
 
-{{< /tabs >}}
+{ { < /tabs > } }
 
 ## Next steps
 

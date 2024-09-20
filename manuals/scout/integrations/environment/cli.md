@@ -5,7 +5,7 @@ title: Generic environment integration with CLI
 linkTitle: Generic (CLI)
 ---
 
-{{< include "scout-early-access.md" >}}
+{ { < include "scout-early-access.md" > } }
 
 You can create a generic environment integration by running the Docker Scout
 CLI client in your CI workflows. The CLI client is available as a binary on
@@ -24,8 +24,8 @@ Before you start, set the following environment variables in your CI system:
 
 Make sure the variables are accessible to your project.
 
-{{< tabs >}}
-{{< tab name="Circle CI" >}}
+{ { < tabs > } }
+{ { < tab name="Circle CI" > } }
 
 ```yaml
 version: 2.1
@@ -53,8 +53,8 @@ jobs:
           "<ENVIRONMENT>" ${image}:${tag}
 ```
 
-{{< /tab >}}
-{{< tab name="GitLab" >}}
+{ { < /tab > } }
+{ { < tab name="GitLab" > } }
 
 The following example uses the [Docker executor](https://docs.gitlab.com/runner/executors/docker.html).
 
@@ -77,8 +77,8 @@ record_environment:
     - environment --org <MY_DOCKER_ORG> "PRODUCTION" ${image}:${tag}
 ```
 
-{{< /tab >}}
-{{< tab name="Azure DevOps" >}}
+{ { < /tab > } }
+{ { < tab name="Azure DevOps" > } }
 
 ```yaml
 trigger:
@@ -109,8 +109,8 @@ stages:
               "<ENVIRONMENT>" $(image):$(tag)
 ```
 
-{{< /tab >}}
-{{< tab name="Jenkins" >}}
+{ { < /tab > } }
+{ { < tab name="Jenkins" > } }
 
 ```groovy
 stage('Analyze image') {
@@ -127,5 +127,5 @@ stage('Analyze image') {
 }
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }

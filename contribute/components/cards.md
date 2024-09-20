@@ -48,21 +48,21 @@ The parameters for this shortcode are:
 
 ## Example
 
-{{< card
+{ { < card
   title="Get your Docker on"
   icon=favorite
   link=https://docs.docker.com/
-  description="Build, share, and run your apps with Docker" >}}
+  description="Build, share, and run your apps with Docker" > } }
 
 ## Markup
 
 ```go
-{{</* card
+{ { < /* card
   title="Get your Docker on"
   icon=favorite
   link=https://docs.docker.com/
   description="Build, share, and run your apps with Docker"
-*/>}}
+*/ > } }
 ```
 
 ### Grid
@@ -70,14 +70,14 @@ The parameters for this shortcode are:
 There's also a built-in `grid` shortcode that generates a... well, grid... of cards.
 The grid size is 3x3 on large screens, 2x2 on medium, and single column on small.
 
-{{< grid >}}
+{ { < grid > } }
 
 Grid is a separate shortcode from `card`, but it implements the same component under the hood.
 The markup you use to insert a grid is slightly unconventional. The grid shortcode takes no arguments.
 All it does is let you specify where on a page you want your grid to appear.
 
 ```go
-{{</* grid */>}}
+{ { < /* grid */ > } }
 ```
 
 The data for the grid is defined in the front matter of the page, under the `grid` key, as follows:

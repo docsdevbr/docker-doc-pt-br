@@ -47,4 +47,4 @@ The aim of this guide is to provide enough examples and instructions for you to 
 
 Start by building your first Go image.
 
-{{< button text="Build your Go image" url="build-images.md" >}}
+{ { < button text="Build your Go image" url="build-images.md" > } }

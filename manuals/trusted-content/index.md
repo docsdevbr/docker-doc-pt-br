@@ -23,4 +23,4 @@ Docker and verified publishing partners. These images are stable, up-to-date,
 and follow industry best-practices. They provide a strong foundation for
 developing applications.
 
-{{< grid >}}
+{ { < grid > } }

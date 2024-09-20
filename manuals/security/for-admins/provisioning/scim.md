@@ -46,27 +46,27 @@ For additional details about supported attributes and SCIM, see [Docker Hub API 
 
 You must make sure you have [configured SSO](../single-sign-on/configure/index.md) before you enable SCIM. Enforcing SSO isn't required.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-scim %}}
+{ { % admin-scim \%\}\}
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-scim product="admin" %}}
+{ { % admin-scim product="admin" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Enable SCIM in your IdP
 
 The user interface for your IdP may differ slightly from the following steps. You can refer to the documentation for your IdP to verify.
 
-{{< tabs >}}
-{{< tab name="Okta" >}}
+{ { < tabs > } }
+{ { < tab name="Okta" > } }
 
 ### Enable SCIM
 
@@ -96,8 +96,8 @@ The user interface for your IdP may differ slightly from the following steps. Yo
     - Family name
     - Email
 
-{{< /tab >}}
-{{< tab name="Entra ID SAML 2.0" >}}
+{ { < /tab > } }
+{ { < tab name="Entra ID SAML 2.0" > } }
 
 1. In the Azure admin portal, go to **Enterprise Applications**, then select the **Docker** application you created when you set up your SSO connection.
 2. Go to **Provisioning** and select **Get Started**.
@@ -111,8 +111,8 @@ The user interface for your IdP may differ slightly from the following steps. Yo
 10. Select **Save**.
 11. Set the provisioning status to **On**.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 
 See the documentation for your IdP for additional details:
@@ -140,8 +140,8 @@ After you set the role in the IdP, you need to sync to push the changes to Docke
 
 The external namespace to use to set up these attributes is `urn:ietf:params:scim:schemas:extension:docker:2.0:User`.
 
-{{< tabs >}}
-{{< tab name="Okta" >}}
+{ { < tabs > } }
+{ { < tab name="Okta" > } }
 
 ### Set up
 
@@ -166,8 +166,8 @@ The external namespace to use to set up these attributes is `urn:ietf:params:sci
 
 If a user doesn't already have attributes set up, users who are added to the group will inherit these attributes upon provsioning.
 
-{{< /tab >}}
-{{< tab name="Entra ID SAML 2.0" >}}
+{ { < /tab > } }
+{ { < tab name="Entra ID SAML 2.0" > } }
 
 ### Set up
 
@@ -223,8 +223,8 @@ To add a group:
 
 If you used direct mapping in the previous step, go to **Microsoft Graph Explorer** and sign in to your tenant. You need to be a tenant admin to use this feature. Use the Microsoft Graph API to assign the extension attribute to the user with the value that corresponds to what the attribute was mapped to. See the [Microsoft Graph API documentation](https://learn.microsoft.com/en-us/graph/extensibility-overview?tabs=http) on adding or updating data in extension attributes.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 See the documentation for your IdP for additional details:
 
@@ -235,20 +235,20 @@ See the documentation for your IdP for additional details:
 
 If SCIM is disabled, any user provisioned through SCIM will remain in the organization. Future changes for your users will not sync from your IdP. User de-provisioning is only possible when manually removing the user from the organization.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-scim-disable %}}
+{ { % admin-scim-disable \%\}\}
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-scim-disable product="admin" %}}
+{ { % admin-scim-disable product="admin" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## More resources
 

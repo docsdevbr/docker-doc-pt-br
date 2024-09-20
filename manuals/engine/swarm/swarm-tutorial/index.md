@@ -98,4 +98,4 @@ iptables -I INPUT -m udp --dport 4789 -m policy --dir in --pol none -j DROP
 
 Next, you'll create a swarm.
 
-{{< button text="Create a swarm" url="create-swarm.md" >}}
+{ { < button text="Create a swarm" url="create-swarm.md" > } }

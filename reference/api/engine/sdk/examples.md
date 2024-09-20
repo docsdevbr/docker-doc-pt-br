@@ -30,8 +30,8 @@ to do from your own apps too.
 This is the equivalent of typing `docker run alpine echo hello world` at the
 command prompt:
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -97,8 +97,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -106,21 +106,21 @@ client = docker.from_env()
 print(client.containers.run("alpine", ["echo", "hello", "world"]))
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
 $ curl --unix-socket /var/run/docker.sock -H "Content-Type: application/json" \
   -d '{"Image": "alpine", "Cmd": ["echo", "hello world"]}' \
-  -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/create
+  -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/create
 {"Id":"1c6594faf5","Warnings":null}
 
-$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/start
+$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/start
 
-$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/wait
+$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/wait
 {"StatusCode":0}
 
-$ curl --unix-socket /var/run/docker.sock "http://localhost/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/logs?stdout=1"
+$ curl --unix-socket /var/run/docker.sock "http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/logs?stdout=1"
 hello world
 ```
 
@@ -134,18 +134,18 @@ previous examples use `localhost`, but any hostname would work.
 > when using a socket connection.
 >
 > If you're' using an older version of cURL, use `http:/<API version>/` instead,
-> for example: `http:/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/start`.
+> for example: `http:/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/start`.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Run a container in the background
 
 You can also run containers in the background, the equivalent of typing
 `docker run -d bfirsh/reticulate-splines`:
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -193,8 +193,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -203,28 +203,28 @@ container = client.containers.run("bfirsh/reticulate-splines", detach=True)
 print(container.id)
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
 $ curl --unix-socket /var/run/docker.sock -H "Content-Type: application/json" \
   -d '{"Image": "bfirsh/reticulate-splines"}' \
-  -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/create
+  -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/create
 {"Id":"1c6594faf5","Warnings":null}
 
-$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/1c6594faf5/start
+$ curl --unix-socket /var/run/docker.sock -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/1c6594faf5/start
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## List and manage containers
 
 You can use the API to list containers that are running, just like using
 `docker ps`:
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -256,8 +256,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -266,11 +266,11 @@ for container in client.containers.list():
   print(container.id)
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
-$ curl --unix-socket /var/run/docker.sock http://localhost/v{{% param "latest_engine_api_version" %}}/containers/json
+$ curl --unix-socket /var/run/docker.sock http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/json
 [{
   "Id":"ae63e8b89a26f01f6b4b2c9a7817c31a1b6196acf560f66586fbc8809ffcd772",
   "Names":["/tender_wing"],
@@ -279,8 +279,8 @@ $ curl --unix-socket /var/run/docker.sock http://localhost/v{{% param "latest_en
 }]
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Stop all running containers
 
@@ -293,8 +293,8 @@ This example stops all running containers.
 > services, the containers stop, but Docker creates new ones to keep
 > the service running in its configured state.
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -331,8 +331,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -341,11 +341,11 @@ for container in client.containers.list():
   container.stop()
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
-$ curl --unix-socket /var/run/docker.sock http://localhost/v{{% param "latest_engine_api_version" %}}/containers/json
+$ curl --unix-socket /var/run/docker.sock http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/json
 [{
   "Id":"ae63e8b89a26f01f6b4b2c9a7817c31a1b6196acf560f66586fbc8809ffcd772",
   "Names":["/tender_wing"],
@@ -354,11 +354,11 @@ $ curl --unix-socket /var/run/docker.sock http://localhost/v{{% param "latest_en
 }]
 
 $ curl --unix-socket /var/run/docker.sock \
-  -X POST http://localhost/v{{% param "latest_engine_api_version" %}}/containers/ae63e8b89a26/stop
+  -X POST http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/ae63e8b89a26/stop
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Print the logs of a specific container
 
@@ -366,8 +366,8 @@ You can also perform actions on individual containers. This example prints the
 logs of a container given its ID. You need to modify the code before running it
 to change the hard-coded ID of the container to print the logs for.
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -400,8 +400,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -410,11 +410,11 @@ container = client.containers.get('f1064a8a4c82')
 print(container.logs())
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
-$ curl --unix-socket /var/run/docker.sock "http://localhost/v{{% param "latest_engine_api_version" %}}/containers/ca5f55cdb/logs?stdout=1"
+$ curl --unix-socket /var/run/docker.sock "http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/containers/ca5f55cdb/logs?stdout=1"
 Reticulating spline 1...
 Reticulating spline 2...
 Reticulating spline 3...
@@ -422,15 +422,15 @@ Reticulating spline 4...
 Reticulating spline 5...
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## List all images
 
 List the images on your Engine, similar to `docker image ls`:
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -462,8 +462,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -472,11 +472,11 @@ for image in client.images.list():
   print(image.id)
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
-$ curl --unix-socket /var/run/docker.sock http://localhost/v{{% param "latest_engine_api_version" %}}/images/json
+$ curl --unix-socket /var/run/docker.sock http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/images/json
 [{
   "Id":"sha256:31d9a31e1dd803470c5a151b8919ef1988ac3efd44281ac59d43ad623f275dcd",
   "ParentId":"sha256:ee4603260daafe1a8c2f3b78fd760922918ab2441cbb2853ed5c439e59c52f96",
@@ -484,15 +484,15 @@ $ curl --unix-socket /var/run/docker.sock http://localhost/v{{% param "latest_en
 }]
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Pull an image
 
 Pull an image, like `docker pull`:
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -525,8 +525,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -535,20 +535,20 @@ image = client.images.pull("alpine")
 print(image.id)
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
 $ curl --unix-socket /var/run/docker.sock \
-  -X POST "http://localhost/v{{% param "latest_engine_api_version" %}}/images/create?fromImage=alpine"
+  -X POST "http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/images/create?fromImage=alpine"
 {"status":"Pulling from library/alpine","id":"3.1"}
 {"status":"Pulling fs layer","progressDetail":{},"id":"8f13703509f7"}
 {"status":"Downloading","progressDetail":{"current":32768,"total":2244027},"progress":"[\u003e                                                  ] 32.77 kB/2.244 MB","id":"8f13703509f7"}
 ...
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Pull an image with authentication
 
@@ -559,8 +559,8 @@ Pull an image, like `docker pull`, with authentication:
 > Credentials are sent in the clear. Docker's official registries use
 > HTTPS. Private registries should also be configured to use HTTPS.
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -605,8 +605,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 The Python SDK retrieves authentication information from the [credentials
 store](../../../cli/docker/login.md#credential-stores) file and
@@ -622,8 +622,8 @@ image = client.images.pull("alpine")
 print(image.id)
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 This example leaves the credentials in your shell's history, so consider
 this a naive implementation. The credentials are passed as a Base-64-encoded
@@ -634,7 +634,7 @@ $ JSON=$(echo '{"username": "string", "password": "string", "serveraddress": "st
 
 $ curl --unix-socket /var/run/docker.sock \
   -H "Content-Type: application/tar"
-  -X POST "http://localhost/v{{% param "latest_engine_api_version" %}}/images/create?fromImage=alpine"
+  -X POST "http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/images/create?fromImage=alpine"
   -H "X-Registry-Auth"
   -d "$JSON"
 {"status":"Pulling from library/alpine","id":"3.1"}
@@ -643,15 +643,15 @@ $ curl --unix-socket /var/run/docker.sock \
 ...
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Commit a container
 
 Commit a container to create an image from its contents:
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -702,8 +702,8 @@ func main() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```python
 import docker
@@ -714,16 +714,16 @@ image = container.commit("helloworld")
 print(image.id)
 ```
 
-{{< /tab >}}
-{{< tab name="HTTP" >}}
+{ { < /tab > } }
+{ { < tab name="HTTP" > } }
 
 ```console
 $ docker run -d alpine touch /helloworld
 0888269a9d584f0fa8fc96b3c0d8d57969ceea3a64acf47cd34eebb4744dbc52
 $ curl --unix-socket /var/run/docker.sock\
-  -X POST "http://localhost/v{{% param "latest_engine_api_version" %}}/commit?container=0888269a9d&repo=helloworld"
+  -X POST "http://localhost/v\{\{\% param "latest_engine_api_version" \%\}\}/commit?container=0888269a9d&repo=helloworld"
 {"Id":"sha256:6c86a5cd4b87f2771648ce619e319f3e508394b5bfc2cdbd2d60f59d52acda6c"}
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }

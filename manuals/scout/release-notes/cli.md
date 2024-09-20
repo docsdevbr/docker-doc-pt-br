@@ -11,7 +11,7 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 
 ## 1.13.0
 
-{{< release-date date="2024-08-05" >}}
+{ { < release-date date="2024-08-05" > } }
 
 ### New
 
@@ -30,7 +30,7 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 
 ## 1.12.0
 
-{{< release-date date="2024-07-31" >}}
+{ { < release-date date="2024-07-31" > } }
 
 ### New
 
@@ -81,7 +81,7 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 
 ## 1.11.0
 
-{{< release-date date="2024-07-25" >}}
+{ { < release-date date="2024-07-25" > } }
 
 ### New
 
@@ -128,7 +128,7 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 
 ## 1.10.0
 
-{{< release-date date="2024-06-26" >}}
+{ { < release-date date="2024-06-26" > } }
 
 ### Bug fixes and enhancements
 
@@ -159,7 +159,7 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 
 ## 1.9.3
 
-{{< release-date date="2024-05-28" >}}
+{ { < release-date date="2024-05-28" > } }
 
 ### Bug fix
 
@@ -167,7 +167,7 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 
 ## 1.9.1
 
-{{< release-date date="2024-05-27" >}}
+{ { < release-date date="2024-05-27" > } }
 
 ### New
 
@@ -225,13 +225,13 @@ and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-ac
 
 ## 1.9.0
 
-{{< release-date date="2024-05-24" >}}
+{ { < release-date date="2024-05-24" > } }
 
 Discarded in favor of [1.9.1](#191).
 
 ## 1.8.0
 
-{{< release-date date="2024-04-25" >}}
+{ { < release-date date="2024-04-25" > } }
 
 ### Bug fixes and enhancements
 
@@ -255,7 +255,7 @@ Discarded in favor of [1.9.1](#191).
 
 ## 1.7.0
 
-{{< release-date date="2024-04-15" >}}
+{ { < release-date date="2024-04-15" > } }
 
 ### New
 
@@ -275,7 +275,7 @@ Discarded in favor of [1.9.1](#191).
 
 ## 1.6.4
 
-{{< release-date date="2024-03-26" >}}
+{ { < release-date date="2024-03-26" > } }
 
 ### Bug fixes and enhancements
 
@@ -283,7 +283,7 @@ Discarded in favor of [1.9.1](#191).
 
 ## 1.6.3
 
-{{< release-date date="2024-03-22" >}}
+{ { < release-date date="2024-03-22" > } }
 
 ### Bug fixes and enhancements
 
@@ -291,7 +291,7 @@ Discarded in favor of [1.9.1](#191).
 
 ## 1.6.2
 
-{{< release-date date="2024-03-22" >}}
+{ { < release-date date="2024-03-22" > } }
 
 ### Bug fixes and enhancements
 
@@ -304,7 +304,7 @@ Discarded in favor of [1.9.1](#191).
 
 ## 1.6.1
 
-{{< release-date date="2024-03-20" >}}
+{ { < release-date date="2024-03-20" > } }
 
 > [!NOTE]
 >
@@ -332,7 +332,7 @@ Discarded in favor of [1.9.1](#191).
 
 ## 1.6.0
 
-{{< release-date date="2024-03-19" >}}
+{ { < release-date date="2024-03-19" > } }
 
 > [!NOTE]
 >

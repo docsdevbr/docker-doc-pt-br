@@ -13,7 +13,7 @@ aliases:
  - /guides/docker-concepts/building-images/writing-a-dockerfile/
 ---
 
-{{< youtube-embed Jx8zoIhiP4c >}}
+{ { < youtube-embed Jx8zoIhiP4c > } }
 
 ## Explanation
 
@@ -154,5 +154,5 @@ To learn more about writing a Dockerfile, visit the following resources:
 
 Now that you have created a Dockerfile and learned the basics, it's time to learn about building, tagging, and pushing the images.
 
-{{< button text="Build, tag and publish the Image" url="build-tag-and-publish-an-image" >}}
+{ { < button text="Build, tag and publish the Image" url="build-tag-and-publish-an-image" > } }
 

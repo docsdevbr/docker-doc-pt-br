@@ -17,4 +17,4 @@ The R language-specific guide teaches you how to containerize a R application us
 
 Start by containerizing an existing R application.
 
-{{< button text="Containerize a R app" url="containerize.md" >}}
+{ { < button text="Containerize a R app" url="containerize.md" > } }

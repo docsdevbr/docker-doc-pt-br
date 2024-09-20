@@ -81,4 +81,4 @@ machines.
 
 Next, you'll add two more nodes to the cluster.
 
-{{< button text="Add two more nodes" url="add-nodes.md" >}}
+{ { < button text="Add two more nodes" url="add-nodes.md" > } }

@@ -39,11 +39,11 @@ flexibility for customizing build parameters.
 If you're looking for examples on how to use the Docker GitHub Actions,
 refer to the following sections:
 
-{{% sectionlinks %}}
+{ { % sectionlinks \%\}\}
 
 ## Get started with GitHub Actions
 
-{{< include "gha-tutorial.md" >}}
+{ { < include "gha-tutorial.md" > } }
 This tutorial walks you through the process of setting up and using Docker GitHub
 Actions for building Docker images, and pushing images to Docker Hub. You will
 complete the following steps:
@@ -126,8 +126,8 @@ jobs:
         name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -136,7 +136,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
+          tags: $\{\{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
 ```
 
 The previous YAML snippet contains a sequence of steps that:
@@ -174,8 +174,8 @@ jobs:
         name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -184,7 +184,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
+          tags: $\{\{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
 ```
 
 ### Run the workflow

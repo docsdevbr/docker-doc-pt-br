@@ -8,8 +8,8 @@ We support these broad categories of callouts:
 
 - Alerts (Note, Tip, Important, Warning, Caution)
 - Version callouts
-- Experimental, which use the `{{%/* experimental */%}}` shortcode
-- Restricted, which use the `{{%/* restricted */%}}` shortcode
+- Experimental, which use the `{ { %/* experimental */\%\}\}` shortcode
+- Restricted, which use the `{ { %/* restricted */\%\}\}` shortcode
 
 The experimental and restricted shortcodes take a title as an argument. The
 title is optional, defaults to "Experimental" or "Restricted" respectively, and
@@ -17,7 +17,7 @@ is displayed in the callout.
 
 ## Examples
 
-{{< introduced buildx 0.16.0 >}}
+{ { < introduced buildx 0.16.0 > } }
 
 > [!NOTE]
 >
@@ -54,18 +54,18 @@ is displayed in the callout.
 
 For both of the following callouts, consult [the Docker release lifecycle](../../manuals/release-lifecycle.md) for more information on when to use them.
 
-{{% experimental title="Beta feature" %}}
+{ { % experimental title="Beta feature" \%\}\}
 The Builds view is currently in Beta. This feature may change or be removed from future releases.
-{{% /experimental %}}
+{ { % /experimental \%\}\}
 
-{{% restricted %}}
+{ { % restricted \%\}\}
 Docker Scout is an [early access](../../manuals/release-lifecycle.md#early-access-ea) product.
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 ## Formatting
 
 ```go
-{{</* introduced buildx 0.10.4 "../../release-notes.md#0104" */>}}
+{ { < /* introduced buildx 0.10.4 "../../release-notes.md#0104" */ > } }
 ```
 
 ```html
@@ -104,11 +104,11 @@ Docker Scout is an [early access](../../manuals/release-lifecycle.md#early-acces
 ```
 
 ```go
-{{%/* experimental title="Beta feature" */%}}
+{ { %/* experimental title="Beta feature" */\%\}\}
 The Builds view is currently in Beta. This feature may change or be removed from future releases.
-{{%/* /experimental */%}}
+{ { %/* /experimental */\%\}\}
 
-{{%/* restricted */%}}
+{ { %/* restricted */\%\}\}
 Docker Scout is an [early access](../../manuals/release-lifecycle.md#early-access-ea) product.
-{{%/* /restricted */%}}
+{ { %/* /restricted */\%\}\}
 ```

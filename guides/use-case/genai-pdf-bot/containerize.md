@@ -136,4 +136,4 @@ Related information:
 
 In the next section, you'll learn how you can run your application, database, and LLM service all locally using Docker.
 
-{{< button text="Develop your application" url="develop.md" >}}
+{ { < button text="Develop your application" url="develop.md" > } }

@@ -24,4 +24,4 @@ After completing the C++ getting started modules, you should be able to containe
 
 Start by containerizing an existing C++ application.
 
-{{< button text="Containerize a C++ app" url="containerize.md" >}}
+{ { < button text="Containerize a C++ app" url="containerize.md" > } }

@@ -88,7 +88,7 @@ To find the current default logging driver for the Docker daemon, run
 command on Linux, macOS, or PowerShell on Windows:
 
 ```console
-$ docker info --format '{{.LoggingDriver}}'
+$ docker info --format '\{\{\.LoggingDriver}}'
 
 json-file
 ```
@@ -123,7 +123,7 @@ is using the `json-file` logging driver, run the following `docker inspect`
 command, substituting the container name or ID for `<CONTAINER>`:
 
 ```console
-$ docker inspect -f '{{.HostConfig.LogConfig.Type}}' <CONTAINER>
+$ docker inspect -f '\{\{\.HostConfig.LogConfig.Type}}' <CONTAINER>
 
 json-file
 ```

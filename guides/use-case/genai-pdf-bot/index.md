@@ -13,4 +13,4 @@ The generative AI (GenAI) guide teaches you how to containerize an existing GenA
 
 Start by containerizing an existing GenAI application.
 
-{{< button text="Containerize a GenAI app" url="containerize.md" >}}
+{ { < button text="Containerize a GenAI app" url="containerize.md" > } }

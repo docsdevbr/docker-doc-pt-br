@@ -46,8 +46,8 @@ env:
   # Hostname of your registry
   REGISTRY: docker.io
   # Image repository, without hostname and tag
-  IMAGE_NAME: ${{ github.repository }}
-  SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
+  IMAGE_NAME: $\{\{ github.repository }}
+  SHA: $\{\{ github.event.pull_request.head.sha || github.event.after }}
 
 jobs:
   build:
@@ -60,24 +60,24 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       # Authenticate to the container registry
-      - name: Authenticate to registry ${{ env.REGISTRY }}
+      - name: Authenticate to registry $\{\{ env.REGISTRY }}
         uses: docker/login-action@v3
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.REGISTRY_USER }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          registry: $\{\{ env.REGISTRY }}
+          username: $\{\{ secrets.REGISTRY_USER }}
+          password: $\{\{ secrets.REGISTRY_TOKEN }}
 
       # Extract metadata (tags, labels) for Docker
       - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: $\{\{ env.REGISTRY }}/$\{\{ env.IMAGE_NAME }}
           labels: |
-            org.opencontainers.image.revision=${{ env.SHA }}
+            org.opencontainers.image.revision=$\{\{ env.SHA }}
           tags: |
             type=edge,branch=$repo.default_branch
-            type=semver,pattern=v{{version}}
+            type=semver,pattern=v\{\{version}}
             type=sha,prefix=,suffix=,format=short
 
       # Build and push Docker image with Buildx
@@ -86,12 +86,12 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          sbom: ${{ github.event_name != 'pull_request' }}
-          provenance: ${{ github.event_name != 'pull_request' }}
-          push: ${{ github.event_name != 'pull_request' }}
-          load: ${{ github.event_name == 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          sbom: $\{\{ github.event_name != 'pull_request' }}
+          provenance: $\{\{ github.event_name != 'pull_request' }}
+          push: $\{\{ github.event_name != 'pull_request' }}
+          load: $\{\{ github.event_name == 'pull_request' }}
+          tags: $\{\{ steps.meta.outputs.tags }}
+          labels: $\{\{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 ```
@@ -123,21 +123,21 @@ image comparison:
       - name: Authenticate to Docker
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_PAT }}
+          username: $\{\{ secrets.DOCKER_USER }}
+          password: $\{\{ secrets.DOCKER_PAT }}
 
       # Compare the image built in the pull request with the one in production
       - name: Docker Scout
         id: docker-scout
-        if: ${{ github.event_name == 'pull_request' }}
+        if: $\{\{ github.event_name == 'pull_request' }}
         uses: docker/scout-action@v1
         with:
           command: compare
-          image: ${{ steps.meta.outputs.tags }}
+          image: $\{\{ steps.meta.outputs.tags }}
           to-env: production
           ignore-unchanged: true
           only-severities: critical,high
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: $\{\{ secrets.GITHUB_TOKEN }}
 ```
 
 The compare command analyzes the image and evaluates policy compliance, and

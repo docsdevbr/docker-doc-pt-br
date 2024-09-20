@@ -170,15 +170,15 @@ jobs:
             - endpoint: tcp://linuxone:1234
               platforms: linux/s390x
         env:
-          BUILDER_NODE_0_AUTH_TLS_CACERT: ${{ secrets.ONEPROVIDER_CA }}
-          BUILDER_NODE_0_AUTH_TLS_CERT: ${{ secrets.ONEPROVIDER_CERT }}
-          BUILDER_NODE_0_AUTH_TLS_KEY: ${{ secrets.ONEPROVIDER_KEY }}
-          BUILDER_NODE_1_AUTH_TLS_CACERT: ${{ secrets.GRAVITON2_CA }}
-          BUILDER_NODE_1_AUTH_TLS_CERT: ${{ secrets.GRAVITON2_CERT }}
-          BUILDER_NODE_1_AUTH_TLS_KEY: ${{ secrets.GRAVITON2_KEY }}
-          BUILDER_NODE_2_AUTH_TLS_CACERT: ${{ secrets.LINUXONE_CA }}
-          BUILDER_NODE_2_AUTH_TLS_CERT: ${{ secrets.LINUXONE_CERT }}
-          BUILDER_NODE_2_AUTH_TLS_KEY: ${{ secrets.LINUXONE_KEY }}
+          BUILDER_NODE_0_AUTH_TLS_CACERT: $\{\{ secrets.ONEPROVIDER_CA }}
+          BUILDER_NODE_0_AUTH_TLS_CERT: $\{\{ secrets.ONEPROVIDER_CERT }}
+          BUILDER_NODE_0_AUTH_TLS_KEY: $\{\{ secrets.ONEPROVIDER_KEY }}
+          BUILDER_NODE_1_AUTH_TLS_CACERT: $\{\{ secrets.GRAVITON2_CA }}
+          BUILDER_NODE_1_AUTH_TLS_CERT: $\{\{ secrets.GRAVITON2_CERT }}
+          BUILDER_NODE_1_AUTH_TLS_KEY: $\{\{ secrets.GRAVITON2_KEY }}
+          BUILDER_NODE_2_AUTH_TLS_CACERT: $\{\{ secrets.LINUXONE_CA }}
+          BUILDER_NODE_2_AUTH_TLS_CERT: $\{\{ secrets.LINUXONE_CERT }}
+          BUILDER_NODE_2_AUTH_TLS_KEY: $\{\{ secrets.LINUXONE_KEY }}
 ```
 
 ## Authentication for remote builders
@@ -205,7 +205,7 @@ jobs:
         uses: MrSquaare/ssh-setup-action@2d028b70b5e397cf8314c6eaea229a6c3e34977a # v3.1.0
         with:
           host: graviton2
-          private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          private-key: $\{\{ secrets.SSH_PRIVATE_KEY }}
           private-key-name: aws_graviton2
 
       - name: Set up Docker Buildx
@@ -243,9 +243,9 @@ jobs:
           driver: remote
           endpoint: tcp://graviton2:1234
         env:
-          BUILDER_NODE_0_AUTH_TLS_CACERT: ${{ secrets.GRAVITON2_CA }}
-          BUILDER_NODE_0_AUTH_TLS_CERT: ${{ secrets.GRAVITON2_CERT }}
-          BUILDER_NODE_0_AUTH_TLS_KEY: ${{ secrets.GRAVITON2_KEY }}
+          BUILDER_NODE_0_AUTH_TLS_CACERT: $\{\{ secrets.GRAVITON2_CA }}
+          BUILDER_NODE_0_AUTH_TLS_CERT: $\{\{ secrets.GRAVITON2_CERT }}
+          BUILDER_NODE_0_AUTH_TLS_KEY: $\{\{ secrets.GRAVITON2_KEY }}
 ```
 
 ## Standalone mode
@@ -313,12 +313,12 @@ jobs:
       - name: Build against builder1
         uses: docker/build-push-action@v6
         with:
-          builder: ${{ steps.builder1.outputs.name }}
+          builder: $\{\{ steps.builder1.outputs.name }}
           target: mytarget1
 
       - name: Build against builder2
         uses: docker/build-push-action@v6
         with:
-          builder: ${{ steps.builder2.outputs.name }}
+          builder: $\{\{ steps.builder2.outputs.name }}
           target: mytarget2
 ```

@@ -68,8 +68,8 @@ To use a `tmpfs` mount in a container, use the `--tmpfs` flag, or use the
 `/app` in a Nginx container. The first example uses the `--mount` flag and the
 second uses the `--tmpfs` flag.
 
-{{< tabs >}}
-{{< tab name="`--mount`" >}}
+{ { < tabs > } }
+{ { < tab name="`--mount`" > } }
 
 ```console
 $ docker run -d \
@@ -79,8 +79,8 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< tab name="`--tmpfs`" >}}
+{ { < /tab > } }
+{ { < tab name="`--tmpfs`" > } }
 
 ```console
 $ docker run -d \
@@ -90,14 +90,14 @@ $ docker run -d \
   nginx:latest
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Verify that the mount is a `tmpfs` mount by looking in the `Mounts` section of
 the `docker inspect` output:
 
 ```console
-$ docker inspect tmptest --format '{{ json .Mounts }}'
+$ docker inspect tmptest --format '\{\{ json .Mounts }}'
 [{"Type":"tmpfs","Source":"","Destination":"/app","Mode":"","RW":true,"Propagation":""}]
 ```
 

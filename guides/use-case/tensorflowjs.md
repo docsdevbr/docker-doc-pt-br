@@ -159,7 +159,7 @@ It also uses the following additional libraries:
 - Stats.min.js for displaying performance metrics (like FPS) to monitor the
   application's efficiency during operation.
 
-{{< accordion title="index.html" >}}
+{ { < accordion title="index.html" > } }
 
 ```html
 <style>
@@ -230,7 +230,7 @@ It also uses the following additional libraries:
 <script src="./index.js"></script>
 ```
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ### The index.js file
 
@@ -262,7 +262,7 @@ breakdown of some of its key components and functionalities:
   blue dots for facial landmarks on a canvas overlaying the video.
 
 
-{{< accordion title="index.js" >}}
+{ { < accordion title="index.js" > } }
 
 ```javascript
 const stats = new Stats();
@@ -387,7 +387,7 @@ const setupPage = async () => {
 setupPage();
 ```
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ### The tf-backend-wasm.js file
 

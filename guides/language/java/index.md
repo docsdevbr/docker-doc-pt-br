@@ -21,4 +21,4 @@ After completing the Java getting started modules, you should be able to contain
 
 Get started containerizing your first Java app.
 
-{{< button text="Containerize your first Java app" url="containerize.md" >}}
+{ { < button text="Containerize your first Java app" url="containerize.md" > } }

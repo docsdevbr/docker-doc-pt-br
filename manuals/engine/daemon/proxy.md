@@ -79,8 +79,8 @@ systemd drop-in file that sets the variables for the `docker` service.
 > be executed without `sudo` and with the `--user` flag. Select the "Rootless
 > mode" tab if you are running Docker in rootless mode.
 
-{{< tabs >}}
-{{< tab name="Regular install" >}}
+{ { < tabs > } }
+{ { < tab name="Regular install" > } }
 
 1. Create a systemd drop-in directory for the `docker` service:
 
@@ -166,8 +166,8 @@ systemd drop-in file that sets the variables for the `docker` service.
    Environment=HTTP_PROXY=http://proxy.example.com:3128 HTTPS_PROXY=https://proxy.example.com:3129 NO_PROXY=localhost,127.0.0.1,docker-registry.example.com,.corp
    ```
 
-{{< /tab >}}
-{{< tab name="Rootless mode" >}}
+{ { < /tab > } }
+{ { < tab name="Rootless mode" > } }
 
 1. Create a systemd drop-in directory for the `docker` service:
 
@@ -253,5 +253,5 @@ systemd drop-in file that sets the variables for the `docker` service.
    Environment=HTTP_PROXY=http://proxy.example.com:3128 HTTPS_PROXY=https://proxy.example.com:3129 NO_PROXY=localhost,127.0.0.1,docker-registry.example.com,.corp
    ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }

@@ -58,5 +58,5 @@ To check where Compose is installed, use:
 
 
 ```console
-$ docker info --format '{{range .ClientInfo.Plugins}}{{if eq .Name "compose"}}{{.Path}}{{end}}{{end}}'
+$ docker info --format '\{\{range .ClientInfo.Plugins}}\{\{if eq .Name "compose"}}\{\{\.Path}}\{\{end}}\{\{end}}'
 ```

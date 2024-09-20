@@ -7,7 +7,7 @@ aliases:
  - /guides/docker-concepts/running-containers/sharing-local-files/
 ---
 
-{{< youtube-embed 2dAzsVg3Dek >}}
+{ { < youtube-embed 2dAzsVg3Dek > } }
 
 
 ## Explanation
@@ -130,22 +130,22 @@ Using a bind mount, you can map the configuration file on your host computer to 
 
 4. It's time to run the container. The `--mount` and `-v` examples produce the same result. You can't run them both unless you remove the `my_site` container after running the first one.
 
-   {{< tabs >}}
-   {{< tab name="`-v`" >}}
+   { { < tabs > } }
+   { { < tab name="`-v`" > } }
 
    ```console
    $ docker run -d --name my_site -p 8080:80 -v .:/usr/local/apache2/htdocs/ httpd:2.4
    ```
 
-   {{< /tab >}}
-   {{< tab name="`--mount`" >}}
+   { { < /tab > } }
+   { { < tab name="`--mount`" > } }
 
    ```console
    $ docker run -d --name my_site -p 8080:80 --mount type=bind,source=./,target=/usr/local/apache2/htdocs/ httpd:2.4
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 
    > [!TIP]
@@ -200,4 +200,4 @@ The following resources will help you learn more about bind mounts:
 
 Now that you have learned about sharing local files with containers, it’s time to learn about multi-container applications.
 
-{{< button text="Multi-container applications" url="Multi-container applications" >}}
+{ { < button text="Multi-container applications" url="Multi-container applications" > } }

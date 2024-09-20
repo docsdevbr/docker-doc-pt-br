@@ -20,8 +20,8 @@ $ docker buildx build --builder cloud-<ORG>-<BUILDER_NAME> --tag <IMAGE> .
 If you want to use Docker Build Cloud without having to specify the `--builder` flag
 each time, you can set it as the default builder.
 
-{{< tabs group="ui" >}}
-{{< tab name="CLI" >}}
+{ { < tabs group="ui" > } }
+{ { < tab name="CLI" > } }
 
 Run the following command:
 
@@ -29,8 +29,8 @@ Run the following command:
 $ docker buildx use cloud-<ORG>-<BUILDER_NAME> --global
 ```
 
-{{< /tab >}}
-{{< tab name="Docker Desktop" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Desktop" > } }
 
 1. Open the Docker Desktop settings and navigate to the **Builders** tab.
 2. Find the cloud builder under **Available builders**.
@@ -38,8 +38,8 @@ $ docker buildx use cloud-<ORG>-<BUILDER_NAME> --global
 
    ![Selecting the cloud builder as default using the Docker Desktop GUI](../build/images/set-default-builder-gui.webp)
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Changing your default builder with `docker buildx use` only changes the default
 builder for the `docker buildx build` command. The `docker build` command still

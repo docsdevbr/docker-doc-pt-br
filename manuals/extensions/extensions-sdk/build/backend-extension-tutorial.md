@@ -73,8 +73,8 @@ In this tutorial, the backend service simply exposes one route that returns a JS
 > can't open ports on their machines. When choosing the language and framework for your backend, make sure it
 > supports sockets connection.
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 ```go
 package main
@@ -127,40 +127,40 @@ type HTTPMessageBody struct {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Node" >}}
+{ { < /tab > } }
+{ { < tab name="Node" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working example for Node yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=Node)
 > and let us know if you'd like a sample for Node.
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working example for Python yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=Python)
 > and let us know if you'd like a sample for Python.
 
-{{< /tab >}}
-{{< tab name="Java" >}}
+{ { < /tab > } }
+{ { < tab name="Java" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working example for Java yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=Java)
 > and let us know if you'd like a sample for Java.
 
-{{< /tab >}}
-{{< tab name=".NET" >}}
+{ { < /tab > } }
+{ { < tab name=".NET" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working example for .NET. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=.Net)
 > and let us know if you'd like a sample for .NET.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Adapt the Dockerfile
 
@@ -168,8 +168,8 @@ type HTTPMessageBody struct {
 >
 > When using the `docker extension init`, it creates a `Dockerfile` that already contains what is needed for a Go backend.
 
-{{< tabs group="lang" >}}
-{{< tab name="Go" >}}
+{ { < tabs group="lang" > } }
+{ { < tab name="Go" > } }
 
 To deploy your Go backend when installing the extension, you need first to configure the `Dockerfile`, so that it:
 - Builds the backend application
@@ -206,40 +206,40 @@ COPY --from=builder /backend/bin/service /
 CMD /service -socket /run/guest-services/extension-allthethings-extension.sock
 ```
 
-{{< /tab >}}
-{{< tab name="Node" >}}
+{ { < /tab > } }
+{ { < tab name="Node" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working Dockerfile for Node yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=Node)
 > and let us know if you'd like a Dockerfile for Node.
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working Dockerfile for Python yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=Python)
 > and let us know if you'd like a Dockerfile for Python.
 
-{{< /tab >}}
-{{< tab name="Java" >}}
+{ { < /tab > } }
+{ { < tab name="Java" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working Dockerfile for Java yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=Java)
 > and let us know if you'd like a Dockerfile for Java.
 
-{{< /tab >}}
-{{< tab name=".NET" >}}
+{ { < /tab > } }
+{ { < tab name=".NET" > } }
 
 > [!IMPORTANT]
 >
 > We don't have a working Dockerfile for .Net. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.25798127=.Net)
 > and let us know if you'd like a Dockerfile for .Net.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Configure the metadata file
 
@@ -271,8 +271,8 @@ Using the [advanced frontend extension example](frontend-extension-tutorial.md),
 Use the Docker Desktop Client object and then invoke the `/hello` route from the backend service with `ddClient.
 extension.vm.service.get` that returns the body of the response.
 
-{{< tabs group="framework" >}}
-{{< tab name="React" >}}
+{ { < tabs group="framework" > } }
+{ { < tab name="React" > } }
 
 Replace the `ui/src/App.tsx` file with the following code:
 
@@ -304,32 +304,32 @@ export function App() {
 
 ```
 
-{{< /tab >}}
-{{< tab name="Vue" >}}
+{ { < /tab > } }
+{ { < tab name="Vue" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Vue yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Vue)
 > and let us know if you'd like a sample with Vue.
 
-{{< /tab >}}
-{{< tab name="Angular" >}}
+{ { < /tab > } }
+{ { < tab name="Angular" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Angular yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Angular)
 > and let us know if you'd like a sample with Angular.
 
-{{< /tab >}}
-{{< tab name="Svelte" >}}
+{ { < /tab > } }
+{ { < tab name="Svelte" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Svelte yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Svelte)
 > and let us know if you'd like a sample with Svelte.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Re-build the extension and update it
 

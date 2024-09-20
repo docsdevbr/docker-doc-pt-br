@@ -209,4 +209,4 @@ Related information:
 
 In the next section, you'll learn about additional resources you can use to continue learning about containers.
 
-{{< button text="What next" url="10_what_next.md" >}}
+{ { < button text="What next" url="10_what_next.md" > } }

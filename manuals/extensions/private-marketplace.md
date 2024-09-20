@@ -8,9 +8,9 @@ aliases:
  - /desktop/extensions/private-marketplace/
 ---
 
-{{% experimental title="Beta" %}}
+{ { % experimental title="Beta" \%\}\}
 This feature is currently in [Beta](../release-lifecycle.md#beta). It is available to Docker Business customers only.
-{{% /experimental %}}
+{ { % /experimental \%\}\}
 
 Learn how to configure and set up a private marketplace with a curated list of extensions for your Docker Desktop users.
 
@@ -35,29 +35,29 @@ Docker Extensions' private marketplace is designed specifically for organization
 
 2. Initialize the configuration files for your marketplace:
 
-   {{< tabs group="os_version" >}}
-   {{< tab name="Mac" >}}
+   { { < tabs group="os_version" > } }
+   { { < tab name="Mac" > } }
 
    ```console
    $ /Applications/Docker.app/Contents/Resources/bin/extension-admin init
    ```
 
-   {{< /tab >}}
-   {{< tab name="Windows" >}}
+   { { < /tab > } }
+   { { < tab name="Windows" > } }
 
    ```console
    $ C:\Program Files\Docker\Docker\resources\bin\extension-admin init
    ```
 
-   {{< /tab >}}
-   {{< tab name="Linux" >}}
+   { { < /tab > } }
+   { { < tab name="Linux" > } }
 
    ```console
    $ /opt/docker-desktop/extension-admin init
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 This creates 2 files:
 
@@ -112,29 +112,29 @@ This list can include different types of extension images:
 
 Once the list in `extensions.txt` is ready, you can generate the marketplace:
 
-{{< tabs group="os_version" >}}
-{{< tab name="Mac" >}}
+{ { < tabs group="os_version" > } }
+{ { < tab name="Mac" > } }
 
 ```console
 $ /Applications/Docker.app/Contents/Resources/bin/extension-admin generate
 ```
 
-{{< /tab >}}
-{{< tab name="Windows" >}}
+{ { < /tab > } }
+{ { < tab name="Windows" > } }
 
 ```console
 $ C:\Program Files\Docker\Docker\resources\bin\extension-admin generate
 ```
 
-{{< /tab >}}
-{{< tab name="Linux" >}}
+{ { < /tab > } }
+{ { < tab name="Linux" > } }
 
 ```console
 $ /opt/docker-desktop/extension-admin generate
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 This creates an `extension-marketplace` directory and downloads the marketplace metadata for all the allowed extensions.
 
@@ -150,29 +150,29 @@ It's recommended that you try the private marketplace on your Docker Desktop ins
     - Windows: `C:\ProgramData\DockerDesktop`
     - Linux: `/usr/share/docker-desktop`
 
-   {{< tabs group="os_version" >}}
-   {{< tab name="Mac" >}}
+   { { < tabs group="os_version" > } }
+   { { < tab name="Mac" > } }
 
    ```console
    $ sudo /Applications/Docker.app/Contents/Resources/bin/extension-admin apply
    ```
 
-   {{< /tab >}}
-   {{< tab name="Windows (run as admin)" >}}
+   { { < /tab > } }
+   { { < tab name="Windows (run as admin)" > } }
 
    ```console
    $ C:\Program Files\Docker\Docker\resources\bin\extension-admin apply
    ```
 
-   {{< /tab >}}
-   {{< tab name="Linux" >}}
+   { { < /tab > } }
+   { { < tab name="Linux" > } }
 
    ```console
    $ sudo /opt/docker-desktop/extension-admin apply
    ```
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 2. Quit and re-open Docker Desktop.
 3. Sign in with a Docker account.

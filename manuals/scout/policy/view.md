@@ -6,10 +6,10 @@ description: |
 keywords: scout, policy, status, vulnerabilities, supply chain, cves, licenses
 ---
 
-{{% restricted title="Earyl Access" %}}
+{ { % restricted title="Earyl Access" \%\}\}
 Policy Evaluation is an [Early Access](../../release-lifecycle.md#early-access-ea)
 feature of Docker Scout.
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 You can track policy status for your artifacts from the [Docker Scout
 Dashboard](#dashboard), or using the [CLI](#cli).

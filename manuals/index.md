@@ -69,16 +69,16 @@ Docker products.
 
 Software development and containerization technologies.
 
-{{< grid items=development >}}
+{ { < grid items=development > } }
 
 ## Services
 
 Artifact management and supply chain security.
 
-{{< grid items=services >}}
+{ { < grid items=services > } }
 
 ## Administration and accounts
 
 Administration and subscription management for organizations.
 
-{{< grid items=admin >}}
+{ { < grid items=admin > } }

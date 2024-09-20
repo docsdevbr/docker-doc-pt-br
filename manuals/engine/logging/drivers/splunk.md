@@ -74,7 +74,7 @@ The following properties let you configure the Splunk logging driver.
 | `splunk-verify-connection`  | optional | Verify on start, that Docker can connect to Splunk server. Defaults to true.                                                                                                                                                                                                                                                               |
 | `splunk-gzip`               | optional | Enable/disable gzip compression to send events to Splunk Enterprise or Splunk Cloud instance. Defaults to false.                                                                                                                                                                                                                           |
 | `splunk-gzip-level`         | optional | Set compression level for gzip. Valid values are -1 (default), 0 (no compression), 1 (best speed) ... 9 (best compression). Defaults to [DefaultCompression](https://golang.org/pkg/compress/gzip/#DefaultCompression).                                                                                                                    |
-| `tag`                       | optional | Specify tag for message, which interpret some markup. Default value is `{{.ID}}` (12 characters of the container ID). Refer to the [log tag option documentation](../log_tags.md) for customizing the log tag format.                                                                                                                         |
+| `tag`                       | optional | Specify tag for message, which interpret some markup. Default value is `\{\{\.ID}}` (12 characters of the container ID). Refer to the [log tag option documentation](../log_tags.md) for customizing the log tag format.                                                                                                                         |
 | `labels`                    | optional | Comma-separated list of keys of labels, which should be included in message, if these labels are specified for container.                                                                                                                                                                                                                  |
 | `labels-regex`              | optional | Similar to and compatible with `labels`. A regular expression to match logging-related labels. Used for advanced [log tag options](../log_tags.md).                                                                                                                                                                                           |
 | `env`                       | optional | Comma-separated list of keys of environment variables, which should be included in message, if these variables are specified for container.                                                                                                                                                                                                |
@@ -99,7 +99,7 @@ $ docker run \
     --log-opt splunk-url=https://splunkhost:8088 \
     --log-opt splunk-capath=/path/to/cert/cacert.pem \
     --log-opt splunk-caname=SplunkServerDefaultCert \
-    --log-opt tag="{{.Name}}/{{.FullID}}" \
+    --log-opt tag="\{\{\.Name}}/\{\{\.FullID}}" \
     --log-opt labels=location \
     --log-opt env=TEST \
     --env "TEST=false" \
@@ -116,8 +116,8 @@ port specifier.
 There are three logging driver messaging formats: `inline` (default), `json`,
 and `raw`.
 
-{{< tabs >}}
-{{< tab name="Inline" >}}
+{ { < tabs > } }
+{ { < tab name="Inline" > } }
 
 The default format is `inline` where each log message is embedded as a string.
 For example:
@@ -146,8 +146,8 @@ For example:
 }
 ```
 
-{{< /tab >}}
-{{< tab name="JSON" >}}
+{ { < /tab > } }
+{ { < tab name="JSON" > } }
 
 To format messages as `json` objects, set `--log-opt splunk-format=json`. The
 driver attempts to parse every line as a JSON object and send it as an embedded
@@ -179,8 +179,8 @@ object. If it can't parse the message, it's sent `inline`. For example:
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Raw" >}}
+{ { < /tab > } }
+{ { < tab name="Raw" > } }
 
 To format messages as `raw`, set `--log-opt splunk-format=raw`. Attributes
 (environment variables and labels) and tags are prefixed to the message. For
@@ -191,8 +191,8 @@ MyImage/MyContainer env1=val1 label1=label1 my message
 MyImage/MyContainer env1=val1 label1=label1 {"foo": "bar"}
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Advanced options
 

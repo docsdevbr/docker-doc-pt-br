@@ -24,20 +24,20 @@ Owners can also see the activity logs for their repository if the repository is 
 
 ## Manage activity logs
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-org-audit-log product="hub" %}}
+{ { % admin-org-audit-log product="hub" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
-{{% admin-org-audit-log product="admin" %}}
+{ { % admin-org-audit-log product="admin" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Event definitions
 

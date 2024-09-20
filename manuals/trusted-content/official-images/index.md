@@ -41,4 +41,4 @@ it easier for you to identify projects that are part of Docker Official Images.
 
 ## In this section
 
-{{% sectionlinks %}}
+{ { % sectionlinks \%\}\}

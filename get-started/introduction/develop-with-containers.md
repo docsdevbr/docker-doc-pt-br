@@ -12,7 +12,7 @@ aliases:
  - /guides/getting-started/develop-with-containers/
 ---
 
-{{< youtube-embed D0SDBrS3t9I >}}
+{ { < youtube-embed D0SDBrS3t9I > } }
 
 ## Explanation
 
@@ -170,5 +170,5 @@ Docker Desktop enables all of this and so much more. Once you start thinking wit
 
 Now that the application has been updated, you’re ready to learn about packaging it as a container image and pushing it to a registry, specifically Docker Hub.
 
-{{< button text="Build and push your first image" url="build-and-push-first-image" >}}
+{ { < button text="Build and push your first image" url="build-and-push-first-image" > } }
 

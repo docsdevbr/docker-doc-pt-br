@@ -86,15 +86,15 @@ The following is only an illustrative example.
 
 There are many ways to deploy the `.plist` file. The method you choose is dependent on your organizations infrastructure, security policies, and the administrative rights of the end-users.
 
-{{< tabs >}}
-{{< tab name="MDM" >}}
+{ { < tabs > } }
+{ { < tab name="MDM" > } }
 
 1. Follow the steps previously outlined to create the `desktop.plist` file.
 2. Use an MDM tool like Jamf or Fleet to distribute the `desktop.plist` file to `/Library/Application Support/com.docker.docker/` on target macOS devices.
 3. Through the MDM tool, set the file permissions to permit editing by administrators only.
 
-{{< /tab >}}
-{{< tab name="Shell script" >}}
+{ { < /tab > } }
+{ { < tab name="Shell script" > } }
 
 1. Create a Bash script that can check for the existence of the `.plist` file in the correct directory, create or modify it as needed, and set the appropriate permissions.
    Include commands in your script to:
@@ -111,8 +111,8 @@ There are many ways to deploy the `.plist` file. The method you choose is depend
     - Remote support tool. For organizations using a remote support tool, you can add the script to a task and execute it across all selected machines.
 5. Ensure the script is running as expected on all targeted devices. This might involve checking log files or implementing logging within the script itself to report its success or failure.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## registry.json method (All)
 
@@ -162,8 +162,8 @@ details, see [Manage members](../../../admin/organization/members.md).
 
 To create a `registry.json` file when installing Docker Desktop, use the following instructions based on your user's operating system.
 
-{{< tabs >}}
-{{< tab name="Windows" >}}
+{ { < tabs > } }
+{ { < tab name="Windows" > } }
 
 To automatically create a `registry.json` file when installing Docker Desktop,
 download `Docker Desktop Installer.exe` and run one of the following commands
@@ -183,8 +183,8 @@ If you're using the Windows Command Prompt:
 C:\Users\Admin> "Docker Desktop Installer.exe" install --allowed-org=myorg
 ```
 
-{{< /tab >}}
-{{< tab name="Mac" >}}
+{ { < /tab > } }
+{ { < tab name="Mac" > } }
 
 To automatically create a `registry.json` file when installing Docker Desktop,
 download `Docker.dmg` and run the following commands in a terminal from the
@@ -196,15 +196,15 @@ $ sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --allowed-org=myorg
 $ sudo hdiutil detach /Volumes/Docker
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Option 3: Create a registry.json file using the command line
 
 To create a `registry.json` using the command line, use the following instructions based on your user's operating system.
 
-{{< tabs >}}
-{{< tab name="Windows" >}}
+{ { < tabs > } }
+{ { < tab name="Windows" > } }
 
 To use the CLI to create a `registry.json` file, run the following PowerShell
 command as an administrator and replace `myorg` with your organization's name. The file
@@ -231,8 +231,8 @@ Path          Owner                  Access
 registry.json BUILTIN\Administrators NT AUTHORITY\SYSTEM Allow  FullControl...
 ```
 
-{{< /tab >}}
-{{< tab name="Mac" >}}
+{ { < /tab > } }
+{ { < tab name="Mac" > } }
 
 To use the CLI to create a `registry.json` file, run the following commands in a
 terminal and replace `myorg` with your organization's name. The file contents
@@ -264,8 +264,8 @@ $ sudo ls -l "/Library/Application Support/com.docker.docker/registry.json"
 -rw-r--r--  1 root  admin  26 Jul 27 22:01 /Library/Application Support/com.docker.docker/registry.json
 ```
 
-{{< /tab >}}
-{{< tab name="Linux" >}}
+{ { < /tab > } }
+{ { < tab name="Linux" > } }
 
 To use the CLI to create a `registry.json` file, run the following commands in a
 terminal and replace `myorg` with your organization's name. The file contents
@@ -297,8 +297,8 @@ $ sudo ls -l /usr/share/docker-desktop/registry/registry.json
 -rw-r--r--  1 root  root  26 Jul 27 22:01 /usr/share/docker-desktop/registry/registry.json
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## More resources
 

@@ -28,8 +28,8 @@ string.
 
 ## Add the executables to the extension
 
-{{< tabs >}}
-{{< tab name="Mac and Linux" >}}
+{ { < tabs > } }
+{ { < tab name="Mac and Linux" > } }
 
 Create a `bash` script for macOS and Linux, in the file `binaries/unix/hello.sh` with the following content:
 
@@ -38,8 +38,8 @@ Create a `bash` script for macOS and Linux, in the file `binaries/unix/hello.sh`
 echo "Hello, $1!"
 ```
 
-{{< /tab >}}
-{{< tab name="Windows" >}}
+{ { < /tab > } }
+{ { < tab name="Windows" > } }
 
 Create a `batch script` for Windows in another file `binaries/windows/hello.cmd` with the following content:
 
@@ -48,8 +48,8 @@ Create a `batch script` for Windows in another file `binaries/windows/hello.cmd`
 echo "Hello, %1!"
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 Then update the `Dockerfile` to copy the `binaries` folder into the extension's container filesystem and make the
 files executable.
@@ -67,8 +67,8 @@ In your extension, use the Docker Desktop Client object to [invoke the shell scr
 provided by the extension with the `ddClient.extension.host.cli.exec()` function.
 In this example, the binary returns a string as result, obtained by `result?.stdout`, as soon as the extension view is rendered.
 
-{{< tabs group="framework" >}}
-{{< tab name="React" >}}
+{ { < tabs group="framework" > } }
+{ { < tab name="React" > } }
 
 ```typescript
 export function App() {
@@ -97,32 +97,32 @@ export function App() {
 }
 ```
 
-{{< /tab >}}
-{{< tab name="Vue" >}}
+{ { < /tab > } }
+{ { < tab name="Vue" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Vue yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Vue)
 > and let us know if you'd like a sample with Vue.
 
-{{< /tab >}}
-{{< tab name="Angular" >}}
+{ { < /tab > } }
+{ { < tab name="Angular" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Angular yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Angular)
 > and let us know if you'd like a sample with Angular.
 
-{{< /tab >}}
-{{< tab name="Svelte" >}}
+{ { < /tab > } }
+{ { < tab name="Svelte" > } }
 
 > [!IMPORTANT]
 >
 > We don't have an example for Svelte yet. [Fill out the form](https://docs.google.com/forms/d/e/1FAIpQLSdxJDGFJl5oJ06rG7uqtw1rsSBZpUhv_s9HHtw80cytkh2X-Q/viewform?usp=pp_url&entry.1333218187=Svelte)
 > and let us know if you'd like a sample with Svelte.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Configure the metadata file
 

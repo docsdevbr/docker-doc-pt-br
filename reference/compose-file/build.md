@@ -7,7 +7,7 @@ aliases:
 weight: 130
 ---
 
-{{< include "compose/build.md" >}}
+{ { < include "compose/build.md" > } }
 
 In the former case, the whole path is used as a Docker context to execute a Docker build, looking for a canonical
 `Dockerfile` at the root of the directory. The path can be absolute or relative. If it is relative, it is resolved
@@ -83,7 +83,7 @@ Alternatively `build` can be an object with fields defined as follows:
 
 ### additional_contexts
 
-{{< introduced compose 2.17.0 "/manuals/compose/release-notes.md#2170" >}}
+{ { < introduced compose 2.17.0 "/manuals/compose/release-notes.md#2170" > } }
 
 `additional_contexts` defines a list of named contexts the image builder should use during image build.
 
@@ -229,7 +229,7 @@ build:
 
 ### dockerfile_inline
 
-{{< introduced compose 2.17.0 "/manuals/compose/release-notes.md#2170" >}}
+{ { < introduced compose 2.17.0 "/manuals/compose/release-notes.md#2170" > } }
 
 `dockerfile_inline` defines the Dockerfile content as an inlined string in a Compose file. When set, the `dockerfile`
 attribute is not allowed and Compose rejects any Compose file having both set.
@@ -246,7 +246,7 @@ build:
 
 ### entitlements
 
-{{< introduced compose 2.27.1 "/manuals/compose/release-notes.md#2271" >}}
+{ { < introduced compose 2.27.1 "/manuals/compose/release-notes.md#2271" > } }
 
 `entitlements` defines extra privileged entitlements to be allowed during the build.
 
@@ -392,7 +392,7 @@ Composes reports an error in the following cases:
 
 ### privileged
 
-{{< introduced compose 2.15.0 "/manuals/compose/release-notes.md#2" >}}
+{ { < introduced compose 2.15.0 "/manuals/compose/release-notes.md#2" > } }
 
 `privileged` configures the service image to build with elevated privileges. Support and actual impacts are platform specific.
 
@@ -550,7 +550,7 @@ build:
 
 ### ulimits
 
-{{< introduced compose 2.23.1 "/manuals/compose/release-notes.md#2231" >}}
+{ { < introduced compose 2.23.1 "/manuals/compose/release-notes.md#2231" > } }
 
 `ulimits` overrides the default ulimits for a container. It's specified either as an integer for a single limit
 or as mapping for soft/hard limits.

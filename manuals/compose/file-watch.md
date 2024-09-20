@@ -5,9 +5,9 @@ title: Use Compose Watch
 weight: 80
 ---
 
-{{< introduced compose 2.22.0 "release-notes.md#2220" >}}
+{ { < introduced compose 2.22.0 "release-notes.md#2220" > } }
 
-{{< include "compose/watch.md" >}}
+{ { < include "compose/watch.md" > } }
 
 `watch` adheres to the following file path rules:
 * All paths are relative to the project directory
@@ -183,7 +183,7 @@ This setup demonstrates how to use the `sync+restart` action in Docker Compose t
 
 ## Use `watch`
 
-{{< include "compose/configure-watch.md" >}}
+{ { < include "compose/configure-watch.md" > } }
 
 > [!TIP]
 >

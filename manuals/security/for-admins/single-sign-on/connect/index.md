@@ -27,18 +27,18 @@ Make sure you have completed the following before you begin:
 
 ## Step four: Complete your SSO connection
 
-{{< tabs >}}
-{{< tab name="Admin Console" >}}
+{ { < tabs > } }
+{ { < tab name="Admin Console" > } }
 
-{{% admin-sso-connect product="admin" %}}
+{ { % admin-sso-connect product="admin" \%\}\}
 
-{{< /tab >}}
-{{< tab name="Docker Hub" >}}
+{ { < /tab > } }
+{ { < tab name="Docker Hub" > } }
 
-{{% admin-sso-connect product="hub" %}}
+{ { % admin-sso-connect product="hub" \%\}\}
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## More resources
 

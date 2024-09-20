@@ -119,9 +119,9 @@ To empty a volume:
 
 ## Export a volume
 
-{{% experimental title="Beta feature" %}}
+{ { % experimental title="Beta feature" \%\}\}
 The export volume feature is currently in [Beta](../../release-lifecycle.md#beta).
-{{% /experimental %}}
+{ { % /experimental \%\}\}
 
 You can export the content of a volume to a local file, a local image, an to an
 image in Docker Hub, or to a supported cloud provider. When exporting content
@@ -141,8 +141,8 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    cloud storage**, then specify the following additional details depending on
    your selection.
 
-   {{< tabs >}}
-   {{< tab name="Local or Hub storage" >}}
+   { { < tabs > } }
+   { { < tab name="Local or Hub storage" > } }
 
    - **Local file**: Specify a file name and select a folder.
    - **Local image**: Select a local image to export the content to. Any
@@ -153,8 +153,8 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
      publicly accessible. For more details, see
      [Change a repository from public to private](../../docker-hub/repos/index.md#change-a-repository-from-public-to-private).
 
-   {{< /tab >}}
-   {{< tab name="External cloud storage" >}}
+   { { < /tab > } }
+   { { < tab name="External cloud storage" > } }
 
    You must have a [Docker Business subscription](../../subscription/core-subscription/details.md) to export to an external cloud provider.
 
@@ -166,8 +166,8 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    - Microsoft Azure: [Generate a SAS token and URL](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/api/connection-strings/generate-sas-token)
    - Google Cloud: [Create a signed URL to upload an object](https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#upload-object)
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 6. Select **Save**.
 
@@ -190,8 +190,8 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    cloud storage**, then specify the following additional details depending on
    your selection.
 
-   {{< tabs >}}
-   {{< tab name="Local or Hub storage" >}}
+   { { < tabs > } }
+   { { < tab name="Local or Hub storage" > } }
 
    - **Local file**: Specify a file name and select a folder.
    - **Local image**: Select a local image to export the content to. Any
@@ -202,8 +202,8 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
      publicly accessible. For more details, see
      [Change a repository from public to private](../../docker-hub/repos/index.md#change-a-repository-from-public-to-private).
 
-   {{< /tab >}}
-   {{< tab name="External cloud storage" >}}
+   { { < /tab > } }
+   { { < tab name="External cloud storage" > } }
 
    You must have a [Docker Business subscription](../../subscription/core-subscription/details.md) to export to an external cloud provider.
 
@@ -215,8 +215,8 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
    - Microsoft Azure: [Generate a SAS token and URL](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/api/connection-strings/generate-sas-token)
    - Google Cloud: [Create a signed URL to upload an object](https://cloud.google.com/storage/docs/access-control/signing-urls-with-helpers#upload-object)
 
-   {{< /tab >}}
-   {{< /tabs >}}
+   { { < /tab > } }
+   { { < /tabs > } }
 
 7. Select **Save**.
 

@@ -1062,7 +1062,7 @@ To view an image's labels, use the `docker image inspect` command. You can use
 the `--format` option to show just the labels;
 
 ```console
-$ docker image inspect --format='{{json .Config.Labels}}' myimage
+$ docker image inspect --format='\{\{json .Config.Labels}}' myimage
 ```
 
 ```json

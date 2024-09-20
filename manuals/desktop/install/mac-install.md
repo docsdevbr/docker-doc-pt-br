@@ -25,15 +25,15 @@ aliases:
 
 This page contains download URLs, information about system requirements, and instructions on how to install Docker Desktop for Mac.
 
-{{< button text="Docker Desktop for Mac with Apple silicon" url="https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-arm64" >}}
-{{< button text="Docker Desktop for Mac with Intel chip" url="https://desktop.docker.com/mac/main/amd64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-amd64" >}}
+{ { < button text="Docker Desktop for Mac with Apple silicon" url="https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-arm64" > } }
+{ { < button text="Docker Desktop for Mac with Intel chip" url="https://desktop.docker.com/mac/main/amd64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-amd64" > } }
 
 *For checksums, see [Release notes](../release-notes.md).*
 
 ## System requirements
 
-{{< tabs >}}
-{{< tab name="Mac with Intel chip" >}}
+{ { < tabs > } }
+{ { < tab name="Mac with Intel chip" > } }
 
 - A supported version of macOS.
 
@@ -43,8 +43,8 @@ This page contains download URLs, information about system requirements, and ins
 
 - At least 4 GB of RAM.
 
-{{< /tab >}}
-{{< tab name="Mac with Apple silicon" >}}
+{ { < /tab > } }
+{ { < tab name="Mac with Apple silicon" > } }
 
 - A supported version of macOS.
 
@@ -58,8 +58,8 @@ This page contains download URLs, information about system requirements, and ins
    ```console
    $ softwareupdate --install-rosetta
    ```
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Install and run Docker Desktop on Mac
 

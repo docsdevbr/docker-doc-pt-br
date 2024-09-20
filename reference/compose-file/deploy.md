@@ -2,12 +2,12 @@
 title: Compose Deploy Specification
 description: Learn about the Compose Deploy Specification
 keywords: compose, compose specification, compose file reference, compose deploy specification
-aliases: 
+aliases:
  - /compose/compose-file/deploy/
 weight: 140
 ---
 
-{{< include "compose/deploy.md" >}}
+{ { < include "compose/deploy.md" > } }
 
 ## Attributes
 
@@ -241,7 +241,7 @@ deploy:
 - `condition`. When set to:
   - `none`, containers are not automatically restarted regardless of the exit status.
   - `on-failure`, the container is restarted if it exits due to an error, which manifests as a non-zero exit code.
-  - `any` (default), containers are restarted regardless of the exit status. 
+  - `any` (default), containers are restarted regardless of the exit status.
 - `delay`: How long to wait between restart attempts, specified as a [duration](extension.md#specifying-durations). The default is 0, meaning restart attempts can occur immediately.
 - `max_attempts`: How many times to attempt to restart a container before giving up (default: never give up). If the restart does not
   succeed within the configured `window`, this attempt doesn't count toward the configured `max_attempts` value.

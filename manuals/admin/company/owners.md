@@ -8,8 +8,8 @@ aliases:
 
 As a company owner, you can configure [Single Sign-on (SSO)](../../security/for-admins/single-sign-on/index.md) and [System for Cross-domain Identity Management (SCIM)](../../security/for-admins/provisioning/scim.md) for all organizations under the company.
 
-{{< tabs >}}
-{{< tab name="Docker Hub" >}}
+{ { < tabs > } }
+{ { < tab name="Docker Hub" > } }
 
 ## Add a company owner
 
@@ -27,10 +27,10 @@ Once you've added the new owner, you can view the user in the **Company owners**
 
     ![remove-owner](../images/remove-owner.png)
 
-{{< /tab >}}
-{{< tab name="Admin Console" >}}
+{ { < /tab > } }
+{ { < tab name="Admin Console" > } }
 
-{{< include "admin-early-access.md" >}}
+{ { < include "admin-early-access.md" > } }
 
 ## Add a company owner
 
@@ -49,5 +49,5 @@ Once you've added the new owner, you can view the user in the **Company owners**
 4. Select the **Action** icon in the row of the company owner that your want to remove.
 5. Select **Remove as company owner**.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }

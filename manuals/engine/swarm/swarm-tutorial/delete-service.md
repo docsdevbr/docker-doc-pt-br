@@ -54,4 +54,4 @@ you can delete the service from the swarm.
 
 Next, you'll set up a new service and apply a rolling update.
 
-{{< button text="Apply rolling updates" url="rolling-update.md" >}}
+{ { < button text="Apply rolling updates" url="rolling-update.md" > } }

@@ -59,7 +59,7 @@ $ docker scout sbom --format list alpine
 For more information about the `docker scout sbom` command, refer to the [CLI
 reference](../../../reference/cli/docker/scout/sbom.md).
 
-## Attach as build attestation {#attest}
+## Attach as build attestation { #attest }
 
 You can generate the SBOM and attach it to the image at build-time as an
 [attestation](../../build/metadata/attestations/index.md). BuildKit provides a default
@@ -94,7 +94,7 @@ buildx imagetools inspect` command. This command only works for images in a
 registry.
 
 ```console
-$ docker buildx imagetools inspect <image> --format "{{ json .SBOM }}" > sbom.spdx.json
+$ docker buildx imagetools inspect <image> --format "\{\{ json .SBOM }}" > sbom.spdx.json
 ```
 
 ### Local image

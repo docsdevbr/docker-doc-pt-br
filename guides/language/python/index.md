@@ -18,4 +18,4 @@ The Python language-specific guide teaches you how to containerize a Python appl
 
 Start by containerizing an existing Python application.
 
-{{< button text="Containerize a Python app" url="containerize.md" >}}
+{ { < button text="Containerize a Python app" url="containerize.md" > } }

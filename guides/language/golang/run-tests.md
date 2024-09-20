@@ -94,4 +94,4 @@ You should see output containing the following.
 In this section, you learned how to run tests when building your image. Next,
 you’ll learn how to set up a CI/CD pipeline using GitHub Actions.
 
-{{< button text="Configure CI/CD" url="configure-ci-cd.md" >}}
+{ { < button text="Configure CI/CD" url="configure-ci-cd.md" > } }

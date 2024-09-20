@@ -12,7 +12,7 @@ aliases:
  - /guides/docker-concepts/building-images/understanding-image-layers/
 ---
 
-{{< youtube-embed wJwqtAkmtQA >}}
+{ { < youtube-embed wJwqtAkmtQA > } }
 
 ## Explanation
 
@@ -210,4 +210,4 @@ If you’d like to dive deeper into the things you learned, check out the follow
 
 As hinted earlier, most image builds don’t use `docker container commit`. Instead, you’ll use a Dockerfile which automates these steps for you.
 
-{{< button text="Writing a Dockerfile" url="writing-a-dockerfile" >}}
+{ { < button text="Writing a Dockerfile" url="writing-a-dockerfile" > } }

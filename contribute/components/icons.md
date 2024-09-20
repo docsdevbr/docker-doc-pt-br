@@ -118,13 +118,13 @@ grid:
     description: Icon name = key
   - title: "2FA"
     icon: "phonelink_lock"
-    description: Icon name = phonelink_lock 
+    description: Icon name = phonelink_lock
   - title: "Add/update payment method"
     icon: "credit_score"
-    description: Icon name = credit_score 
+    description: Icon name = credit_score
   - title: "Update billing info"
     icon: "contract_edit"
-    description: Icon name = contract_edit 
+    description: Icon name = contract_edit
   - title: "Billing history"
     icon: "payments"
     description: Icon name = payments
@@ -133,10 +133,10 @@ grid:
     description: Icon name = upgrade
   - title: "Add/manage more seats/users"
     icon: "group_add"
-    description: Icon name = group_add 
+    description: Icon name = group_add
   - title: "Domains"
     icon: "domain_verification"
-    description: Icon name = domain_verification 
+    description: Icon name = domain_verification
   - title: Company owner
     description: Icon name = supervised_user_circle
     icon: supervised_user_circle
@@ -147,5 +147,5 @@ grid:
 
 Below is an inventory of the icons we use to represent different topics or features across docs. To be used with the [cards component](cards.md).
 
-{{< grid >}}
+{ { < grid > } }
 

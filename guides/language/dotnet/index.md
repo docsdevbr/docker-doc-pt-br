@@ -21,4 +21,4 @@ After completing the .NET getting started modules, you should be able to contain
 
 Start by containerizing an existing .NET application.
 
-{{< button text="Containerize a .NET app" url="containerize.md" >}}
+{ { < button text="Containerize a .NET app" url="containerize.md" > } }

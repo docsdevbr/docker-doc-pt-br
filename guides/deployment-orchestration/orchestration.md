@@ -28,8 +28,8 @@ The advanced modules teach you how to:
 
 Docker Desktop sets up Kubernetes for you quickly and easily. Follow the setup and validation instructions appropriate for your operating system:
 
-{{< tabs group="os" >}}
-{{< tab name="Mac and Linux" >}}
+{ { < tabs group="os" > } }
+{ { < tab name="Mac and Linux" > } }
 
 ### Mac
 
@@ -94,8 +94,8 @@ Docker Desktop sets up Kubernetes for you quickly and easily. Follow the setup a
     $ kubectl delete -f pod.yaml
     ```
 
-{{< /tab >}}
-{{< tab name="Windows" >}}
+{ { < /tab > } }
+{ { < tab name="Windows" > } }
 
 ### Windows
 
@@ -160,15 +160,15 @@ Docker Desktop sets up Kubernetes for you quickly and easily. Follow the setup a
     $ kubectl delete -f pod.yaml
     ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Enable Docker Swarm
 
 Docker Desktop runs primarily on Docker Engine, which has everything you need to run a Swarm built in. Follow the setup and validation instructions appropriate for your operating system:
 
-{{< tabs group="os" >}}
-{{< tab name="Mac" >}}
+{ { < tabs group="os" > } }
+{ { < tab name="Mac" > } }
 
 ### Mac
 
@@ -231,8 +231,8 @@ Docker Desktop runs primarily on Docker Engine, which has everything you need to
     $ docker service rm demo
     ```
 
-{{< /tab >}}
-{{< tab name="Windows" >}}
+{ { < /tab > } }
+{ { < tab name="Windows" > } }
 
 ### Windows
 
@@ -295,8 +295,8 @@ Docker Desktop runs primarily on Docker Engine, which has everything you need to
     $ docker service rm demo
     ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Conclusion
 

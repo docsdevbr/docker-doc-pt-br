@@ -73,7 +73,7 @@ The following example uses a template without headers and outputs the
 `Name` and `DriverEndpoint` entries separated by a colon (`:`):
 
 ```console
-$ docker buildx ls --format "{{.Name}}: {{.DriverEndpoint}}"
+$ docker buildx ls --format "\{\{\.Name}}: \{\{\.DriverEndpoint}}"
 elated_tesla: docker-container
 elated_tesla0: unix:///var/run/docker.sock
 elated_tesla1: ssh://ubuntu@1.2.3.4
@@ -86,7 +86,7 @@ fields. For example, the following template outputs the builder's and
 nodes' names with their respective endpoints:
 
 ```console
-$ docker buildx ls --format "{{.Builder.Name}}: {{range .Builder.Nodes}}\n  {{.Name}}: {{.Endpoint}}{{end}}"
+$ docker buildx ls --format "\{\{\.Builder.Name}}: \{\{range .Builder.Nodes}}\n  \{\{\.Name}}: \{\{\.Endpoint}}\{\{end}}"
 elated_tesla:
   elated_tesla0: unix:///var/run/docker.sock
   elated_tesla1: ssh://ubuntu@1.2.3.4

@@ -12,9 +12,9 @@ weight: 30
 
 When you upgrade to a paid subscription, you immediately have access to all the features and entitlements available in your new chosen subscription. For detailed information on features available in each subscription, see [Docker Pricing](https://www.docker.com/pricing).
 
-{{< include "tax-compliance.md" >}}
+{ { < include "tax-compliance.md" > } }
 
-## Upgrade your subscription 
+## Upgrade your subscription
 
 1. Sign in to your [Docker Hub](https://hub.docker.com) account.
 
@@ -33,4 +33,4 @@ When you upgrade to a paid subscription, you immediately have access to all the 
 6. Follow the on-screen instructions.
 
    If you have a coupon to use, you can enter it during this step.
-   
+

@@ -6,11 +6,11 @@ tags: [ Troubleshooting ]
 weight: 30
 ---
 
-{{< tabs >}}
-{{< tab name="For all platforms" >}}
+{ { < tabs > } }
+{ { < tab name="For all platforms" > } }
 * IPv6 is not yet supported on Docker Desktop.
-{{< /tab >}}
-{{< tab name="For Mac with Intel chip" >}}
+{ { < /tab > } }
+{ { < tab name="For Mac with Intel chip" > } }
 * The Mac Activity Monitor reports that Docker is using twice the amount of memory it's actually using. This is due to a bug in MacOS. We have written [a detailed report](https://docs.google.com/document/d/17ZiQC1Tp9iH320K-uqVLyiJmk4DHJ3c4zgQetJiKYQM/edit?usp=sharing) on this.
 
 * Force-ejecting the `.dmg` after running `Docker.app` from it can cause the
@@ -60,8 +60,8 @@ weight: 30
   synchronize between container directories and bind-mounted directories. We are
   actively working on performance improvements using a number of different
   techniques.  To learn more, see the [topic on our roadmap](https://github.com/docker/roadmap/issues/7).
-{{< /tab >}}
-{{< tab name="For Mac with Apple silicon" >}}
+{ { < /tab > } }
+{ { < tab name="For Mac with Apple silicon" > } }
 - On Apple silicon in native `arm64` containers, older versions of `libssl` such as `debian:buster`, `ubuntu:20.04`, and `centos:8` will segfault when connected to some TLS servers, for example, `curl https://dl.yarnpkg.com`. The bug is fixed in newer versions of `libssl` in `debian:bullseye`, `ubuntu:21.04`, and `fedora:35`.
 - Some command line tools do not work when Rosetta 2 is not installed.
   - The old version 1.x of `docker-compose`. Use Compose V2 instead - type `docker compose`.
@@ -73,5 +73,5 @@ weight: 30
    In summary, running Intel-based containers on Arm-based machines should be regarded as "best effort" only. We recommend running arm64 containers on Apple silicon machines whenever possible, and encouraging container authors to produce arm64, or multi-arch, versions of their containers. This issue should become less common over time, as more and more images are rebuilt [supporting multiple architectures](https://www.docker.com/blog/multi-arch-build-and-images-the-simple-way/).
 - `ping` from inside a container to the Internet does not work as expected.  To test the network, use `curl` or `wget`. See [docker/for-mac#5322](https://github.com/docker/for-mac/issues/5322#issuecomment-809392861).
 - Users may occasionally experience data drop when a TCP stream is half-closed.
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }

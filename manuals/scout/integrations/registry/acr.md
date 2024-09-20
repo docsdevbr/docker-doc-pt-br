@@ -52,20 +52,20 @@ The following table describes the configuration resources.
 The following JSON document shows the ARM template Docker Scout uses to create
 the Azure resources.
 
-{{< accordion title="JSON template" >}}
+{ { < accordion title="JSON template" > } }
 
-{{< acr-template.inline >}}
-{{ with resources.GetRemote "https://prod-scout-integration-templates.s3.amazonaws.com/latest/acr_token_template.json" }}
-{{ $data := .Content | transform.Unmarshal }}
+{ { < acr-template.inline > } }
+\{\{ with resources.GetRemote "https://prod-scout-integration-templates.s3.amazonaws.com/latest/acr_token_template.json" }}
+\{\{ $data := .Content | transform.Unmarshal }}
 
 ```json
-{{ transform.Remarshal "json" $data }}
+\{\{ transform.Remarshal "json" $data }}
 ```
 
-{{ end }}
-{{< /acr-template.inline >}}
+\{\{ end }}
+{ { < /acr-template.inline > } }
 
-{{< /accordion >}}
+{ { < /accordion > } }
 
 ## Integrate a registry
 

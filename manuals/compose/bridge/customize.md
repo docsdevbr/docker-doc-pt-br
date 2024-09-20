@@ -6,7 +6,7 @@ description: Learn about the Compose Bridge templates syntax
 keywords: compose, bridge, templates
 ---
 
-{{< include "compose-bridge-experimental.md" >}}
+{ { < include "compose-bridge-experimental.md" > } }
 
 This page explains how Compose Bridge utilizes templating to efficiently translate Docker Compose files into Kubernetes manifests. It also explain how you can customize these templates for your specific requirements and needs, or how you can build your own transformation.
 
@@ -33,13 +33,13 @@ Each YAML output file begins with custom header notation, for example:
 In the following example, a template iterates over services defined in a `compose.yaml` file. For each service, a dedicated Kubernetes manifest file is generated, named according to the service and containing specified configurations.
 
 ```yaml
-{{ range $name, $service := .services }}
+\{\{ range $name, $service := .services }}
 ---
-#! {{ $name }}-manifest.yaml
+#! \{\{ $name }}-manifest.yaml
 # Generated code, do not edit
 key: value
 ## ...
-{{ end }}
+\{\{ end }}
 ```
 
 ### Input
@@ -48,12 +48,12 @@ The input Compose model is the canonical YAML model you can get by running  `doc
 
  ```yaml
 # iterate over a yaml sequence
-{{ range $name, $service := .services }}
+\{\{ range $name, $service := .services }}
   # access a nested attribute using dot notation
-  {{ if eq $service.deploy.mode "global" }}
+  \{\{ if eq $service.deploy.mode "global" }}
 kind: DaemonSet
-  {{ end }}
-{{ end }}
+  \{\{ end }}
+\{\{ end }}
 ```
 
 You can check the [Compose Specification JSON schema](https://github.com/compose-spec/compose-go/blob/main/schema/compose-spec.json) to have a full overview of the Compose model. This schema outlines all possible configurations and their data types in the Compose model.
@@ -76,9 +76,9 @@ As part of the Go templating syntax, Compose Bridge offers a set of YAML helper 
 In the following example, the template checks if a healthcheck interval is specified for a service, applies the `seconds` function to convert this interval into seconds and assigns the value to the `periodSeconds` attribute.
 
 ```yaml
-{{ if $service.healthcheck.interval }}
-            periodSeconds: {{ $service.healthcheck.interval | seconds }}{{ end }}
-{{ end }}
+\{\{ if $service.healthcheck.interval }}
+            periodSeconds: \{\{ $service.healthcheck.interval | seconds }}\{\{ end }}
+\{\{ end }}
 ```
 
 ## Customization
@@ -122,29 +122,29 @@ to service definitions in the `compose.yaml` file, you can use the following cus
 to produce Ingress rules:
 
 ```yaml
-{{ $project := .name }}
-#! {{ $name }}-ingress.yaml
+\{\{ $project := .name }}
+#! \{\{ $name }}-ingress.yaml
 # Generated code, do not edit
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: virtual-host-ingress
-  namespace: {{ $project }}
+  namespace: \{\{ $project }}
 spec:
   rules:
-{{ range $name, $service := .services }}
-{{ if $service.x-virtual-host }}
-  - host: ${{ $service.x-virtual-host }}
+\{\{ range $name, $service := .services }}
+\{\{ if $service.x-virtual-host }}
+  - host: $\{\{ $service.x-virtual-host }}
     http:
       paths:
       - path: "/"
         backend:
           service:
-            name: ${{ name }}
+            name: $\{\{ name }}
             port:
               number: 80
-{{ end }}
-{{ end }}
+\{\{ end }}
+\{\{ end }}
 ```
 
 Once packaged into a Docker image, you can use this custom template

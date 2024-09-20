@@ -30,7 +30,7 @@ driver sends the following metadata in the structured log message:
 Some options are supported by specifying `--log-opt` as many times as needed:
 
 - `fluentd-address`: specify a socket address to connect to the Fluentd daemon, ex `fluentdhost:24224` or `unix:///path/to/fluentd.sock`.
-- `tag`: specify a tag for Fluentd messages. Supports some Go template markup, ex `{{.ID}}`, `{{.FullID}}` or `{{.Name}}` `docker.{{.ID}}`.
+- `tag`: specify a tag for Fluentd messages. Supports some Go template markup, ex `\{\{\.ID}}`, `\{\{\.FullID}}` or `\{\{\.Name}}` `docker.\{\{\.ID}}`.
 
 To use the `fluentd` driver as the default logging driver, set the `log-driver`
 and `log-opt` keys to appropriate values in the `daemon.json` file, which is

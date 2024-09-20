@@ -47,9 +47,9 @@ From the Docker Dashboard you can use Quick Search, which is located in the Dash
 
 ## The Docker menu
 
-Docker Desktop also provides an easy-access tray icon that appears in the taskbar and is referred to as the Docker menu {{< inline-image src="../../assets/images/whale-x.svg" alt="whale menu" >}}.
+Docker Desktop also provides an easy-access tray icon that appears in the taskbar and is referred to as the Docker menu { { < inline-image src="../../assets/images/whale-x.svg" alt="whale menu" > } }.
 
-To display the Docker menu, select the {{< inline-image src="../../assets/images/whale-x.svg" alt="whale menu" >}} icon. It displays the following options:
+To display the Docker menu, select the { { < inline-image src="../../assets/images/whale-x.svg" alt="whale menu" > } } icon. It displays the following options:
 
 - **Dashboard**. This takes you to the Docker Dashboard.
 - **Sign in/Sign up**

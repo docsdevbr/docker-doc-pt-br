@@ -92,14 +92,14 @@ To update the Compose plugin, run the following commands:
     ```console
     $ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
     $ mkdir -p $DOCKER_CONFIG/cli-plugins
-    $ curl -SL https://github.com/docker/compose/releases/download/{{% param "compose_version" %}}/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+    $ curl -SL https://github.com/docker/compose/releases/download/\{\{\% param "compose_version" \%\}\}/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
     ```
 
     This command downloads the latest release of Docker Compose (from the Compose releases repository) and installs Compose for the active user under `$HOME` directory.
 
     To install:
     * Docker Compose for _all users_ on your system, replace `~/.docker/cli-plugins` with `/usr/local/lib/docker/cli-plugins`.
-    * A different version of Compose, substitute `{{% param "compose_version" %}}` with the version of Compose you want to use.
+    * A different version of Compose, substitute `\{\{\% param "compose_version" \%\}\}` with the version of Compose you want to use.
     - For a different architecture, substitute `x86_64` with the [architecture you want](https://github.com/docker/compose/releases).
 
 
@@ -118,5 +118,5 @@ To update the Compose plugin, run the following commands:
 
     ```console
     $ docker compose version
-    Docker Compose version {{% param "compose_version" %}}
+    Docker Compose version \{\{\% param "compose_version" \%\}\}
     ```

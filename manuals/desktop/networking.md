@@ -50,7 +50,7 @@ See [Proxies](settings.md#proxies)
 
 ### SOCKS5 proxy support
 
-{{< introduced desktop 4.28.0 "release-notes.md#4280" >}}
+{ { < introduced desktop 4.28.0 "release-notes.md#4280" > } }
 
 > [!NOTE]
 >

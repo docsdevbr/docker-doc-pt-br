@@ -17,8 +17,8 @@ with [build-push-action] and [bake-action].
 [build-push-action]: https://github.com/docker/build-push-action/
 [bake-action]: https://github.com/docker/bake-action/
 
-{{< tabs >}}
-{{< tab name="build-push-action" >}}
+{ { < tabs > } }
+{ { < tab name="build-push-action" > } }
 
 ```yaml {hl_lines=32}
 name: ci
@@ -39,25 +39,25 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.IMAGE_NAME }}
+          images: $\{\{ env.IMAGE_NAME }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
+          tags: $\{\{ steps.meta.outputs.tags }}
+          annotations: $\{\{ steps.meta.outputs.annotations }}
           push: true
 ```
 
-{{< /tab >}}
-{{< tab name="bake-action" >}}
+{ { < /tab > } }
+{ { < tab name="bake-action" > } }
 
 ```yaml {hl_lines=37}
 name: ci
@@ -81,27 +81,27 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.IMAGE_NAME }}
+          images: $\{\{ env.IMAGE_NAME }}
 
       - name: Build
         uses: docker/bake-action@v5
         with:
           files: |
             ./docker-bake.hcl
-            ${{ steps.meta.outputs.bake-file-tags }}
-            ${{ steps.meta.outputs.bake-file-annotations }}
+            $\{\{ steps.meta.outputs.bake-file-tags }}
+            $\{\{ steps.meta.outputs.bake-file-annotations }}
           push: true
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Configure annotation level
 
@@ -134,22 +134,22 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Extract metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.IMAGE_NAME }}
+          images: $\{\{ env.IMAGE_NAME }}
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          tags: ${{ steps.meta.outputs.tags }}
-          annotations: ${{ steps.meta.outputs.annotations }}
+          tags: $\{\{ steps.meta.outputs.tags }}
+          annotations: $\{\{ steps.meta.outputs.annotations }}
           push: true
 ```
 

@@ -6,7 +6,7 @@ linkTitle: Usage and rate limits
 weight: 30
 ---
 
-{{< include "new-plans.md" >}}
+{ { < include "new-plans.md" > } }
 
 Docker may impose usage and rate limits for Docker Hub to ensure fair resource
 consumption and maintain service quality. Understanding your usage helps you

@@ -7,7 +7,7 @@ aliases:
  - /guides/docker-concepts/running-containers/overriding-container-defaults/
 ---
 
-{{< youtube-embed PFszWK3BB8I >}}
+{ { < youtube-embed PFszWK3BB8I > } }
 
 ## Explanation
 
@@ -204,5 +204,5 @@ This command runs a Postgres container, sets an environment variable for passwor
 
 Now that you have learned about overriding container defaults, it's time to learn how to persist container data.
 
-{{< button text="Persisting container data" url="persisting-container-data" >}}
+{ { < button text="Persisting container data" url="persisting-container-data" > } }
 

@@ -5,10 +5,10 @@ title: Insights
 sitemap: false
 ---
 
-{{% restricted title="Early Access" %}}
+{ { % restricted title="Early Access" \%\}\}
 Insights is an [early access](../../release-lifecycle.md#early-access-ea) feature and
 is only available to those in the early access feedback program.
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 > [!NOTE]
 > Insights requires a [Docker Business

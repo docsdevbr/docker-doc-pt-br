@@ -183,7 +183,7 @@ Then:
 In `docker inspect`, this port mapping will be shown as follows. Note that
 there is no `HostPort` for IPv6, because it is using `routed` mode:
 ```console
-$ docker container inspect <id> --format "{{json .NetworkSettings.Ports}}"
+$ docker container inspect <id> --format "\{\{json .NetworkSettings.Ports}}"
 {"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"8080"},{"HostIp":"::","HostPort":""}]}
 ```
 

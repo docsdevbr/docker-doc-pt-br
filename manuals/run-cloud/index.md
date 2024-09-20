@@ -5,9 +5,9 @@ keywords: run, cloud, docker desktop, resources
 sitemap: false
 ---
 
-{{% restricted title="Private preview" %}}
+{ { % restricted title="Private preview" \%\}\}
 Docker Run Cloud is in Private preview.
-{{% /restricted %}}
+{ { % /restricted \%\}\}
 
 Docker Run Cloud brings the power of the cloud to your local development workflow. You can now run your applications in the cloud whilst continuing to use your existing tools and workflows and without worrying about local resource limitations. Docker Run Cloud also lets you share previews of your cloud-based applications for real-time feedback.
 
@@ -26,8 +26,8 @@ This guide introduces you to essential commands and steps for creating, managing
 
 ### Step one: Create a cloud engine
 
-{{< tabs group="method" >}}
-{{< tab name="Docker Desktop">}}
+{ { < tabs group="method" > } }
+{ { < tab name="Docker Desktop"> } }
 
 1. In the Docker Dashboard, navigate to the **Docker Run Cloud** tab.
 2. In the top right-hand corner, select **Create Cloud Engine**.
@@ -41,8 +41,8 @@ This guide introduces you to essential commands and steps for creating, managing
 
 To verify creation, check the context switcher in the top-left corner of the Docker Dashboard; it should display `cloudengine`. You’re now ready to use it.
 
-{{< /tab >}}
-{{< tab name="CLI">}}
+{ { < /tab > } }
+{ { < tab name="CLI"> } }
 
 Run the following command:
 
@@ -70,8 +70,8 @@ You should see the following:
 ...
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Step two: Run and remove containers with the newly created cloud engine
 
@@ -92,8 +92,8 @@ Running a container with a cloud engine is just as straightforward as running it
 
 ### Step three: Create and switch to a new cloud engine
 
-{{< tabs group="method" >}}
-{{< tab name="Docker Desktop">}}
+{ { < tabs group="method" > } }
+{ { < tab name="Docker Desktop"> } }
 
 1. Create a new cloud engine:
    - Enter `cloudengine2` as the name
@@ -102,8 +102,8 @@ Running a container with a cloud engine is just as straightforward as running it
    In the **Docker Run Cloud** view you should now see both `cloudengine` and `cloudengine2`.
 2. Switch between engines, also known as your Docker contexts. Use the context switcher in the top-left corner of the Docker Dashboard to toggle between your cloud engines or switch from your local engine (`desktop-linux`) to a cloud engine.
 
-{{< /tab >}}
-{{< tab name="CLI">}}
+{ { < /tab > } }
+{ { < tab name="CLI"> } }
 
 1. Create a new cloud engine. Run:
    ```console
@@ -119,15 +119,15 @@ Running a container with a cloud engine is just as straightforward as running it
    $ docker context use desktop-linux
    ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Step four: Use a file sync for your cloud engine
 
 Docker Run Cloud takes advantage of [Synchronized file shares](../desktop/synchronized-file-sharing.md) to enable local-to-remote file shares and port mappings.
 
-{{< tabs group="method" >}}
-{{< tab name="Docker Desktop">}}
+{ { < tabs group="method" > } }
+{ { < tab name="Docker Desktop"> } }
 
 1. Clone the [Awesome Compose](https://github.com/docker/awesome-compose) repository.
 2. In the Docker Dashboard, navigate to the **Docker Run Cloud** view.
@@ -143,8 +143,8 @@ Docker Run Cloud takes advantage of [Synchronized file shares](../desktop/synchr
    You should see the home page. The code for this page is located in `react-express-mysql/frontend/src/App.js`.
 9. In an IDE or text editor, open the `App.js` file, change some text, and save. Watch as the code reloads live in your browser.
 
-{{< /tab >}}
-{{< tab name="CLI">}}
+{ { < /tab > } }
+{ { < tab name="CLI"> } }
 
 1. Clone the [Awesome Compose](https://github.com/docker/awesome-compose) repository.
 2. In your terminal, change into the `awesome-compose/react-express-mysql` directory.
@@ -159,13 +159,13 @@ Docker Run Cloud takes advantage of [Synchronized file shares](../desktop/synchr
    You should see the home page. The code for this page is located in `react-express-mysql/frontend/src/App.js`.
 6. In an IDE or text editor, open the `App.js` file, change some text, and save. Watch as the code reloads live in your browser.
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Step five: Share a container port
 
-{{< tabs group="method" >}}
-{{< tab name="Docker Desktop">}}
+{ { < tabs group="method" > } }
+{ { < tab name="Docker Desktop"> } }
 
 1. Make sure your Docker context is set to `cloudengine`.
 2. In your terminal, run the Nginx container:
@@ -179,8 +179,8 @@ Docker Run Cloud takes advantage of [Synchronized file shares](../desktop/synchr
 
 To view all shared ports for your Docker context, select the **Shared ports** icon in the bottom-right corner of the Docker Dashboard.
 
-{{< /tab >}}
-{{< tab name="CLI">}}
+{ { < /tab > } }
+{ { < tab name="CLI"> } }
 
 To share a container port, make sure your Docker context is set to `cloudengine` and then run:
 ``` console
@@ -194,13 +194,13 @@ To see a list of all your shared ports, run:
 $ docker harmonia engine share list
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ### Step six: Clean up
 
-{{< tabs group="method" >}}
-{{< tab name="Docker Desktop">}}
+{ { < tabs group="method" > } }
+{ { < tab name="Docker Desktop"> } }
 
 To remove a file sync session:
 1. Navigate to your cloud engine in the **Docker Run Cloud** view.
@@ -210,8 +210,8 @@ To remove a file sync session:
 
 To remove a cloud engine, navigate to the **Docker Run Cloud** view and then select the **delete** icon.
 
-{{< /tab >}}
-{{< tab name="CLI">}}
+{ { < /tab > } }
+{ { < tab name="CLI"> } }
 
 To remove the file sync session, run:
 
@@ -225,8 +225,8 @@ To remove a cloud engine, run:
 $ docker harmonia engine delete <name-of-engine>
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 ## Troubleshoot
 

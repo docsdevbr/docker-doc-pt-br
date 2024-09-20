@@ -53,7 +53,7 @@ After restarting the daemon, running `docker info` shows that you're using
 containerd snapshotter storage drivers.
 
 ```console
-$ docker info -f '{{ .DriverStatus }}'
+$ docker info -f '\{\{\.DriverStatus }}'
 [[driver-type io.containerd.snapshotter.v1]]
 ```
 

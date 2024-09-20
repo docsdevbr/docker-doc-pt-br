@@ -19,4 +19,4 @@ The Node.js language-specific guide teaches you how to containerize a Node.js ap
 
 Start by containerizing an existing Node.js application.
 
-{{< button text="Containerize a Node.js app" url="containerize.md" >}}
+{ { < button text="Containerize a Node.js app" url="containerize.md" > } }

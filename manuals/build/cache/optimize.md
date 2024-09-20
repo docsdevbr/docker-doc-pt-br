@@ -151,7 +151,7 @@ There are a few things to be aware of when using bind mounts in a build:
   are hidden by the mounted files. The original contents are restored after the
   `RUN` instruction is done.
 
-  {{< accordion title="Example" >}}
+  { { < accordion title="Example" > } }
 
   For example, given a build context with only a `Dockerfile` in it:
 
@@ -186,7 +186,7 @@ There are a few things to be aware of when using bind mounts in a build:
   #10 DONE 0.1s
   ```
 
-  {{< /accordion >}}
+  { { < /accordion > } }
 
 ## Use cache mounts
 
@@ -220,16 +220,16 @@ How you specify cache mounts depends on the build tool you're using. If you're
 unsure how to specify cache mounts, refer to the documentation for the build
 tool you're using. Here are a few examples:
 
-{{< tabs >}}
-{{< tab name="Go" >}}
+{ { < tabs > } }
+{ { < tab name="Go" > } }
 
 ```dockerfile
 RUN --mount=type=cache,target=/go/pkg/mod \
     go build -o /app/hello
 ```
 
-{{< /tab >}}
-{{< tab name="Apt" >}}
+{ { < /tab > } }
+{ { < tab name="Apt" > } }
 
 ```dockerfile
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
@@ -237,24 +237,24 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   apt update && apt-get --no-install-recommends install -y gcc
 ```
 
-{{< /tab >}}
-{{< tab name="Python" >}}
+{ { < /tab > } }
+{ { < tab name="Python" > } }
 
 ```dockerfile
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -r requirements.txt
 ```
 
-{{< /tab >}}
-{{< tab name="Ruby" >}}
+{ { < /tab > } }
+{ { < tab name="Ruby" > } }
 
 ```dockerfile
 RUN --mount=type=cache,target=/root/.gem \
     bundle install
 ```
 
-{{< /tab >}}
-{{< tab name="Rust" >}}
+{ { < /tab > } }
+{ { < tab name="Rust" > } }
 
 ```dockerfile
 RUN --mount=type=cache,target=/app/target/ \
@@ -263,24 +263,24 @@ RUN --mount=type=cache,target=/app/target/ \
     cargo build
 ```
 
-{{< /tab >}}
-{{< tab name=".NET" >}}
+{ { < /tab > } }
+{ { < tab name=".NET" > } }
 
 ```dockerfile
 RUN --mount=type=cache,target=/root/.nuget/packages \
     dotnet restore
 ```
 
-{{< /tab >}}
-{{< tab name="PHP" >}}
+{ { < /tab > } }
+{ { < tab name="PHP" > } }
 
 ```dockerfile
 RUN --mount=type=cache,target=/tmp/cache \
     composer install
 ```
 
-{{< /tab >}}
-{{< /tabs >}}
+{ { < /tab > } }
+{ { < /tabs > } }
 
 It's important that you read the documentation for the build tool you're using
 to make sure you're using the correct cache mount options. Package managers
@@ -329,8 +329,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: $\{\{ vars.DOCKERHUB_USERNAME }}
+          password: $\{\{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6

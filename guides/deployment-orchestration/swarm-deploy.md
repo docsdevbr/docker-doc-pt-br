@@ -7,7 +7,7 @@ aliases:
 - /get-started/swarm-deploy/
 ---
 
-{{< include "swarm-mode.md" >}}
+{ { < include "swarm-mode.md" > } }
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Swarm never creates individual containers like you did in the previous step of t
 
 Now you can write a simple stack file to run and manage your Todo app, the container `getting-started` image created in [Part 2](../../get-started/workshop/02_our_app.md) of the tutorial. Place the following in a file called `bb-stack.yaml`:
 
-{{< include "swarm-compose-compat.md" >}}
+{ { < include "swarm-compose-compat.md" > } }
 
 ```yaml
 version: '3.7'

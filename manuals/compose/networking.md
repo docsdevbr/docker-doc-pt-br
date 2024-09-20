@@ -6,7 +6,7 @@ linkTitle: Networking
 weight: 130
 ---
 
-{{< include "compose-eol.md" >}}
+{ { < include "compose-eol.md" > } }
 
 By default Compose sets up a single
 [network](../../reference/cli/docker/network/create.md) for your app. Each

@@ -25,9 +25,9 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ## 4.34.2
 
-{{< release-date date="2024-09-12" >}}
+{ { < release-date date="2024-09-12" > } }
 
-{{< desktop-install-v2 all=true beta_win_arm=true version="4.34.2" build_path="/167172/" >}}
+{ { < desktop-install-v2 all=true beta_win_arm=true version="4.34.2" build_path="/167172/" > } }
 
 ### Bug fixes and enhancements
 
@@ -42,9 +42,9 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ## 4.34.1
 
-{{< release-date date="2024-09-05" >}}
+{ { < release-date date="2024-09-05" > } }
 
-{{< desktop-install-v2 win=true beta_win_arm=true version="4.34.1" build_path="/166053/" >}}
+{ { < desktop-install-v2 win=true beta_win_arm=true version="4.34.1" build_path="/166053/" > } }
 
 ### Bug fixes and enhancements
 
@@ -54,9 +54,9 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ## 4.34.0
 
-{{< release-date date="2024-08-29" >}}
+{ { < release-date date="2024-08-29" > } }
 
-{{< desktop-install-v2 all=true beta_win_arm=true version="4.34.0" build_path="/165256/" >}}
+{ { < desktop-install-v2 all=true beta_win_arm=true version="4.34.0" build_path="/165256/" > } }
 
 ### New
 
@@ -116,9 +116,9 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ## 4.33.1
 
-{{< release-date date="2024-07-31" >}}
+{ { < release-date date="2024-07-31" > } }
 
-{{< desktop-install-v2 win=true beta_win_arm=true version="4.33.0" build_path="/161083/" >}}
+{ { < desktop-install-v2 win=true beta_win_arm=true version="4.33.0" build_path="/161083/" > } }
 
 ### Bug fixes and enhancements
 
@@ -128,9 +128,9 @@ Take a look at the [Docker Public Roadmap](https://github.com/orgs/docker/projec
 
 ## 4.33.0
 
-{{< release-date date="2024-07-25" >}}
+{ { < release-date date="2024-07-25" > } }
 
-{{< desktop-install-v2 all=true beta_win_arm=true version="4.33.0" build_path="/160616/" >}}
+{ { < desktop-install-v2 all=true beta_win_arm=true version="4.33.0" build_path="/160616/" > } }
 
 ### New
 
@@ -201,9 +201,9 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 
 ## 4.32.0
 
-{{< release-date date="2024-07-04" >}}
+{ { < release-date date="2024-07-04" > } }
 
-{{< desktop-install-v2 all=true beta_win_arm=true version="4.32.0" build_path="/157355/" >}}
+{ { < desktop-install-v2 all=true beta_win_arm=true version="4.32.0" build_path="/157355/" > } }
 
 ### New
 
@@ -271,9 +271,9 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 
 ## 4.31.1
 
-{{< release-date date="2024-06-10" >}}
+{ { < release-date date="2024-06-10" > } }
 
-{{< desktop-install win=true beta_win_arm=true version="4.31.1" build_path="/153621/" >}}
+{ { < desktop-install win=true beta_win_arm=true version="4.31.1" build_path="/153621/" > } }
 
 ### Bug fixes and enhancements
 
@@ -283,9 +283,9 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 
 ## 4.31.0
 
-{{< release-date date="2024-06-06" >}}
+{ { < release-date date="2024-06-06" > } }
 
-{{< desktop-install all=true beta_win_arm=true version="4.31.0" build_path="/153195/" >}}
+{ { < desktop-install all=true beta_win_arm=true version="4.31.0" build_path="/153195/" > } }
 
 ### New
 
@@ -369,9 +369,9 @@ For more information, see [microsoft/WSL#11794](https://github.com/microsoft/WSL
 
 ## 4.30.0
 
-{{< release-date date="2024-05-06" >}}
+{ { < release-date date="2024-05-06" > } }
 
-{{< desktop-install all=true beta_win_arm=true version="4.30.0" build_path="/149282/" >}}
+{ { < desktop-install all=true beta_win_arm=true version="4.30.0" build_path="/149282/" > } }
 
 ### New
 
@@ -451,9 +451,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.29.0
 
-{{< release-date date="2024-04-08" >}}
+{ { < release-date date="2024-04-08" > } }
 
-{{< desktop-install all=true version="4.29.0" build_path="/145265/" >}}
+{ { < desktop-install all=true version="4.29.0" build_path="/145265/" > } }
 
 ### New
 
@@ -531,9 +531,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.28.0
 
-{{< release-date date="2024-02-26" >}}
+{ { < release-date date="2024-02-26" > } }
 
-{{< desktop-install all=true version="4.28.0" build_path="/139021/" >}}
+{ { < desktop-install all=true version="4.28.0" build_path="/139021/" > } }
 
 ### New
 
@@ -600,9 +600,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.27.2
 
-{{< release-date date="2024-02-08" >}}
+{ { < release-date date="2024-02-08" > } }
 
-{{< desktop-install all=true version="4.27.2" build_path="/137060/" >}}
+{ { < desktop-install all=true version="4.27.2" build_path="/137060/" > } }
 
 ### Upgrades
 
@@ -636,9 +636,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.27.1
 
-{{< release-date date="2024-02-01" >}}
+{ { < release-date date="2024-02-01" > } }
 
-{{< desktop-install all=true version="4.27.1" build_path="/136059/" >}}
+{ { < desktop-install all=true version="4.27.1" build_path="/136059/" > } }
 
 ### Upgrades
 
@@ -654,9 +654,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.27.0
 
-{{< release-date date="2024-01-25" >}}
+{ { < release-date date="2024-01-25" > } }
 
-{{< desktop-install all=true version="4.27.0" build_path="/135262/" >}}
+{ { < desktop-install all=true version="4.27.0" build_path="/135262/" > } }
 
 ### New
 
@@ -745,9 +745,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.26.1
 
-{{< release-date date="2023-12-14" >}}
+{ { < release-date date="2023-12-14" > } }
 
-{{< desktop-install all=true version="4.26.1" build_path="/131620/" >}}
+{ { < desktop-install all=true version="4.26.1" build_path="/131620/" > } }
 
 ### Bug fixes and enhancements
 
@@ -761,9 +761,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.26.0
 
-{{< release-date date="2023-12-04" >}}
+{ { < release-date date="2023-12-04" > } }
 
-{{< desktop-install all=true version="4.26.0" build_path="/130397/" >}}
+{ { < desktop-install all=true version="4.26.0" build_path="/130397/" > } }
 
 ### New
 
@@ -838,9 +838,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.25.2
 
-{{< release-date date="2023-11-21" >}}
+{ { < release-date date="2023-11-21" > } }
 
-{{< desktop-install all=true version="4.25.2" build_path="/129061/" >}}
+{ { < desktop-install all=true version="4.25.2" build_path="/129061/" > } }
 
 ### Bug fixes and enhancements
 
@@ -854,9 +854,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.25.1
 
-{{< release-date date="2023-11-13" >}}
+{ { < release-date date="2023-11-13" > } }
 
-{{< desktop-install all=true version="4.25.1" build_path="/128006/" >}}
+{ { < desktop-install all=true version="4.25.1" build_path="/128006/" > } }
 
 ### Bug fixes and enhancements
 
@@ -874,9 +874,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.25.0
 
-{{< release-date date="2023-10-26" >}}
+{ { < release-date date="2023-10-26" > } }
 
-{{< desktop-install all=true version="4.25.0" build_path="/126437/" >}}
+{ { < desktop-install all=true version="4.25.0" build_path="/126437/" > } }
 
 ### New
 
@@ -949,9 +949,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.24.2
 
-{{< release-date date="2023-10-12" >}}
+{ { < release-date date="2023-10-12" > } }
 
-{{< desktop-install all=true version="4.24.2" build_path="/124339/" >}}
+{ { < desktop-install all=true version="4.24.2" build_path="/124339/" > } }
 
 ### Bug fixes and enhancements
 
@@ -962,9 +962,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.24.1
 
-{{< release-date date="2023-10-04" >}}
+{ { < release-date date="2023-10-04" > } }
 
-{{< desktop-install win=true version="4.24.1" build_path="/123237/" >}}
+{ { < desktop-install win=true version="4.24.1" build_path="/123237/" > } }
 
 ### Bug fixes and enhancements
 
@@ -974,9 +974,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.24.0
 
-{{< release-date date="2023-09-28" >}}
+{ { < release-date date="2023-09-28" > } }
 
-{{< desktop-install all=true version="4.24.0" build_path="/122432/" >}}
+{ { < desktop-install all=true version="4.24.0" build_path="/122432/" > } }
 
 ### New
 
@@ -1043,7 +1043,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.23.0
 
-{{< release-date date="2023-09-11" >}}
+{ { < release-date date="2023-09-11" > } }
 
 ### Upgrades
 
@@ -1113,7 +1113,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.22.1
 
-{{< release-date date="2023-08-24" >}}
+{ { < release-date date="2023-08-24" > } }
 
 ### Bug fixes and enhancements
 
@@ -1127,7 +1127,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.22.0
 
-{{< release-date date="2023-08-03" >}}
+{ { < release-date date="2023-08-03" > } }
 
 ### Upgrades
 
@@ -1179,7 +1179,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.21.1
 
-{{< release-date date="2023-07-03" >}}
+{ { < release-date date="2023-07-03" > } }
 
 #### For all platforms
 
@@ -1191,7 +1191,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.21.0
 
-{{< release-date date="2023-06-29" >}}
+{ { < release-date date="2023-06-29" > } }
 
 ### New
 
@@ -1241,7 +1241,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.20.1
 
-{{< release-date date="2023-06-05" >}}
+{ { < release-date date="2023-06-05" > } }
 
 ### Bug fixes and enhancements
 
@@ -1256,7 +1256,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.20.0
 
-{{< release-date date="2023-05-30" >}}
+{ { < release-date date="2023-05-30" > } }
 
 ### Upgrades
 
@@ -1295,7 +1295,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.19.0
 
-{{< release-date date="2023-04-27" >}}
+{ { < release-date date="2023-04-27" > } }
 
 ### New
 
@@ -1366,7 +1366,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.18.0
 
-{{< release-date date="2023-04-03" >}}
+{ { < release-date date="2023-04-03" > } }
 
 ### New
 
@@ -1430,7 +1430,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.17.1
 
-{{< release-date date="2023-03-20" >}}
+{ { < release-date date="2023-03-20" > } }
 
 ### Bug fixes and enhancements
 
@@ -1447,7 +1447,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.17.0
 
-{{< release-date date="2023-02-27" >}}
+{ { < release-date date="2023-02-27" > } }
 
 ### New
 
@@ -1526,7 +1526,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.16.3
 
-{{< release-date date="2023-01-30" >}}
+{ { < release-date date="2023-01-30" > } }
 
 ### Bug fixes and enhancements
 
@@ -1537,7 +1537,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.16.2
 
-{{< release-date date="2023-01-19" >}}
+{ { < release-date date="2023-01-19" > } }
 
 ### Bug fixes and enhancements
 
@@ -1556,7 +1556,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.16.1
 
-{{< release-date date="2023-01-13" >}}
+{ { < release-date date="2023-01-13" > } }
 
 ### Bug fixes and enhancements
 
@@ -1566,7 +1566,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.16.0
 
-{{< release-date date="2023-01-12" >}}
+{ { < release-date date="2023-01-12" > } }
 
 ### New
 
@@ -1628,7 +1628,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.15.0
 
-{{< release-date date="2022-12-01" >}}
+{ { < release-date date="2022-12-01" > } }
 
 ### New
 
@@ -1679,7 +1679,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.14.1
 
-{{< release-date date="2022-11-17" >}}
+{ { < release-date date="2022-11-17" > } }
 
 ### Bug fixes and enhancements
 
@@ -1694,7 +1694,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.14.0
 
-{{< release-date date="2022-11-10" >}}
+{ { < release-date date="2022-11-10" > } }
 
 ### New
 
@@ -1753,7 +1753,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.13.1
 
-{{< release-date date="2022-10-31" >}}
+{ { < release-date date="2022-10-31" > } }
 
 ### Updates
 
@@ -1778,7 +1778,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.13.0
 
-{{< release-date date="2022-10-19" >}}
+{ { < release-date date="2022-10-19" > } }
 
 ### New
 
@@ -1843,7 +1843,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.12.0
 
-{{< release-date date="2022-09-01" >}}
+{ { < release-date date="2022-09-01" > } }
 
 ### New
 
@@ -1921,7 +1921,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.11.1
 
-{{< release-date date="2022-08-05" >}}
+{ { < release-date date="2022-08-05" > } }
 
 ### Bug fixes and enhancements
 
@@ -1935,7 +1935,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.11.0
 
-{{< release-date date="2022-07-28" >}}
+{ { < release-date date="2022-07-28" > } }
 
 ### New
 
@@ -1991,7 +1991,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.10.1
 
-{{< release-date date="2022-07-05" >}}
+{ { < release-date date="2022-07-05" > } }
 
 ### Bug fixes and enhancements
 
@@ -2005,7 +2005,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.10.0
 
-{{< release-date date="2022-06-30" >}}
+{ { < release-date date="2022-06-30" > } }
 
 ### New
 
@@ -2073,9 +2073,9 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.9.1
 
-{{< release-date date="2022-06-16" >}}
+{ { < release-date date="2022-06-16" > } }
 
-{{< desktop-install all=true version="4.9.1" build_path="/81317/" >}}
+{ { < desktop-install all=true version="4.9.1" build_path="/81317/" > } }
 
 ### Bug fixes and enhancements
 
@@ -2085,7 +2085,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.9.0
 
-{{< release-date date="2022-06-02" >}}
+{ { < release-date date="2022-06-02" > } }
 
 ### New
 
@@ -2133,7 +2133,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.8.2
 
-{{< release-date date="2022-05-18" >}}
+{ { < release-date date="2022-05-18" > } }
 
 ### Updates
 
@@ -2153,7 +2153,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.8.1
 
-{{< release-date date="2022-05-09" >}}
+{ { < release-date date="2022-05-09" > } }
 
 ### New
 
@@ -2174,7 +2174,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.8.0
 
-{{< release-date date="2022-05-06" >}}
+{ { < release-date date="2022-05-06" > } }
 
 ### New
 
@@ -2234,7 +2234,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.7.1
 
-{{< release-date date="2022-04-19" >}}
+{ { < release-date date="2022-04-19" > } }
 
 ### Bug fixes and enhancements
 
@@ -2249,7 +2249,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.7.0
 
-{{< release-date date="2022-04-07" >}}
+{ { < release-date date="2022-04-07" > } }
 
 ### New
 
@@ -2292,7 +2292,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.6.1
 
-{{< release-date date="2022-03-22" >}}
+{ { < release-date date="2022-03-22" > } }
 
 ### Updates
 
@@ -2306,7 +2306,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.6.0
 
-{{< release-date date="2022-03-14" >}}
+{ { < release-date date="2022-03-14" > } }
 
 ### New
 
@@ -2376,7 +2376,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 ## 4.5.1
 
-{{< release-date date="2022-02-15" >}}
+{ { < release-date date="2022-02-15" > } }
 
 ### Bug fixes and enhancements
 
@@ -2390,7 +2390,7 @@ Alternatively, you can edit the Docker Desktop settings file located at `%APPDAT
 
 ## 4.5.0
 
-{{< release-date date="2022-02-10" >}}
+{ { < release-date date="2022-02-10" > } }
 
 ### New
 
@@ -2438,7 +2438,7 @@ Installing Docker Desktop 4.5.0 from scratch has a bug which defaults Docker Des
 
 ## 4.4.4
 
-{{< release-date date="2022-01-24" >}}
+{ { < release-date date="2022-01-24" > } }
 
 ### Bug fixes and enhancements
 
@@ -2456,7 +2456,7 @@ Installing Docker Desktop 4.5.0 from scratch has a bug which defaults Docker Des
 
 ## 4.4.3
 
-{{< release-date date="2022-01-14" >}}
+{ { < release-date date="2022-01-14" > } }
 
 ### Bug fixes and enhancements
 
@@ -2474,7 +2474,7 @@ Installing Docker Desktop 4.5.0 from scratch has a bug which defaults Docker Des
 
 ## 4.4.2
 
-{{< release-date date="22-01-13" >}}
+{ { < release-date date="22-01-13" > } }
 
 ### New
 
@@ -2527,7 +2527,7 @@ This only affects users if they are on Docker Desktop 4.3.0, 4.3.1 and the user 
 
 ## 4.3.2
 
-{{< release-date date="2021-12-21" >}}
+{ { < release-date date="2021-12-21" > } }
 
 ### Security
 
@@ -2552,7 +2552,7 @@ CVE-2021-44228](https://www.docker.com/blog/apache-log4j-2-cve-2021-44228/).
 
 ## 4.3.1
 
-{{< release-date date="2021-12-11" >}}
+{ { < release-date date="2021-12-11" > } }
 
 ### Upgrades
 
@@ -2571,7 +2571,7 @@ CVE-2021-44228](https://www.docker.com/blog/apache-log4j-2-cve-2021-44228/).
 
 ## 4.3.0
 
-{{< release-date date="2021-12-02" >}}
+{ { < release-date date="2021-12-02" > } }
 
 ### Upgrades
 
@@ -2617,7 +2617,7 @@ actual memory usage. See
 
 ## 4.2.0
 
-{{< release-date date="2021-11-09" >}}
+{ { < release-date date="2021-11-09" > } }
 
 ### New
 
@@ -2663,7 +2663,7 @@ actual memory usage. See
 
 ## 4.1.1
 
-{{< release-date date="2021-10-12" >}}
+{ { < release-date date="2021-10-12" > } }
 
 ### Bug fixes and minor changes
 
@@ -2682,7 +2682,7 @@ actual memory usage. See
 
 ## 4.1.0
 
-{{< release-date date="2021-09-30" >}}
+{ { < release-date date="2021-09-30" > } }
 
 ### New
 
@@ -2721,7 +2721,7 @@ Docker Desktop may fail to start when upgrading to 4.1.0 on some WSL-based distr
 
 ## 4.0.1
 
-{{< release-date date="2021-09-13" >}}
+{ { < release-date date="2021-09-13" > } }
 
 ### Upgrades
 
@@ -2742,7 +2742,7 @@ Docker Desktop may fail to start when upgrading to 4.1.0 on some WSL-based distr
 
 ## 4.0.0
 
-{{< release-date date="2021-08-31" >}}
+{ { < release-date date="2021-08-31" > } }
 
 ### New
 

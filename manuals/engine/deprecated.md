@@ -1046,7 +1046,7 @@ Because of which, the driver specific log tag options `syslog-tag`, `gelf-tag` a
 `fluentd-tag` have been deprecated in favor of the generic `tag` option.
 
 ```console
-$ docker --log-driver=syslog --log-opt tag="{{.ImageName}}/{{.Name}}/{{.ID}}"
+$ docker --log-driver=syslog --log-opt tag="\{\{\.ImageName}}/\{\{\.Name}}/\{\{\.ID}}"
 ```
 
 ### Docker Content Trust ENV passphrase variables name change
