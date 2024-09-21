@@ -15,7 +15,7 @@ services.
 
 If a service is defined in both files, Compose merges the configurations using
 the rules described below and in the
-[Compose Specification](../../../reference/compose-file/merge.md).
+[Compose Specification](../../../../reference/compose-file/merge.md).
 
 ## How to merge multiple Compose files
 
@@ -101,7 +101,7 @@ relative to the base file.
 
 - You can use the `-f` flag to specify a path to a Compose file that is not located in the current directory, either from the command line or by setting up a [COMPOSE_FILE environment variable](../environment-variables/envvars.md#compose_file) in your shell or in an environment file.
 
-   For example, if you are running the [Compose Rails sample](https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/README.md), and have a `compose.yml` file in a directory called `sandbox/rails`. You can use a command like [docker compose pull](../../../reference/cli/docker/compose/pull.md) to get the postgres image for the `db` service from anywhere by using the `-f` flag as follows: `docker compose -f ~/sandbox/rails/compose.yml pull db`
+   For example, if you are running the [Compose Rails sample](https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/README.md), and have a `compose.yml` file in a directory called `sandbox/rails`. You can use a command like [docker compose pull](../../../../reference/cli/docker/compose/pull.md) to get the postgres image for the `db` service from anywhere by using the `-f` flag as follows: `docker compose -f ~/sandbox/rails/compose.yml pull db`
 
    Here's the full example:
 
@@ -274,7 +274,7 @@ services:
       - ./local:/baz
 ```
 
-For more merging rules, see [Merge and override](../../../reference/compose-file/merge.md) in the Compose Specification.
+For more merging rules, see [Merge and override](../../../../reference/compose-file/merge.md) in the Compose Specification.
 
 ## Example
 
@@ -368,4 +368,4 @@ With such a constraint, code organization in a monorepo can become hard as a nat
 
 ## Reference information
 
-- [Merge rules](../../../reference/compose-file/merge.md)
+- [Merge rules](../../../../reference/compose-file/merge.md)

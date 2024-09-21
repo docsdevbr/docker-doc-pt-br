@@ -28,7 +28,7 @@ grid:
 - title: View the release notes
   description: Find out about the latest enhancements and bug fixes.
   icon: note_add
-  link: /compose/release-notes
+  link: /compose/releases/release-notes
 - title: Explore the Compose file reference
   description: Find information on defining services, networks, and volumes for a
     Docker application.

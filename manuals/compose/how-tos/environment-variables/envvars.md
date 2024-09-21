@@ -7,7 +7,7 @@ aliases:
 - /compose/reference/envvars/
 ---
 
-Compose already comes with pre-defined environment variables. It also inherits common Docker CLI environment variables, such as `DOCKER_HOST` and `DOCKER_CONTEXT`. See [Docker CLI environment variable reference](../../../reference/cli/docker/index.md#environment-variables) for details.
+Compose already comes with pre-defined environment variables. It also inherits common Docker CLI environment variables, such as `DOCKER_HOST` and `DOCKER_CONTEXT`. See [Docker CLI environment variable reference](../../../../reference/cli/docker/index.md#environment-variables) for details.
 
 This page contains information on how you can set or change the following pre-defined environment variables if you need to:
 
@@ -61,7 +61,7 @@ underscores, and must begin with a lowercase letter or decimal digit. If the
 `basename` of the project directory or current directory violates this
 constraint, you must use one of the other mechanisms.
 
-See also the [command-line options overview](../../../reference/cli/docker/compose/index.md#command-options-overview-and-help) and [using `-p` to specify a project name](../../../reference/cli/docker/compose/index.md#use--p-to-specify-a-project-name).
+See also the [command-line options overview](../../../../reference/cli/docker/compose/index.md#command-options-overview-and-help) and [using `-p` to specify a project name](../../../../reference/cli/docker/compose/index.md#use--p-to-specify-a-project-name).
 
 ### COMPOSE\_FILE
 
@@ -76,7 +76,7 @@ The path separator can also be customized using `COMPOSE_PATH_SEPARATOR`.
 
 Example: `COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml`.
 
-See also the [command-line options overview](../../../reference/cli/docker/compose/index.md#command-options-overview-and-help) and [using `-f` to specify name and path of one or more Compose files](../../../reference/cli/docker/compose/index.md#use--f-to-specify-name-and-path-of-one-or-more-compose-files).
+See also the [command-line options overview](../../../../reference/cli/docker/compose/index.md#command-options-overview-and-help) and [using `-f` to specify name and path of one or more Compose files](../../../../reference/cli/docker/compose/index.md#use--f-to-specify-name-and-path-of-one-or-more-compose-files).
 
 ### COMPOSE\_PROFILES
 
@@ -91,7 +91,7 @@ For example, calling `docker compose up`with `COMPOSE_PROFILES=frontend` selects
 Example: `COMPOSE_PROFILES=frontend,debug`
 This example enables all services matching both the `frontend` and `debug` profiles and services without a profile.
 
-See also [Using profiles with Compose](../profiles.md) and the [`--profile` command-line option](../../../reference/cli/docker/compose/index.md#use---profile-to-specify-one-or-more-active-profiles).
+See also [Using profiles with Compose](../profiles.md) and the [`--profile` command-line option](../../../../reference/cli/docker/compose/index.md#use---profile-to-specify-one-or-more-active-profiles).
 
 ### COMPOSE\_CONVERT\_WINDOWS\_PATHS
 
@@ -157,7 +157,7 @@ If `COMPOSE_ENV_FILES` is not set, and you don't provide `--env-file` in the CLI
 
 ### COMPOSE\_MENU
 
-When enabled, Compose displays a navigation menu where you can choose to open the Compose stack in Docker Desktop, switch on [`watch` mode](../file-watch.md), or use [Docker Debug](../../../reference/cli/docker/debug.md).
+When enabled, Compose displays a navigation menu where you can choose to open the Compose stack in Docker Desktop, switch on [`watch` mode](../file-watch.md), or use [Docker Debug](../../../../reference/cli/docker/debug.md).
 
 * Supported values:
   * `true` or `1`, to enable,
@@ -170,7 +170,7 @@ When enabled, Compose displays a navigation menu where you can choose to open th
 
 ### COMPOSE\_EXPERIMENTAL
 
-This is an opt-out variable. When turned off it deactivates the experimental features such as the navigation menu or [Synchronized file shares](../../desktop/synchronized-file-sharing.md).
+This is an opt-out variable. When turned off it deactivates the experimental features such as the navigation menu or [Synchronized file shares](../../../desktop/synchronized-file-sharing.md).
 
 * Supported values:
   * `true` or `1`, to enable,
@@ -184,11 +184,11 @@ This is an opt-out variable. When turned off it deactivates the experimental fea
 ## Unsupported in Compose V2
 
 The following environment variables have no effect in Compose V2.
-For more information, see [Migrate to Compose V2](../migrate.md).
+For more information, see [Migrate to Compose V2](../../releases/migrate.md).
 
 - `COMPOSE_API_VERSION`
     By default the API version is negotiated with the server. Use `DOCKER_API_VERSION`.
-    See the [Docker CLI environment variable reference](../../../reference/cli/docker/index.md#environment-variables) page.
+    See the [Docker CLI environment variable reference](../../../../reference/cli/docker/index.md#environment-variables) page.
 - `COMPOSE_HTTP_TIMEOUT`
 - `COMPOSE_TLS_VERSION`
 - `COMPOSE_FORCE_WINDOWS_HOST`

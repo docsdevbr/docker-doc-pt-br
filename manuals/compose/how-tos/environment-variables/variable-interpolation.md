@@ -5,7 +5,7 @@ description: How to set, use, and manage variables in your Compose file with int
 keywords: compose, orchestration, environment, variables, interpolation
 aliases:
 - /compose/env-file/
-- /compose/environment-variables/env-file/
+- /compose/how-tos/environment-variables/env-file/
 ---
 
 A Compose file can use variables to offer more flexibility. If you want to quickly switch
@@ -26,7 +26,7 @@ services:
 ```
 
 When you run `docker compose up`, the `web` service defined in the Compose file [interpolates](variable-interpolation.md) in the image `webapp:v1.5` which was set in the `.env` file. You can verify this with the
-[config command](../../../reference/cli/docker/compose/config.md), which prints your resolved application config to the terminal:
+[config command](../../../../reference/cli/docker/compose/config.md), which prints your resolved application config to the terminal:
 
 ```console
 $ docker compose config
@@ -53,7 +53,7 @@ For braced expressions, the following formats are supported:
   - `${VAR:+replacement}` -> `replacement` if `VAR` is set and non-empty, otherwise empty
   - `${VAR+replacement}` -> `replacement` if `VAR` is set, otherwise empty
 
-For more information, see [Interpolation](../../../reference/compose-file/interpolation.md) in the Compose Specification.
+For more information, see [Interpolation](../../../../reference/compose-file/interpolation.md) in the Compose Specification.
 
 ## Ways to set variables with interpolation
 
@@ -96,7 +96,7 @@ services:
 
 #### Additional information
 
-- If you define a variable in your `.env` file, you can reference it directly in your `compose.yml` with the [`environment` attribute](../../../reference/compose-file/services.md#environment). For example, if your `.env` file contains the environment variable `DEBUG=1` and your `compose.yml` file looks like this:
+- If you define a variable in your `.env` file, you can reference it directly in your `compose.yml` with the [`environment` attribute](../../../../reference/compose-file/services.md#environment). For example, if your `.env` file contains the environment variable `DEBUG=1` and your `compose.yml` file looks like this:
    ```yaml
     services:
       webapp:

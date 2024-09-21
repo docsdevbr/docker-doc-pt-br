@@ -97,8 +97,8 @@ It will work well when you update a database configuration or your `nginx.conf` 
 >**Tip**
 >
 > Optimize your `Dockerfile` for speedy
-incremental rebuilds with [image layer caching](../build/cache/index.md)
-and [multi-stage builds](../build/building/multi-stage.md).
+incremental rebuilds with [image layer caching](../../build/cache/index.md)
+and [multi-stage builds](../../build/building/multi-stage.md).
 
 ### `path` and `target`
 
@@ -202,4 +202,4 @@ We are actively looking for feedback on this feature. Give feedback or report an
 
 ## Reference
 
-- [Compose Develop Specification](../../reference/compose-file/develop.md)
+- [Compose Develop Specification](../../../reference/compose-file/develop.md)

@@ -60,10 +60,10 @@ Compose has traditionally been focused on development and testing workflows,
 but with each release we're making progress on more production-oriented features.
 
 For details on using production-oriented features, see
-[Compose in production](../production.md).
+[Compose in production](../how-tos/production.md).
 
 ## What's next?
 
 - [Learn about the history of Compose](history.md)
-- [Understand how Compose works](../compose-application-model.md)
+- [Understand how Compose works](compose-application-model.md)
 - [Quickstart](../gettingstarted.md)

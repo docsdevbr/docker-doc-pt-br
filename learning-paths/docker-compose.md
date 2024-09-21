@@ -109,7 +109,7 @@ This command starts only the services associated with the `dev` profile,
 leaving the rest inactive.
 
 For more information on using profiles, see [Using profiles with
-Compose](../manuals/compose/profiles.md).
+Compose](../manuals/compose/how-tos/profiles.md).
 
 ### How can I enforce the database service to start up before the frontend service?
 
@@ -127,7 +127,7 @@ before starting. This ensures the database is not only up but also ready to
 handle requests.
 
 For more information on setting the startup order of your services, see
-[Control startup and shutdown order in Compose](../manuals/compose/startup-order.md).
+[Control startup and shutdown order in Compose](../manuals/compose/how-tos/startup-order.md).
 
 ### Can I use Compose to build a Docker image?
 
@@ -166,9 +166,9 @@ tests or perform one-off tasks within that container.
 
 - [Overview of Docker Compose CLI](../reference/cli/docker/compose/index.md)
 - [Overview of Docker Compose](../manuals/compose/index.md)
-- [How Compose works](../manuals/compose/compose-application-model.md)
-- [Using profiles with Compose](../manuals/compose/profiles.md)
-- [Control startup and shutdown order with Compose](../manuals/compose/startup-order.md)
+- [How Compose works](../manuals/compose/intro/compose-application-model.md)
+- [Using profiles with Compose](../manuals/compose/how-tos/profiles.md)
+- [Control startup and shutdown order with Compose](../manuals/compose/how-tos/startup-order.md)
 - [Compose Build Specification](../reference/compose-file/build.md)
 
 { { < /accordion > } }

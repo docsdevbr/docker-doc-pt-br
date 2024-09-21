@@ -16,7 +16,7 @@ aliases:
 
 ## Explanation
 
-Now that you've updated the [to-do list app](develop-with-containers.md), you’re ready to create a container image for the application and share it on Docker Hub. To do so, you will need to do the following:
+Now that you've updated the [to-do list app](../../comecando/introducao/desenvolva-com-conteineres.md), you’re ready to create a container image for the application and share it on Docker Hub. To do so, you will need to do the following:
 
 1. Sign in with your Docker account
 2. Create an image repository on Docker Hub
@@ -33,7 +33,7 @@ If you’re new to container images, think of them as a standardized package tha
 
 To share your Docker images, you need a place to store them. This is where registries come in. While there are many registries, Docker Hub is the default and go-to registry for images. Docker Hub provides both a place for you to store your own images and to find images from others to either run or use as the bases for your own images.
 
-In [Develop with containers](develop-with-containers.md), you used the following images that came from Docker Hub, each of which are [Docker Official Images](../../manuals/trusted-content/official-images/index.md):
+In [Develop with containers](../../comecando/introducao/desenvolva-com-conteineres.md), you used the following images that came from Docker Hub, each of which are [Docker Official Images](../../manuals/trusted-content/official-images/index.md):
 
 - [node](https://hub.docker.com/_/node) - provides a Node environment and is used as the base of your development efforts. This image is also used as the base for the final application image.
 - [mysql](https://hub.docker.com/_/mysql) - provides a MySQL database to store the to-do list items

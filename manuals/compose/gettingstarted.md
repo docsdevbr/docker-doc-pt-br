@@ -145,7 +145,7 @@ It then binds the container and the host machine to the exposed port, `8000`. Th
 The `redis` service uses a public [Redis](https://registry.hub.docker.com/_/redis/)
 image pulled from the Docker Hub registry.
 
-For more information on the `compose.yaml` file, see [How Compose works](compose-application-model.md).
+For more information on the `compose.yaml` file, see [How Compose works](intro/compose-application-model.md).
 
 ## Step 3: Build and run your app with Compose
 
@@ -241,7 +241,7 @@ services:
 
 Whenever a file is changed, Compose syncs the file to the corresponding location under `/code` inside the container. Once copied, the bundler updates the running application without a restart.
 
-For more information on how Compose Watch works, see [Use Compose Watch](file-watch.md). Alternatively, see [Manage data in containers](../engine/storage/volumes.md) for other options.
+For more information on how Compose Watch works, see [Use Compose Watch](how-tos/file-watch.md). Alternatively, see [Manage data in containers](../engine/storage/volumes.md) for other options.
 
 > [!NOTE]
 >
@@ -316,7 +316,7 @@ Using multiple Compose files lets you customize a Compose application for differ
 
 4. Run `docker compose up` to build the app with the updated Compose files, and run it. You should see the `Hello world` message in your browser.
 
-This is a simplified example, but it demonstrates the basic principle of `include` and how it can make it easier to modularize complex applications into sub-Compose files. For more information on `include` and working with multiple Compose files, see [Working with multiple Compose files](multiple-compose-files/index.md).
+This is a simplified example, but it demonstrates the basic principle of `include` and how it can make it easier to modularize complex applications into sub-Compose files. For more information on `include` and working with multiple Compose files, see [Working with multiple Compose files](how-tos/multiple-compose-files/index.md).
 
 ## Step 8: Experiment with some other commands
 

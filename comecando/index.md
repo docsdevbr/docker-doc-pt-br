@@ -31,7 +31,7 @@ Instale o Docker e comece a descobrir o que é o Docker.
 
 Aprenda os conceitos básicos e os fluxos de trabalho do Docker.
 
-* [Introdução](../get-started/introduction/index.md)
+* [Introdução](introducao/index.md)
     * Comece com os conceitos básicos e os benefícios de criar contêineres com
       suas aplicações.
 * [Conceitos do Docker](../get-started/docker-concepts/the-basics/what-is-a-container.md)

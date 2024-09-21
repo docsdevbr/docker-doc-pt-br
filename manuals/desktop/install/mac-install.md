@@ -127,7 +127,7 @@ The `install` command accepts the following flags:
 ## Where to go next
 
 - Explore [Docker's core subscriptions](https://www.docker.com/pricing/) to see what Docker can offer you.
-- [Get started with Docker](/get-started/introduction/index.md).
+- [Get started with Docker](../../../comecando/introducao/index.md).
 - [Explore Docker Desktop](../use-desktop/index.md) and all its features.
 - [Troubleshooting](../troubleshoot/index.md) describes common problems, workarounds, how
   to run and submit diagnostics, and submit issues.

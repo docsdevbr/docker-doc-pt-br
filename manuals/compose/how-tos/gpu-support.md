@@ -6,14 +6,14 @@ linkTitle: GPU support
 weight: 120
 ---
 
-Compose services can define GPU device reservations if the Docker host contains such devices and the Docker Daemon is set accordingly. For this, make sure you install the [prerequisites](../engine/containers/resource_constraints.md#gpu) if you haven't already done so.
+Compose services can define GPU device reservations if the Docker host contains such devices and the Docker Daemon is set accordingly. For this, make sure you install the [prerequisites](../../engine/containers/resource_constraints.md#gpu) if you haven't already done so.
 
 The examples in the following sections focus specifically on providing service containers access to GPU devices with Docker Compose.
-You can use either `docker-compose` or `docker compose` commands. For more information, see [Migrate to Compose V2](migrate.md).
+You can use either `docker-compose` or `docker compose` commands. For more information, see [Migrate to Compose V2](../releases/migrate.md).
 
 ## Enabling GPU access to service containers
 
-GPUs are referenced in a `compose.yml` file using the [device](../../reference/compose-file/deploy.md#devices) attribute from the Compose Deploy specification, within your services that need them.
+GPUs are referenced in a `compose.yml` file using the [device](../../../reference/compose-file/deploy.md#devices) attribute from the Compose Deploy specification, within your services that need them.
 
 This provides more granular control over a GPU reservation as custom values can be set for the following device properties:
 
@@ -30,7 +30,7 @@ This provides more granular control over a GPU reservation as custom values can 
 >
 > `count` and `device_ids` are mutually exclusive. You must only define one field at a time.
 
-For more information on these properties, see the [Compose Deploy Specification](../../reference/compose-file/deploy.md#devices).
+For more information on these properties, see the [Compose Deploy Specification](../../../reference/compose-file/deploy.md#devices).
 
 ### Example of a Compose file for running a service with access to 1 GPU device
 

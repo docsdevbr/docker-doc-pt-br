@@ -11,7 +11,7 @@ keywords: cli, compose, profile, profiles reference
 ## Assigning profiles to services
 
 Services are associated with profiles through the
-[`profiles` attribute](../../reference/compose-file/services.md#profiles) which takes an
+[`profiles` attribute](../../../reference/compose-file/services.md#profiles) which takes an
 array of profile names:
 
 ```yaml
@@ -48,7 +48,7 @@ Valid profiles names follow the regex format of `[a-zA-Z0-9][a-zA-Z0-9_.-]+`.
 
 ## Start specific profiles
 
-To start a specific profile supply the `--profile` [command-line option](../../reference/cli/docker/compose/index.md) or
+To start a specific profile supply the `--profile` [command-line option](../../../reference/cli/docker/compose/index.md) or
 use the [`COMPOSE_PROFILES` environment variable](environment-variables/envvars.md#compose_profiles):
 
 ```console
@@ -175,7 +175,7 @@ $ COMPOSE_PROFILES=dev docker compose up phpmyadmin
 
 ## Stop specific profiles
 
-As with starting specific profiles, you can use the `--profile` [command-line option](../../reference/cli/docker/compose/index.md) or
+As with starting specific profiles, you can use the `--profile` [command-line option](../../../reference/cli/docker/compose/index.md) or
 use the [`COMPOSE_PROFILES` environment variable](environment-variables/envvars.md#compose_profiles):
 
 ```console
@@ -211,4 +211,4 @@ services:
 
 ## Reference information
 
-[`profiles`](../../reference/compose-file/services.md#profiles)
+[`profiles`](../../../reference/compose-file/services.md#profiles)
