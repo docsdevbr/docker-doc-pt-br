@@ -19,3 +19,4 @@ nav:
           - comecando/introducao/index.md
           - comecando/introducao/obtenha-o-docker-desktop.md
           - comecando/introducao/desenvolva-com-conteineres.md
+          - comecando/introducao/crie-e-envie-sua-primeira-imagem.md
