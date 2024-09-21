@@ -1,6 +1,6 @@
 ---
 source_url: https://github.com/docker/docs/blob/main/content/_index.md
-revision: d444610c66111ed2793ab7de7d82978a78576408
+revision: 9d975a92a6b6076f7ddcc0c6701247d425a4cf9f
 status: ready
 license: https://github.com/docker/docs/blob/main/LICENSE
 
@@ -64,7 +64,7 @@ Defina e execute aplicações de vários contêineres com o Docker.
 
 - [Visão geral](manuals/compose/index.md)
 - [Experimente o Docker Compose](manuals/compose/gettingstarted.md)
-- [Notas de lançamento](manuals/compose/release-notes.md)
+- [Notas de lançamento](manuals/compose/releases/release-notes.md)
 
 ### Docker Hub
 
