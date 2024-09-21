@@ -6,7 +6,7 @@ license: https://github.com/docker/docs/blob/main/LICENSE
 
 title: Desenvolva com contêineres
 keywords: conceitos, construção, imagens, contêiner, docker desktop
-description: Esta página de conceito ensinará como desenvolver com contêineres.
+description: Esta página conceitual ensinará como desenvolver com contêineres.
 summary: |
   Aprenda a executar seu primeiro contêiner, ganhando experiência prática com os
   recursos poderosos do Docker.
@@ -28,9 +28,10 @@ perfeitos.
 {: .lead }
 
 <iframe width="895" height="487" src="https://www.youtube.com/embed/D0SDBrS3t9I"
-        title="Conceitos do Docker: Desenvolva com contêineres" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-        picture-in-picture; web-share"
+        title="Conceitos do Docker: Desenvolva com contêineres"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
 

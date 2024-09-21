@@ -16,6 +16,10 @@ title: O que é Docker?
 
 # O que é Docker?
 
+Obtenha uma visão geral aprofundada da plataforma Docker, incluindo para que ela
+pode ser usada, a arquitetura que ela emprega e sua tecnologia subjacente.
+{: .lead }
+
 Docker é uma plataforma aberta para desenvolver, distribuir e executar
 aplicações.
 O Docker permite que você separe suas aplicações da sua infraestrutura para que
@@ -147,7 +151,7 @@ registro configurado.
 ### Objetos do Docker
 
 Quando você usa o Docker, você está criando e usando imagens, contêineres,
-redes, volumes, _plug-ins_ e outros objetos.
+redes, volumes, _plugins_ e outros objetos.
 Esta seção é uma breve visão geral de alguns desses objetos.
 
 #### Imagens

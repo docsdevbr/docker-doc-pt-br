@@ -6,8 +6,9 @@ license: https://github.com/docker/docs/blob/main/LICENSE
 
 title: Obtenha o Docker Desktop
 keywords: conceitos, contêiner, docker desktop
-description: Esta página de conceito ensinará você a baixar o Docker Desktop e
-  instalá-lo no Windows, Mac e Linux.
+description: |
+  Esta página conceitual ensinará você a baixar o Docker Desktop e instalá-lo no
+  Windows, Mac e Linux.
 summary: |
   Colocar o Docker Desktop em funcionamento é o primeiro passo crucial para
   pessoas desenvolvedoras que estão mergulhando na conteinerização, oferecendo
@@ -30,8 +31,10 @@ execução de aplicações em contêineres, garantindo consistência em diferent
 ambientes.
 
 <iframe width="895" height="487" src="https://www.youtube.com/embed/C2bPVhiNU-0"
-        title="Conceitos do Docker: Obtenha o Docker Desktop" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        title="Conceitos do Docker: Obtenha o Docker Desktop"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
 
@@ -81,7 +84,7 @@ Para este contêiner, o _frontend_ é acessível na porta `8080`.
 Para abrir o _site_, visite [http://localhost:8080](http://localhost:8080) no
 seu navegador.
 
-![Captura de tela da página inicial do servidor _web_ Nginx, vinda do contêiner em execução](../../get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
+![Captura de tela da página inicial do servidor _web_ Nginx, vinda do contêiner em execução](../../get-started/docker-concepts/the-basics/images/access-the-frontend.webp)
 
 ## Gerencie contêineres usando o Docker Desktop
 
@@ -89,13 +92,13 @@ seu navegador.
    esquerda;
 2. Você pode visualizar informações sobre seu contêiner, incluindo _logs_ e
    arquivos, e até mesmo acessar o _shell_ selecionando a guia **Exec**;
-   ![Captura de tela do exec no contêiner em execução no Docker Desktop](images/exec-into-docker-container.webp?border=true)
+   ![Captura de tela do exec no contêiner em execução no Docker Desktop](images/exec-into-docker-container.webp)
 3. Selecione o campo **Inspect** para obter informações detalhadas sobre o
    contêiner.
    Você pode executar várias ações, como pausar, retomar, iniciar ou parar
    contêineres, ou explorar as guias **Logs**, **Bind mounts**, **Exec**,
    **Files** e **Stats**.
-   ![Captura de tela da inspeção do contêiner em execução no Docker Desktop](images/inspecting-container.webp?border=true)
+   ![Captura de tela da inspeção do contêiner em execução no Docker Desktop](images/inspecting-container.webp)
 
 O Docker Desktop simplifica o gerenciamento de contêineres para pessoas
 desenvolvedoras ao otimizar a instalação, configuração e compatibilidade de

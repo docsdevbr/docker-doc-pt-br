@@ -6,10 +6,13 @@ license: https://github.com/docker/docs/blob/main/LICENSE
 
 title: Começando
 keywords: Docker, começando
-description: Comece a usar o Docker
+description: Comece a usar o Docker.
 ---
 
 # Começando
+
+Comece a usar o Docker.
+{: .lead }
 
 Se você é uma pessoa nova no Docker, esta seção te guiará pelos recursos
 essenciais para começar.

@@ -1,4 +1,9 @@
 ---
+source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/build-and-push-first-image.md
+revision: abd030c3fe2b5db526fb7a16d6d9892d46d678e5
+status: ready
+license: https://github.com/docker/docs/blob/main/LICENSE
+
 title: Crie e envie sua primeira imagem
 keywords: conceitos, container, docker desktop
 description: |
