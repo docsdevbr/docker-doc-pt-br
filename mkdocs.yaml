@@ -8,6 +8,7 @@ site_name: Documentação do Docker
 site_description: Documentação do Docker
 
 exclude_docs: |
+  comecando/conceitos-do-docker/index.md
   comecando/conceitos-do-docker/o-basico/index.md
 
 ### navigation ###
