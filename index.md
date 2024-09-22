@@ -60,7 +60,7 @@ Execute suas compilações na nuvem.
 
 ### Docker Compose
 
-Defina e execute aplicações de vários contêineres com o Docker.
+Defina e execute aplicações multicontêiner com o Docker.
 
 - [Visão geral](manuals/compose/index.md)
 - [Experimente o Docker Compose](manuals/compose/gettingstarted.md)

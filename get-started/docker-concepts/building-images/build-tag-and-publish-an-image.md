@@ -223,7 +223,7 @@ To learn more about building, tagging, and publishing images, visit the followin
 * [docker build reference](../../../reference/cli/docker/buildx/build.md)
 * [docker image tag reference](../../../reference/cli/docker/image/tag.md)
 * [docker push reference](../../../reference/cli/docker/image/push.md)
-* [What is a registry?](../the-basics/what-is-a-registry.md)
+* [What is a registry?](../../../comecando/conceitos-do-docker/o-basico/o-que-e-um-registro.md)
 
 ## Next steps
 

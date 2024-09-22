@@ -211,5 +211,4 @@ In this guide, you learned how easy it is to use Docker Compose to start and sto
 ## Additional resources
 
 * [`docker container run` CLI reference](../../../reference/cli/docker/container/run.md)
-* [What is Docker Compose](../the-basics/what-is-docker-compose.md)
-
+* [What is Docker Compose](../../../comecando/conceitos-do-docker/o-basico/o-que-e-docker-compose.md)

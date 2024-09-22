@@ -29,10 +29,10 @@ the-basics:
     description: |
       Aprenda sobre registros de contêineres, explore sua interoperabilidade e
       interaja com registros.
-    link: ../../get-started/docker-concepts/the-basics/what-is-a-registry.md
+    link: ../conceitos-do-docker/o-basico/o-que-e-um-registro.md
   - title: O que é o Docker Compose?
     description: Entenda melhor o Docker Compose.
-    link: ../../get-started/docker-concepts/the-basics/what-is-docker-compose.md
+    link: ../conceitos-do-docker/o-basico/o-que-e-docker-compose.md
 
 building-images:
   - title: Entendendo camadas de imagem
@@ -100,10 +100,10 @@ Docker Compose.
     * Aprenda como executar seu primeiro contêiner.
 * [O que é uma imagem?](../conceitos-do-docker/o-basico/o-que-e-uma-imagem.md)
     * Aprenda o básico sobre camadas de imagem.
-* [O que é um registro?](../../get-started/docker-concepts/the-basics/what-is-a-registry.md)
+* [O que é um registro?](../conceitos-do-docker/o-basico/o-que-e-um-registro.md)
     * Aprenda sobre registros de contêineres, explore sua interoperabilidade e
       interaja com registros.
-* [O que é o Docker Compose?](../../get-started/docker-concepts/the-basics/what-is-docker-compose.md)
+* [O que é o Docker Compose?](../conceitos-do-docker/o-basico/o-que-e-docker-compose.md)
     * Entenda melhor o Docker Compose.
 
 ## Criando imagens

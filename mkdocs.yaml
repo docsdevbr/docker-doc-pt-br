@@ -30,3 +30,4 @@ nav:
               - comecando/conceitos-do-docker/o-basico/o-que-e-um-container.md
               - comecando/conceitos-do-docker/o-basico/o-que-e-uma-imagem.md
               - comecando/conceitos-do-docker/o-basico/o-que-e-um-registro.md
+              - comecando/conceitos-do-docker/o-basico/o-que-e-docker-compose.md
