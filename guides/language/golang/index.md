@@ -32,7 +32,7 @@ Some basic understanding of Go and its toolchain is assumed. This isn't a Go tut
 the [Go website](https://golang.org/) is a great place to explore,
 so *go* (pun intended) check it out!
 
-You also must know some basic [Docker concepts](/get-started/docker-concepts/the-basics/what-is-a-container.md) as well as to
+You also must know some basic [Docker concepts](../../../comecando/conceitos-do-docker/o-basico/o-que-e-um-container.md) as well as to
 be at least vaguely familiar with the [Dockerfile format](../../../manuals/build/concepts/dockerfile.md).
 
 Your Docker set-up must have BuildKit enabled. BuildKit is enabled by default for all users on [Docker Desktop](../../../manuals/desktop/index.md).

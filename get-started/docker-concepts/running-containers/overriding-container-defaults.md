@@ -198,7 +198,7 @@ This command runs a Postgres container, sets an environment variable for passwor
 ## Additional resources
 
 * [Ways to set environment variables with Compose](../../../manuals/compose/how-tos/environment-variables/set-environment-variables.md)
-* [What is a container](../the-basics/what-is-a-container.md)
+* [What is a container](../../../comecando/conceitos-do-docker/o-basico/o-que-e-um-container.md)
 
 ## Next steps
 

@@ -87,8 +87,8 @@ seguintes imagens que vieram do Docker Hub, cada uma das quais são
 
 Explore o catálogo completo de
 [Imagens Oficiais do Docker](https://hub.docker.com/search?image_filter=official&q=),
-editores verificados pelo Docker e imagens de
-[programas de código aberto patrocinados pelo Docker](https://hub.docker.com/search?q=&image_filter=open_source)
+editores verificados pelo Docker e imagens do
+[programa de código aberto patrocinado pelo Docker](https://hub.docker.com/search?q=&image_filter=open_source)
 para ver mais do que há para executar e desenvolver.
 
 ## Experimente
@@ -204,11 +204,11 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
    No menu **File**, selecione **Open Folder**.
    Escolha **Clone Git Repository...** e cole esta URL:
    [https://github.com/docker/getting-started-todo-app](https://github.com/docker/getting-started-todo-app)
-   ![Captura de tela do VS Code mostrando como clonar um repositório](images/clone-the-repo.webp)
+   ![Captura de tela do VS Code mostrando como clonar um repositório](images/clone-the-repo.webp?border=true)
 
 2. Clique com o botão direito no `Dockerfile` e selecione o item de menu **Build
    Image...**.
-   ![Captura de tela do VS Code mostrando o menu do botão direito e o item de menu "Build Image"](images/build-vscode-menu-item.webp)
+   ![Captura de tela do VS Code mostrando o menu do botão direito e o item de menu "Build Image"](images/build-vscode-menu-item.webp?border=true)
 
 3. Na caixa de diálogo que aparece, insira o nome
    `DOCKER_USERNAME/getting-started-todo-app`, substituindo `DOCKER_USERNAME`
@@ -230,7 +230,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 
 8. Clique com o botão direito no item **latest** e selecione a opção
    **Push...**.
-   ![Captura de tela da extensão Docker e do menu do botão direito para enviar uma imagem](images/build-vscode-push-image.webp)
+   ![Captura de tela da extensão Docker e do menu do botão direito para enviar uma imagem](images/build-vscode-push-image.webp?border=true)
 
 9. Pressione **Enter** para confirmar e então observe enquanto sua imagem é
    enviada para o Docker Hub.

@@ -16,7 +16,7 @@ aliases:
 
 ## Explanation
 
-As you learned in [What is an image?](../the-basics/what-is-an-image.md), container images are composed of layers. And each of these layers, once created, are immutable. But, what does that actually mean? And how are those layers used to create the filesystem a container can use?
+As you learned in [What is an image?](../../../comecando/conceitos-do-docker/o-basico/o-que-e-uma-imagem.md), container images are composed of layers. And each of these layers, once created, are immutable. But, what does that actually mean? And how are those layers used to create the filesystem a container can use?
 
 ### Image layers
 

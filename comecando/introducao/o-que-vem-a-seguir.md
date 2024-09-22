@@ -21,10 +21,10 @@ weight: 4
 the-basics:
   - title: O que é um contêiner?
     description: Aprenda como executar seu primeiro contêiner.
-    link: ../../get-started/docker-concepts/the-basics/what-is-a-container.md
+    link: ../conceitos-do-docker/o-basico/o-que-e-um-container.md
   - title: O que é uma imagem?
     description: Aprenda o básico sobre camadas de imagem.
-    link: ../../get-started/docker-concepts/the-basics/what-is-an-image.md
+    link: ../conceitos-do-docker/o-basico/o-que-e-uma-imagem.md
   - title: O que é um registro?
     description: |
       Aprenda sobre registros de contêineres, explore sua interoperabilidade e
@@ -96,9 +96,9 @@ principais conceitos do Docker, criar imagens e executar contêineres.
 Comece aprendendo os conceitos básicos de contêineres, imagens, registros e
 Docker Compose.
 
-* [O que é um contêiner?](../../get-started/docker-concepts/the-basics/what-is-a-container.md)
+* [O que é um contêiner?](../conceitos-do-docker/o-basico/o-que-e-um-container.md)
     * Aprenda como executar seu primeiro contêiner.
-* [O que é uma imagem?](../../get-started/docker-concepts/the-basics/what-is-an-image.md)
+* [O que é uma imagem?](../conceitos-do-docker/o-basico/o-que-e-uma-imagem.md)
     * Aprenda o básico sobre camadas de imagem.
 * [O que é um registro?](../../get-started/docker-concepts/the-basics/what-is-a-registry.md)
     * Aprenda sobre registros de contêineres, explore sua interoperabilidade e

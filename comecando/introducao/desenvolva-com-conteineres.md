@@ -79,7 +79,7 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
    A aplicação é uma aplicação de tarefas simples, então sinta-se à vontade para
    adicionar um ou dois itens, marcar alguns como concluídos ou até mesmo
    excluir um item.
-   ![Captura de tela da aplicação de tarefas iniciais após seu primeiro lançamento](images/develop-getting-started-app-first-launch.webp)
+   ![Captura de tela da aplicação de tarefas iniciais após seu primeiro lançamento](images/develop-getting-started-app-first-launch.webp?border=true)
 
 ### O que há no ambiente?
 
@@ -148,7 +148,7 @@ você poderá escolher).
 4. Se você ainda não fez isso, salve o arquivo.
    Se você atualizar seu navegador, deverá ver uma nova saudação.
    Se você continuar atualizando, deverá ver todas as mensagens aparecerem.
-   ![Captura de tela da aplicação de tarefas com uma nova saudação](images/develop-app-with-greetings.webp)
+   ![Captura de tela da aplicação de tarefas com uma nova saudação](images/develop-app-with-greetings.webp?border=true)
 
 ### Altere o texto do espaço reservado
 
@@ -173,7 +173,7 @@ Você também fará algumas alterações no estilo da aplicação.
 3. Salve o arquivo e volte para o seu navegador.
    Você deve ver a alteração já recarregada no seu navegador.
    Se não gostar, sinta-se à vontade para ajustá-la até que fique perfeita.
-   ![Captura de tela da aplicação de tarefas com um espaço reservado atualizado no campo de texto "Add Item"](images/develop-app-with-updated-placeholder.webp)
+   ![Captura de tela da aplicação de tarefas com um espaço reservado atualizado no campo de texto "Add Item"](images/develop-app-with-updated-placeholder.webp?border=true)
 
 ### Altere a cor de fundo
 
@@ -198,7 +198,7 @@ Antes de considerar a aplicação finalizada, você precisa melhorar as cores.
    Cada salvamento deve permitir que você veja a alteração imediatamente no
    navegador.
    Continue ajustando até que esteja na configuração perfeita para você.
-   ![Captura de tela da aplicação de tarefas com um novo espaço reservado e cor de fundo"](images/develop-app-with-updated-client.webp)
+   ![Captura de tela da aplicação de tarefas com um novo espaço reservado e cor de fundo"](images/develop-app-with-updated-client.webp?border=true)
 
 E com isso, você terminou. Parabéns por atualizar seu _site_.
 

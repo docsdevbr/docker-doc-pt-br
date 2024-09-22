@@ -37,7 +37,7 @@ Aprenda os conceitos básicos e os fluxos de trabalho do Docker.
 * [Introdução](introducao/index.md)
     * Comece com os conceitos básicos e os benefícios de criar contêineres com
       suas aplicações.
-* [Conceitos do Docker](../get-started/docker-concepts/the-basics/what-is-a-container.md)
+* [Conceitos do Docker](conceitos-do-docker/o-basico/o-que-e-um-container.md)
     * Obtenha uma melhor compreensão dos conceitos básicos do Docker.
 * [_Workshop_ do Docker](../get-started/workshop/index.md)
     * Seja guiado por um _workshop_ de 45 minutos para aprender sobre o Docker.

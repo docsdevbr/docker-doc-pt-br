@@ -108,7 +108,7 @@ UNIX ou uma interface de rede.
 Outro cliente Docker é o Docker Compose, que permite que você trabalhe com
 aplicações que consistem em um conjunto de contêineres.
 
-![Diagrama de arquitetura do Docker](images/docker-architecture.webp)
+![Diagrama de arquitetura do Docker](images/docker-architecture.webp?border=true)
 
 ### O _daemon_ do Docker
 

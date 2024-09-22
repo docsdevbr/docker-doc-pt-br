@@ -8,7 +8,6 @@ title: O que é um contêiner?
 weight: 10
 keywords: conceitos, construção, imagens, contêiner, docker desktop
 description: |
-  O que é um contêiner?
   Esta página conceitual ensinará sobre contêineres e fornecerá uma rápida
   introdução onde você executará seu primeiro contêiner.
 aliases:
@@ -21,7 +20,6 @@ aliases:
 
 # O que é um contêiner?
 
-O que é um contêiner?
 Esta página conceitual ensinará sobre contêineres e fornecerá uma rápida
 introdução onde você executará seu primeiro contêiner.
 {: .lead }

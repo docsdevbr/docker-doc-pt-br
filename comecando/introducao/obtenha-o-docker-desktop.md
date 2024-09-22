@@ -84,7 +84,7 @@ Para este contêiner, o _frontend_ é acessível na porta `8080`.
 Para abrir o _site_, visite [http://localhost:8080](http://localhost:8080) no
 seu navegador.
 
-![Captura de tela da página inicial do servidor _web_ Nginx, vinda do contêiner em execução](../../get-started/docker-concepts/the-basics/images/access-the-frontend.webp)
+![Captura de tela da página inicial do servidor _web_ Nginx, vinda do contêiner em execução](../conceitos-do-docker/o-basico/images/access-the-frontend.webp?border=true)
 
 ## Gerencie contêineres usando o Docker Desktop
 
@@ -92,13 +92,13 @@ seu navegador.
    esquerda;
 2. Você pode visualizar informações sobre seu contêiner, incluindo _logs_ e
    arquivos, e até mesmo acessar o _shell_ selecionando a guia **Exec**;
-   ![Captura de tela do exec no contêiner em execução no Docker Desktop](images/exec-into-docker-container.webp)
+   ![Captura de tela do exec no contêiner em execução no Docker Desktop](images/exec-into-docker-container.webp?border=true)
 3. Selecione o campo **Inspect** para obter informações detalhadas sobre o
    contêiner.
    Você pode executar várias ações, como pausar, retomar, iniciar ou parar
    contêineres, ou explorar as guias **Logs**, **Bind mounts**, **Exec**,
    **Files** e **Stats**.
-   ![Captura de tela da inspeção do contêiner em execução no Docker Desktop](images/inspecting-container.webp)
+   ![Captura de tela da inspeção do contêiner em execução no Docker Desktop](images/inspecting-container.webp?border=true)
 
 O Docker Desktop simplifica o gerenciamento de contêineres para pessoas
 desenvolvedoras ao otimizar a instalação, configuração e compatibilidade de
