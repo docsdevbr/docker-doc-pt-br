@@ -155,7 +155,7 @@ visualizar suas camadas.
    Hub.
 
 2. Baixe a imagem usando o comando
-   [`docker pull`](../../../reference/cli/docker/image/pull.md).
+   [`docker pull`](../../../reference/cli/docker/image/pull.md):
    ```shell
    docker pull docker/welcome-to-docker
    ```

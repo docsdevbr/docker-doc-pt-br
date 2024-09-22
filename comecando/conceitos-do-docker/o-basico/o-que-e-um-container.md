@@ -213,7 +213,7 @@ dados.
 > O comando `docker ps` mostrará _apenas_ os contêineres em execução.
 > Para visualizar os contêineres parados, adicione o sinalizador `-a` para
 > listar todos os contêineres: `docker ps -a`.
-> {: .callout .tip }
+{: .callout .tip }
 
 #### Acesse o _frontend_
 

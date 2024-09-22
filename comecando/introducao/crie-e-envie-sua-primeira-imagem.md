@@ -156,7 +156,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 
 1. Para começar, clone ou
    [baixe o projeto como um arquivo ZIP](https://github.com/docker/getting-started-todo-app/archive/refs/heads/main.zip)
-   para sua máquina local.
+   para sua máquina local:
    ```shell
    git clone https://github.com/docker/getting-started-todo-app
    ```
@@ -167,7 +167,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
    ```
 
 2. Construa o projeto executando o seguinte comando, trocando `DOCKER_USERNAME`
-   pelo seu nome de pessoa usuária.
+   pelo seu nome de pessoa usuária:
    ```shell
    docker build -t <DOCKER_USERNAME>/getting-started-todo-app .
    ```

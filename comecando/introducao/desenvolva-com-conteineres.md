@@ -52,7 +52,7 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
 ## Inicie o projeto
 
 1. Para começar, clone ou
-   [baixe o projeto como um arquivo ZIP para sua máquina local](https://github.com/docker/getting-started-todo-app/archive/refs/heads/main.zip).
+   [baixe o projeto como um arquivo ZIP para sua máquina local](https://github.com/docker/getting-started-todo-app/archive/refs/heads/main.zip):
    ```shell
    git clone https://github.com/docker/getting-started-todo-app
    ```
