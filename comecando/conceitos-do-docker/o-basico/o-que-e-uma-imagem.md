@@ -19,12 +19,12 @@ Aprenda o básico sobre camadas de imagem.
 {: .lead }
 
 <iframe width="895" height="487" src="https://www.youtube.com/embed/NyvT9REqLe4"
-        title="Conceitos do Docker: O que é uma imagem?"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-        gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
+title="Conceitos do Docker: O que é uma imagem?"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen></iframe>
 
 ## Explicação
 

@@ -5,9 +5,9 @@ status: ready
 license: https://github.com/docker/docs/blob/main/LICENSE
 
 description: Baixe e instale o Docker na plataforma de sua escolha, incluindo
-    Mac, Linux ou Windows.
+  Mac, Linux ou Windows.
 keywords: instalar docker, baixar docker, instalação do docker, como instalar
-    docker, obter docker, docker localmente
+  docker, obter docker, docker localmente
 title: Obtenha o Docker
 ---
 

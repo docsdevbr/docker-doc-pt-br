@@ -12,7 +12,7 @@ description: |
   Você entenderá a estrutura de um Dockerfile, como construir uma imagem e como
   personalizar o processo de construção.
 summary: |
-  Construir imagens de contêiner é tanto técnico quanto uma arte.
+  Construir imagens de contêineres é uma tarefa técnica e uma arte.
   Você quer manter a imagem pequena e focada para aumentar sua postura de
   segurança, mas também precisa equilibrar potenciais compensações, como
   impactos no cache.
@@ -27,10 +27,10 @@ params:
 
 # Construindo imagens
 
-Construir imagens de contêiner é tanto técnico quanto uma arte.
+Construir imagens de contêineres é uma tarefa técnica e uma arte.
 Você quer manter a imagem pequena e focada para aumentar sua postura de
 segurança, mas também precisa equilibrar potenciais compensações, como impactos
-no cache.
+no _cache_.
 Nesta série, você se aprofundará nos segredos das imagens, como elas são
 construídas e nas melhores práticas.
 {: .lead }

@@ -37,7 +37,7 @@ the-basics:
 building-images:
   - title: Entendendo camadas de imagem
     description: Aprenda sobre as camadas de imagens de contêiner.
-    link: ../../get-started/docker-concepts/building-images/understanding-image-layers.md
+    link: ../../comecando/conceitos-do-docker/construindo-imagens/entendendo-camadas-de-imagem.md
   - title: Escrevendo um Dockerfile
     description: Aprenda a criar uma imagem usando um Dockerfile.
     link: ../../get-started/docker-concepts/building-images/writing-a-dockerfile.md

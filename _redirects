@@ -18,3 +18,22 @@
 /get-started/docker-concepts/the-basics/what-is-docker-compose/ /comecando/conceitos-do-docker/o-basico/o-que-e-docker-compose 301
 
 /get-started/docker-concepts/building-images/ /comecando/conceitos-do-docker/construindo-imagens/ 301
+/get-started/docker-concepts/building-images/understanding-image-layers/ /comecando/conceitos-do-docker/construindo-imagens/entendendo-camadas-de-imagem 301
+
+# manuals
+
+/accounts/* /manuals/accounts/:splat 301
+/admin/* /manuals/admin/:splat 301
+/billing/* /manuals/billing/:splat 301
+/build-cloud/* /manuals/build-cloud/:splat 301
+/build/* /manuals/build/:splat 301
+/cloud/* /manuals/cloud/:splat 301
+/compose/* /manuals/compose/:splat 301
+/copilot/* /manuals/copilot/:splat 301
+/desktop/* /manuals/desktop/:splat 301
+/docker-hub/* /manuals/docker-hub/:splat 301
+/engine/* /manuals/engine/:splat 301
+/scout/* /manuals/scout/:splat 301
+/security/* /manuals/security/:splat 301
+/subscription/* /manuals/subscription/:splat 301
+/trusted-content/* /manuals/trusted-content/:splat 301
