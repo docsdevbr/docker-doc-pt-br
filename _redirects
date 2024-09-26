@@ -1,10 +1,3 @@
-# cloudflare
-
-/*index.html /:splat 301
-/*_index.md  /:splat 301
-/*index.md   /:splat 301
-/*.md        /:splat 301
-
 # comecando
 
 /get-started/ /comecando/ 301
@@ -23,3 +16,5 @@
 /get-started/docker-concepts/the-basics/what-is-a-registry/ /comecando/conceitos-do-docker/o-basico/o-que-e-um-registro 301
 /get-started/docker-concepts/the-basics/what-is-an-image/ /comecando/conceitos-do-docker/o-basico/o-que-e-uma-imagem 301
 /get-started/docker-concepts/the-basics/what-is-docker-compose/ /comecando/conceitos-do-docker/o-basico/o-que-e-docker-compose 301
+
+/get-started/docker-concepts/building-images/ /comecando/conceitos-do-docker/construindo-imagens/ 301
