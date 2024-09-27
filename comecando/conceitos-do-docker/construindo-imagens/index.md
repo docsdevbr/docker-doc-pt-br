@@ -46,5 +46,5 @@ produção.
 * Entender camadas de imagem
 * Escrever um Dockerfile
 * Construir, adicionar _tags_ e publicar uma imagem
-* Usar o _cache_ de compilação
+* Usar o _cache_ de construção
 * Contruções em vários estágios

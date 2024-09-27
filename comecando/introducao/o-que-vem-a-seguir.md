@@ -37,23 +37,23 @@ the-basics:
 building-images:
   - title: Entendendo camadas de imagem
     description: Aprenda sobre as camadas de imagens de contêiner.
-    link: ../../comecando/conceitos-do-docker/construindo-imagens/entendendo-camadas-de-imagem.md
+    link: ../conceitos-do-docker/construindo-imagens/entendendo-camadas-de-imagem.md
   - title: Escrevendo um Dockerfile
     description: Aprenda a criar uma imagem usando um Dockerfile.
-    link: ../../get-started/docker-concepts/building-images/writing-a-dockerfile.md
+    link: ../conceitos-do-docker/construindo-imagens/escrevendo-um-dockerfile.md
   - title: Crie, adicione _tags_ e publique uma imagem
     description: |
       Aprenda a criar, adicionar _tags_ e publicar uma imagem no Docker Hub ou
       em qualquer outro registro.
     link: ../../get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md
-  - title: Usando o _cache_ de compilação
+  - title: Usando o _cache_ de construção
     description: |
-      Aprenda sobre o _cache_ de compilação, quais alterações invalidam o
-      _cache_ e como usar o _cache_ de compilação de forma eficaz.
+      Aprenda sobre o _cache_ de construção, quais alterações invalidam o
+      _cache_ e como usar o _cache_ de construção de forma eficaz.
     link: ../../get-started/docker-concepts/building-images/using-the-build-cache.md
-  - title: Compilações de vários estágios
+  - title: Construções em vários estágios
     description: |
-      Obtenha uma melhor compreensão das compilações de vários estágios e seus
+      Obtenha uma melhor compreensão das construções em vários estágios e seus
       benefícios.
     link: ../../get-started/docker-concepts/building-images/multi-stage-builds.md
 
@@ -108,21 +108,21 @@ Docker Compose.
 
 ## Criando imagens
 
-Crie imagens de contêiner otimizadas com Dockerfiles, _cache_ de compilação e
-compilações de vários estágios.
+Crie imagens de contêiner otimizadas com Dockerfiles, _cache_ de construção e
+construções em vários estágios.
 
-* [Entendendo camadas de imagem](../../get-started/docker-concepts/building-images/understanding-image-layers.md)
+* [Entendendo camadas de imagem](../conceitos-do-docker/construindo-imagens/entendendo-camadas-de-imagem.md)
     * Aprenda sobre as camadas de imagens de contêiner.
-* [Escrevendo um Dockerfile](../../get-started/docker-concepts/building-images/writing-a-dockerfile.md)
+* [Escrevendo um Dockerfile](../conceitos-do-docker/construindo-imagens/escrevendo-um-dockerfile.md)
     * Aprenda a criar uma imagem usando um Dockerfile.
 * [Crie, adicione _tags_ e publique uma imagem](../../get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md)
-    * Aprenda a criar, adicionar _tags_ e publicar uma imagem no Docker Hub ou em
-      qualquer outro registro.
-* [Usando o _cache_ de compilação](../../get-started/docker-concepts/building-images/using-the-build-cache.md)
-    * Aprenda sobre o _cache_ de compilação, quais alterações invalidam o _cache_
-      e como usar o _cache_ de compilação de forma eficaz.
-* [Compilações de vários estágios](../../get-started/docker-concepts/building-images/multi-stage-builds.md)
-    * Obtenha uma melhor compreensão das compilações de vários estágios e seus
+    * Aprenda a criar, adicionar _tags_ e publicar uma imagem no Docker Hub ou
+      em qualquer outro registro.
+* [Usando o _cache_ de construção](../../get-started/docker-concepts/building-images/using-the-build-cache.md)
+    * Aprenda sobre o _cache_ de construção, quais alterações invalidam o
+      _cache_ e como usar o _cache_ de construção de forma eficaz.
+* [Construções em vários estágios](../../get-started/docker-concepts/building-images/multi-stage-builds.md)
+    * Obtenha uma melhor compreensão das construções em vários estágios e seus
       benefícios.
 
 ## Executando contêineres

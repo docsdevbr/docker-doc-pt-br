@@ -68,7 +68,7 @@ Este exemplo pode ser parecido com:
 Isso é benéfico porque permite que camadas sejam reutilizadas entre imagens.
 Por exemplo, imagine que você queira criar outra aplicação Python.
 Devido à disposição em camadas, você pode aproveitar a mesma base Python.
-Isso tornará as compilações mais rápidas e reduzirá a quantidade de
+Isso tornará as construções mais rápidas e reduzirá a quantidade de
 armazenamento e largura de banda necessária para distribuir as imagens.
 A disposição em camadas da imagem pode ser semelhante à seguinte:
 

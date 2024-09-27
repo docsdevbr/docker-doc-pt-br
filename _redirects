@@ -19,6 +19,7 @@
 
 /get-started/docker-concepts/building-images/ /comecando/conceitos-do-docker/construindo-imagens/ 301
 /get-started/docker-concepts/building-images/understanding-image-layers/ /comecando/conceitos-do-docker/construindo-imagens/entendendo-camadas-de-imagem 301
+/get-started/docker-concepts/building-images/writing-a-dockerfile/ /comecando/conceitos-do-docker/construindo-imagens/escrevendo-um-dockerfile 301
 
 # manuals
 

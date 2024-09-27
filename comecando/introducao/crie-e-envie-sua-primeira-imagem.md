@@ -214,7 +214,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
    `DOCKER_USERNAME/getting-started-todo-app`, substituindo `DOCKER_USERNAME`
    pelo seu nome de pessoa usuária do Docker.
 
-4. Após pressionar **Enter**, você verá um terminal aparecer onde a compilação
+4. Após pressionar **Enter**, você verá um terminal aparecer onde a construção
    ocorrerá.
    Quando estiver concluído, sinta-se à vontade para fechar o terminal.
 

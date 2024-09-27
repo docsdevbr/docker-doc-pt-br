@@ -34,3 +34,4 @@ nav:
           - Construindo imagens:
               - comecando/conceitos-do-docker/construindo-imagens/index.md
               - comecando/conceitos-do-docker/construindo-imagens/entendendo-camadas-de-imagem.md
+              - comecando/conceitos-do-docker/construindo-imagens/escrevendo-um-dockerfile.md
