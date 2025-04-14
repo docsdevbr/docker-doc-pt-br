@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Deploy services to a swarm
 keywords: guide, swarm mode, swarm, service
 title: Deploy services to a swarm
 toc_max: 4
 ---
-
 Swarm services use a declarative model, which means that you define the
 desired state of the service, and rely upon Docker to maintain this state. The
 state includes information such as (but not limited to):

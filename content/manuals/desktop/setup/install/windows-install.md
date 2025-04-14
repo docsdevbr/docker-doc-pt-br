@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Get started with Docker for Windows. This guide covers system requirements,
   where to download, and instructions on how to install and update.
 keywords: docker for windows, docker windows, docker desktop for windows, docker on
@@ -21,7 +31,6 @@ aliases:
 - /desktop/win/configuring-wsl/
 - /desktop/install/windows-install/
 ---
-
 > **Docker Desktop terms**
 >
 > Commercial use of Docker Desktop in larger enterprises (more than 250

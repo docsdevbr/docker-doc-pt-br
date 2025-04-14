@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Integrate Amazon Elastic Container Registry with Docker Scout
 keywords: docker scout, ecr, integration, image analysis, security, cves
 title: Integrate Docker Scout with Amazon ECR
 linkTitle: Amazon ECR
 ---
-
 Integrating Docker Scout with Amazon Elastic Container Registry (ECR) lets you
 view image insights for images hosted in ECR repositories. After integrating
 Docker Scout with ECR and activating Docker Scout for a repository, pushing an

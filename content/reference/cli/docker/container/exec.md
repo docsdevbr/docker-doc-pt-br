@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 datafolder: engine-cli
 datafile: docker_container_exec
 title: docker container exec
@@ -9,7 +19,6 @@ aliases:
 - /reference/cli/docker/exec/
 layout: cli
 ---
-
 > **Introducing Docker Debug**
 >
 > To easily get a debug shell into any container, use `docker debug`. Docker

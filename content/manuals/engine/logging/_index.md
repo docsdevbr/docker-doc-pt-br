@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to write to, view, and configure a container's logs
 keywords: docker, logging
 title: View container logs
@@ -9,7 +19,6 @@ aliases:
   - /engine/admin/logging/view_container_logs/
   - /config/containers/logging/
 ---
-
 The `docker logs` command shows information logged by a running container. The
 `docker service logs` command shows information logged by all containers
 participating in a service. The information that's logged and the format of the

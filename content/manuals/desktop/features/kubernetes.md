@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: See how you can deploy to Kubernetes on Docker Desktop
 keywords: deploy, kubernetes, kubectl, orchestration, Docker Desktop
 title: Deploy on Kubernetes with Docker Desktop
@@ -9,7 +19,6 @@ aliases:
 - /desktop/kubernetes/
 weight: 60
 ---
-
 Docker Desktop includes a standalone Kubernetes server and client, as well as Docker CLI integration, enabling local Kubernetes development and testing directly on your machine.
 
 The Kubernetes server runs as a single or multi-node cluster, within Docker container(s). This lightweight setup helps you explore Kubernetes features, test workloads, and work with container orchestration in parallel with other Docker functionalities.

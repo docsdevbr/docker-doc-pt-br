@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Source file conventions
 description: How new .md files should be formatted
 keywords: source file, contribute, style guide
 weight: 30
 ---
-
 ## File name
 
 When you create a new .md file for new content, make sure: 
@@ -39,6 +48,16 @@ the metadata elements in the front matter isn't important.
 
 ```liquid
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Instructions for installing Docker Engine on Ubuntu
 keywords: requirements, apt, installation, ubuntu, install, uninstall, upgrade, update
 title: Install Docker Engine on Ubuntu
@@ -72,6 +91,16 @@ This is useful in combination with `build.render` set to `always`, which creates
 
 ```md
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Dummy sidebar link
 build:
   render: never

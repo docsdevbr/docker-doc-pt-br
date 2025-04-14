@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Image details view
 keywords: scout, supply chain, vulnerabilities, packages, cves, image, tag, scan,
   analysis, analyze
@@ -7,7 +17,6 @@ description: The Docker Scout image detail view analyzes images to show their hi
 aliases:
   - /scout/image-details-view
 ---
-
 The image details view shows a breakdown of the Docker Scout analysis. You can
 access the image view from the Docker Scout Dashboard, the Docker Desktop
 **Images** view, and from the image tag page on Docker Hub. The image details

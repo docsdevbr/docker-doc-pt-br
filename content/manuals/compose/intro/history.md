@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: History and development of Docker Compose
 linkTitle: History and development
 description: History of Compose V1 and Compose YAML schema versioning
@@ -7,7 +17,6 @@ weight: 30
 aliases:
 - /compose/history/
 ---
-
 This page provides:
  - A brief history of the development of the Docker Compose CLI
  - A clear explanation of the major versions and file formats that make up Compose V1 and Compose V2

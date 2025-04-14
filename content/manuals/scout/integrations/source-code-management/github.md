@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Integrate Docker Scout with GitHub
 linkTitle: GitHub
 description: Integrate Docker Scout using the GitHub app to get remediation advice directly in your repositories
 keywords: scout, github, integration, image analysis, supply chain, remediation, source code
 ---
-
 {{< summary-bar feature_name="Docker Scout GitHub" >}}
 
 The GitHub app integration for Docker Scout grants Docker Scout access to your

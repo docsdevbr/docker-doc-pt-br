@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Test before push with GitHub Actions
 linkTitle: Test before push
 description: Here's how you can validate an image, before pushing it to a registry
 keywords: ci, github actions, gha, buildkit, buildx, test
 ---
-
 In some cases, you might want to validate that the image works as expected
 before pushing it. The following workflow implements several steps to achieve
 this:

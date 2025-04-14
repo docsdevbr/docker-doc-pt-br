@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Guidelines for writing Docker usage guides
 linkTitle: Write a Docker guide
 description: Learn how to write guides for learning about Docker, with Docker.
 ---
-
 <!-- vale Docker.We = NO -->
 
 This guide provides instructions and best practices for writing tutorial-style
@@ -40,6 +49,16 @@ and needs.
 
 ```yaml
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Deploy a machine learning model with Docker
 linkTitle: Docker for ML deployment
 description: Learn how to containerize and deploy a machine learning model using Docker.

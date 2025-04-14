@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Educational resources
 keywords: get started, setup, orientation, quickstart, intro, concepts, kubernetes,
   docker desktop
 description: Get started resources learning docker
 ---
-
 Docker and the broader community of Docker experts have put together many different ways to get further training and hands-on experience with Docker. Expand your understanding of Docker and Kubernetes with these additional free and paid resources.
 
 ## Docker Training

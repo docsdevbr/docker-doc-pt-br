@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the Graylog Extended Format logging driver with Docker Engine
 keywords: graylog, gelf, logging, driver
 title: Graylog Extended Format logging driver
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/logging/gelf/
   - /config/containers/logging/gelf/
 ---
-
 The `gelf` logging driver is a convenient format that's understood by a number of tools such as
 [Graylog](https://www.graylog.org/), [Logstash](https://www.elastic.co/products/logstash), and
 [Fluentd](https://www.fluentd.org). Many tools use this format.

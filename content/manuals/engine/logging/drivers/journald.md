@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the Journald logging driver with Docker Engine
 keywords: journald, systemd-journald, docker, logging, driver
 title: Journald logging driver
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/logging/journald/
   - /config/containers/logging/journald/
 ---
-
 The `journald` logging driver sends container logs to the
 [`systemd` journal](https://www.freedesktop.org/software/systemd/man/systemd-journald.service.html).
 Log entries can be retrieved using the `journalctl` command, through use of the

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Develop and Deploy Laravel applications with Docker Compose
 linkTitle: Laravel applications with Docker Compose
 summary: Learn how to efficiently set up Laravel development and production environments using Docker Compose.
@@ -19,7 +29,6 @@ params:
     - title: Repository with examples
       url: https://github.com/dockersamples/laravel-docker-examples
 ---
-
 Laravel is a popular PHP framework that allows developers to build web applications quickly and effectively. Docker Compose simplifies the management of development and production environments by defining essential services, like PHP, a web server, and a database, in a single YAML file. This guide provides a streamlined approach to setting up a robust Laravel environment using Docker Compose, focusing on simplicity and efficiency.
 
 > **Acknowledgment**

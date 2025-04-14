@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the Google Cloud Logging driver with Docker Engine
 keywords: gcplogs, google, docker, logging, driver
 title: Google Cloud Logging driver
@@ -6,7 +16,6 @@ aliases:
   - /engine/admin/logging/gcplogs/
   - /config/containers/logging/gcplogs/
 ---
-
 The Google Cloud Logging driver sends container logs to
 [Google Cloud Logging](https://cloud.google.com/logging/docs/)
 Logging.

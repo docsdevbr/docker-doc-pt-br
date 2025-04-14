@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Enterprise deployment FAQs
 description: Frequently asked questions for deploying Docker Desktop at scale
 keywords: msi, deploy, docker desktop, faqs, pkg, mdm, jamf, intune, windows, mac, enterprise, admin
@@ -7,7 +17,6 @@ aliases:
 - /desktop/install/msi/faq/
 - /desktop/setup/install/msi/faq/
 ---
-
 ## MSI
 
 ### What happens to user data if they have an older Docker Desktop installation (i.e. `.exe`)?

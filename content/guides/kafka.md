@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Developing event-driven applications with Kafka and Docker
 keywords: kafka, container-supported development
 title: Developing event-driven applications with Kafka and Docker
@@ -12,7 +22,6 @@ aliases:
 params:
   time: 20 minutes
 ---
-
 With the rise of microservices, event-driven architectures have become increasingly popular.
 [Apache Kafka](https://kafka.apache.org/), a distributed event streaming platform, is often at the
 heart of these architectures. Unfortunately, setting up and deploying your own Kafka instance for development

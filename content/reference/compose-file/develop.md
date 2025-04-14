@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Compose Develop Specification
 description: Learn about the Compose Develop Specification
 keywords: compose, compose specification, compose file reference, compose develop specification
@@ -6,7 +16,6 @@ aliases:
  - /compose/compose-file/develop/
 weight: 150
 ---
-
 > [!NOTE] 
 >
 > Develop is an optional part of the Compose Specification. It is available with Docker Compose version 2.22.0 and later.

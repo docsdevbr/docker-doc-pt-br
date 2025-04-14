@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Add SBOM and provenance attestations with GitHub Actions
 linkTitle: Attestations
 description: Add SBOM and provenance attestations to your images with GitHub Actions
 keywords: ci, github actions, gha, buildkit, buildx, attestations, sbom, provenance, slsa
 ---
-
 Software Bill of Material (SBOM) and provenance
 [attestations](../../metadata/attestations/_index.md) add metadata about the contents of
 your image, and how it was built.

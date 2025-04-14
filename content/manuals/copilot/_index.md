@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker for GitHub Copilot
 params:
   sidebar:
@@ -14,7 +24,6 @@ description: |
   various development environments.
 keywords: Docker, GitHub Copilot, extension, Visual Studio Code, chat, ai, containerization
 ---
-
 {{< summary-bar feature_name="Docker GitHub Copilot" >}}
 
 The [Docker for GitHub Copilot](https://github.com/marketplace/docker-for-github-copilot)

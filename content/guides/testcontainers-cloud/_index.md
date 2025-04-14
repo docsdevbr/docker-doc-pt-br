@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: |
   Mastering Testcontainers Cloud by Docker: streamlining integration testing with containers
 linkTitle: Testcontainers Cloud by Docker
@@ -25,7 +35,6 @@ params:
     - title: Testcontainers Cloud on the Docker Blog
       url: https://www.docker.com/search/?_sf_s=testcontainers%20cloud
 ---
-
 Testcontainers Cloud is a cloud-based solution designed to streamline and enhance the process of running integration tests using Testcontainers. Testcontainers is the open source framework, which allows developers to easily spin up containerized dependencies such as databases, message brokers, and other services required for testing. By shifting the management of Testcontainers-based services to the cloud, Testcontainers Cloud optimizes performance, reduces resource constraints on local machines or CI servers, and ensures consistent test environments. This solution is particularly beneficial for teams working on complex, distributed systems, as it allows for scalable, isolated, and reliable testing without the typical overhead of managing containers locally.
 
 ## What you'll learn

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Enhanced Container Isolation FAQs
 linkTitle: FAQs
 description: Frequently asked questions for Enhanced Container Isolation
@@ -8,7 +18,6 @@ aliases:
  - /desktop/hardened-desktop/enhanced-container-isolation/faq/
 weight: 40
 ---
-
 ### Do I need to change the way I use Docker when ECI is switched on?
 
 No, you can continue to use Docker as usual. ECI works under the covers by

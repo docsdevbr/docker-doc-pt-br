@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: The Docker Scout Dashboard helps review and share the analysis of images.
 keywords: scout, scanning, analysis, vulnerabilities, Hub, supply chain, security, report,
   reports, dashboard
@@ -8,7 +18,6 @@ aliases:
 - /scout/web-app/
 - /scout/dashboard/
 ---
-
 The [Docker Scout Dashboard](https://scout.docker.com/) helps you share the
 analysis of images in an organization with your team. Developers can now see an
 overview of their security status across all their images from both Docker Hub

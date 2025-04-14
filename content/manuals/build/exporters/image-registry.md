@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Image and registry exporters
 description: |
   The image and registry exporters create an image that can be loaded to your
@@ -7,7 +17,6 @@ keywords: build, buildx, buildkit, exporter, image, registry
 aliases:
   - /build/building/exporters/image-registry/
 ---
-
 The `image` exporter outputs the build result into a container image format. The
 `registry` exporter is identical, but it automatically pushes the result by
 setting `push=true`.

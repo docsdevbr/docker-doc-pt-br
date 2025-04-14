@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to setup and run Docker with SSH or HTTPS
 keywords: docker, docs, article, example, ssh, https, daemon, tls, ca,  certificate
 title: Protect the Docker daemon socket
@@ -7,7 +17,6 @@ aliases:
 - /engine/articles/https/
 - /engine/security/https/
 ---
-
 By default, Docker runs through a non-networked UNIX socket. It can also
 optionally communicate using SSH or a TLS (HTTPS) socket.
 

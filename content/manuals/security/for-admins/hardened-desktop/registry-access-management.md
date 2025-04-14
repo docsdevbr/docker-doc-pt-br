@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Control access to approved registries with Registry Access Management, ensuring secure Docker Desktop usage
 keywords: registry, access, management, permissions, Docker Business feature, security, admin
 title: Registry Access Management
@@ -10,7 +20,6 @@ aliases:
  - /security/for-admins/registry-access-management/
 weight: 30
 ---
-
 {{< summary-bar feature_name="Registry access management" >}}
 
 With Registry Access Management (RAM), administrators can ensure that their developers using Docker Desktop only access allowed registries. This is done through the Registry Access Management dashboard in Docker Hub or the Docker Admin Console.

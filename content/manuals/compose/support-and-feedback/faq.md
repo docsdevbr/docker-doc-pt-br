@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Frequently asked questions for Docker Compose
 keywords: documentation, docs,  docker, compose, faq, docker compose vs docker-compose
 title: Compose FAQs
@@ -8,7 +18,6 @@ tags: [FAQ]
 aliases:
 - /compose/faq/
 ---
-
 ### What is the difference between `docker compose` and `docker-compose`
 
 Version one of the Docker Compose command-line binary was first released in 2014. It was written in Python, and is invoked with `docker-compose`. Typically, Compose V1 projects include a top-level version element in the compose.yaml file, with values ranging from 2.0 to 3.8, which refer to the specific file formats.

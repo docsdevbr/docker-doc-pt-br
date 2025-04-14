@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Custom kernels on WSL 
 description: Using custom kernels with Docker Desktop on WSL 2
 keywords: wsl, docker desktop, custom kernel
 tags: [Best practices, troubleshooting]
 ---
-
 Docker Desktop depends on several kernel features built into the default
 WSL 2 Linux kernel distributed by Microsoft. Consequently, using a
 custom kernel with Docker Desktop on WSL 2 is not officially supported

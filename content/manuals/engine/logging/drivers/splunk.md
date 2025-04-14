@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the Splunk logging driver with Docker Engine
 keywords: splunk, docker, logging, driver
 title: Splunk logging driver
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/logging/splunk/
   - /config/containers/logging/splunk/
 ---
-
 The `splunk` logging driver sends container logs to
 [HTTP Event Collector](https://dev.splunk.com/enterprise/docs/devtools/httpeventcollector/)
 in Splunk Enterprise and Splunk Cloud.

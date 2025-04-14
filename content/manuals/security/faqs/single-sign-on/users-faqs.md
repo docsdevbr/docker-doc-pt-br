@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Single sign-on user management FAQs
 keywords: Docker, Docker Hub, SSO FAQs, single sign-on
 title: FAQs on SSO and managing users
@@ -7,7 +17,6 @@ aliases:
 - /single-sign-on/users-faqs/
 - /faq/security/single-sign-on/users-faqs/
 ---
-
 ### How do I manage users when using SSO?
 
 You can manage users through organizations in Docker Hub or Admin Console. When you configure SSO in Docker, you need to make sure an account exists for each user in your IdP account. When a user signs in to Docker for the first time using their domain email address, they will be automatically added to the organization after a successful authentication.

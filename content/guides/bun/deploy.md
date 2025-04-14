@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Test your Bun deployment
 linkTitle: Test your deployment
 weight: 50
@@ -7,7 +17,6 @@ description: Learn how to develop locally using Kubernetes
 aliases:
 - /language/bun/deploy/
 ---
-
 ## Prerequisites
 
 - Complete all the previous sections of this guide, starting with [Containerize a Bun application](containerize.md).

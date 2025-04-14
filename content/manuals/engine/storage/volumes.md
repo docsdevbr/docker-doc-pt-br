@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description:
   Learn how to create, manage, and use volumes instead of bind mounts for
   persisting data generated and used by Docker.
@@ -14,7 +24,6 @@ aliases:
   - /engine/admin/volumes/volumes/
   - /storage/volumes/
 ---
-
 Volumes are persistent data stores for containers, created and managed by
 Docker. You can create a volume explicitly using the `docker volume create`
 command, or Docker can create a volume during container or service creation.

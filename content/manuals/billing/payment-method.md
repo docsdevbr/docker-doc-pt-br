@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Add or update a payment method
 weight: 20
 description: Learn how to add or update a payment method in Docker Hub
@@ -6,7 +16,6 @@ keywords: payments, billing, subscription, supported payment methods, failed pay
 billing:
 - /billing/core-billing/payment-method/
 ---
-
 This page describes how to add or update a payment method for your personal account or for an organization.
 
 You can add a payment method or update your account's existing payment method at any time.

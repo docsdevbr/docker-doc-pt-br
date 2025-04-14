@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Bake targets
 linkTitle: Targets
 weight: 20
 description: Learn how to define and use targets in Bake
 keywords: bake, target, targets, buildx, docker, buildkit, default
 ---
-
 A target in a Bake file represents a build invocation. It holds all the
 information you would normally pass to a `docker build` command using flags.
 

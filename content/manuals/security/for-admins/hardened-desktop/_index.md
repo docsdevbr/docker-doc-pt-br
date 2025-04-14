@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Overview of Hardened Docker Desktop
 linkTitle: Hardened Docker Desktop
 description: Overview of what Hardened Docker Desktop is and its key features
@@ -31,7 +41,6 @@ grid:
     link: /security/for-admins/hardened-desktop/air-gapped-containers/
 weight: 60
 ---
-
 {{< summary-bar feature_name="Hardened Docker Desktop" >}}
 
 Hardened Docker Desktop is a group of security features, designed to improve the security of developer environments with minimal impact on developer experience or productivity.

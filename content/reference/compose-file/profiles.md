@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Profiles
 description: Learn about profiles
 keywords: compose, compose specification, profiles, compose file reference
@@ -6,7 +16,6 @@ aliases:
  - /compose/compose-file/15-profiles/
 weight: 120
 ---
-
 With profiles you can define a set of active profiles so your Compose application model is adjusted for various usages and environments.
 
 The [services](services.md) top-level element supports a `profiles` attribute to define a list of named profiles. 

@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Update Docker Hub description with GitHub Actions
 linkTitle: Update Docker Hub description
 description: How to update the repository README in Docker Hub using with GitHub Actions
 keywords: ci, github actions, gha, buildkit, buildx, docker hub
 ---
-
 You can update the Docker Hub repository description using a third party action
 called [Docker Hub Description](https://github.com/peter-evans/dockerhub-description)
 with this action:

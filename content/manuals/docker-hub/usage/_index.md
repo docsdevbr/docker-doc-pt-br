@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn about usage and limits for Docker Hub.
 keywords: Docker Hub, limit, usage
 title: Docker Hub usage and limits
@@ -7,7 +17,6 @@ weight: 30
 aliases:
   /docker-hub/download-rate-limit/
 ---
-
 {{% include "hub-limits.md" %}}
 
 The following table provides an overview of the included usage and limits for each

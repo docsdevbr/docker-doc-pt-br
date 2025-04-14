@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Create an exception using the GUI
 description: Create an exception for a vulnerability in an image using the Docker Scout Dashboard or Docker Desktop.
 keywords: Docker, Docker Scout, Docker Desktop, vulnerability, exception, create, GUI
 ---
-
 The Docker Scout Dashboard and Docker Desktop provide a user-friendly interface
 for creating [exceptions](/manuals/scout/explore/exceptions.md) for
 vulnerabilities found in container images. Exceptions let you acknowledge

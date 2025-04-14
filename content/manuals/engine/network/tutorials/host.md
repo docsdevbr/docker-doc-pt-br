@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Networking using the host network
 description: Tutorials for networking using the host network, disabling network isolation
 keywords: networking, host, standalone
 aliases:
   - /network/network-tutorial-host/
 ---
-
 This series of tutorials deals with networking standalone containers which bind
 directly to the Docker host's network, with no network isolation. For other
 networking topics, see the [overview](/manuals/engine/network/_index.md).

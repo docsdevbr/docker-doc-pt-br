@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Testcontainers
 description: Learn how to use Testcontainers to run containers programmatically in your preferred programming language.
 keywords: docker APIs, docker, testcontainers documentation, testcontainers, testcontainers oss, testcontainers oss documentation,
@@ -25,7 +35,6 @@ quickstart:
   icon: /assets/icons/java.svg
   link: https://java.testcontainers.org/
 ---
-
 Testcontainers is a set of open source libraries that provides easy and lightweight APIs for bootstrapping local development and test dependencies with real services wrapped in Docker containers.
 Using Testcontainers, you can write tests that depend on the same services you use in production without mocks or in-memory services.
 

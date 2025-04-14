@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Test your Python deployment
 linkTitle: Test your deployment
 weight: 50
@@ -8,7 +18,6 @@ aliases:
   - /language/python/deploy/
   - /guides/language/python/deploy/
 ---
-
 ## Prerequisites
 
 - Complete all the previous sections of this guide, starting with [Use containers for Python development](develop.md).
@@ -62,6 +71,16 @@ spec:
           persistentVolumeClaim:
             claimName: postgres-pvc
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -85,6 +104,16 @@ spec:
     requests:
       storage: 1Gi
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 apiVersion: v1
 kind: Secret
 metadata:

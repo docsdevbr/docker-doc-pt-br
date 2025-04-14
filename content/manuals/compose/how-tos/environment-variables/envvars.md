@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Compose pre-defined environment variables
 keywords: fig, composition, compose, docker, orchestration, cli, reference
 title: Set or change pre-defined environment variables in Docker Compose
@@ -8,7 +18,6 @@ aliases:
 - /compose/reference/envvars/
 - /compose/environment-variables/envvars/
 ---
-
 Compose already comes with pre-defined environment variables. It also inherits common Docker CLI environment variables, such as `DOCKER_HOST` and `DOCKER_CONTEXT`. See [Docker CLI environment variable reference](/reference/cli/docker/#environment-variables) for details.
 
 This page contains information on how you can set or change the following pre-defined environment variables if you need to:

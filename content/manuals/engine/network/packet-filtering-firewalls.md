@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Packet filtering and firewalls
 weight: 10
 description: How Docker works with packet filtering, iptables, and firewalls
@@ -7,7 +17,6 @@ aliases:
 - /network/iptables/
 - /network/packet-filtering-firewalls/
 ---
-
 On Linux, Docker creates `iptables` and `ip6tables` rules to implement network
 isolation, port publishing and filtering.
 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Resource constraints
 weight: 30
 description: Specify the runtime options for a container
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/resource_constraints/
   - /config/containers/resource_constraints/
 ---
-
 By default, a container has no resource constraints and can use as much of a
 given resource as the host's kernel scheduler allows. Docker provides ways
 to control how much memory, or CPU a container can use, setting runtime

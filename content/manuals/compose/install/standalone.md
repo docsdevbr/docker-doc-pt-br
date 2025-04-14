@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Install the Docker Compose standalone
 linkTitle: Standalone
 description: How to install Docker Compose - Other Scenarios
@@ -6,7 +16,6 @@ keywords: compose, orchestration, install, installation, docker, documentation
 toc_max: 3
 weight: 20
 ---
-
 This page contains instructions on how to install Docker Compose standalone on Linux or Windows Server, from the command line.
 
 > [!WARNING]

@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Remote Bake file definition
 description: Build with Bake using a remote file definition using Git or HTTP
 keywords: build, buildx, bake, file, remote, git, http
 ---
-
 You can build Bake files directly from a remote Git repository or HTTPS URL:
 
 ```console

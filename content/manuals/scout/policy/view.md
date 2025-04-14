@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: View Docker Scout policy status
 description: |
   The Docker Scout Dashboard and the `docker scout policy` command lets you
   view policy status of images.
 keywords: scout, policy, status, vulnerabilities, supply chain, cves, licenses
 ---
-
 You can track policy status for your artifacts from the [Docker Scout
 Dashboard](#dashboard), or using the [CLI](#cli).
 

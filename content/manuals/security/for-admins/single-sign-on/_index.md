@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how single sign-on works, how to set it up, and the required SSO attributes.
 keywords: Single Sign-On, SSO, sign-on, admin, docker hub, admin console, security
 title: Single sign-on overview
@@ -9,7 +19,6 @@ aliases:
 - /admin/organization/security-settings/sso-management/
 weight: 10
 ---
-
 {{< summary-bar feature_name="SSO" >}}
 
 Single sign-on (SSO) lets users access Docker by authenticating using their identity providers (IdPs). SSO is available for a whole company, and all associated organizations within that company, or an individual organization that has a Docker Business subscription. To upgrade your existing account to a Docker Business subscription, see [Upgrade your subscription](/subscription/upgrade/).

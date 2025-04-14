@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Swarm task states
 description: Learn about tasks that are scheduled on your swarm.
 keywords: swarm, task, service
 aliases:
 - /datacenter/ucp/2.2/guides/admin/monitor-and-troubleshoot/troubleshoot-task-state/
 ---
-
 Docker lets you create services, which can start tasks. A service is a
 description of a desired state, and a task does the work. Work is scheduled on
 swarm nodes in this sequence:

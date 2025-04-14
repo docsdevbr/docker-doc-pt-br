@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Create a multi-stage build for your C++ application
 linkTitle: Containerize your app using a multi-stage build
 weight: 5
@@ -8,7 +18,6 @@ aliases:
 - /language/cpp/multistage/
 - /guides/language/cpp/multistage/
 ---
-
 ## Prerequisites
 
 - You have a [Git client](https://git-scm.com/downloads). The examples in this section use a command-line based Git client, but you can use any client.

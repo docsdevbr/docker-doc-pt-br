@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Containerize an application
 weight: 20
 linkTitle: "Part 1: Containerize an application"
@@ -14,7 +24,6 @@ aliases:
   - /get-started/02_our_app/
   - /guides/workshop/02_our_app/
 ---
-
 For the rest of this guide, you'll be working with a simple todo
 list manager that runs on Node.js. If you're not familiar with Node.js,
 don't worry. This guide doesn't require any prior experience with JavaScript.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Subscription
 description: Learn about subscription features and how to manage your subscription
 keywords: Docker, pricing, billing, Pro, Team, business, subscription, tier, plan
@@ -39,7 +49,6 @@ aliases:
 - /docker-hub/billing/
 - /docker-hub/billing/faq/
 ---
-
 A Docker subscription includes licensing for commercial use of Docker products
 including Docker Desktop, Docker Hub, Docker Build Cloud, Docker Scout, and
 Testcontainers Cloud.

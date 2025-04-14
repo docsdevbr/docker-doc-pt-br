@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Run Docker Engine in swarm mode
 keywords: guide, swarm mode, node, Docker Engines
 title: Run Docker Engine in swarm mode
 ---
-
 When you first install and start working with Docker Engine, Swarm mode is
 disabled by default. When you enable Swarm mode, you work with the concept of
 services managed through the `docker service` command.

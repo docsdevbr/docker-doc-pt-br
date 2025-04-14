@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Migrate to Compose V2
 weight: 20
 description: How to migrate from Compose V1 to V2
@@ -8,7 +18,6 @@ aliases:
 - /compose/cli-command-compatibility/
 - /compose/migrate/
 ---
-
 From July 2023 Compose V1 stopped receiving updates. It’s also no longer available in new releases of Docker Desktop.
 
 Compose V2, which was first released in 2020, is included with all currently supported versions of Docker Desktop. It offers an improved CLI experience, improved build performance with BuildKit, and continued new-feature development.

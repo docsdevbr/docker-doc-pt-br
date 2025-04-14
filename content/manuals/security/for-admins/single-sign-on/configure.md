@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to configure single sign-on for your organization or company.
 keywords: configure, sso, docker hub, hub, docker admin, admin, security
 title: Configure single sign-on
@@ -11,7 +21,6 @@ aliases:
 - /admin/company/settings/sso-configuration/
 - /admin/organization/security-settings/sso-configuration/
 ---
-
 {{< summary-bar feature_name="SSO" >}}
 
 Get started creating a single sign-on (SSO) connection for your organization or company. This guide walks through the steps to add and verify the domains your members use to sign in to Docker.

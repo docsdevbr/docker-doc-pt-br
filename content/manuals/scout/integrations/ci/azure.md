@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to integrate Docker Scout with Microsoft Azure DevOps Pipelines
 keywords: supply chain, security, ci, continuous integration, azure, devops
 title: Integrate Docker Scout with Microsoft Azure DevOps Pipelines
 linkTitle: Azure DevOps Pipelines
 ---
-
 The following examples runs in an Azure DevOps-connected repository containing
 a Docker image's definition and contents. Triggered by a commit to the main
 branch, the pipeline builds the image and uses Docker Scout to create a CVE

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Single sign-on domain FAQs
 keywords: Docker, Docker Hub, SSO FAQs, single sign-on, domains, domain verification, domain management
 title: FAQS on SSO and domains
@@ -7,7 +17,6 @@ aliases:
 - /single-sign-on/domain-faqs/
 - /faq/security/single-sign-on/domain-faqs/
 ---
-
 ### Can I add sub-domains?
 
 Yes, you can add sub-domains to your SSO connection, however all email addresses should also be on that domain. Verify that your DNS provider supports multiple TXT records for the same domain.

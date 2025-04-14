@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How swarm nodes work
 keywords: docker, container, cluster, swarm mode, node
 title: How nodes work
@@ -6,7 +16,6 @@ weight: 10
 aliases:
 - /engine/swarm/how-swarm-mode-works/
 ---
-
 Swarm mode lets you create a
 cluster of one or more Docker Engines called a swarm. A swarm consists
 of one or more nodes: physical or virtual machines running Docker

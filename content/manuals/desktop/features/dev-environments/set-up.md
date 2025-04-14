@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Set up a dev Environments
 keywords: Dev Environments, share, set up, Compose, Docker Desktop
 title: Set up a dev environment
@@ -6,7 +16,6 @@ weight: 20
 aliases:
 - /desktop/dev-environments/set-up/
 ---
-
 {{% include "dev-envs-changing.md" %}}
 
 >**Changes to Dev Environments with Docker Desktop 4.13**

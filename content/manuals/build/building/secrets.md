@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Build secrets
 linkTitle: Secrets
 weight: 30
@@ -6,7 +16,6 @@ description: Manage credentials and other secrets securely
 keywords: build, secrets, credentials, passwords, tokens, ssh, git, auth, http
 tags: [Secrets]
 ---
-
 A build secret is any piece of sensitive information, such as a password or API
 token, consumed as part of your application's build process.
 

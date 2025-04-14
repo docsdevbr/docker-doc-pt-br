@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Volumes top-level element
 description: Explore all the attributes the volumes top-level element can have.
 keywords: compose, compose specification, volumes, compose file reference
@@ -6,7 +16,6 @@ aliases:
  - /compose/compose-file/07-volumes/
 weight: 40
 ---
-
 {{% include "compose/volumes.md" %}}
 
 To use a volume across multiple services, you must explicitly grant each service access by using the [volumes](services.md#volumes) attribute within the `services` top-level element. The `volumes` attribute has additional syntax that provides more granular control.

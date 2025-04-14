@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Use Docker Compose
 weight: 80
 linkTitle: "Part 7: Use Docker Compose"
@@ -9,7 +19,6 @@ aliases:
  - /get-started/08_using_compose/
  - /guides/workshop/08_using_compose/
 ---
-
 [Docker Compose](/manuals/compose/_index.md) is a tool that helps you define and
 share multi-container applications. With Compose, you can create a YAML file to define the services
 and with a single command, you can spin everything up or tear it all down.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to control service startup and shutdown order in Docker Compose
 keywords: documentation, docs, docker, compose, startup, shutdown, order
 title: Control startup and shutdown order in Compose
@@ -7,7 +17,6 @@ weight: 30
 aliases:
 - /compose/startup-order/
 ---
-
 You can control the order of service startup and shutdown with the
 [depends_on](/reference/compose-file/services.md#depends_on) attribute. Compose always starts and stops
 containers in dependency order, where dependencies are determined by

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Administration
 description: Discover manuals on administration for accounts, organizations, and companies.
 keywords: admin, administration, company, organization, Admin Console, user accounts, account management
@@ -34,7 +44,6 @@ grid:
 aliases:
 - /docker-hub/admin-overview
 ---
-
 Administrators can manage companies and organizations using the Docker Admin Console, or manage organizations in Docker Hub.
 
 The Docker Admin Console is available for customers with a Docker Business subscription. The [Docker Admin Console](https://admin.docker.com) provides administrators with centralized observability, access management, and controls for their company and organizations. To provide these features, Docker uses the following hierarchy and roles.

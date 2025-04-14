@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Software artifacts on Docker Hub
 linkTitle: Software artifacts
 weight: 20
@@ -7,7 +17,6 @@ description: You can use Docker Hub to store software artifacts packaged as OCI 
 aliases:
 - /docker-hub/oci-artifacts/
 ---
-
 You can use Docker Hub to store any kind of software artifact, not just
 container images. A software artifact is any item produced during the software
 development process that contributes to the creation, maintenance, or

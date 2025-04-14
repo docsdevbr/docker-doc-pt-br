@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: More details on the advisory database and CVE-to-package matching service
   behind Docker Scout analysis.
 keywords: scout, scanning, analysis, vulnerabilities, Hub, supply chain, security, packages, repositories, ecosystem
@@ -6,7 +16,6 @@ title: Advisory database sources and matching service
 aliases:
   /scout/advisory-db-sources/
 ---
-
 Reliable information sources are key for Docker Scout's ability to
 surface relevant and accurate assessments of your software artifacts.
 Given the diversity of sources and methodologies in the industry,

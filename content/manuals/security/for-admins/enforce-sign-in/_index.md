@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Understand what happens when you force users to sign in to Docker Desktop
 toc_max: 2
 keywords: authentication, registry.json, configure, enforce sign-in, docker desktop, security, .plist, registry key, mac, windows
@@ -10,7 +20,6 @@ aliases:
  - /docker-hub/configure-sign-in/
 weight: 30
 ---
-
 {{< summary-bar feature_name="Enforce sign-in" >}}
 
 By default, members of your organization can use Docker Desktop without signing

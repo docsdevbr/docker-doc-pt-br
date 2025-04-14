@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Frequently asked questions for Docker Desktop for Windows
 keywords: desktop, windows, faqs
 title: FAQs for Docker Desktop for Windows
@@ -6,7 +16,6 @@ linkTitle: Windows
 tags: [FAQ]
 weight: 30
 ---
-
 ### Can I use VirtualBox alongside Docker Desktop?
 
 Yes, you can run VirtualBox along with Docker Desktop if you have enabled the [Windows Hypervisor Platform](https://docs.microsoft.com/en-us/virtualization/api/) feature on your machine.

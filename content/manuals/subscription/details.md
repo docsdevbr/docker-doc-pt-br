@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker subscriptions and features
 linkTitle: Subscriptions and features
 description: Learn about Docker subscription tiers and their features
@@ -7,7 +17,6 @@ aliases:
 - /subscription/core-subscription/details/
 weight: 10
 ---
-
 Docker subscription plans empower development teams by providing the tools they need to ship secure, high-quality apps — fast. These plans include access to Docker's suite of products:
 
 - [Docker Desktop](../desktop/_index.md): The industry-leading container-first

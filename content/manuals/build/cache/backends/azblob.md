@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Azure Blob Storage cache
 description: Manage build cache with Azure blob storage
 keywords: build, buildx, cache, backend, azblob, azure
 aliases:
   - /build/building/cache/backends/azblob/
 ---
-
 {{< summary-bar feature_name="Azure blob" >}}
 
 The `azblob` cache store uploads your resulting build cache to

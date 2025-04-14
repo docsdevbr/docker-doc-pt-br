@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: SBOM attestations
 keywords: build, attestations, sbom, spdx, metadata, packages
 description: |
@@ -7,7 +17,6 @@ description: |
 aliases:
   - /build/attestations/sbom/
 ---
-
 Software Bill of Materials (SBOM) attestations describe what software artifacts
 an image contains, and artifacts used to create the image. Metadata included in
 an SBOM for describing software artifacts may include:

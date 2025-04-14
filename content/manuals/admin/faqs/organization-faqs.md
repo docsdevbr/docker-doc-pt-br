@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Organization FAQs
 linkTitle: Organization
 weight: 20
@@ -9,7 +19,6 @@ aliases:
 - /docker-hub/organization-faqs/
 - /faq/admin/organization-faqs/
 ---
-
 ### What if the Docker ID I want for my organization or company is taken?
 
 All Docker IDs are first-come, first-served except for companies that have a U.S. Trademark on a username. If you have a trademark for your namespace, [Docker Support](https://hub.docker.com/support/contact/) can retrieve the Docker ID for you.

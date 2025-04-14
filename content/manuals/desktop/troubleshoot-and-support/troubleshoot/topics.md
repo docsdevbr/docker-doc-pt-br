@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Explore common troubleshooting topics for Docker Desktop
 keywords: Linux, Mac, Windows, troubleshooting, topics, Docker Desktop
 title: Troubleshoot topics for Docker Desktop
@@ -10,7 +20,6 @@ aliases:
  - /desktop/troubleshoot/topics/
  - /manuals/desktop/troubleshoot-and-support/troubleshoot/workarounds/
 ---
-
 > [!TIP]
 >
 > If you do not find a solution in troubleshooting, browse the GitHub repositories or create a new issue:

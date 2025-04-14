@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Enabling seccomp in Docker
 keywords: seccomp, security, docker, documentation
 title: Seccomp security profiles for Docker
 ---
-
 Secure computing mode (`seccomp`) is a Linux kernel feature. You can use it to
 restrict the actions available within the container. The `seccomp()` system
 call operates on the seccomp state of the calling process. You can use this

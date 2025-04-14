@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Using secrets with GitHub Actions
 linkTitle: Build secrets
 description: Example using secret mounts with GitHub Actions
 keywords: ci, github actions, gha, buildkit, buildx, secret
 tags: [Secrets]
 ---
-
 A build secret is sensitive information, such as a password or API token, consumed as part of the build process.
 Docker Build supports two forms of secrets:
 

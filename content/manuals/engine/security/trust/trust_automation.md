@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Automating content push pulls with trust
 keywords: trust, security, docker, documentation, automation
 title: Automation with content trust
 ---
-
 It is very common for Docker Content Trust to be built into existing automation
 systems. To allow tools to wrap Docker and push trusted content, there are 
 environment variables that can be passed through to the client. 

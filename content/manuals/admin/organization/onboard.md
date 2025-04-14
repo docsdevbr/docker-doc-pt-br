@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Onboard your organization
 weight: 20
 description: Get started onboarding your Docker Team or Business organization.
@@ -10,7 +20,6 @@ aliases:
 - /docker-hub/onboard-team/
 - /docker-hub/onboard-business/
 ---
-
 {{< summary-bar feature_name="Admin orgs" >}}
 
 Learn how to onboard your organization using Docker Hub or the Docker Admin Console.

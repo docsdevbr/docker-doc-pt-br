@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How PKI works in swarm mode
 keywords: swarm, security, tls, pki,
 title: Manage swarm security with public key infrastructure (PKI)
 ---
-
 The Swarm mode public key infrastructure (PKI) system built into Docker
 makes it simple to securely deploy a container orchestration system. The nodes
 in a swarm use mutual Transport Layer Security (TLS) to authenticate, authorize,

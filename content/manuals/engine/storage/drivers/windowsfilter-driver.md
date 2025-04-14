@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn about the windowsfilter storage driver
 keywords: container, storage, driver, windows, windowsfilter
 title: windowsfilter storage driver
 ---
-
 The windowsfilter storage driver is the default storage driver for Docker
 Engine on Windows. The windowsfilter driver uses Windows-native file system
 layers to for storing Docker layers and volume data on disk. The windowsfilter

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Multi container apps
 weight: 70
 linkTitle: "Part 6: Multi-container apps"
@@ -9,7 +19,6 @@ aliases:
  - /get-started/07_multi_container/
  - /guides/workshop/07_multi_container/
 ---
-
 Up to this point, you've been working with single container apps. But, now you will add MySQL to the
 application stack. The following question often arises - "Where will MySQL run? Install it in the same
 container or run it separately?" In general, each container should do one thing and do it well. The following are a few reasons to run the container separately:

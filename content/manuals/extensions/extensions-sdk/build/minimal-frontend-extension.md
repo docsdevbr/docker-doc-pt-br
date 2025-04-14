@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Create a simple extension
 description: Minimal frontend extension tutorial
 keywords: Docker, extensions, sdk, build
@@ -8,7 +18,6 @@ aliases:
  - /desktop/extensions-sdk/build/minimal-frontend-extension/
 weight: 10
 ---
-
 To start creating your extension, you first need a directory with files which range from the extension’s source code to the required extension-specific files. This page provides information on how to set up a minimal frontend extension based on plain HTML.
 
 Before you start, make sure you have installed the latest version of [Docker Desktop](/manuals/desktop/release-notes.md).

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Insights and analytics
 description: Discover how to access usage statistics of your images on Docker Hub
 keywords: docker hub, hub, insights, analytics, api, verified publisher
@@ -7,7 +17,6 @@ aliases:
 - /docker-hub/insights-analytics/
 - /trusted-content/insights-analytics/
 ---
-
 Insights and analytics provides usage analytics for Docker Verified
 Publisher (DVP) and Docker-Sponsored Open Source (DSOS) images on Docker Hub. This includes self-serve access to image and extension usage metrics for a desired time span. You can also display the number of image pulls by tag or by digest, and get breakdowns by geolocation, cloud provider, client, and more.
 

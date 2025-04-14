@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Security
 description: Learn about security features Docker has to offer and explore best practices
 keywords: docker, docker hub, docker desktop, security
@@ -90,7 +100,6 @@ grid_resources:
   icon: query_stats
   link: /scout/guides/vex/
 ---
-
 Docker provides security guardrails for both administrators and developers.
 
 If you're an administrator, you can enforce sign-in across Docker products for your developers, and

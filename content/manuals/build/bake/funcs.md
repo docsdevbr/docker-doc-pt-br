@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Functions
 weight: 60
 description: Learn about built-in and user-defined HCL functions with Bake
@@ -7,7 +17,6 @@ aliases:
   - /build/customize/bake/hcl-funcs/
   - /build/bake/hcl-funcs/
 ---
-
 HCL functions are great for when you need to manipulate values in your build
 configuration in more complex ways than just concatenation or interpolation.
 

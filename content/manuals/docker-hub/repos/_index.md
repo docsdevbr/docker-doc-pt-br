@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to manage repositories on Docker Hub
 keywords: Docker Hub, Hub, repositories
 title: Repositories
@@ -7,7 +17,6 @@ aliases:
 - /engine/tutorials/dockerrepos/
 - /docker-hub/repos/configure/
 ---
-
 A Docker Hub repository is a collection of container images, enabling you to
 store, manage, and share Docker images publicly or privately. Each repository
 serves as a dedicated space where you can store images associated with a

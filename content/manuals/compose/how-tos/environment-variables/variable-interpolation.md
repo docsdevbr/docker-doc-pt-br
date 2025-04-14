@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Set, use, and manage variables in a Compose file with interpolation
 linkTitle: Interpolation
 description: How to set, use, and manage variables in your Compose file with interpolation
@@ -9,7 +19,6 @@ aliases:
 - /compose/environment-variables/env-file/
 - /compose/environment-variables/variable-interpolation/
 ---
-
 A Compose file can use variables to offer more flexibility. If you want to quickly switch 
 between image tags to test multiple versions, or want to adjust a volume source to your local
 environment, you don't need to edit the Compose file each time, you can just set variables that insert values into your Compose file at run time.

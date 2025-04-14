@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Automatically lock Swarm managers to protect encryption keys
 keywords: swarm, manager, lock, unlock, autolock, encryption
 title: Lock your swarm to protect its encryption key
 ---
-
 The Raft logs used by swarm managers are encrypted on disk by default. This at-rest
 encryption protects your service's configuration and data from attackers who gain
 access to the encrypted Raft logs. One of the reasons this feature was introduced

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: How to back up and restore your Docker Desktop data
 keywords: Docker Desktop, backup, restore, migration, reinstall, containers, images,
   volumes
@@ -6,7 +16,6 @@ weight: 20
 aliases:
  - /desktop/backup-and-restore/
 ---
-
 Use the following procedure to save and restore your images and container data. This is useful if you want to reset your VM disk or to move your Docker environment to a new
 computer, for example.
 

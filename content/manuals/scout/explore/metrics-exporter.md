@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Scout metrics exporter
 description: |
   Learn how to scrape data from Docker Scout using Prometheus to create your own
@@ -7,7 +17,6 @@ keywords: scout, exporter, prometheus, grafana, metrics, dashboard, api, compose
 aliases:
   - /scout/metrics-exporter/
 ---
-
 Docker Scout exposes a metrics HTTP endpoint that lets you scrape vulnerability
 and policy data from Docker Scout, using Prometheus or Datadog. With this you
 can create your own, self-hosted Docker Scout dashboards for visualizing supply

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker design principles
 description: Docker extension design
 keywords: Docker, extensions, design
@@ -6,7 +16,6 @@ aliases:
  - /desktop/extensions-sdk/design/design-principles/
 weight: 20
 ---
-
 ## Provide actionable guidance
 
 We anticipate needs and provide simple explanations with clear actions so people are never lost and always know what to do next. Recommendations lead users to functionality that enhances the experience and extends their knowledge.

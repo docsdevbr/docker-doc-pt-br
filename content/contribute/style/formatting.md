@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Formatting guide
 description: Formatting guidelines for technical documentation
 keywords: formatting, style guide, contribute
 toc_max: 2
 weight: 20
 ---
-
 ## Headings and subheadings
 
 Readers pay fractionally more attention to headings, bulleted lists, and links, so it's important to ensure the first two to three words in those items "front load" information as much as possible.

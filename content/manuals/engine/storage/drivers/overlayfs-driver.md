@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to optimize your use of OverlayFS driver.
 keywords: container, storage, driver, OverlayFS, overlay2, overlay
 title: OverlayFS storage driver
 aliases:
   - /storage/storagedriver/overlayfs-driver/
 ---
-
 OverlayFS is a union filesystem.
 
 This page refers to the Linux kernel driver as `OverlayFS` and to the Docker

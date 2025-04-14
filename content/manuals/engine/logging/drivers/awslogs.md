@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the Amazon CloudWatch Logs logging driver with Docker Engine
 keywords: AWS, Amazon, CloudWatch, logging, driver
 title: Amazon CloudWatch Logs logging driver
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/logging/awslogs/
   - /config/containers/logging/awslogs/
 ---
-
 The `awslogs` logging driver sends container logs to
 [Amazon CloudWatch Logs](https://aws.amazon.com/cloudwatch/details/#log-monitoring).
 Log entries can be retrieved through the [AWS Management

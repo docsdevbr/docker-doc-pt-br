@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Manage tags and labels with GitHub Actions
 linkTitle: Tags and labels
 description: Assign tags and labels to images automatically with GitHub Actions
 keywords: ci, github actions, gha, buildkit, buildx, tags, labels
 ---
-
 If you want an "automatic" tag management and [OCI Image Format Specification](https://github.com/opencontainers/image-spec/blob/master/annotations.md)
 for labels, you can do it in a dedicated setup step. The following workflow
 will use the [Docker Metadata Action](https://github.com/docker/metadata-action)

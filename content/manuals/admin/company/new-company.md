@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Create a company
 description: Learn how to create a company to centrally manage multiple organizations.
 keywords: company, hub, organization, company owner, Admin Console, company management
 aliases:
 - /docker-hub/new-company/
 ---
-
 {{< summary-bar feature_name="Company" >}}
 
 You can create a new company in the Docker Admin Console. Before you begin, you must:

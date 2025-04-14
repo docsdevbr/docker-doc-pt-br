@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: View billing history
 weight: 40
 description: Discover how to view your billing history in Docker Hub
 keywords: payments, billing, subscription, invoices, renewals, invoice management, billing administration
 ---
-
 In this section, learn how you can view your billing history, manage your invoices, and verify your renewal date. All monthly and annual subscriptions are automatically renewed at the end of the term using the original form of payment.
 
 {{% include "tax-compliance.md" %}}

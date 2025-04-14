@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: See what support is available for Docker Desktop
 keywords: Support, Docker Desktop, Linux, Mac, Windows
 title: Get support
@@ -7,7 +17,6 @@ aliases:
  - /desktop/support/
  - /support/
 ---
-
 > [!NOTE]
 > 
 > Docker Desktop offers support for developers with a [Pro, Team, or Business subscription](https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade_desktop_support).

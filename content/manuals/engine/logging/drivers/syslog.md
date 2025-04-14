@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the syslog logging driver with Docker Engine
 keywords: syslog, docker, logging, driver
 title: Syslog logging driver
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/logging/syslog/
   - /config/containers/logging/syslog/
 ---
-
 The `syslog` logging driver routes logs to a `syslog` server. The `syslog` protocol uses
 a raw string as the log message and supports a limited set of metadata. The syslog
 message must be formatted in a specific way to be valid. From a valid message, the

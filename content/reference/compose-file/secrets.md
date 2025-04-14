@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Secrets top-level elements
 description: Explore all the attributes the secrets top-level element can have.
 keywords: compose, compose specification, secrets, compose file reference
@@ -6,7 +16,6 @@ aliases:
  - /compose/compose-file/09-secrets/
 weight: 60
 ---
-
 Secrets are a flavor of [Configs](configs.md) focusing on sensitive data, with specific constraint for this usage. 
 
 Services can only access secrets when explicitly granted by a [`secrets` attribute](services.md#secrets) within the `services` top-level element.

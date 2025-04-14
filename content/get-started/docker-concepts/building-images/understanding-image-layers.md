@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/understanding-image-layers.md
 revision: 6bce6d72cf3c0adab9f1675340a40f8718a6f5b4
 status: ready
@@ -17,7 +27,6 @@ weight: 1
 aliases: 
  - /guides/docker-concepts/building-images/understanding-image-layers/
 ---
-
 {{< youtube-embed wJwqtAkmtQA >}}
 
 ## Explicação

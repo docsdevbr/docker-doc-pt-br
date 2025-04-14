@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Export binaries
 weight: 50
 description: Using Docker builds to create and export executable binaries
@@ -6,7 +16,6 @@ keywords: build, buildkit, buildx, guide, tutorial, build arguments, arg
 aliases:
   - /build/guide/export/
 ---
-
 Did you know that you can use Docker to build your application to standalone
 binaries? Sometimes, you don’t want to package and distribute your application
 as a Docker image. Use Docker to build your application, and use exporters to

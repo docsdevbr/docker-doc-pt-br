@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn about how to format log output with Go templates
 keywords: docker, logging, driver, syslog, Fluentd, gelf, journald
 title: Customize log driver output
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/logging/log_tags/
   - /config/containers/logging/log_tags/
 ---
-
 The `tag` log option specifies how to format a tag that identifies the
 container's log messages. By default, the system uses the first 12 characters of
 the container ID. To override this behavior, specify a `tag` option:

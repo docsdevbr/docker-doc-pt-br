@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Project Harmonia
 description: Learn how you can run your applications in the cloud with Project Harmonia
 keywords: run, cloud, docker desktop, resources
@@ -9,7 +19,6 @@ params:
 aliases:
 - /run-cloud/
 ---
-
 {{% restricted title="Private preview" %}}
 Project Harmonia is in Private preview.
 {{% /restricted %}}

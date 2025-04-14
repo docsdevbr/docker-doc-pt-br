@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Scout SBOMs
 description: Use Docker Scout to extract the SBOM for your project.
 keywords: scout, supply chain, sbom, software bill of material, spdx, cli, attestations, file
@@ -6,7 +16,6 @@ aliases:
 - /engine/sbom/
 - /scout/sbom/
 ---
-
 [Image analysis](/manuals/scout/explore/analysis.md) uses image SBOMs to understand what packages and versions an image contains.
 Docker Scout uses SBOM attestations if available on the image (recommended).
 If no SBOM attestation is available, Docker Scout creates one by indexing the image contents.

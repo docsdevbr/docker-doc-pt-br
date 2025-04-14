@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Drain nodes on the swarm
 keywords: tutorial, cluster management, swarm, service, drain, get started
 title: Drain a node on the swarm
 weight: 80
 notoc: true
 ---
-
 In earlier steps of the tutorial, all the nodes have been running with `Active`
 availability. The swarm manager can assign tasks to any `Active` node, so up to
 now all nodes have been available to receive tasks.

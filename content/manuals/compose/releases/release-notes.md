@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Compose release notes
 linkTitle: Release notes
 weight: 10
@@ -10,7 +20,6 @@ aliases:
 - /release-notes/docker-compose/
 - /compose/release-notes/
 ---
-
 For more detailed information, see the [release notes in the Compose repo](https://github.com/docker/compose/releases/).
 
 ## 2.34.0

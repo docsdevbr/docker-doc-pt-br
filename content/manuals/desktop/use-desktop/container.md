@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Understand what you can do with the Containers view on Docker Dashboard
 keywords: Docker Dashboard, manage, containers, gui, dashboard, images, user manual
 title: Explore the Containers view in Docker Desktop
 linkTitle: Containers
 weight: 10
 ---
-
 The **Containers** view lists all your running containers and applications. You must have running or stopped containers and applications to see them listed.
 
 ## Container actions

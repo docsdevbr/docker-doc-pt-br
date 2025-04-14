@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Deployment and orchestration
 keywords: orchestration, deploy, kubernetes, swarm,
 description: Get oriented on some basics of Docker and install Docker Desktop.
@@ -11,7 +21,6 @@ tags: [deploy]
 params:
   time: 10 minutes
 ---
-
 Containerization provides an opportunity to move and scale applications to
 clouds and data centers. Containers effectively guarantee that those applications run the
 same way anywhere, allowing you to quickly and easily take advantage of all

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 source_url: https://github.com/docker/docs/blob/main/content/get-started/_index.md
 revision: d3718efac93abdab71ad2350e72d001ec26f5e60
 status: ready
@@ -33,7 +43,6 @@ params:
     link: /get-started/workshop/
     icon: desk
 ---
-
 Se você é uma pessoa nova no Docker, esta seção te guiará pelos recursos
 essenciais para começar.
 

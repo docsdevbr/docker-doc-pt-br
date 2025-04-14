@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Filter commands
 weight: 30
 description: |
@@ -8,7 +18,6 @@ keywords: cli, filter, commands, output, include, exclude
 aliases:
   - /config/filter/
 ---
-
 You can use the `--filter` flag to scope your commands. When filtering, the
 commands only include entries that match the pattern you specify.
 

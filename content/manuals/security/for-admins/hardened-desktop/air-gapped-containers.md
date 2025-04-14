@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Air-gapped containers
 description: Air-gapped containers - What it is, benefits, and how to configure it.
 keywords: air gapped, security, Docker Desktop, configuration, proxy, network
@@ -6,7 +16,6 @@ aliases:
  - /desktop/hardened-desktop/settings-management/air-gapped-containers/
  - /desktop/hardened-desktop/air-gapped-containers/
 ---
-
 {{< summary-bar feature_name="Air-gapped containers" >}}
 
 Air-gapped containers let you restrict containers from accessing network resources, limiting where data can be uploaded to or downloaded from.

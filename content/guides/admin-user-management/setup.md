@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Setting up roles and permissions in Docker
 description: A guide to securely managing access and collaboration in Docker through roles and teams.
 keywords: Docker roles, permissions management, access control, IT administration, team collaboration, least privilege, security, Docker teams, role-based access
 weight: 10
 ---
-
 With the right configurations, you can ensure your developers have easy access to necessary resources while preventing unauthorized access. This page guides you through identifying Docker users, so you can allocate subscription seats efficiently within your Docker organization, and assigning roles to align with your organization's structure. 
 
 ## Step 1: Identify your Docker users and accounts

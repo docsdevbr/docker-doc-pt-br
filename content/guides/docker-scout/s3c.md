@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Software supply chain security
 description: Learn about software supply chain security (S3C), what it means, and why it is important.
 keywords: docker scout, secure, software, supply, chain, security, sssc, sscs, s3c
@@ -6,7 +16,6 @@ aliases:
   - /scout/concepts/s3c/
 weight: 30
 ---
-
 {{< youtube-embed YzNK6E7APv0 >}}
 
 The term "software supply chain" refers to the end-to-end process of developing

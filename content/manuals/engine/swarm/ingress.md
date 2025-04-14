@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Use the routing mesh to publish services externally to a swarm
 keywords: guide, swarm mode, swarm, network, ingress, routing mesh
 title: Use Swarm mode routing mesh
 ---
-
 Docker Engine Swarm mode makes it easy to publish ports for services to make
 them available to resources outside the swarm. All nodes participate in an
 ingress routing mesh. The routing mesh enables each node in the swarm to

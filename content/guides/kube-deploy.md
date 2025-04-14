@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Deploy to Kubernetes
 keywords: kubernetes, pods, deployments, kubernetes services
 description: Learn how to describe and deploy a simple application on Kubernetes.
@@ -11,7 +21,6 @@ tags: [deploy]
 params:
   time: 10 minutes
 ---
-
 ## Prerequisites
 
 - Download and install Docker Desktop as described in [Get Docker](/get-started/get-docker.md).

@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: MCP
 description: Learn how to use MCP servers with Gordon
 keywords: ai, mcp, gordon
 ---
-
 ## What is MCP?
 
 Anthropic recently announced the [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) (MCP) specification, an open protocol that standardises how applications provide context to large language models. MCP functions as a client-server protocol, where the client (e.g., an application like Gordon) sends requests, and the server processes those requests to deliver the necessary context to the AI.

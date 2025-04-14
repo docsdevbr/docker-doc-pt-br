@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Set up your company for success with Docker
 linkTitle: Admin set up 
 summary: Get the most out of Docker by streamlining workflows, standardizing development environments, and ensuring smooth deployments across your company.
@@ -26,7 +36,6 @@ params:
     - title: Docker subscription information
       url: /subscription/details/
 ---
-
 Docker's tools provide a scalable, secure platform that empowers your developers to create, ship, and run applications faster. As an administrator, you have the ability to streamline workflows, standardize development environments, and ensure smooth deployments across your organization.
 
 By configuring Docker products to suit your company’s needs, you can optimize performance, simplify user management, and maintain control over resources. This guide will help you set up and configure Docker products to maximize productivity and success for your team whilst meeting compliance and security policies

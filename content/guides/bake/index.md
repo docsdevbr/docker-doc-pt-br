@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Mastering multi-platform builds, testing, and more with Docker Buildx Bake
 linkTitle: Mastering Docker Buildx Bake
 description: >
@@ -12,7 +22,6 @@ params:
   featured: true
   image: /images/guides/bake.webp
 ---
-
 This guide demonstrates how to simplify and automate the process of building
 images, testing, and generating build artifacts using Docker Buildx Bake. By
 defining build configurations in a declarative `docker-bake.hcl` file, you can

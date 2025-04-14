@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to use Docker Compose's extends keyword to share configuration between
   files and projects
 keywords: fig, composition, compose, docker, orchestration, documentation, docs
@@ -9,7 +19,6 @@ aliases:
 - /compose/extends/
 - /compose/multiple-compose-files/extends/
 ---
-
 Docker Compose's [`extends` attribute](/reference/compose-file/services.md#extends)
 lets you share common configurations among different files, or even different
 projects entirely.

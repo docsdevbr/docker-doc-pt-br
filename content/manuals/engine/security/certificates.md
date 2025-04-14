@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to set up and use certificates with a registry to verify access
 keywords: Usage, registry, repository, client, root, certificate, docker, apache,
   ssl, tls, documentation, examples, articles, tutorials
@@ -7,7 +17,6 @@ aliases:
 - /articles/certificates/
 - /engine/articles/certificates/
 ---
-
 In [Running Docker with HTTPS](protect-access.md), you learned that, by default,
 Docker runs via a non-networked Unix socket and TLS must be enabled in order
 to have the Docker client and the daemon communicate securely over HTTPS.  TLS ensures authenticity of the registry endpoint and that traffic to/from registry is encrypted.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Discover how to manage access to repositories on Docker Hub.
 keywords: Docker Hub, Hub, repository access, repository collaborators, repository privacy
 title: Access management
@@ -7,7 +17,6 @@ weight: 50
 aliases:
 - /docker-hub/repos/access/
 ---
-
 In this topic learn about the features available to manage access to your
 repositories. This includes visibility, collaborators, roles, teams, and
 organization access tokens.

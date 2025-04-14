@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Optimize cache usage in builds
 description: An overview on how to optimize cache utilization in Docker builds.
 keywords: build, buildkit, buildx, guide, tutorial, mounts, cache mounts, bind mounts
 aliases:
   - /build/guide/mounts/
 ---
-
 When building with Docker, a layer is reused from the build cache if the
 instruction and the files it depends on hasn't changed since it was previously
 built. Reusing layers from the cache speeds up the build process because Docker

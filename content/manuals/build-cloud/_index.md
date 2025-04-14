@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Build Cloud
 weight: 20
 description: Find documentation on Docker Build Cloud to help you build your container images faster, both locally and in CI
@@ -10,7 +20,6 @@ aliases:
   - /build/cloud/faq/
   - /build/cloud/
 ---
-
 {{< summary-bar feature_name="Docker Build Cloud" >}}
 
 Docker Build Cloud is a service that lets you build your container images

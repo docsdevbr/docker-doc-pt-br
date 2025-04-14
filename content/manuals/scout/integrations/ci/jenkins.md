@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to integrate Docker Scout with Jenkins
 keywords: supply chain, security, ci, continuous integration, jenkins
 title: Integrate Docker Scout with Jenkins
 linkTitle: Jenkins
 ---
-
 You can add the following stage and steps definition to a `Jenkinsfile` to run
 Docker Scout as part of a Jenkins pipeline. The pipeline needs a `DOCKER_HUB`
 credential containing the username and password for authenticating to Docker

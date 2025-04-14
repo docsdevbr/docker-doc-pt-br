@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Best practices
 description: Best practices for using Docker Desktop with WSL 2
 keywords: wsl, docker desktop, best practices
@@ -6,7 +16,6 @@ tags: [Best practices]
 aliases:
 - /desktop/wsl/best-practices/
 ---
-
 - Always use the latest version of WSL. At a minimum you must use WSL version 1.1.3.0., otherwise Docker Desktop may not work as expected. Testing, development, and documentation is based on the newest kernel versions. Older versions of WSL can cause:
     - Docker Desktop to hang periodically or when upgrading
     - Deployment via SCCM to fail

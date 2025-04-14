@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Engine
 weight: 10
 description: Find a comprehensive overview of Docker Engine, including how to install, storage details, networking, and more
@@ -50,7 +60,6 @@ aliases:
 - /engine/misc/
 - /linux/
 ---
-
 Docker Engine is an open source containerization technology for building and
 containerizing your applications. Docker Engine acts as a client-server
 application with:

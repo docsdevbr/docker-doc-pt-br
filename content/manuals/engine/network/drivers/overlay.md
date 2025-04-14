@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Overlay network driver
 description: All about using overlay networks
 keywords: network, overlay, user-defined, swarm, service
@@ -8,7 +18,6 @@ aliases:
 - /network/overlay/
 - /network/drivers/overlay/
 ---
-
 The `overlay` network driver creates a distributed network among multiple
 Docker daemon hosts. This network sits on top of (overlays) the host-specific
 networks, allowing containers connected to it to communicate securely when

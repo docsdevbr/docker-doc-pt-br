@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Open a new project
 description: Learn how to open a new local or remote project, or an existing project in Docker Projects. 
 keywords: Docker, projects, docker deskotp, containerization, open, remote, local
 weight: 20
 ---
-
 > [!IMPORTANT]
 > 
 > To use Docker Projects, you must enable the **Access experimental features** setting in Docker Desktop. See [Features in development](/manuals/desktop/settings-and-maintenance/settings.md#features-in-development) for more information. 

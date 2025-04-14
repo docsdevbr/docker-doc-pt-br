@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Finalize plans and begin setup
 description: Collaborate with your MDM team to distribute configurations and set up SSO and Docker product trials.
 weight: 20
 ---
-
 ## Step one: Send finalized settings files to the MDM team 
 
 After reaching an agreement with the relevant teams about your baseline and security configurations as outlined in module one, configure Settings Management using either the [Docker Admin Console](/manuals/security/for-admins/hardened-desktop/settings-management/configure-admin-console.md) or an [`admin-settings.json` file](/manuals/security/for-admins/hardened-desktop/settings-management/configure-json-file.md).

@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Onboarding and managing roles and permissions in Docker
 description: Learn how to manage roles, invite members, and implement scalable access control in Docker for secure and efficient collaboration.
 keywords: sso, scim, jit, invite members, docker hub, docker admin console, onboarding, security
 weight: 20
 ---
-
 This page guides you through onboarding owners and members, and using tools like SSO and SCIM to future-proof onboarding going forward.
 
 ## Step 1: Invite owners

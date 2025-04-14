@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Multi-platform builds
 linkTitle: Multi-platform
 weight: 40
@@ -11,7 +21,6 @@ aliases:
 - /mackit/multi-arch/
 - /build/guide/multi-platform/
 ---
-
 A multi-platform build refers to a single build invocation that targets
 multiple different operating system or CPU architecture combinations. When
 building images, this lets you create a single image that can run on multiple

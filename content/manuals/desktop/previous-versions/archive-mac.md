@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Docker Desktop for Mac Release notes for older versions
 keywords: Docker Desktop for Mac, release notes
 title: Release notes for previous versions
@@ -8,7 +18,6 @@ aliases:
 - /desktop/mac/release-notes/archive/
 sitemap: false
 ---
-
 This page contains release notes for older versions of Docker Desktop for Mac.
 
 ## Stable Releases of 2018

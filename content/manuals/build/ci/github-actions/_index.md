@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Build GitHub Actions
 linkTitle: GitHub Actions
 description: Docker maintains a set of official GitHub Actions for building Docker images.
@@ -7,7 +17,6 @@ aliases:
   - /ci-cd/github-actions/
   - /build/ci/github-actions/examples/
 ---
-
 GitHub Actions is a popular CI/CD platform for automating your build, test, and
 deployment pipeline. Docker provides a set of official GitHub Actions for you to
 use in your workflows. These official actions are reusable, easy-to-use

@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Local cache
 description: Manage build cache with Amazon S3 buckets
 keywords: build, buildx, cache, backend, local
 aliases:
   - /build/building/cache/backends/local/
 ---
-
 The `local` cache store is a simple cache option that stores your cache as files
 in a directory on your filesystem, using an
 [OCI image layout](https://github.com/opencontainers/image-spec/blob/main/image-layout.md)

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker accounts
 description: Learn how to create and manage your Docker account.
 keywords: accounts, docker ID, account management, account settings, docker account, docker home
@@ -32,7 +42,6 @@ grid:
   link: /accounts/deactivate-user-account/
   icon: disabled_by_default
 ---
-
 You can create a Docker account to secure a Docker ID, which is a username for your account that lets you access Docker products. You can use your Docker account to sign in to Docker products like Docker Hub, Docker Desktop, or Docker Scout. You can centrally manage your [Docker account settings](https://app.docker.com/settings), as well as account security features, in [Docker Home](https://app.docker.com).
 
 In this section, explore how you can create, manage, or update your account.

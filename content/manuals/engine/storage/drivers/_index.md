@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn the technologies that support storage drivers.
 keywords: container, storage, driver, btrfs, overlayfs, vfs, zfs
 title: Storage drivers
@@ -8,7 +18,6 @@ aliases:
   - /storage/storagedriver/
   - /engine/userguide/storagedriver/imagesandcontainers/
 ---
-
 To use storage drivers effectively, it's important to know how Docker builds and
 stores images, and how these images are used by containers. You can use this
 information to make informed choices about the best way to persist data from

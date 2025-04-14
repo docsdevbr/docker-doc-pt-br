@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Services top-level elements
 description: Explore all the attributes the services top-level element can have.
 keywords: compose, compose specification, services, compose file reference
@@ -6,7 +16,6 @@ aliases:
  - /compose/compose-file/05-services/
 weight: 20
 ---
-
 {{% include "compose/services.md" %}}
 
 A Compose file must declare a `services` top-level element as a map whose keys are string representations of service names,

@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Explore the Builds view in Docker Desktop
 linkTitle: Builds
 description: Understand how to use the Builds view in Docker Desktop
 keywords: Docker Dashboard, manage, gui, dashboard, builders, builds
 weight: 40
 ---
-
 ![Builds view in Docker Desktop](../images/builds-view.webp)
 
 The **Builds** view is a simple interface that lets you inspect your build

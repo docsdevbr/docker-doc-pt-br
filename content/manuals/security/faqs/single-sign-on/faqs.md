@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Single sign-on FAQs
 keywords: Docker, Docker Hub, SSO FAQs, single sign-on, administration, security
 title: General FAQs on SSO
@@ -12,7 +22,6 @@ aliases:
 - /faq/security/single-sign-on/saml-faqs/
 - /security/faqs/single-sign-on/saml-faqs/
 ---
-
 ### Is Docker SSO available for all paid subscriptions?
 
 Docker single sign-on (SSO) is only available with the Docker Business subscription. [Upgrade your existing subscription](../../../subscription/change.md) to start using Docker SSO.

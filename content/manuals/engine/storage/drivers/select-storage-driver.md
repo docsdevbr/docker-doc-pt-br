@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Select a storage driver
 weight: 10
 description: Learn how to select the proper storage driver for your container.
@@ -7,7 +17,6 @@ aliases:
   - /storage/storagedriver/selectadriver/
   - /storage/storagedriver/select-storage-driver/
 ---
-
 Ideally, very little data is written to a container's writable layer, and you
 use Docker volumes to write data. However, some workloads require you to be able
 to write to the container's writable layer. This is where storage drivers come

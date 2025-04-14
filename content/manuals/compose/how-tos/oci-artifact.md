@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Using Docker Compose with OCI artifacts
 linkTitle: OCI artifact applications
 weight: 110
@@ -10,7 +20,6 @@ params:
       color: green
       text: New
 ---
-
 {{< summary-bar feature_name="Compose OCI artifact" >}}
 
 Docker Compose supports working with [OCI artifacts](/manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md), allowing you to package and distribute your Compose applications through container registries. This means you can store your Compose files alongside your container images, making it easier to version, share, and deploy your multi-container applications.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Find the recommended Docker Engine post-installation steps for Linux
   users, including how to run Docker as a non-root user and more.
 keywords: run docker without sudo, docker running as root, docker post install, docker
@@ -12,7 +22,6 @@ aliases:
 - /engine/installation/linux/linux-postinstall/
 - /install/linux/linux-postinstall/
 ---
-
 These optional post-installation procedures describe how to configure your
 Linux host machine to work better with Docker.
 

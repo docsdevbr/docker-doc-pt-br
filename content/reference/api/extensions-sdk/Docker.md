@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: "Interface: Docker"
 description: Docker extension API reference
 keywords: Docker, extensions, sdk, API, reference
@@ -6,7 +16,6 @@ aliases:
  - /desktop/extensions-sdk/dev/api/reference/interfaces/Docker/
  - /extensions/extensions-sdk/dev/api/reference/interfaces/Docker/
 ---
-
 **`Since`**
 
 0.2.0
@@ -39,6 +48,15 @@ Output:
 For convenience, the command result object also has methods to easily parse it depending on output format. See [ExecResult](ExecResult.md) instead.
 
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
 
 Streams the output as a result of the execution of a Docker command.
 It is useful when the output of the command is too long, or you need to get the output as a stream.
@@ -93,7 +111,6 @@ const containers = await ddClient.docker.listContainers();
 `Promise`<`unknown`\>
 
 ---
-
 ### listImages
 
 ▸ **listImages**(`options?`): `Promise`<`unknown`\>

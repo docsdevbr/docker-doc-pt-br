@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to optimize your use of VFS driver.
 keywords: container, storage, driver, vfs
 title: VFS storage driver
 aliases:
   - /storage/storagedriver/vfs-driver/
 ---
-
 The VFS storage driver isn't a union filesystem. Each layer is a
 directory on disk, and there is no copy-on-write support. To create a new
 layer, a "deep copy" is done of the previous layer. This leads to lower

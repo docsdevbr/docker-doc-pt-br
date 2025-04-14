@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn about guidelines and best practices for videos in docs, and how to add a video component.
 title: Videos
 toc_max: 3
 ---
-
 ## Video guidelines
 
 Videos are used rarely in Docker's documentation. When used, video should complement written text and not be the sole format of documentation. Videos can take longer to produce and be more difficult to maintain than written text or even screenshots, so consider the following before adding video:

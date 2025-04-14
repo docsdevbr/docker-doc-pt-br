@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Docker security announcements
 keywords: Docker, CVEs, security, notice, Log4J 2, Log4Shell, Text4Shell, announcements
 title: Docker security announcements
@@ -6,7 +16,6 @@ linkTitle: Security announcements
 toc_min: 1
 toc_max: 2
 ---
-
 ## Docker Desktop 4.34.2 Security Update: CVE-2024-8695 and CVE-2024-8696
 
 _Last updated September 13, 2024_

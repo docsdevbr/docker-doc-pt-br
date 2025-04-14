@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Configure policies
 description: Learn how to configure, disable, or delete policies in Docker Scout
 keywords: scout, policy, configure, delete, enable, parametrize, thresholds
 ---
-
 Some policy types are configurable. This means that you can create new,
 customized version of that policy type with your own configuration parameters.
 You can also disable a policy if you need to temporarily disregard it, or

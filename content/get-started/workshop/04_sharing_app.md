@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Share the application
 weight: 40
 linkTitle: "Part 3: Share the application"
@@ -11,7 +21,6 @@ aliases:
  - /get-started/04_sharing_app/
  - /guides/workshop/04_sharing_app/
 ---
-
 Now that you've built an image, you can share it. To share Docker images, you have to use a Docker
 registry. The default registry is Docker Hub and is where all of the images you've used have come from.
 

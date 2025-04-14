@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Test and debug
 description: Test and debug your extension.
 keywords: Docker, Extensions, sdk, preview, update, Chrome DevTools
@@ -7,7 +17,6 @@ aliases:
  - /desktop/extensions-sdk/dev/test-debug/
 weight: 10
 ---
-
 In order to improve the developer experience, Docker Desktop provides a set of tools to help you test and debug your extension.
 
 ### Open Chrome DevTools

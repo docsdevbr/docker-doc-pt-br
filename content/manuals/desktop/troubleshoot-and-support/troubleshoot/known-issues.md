@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Find known issues for Docker Desktop
 keywords: mac, troubleshooting, known issues, Docker Desktop
 title: Known issues
@@ -7,7 +17,6 @@ weight: 30
 aliases:
  - /desktop/troubleshoot/known-issues/
 ---
-
 {{< tabs >}}
 {{< tab name="For Mac with Intel chip" >}}
 - The Mac Activity Monitor reports that Docker is using twice the amount of memory it's actually using. This is due to a [bug in macOS].(https://docs.google.com/document/d/17ZiQC1Tp9iH320K-uqVLyiJmk4DHJ3c4zgQetJiKYQM/edit?usp=sharing) on this.

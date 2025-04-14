@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Gain insights about your organization's users and their Docker usage.
 keywords: organization, insights
 title: Insights
 ---
-
 {{< summary-bar feature_name="Insights" >}}
 
 Insights helps administrators visualize and understand how Docker is used within

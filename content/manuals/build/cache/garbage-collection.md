@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Build garbage collection
 description: Learn about garbage collection in the BuildKit daemon
 keywords: build, buildx, buildkit, garbage collection, prune, gc
 aliases:
   - /build/building/cache/garbage-collection/
 ---
-
 While [`docker builder prune`](/reference/cli/docker/builder/prune.md)
 or [`docker buildx prune`](/reference/cli/docker/buildx/prune.md)
 commands run at once, Garbage Collection (GC) runs periodically and follows an

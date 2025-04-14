@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Download and install Docker Compose on Linux with this step-by-step handbook.
   This plugin can be installed manually or by using a repository.
 keywords: install docker compose linux, docker compose linux, docker compose plugin,
@@ -13,7 +23,6 @@ aliases:
 - /compose/compose-linux/
 weight: 10
 ---
-
 This page contains instructions on how to install the Docker Compose plugin on Linux from the command line.
 
 To install the Docker Compose plugin on Linux, you can either:

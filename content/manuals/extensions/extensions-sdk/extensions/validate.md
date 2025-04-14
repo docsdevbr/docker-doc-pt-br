@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Validate your extension
 linkTitle: Validate
 description: Step three in the extension creation process
@@ -10,7 +20,6 @@ aliases:
  - /desktop/extensions-sdk/extensions/validate/
 weight: 20
 ---
-
 Validate your extension before you share or publish it. Validating the extension ensures that the extension:
 
 - Is built with the [image labels](labels.md) it requires to display correctly in the marketplace

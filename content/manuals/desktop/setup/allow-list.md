@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: A list of domain URLs required for Docker Desktop to function correctly within an organization.
 keywords: Docker Desktop, allowlist, allow list, firewall, authentication URLs, analytics
 title: Allowlist for Docker Desktop
@@ -8,7 +18,6 @@ weight: 100
 aliases:
   - /desktop/allow-list/
 ---
-
 {{< summary-bar feature_name="Allow list" >}}
 
 This page contains the domain URLs that you need to add to a firewall allowlist to ensure Docker Desktop works properly within your organization.

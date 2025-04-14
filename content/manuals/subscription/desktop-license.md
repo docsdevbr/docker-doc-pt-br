@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Desktop license agreement
 description: Information about Docker Desktop's license agreement
 keywords: license agreement, docker desktop, subscription
 weight: 40
 ---
-
 Docker Desktop is licensed under the Docker Subscription Service Agreement. When you download and install Docker Desktop, you will be asked to agree to the updated terms.
 
 Our [Docker Subscription Service Agreement](https://www.docker.com/legal/docker-subscription-service-agreement) states:

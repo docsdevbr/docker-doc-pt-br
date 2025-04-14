@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Add image annotations with GitHub Actions
 linkTitle: Annotations
 description: Add OCI annotations to image components using GitHub Actions
 keywords: ci, github actions, gha, buildkit, buildx, annotations, oci
 ---
-
 Annotations let you specify arbitrary metadata for OCI image components, such
 as manifests, indexes, and descriptors.
 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to configure and use Docker Extensions' private marketplace
 keywords: Docker Extensions, Docker Desktop, Linux, Mac, Windows, Marketplace, private, security, admin
 title: Configure a private marketplace for extensions
@@ -8,7 +18,6 @@ weight: 30
 aliases:
  - /desktop/extensions/private-marketplace/
 ---
-
 {{< summary-bar feature_name="Private marketplace" >}}
 
 Learn how to configure and set up a private marketplace with a curated list of extensions for your Docker Desktop users.

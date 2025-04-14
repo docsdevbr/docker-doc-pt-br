@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Matrix targets
 weight: 70
 description: Learn how to define and use matrix targets in Bake to fork a single target into multiple different variants
 keywords: build, buildx, bake, buildkit, matrix, hcl, json
 ---
-
 A matrix strategy lets you fork a single target into multiple different
 variants, based on parameters that you specify. This works in a similar way to
 [Matrix strategies for GitHub Actions](https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs).

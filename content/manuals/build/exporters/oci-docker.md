@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: OCI and Docker exporters
 keywords: build, buildx, buildkit, exporter, oci, docker
 description: >
@@ -6,7 +16,6 @@ description: >
 aliases:
   - /build/building/exporters/oci-docker/
 ---
-
 The `oci` exporter outputs the build result into an
 [OCI image layout](https://github.com/opencontainers/image-spec/blob/main/image-layout.md)
 tarball. The `docker` exporter behaves the same way, except it exports a Docker

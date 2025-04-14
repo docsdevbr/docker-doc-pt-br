@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Manage Docker Hub image access with Image Access Management, restricting developers to trusted images for enhanced security
 keywords: image, access, management, trusted content, permissions, Docker Business feature, security, admin
 title: Image Access Management
@@ -10,7 +20,6 @@ aliases:
  - /security/for-admins/image-access-management/
 weight: 40
 ---
-
 {{< summary-bar feature_name="Hardened Docker Desktop" >}}
 
 Image Access Management gives you control over which types of images, such as Docker Official Images, Docker Verified Publisher Images, or community images, your developers can pull from Docker Hub.

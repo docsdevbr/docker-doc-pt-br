@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Run, develop, and share data science projects using JupyterLab and Docker
 keywords: getting started, jupyter, notebook, python, jupyterlab, data science
 title: Data science with JupyterLab
@@ -12,7 +22,6 @@ aliases:
 params:
   time: 20 minutes
 ---
-
 Docker and JupyterLab are two powerful tools that can enhance your data science
 workflow. In this guide, you will learn how to use them together to create and
 run reproducible data science environments. This guide is based on

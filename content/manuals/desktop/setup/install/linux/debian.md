@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Instructions for installing Docker Desktop on Debian
 keywords: debian, install, uninstall, upgrade, update, linux, desktop, docker desktop,
   docker desktop for linux, dd4l
@@ -11,7 +21,6 @@ aliases:
 - /desktop/install/debian/
 - /desktop/install/linux/debian/
 ---
-
 > **Docker Desktop terms**
 >
 > Commercial use of Docker Desktop in larger enterprises (more than 250

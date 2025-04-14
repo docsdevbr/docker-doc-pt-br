@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Create an account
 weight: 10
 description: Learn how to register for a Docker ID and sign in to your account
@@ -8,7 +18,6 @@ aliases:
 - /docker-hub/accounts/
 - /docker-id/
 ---
-
 You can create a free Docker account with your email address or by signing up with your Google or GitHub account. Once you've created your account with a unique Docker ID, you can access all Docker products, including Docker Hub. With Docker Hub, you can access repositories and explore images that are available from the community and verified publishers.
 
 Your Docker ID becomes your username for hosted Docker services, and [Docker forums](https://forums.docker.com/).

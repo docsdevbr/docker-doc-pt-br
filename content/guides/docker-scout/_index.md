@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Securing your software supply chain with Docker Scout
 linkTitle: Docker Scout
 summary: |
@@ -23,7 +33,6 @@ params:
     - title: Install Docker Scout
       url: /scout/install/
 ---
-
 When container images are insecure, significant risks can arise. Around 60% of
 organizations have reported experiencing at least one security breach or
 vulnerability incident within a year, [resulting in operational

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Software Bill of Materials
 description: Learn about Software Bill of Materials (SBOM) and how Docker Scout uses it.
 keywords: scout, sbom, software bill of materials, analysis, composition
@@ -6,7 +16,6 @@ aliases:
   - /scout/concepts/sbom/
 weight: 40
 ---
-
 {{< youtube-embed PbS4y7C7h4A >}}
 
 A Bill of Materials (BOM) is a list of materials, parts, and the quantities of

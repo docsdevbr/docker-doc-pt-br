@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the local logging driver with Docker Engine
 keywords: local, docker, logging, driver, file
 title: Local file logging driver
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/logging/local/
   - /config/containers/logging/local/
 ---
-
 The `local` logging driver captures output from container's stdout/stderr and
 writes them to an internal storage that's optimized for performance and disk
 use.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Authentication
 description: Docker extension OAuth 2.0 flow
 keywords: Docker, extensions, sdk, OAuth 2.0
@@ -6,7 +16,6 @@ aliases:
  - /desktop/extensions-sdk/dev/oauth2-flow/
  - /desktop/extensions-sdk/guides/oauth2-flow/
 ---
-
 > [!NOTE]
 >
 > This page assumes that you already have an Identity Provider (IdP), such as Google, Entra ID (formerly Azure AD) or Okta, which handles the authentication process and returns an access token.

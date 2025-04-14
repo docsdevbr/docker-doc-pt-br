@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Install Docker for Mac to get started. This guide covers system requirements,
   where to download, and instructions on how to install and update.
 keywords: docker for mac, install docker macos, docker mac, docker mac install, docker
@@ -17,7 +27,6 @@ aliases:
 - /desktop/mac/apple-silicon/
 - /desktop/install/mac-install/
 ---
-
 > **Docker Desktop terms**
 >
 > Commercial use of Docker Desktop in larger enterprises (more than 250

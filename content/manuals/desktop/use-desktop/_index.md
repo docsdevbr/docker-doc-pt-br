@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to use the Docker Desktop Dashboard within Docker Desktop, including Quick search, the Docker menu, and more
 keywords: Docker Desktop Dashboard, manage, containers, gui, dashboard, images, user manual,
   whale menu
@@ -7,7 +17,6 @@ weight: 30
 aliases:
 - /desktop/dashboard/
 ---
-
 When you open Docker Desktop, the Docker Desktop Dashboard displays.
 
 ![Docker Desktop Dashboard on Containers view](../images/dashboard.webp)

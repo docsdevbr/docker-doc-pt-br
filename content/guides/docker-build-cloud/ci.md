@@ -1,9 +1,18 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: "Demo: Using Docker Build Cloud in CI"
 description: Learn how to use Docker Build Cloud to build your app faster in CI.
 weight: 30
 ---
-
 Docker Build Cloud can significantly decrease the time it takes for your CI builds
 take to run, saving you time and money. 
 

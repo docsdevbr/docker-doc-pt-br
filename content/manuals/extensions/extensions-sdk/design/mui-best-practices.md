@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: MUI best practices
 description: Guidelines for using MUI to maximize compatibility with Docker Desktop
 keywords: Docker, extensions, mui, theme, theming, material-ui, material
 aliases: 
  - /desktop/extensions-sdk/design/mui-best-practices/
 ---
-
 This article assumes you're following our recommended practice by using our [Material UI theme](https://www.npmjs.com/package/@docker/docker-mui-theme).
 Following the steps below maximizes compatibility with Docker Desktop and minimizes the work you need to do as an
 extension author. They should be considered supplementary to the non-MUI-specific guidelines found in the

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Use Scout with different artifact types
 description: |
   Some of the Docker Scout commands support image references prefixes
@@ -7,7 +17,6 @@ keywords: scout, vulnerabilities, analyze, analysis, cli, packages, sbom, cve, s
 aliases:
   - /scout/image-prefix/
 ---
-
 Some of the Docker Scout CLI commands support prefixes for specifying
 the location or type of artifact that you would like to analyze.
 

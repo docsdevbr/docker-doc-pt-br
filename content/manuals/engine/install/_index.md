@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Install Docker Engine
 linkTitle: Install
 weight: 10
@@ -32,7 +42,6 @@ aliases:
 - /enterprise/supported-platforms/
 - /install/linux/docker-ee/oracle/
 ---
-
 This section describes how to install Docker Engine on Linux, also known as
 Docker CE. Docker Engine is also available for Windows, macOS, and Linux,
 through Docker Desktop. For instructions on how to install Docker Desktop,

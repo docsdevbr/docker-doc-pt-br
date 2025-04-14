@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description:
   Docker Scout can integrate with runtime environments to give you real-time
   insights about your software supply chain.
 keywords: supply chain, security, streams, environments, workloads, deployments
 title: Integrating Docker Scout with environments
 ---
-
 You can integrate Docker Scout with your runtime environments, and get insights
 for your running workloads. This gives you a real-time view of your security
 status for your deployed artifacts.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to manage Single Sign-On for your organization or company.
 keywords: manage, single sign-on, SSO, sign-on, docker hub, admin console, admin, security
 title: Manage single sign-on
@@ -7,7 +17,6 @@ aliases:
 - /admin/company/settings/sso-management/
 - /single-sign-on/manage/
 ---
-
 {{< summary-bar feature_name="SSO" >}}
 
 ## Manage organizations

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Compose Build Specification
 description: Learn about the Compose Build Specification
 keywords: compose, compose specification, compose file reference, compose build specification
@@ -6,7 +16,6 @@ aliases:
  - /compose/compose-file/build/
 weight: 130
 ---
-
 {{% include "compose/build.md" %}}
 
 In the former case, the whole path is used as a Docker context to execute a Docker build, looking for a canonical

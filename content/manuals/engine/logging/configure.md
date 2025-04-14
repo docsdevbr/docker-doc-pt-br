@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to configure logging driver for the Docker daemon
 keywords: docker, logging, driver
 title: Configure logging drivers
@@ -11,7 +21,6 @@ aliases:
   - /engine/admin/logging/overview/
   - /config/containers/logging/configure/
 ---
-
 Docker includes multiple logging mechanisms to help you get information from
 running containers and services. These mechanisms are called logging drivers.
 Each Docker daemon has a default logging driver, which each container uses

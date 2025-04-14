@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: General FAQs for Docker accounts
 linkTitle: General
 weight: 10
@@ -10,7 +20,6 @@ aliases:
 - /docker-hub/onboarding-faqs/
 - /faq/admin/general-faqs/
 ---
-
 ### What is a Docker ID?
 
 A Docker ID is a username for your Docker account that lets you access Docker products. To create a Docker ID, you need an email address or you can sign up with your social or GitHub accounts. Your Docker ID must be between 4 and 30 characters long, and can only contain numbers and lowercase letters. You can't use any special characters or spaces.

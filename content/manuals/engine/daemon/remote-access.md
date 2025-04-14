@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description:
   Configuring remote access allows Docker to accept requests from remote
   hosts by configuring it to listen on an IP address and port as well as the Unix
@@ -8,7 +18,6 @@ title: Configure remote access for Docker daemon
 aliases:
   - /config/daemon/remote-access/
 ---
-
 By default, the Docker daemon listens for connections on a Unix socket to accept
 requests from local clients. You can configure Docker to accept requests
 from remote clients by configuring it to listen on an IP address and port as well

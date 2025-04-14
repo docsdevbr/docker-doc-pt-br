@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Jumpstart your client-side server applications with Docker Engine on
   Ubuntu. This guide details prerequisites and multiple methods to install Docker Engine on Ubuntu.
 keywords: docker install script, ubuntu docker server, ubuntu server docker, install
@@ -22,7 +32,6 @@ aliases:
 - /linux/step_one/
 download-url-base: https://download.docker.com/linux/ubuntu
 ---
-
 To get started with Docker Engine on Ubuntu, make sure you
 [meet the prerequisites](#prerequisites), and then follow the
 [installation steps](#installation-methods).

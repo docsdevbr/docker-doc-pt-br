@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Share and collaborate on a project
 linkTitle: Collaborate
 description: Learn how to collaborate on a project
 keywords: collaborate, projects, docker desktop, local, remote
 weight: 60
 ---
-
 Docker Projects makes it easy for teams to share, manage, and collaborate on containerized applications. 
 
 Collaboration is managed by associating a project with a Docker organization, and leveraging cloud-stored configurations. This allows team members to easily access and work on the same project without needing extensive manual setup.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Official Images
 description: |
   This article describes how Docker Official Images are created,
@@ -9,7 +19,6 @@ aliases:
 - /docker-hub/official_repos/
 - /docker-hub/official_images/
 ---
-
 Docker, Inc. sponsors a dedicated team that's responsible for reviewing and
 publishing all content in Docker Official Images. This team works in
 collaboration with upstream software maintainers, security experts, and the

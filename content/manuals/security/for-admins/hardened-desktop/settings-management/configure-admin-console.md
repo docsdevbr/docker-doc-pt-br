@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to configure Settings Management for Docker Desktop using the Docker Admin Console
 keywords: admin, controls, rootless, enhanced container isolation
 title: Configure Settings Management with the Admin Console
 linkTitle: Use the Admin Console
 weight: 20
 ---
-
 {{< summary-bar feature_name="Admin Console" >}}
 
 This page contains information for administrators on how to configure Settings Management with the Docker Admin Console. You can specify and lock configuration parameters to create a standardized Docker Desktop environment across your Docker company or organization.

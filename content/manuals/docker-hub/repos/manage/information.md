@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to describe and optimize your Docker Hub repositories for better discoverability.
 keywords: Docker Hub, Hub, repository information, repository discoverability, best practices
 title: Repository information
@@ -7,7 +17,6 @@ weight: 40
 aliases:
 - /docker-hub/repos/categories/
 ---
-
 Each repository can include a description, an overview, and categories to help
 users understand its purpose and usage. Adding clear repository information
 ensures that others can find your images and use them effectively.

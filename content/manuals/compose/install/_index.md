@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to install Docker Compose. Compose is available natively on
   Docker Desktop, as a Docker Engine plugin, and as a standalone tool.
 keywords: install docker compose, docker compose install, install docker compose ubuntu,
@@ -13,7 +23,6 @@ aliases:
 - /compose/install/other/
 - /compose/install/compose-desktop/
 ---
-
 This page contains summary information about the available options for installing Docker Compose.
 
 ## Installation scenarios 

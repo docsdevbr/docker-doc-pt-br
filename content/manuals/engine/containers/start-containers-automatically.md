@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to start containers automatically
 keywords: containers, restart, policies, automation, administration
 title: Start containers automatically
@@ -9,7 +19,6 @@ aliases:
   - /engine/admin/start-containers-automatically/
   - /config/containers/start-containers-automatically/
 ---
-
 Docker provides [restart policies](/manuals/engine/containers/run.md#restart-policies---restart)
 to control whether your containers start automatically when they exit, or when
 Docker restarts. Restart policies start linked containers in the correct order.

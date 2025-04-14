@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Read the daemon logs
 description: How to read the event logs for the Docker daemon
 keywords: docker, daemon, configuration, troubleshooting, logging
 aliases:
   - /config/daemon/logs/
 ---
-
 The daemon logs may help you diagnose problems. The logs may be saved in one of
 a few locations, depending on the operating system configuration and the logging
 subsystem used:

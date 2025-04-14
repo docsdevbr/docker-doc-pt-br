@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Update billing information
 weight: 30
 description: Learn how to update your billing information in Docker Hub
 keywords: payments, billing, subscription, invoices
 ---
-
 You can update the billing information for your personal account or for an organization. When you update your billing information, these changes apply to future billing invoices. Note that you can't update an existing invoice, including paid and unpaid invoices.
 
 The billing information provided appears on all your billing invoices. The email address provided is where Docker sends all invoices and other [billing-related communication](#update-your-billing-invoice-email-address).

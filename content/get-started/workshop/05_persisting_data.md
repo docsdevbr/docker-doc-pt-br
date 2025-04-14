@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Persist the DB
 weight: 50
 linkTitle: "Part 4: Persist the DB"
@@ -9,7 +19,6 @@ aliases:
  - /get-started/05_persisting_data/
  - /guides/workshop/05_persisting_data/
 ---
-
 In case you didn't notice, your todo list is empty every single time
 you launch the container. Why is this? In this part, you'll dive into how the container is working.
 

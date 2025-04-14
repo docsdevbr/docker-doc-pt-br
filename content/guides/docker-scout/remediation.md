@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Remediation
 description: Learn how Docker Scout can help you improve your software quality automatically, using remediation
 keywords: scout, supply chain, security, remediation, automation
 weight: 60
 ---
-
 {{< youtube-embed jM9zLBf8M-8 >}}
 
 Docker Scout's [remediation feature](/manuals/scout/policy/remediation.md)

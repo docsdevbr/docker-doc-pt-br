@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Environment variables precedence in Docker Compose
 linkTitle: Environment variables precedence
 description: Scenario overview illustrating how environment variables are resolved
@@ -9,7 +19,6 @@ aliases:
 - /compose/envvars-precedence/
 - /compose/environment-variables/envvars-precedence/
 ---
-
 When the same environment variable is set in multiple sources, Docker Compose follows a precedence rule to determine the value for that variable in your container's environment.
 
 This page contains information on the level of precedence each method of setting environmental variables takes.

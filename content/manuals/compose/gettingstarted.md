@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Check out this tutorial on how to use Docker Compose from defining application
   dependencies to experimenting with commands.
 keywords: docker compose example, docker compose tutorial, how to use docker compose,
@@ -9,7 +19,6 @@ title: Docker Compose Quickstart
 linkTitle: Quickstart
 weight: 30
 ---
-
 This tutorial aims to introduce fundamental concepts of Docker Compose by guiding you through the development of a basic Python web application. 
 
 Using the Flask framework, the application features a hit counter in Redis, providing a practical example of how Docker Compose can be applied in web development scenarios. 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Find the answers to FAQs related to networking and virtualization
 keywords: Docker, Docker Hub, Docker Desktop security FAQs, security, platform, networks, vms
 title: Network and VM FAQs
@@ -8,7 +18,6 @@ tags: [FAQ]
 aliases:
 - /faq/security/networking-and-vms/
 ---
-
 ### How can I limit the type of internet access allowed by the container when it runs, to prevent it from being able to exfiltrate data or download malicious code?
 
 There is no built-in mechanism for that but it can be addressed by process-level firewall on the host. Hook into the `com.docker.vpnkit` user-space process and apply rules where it can connect to (DNS URL white list; packet/payload filter) and which ports/protocols it is allowed to use.

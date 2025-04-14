@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Inheritance in Bake
 linkTitle: Inheritance
 weight: 30
 description: Learn how to inherit attributes from other targets in Bake
 keywords: buildx, buildkit, bake, inheritance, targets, attributes
 ---
-
 Targets can inherit attributes from other targets, using the `inherits`
 attribute. For example, imagine that you have a target that builds a Docker
 image for a development environment:

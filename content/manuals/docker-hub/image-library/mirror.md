@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Setting-up a local mirror for Docker Hub images
 keywords: registry, on-prem, images, tags, repository, distribution, mirror, Hub,
   recipe, advanced
@@ -10,7 +20,6 @@ aliases:
 - /registry/recipes/mirror/
 - /docker-hub/mirror/
 ---
-
 ## Use-case
 
 If you have multiple instances of Docker running in your environment, such as

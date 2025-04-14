@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to create a repository on Docker Hub
 keywords: Docker Hub, Hub, repositories, create
 title: Create a repository
@@ -6,7 +16,6 @@ linkTitle: Create
 toc_max: 3
 weight: 20
 ---
-
 1. Sign in to [Docker Hub](https://hub.docker.com).
 2. Select **My Hub** > **Repositories**.
 3. Near the top-right corner, select **Create repository**.

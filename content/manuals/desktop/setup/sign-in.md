@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Explore the Learning center and understand the benefits of signing in
   to Docker Desktop
 keywords: Docker Dashboard, manage, containers, gui, dashboard, images, user manual,
@@ -29,7 +39,6 @@ aliases:
 - /winkit/getting-started/
 - /desktop/get-started/
 ---
-
 Docker recommends that you authenticate using the **Sign in** option in the top-right corner of the Docker Dashboard. 
 
 In large enterprises where admin access is restricted, administrators can [enforce sign-in](/manuals/security/for-admins/enforce-sign-in/_index.md). 

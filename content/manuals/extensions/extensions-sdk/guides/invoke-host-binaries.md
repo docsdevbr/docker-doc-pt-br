@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Invoke host binaries
 description: Add invocations to host binaries from the frontend with the extension
   SDK.
@@ -6,7 +16,6 @@ keywords: Docker, extensions, sdk, build
 aliases:
  - /desktop/extensions-sdk/guides/invoke-host-binaries/
 ---
-
 In some cases, your extension may need to invoke some command from the host. For example, you
 might want to invoke the CLI of your cloud provider to create a new resource, or the CLI of a tool your extension
 provides, or even a shell script that you want to run on the host. 

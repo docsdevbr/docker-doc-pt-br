@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Add a backend to your extension
 description: Learn how to add a backend to your extension.
 keywords: Docker, extensions, sdk, build
@@ -8,7 +18,6 @@ aliases:
  - /desktop/extensions-sdk/build/set-up/backend-extension-tutorial/
  - /desktop/extensions-sdk/build/backend-extension-tutorial/
 ---
-
 Your extension can ship a backend part with which the frontend can interact with. This page provides information on why and how to add a backend.
 
 Before you start, make sure you have installed the latest version of [Docker Desktop](https://www.docker.com/products/docker-desktop/).

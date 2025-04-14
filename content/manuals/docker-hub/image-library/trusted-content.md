@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn about Docker Hub's trusted content.
 keywords: Docker Hub, Hub, trusted content
 title: Trusted content
@@ -7,7 +17,6 @@ aliases:
 - /trusted-content/official-images/using/
 - /trusted-content/official-images/
 ---
-
 Docker Hub's trusted content provides a curated selection of high-quality,
 secure images designed to give developers confidence in the reliability and
 security of the resources they use. These images are stable, regularly updated,

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Host network driver
 description: All about exposing containers on the Docker host's network
 keywords: network, host, standalone, host mode networking
@@ -6,7 +16,6 @@ aliases:
 - /network/host/
 - /network/drivers/host/
 ---
-
 If you use the `host` network mode for a container, that container's network
 stack isn't isolated from the Docker host (the container shares the host's
 networking namespace), and the container doesn't get its own IP-address allocated.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Use containers for .NET development
 linkTitle: Develop your app
 weight: 20
@@ -8,7 +18,6 @@ aliases:
   - /language/dotnet/develop/
   - /guides/language/dotnet/develop/
 ---
-
 ## Prerequisites
 
 Complete [Containerize a .NET application](containerize.md).

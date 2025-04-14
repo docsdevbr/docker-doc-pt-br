@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Cache storage backends
 description: |
   Cache backends let you manage your build cache externally.
@@ -8,7 +18,6 @@ keywords: build, buildx, cache, backend, gha, azblob, s3, registry, local
 aliases:
   - /build/building/cache/backends/
 ---
-
 To ensure fast builds, BuildKit automatically caches the build result in its own
 internal cache. Additionally, BuildKit also supports exporting build cache to an
 external location, making it possible to import in future builds.

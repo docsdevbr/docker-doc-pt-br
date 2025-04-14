@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Using bind mounts
 title: Bind mounts
 weight: 20
@@ -7,7 +17,6 @@ aliases:
   - /engine/admin/volumes/bind-mounts/
   - /storage/bind-mounts/
 ---
-
 When you use a bind mount, a file or directory on the host machine is mounted
 from the host into a container. By contrast, when you use a volume, a new
 directory is created within Docker's storage directory on the host machine, and

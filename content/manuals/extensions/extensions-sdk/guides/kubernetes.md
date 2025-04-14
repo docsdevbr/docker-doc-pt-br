@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Interacting with Kubernetes from an extension
 linkTitle: Interacting with Kubernetes
 description: How to connect to a Kubernetes cluster from an extension
@@ -7,7 +17,6 @@ aliases:
  - /desktop/extensions-sdk/dev/kubernetes/
  - /desktop/extensions-sdk/guides/kubernetes/
 ---
-
 The Extensions SDK does not provide any API methods to directly interact with the Docker Desktop managed Kubernetes cluster or any other created using other tools such as KinD. However, this page provides a way for you to use other SDK APIs to interact indirectly with a Kubernetes cluster from your extension.
 
 To request an API that directly interacts with Docker Desktop-managed Kubernetes, you can upvote [this issue](https://github.com/docker/extensions-sdk/issues/181) in the Extensions SDK GitHub repository.

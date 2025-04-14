@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Create and manage access tokens
 linkTitle: Access tokens
 description: Learn how to create and manage your personal Docker access tokens
@@ -7,7 +17,6 @@ keywords: docker hub, hub, security, PAT, personal access token
 aliases:
 - /docker-hub/access-tokens/
 ---
-
 You can create a personal access token (PAT) to use as an alternative to your password for Docker CLI authentication.
 
 Compared to passwords, PATs provide the following advantages:

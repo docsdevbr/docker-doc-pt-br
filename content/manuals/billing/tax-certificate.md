@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Register a tax certificate
 description: Learn how to submit a tax exemption certificate for your Docker billing.
 keywords: billing, renewal, payments, tax
 weight: 50
 ---
-
 If you're a customer in the United States and you're exempt from sales tax, you can register a valid tax exemption certificate with Docker's Support team. If you're a global customer subject to VAT, make sure that you provide your [VAT number](/billing/history/#include-your-vat-number-on-your-invoice) including your VAT country prefix.
 
 {{% include "tax-compliance.md" %}}

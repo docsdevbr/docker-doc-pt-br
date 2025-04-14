@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Include
 description: Learn about include
 keywords: compose, compose specification, include, compose file reference
@@ -6,7 +16,6 @@ aliases:
  - /compose/compose-file/14-include/
 weight: 110
 ---
-
 {{< summary-bar feature_name="Composefile include" >}}
 
 A Compose application can declare dependency on another Compose application. This is useful if:

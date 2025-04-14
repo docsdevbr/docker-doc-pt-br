@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn about the Docker-Sponsored Open Source Program and how it works
 title: Docker-Sponsored Open Source Program
 keywords: docker hub, hub, insights, analytics, open source, Docker sponsored, program
@@ -6,7 +16,6 @@ aliases:
   - /docker-hub/dsos-program/
   - /trusted-content/dsos-program/
 ---
-
 [Docker-Sponsored Open Source images](https://hub.docker.com/search?q=&image_filter=open_source) are published and maintained by open-source projects sponsored by Docker through the program.
 
 Images that are part of this program have a special badge on Docker Hub making it easier for users to identify projects that Docker has verified as trusted, secure, and active open-source projects.

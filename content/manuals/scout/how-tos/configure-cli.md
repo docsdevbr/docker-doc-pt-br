@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Configure Docker Scout with environment variables
 linkTitle: Docker Scout environment variables
 description: Configure how the behavior of Docker Scout CLI commands using these environment variables
@@ -6,7 +16,6 @@ keywords: scout, supply chain, cli, environment, variables, env, vars, configure
 aliases:
   - /scout/env-vars/
 ---
-
 The following environment variables are available to configure the Docker Scout
 CLI commands, and the corresponding `docker/scout-cli` container image:
 

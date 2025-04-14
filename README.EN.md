@@ -31,7 +31,8 @@ Docker, Inc. in the United States and/or other countries.<br>
 Docker, Inc. and other parties may also have trademark rights in other terms
 used herein.
 
-Documentation licensed under the [Apache License, Version 2.0][license].
+Documentation licensed under the [Apache License, Version 2.0][license].<br>
+The original work was translated from English into Brazilian Portuguese.
 
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 

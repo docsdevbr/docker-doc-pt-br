@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: View your project
 description: View information about your project or the services within your project.
 keywords: containers, docker projects, local, remote, docker desktop
 weight: 30
 ---
-
 ## View a project’s README
 
 If a project has a README file, you can view it via Docker Projects. Note that the README tab is only visible if the project has a README file.

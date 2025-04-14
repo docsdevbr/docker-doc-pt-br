@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Bridge network driver
 description: All about using user-defined bridge networks and the default bridge
 keywords: network, bridge, user-defined, standalone
@@ -10,7 +20,6 @@ aliases:
 - /network/bridge/
 - /network/drivers/bridge/
 ---
-
 In terms of networking, a bridge network is a Link Layer device
 which forwards traffic between network segments. A bridge can be a hardware
 device or a software device running within a host machine's kernel.

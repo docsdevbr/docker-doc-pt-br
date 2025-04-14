@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn what the Docker Verified Publisher Program is and how it works
 title: Docker Verified Publisher Program
 aliases:
@@ -15,7 +25,6 @@ aliases:
 - /docker-hub/dvp-program/
 - /trusted-content/dvp-program/
 ---
-
 [The Docker Verified Publisher Program](https://hub.docker.com/search?q=&image_filter=store) provides high-quality images from commercial publishers verified by Docker.
 
 These images help development teams build secure software supply chains, minimizing exposure to malicious content early in the process to save time and money later.

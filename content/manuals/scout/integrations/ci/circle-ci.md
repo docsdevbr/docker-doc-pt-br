@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to integrate Docker Scout with Circle CI
 keywords: supply chain, security, ci, continuous integration, circle ci
 title: Integrate Docker Scout with Circle CI
 linkTitle: Circle CI
 ---
-
 The following examples runs when triggered in CircleCI. When triggered, it
 checks out the "docker/scout-demo-service:latest" image and tag and then uses
 Docker Scout to create a CVE report.

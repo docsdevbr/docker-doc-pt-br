@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: How to configure Settings Management for Docker Desktop
 keywords: admin, controls, rootless, enhanced container isolation
 title: Configure Settings Management with a JSON file
@@ -8,7 +18,6 @@ aliases:
  - /desktop/hardened-desktop/settings-management/configure/
  - /security/for-admins/hardened-desktop/settings-management/configure/
 ---
-
 {{< summary-bar feature_name="Hardened Docker Desktop" >}}
 
 This page contains information on how to configure Settings Management with an `admin-settings.json` file. You can specify and lock configuration parameters to create a standardized Docker Desktop environment across your company or organization.

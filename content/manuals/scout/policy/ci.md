@@ -1,11 +1,20 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Evaluate policy compliance in CI
 description: |
   Configure your continuous integration pipelines to fail
   when Policy Evaluation for an image is worse compared to baseline
 keywords: scout, supply chain, policy, ci
 ---
-
 Adding Policy Evaluation to your continuous integration pipelines helps you
 detect and prevent cases where code changes would cause policy compliance to
 become worse compared to your baseline.

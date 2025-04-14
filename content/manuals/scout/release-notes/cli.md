@@ -1,10 +1,19 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Docker Scout CLI release notes
 linkTitle: CLI release notes
 description: Learn about the latest features of the Docker Scout CLI plugin
 keywords: docker scout, release notes, changelog, cli, features, changes, delta, new, releases, github actions
 ---
-
 This page contains information about the new features, improvements, known
 issues, and bug fixes in the Docker Scout [CLI plugin](https://github.com/docker/scout-cli/)
 and the `docker/scout-action` [GitHub Action](https://github.com/docker/scout-action).

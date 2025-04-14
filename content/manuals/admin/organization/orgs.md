@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 title: Create your organization
 weight: 10
 description: Learn how to create an organization.
@@ -7,7 +17,6 @@ keywords: Docker, docker, registry, teams, organizations, plans, Dockerfile, Doc
 aliases:
 - /docker-hub/orgs/
 ---
-
 {{< summary-bar feature_name="Admin orgs" >}}
 
 This section describes how to create an organization. Before you begin:

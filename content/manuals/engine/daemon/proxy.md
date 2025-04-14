@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Learn how to configure the Docker daemon to use an HTTP proxy
 keywords: dockerd, daemon, configuration, proxy, networking, http_proxy, https_proxy, no_proxy, systemd, environment variables
 title: Daemon proxy configuration
@@ -11,7 +21,6 @@ aliases:
   - /config/daemon/systemd/
   - /config/daemon/proxy/
 ---
-
 <a name="httphttps-proxy"><!-- included for deep-links to old section --></a>
 
 If your organization uses a proxy server to connect to the internet, you may

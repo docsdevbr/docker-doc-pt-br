@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2016 Docker, Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docker/docs/blob/main/LICENSE
+
 description: Group mapping for administrators
 keywords: Group Mapping, SCIM, Docker Hub, Docker Admin, admin, security
 title: Group mapping
@@ -9,7 +19,6 @@ aliases:
 - /security/for-admins/group-mapping/
 weight: 40
 ---
-
 {{< summary-bar feature_name="SSO" >}}
 
 Group mapping lets you sync user groups from your identity provider (IdP) with teams in your Docker organization. This automates team membership management, keeping your Docker teams up to date based on changes in your IdP. You can use group mapping once you have configured [single sign-on (SSO)](../single-sign-on/_index.md).
