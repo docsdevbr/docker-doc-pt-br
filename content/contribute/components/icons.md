@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -128,13 +128,13 @@ grid:
     description: Icon name = key
   - title: "2FA"
     icon: "phonelink_lock"
-    description: Icon name = phonelink_lock 
+    description: Icon name = phonelink_lock
   - title: "Add/update payment method"
     icon: "credit_score"
-    description: Icon name = credit_score 
+    description: Icon name = credit_score
   - title: "Update billing info"
     icon: "contract_edit"
-    description: Icon name = contract_edit 
+    description: Icon name = contract_edit
   - title: "Billing history"
     icon: "payments"
     description: Icon name = payments
@@ -143,10 +143,10 @@ grid:
     description: Icon name = upgrade
   - title: "Add/manage more seats/users"
     icon: "group_add"
-    description: Icon name = group_add 
+    description: Icon name = group_add
   - title: "Domains"
     icon: "domain_verification"
-    description: Icon name = domain_verification 
+    description: Icon name = domain_verification
   - title: Company owner
     description: Icon name = supervised_user_circle
     icon: supervised_user_circle

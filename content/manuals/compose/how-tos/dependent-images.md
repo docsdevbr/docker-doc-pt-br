@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,7 +19,7 @@ weight: 50
 To reduce push/pull time and image weight, a common practice for Compose applications is to have services
 share base layers as much as possible. You will typically select the same operating system base image for
 all services. But you also can get one step further sharing image layers when your images share the same
-system packages. The challenge to address is then to avoid repeating the exact same Dockerfile instruction 
+system packages. The challenge to address is then to avoid repeating the exact same Dockerfile instruction
 in all services.
 
 For illustration, this page assumes you want all your services to be built with an `alpine` base
@@ -60,7 +60,7 @@ services:
 ## Use another service's image as the base image
 
 A popular pattern is to reuse a service image as a base image in another service.
-As Compose does not parse the Dockerfile, it can't automatically detect this dependency 
+As Compose does not parse the Dockerfile, it can't automatically detect this dependency
 between services to correctly order the build execution.
 
 a.Dockerfile:
@@ -82,7 +82,7 @@ Compose file:
 ```yaml
 services:
   a:
-     image: service_a 
+     image: service_a
      build:
        dockerfile: a.Dockerfile
   b:
@@ -92,7 +92,7 @@ services:
 ```
 
 Legacy Docker Compose v1 used to build images sequentially, which made this pattern usable
-out of the box. Compose v2 uses BuildKit to optimise builds and build images in parallel 
+out of the box. Compose v2 uses BuildKit to optimise builds and build images in parallel
 and requires an explicit declaration.
 
 The recommended approach is to declare the dependent base image as an additional build context:
@@ -103,7 +103,7 @@ Compose file:
 services:
   a:
      image: service_a
-     build: 
+     build:
        dockerfile: a.Dockerfile
   b:
      image: service_b
@@ -120,7 +120,7 @@ b.Dockerfile:
 
 ```dockerfile
 
-FROM base_image  
+FROM base_image
 # `base_image` doesn't resolve to an actual image. This is used to point to a named additional context
 
 # build service b
@@ -131,7 +131,7 @@ Compose file:
 ```yaml
 services:
   a:
-     build: 
+     build:
        dockerfile: a.Dockerfile
        # built image will be tagged <project_name>_a
   b:
@@ -145,18 +145,18 @@ services:
 ## Build with Bake
 
 Using [Bake](/manuals/build/bake/_index.md) let you pass the complete build definition for all services
-and to orchestrate build execution in the most efficient way. 
+and to orchestrate build execution in the most efficient way.
 
 To enable this feature, run Compose with the `COMPOSE_BAKE=true` variable set in your environment.
 
 ```console
 $ COMPOSE_BAKE=true docker compose build
-[+] Building 0.0s (0/1)                                                         
+[+] Building 0.0s (0/1)
  => [internal] load local bake definitions                                 0.0s
 ...
 [+] Building 2/2 manifest list sha256:4bd2e88a262a02ddef525c381a5bdb08c83  0.0s
- ✔ service_b  Built                                                        0.7s 
- ✔ service_a  Built    
+ ✔ service_b  Built                                                        0.7s
+ ✔ service_a  Built
 ```
 
 Bake can also be selected as the default builder by editing your `$HOME/.docker/config.json` config file:

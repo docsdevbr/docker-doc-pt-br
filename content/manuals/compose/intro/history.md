@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -20,7 +20,7 @@ aliases:
 This page provides:
  - A brief history of the development of the Docker Compose CLI
  - A clear explanation of the major versions and file formats that make up Compose V1 and Compose V2
- - The main differences between Compose V1 and Compose V2 
+ - The main differences between Compose V1 and Compose V2
 
 ## Introduction
 
@@ -40,7 +40,7 @@ Compose V2 ignores the `version` top-level element in the `compose.yaml` file.
 
 ### Compose file format versioning
 
-The Docker Compose CLIs are defined by specific file formats. 
+The Docker Compose CLIs are defined by specific file formats.
 
 Three major versions of the Compose file format for Compose V1 were released:
 - Compose file format 1 with Compose 1.0.0 in 2014
@@ -52,7 +52,7 @@ Its usage is historical and files written in this format don't run with Compose 
 
 Compose file format 2.x and 3.x are very similar to each other, but the latter introduced many new options targeted at Swarm deployments.
 
-To address confusion around Compose CLI versioning, Compose file format versioning, and feature parity depending on whether Swarm mode was in use, file format 2.x and 3.x were merged into the [Compose Specification](/reference/compose-file/_index.md). 
+To address confusion around Compose CLI versioning, Compose file format versioning, and feature parity depending on whether Swarm mode was in use, file format 2.x and 3.x were merged into the [Compose Specification](/reference/compose-file/_index.md).
 
 Compose V2 uses the Compose Specification for project definition. Unlike the prior file formats, the Compose Specification is rolling and makes the `version` top-level element optional. Compose V2 also makes use of optional specifications - [Deploy](/reference/compose-file/deploy.md), [Develop](/reference/compose-file/develop.md) and [Build](/reference/compose-file/build.md).
 

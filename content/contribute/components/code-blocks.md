@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -41,7 +41,7 @@ incoming := map[string]interface{}{
         int(1e9),
         "tyui",
     },
-}    
+}
 ```
 
 ````markdown
@@ -55,7 +55,7 @@ incoming := map[string]interface{}{
         int(1e9),
         "tyui",
     },
-}   
+}
 ```
 ````
 

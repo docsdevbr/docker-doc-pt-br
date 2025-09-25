@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -32,9 +32,9 @@ This page contains information about general system requirements, supported plat
 
 > [!IMPORTANT]
 >
->Docker Desktop on Linux runs a Virtual Machine (VM) which creates and uses a custom docker context, `desktop-linux`, on startup. 
+>Docker Desktop on Linux runs a Virtual Machine (VM) which creates and uses a custom docker context, `desktop-linux`, on startup.
 >
->This means images and containers deployed on the Linux Docker Engine (before installation) are not available in Docker Desktop for Linux. 
+>This means images and containers deployed on the Linux Docker Engine (before installation) are not available in Docker Desktop for Linux.
 >
 > {{< accordion title=" What is the difference between Docker Desktop for Linux and Docker Engine?" >}}
 
@@ -97,7 +97,7 @@ machine. The current context is indicated with an asterisk (`*`);
 $ docker context ls
 NAME            DESCRIPTION                               DOCKER ENDPOINT                                  ...
 default *       Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                      ...
-desktop-linux                                             unix:///home/<user>/.docker/desktop/docker.sock  ...        
+desktop-linux                                             unix:///home/<user>/.docker/desktop/docker.sock  ...
 ```
 
 If you have both Docker Desktop and Docker Engine installed on the same machine,
@@ -110,14 +110,14 @@ $ docker context use default
 default
 Current context is now "default"
 ```
-  
+
 And use the `desktop-linux` context to interact with Docker Desktop:
- 
+
 ```console
 $ docker context use desktop-linux
 desktop-linux
 Current context is now "desktop-linux"
-``` 
+```
 Refer to the [Docker Context documentation](/manuals/engine/manage-resources/contexts.md) for more details.
 {{< /accordion >}}
 
@@ -126,7 +126,7 @@ Refer to the [Docker Context documentation](/manuals/engine/manage-resources/con
 Docker provides `.deb` and `.rpm` packages from the following Linux distributions
 and architectures:
 
-| Platform                | x86_64 / amd64          | 
+| Platform                | x86_64 / amd64          |
 |:------------------------|:-----------------------:|
 | [Ubuntu](ubuntu.md)                         | ✅  |
 | [Debian](debian.md)                         | ✅  |

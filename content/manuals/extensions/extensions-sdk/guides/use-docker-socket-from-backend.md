@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,12 +13,12 @@ title: Use the Docker socket from the extension backend
 linkTitle: Use the Docker socket
 description: Docker extension metadata
 keywords: Docker, extensions, sdk, metadata
-aliases: 
+aliases:
  - /desktop/extensions-sdk/guides/use-docker-socket-from-backend/
 ---
-Extensions can invoke Docker commands directly from the frontend with the SDK. 
+Extensions can invoke Docker commands directly from the frontend with the SDK.
 
-In some cases, it is useful to also interact with Docker Engine from the backend. 
+In some cases, it is useful to also interact with Docker Engine from the backend.
 
 Extension backend containers can mount the Docker socket and use it to
 interact with Docker Engine from the extension backend logic. Learn more about the [Docker Engine socket](/reference/cli/dockerd/#examples)

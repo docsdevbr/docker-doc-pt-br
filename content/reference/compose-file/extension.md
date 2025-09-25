@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Extensions
 description: Understand how to use extensions
 keywords: compose, compose specification, extensions, compose file reference
-aliases: 
+aliases:
  - /compose/compose-file/11-extension/
 weight: 80
 ---
@@ -20,7 +20,7 @@ weight: 80
 
 Extensions can also be used with [anchors and aliases](fragments.md).
 
-They also can be used within any structure in a Compose file where user-defined keys are not expected. 
+They also can be used within any structure in a Compose file where user-defined keys are not expected.
 Compose uses those to enable experimental features, the same way browsers add support for [custom CSS features](https://www.w3.org/TR/2011/REC-CSS2-20110607/syndata.html#vendor-keywords)
 
 ## Example 1
@@ -54,7 +54,7 @@ x-env: &env
   environment:
     - CONFIG_KEY
     - EXAMPLE_KEY
- 
+
 services:
   first:
     <<: *env
@@ -99,9 +99,9 @@ services:
      https_proxy: $https_proxy
 ```
 
-The `nodeinfo` and `echoit` services both include the `x-function` extension via the `&function` anchor, then set their specific image and environment. 
+The `nodeinfo` and `echoit` services both include the `x-function` extension via the `&function` anchor, then set their specific image and environment.
 
-## Example 4 
+## Example 4
 
 Using [YAML merge](https://yaml.org/type/merge.html) it is also possible to use multiple extensions and share
 and override additional attributes for specific needs:
@@ -115,14 +115,14 @@ x-keys: &keys
 services:
   frontend:
     image: example/webapp
-    environment: 
+    environment:
       << : [*default-environment, *keys]
       YET_ANOTHER: VARIABLE
 ```
 
 > [!NOTE]
 >
-> [YAML merge](https://yaml.org/type/merge.html) only applies to mappings, and can't be used with sequences. 
+> [YAML merge](https://yaml.org/type/merge.html) only applies to mappings, and can't be used with sequences.
 >
 > In the example above, the environment variables are declared using the `FOO: BAR` mapping syntax, while the sequence syntax `- FOO=BAR` is only valid when no fragments are involved.
 

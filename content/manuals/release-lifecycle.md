@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -9,7 +9,7 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Docker's product release lifecycle 
+title: Docker's product release lifecycle
 linkTitle: Release lifecycle
 description: Describes the various stages of feature lifecycle from beta
   to GA.
@@ -18,7 +18,7 @@ params:
   sidebar:
     group: Products
 ---
-This page details Docker's product release lifecycle and how Docker defines each stage. It also provides information on the product retirement process. Features and products may progress through some or all of these phases. 
+This page details Docker's product release lifecycle and how Docker defines each stage. It also provides information on the product retirement process. Features and products may progress through some or all of these phases.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ This page details Docker's product release lifecycle and how Docker defines each
 
 Experimental offerings are features that Docker is currently experimenting with. Customers who access experimental features have the opportunity to test, validate, and provide feedback on future functionality. This helps us focus our efforts on what provides the most value to our customers.
 
-**Customer availability:** Availability of experimental features is limited. A portion of users may have access to none, one or many experimental features. 
+**Customer availability:** Availability of experimental features is limited. A portion of users may have access to none, one or many experimental features.
 
 **Support:** Support for experimental features is best effort via Community support channels and forums.
 

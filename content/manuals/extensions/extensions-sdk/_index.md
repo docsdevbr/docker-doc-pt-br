@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -44,16 +44,16 @@ grid:
 ---
 The resources in this section help you create your own Docker extension.
 
-The Docker CLI tool provides a set of commands to help you build and publish your extension, packaged as a 
+The Docker CLI tool provides a set of commands to help you build and publish your extension, packaged as a
 specially formatted Docker image.
 
-At the root of the image filesystem is a `metadata.json` file which describes the content of the extension. 
+At the root of the image filesystem is a `metadata.json` file which describes the content of the extension.
 It's a fundamental element of a Docker extension.
 
 An extension can contain a UI part and backend parts that run either on the host or in the Desktop virtual machine.
 For further information, see [Architecture](architecture/_index.md).
 
-You distribute extensions through Docker Hub. However, you can develop them locally without the need to push 
+You distribute extensions through Docker Hub. However, you can develop them locally without the need to push
 the extension to Docker Hub. See [Extensions distribution](extensions/DISTRIBUTION.md) for further details.
 
 {{% include "extensions-form.md" %}}

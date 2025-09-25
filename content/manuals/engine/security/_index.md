@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -122,10 +122,10 @@ socket.
 
 You can also expose the REST API over HTTP if you explicitly decide to do so.
 However, if you do that, be aware of the above mentioned security implications.
-Note that even if you have a firewall to limit accesses to the REST API 
+Note that even if you have a firewall to limit accesses to the REST API
 endpoint from other hosts in the network, the endpoint can be still accessible
 from containers, and it can easily result in the privilege escalation.
-Therefore it is *mandatory* to secure API endpoints with 
+Therefore it is *mandatory* to secure API endpoints with
 [HTTPS and certificates](protect-access.md).
 Exposing the daemon API over HTTP without TLS is not permitted,
 and such a configuration causes the daemon to fail early on startup, see
@@ -221,17 +221,17 @@ those explicitly required for their processes.
 
 ## Docker Content Trust signature verification
 
-Docker Engine can be configured to only run signed images. The Docker Content 
-Trust signature verification feature is built directly into the `dockerd` binary.  
-This is configured in the Dockerd configuration file. 
+Docker Engine can be configured to only run signed images. The Docker Content
+Trust signature verification feature is built directly into the `dockerd` binary.
+This is configured in the Dockerd configuration file.
 
-To enable this feature, trustpinning can be configured in `daemon.json`, whereby 
+To enable this feature, trustpinning can be configured in `daemon.json`, whereby
 only repositories signed with a user-specified root key can be pulled and run.
-  
-This feature provides more insight to administrators than previously available with
-the CLI for enforcing and performing image signature verification. 
 
-For more information on configuring Docker Content Trust Signature Verification, go to 
+This feature provides more insight to administrators than previously available with
+the CLI for enforcing and performing image signature verification.
+
+For more information on configuring Docker Content Trust Signature Verification, go to
 [Content trust in Docker](trust/_index.md).
 
 ## Other kernel security features

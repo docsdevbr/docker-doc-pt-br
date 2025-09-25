@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -59,7 +59,7 @@ In the following steps, you'll create the network first and then attach the MySQ
 
    {{< tabs >}}
    {{< tab name="Mac / Linux / Git Bash" >}}
-   
+
    ```console
    $ docker run -d \
        --network todo-app --network-alias mysql \
@@ -80,7 +80,7 @@ In the following steps, you'll create the network first and then attach the MySQ
        -e MYSQL_DATABASE=todos `
        mysql:8.0
    ```
-   
+
    {{< /tab >}}
    {{< tab name="Command Prompt" >}}
 
@@ -92,10 +92,10 @@ In the following steps, you'll create the network first and then attach the MySQ
        -e MYSQL_DATABASE=todos ^
        mysql:8.0
    ```
-   
+
    {{< /tab >}}
    {{< /tabs >}}
-   
+
    In the previous command, you can see the `--network-alias` flag. In a later section, you'll learn more about this flag.
 
    > [!TIP]
@@ -230,7 +230,7 @@ You can now start your dev-ready container.
      node:18-alpine \
      sh -c "yarn install && yarn run dev"
    ```
-   
+
    {{< /tab >}}
    {{< tab name="PowerShell" >}}
    In Windows, run this command in PowerShell.
@@ -277,7 +277,7 @@ You can now start your dev-ready container.
      node:18-alpine \
      sh -c "yarn install && yarn run dev"
    ```
-   
+
    {{< /tab >}}
    {{< /tabs >}}
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -88,16 +88,16 @@ services:
   some-service:
     image: foo
     networks:
-      default: {}  
+      default: {}
 networks:
-  default: {}      
+  default: {}
 ```
 
 You can customize the `default` network with an explicit declaration:
 
 ```yml
 networks:
-  default: 
+  default:
     name: a_network # Use a custom name
     driver_opts:    # pass options to driver for network creation
       com.docker.network.bridge.host_binding_ipv4: 127.0.0.1

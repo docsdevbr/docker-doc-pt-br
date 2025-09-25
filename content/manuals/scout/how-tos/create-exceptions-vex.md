@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -110,7 +110,7 @@ Here's a description of the options in this example:
 : PURL of the vulnerable package in the image. In this example, the
   vulnerability exists in an npm package, so the `--subcomponents` PURL is the
   identifier for the npm package name and version (`pkg:npm/express@4.17.1`).
-  
+
   If the same vulnerability exists in multiple packages, `vexctl` lets you
   specify the `--subcomponents` flag multiple times for a single `create`
   command.

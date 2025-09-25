@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -58,6 +58,6 @@ Legacy versions 2.x and 3.x of the Compose file format were merged into the Comp
 
 The Compose Specification on Docker Docs is the Docker Compose implementation. If you wish to implement your own version of the Compose Specification, see the [Compose Specification repository](https://github.com/compose-spec/compose-spec).
 
-Use the following links to navigate key sections of the Compose Specification. 
+Use the following links to navigate key sections of the Compose Specification.
 
 {{< grid >}}

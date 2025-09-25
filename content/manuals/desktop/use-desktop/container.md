@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -32,7 +32,7 @@ From the **Containers** view you can perform the following actions:
 
 ## Resource usage
 
-From the **Containers** view you can monitor your containers' CPU and memory usage over time. This can help you understand if something is wrong with your containers or if you need to allocate additional resources. 
+From the **Containers** view you can monitor your containers' CPU and memory usage over time. This can help you understand if something is wrong with your containers or if you need to allocate additional resources.
 
 When you [inspect a container](#inspect-a-container), the **Stats** tab displays further information about a container's resource utilization. You can see how much CPU, memory, network and disk space your container is using over time.
 
@@ -40,7 +40,7 @@ When you [inspect a container](#inspect-a-container), the **Stats** tab displays
 
 You can obtain detailed information about the container when you select it.
 
-From here, you can use the quick action buttons to perform various actions such as pause, resume, start or stop, or explore the **Logs**, **Inspect**, **Bind mounts**, **Exec**, **Files**, and **Stats** tabs. 
+From here, you can use the quick action buttons to perform various actions such as pause, resume, start or stop, or explore the **Logs**, **Inspect**, **Bind mounts**, **Exec**, **Files**, and **Stats** tabs.
 
 ### Logs
 
@@ -49,14 +49,14 @@ Select **Logs** to see logs from the container. You can also:
 - Use `Cmd + f`/`Ctrl + f` to open the search bar and find specific entries.
   Search matches are highlighted in yellow.
 - Press `Enter` or `Shift + Enter` to jump to the next or previous search match
-  respectively. 
+  respectively.
 - Use the **Copy** icon in the top right-hand corner to copy all the logs to
   your clipboard.
 - Automatically copy any logs content by highlighting a few lines or a section
   of the logs.
 - Use the **Clear terminal** icon in the top right-hand corner to clear the
-  logs terminal. 
-- Select and view external links that may be in your logs. 
+  logs terminal.
+- Select and view external links that may be in your logs.
 
 ### Inspect
 

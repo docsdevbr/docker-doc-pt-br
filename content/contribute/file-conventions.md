@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -16,7 +16,7 @@ weight: 30
 ---
 ## File name
 
-When you create a new .md file for new content, make sure: 
+When you create a new .md file for new content, make sure:
 - File names are as short as possible
 - Try to keep the file name to one word or two words
 - Use a dash to separate words. For example:
@@ -48,7 +48,7 @@ the metadata elements in the front matter isn't important.
 
 ```liquid
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -91,7 +91,7 @@ This is useful in combination with `build.render` set to `always`, which creates
 
 ```md
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms

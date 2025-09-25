@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -61,7 +61,7 @@ If you are a Mac or Linux user, you also have the option to **Uninstall** Docker
 > If you need to contact support, select the **Question mark** icon near the top-right corner of Docker Dashboard, and then select **Contact support**. Users with a paid Docker subscription can use this option to send a support request.
 
 ## Diagnose
- 
+
 > [!TIP]
 >
 > If you do not find a solution in troubleshooting, browse the GitHub repositories or create a new issue:
@@ -82,7 +82,7 @@ If you are a Mac or Linux user, you also have the option to **Uninstall** Docker
         > You must be signed in to Docker Desktop to access the support form. For information on what's covered as part of Docker Desktop support, see [Support](/manuals/desktop/troubleshoot-and-support/support.md).
     - If you don't have a paid Docker subscription, select **Report a Bug** to open a new Docker Desktop issue on GitHub. Complete the information required and ensure you add the diagnostic ID you copied in step three.
 
-### Diagnose from an error message 
+### Diagnose from an error message
 
 1. When an error message appears, select **Gather diagnostics**.
 2. When the diagnostics are uploaded, Docker Desktop prints a diagnostic ID. Copy this ID.
@@ -91,7 +91,7 @@ If you are a Mac or Linux user, you also have the option to **Uninstall** Docker
         > [!NOTE]
         >
         > You must be signed in to Docker Desktop to access the support form. For information on what's covered as part of Docker Desktop support, see [Support](/manuals/desktop/troubleshoot-and-support/support.md).
-    - If you don't have a paid Docker subscription, you can open a new Docker Desktop issue on GitHub for [Mac](https://github.com/docker/for-mac/issues), [Windows](https://github.com/docker/for-win/issues), or [Linux](https://github.com/docker/for-linux/issues). Complete the information required and ensure you add the diagnostic ID printed in step two. 
+    - If you don't have a paid Docker subscription, you can open a new Docker Desktop issue on GitHub for [Mac](https://github.com/docker/for-mac/issues), [Windows](https://github.com/docker/for-win/issues), or [Linux](https://github.com/docker/for-linux/issues). Complete the information required and ensure you add the diagnostic ID printed in step two.
 
 ### Diagnose from the terminal
 
@@ -113,7 +113,7 @@ Docker Desktop cannot start.
    $ & "C:\Program Files\Docker\Docker\resources\com.docker.diagnose.exe" gather -upload
    ```
 
-After the diagnostics have finished, the terminal displays your diagnostics ID and the path to the diagnostics file. The diagnostics ID is composed of your user ID and a timestamp. For example `BE9AFAAF-F68B-41D0-9D12-84760E6B8740/20190905152051`. 
+After the diagnostics have finished, the terminal displays your diagnostics ID and the path to the diagnostics file. The diagnostics ID is composed of your user ID and a timestamp. For example `BE9AFAAF-F68B-41D0-9D12-84760E6B8740/20190905152051`.
 
 {{< /tab >}}
 {{< tab name="Mac" >}}
@@ -130,7 +130,7 @@ After the diagnostics have finished, the terminal displays your diagnostics ID a
    $ /Applications/Docker.app/Contents/MacOS/com.docker.diagnose gather -upload
    ```
 
-After the diagnostics have finished, the terminal displays your diagnostics ID and the path to the diagnostics file. The diagnostics ID is composed of your user ID and a timestamp. For example `BE9AFAAF-F68B-41D0-9D12-84760E6B8740/20190905152051`. 
+After the diagnostics have finished, the terminal displays your diagnostics ID and the path to the diagnostics file. The diagnostics ID is composed of your user ID and a timestamp. For example `BE9AFAAF-F68B-41D0-9D12-84760E6B8740/20190905152051`.
 
 {{< /tab >}}
 {{< tab name="Linux" >}}
@@ -147,7 +147,7 @@ After the diagnostics have finished, the terminal displays your diagnostics ID a
    $ /opt/docker-desktop/bin/com.docker.diagnose gather -upload
    ```
 
-After the diagnostics have finished, the terminal displays your diagnostics ID and the path to the diagnostics file. The diagnostics ID is composed of your user ID and a timestamp. For example `BE9AFAAF-F68B-41D0-9D12-84760E6B8740/20190905152051`. 
+After the diagnostics have finished, the terminal displays your diagnostics ID and the path to the diagnostics file. The diagnostics ID is composed of your user ID and a timestamp. For example `BE9AFAAF-F68B-41D0-9D12-84760E6B8740/20190905152051`.
 
 {{< /tab >}}
 {{< /tabs >}}
@@ -161,7 +161,7 @@ To view the contents of the diagnostic file:
 
    ```powershell
    $ Expand-Archive -LiteralPath "C:\Users\testUser\AppData\Local\Temp\5DE9978A-3848-429E-8776-950FC869186F\20230607101602.zip" -DestinationPath "C:\Users\testuser\AppData\Local\Temp\5DE9978A-3848-429E-8776-950FC869186F\20230607101602"
-   ```  
+   ```
 
 2. Open the file in your preferred text editor. Run:
 
@@ -193,7 +193,7 @@ $ unzip –l /tmp/<your-diagnostics-ID>.zip
 #### Use your diagnostics ID to get help
 
 If you have a paid Docker subscription, select **Contact support**. This opens the Docker Desktop support form. Fill in the information required and add the ID you copied in step three to the **Diagnostics ID field**. Then, select **Submit ticket** to request Docker Desktop support.
-    
+
 If you don't have a paid Docker subscription, create an issue on GitHub:
 
 - [For Linux](https://github.com/docker/desktop-linux/issues)
@@ -202,12 +202,12 @@ If you don't have a paid Docker subscription, create an issue on GitHub:
 
 ### Self-diagnose tool
 
-Docker Desktop contains a self-diagnose tool which can help you identify some common problems. 
+Docker Desktop contains a self-diagnose tool which can help you identify some common problems.
 
 {{< tabs group="os" >}}
 {{< tab name="Windows" >}}
-1. Locate the `com.docker.diagnose` tool. 
-     
+1. Locate the `com.docker.diagnose` tool.
+
    ```console
    $ C:\Program Files\Docker\Docker\resources\com.docker.diagnose.exe
    ```
@@ -221,7 +221,7 @@ Docker Desktop contains a self-diagnose tool which can help you identify some co
 {{< /tab >}}
 {{< tab name="Mac" >}}
 
-1. Locate the `com.docker.diagnose` tool. 
+1. Locate the `com.docker.diagnose` tool.
 
    ```console
    $ /Applications/Docker.app/Contents/MacOS/com.docker.diagnose
@@ -236,7 +236,7 @@ Docker Desktop contains a self-diagnose tool which can help you identify some co
 {{< /tab >}}
 {{< tab name="Linux" >}}
 
-1. Locate the `com.docker.diagnose` tool. 
+1. Locate the `com.docker.diagnose` tool.
 
 2. Run the self-diagnose tool:
 

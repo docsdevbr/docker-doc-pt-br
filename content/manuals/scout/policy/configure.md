@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -58,8 +58,8 @@ To add a policy:
 
 ## Edit a policy
 
-Editing a policy lets you to modify its configuration without creating 
-a new one from scratch. This can be useful when policy parameters need adjustments 
+Editing a policy lets you to modify its configuration without creating
+a new one from scratch. This can be useful when policy parameters need adjustments
 due to evolving requirements or changes in your organization's compliance goals.
 
 To edit a policy:

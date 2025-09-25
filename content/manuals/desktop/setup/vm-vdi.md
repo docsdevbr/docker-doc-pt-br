@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -17,7 +17,7 @@ aliases:
  - /desktop/vm-vdi/
 weight: 30
 ---
-In general, we recommend running Docker Desktop natively on either Mac, Linux, or Windows. However, Docker Desktop for Windows can run inside a virtual desktop provided the virtual desktop is properly configured. 
+In general, we recommend running Docker Desktop natively on either Mac, Linux, or Windows. However, Docker Desktop for Windows can run inside a virtual desktop provided the virtual desktop is properly configured.
 
 To run Docker Desktop in a virtual desktop environment, it is essential nested virtualization is enabled on the virtual machine that provides the virtual desktop. This is because, under the hood, Docker Desktop is using a Linux VM in which it runs Docker Engine and the containers.
 
@@ -31,7 +31,7 @@ The support available from Docker extends to installing and running Docker Deskt
 
 For troubleshooting problems and intermittent failures that are outside of Docker's control, you should contact your hypervisor vendor. Each hypervisor vendor offers different levels of support. For example, Microsoft supports running nested Hyper-V both on-prem and on Azure, with some version constraints. This may not be the case for VMWare ESXi.
 
-Docker does not support running multiples instances of Docker Desktop on the same machine in a VM or VDI environment. 
+Docker does not support running multiples instances of Docker Desktop on the same machine in a VM or VDI environment.
 
 ## Turn on nested virtualization
 
@@ -62,7 +62,7 @@ Docker Desktop follows the VDI support definitions outlined [previously](#virtua
 
  - Persistent VDI environments (Supported): You receive the same virtual desktop instance across sessions, preserving installed software and configurations.
 
- - Non-persistent VDI environments (Not supported): Docker Desktop does not support environments where the OS resets between sessions, requiring re-installation or reconfiguration each time. 
+ - Non-persistent VDI environments (Not supported): Docker Desktop does not support environments where the OS resets between sessions, requiring re-installation or reconfiguration each time.
 
 ### Support scope and responsibilities
 

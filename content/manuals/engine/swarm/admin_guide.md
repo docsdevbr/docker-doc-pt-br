@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -264,7 +264,7 @@ You can back up the swarm using any manager. Use the following procedure.
     other nodes continue generating swarm data that is not part of this backup.
 
     > [!NOTE]
-    > 
+    >
     > Be sure to maintain the quorum of swarm managers. During the
     > time that a manager is shut down, your swarm is more vulnerable to
     > losing the quorum if further nodes are lost. The number of managers you
@@ -276,7 +276,7 @@ You can back up the swarm using any manager. Use the following procedure.
 
 4.  Restart the manager.
 
-To restore, see [Restore from a backup](#restore-from-a-backup). 
+To restore, see [Restore from a backup](#restore-from-a-backup).
 
 ## Recover from disaster
 
@@ -295,7 +295,7 @@ restore the data to a new swarm.
     backup.
 
     > [!NOTE]
-    > 
+    >
     > The new node uses the same encryption key for on-disk
     > storage as the old one. It is not possible to change the on-disk storage
     > encryption keys at this time.

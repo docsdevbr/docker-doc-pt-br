@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -16,7 +16,7 @@ tags: [admin]
 params:
   featured: true
   time: 20 minutes
-  image: 
+  image:
   resource_links:
     - title: Overview of Administration in Docker
       url: /admin/
@@ -46,6 +46,6 @@ Managing roles and permissions is key to securing your Docker environment while 
 - How to automate and streamline user provisioning with SSO, SCIM, and JIT.
 - How to get the most out of Docker's monitoring tools.
 
-## Tools integration 
+## Tools integration
 
 Okta, Entra ID SAML 2.0, Azure Connect (OIDC)

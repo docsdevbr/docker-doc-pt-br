@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -9,7 +9,7 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-description: Find a way to provide feedback on Docker Compose that's right for you 
+description: Find a way to provide feedback on Docker Compose that's right for you
 keywords: Feedback, Docker Compose, Community forum, bugs, problems, issues
 title: Give feedback
 weight: 20
@@ -30,4 +30,4 @@ To report bugs or problems, visit [Docker Compose on GitHub](https://github.com/
 
 ### Feedback via Community Slack channels
 
-You can also provide feedback through the #docker-compose [Docker Community Slack](https://dockr.ly/comm-slack) channel. 
+You can also provide feedback through the #docker-compose [Docker Community Slack](https://dockr.ly/comm-slack) channel.

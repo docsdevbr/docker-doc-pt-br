@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -148,7 +148,7 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
 
    {{< tabs >}}
    {{< tab name="Local or Hub storage" >}}
-   
+
    - **Local file**: Specify a file name and select a folder.
    - **Local image**: Select a local image to export the content to. Any
     existing data in the image will be replaced by the exported content.
@@ -191,10 +191,10 @@ You can either [export a volume now](#export-a-volume-now) or [schedule a recurr
 6. Select whether to export the volume to **Local or Hub storage** or **External
    cloud storage**, then specify the following additional details depending on
    your selection.
-   
+
    {{< tabs >}}
    {{< tab name="Local or Hub storage" >}}
-   
+
    - **Local file**: Specify a file name and select a folder.
    - **Local image**: Select a local image to export the content to. Any
     existing data in the image will be replaced by the exported content.

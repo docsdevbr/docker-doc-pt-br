@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -50,10 +50,10 @@ For example, in a Node.js project, it's not recommended to sync the `node_module
 The `watch` attribute defines a list of rules that control automatic service updates based on local file changes.
 
 Each rule requires, a `path` pattern and `action` to take when a modification is detected. There are two possible actions for `watch` and depending on
-the `action`, additional fields might be accepted or required. 
+the `action`, additional fields might be accepted or required.
 
 Watch mode can be used with many different languages and frameworks.
-The specific paths and rules will vary from project to project, but the concepts remain the same. 
+The specific paths and rules will vary from project to project, but the concepts remain the same.
 
 ### Prerequisites
 
@@ -62,8 +62,8 @@ In order to work properly, `watch` relies on common executables. Make sure your 
 * mkdir
 * rmdir
 
-`watch` also requires that the container's `USER` can write to the target path so it can update files. A common pattern is for 
-initial content to be copied into the container using the `COPY` instruction in a Dockerfile. To ensure such files are owned 
+`watch` also requires that the container's `USER` can write to the target path so it can update files. A common pattern is for
+initial content to be copied into the container using the `COPY` instruction in a Dockerfile. To ensure such files are owned
 by the configured user, use the `COPY --chown` flag:
 
 ```dockerfile
@@ -102,9 +102,9 @@ image rebuild (e.g. `package.json`).
 
 #### Sync + Restart
 
-If `action` is set to `sync+restart`, Compose synchronizes your changes with the service containers and restarts it. 
+If `action` is set to `sync+restart`, Compose synchronizes your changes with the service containers and restarts it.
 
-`sync+restart` is ideal when config file changes, and you don't need to rebuild the image but just restart the main process of the service containers. 
+`sync+restart` is ideal when config file changes, and you don't need to rebuild the image but just restart the main process of the service containers.
 It will work well when you update a database configuration or your `nginx.conf` file for example
 
 >[!TIP]
@@ -173,7 +173,7 @@ rebuilds the image and recreates the `web` service container.
 
 This pattern can be followed for many languages and frameworks, such as Python with Flask: Python source files can be synced while a change to `requirements.txt` should trigger a rebuild.
 
-## Example 2 
+## Example 2
 
 Adapting the previous example to demonstrate `sync+restart`:
 
@@ -207,7 +207,7 @@ This setup demonstrates how to use the `sync+restart` action in Docker Compose t
 
 > [!NOTE]
 >
-> Watch can also be used with the dedicated `docker compose watch` command if you don't want to 
+> Watch can also be used with the dedicated `docker compose watch` command if you don't want to
 > get the application logs mixed with the (re)build logs and filesystem sync events.
 
 > [!TIP]

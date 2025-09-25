@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -18,7 +18,7 @@ aliases:
  - /support/
 ---
 > [!NOTE]
-> 
+>
 > Docker Desktop offers support for developers with a [Pro, Team, or Business subscription](https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade_desktop_support).
 
 ### How do I get Docker Desktop support?
@@ -26,7 +26,7 @@ aliases:
 If you have a paid Docker subscription, you can [contact the Support team](https://hub.docker.com/support/contact/).
 
 All Docker users can seek support through the following resources, where Docker or the community respond on a best effort basis.
-   - [Docker Desktop for Windows GitHub repo](https://github.com/docker/for-win) 
+   - [Docker Desktop for Windows GitHub repo](https://github.com/docker/for-win)
    - [Docker Desktop for Mac GitHub repo](https://github.com/docker/for-mac)
    - [Docker Desktop for Linux GitHub repo](https://github.com/docker/desktop-linux)
    - [Docker Community Forums](https://forums.docker.com/)

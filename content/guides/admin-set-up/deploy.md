@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -9,7 +9,7 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Deploy 
+title: Deploy
 description: Deploy your Docker setup across your company.
 weight: 40
 ---
@@ -22,6 +22,6 @@ Enforcing SSO means that anyone who has a Docker profile with an email address t
 
 ## Step two: Deploy configuration settings and enforce sign-in to users
 
-Have the MDM team deploy the configuration files for Docker to all users.  
+Have the MDM team deploy the configuration files for Docker to all users.
 
-Congratulations, you have successfully completed the admin implementation process for Docker. 
+Congratulations, you have successfully completed the admin implementation process for Docker.

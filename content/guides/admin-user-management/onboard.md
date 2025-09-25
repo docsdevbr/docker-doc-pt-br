@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -48,7 +48,7 @@ A robust, future-proof approach to user management combines automated provisioni
 
 Integrating Docker with your identity provider streamlines user access and enhances security.
 
-SSO: 
+SSO:
 
  - Simplifies sign in, as users sign in with their organizational credentials.
 

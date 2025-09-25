@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -180,7 +180,7 @@ It's recommended that you try the private marketplace on your Docker Desktop ins
    {{< /tab >}}
    {{< /tabs >}}
 
-2. Quit and re-open Docker Desktop. 
+2. Quit and re-open Docker Desktop.
 3. Sign in with a Docker account.
 
 When you select the **Extensions** tab, you should see the private marketplace listing only the extensions you have allowed in `extensions.txt`.

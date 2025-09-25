@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -68,8 +68,8 @@ Feedback can be given to an extension author through a dedicated Slack channel o
 
 1. Navigate to the Docker Desktop Dashboard and select the **Manage** tab.
    This displays a list of extensions you've installed.
-2. Select the extension you want to provide feedback on. 
-3. Scroll down to the bottom of the extension's description and, depending on the 
+2. Select the extension you want to provide feedback on.
+3. Scroll down to the bottom of the extension's description and, depending on the
 extension, select:
     - Support
     - Slack

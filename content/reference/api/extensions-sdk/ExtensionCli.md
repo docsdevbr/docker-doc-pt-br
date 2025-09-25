@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: "Interface: ExtensionCli"
 description: Docker extension API reference
 keywords: Docker, extensions, sdk, API, reference
-aliases: 
+aliases:
  - /desktop/extensions-sdk/dev/api/reference/interfaces/ExtensionCli/
  - /extensions/extensions-sdk/dev/api/reference/interfaces/ExtensionCli/
 ---

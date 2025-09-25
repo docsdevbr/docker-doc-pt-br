@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -15,7 +15,7 @@ description: Learn how to collaborate on a project
 keywords: collaborate, projects, docker desktop, local, remote
 weight: 60
 ---
-Docker Projects makes it easy for teams to share, manage, and collaborate on containerized applications. 
+Docker Projects makes it easy for teams to share, manage, and collaborate on containerized applications.
 
 Collaboration is managed by associating a project with a Docker organization, and leveraging cloud-stored configurations. This allows team members to easily access and work on the same project without needing extensive manual setup.
 
@@ -23,7 +23,7 @@ Once a project is associated with an organization, other team members can access
 
 1. Signing into Docker Desktop and navigating to **Projects**.
 
-2. Selecting the correct organization tab. 
+2. Selecting the correct organization tab.
 
 3. Selecting the project from the list of shared projects.
 

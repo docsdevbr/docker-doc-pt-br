@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Compose Deploy Specification
 description: Learn about the Compose Deploy Specification
 keywords: compose, compose specification, compose file reference, compose deploy specification
-aliases: 
+aliases:
  - /compose/compose-file/deploy/
 weight: 140
 ---
@@ -64,7 +64,7 @@ services:
 - `global`: Ensures exactly one task continuously runs per physical node until stopped.
 - `replicated`: Continuously runs a specified number of tasks across nodes until stopped (default).
 - `replicated-job`: Executes a defined number of tasks until a completion state (exits with code 0)'.
-   - Total tasks are determined by `replicas`. 
+   - Total tasks are determined by `replicas`.
    - Concurrency can be limited using the `max-concurrent` option (CLI only).
 - `global-job`: Executes one task per physical node with a completion state (exits with code 0).
    - Automatically runs on new nodes as they are added.
@@ -88,7 +88,7 @@ services:
       mode: global-job
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > - Job modes (`replicated-job` and `global-job`) are designed for tasks that complete and exit with code 0.
 > - Completed tasks remain until explicitly removed.
 > - Options like `max-concurrent` for controlling concurrency are supported only via the CLI and are not available in Compose.
@@ -112,7 +112,7 @@ deploy:
 
 #### `preferences`
 
-`preferences` defines a strategy (currently `spread` is the only supported strategy) to spread tasks evenly 
+`preferences` defines a strategy (currently `spread` is the only supported strategy) to spread tasks evenly
 over the values of the datacenter node label. For a further example, see the [CLI reference docs](/reference/cli/docker/service/create.md#placement-pref)
 
 ```yml
@@ -261,7 +261,7 @@ deploy:
 - `condition`. When set to:
   - `none`, containers are not automatically restarted regardless of the exit status.
   - `on-failure`, the container is restarted if it exits due to an error, which manifests as a non-zero exit code.
-  - `any` (default), containers are restarted regardless of the exit status. 
+  - `any` (default), containers are restarted regardless of the exit status.
 - `delay`: How long to wait between restart attempts, specified as a [duration](extension.md#specifying-durations). The default is 0, meaning restart attempts can occur immediately.
 - `max_attempts`: How many times to attempt to restart a container before giving up (default: never give up). If the restart does not
   succeed within the configured `window`, this attempt doesn't count toward the configured `max_attempts` value.

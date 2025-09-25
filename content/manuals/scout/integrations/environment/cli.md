@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -52,7 +52,7 @@ jobs:
           else
             tag="$CIRCLE_BRANCH"
             echo "Running on branch '$CI_COMMIT_BRANCH'"
-          fi    
+          fi
           echo "tag = $tag"
       - run: docker run -it \
           -e DOCKER_SCOUT_HUB_USER=$DOCKER_SCOUT_HUB_USER \
@@ -81,7 +81,7 @@ record_environment:
       else
         tag="$CI_COMMIT_REF_SLUG"
         echo "Running on branch '$CI_COMMIT_BRANCH'"
-      fi    
+      fi
       echo "tag = $tag"
     - environment --org <MY_DOCKER_ORG> "PRODUCTION" ${image}:${tag}
 ```
@@ -126,7 +126,7 @@ stage('Analyze image') {
     steps {
         // Install Docker Scout
         sh 'curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | sh -s -- -b /usr/local/bin'
-        
+
         // Log into Docker Hub
         sh 'echo $DOCKER_SCOUT_HUB_PASSWORD | docker login -u $DOCKER_SCOUT_HUB_USER --password-stdin'
 

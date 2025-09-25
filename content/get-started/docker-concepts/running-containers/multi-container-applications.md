@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,7 +13,7 @@ title: Multi-container applications
 weight: 5
 keywords: concepts, build, images, container, docker desktop
 description: This concept page will teach you the significance of multi-container application and how it is different from single-container application
-aliases: 
+aliases:
  - /guides/docker-concepts/running-containers/multi-container-applications/
 ---
 {{< youtube-embed 1jUwR6F9hvM >}}
@@ -22,7 +22,7 @@ aliases:
 
 Starting up a single-container application is easy. For example, a Python script that performs a specific data processing task runs within a container with all its dependencies. Similarly, a Node.js application serving a static website with a small API endpoint can be effectively containerized with all its necessary libraries and dependencies. However, as applications grow in size, managing them as individual containers becomes more difficult.
 
-Imagine the data processing Python script needs to connect to a database. Suddenly, you're now managing not just the script but also a database server within the same container. If the script requires user logins, you'll need an authentication mechanism, further bloating the container size. 
+Imagine the data processing Python script needs to connect to a database. Suddenly, you're now managing not just the script but also a database server within the same container. If the script requires user logins, you'll need an authentication mechanism, further bloating the container size.
 
 One best practice for containers is that each container should do one thing and do it well. While there are exceptions to this rule, avoid the tendency to have one container do multiple things.
 
@@ -65,7 +65,7 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
    ```console
    $ git clone https://github.com/dockersamples/nginx-node-redis
    ```
-   
+
    Navigate into the `nginx-node-redis` directory:
 
    ```console
@@ -73,7 +73,7 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
    ```
 
    Inside this directory, you'll find two sub-directories - `nginx` and `web`.
-   
+
 
    {{< /tab >}}
    {{< tab name="Download" >}}
@@ -108,7 +108,7 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
     ```
 
 2. Navigate into the `web` directory and run the following command to build the first web image:
-    
+
     ```console
     $ docker build -t web .
     ```
@@ -138,7 +138,7 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
     ```console
     $ docker run -d --name web2 -h web2 --network sample-app --network-alias web2 web
     ```
-    
+
 5. Start the Nginx container by running the following command:
 
     ```console
@@ -156,7 +156,7 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
     $ docker ps
     ```
 
-    You will see output like the following: 
+    You will see output like the following:
 
     ```text
     CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                NAMES
@@ -186,7 +186,7 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
 9. You can use the Docker Desktop Dashboard to remove the containers by selecting the containers and selecting the **Delete** button.
 
    ![A screenshot of Docker Desktop Dashboard showing how to delete the multi-container applications](images/delete-multi-container-apps.webp?border=true)
- 
+
 ## Simplify the deployment using Docker Compose
 
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -14,7 +14,7 @@ description: Learn how to use Docker Build Cloud to build your app faster in CI.
 weight: 30
 ---
 Docker Build Cloud can significantly decrease the time it takes for your CI builds
-take to run, saving you time and money. 
+take to run, saving you time and money.
 
 Since the builds run remotely, your CI runner can still use the Docker tooling CLI
 without needing elevated permissions, making your builds more secure by default.

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -89,10 +89,10 @@ To run Docker Desktop on Mac without requiring administrator privileges, install
 $ /Applications/Docker.app/Contents/MacOS/install --user=<userid>
 ```
 
-You can then sign in to your machine with the user ID specified, and launch Docker Desktop. 
+You can then sign in to your machine with the user ID specified, and launch Docker Desktop.
 
 > [!NOTE]
-> 
+>
 > Before launching Docker Desktop, if a `settings-store.json` file (or `settings.json` for Docker Desktop versions 4.34 and earlier) already exists in the `~/Library/Group Containers/group.com.docker/` directory, you will see a **Finish setting up Docker Desktop** window that prompts for administrator privileges when you select **Finish**. To avoid this, ensure you delete the `settings-store.json` file (or `settings.json` for Docker Desktop versions 4.34 and earlier) left behind from any previous installations before launching the application.
 
 {{< /tab >}}
@@ -100,7 +100,7 @@ You can then sign in to your machine with the user ID specified, and launch Dock
 
 > [!NOTE]
 >
-> If you are using the WSL 2 backend, first make sure that you meet the [minimum required version](/manuals/desktop/features/wsl/best-practices.md) for WSL 2. Otherwise, update WSL 2 first.  
+> If you are using the WSL 2 backend, first make sure that you meet the [minimum required version](/manuals/desktop/features/wsl/best-practices.md) for WSL 2. Otherwise, update WSL 2 first.
 
 To run Docker Desktop on Windows without requiring administrator privileges, install via the command line and pass the `—always-run-service` installer flag.
 

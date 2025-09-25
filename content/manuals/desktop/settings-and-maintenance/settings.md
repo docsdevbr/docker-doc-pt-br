@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -105,9 +105,9 @@ If you choose the integrated terminal, you can run commands in a running contain
 
   Docker Desktop checks if your setup, configured during installation, has been altered by external apps like Orbstack. Docker Desktop checks:
     - The symlinks of Docker binaries to `/usr/local/bin`.
-    - The symlink of the default Docker socket. 
+    - The symlink of the default Docker socket.
   Additionally, Docker Desktop ensures that the context is switched to `desktop-linux` on startup.
-  
+
   You are notified if changes are found and are able to restore the configuration directly from the notification. For more information, see the [FAQs](/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md#why-do-i-keep-getting-a-notification-telling-me-an-application-has-changed-my-desktop-configurations).
 
 ## Resources
@@ -176,7 +176,7 @@ Use File sharing to allow local directories on your machine to be shared with
 Linux containers. This is especially useful for editing source code in an IDE on
 the host while running and testing the code in a container.
 
-#### Synchronized file shares 
+#### Synchronized file shares
 
 Synchronized file shares is an alternative file sharing mechanism that provides fast and flexible host-to-VM file sharing, enhancing bind mount performance through the use of synchronized filesystem caches. Available with Pro, Team, and Business subscriptions.
 
@@ -297,11 +297,11 @@ Developers are no longer interrupted by prompts for proxy credentials as authent
 
 If your proxy offers multiple authentication schemes in 407 (Proxy Authentication Required) response, Docker Desktop by default selects the Basic authentication scheme.
 
-For Docker Desktop version 4.30 to 4.31: 
+For Docker Desktop version 4.30 to 4.31:
 
 To enable Kerberos or NTLM proxy authentication, no additional configuration is needed beyond specifying the proxy IP address and port.
 
-For Docker Desktop version 4.32 and later: 
+For Docker Desktop version 4.32 and later:
 
 To enable Kerberos or NTLM proxy authentication you must pass the `--proxy-enable-kerberosntlm` installer flag during installation via the command line, and ensure your proxy server is properly configured for Kerberos or NTLM authentication.
 
@@ -436,7 +436,7 @@ select **Enable Kubernetes**.
 
 With Docker Desktop version 4.38 and later, you can choose your cluster provisioning method:
  - **Kubeadm** creates a single-node cluster and the version is set by Docker Desktop.
- - **kind** creates a multi-node cluster and you can set the version and number of nodes. 
+ - **kind** creates a multi-node cluster and you can set the version and number of nodes.
 
 Docker Desktop version 4.38 and later also lets you install the Kubernetes Dashboard within an existing Kubernetes cluster with the **Deploy the Kubernetes Dashboard into cluster** setting. It provides real-time visibility into workloads and nodes and helps you manage and monitor your Kubernetes clusters and applications easily.
 
@@ -466,8 +466,8 @@ when an update becomes available. After downloading the update, select
 Docker menu or in the **Updates** section in the Docker Desktop Dashboard.
 
 > [!TIP]
-> 
-> With Docker Desktop version 4.38 and later, components of Docker Desktop, such as Docker Compose, Docker Scout, and the Docker CLI, can be updated independently without the need for a full restart. This feature is still in Beta. 
+>
+> With Docker Desktop version 4.38 and later, components of Docker Desktop, such as Docker Compose, Docker Scout, and the Docker CLI, can be updated independently without the need for a full restart. This feature is still in Beta.
 
 ## Extensions
 

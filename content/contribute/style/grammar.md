@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -15,7 +15,7 @@ keywords: grammar, style, contribute
 toc_max: 2
 weight: 10
 ---
-Docker documentation should always be written in US English with US grammar. 
+Docker documentation should always be written in US English with US grammar.
 
 ## Acronyms and initialisms
 
@@ -65,7 +65,7 @@ The following content elements should use sentence case:
 - Capitalize a job title if it immediately precedes a name (Chief Executive Officer Scott Johnston).
 - Don't capitalize a job title that follows a name or is a generic reference (Scott Johnston, chief executive officer of Docker).
 - Capitalize department names when you refer to the name of a department, but use lower case if you are talking about the field of work and not the actual department.
-- When referring to specific user interface text, like a button label or menu item, use the same capitalization that’s displayed in the user interface. 
+- When referring to specific user interface text, like a button label or menu item, use the same capitalization that’s displayed in the user interface.
 
 ## Contractions
 
@@ -112,11 +112,11 @@ Lists are a great way to break down complex ideas and make them easier to read a
 - Don’t add commas (,) or semicolons (;) to the ends of list items.
 - Some content types may use bulleted lists that contain 10 items, but it's preferable to break longer lists into several lists, each with its own subheading or introduction.
 - Never create a bulleted list with only one bullet, and never use a dash to indicate a bulleted list.
-- If your list items are fragments, capitalize the list items for ease of scanning but don't use terminal punctuation. 
+- If your list items are fragments, capitalize the list items for ease of scanning but don't use terminal punctuation.
 Example:
-    
+
     I went to the shops to buy:
-    
+
     - Milk
     - Flour
     - Eggs
@@ -139,8 +139,8 @@ When you work with numbers in content, the best practices include:
 - Write numbers out as they appear on the platform when you cite them in an example.
 - To refer to large numbers in abstract (such as thousands, millions, and billions), use a combination of words and numbers. Don't abbreviate numeric signifiers.
 - Avoid using commas in numbers because they can represent decimals in different cultures. For numbers that are five digits or more, use a space to separate.
-    
-    
+
+
     | Correct | Incorrect |
     | --- | --- |
     | 1000 | 1,000 |

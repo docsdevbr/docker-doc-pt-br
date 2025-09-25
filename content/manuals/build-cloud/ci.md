@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -80,14 +80,14 @@ jobs:
         with:
           username: ${{ vars.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PAT }}
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
           driver: cloud
           endpoint: "<ORG>/default"
           install: true
-      
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
@@ -318,8 +318,8 @@ pipeline {
 ### Travis CI
 
 ```yaml
-language: minimal 
-dist: jammy 
+language: minimal
+dist: jammy
 
 services:
   - docker
@@ -332,7 +332,7 @@ before_install: |
   echo "$DOCKER_PAT" | docker login --username "$DOCKER_USER" --password-stdin
 
 install: |
-  set -e 
+  set -e
   BUILDX_URL=$(curl -s https://raw.githubusercontent.com/docker/actions-toolkit/main/.github/buildx-lab-releases.json | jq -r ".latest.assets[] | select(endswith(\"linux-$TRAVIS_CPU_ARCH\"))")
   mkdir -vp ~/.docker/cli-plugins/
   curl --silent -L --output ~/.docker/cli-plugins/docker-buildx $BUILDX_URL
@@ -346,7 +346,7 @@ script: |
   --tag "$IMAGE_NAME" .
 ```
 
-### BitBucket Pipelines 
+### BitBucket Pipelines
 
 ```yaml
 # Prerequisites: $DOCKER_USER, $DOCKER_PAT setup as deployment variables

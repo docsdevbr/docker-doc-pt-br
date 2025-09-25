@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -142,7 +142,7 @@ To learn more about Kubernetes objects, see the [Kubernetes documentation](https
 
 ## Summary
 
-In this section, you learned how to use Docker Desktop to deploy your Bun application to a fully-featured Kubernetes environment on your development machine. 
+In this section, you learned how to use Docker Desktop to deploy your Bun application to a fully-featured Kubernetes environment on your development machine.
 
 Related information:
    - [Kubernetes documentation](https://kubernetes.io/docs/home/)

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -29,25 +29,25 @@ In this guide, you will:
 * Configure a GenAI stack with Docker, incorporating Neo4j and an AI model.
 * Analyze a real-world case study that highlights the effectiveness of this approach for handling specialized queries.
 
-## Understanding RAG 
+## Understanding RAG
 
-RAG is a hybrid framework that enhances the capabilities of large language models by integrating information retrieval. It combines three core components:  
+RAG is a hybrid framework that enhances the capabilities of large language models by integrating information retrieval. It combines three core components:
 
-- **Information retrieval** from an external knowledge base  
-- **Large Language Model (LLM)** for generating responses  
-- **Vector embeddings** to enable semantic search  
+- **Information retrieval** from an external knowledge base
+- **Large Language Model (LLM)** for generating responses
+- **Vector embeddings** to enable semantic search
 
 In a RAG system, vector embeddings are used to represent the semantic meaning of text in a way that a machine can understand and process. For instance, the words "dog" and "puppy" will have similar embeddings because they share similar meanings. By integrating these embeddings into the RAG framework, the system can combine the generative power of large language models with the ability to pull in highly relevant, contextually-aware data from external sources.
 
-The system operates as follows:  
-1. Questions get turned into mathematical patterns that capture their meaning  
+The system operates as follows:
+1. Questions get turned into mathematical patterns that capture their meaning
 2. These patterns help find matching information in a database
-3. The found information gets added to the original question before passed to LLM 
-4. The LLM generates responses that blend the model's inherent knowledge with the this extra information.  
+3. The found information gets added to the original question before passed to LLM
+4. The LLM generates responses that blend the model's inherent knowledge with the this extra information.
 
 To hold this vector information in an efficient manner, we need a special type of database.
 
-## Introduction to Graph databases 
+## Introduction to Graph databases
 
 Graph databases, such as Neo4j, are specifically designed for managing highly connected data. Unlike traditional relational databases, graph databases prioritize both the entities and the relationships between them, making them ideal for tasks where connections are as important as the data itself.
 
@@ -72,7 +72,7 @@ RAG: Disabled
 I'm happy to help! Unfortunately, I'm a large language model, I don't have access to real-time information or events that occurred after my training data cutoff in 2024. Therefore, I cannot provide you with any important events that happened in 2024. My apologize for any inconvenience this may cause. Is there anything else I can help you with?
 ```
 
-## Setting up GenAI stack with GPU acceleration on Linux 
+## Setting up GenAI stack with GPU acceleration on Linux
 
 To set up and run the GenAI stack on a Linux host, execute one of the following commands, either for GPU or CPU powered:
 
@@ -106,9 +106,9 @@ In the `.env` file, make sure following lines are commented out. Set your own cr
     NEO4J_PASSWORD=password
     OLLAMA_BASE_URL=http://llm:11434
 
-### Setting up on other platforms 
+### Setting up on other platforms
 
-For instructions on how to set up the stack on other platforms, refer to [this page](https://github.com/docker/genai-stack). 
+For instructions on how to set up the stack on other platforms, refer to [this page](https://github.com/docker/genai-stack).
 
 
 ### Initial startup
@@ -136,25 +136,25 @@ Wait for specific lines in the logs indicating that the download is complete and
 
 When we see those lines in the logs, web apps are ready to be used.
 
-Since our goal is to teach AI about things it does not yet know, we begin by asking it a simple question about Nifi at 
+Since our goal is to teach AI about things it does not yet know, we begin by asking it a simple question about Nifi at
 [http://localhost:8501/](http://localhost:8501/).
 ![alt text](image.png)
 
 ```text
-Question: What is Apache Nifi? 
+Question: What is Apache Nifi?
 RAG: Disabled
 Hello! I'm here to help you with your question about Apache NiFi. Unfortunately, I don't know the answer to that question. I'm just an AI and my knowledge cutoff is December 2022, so I may not be familiar with the latest technologies or software. Can you please provide more context or details about Apache NiFi? Maybe there's something I can help you with related to it.
 ```
 
 As we can see, AI does not know anything about this subject because it did not exist during the time of its training, also known as the information cutoff point.
 
-Now it's time to teach the AI some new tricks. First, connect to [http://localhost:8502/](http://localhost:8502/). Instead of using the "neo4j" tag, change it to the "apache-nifi" tag, then select the **Import** button. 
+Now it's time to teach the AI some new tricks. First, connect to [http://localhost:8502/](http://localhost:8502/). Instead of using the "neo4j" tag, change it to the "apache-nifi" tag, then select the **Import** button.
 
 
 ![alt text](image-1.png)
 
 
-After the import is successful, we can access Neo4j to verify the data. 
+After the import is successful, we can access Neo4j to verify the data.
 
 After logging in to [http://localhost:7474/](http://localhost:7474/) using the credentials from the `.env` file, you can run queries on Neo4j. Using the Neo4j Cypher query language, you can check for the data stored in the database.
 
@@ -192,7 +192,7 @@ Now, we are ready to enable our LLM to use this information. Go back to [http://
 
 The system delivers comprehensive, accurate information by pulling from current technical documentation.
 ```text
-Question: What is Apache Nifi? 
+Question: What is Apache Nifi?
 RAG: Enabled
 
 Answer:

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Volumes top-level element
 description: Explore all the attributes the volumes top-level element can have.
 keywords: compose, compose specification, volumes, compose file reference
-aliases: 
+aliases:
  - /compose/compose-file/07-volumes/
 weight: 40
 ---
@@ -22,8 +22,8 @@ To use a volume across multiple services, you must explicitly grant each service
 
 > [!TIP]
 >
-> Working with large repositories or monorepos, or with virtual file systems that are no longer scaling with your codebase? 
-> Compose now takes advantage of [Synchronized file shares](/manuals/desktop/features/synchronized-file-sharing.md) and automatically creates file shares for bind mounts. 
+> Working with large repositories or monorepos, or with virtual file systems that are no longer scaling with your codebase?
+> Compose now takes advantage of [Synchronized file shares](/manuals/desktop/features/synchronized-file-sharing.md) and automatically creates file shares for bind mounts.
 > Ensure you're signed in to Docker with a paid subscription and have enabled both **Access experimental features** and **Manage Synchronized file shares with Compose** in Docker Desktop's settings.
 
 ## Example
@@ -139,7 +139,7 @@ volumes:
     name: "my-app-data"
 ```
 
-This makes it possible to make this lookup name a parameter of the Compose file, so that the model ID for the volume is hard-coded but the actual volume ID on the platform is set at runtime during deployment. 
+This makes it possible to make this lookup name a parameter of the Compose file, so that the model ID for the volume is hard-coded but the actual volume ID on the platform is set at runtime during deployment.
 
 For example, if `DATABASE_VOLUME=my_volume_001` is in your `.env` file:
 
@@ -149,7 +149,7 @@ volumes:
     name: ${DATABASE_VOLUME}
 ```
 
-Running `docker compose up` uses the volume called `my_volume_001`. 
+Running `docker compose up` uses the volume called `my_volume_001`.
 
 It can also be used in conjunction with the `external` property. This means the name used to look up the actual volume on the platform is set separately from the name used to refer to the volume within the Compose file:
 

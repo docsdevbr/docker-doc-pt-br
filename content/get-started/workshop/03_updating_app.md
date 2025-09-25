@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -48,7 +48,7 @@ In the following steps, you'll change the "empty text" when you don't have any t
 You probably saw an error like this:
 
 ```console
-docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_burnell 
+docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_burnell
 (bb242b2ca4d67eba76e79474fb36bb5125708ebdabd7f45c8eaf16caaabde9dd): Bind for 127.0.0.1:3000 failed: port is already allocated.
 ```
 

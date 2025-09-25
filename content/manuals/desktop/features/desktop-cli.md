@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -26,7 +26,7 @@ The Docker Desktop CLI lets you perform key operations such as starting, stoppin
 
 The Docker Desktop CLI provides:
 
-- Simplified automation for local development: Execute Docker Desktop operations more efficiently in scripts and tests. 
+- Simplified automation for local development: Execute Docker Desktop operations more efficiently in scripts and tests.
 - An improved developer experience: Restart, quit, or reset Docker Desktop from the command line, reducing dependency on the Docker Desktop Dashboard and improving flexibility and efficiency.
 
 ## Usage

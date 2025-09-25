@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,14 +12,14 @@
 title: Profiles
 description: Learn about profiles
 keywords: compose, compose specification, profiles, compose file reference
-aliases: 
+aliases:
  - /compose/compose-file/15-profiles/
 weight: 120
 ---
 With profiles you can define a set of active profiles so your Compose application model is adjusted for various usages and environments.
 
-The [services](services.md) top-level element supports a `profiles` attribute to define a list of named profiles. 
-Services without a `profiles` attribute are always enabled. 
+The [services](services.md) top-level element supports a `profiles` attribute to define a list of named profiles.
+Services without a `profiles` attribute are always enabled.
 
 A service is ignored by Compose when none of the listed `profiles` match the active ones, unless the service is
 explicitly targeted by a command. In that case its profile is added to the set of active profiles.

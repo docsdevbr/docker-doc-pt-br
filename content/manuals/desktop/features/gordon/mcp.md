@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -26,24 +26,24 @@ When you run the `docker ai` command in your terminal to ask a question, Gordon 
 The following minimal example shows how you can use the [mcp-time server](https://hub.docker.com/r/mcp/time) to provide temporal capabilities to Gordon. For more information, you can check out the [source code and documentation](https://github.com/modelcontextprotocol/servers/tree/main/src/time).
 
 1. Create the `gordon-mcp.yml` file and add the time server:
-    
+
     ```yaml
     services:
       time:
         image: mcp/time
     ```
-    
+
 2. With this file you can now ask Gordon to tell you the time in another timezone:
-    
+
     ```bash
     $ docker ai 'what time is it now in kiribati?'
-    
+
         • Calling get_current_time
-    
+
       The current time in Kiribati (Tarawa) is 9:38 PM on January 7, 2025.
-    
+
     ```
-    
+
 
 As you can see, Gordon found the MCP time server and called its tool when needed.
 
@@ -80,15 +80,15 @@ services:
 You can now ask things like:
 
 ```bash
-$ docker ai can you fetch rumpl.dev and write the summary to a file test.txt 
+$ docker ai can you fetch rumpl.dev and write the summary to a file test.txt
 
     • Calling fetch ✔️
     • Calling write_file ✔️
-  
+
   The summary of the website rumpl.dev has been successfully written to the file test.txt in the allowed directory. Let me know if you need further assistance!
-  
-  
-$ cat test.txt 
+
+
+$ cat test.txt
 The website rumpl.dev features a variety of blog posts and articles authored by the site owner. Here's a summary of the content:
 
 1. **Wasmio 2023 (March 25, 2023)**: A recap of the WasmIO 2023 conference held in Barcelona. The author shares their experience as a speaker and praises the organizers for a successful event.
@@ -101,7 +101,7 @@ The website rumpl.dev features a variety of blog posts and articles authored by 
 
 5. **Add docker/docker to your dependencies (May 10, 2020)**: A guide for Go developers on how to use the Docker client library in their projects. The post includes a code snippet demonstrating the integration.
 
-6. **First (October 11, 2019)**: The inaugural post on the blog, featuring a simple "Hello World" program in Go.%   
+6. **First (October 11, 2019)**: The inaugural post on the blog, featuring a simple "Hello World" program in Go.%
 
 ```
 

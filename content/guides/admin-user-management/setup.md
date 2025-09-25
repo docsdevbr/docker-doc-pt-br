@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -14,7 +14,7 @@ description: A guide to securely managing access and collaboration in Docker thr
 keywords: Docker roles, permissions management, access control, IT administration, team collaboration, least privilege, security, Docker teams, role-based access
 weight: 10
 ---
-With the right configurations, you can ensure your developers have easy access to necessary resources while preventing unauthorized access. This page guides you through identifying Docker users, so you can allocate subscription seats efficiently within your Docker organization, and assigning roles to align with your organization's structure. 
+With the right configurations, you can ensure your developers have easy access to necessary resources while preventing unauthorized access. This page guides you through identifying Docker users, so you can allocate subscription seats efficiently within your Docker organization, and assigning roles to align with your organization's structure.
 
 ## Step 1: Identify your Docker users and accounts
 
@@ -24,7 +24,7 @@ For steps on how you can do this, see [step 1 of onboarding your organization](/
 
 ## Step 2: Assign roles strategically
 
-When you invite members to join you Docker organization, you assign them a role. 
+When you invite members to join you Docker organization, you assign them a role.
 
 Docker’s predefined roles offer flexibility for various organizational needs. Assigning roles effectively ensures a balance of accessibility and security.
 

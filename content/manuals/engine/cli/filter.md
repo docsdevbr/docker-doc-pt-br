@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -91,7 +91,7 @@ $ docker container prune --filter "label!=foo"
 ```
 
 There's a catch in combining multiple negated label filters. Multiple negated
-filters create a single negative constraint - a logical `AND`. The following 
+filters create a single negative constraint - a logical `AND`. The following
 command prunes all containers except those labeled both `foo` and `bar`.
 Containers labeled either `foo` or `bar`, but not both, will be pruned.
 

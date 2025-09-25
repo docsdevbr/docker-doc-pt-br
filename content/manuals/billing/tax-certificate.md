@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -31,9 +31,9 @@ Before you submit your tax exemption certificate, ensure the following.
 
 You can use the following for Docker's contact information on your tax exemption certificate.
 
-Docker, Inc.  
-3790 El Camino Real #1052  
-Palo Alto, CA 94306  
+Docker, Inc.
+3790 El Camino Real #1052
+Palo Alto, CA 94306
 (415) 941-0376
 
 ## Register a tax certificate

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,7 +13,7 @@ title: Overriding container defaults
 weight: 2
 keywords: concepts, build, images, container, docker desktop
 description: This concept page will teach you how to override the container defaults using the `docker run` command.
-aliases: 
+aliases:
  - /guides/docker-concepts/running-containers/overriding-container-defaults/
 ---
 {{< youtube-embed PFszWK3BB8I >}}
@@ -83,14 +83,14 @@ In this hands-on guide, you'll see how to use the `docker run` command to overri
 ### Run multiple instance of the Postgres database
 
 1.  Start a container using the [Postgres image](https://hub.docker.com/_/postgres) with the following command:
-    
+
     ```console
     $ docker run -d -e POSTGRES_PASSWORD=secret -p 5432:5432 postgres
     ```
 
     This will start the Postgres database in the background, listening on the standard container port `5432` and mapped to port `5432` on the host machine.
 
-2. Start a second Postgres container mapped to a different port. 
+2. Start a second Postgres container mapped to a different port.
 
     ```console
     $ docker run -d -e POSTGRES_PASSWORD=secret -p 5433:5432 postgres
@@ -165,7 +165,7 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
         entrypoint: ["docker-entrypoint.sh", "postgres"]
         command: ["-h", "localhost", "-p", "5432"]
         environment:
-          POSTGRES_PASSWORD: secret 
+          POSTGRES_PASSWORD: secret
     ```
 
 
@@ -191,14 +191,14 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
 
 
     > [!NOTE]
-    > 
+    >
     > The PostgreSQL image sets up trust authentication locally so you may notice a password isn't required when connecting from localhost (inside the same container). However, a password will be required if connecting from a different host/container.
 
 ### Override the default CMD and ENTRYPOINT with `docker run`
 
 You can also override defaults directly using the `docker run` command with the following command:
 
-```console 
+```console
 $ docker run -e POSTGRES_PASSWORD=secret postgres docker-entrypoint.sh -h localhost -p 5432
 ```
 

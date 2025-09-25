@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -21,7 +21,7 @@ Compose Bridge can also function as a `kubectl` plugin, allowing you to integrat
 
 ## Use `compose-bridge` as a `kubectl` plugin
 
-To use the `compose-bridge` binary as a `kubectl` plugin, you need to make sure that the binary is available in your PATH and the name of the binary is prefixed with `kubectl-`. 
+To use the `compose-bridge` binary as a `kubectl` plugin, you need to make sure that the binary is available in your PATH and the name of the binary is prefixed with `kubectl-`.
 
 1. Rename or copy the `compose-bridge` binary to `kubectl-compose_bridge`:
 
@@ -30,7 +30,7 @@ To use the `compose-bridge` binary as a `kubectl` plugin, you need to make sure 
     ```
 
 2. Ensure that the binary is executable:
-    
+
     ```console
     $ chmod +x /usr/local/bin/kubectl-compose_bridge
     ```

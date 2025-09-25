@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Extension Backend
 description: Docker extension API
 keywords: Docker, extensions, sdk, API
-aliases: 
+aliases:
  - /desktop/extensions-sdk/dev/api/backend/
 ---
 The `ddClient.extension.vm` object can be used to communicate with the backend defined in the [vm section](../../architecture/metadata.md#vm-section) of the extension metadata.
@@ -183,7 +183,7 @@ window.ddClient.spawnHostCmd(
 ```
 
 > [!NOTE]
-> 
+>
 >You cannot use this to chain commands in a single `exec()` invocation (like `cmd1 $(cmd2)` or using pipe between commands).
 >
 > You need to invoke `exec()` for each command and parse results to pass parameters to the next command if needed.

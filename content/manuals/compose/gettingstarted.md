@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,11 +19,11 @@ title: Docker Compose Quickstart
 linkTitle: Quickstart
 weight: 30
 ---
-This tutorial aims to introduce fundamental concepts of Docker Compose by guiding you through the development of a basic Python web application. 
+This tutorial aims to introduce fundamental concepts of Docker Compose by guiding you through the development of a basic Python web application.
 
-Using the Flask framework, the application features a hit counter in Redis, providing a practical example of how Docker Compose can be applied in web development scenarios. 
+Using the Flask framework, the application features a hit counter in Redis, providing a practical example of how Docker Compose can be applied in web development scenarios.
 
-The concepts demonstrated here should be understandable even if you're not familiar with Python. 
+The concepts demonstrated here should be understandable even if you're not familiar with Python.
 
 This is a non-normative example that just highlights the key things you can do with Compose.
 
@@ -146,12 +146,12 @@ services:
     image: "redis:alpine"
 ```
 
-This Compose file defines two services: `web` and `redis`. 
+This Compose file defines two services: `web` and `redis`.
 
 The `web` service uses an image that's built from the `Dockerfile` in the current directory.
 It then binds the container and the host machine to the exposed port, `8000`. This example service uses the default port for the Flask web server, `5000`.
 
-The `redis` service uses a public [Redis](https://registry.hub.docker.com/_/redis/) 
+The `redis` service uses a public [Redis](https://registry.hub.docker.com/_/redis/)
 image pulled from the Docker Hub registry.
 
 For more information on the `compose.yaml` file, see [How Compose works](compose-application-model.md).
@@ -294,7 +294,7 @@ counter should still be incrementing.
 
 ## Step 7: Split up your services
 
-Using multiple Compose files lets you customize a Compose application for different environments or workflows. This is useful for large applications that may use dozens of containers, with ownership distributed across multiple teams. 
+Using multiple Compose files lets you customize a Compose application for different environments or workflows. This is useful for large applications that may use dozens of containers, with ownership distributed across multiple teams.
 
 1. In your project folder, create a new Compose file called `infra.yaml`.
 
@@ -323,7 +323,7 @@ Using multiple Compose files lets you customize a Compose application for differ
              target: /code
    ```
 
-4. Run `docker compose up` to build the app with the updated Compose files, and run it. You should see the `Hello world` message in your browser. 
+4. Run `docker compose up` to build the app with the updated Compose files, and run it. You should see the `Hello world` message in your browser.
 
 This is a simplified example, but it demonstrates the basic principle of `include` and how it can make it easier to modularize complex applications into sub-Compose files. For more information on `include` and working with multiple Compose files, see [Working with multiple Compose files](/manuals/compose/how-tos/multiple-compose-files/_index.md).
 
@@ -339,9 +339,9 @@ This is a simplified example, but it demonstrates the basic principle of `includ
 
    $ docker compose ps
 
-          Name                      Command               State           Ports         
+          Name                      Command               State           Ports
    -------------------------------------------------------------------------------------
-   composetest_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp              
+   composetest_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp
    composetest_web_1     flask run                        Up      0.0.0.0:8000->5000/tcp
    ```
 
@@ -353,7 +353,7 @@ This is a simplified example, but it demonstrates the basic principle of `includ
    $ docker compose stop
    ```
 
-- You can bring everything down, removing the containers entirely, with the `docker compose down` command. 
+- You can bring everything down, removing the containers entirely, with the `docker compose down` command.
 
 ## Where to go next
 

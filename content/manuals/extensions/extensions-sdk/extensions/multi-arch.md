@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Build multi-arch extensions
 description: Step three in creating an extension.
 keywords: Docker, Extensions, sdk, build, multi-arch
-aliases: 
+aliases:
  - /desktop/extensions-sdk/extensions/multi-arch/
 ---
 It is highly recommended that, at a minimum, your extension is supported for the following architectures:

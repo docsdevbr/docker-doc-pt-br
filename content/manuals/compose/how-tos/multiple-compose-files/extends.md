@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -36,7 +36,7 @@ are relative to the base Compose file (i.e. the Compose file in your main-projec
 need not be valid Compose files. Extend files can contain small fragments of
 configuration. Tracking which fragment of a service is relative to which path is
 difficult and confusing, so to keep paths easier to understand, all paths must
-be defined relative to the base file. 
+be defined relative to the base file.
 
 ## How it works
 
@@ -87,13 +87,13 @@ services:
       service: webapp
 ```
 
-Alternatively, you can use [include](include.md). 
+Alternatively, you can use [include](include.md).
 
-### Extending services within the same file 
+### Extending services within the same file
 
 If you define services in the same Compose file and extend one service from another, both the original service and the extended service will be part of your final configuration. For example:
 
-```yaml 
+```yaml
 services:
   web:
     build: alpine
@@ -183,7 +183,7 @@ dependencies.
 
 ## Relative paths
 
-When using `extends` with a `file` attribute which points to another folder, relative paths 
+When using `extends` with a `file` attribute which points to another folder, relative paths
 declared by the service being extended are converted so they still point to the
 same file when used by the extending service. This is illustrated in the following example:
 
@@ -211,7 +211,7 @@ which inspects the actual model:
 services:
   webapp:
     image: example
-    env_file: 
+    env_file:
       - ../commons/container.env
 ```
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -185,11 +185,11 @@ There are a few things to be aware of when using bind mounts in a build:
   ```plaintext {title="Build log"}
   #8 [stage-0 3/5] RUN touch foo.txt
   #8 DONE 0.1s
-  
+
   #9 [stage-0 4/5] RUN --mount=target=. ls -1
   #9 0.040 Dockerfile
   #9 DONE 0.0s
-  
+
   #10 [stage-0 5/5] RUN ls -1
   #10 0.046 foo.txt
   #10 DONE 0.1s
@@ -281,7 +281,7 @@ RUN --mount=type=cache,target=/root/.nuget/packages \
 ```
 
 {{< /tab >}}
-{{< tab name="PHP" >}}  
+{{< tab name="PHP" >}}
 
 ```dockerfile
 RUN --mount=type=cache,target=/tmp/cache \

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -141,7 +141,7 @@ $ docker run \
 By default, the log driver creates the AWS CloudWatch Logs stream used for container log persistence.
 
 Set `awslogs-create-stream` to `false` to disable log stream creation. When disabled, the Docker daemon assumes
-the log stream already exists. A use case where this is beneficial is when log stream creation is handled by 
+the log stream already exists. A use case where this is beneficial is when log stream creation is handled by
 another process avoiding redundant AWS CloudWatch Logs API calls.
 
 If `awslogs-create-stream` is set to `false` and the log stream does not exist, log persistence to CloudWatch

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -57,7 +57,7 @@ In Compose V2, a hyphen (`-`) is used as the word separator.
 
 Underscores aren't valid characters in DNS hostnames.
 By using a hyphen instead, Compose V2 ensures service containers can be accessed over the network via consistent, predictable hostnames.
- 
+
 For example, running the Compose command `-p myproject up --scale=1 svc` results in a container named `myproject_svc_1` with Compose V1 and a container named `myproject-svc-1` with Compose V2.
 
 > [!TIP]
@@ -109,7 +109,7 @@ interpolation) are single-quoted and values that should have interpolation appli
 For most projects, switching to Compose V2 requires no changes to the Compose YAML or your development workflow.
 
 It's recommended that you adapt to the new preferred way of running Compose V2, which is to use `docker compose` instead of `docker-compose`.
-This provides additional flexibility and removes the requirement for a `docker-compose` compatibility alias. 
+This provides additional flexibility and removes the requirement for a `docker-compose` compatibility alias.
 
 However, Docker Desktop continues to support a `docker-compose` alias to redirect commands to `docker compose` for convenience and improved compatibility with third-party tools and scripts.
 
@@ -135,7 +135,7 @@ Yes. You can still download and install Compose V1 packages, but you won't get s
 
 >[!WARNING]
 >
-> The final Compose V1 release, version 1.29.2, was May 10, 2021. These packages haven't received any security updates since then. Use at your own risk. 
+> The final Compose V1 release, version 1.29.2, was May 10, 2021. These packages haven't received any security updates since then. Use at your own risk.
 
 ## Additional Resources
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -36,7 +36,7 @@ You can also uninstall Docker Desktop from the CLI:
    ```console
    $ C:\Program Files\Docker\Docker\Docker Desktop Installer.exe
    ```
-2. Uninstall Docker Desktop. 
+2. Uninstall Docker Desktop.
  - In PowerShell, run:
     ```console
     $ Start-Process 'Docker Desktop Installer.exe' -Wait uninstall
@@ -57,7 +57,7 @@ C:\Users\<your user name>\AppData\Roaming\Docker
 C:\Users\<your user name>\AppData\Roaming\Docker Desktop
 C:\Users\<your user name>\.docker
 ```
- 
+
 {{< /tab >}}
 {{< tab name="Mac" >}}
 
@@ -96,7 +96,7 @@ With Docker Desktop version 4.36 and earlier, the following files can also be le
 /Library/PrivilegedHelperTools/com.docker.socket
 ```
 
-You can also move the Docker application to the trash. 
+You can also move the Docker application to the trash.
 
 {{< /tab >}}
 {{< tab name="Linux" >}}
@@ -123,7 +123,7 @@ $ sudo rm /usr/local/bin/com.docker.cli
 $ sudo apt purge docker-desktop
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
 {{< /tab >}}
 {{< tab name="Debian" >}}
@@ -162,7 +162,7 @@ $ rm -r $HOME/.docker/desktop
 $ sudo rm /usr/local/bin/com.docker.cli
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
 {{< /tab >}}
 {{< tab name="Arch" >}}
@@ -182,7 +182,7 @@ $ sudo rm /usr/local/bin/com.docker.cli
 $ sudo pacman -Rns docker-desktop
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
 {{< /tab >}}
 {{< /tabs >}}

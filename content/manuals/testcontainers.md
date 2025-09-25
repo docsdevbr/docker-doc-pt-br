@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -22,7 +22,7 @@ intro:
   icon: feature_search
   link: https://testcontainers.com/getting-started/#what-is-testcontainers
 - title: The Testcontainers workflow
-  description: Understand the Testcontainers workflow 
+  description: Understand the Testcontainers workflow
   icon: explore
   link: https://testcontainers.com/getting-started/#testcontainers-workflow
 quickstart:
@@ -53,8 +53,8 @@ The rest are community-driven and maintained by independent contributors.
 
 ### Prerequisites
 
-Testcontainers requires a Docker-API compatible container runtime. 
-During development, Testcontainers is actively tested against recent versions of Docker on Linux, as well as against Docker Desktop on Mac and Windows. 
+Testcontainers requires a Docker-API compatible container runtime.
+During development, Testcontainers is actively tested against recent versions of Docker on Linux, as well as against Docker Desktop on Mac and Windows.
 These Docker environments are automatically detected and used by Testcontainers without any additional configuration being necessary.
 
 It is possible to configure Testcontainers to work for other Docker setups, such as a remote Docker host or Docker alternatives.

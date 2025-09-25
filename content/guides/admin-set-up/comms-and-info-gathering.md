@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -17,7 +17,7 @@ weight: 10
 
 ### Docker user communication
 
-You may already have Docker Desktop users within your company, and some steps in this process may affect how they interact with the platform. It's highly recommended to communicate early with users, informing them that as part of the subscription onboarding, they will be upgraded to a supported version of Docker Desktop. 
+You may already have Docker Desktop users within your company, and some steps in this process may affect how they interact with the platform. It's highly recommended to communicate early with users, informing them that as part of the subscription onboarding, they will be upgraded to a supported version of Docker Desktop.
 
 Additionally, communicate that settings will be reviewed to optimize productivity, and users will be required to sign in to the company’s Docker organization using their business email to fully utilize the subscription benefits.
 

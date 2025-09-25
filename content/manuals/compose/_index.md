@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -24,7 +24,7 @@ grid:
   description: Understand Docker Compose's key benefits
   icon: feature_search
   link: /compose/intro/features-uses/
-- title: How Compose works 
+- title: How Compose works
   description: Understand how Compose works
   icon: category
   link: /compose/intro/compose-application-model/
@@ -61,8 +61,8 @@ aliases:
 - /compose/swarm/
 - /compose/completion/
 ---
-Docker Compose is a tool for defining and running multi-container applications. 
-It is the key to unlocking a streamlined and efficient development and deployment experience. 
+Docker Compose is a tool for defining and running multi-container applications.
+It is the key to unlocking a streamlined and efficient development and deployment experience.
 
 Compose simplifies the control of your entire application stack, making it easy to manage services, networks, and volumes in a single, comprehensible YAML configuration file. Then, with a single command, you create and start all the services
 from your configuration file.

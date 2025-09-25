@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -340,7 +340,7 @@ Steps:
        unzip
    ADD https://github.com/neovim/neovim.git#stable .
    RUN make CMAKE_BUILD_TYPE=RelWithDebInfo
-   
+
    FROM scratch
    COPY --from=build /work/build/bin/nvim /
    ```
@@ -367,7 +367,7 @@ Steps:
    │   └── nvim
    └── linux_arm64
        └── nvim
-   
+
    3 directories, 2 files
    ```
 
@@ -408,7 +408,7 @@ Steps:
    WORKDIR /app
    ADD https://github.com/dvdksn/buildme.git#eb6279e0ad8a10003718656c6867539bd9426ad8 .
    RUN go build -o server .
-   
+
    FROM alpine
    COPY --from=build /app/server /server
    ENTRYPOINT ["/server"]
@@ -444,7 +444,7 @@ Steps:
    WORKDIR /app
    ADD https://github.com/dvdksn/buildme.git#eb6279e0ad8a10003718656c6867539bd9426ad8 .
    RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -o server .
-   
+
    FROM alpine
    COPY --from=build /app/server /server
    ENTRYPOINT ["/server"]
@@ -459,7 +459,7 @@ Steps:
    WORKDIR /app
    ADD https://github.com/dvdksn/buildme.git#eb6279e0ad8a10003718656c6867539bd9426ad8 .
    RUN go build -o server .
-   
+
    FROM alpine
    COPY --from=build /app/server /server
    ENTRYPOINT ["/server"]
@@ -478,7 +478,7 @@ Steps:
    ADD https://github.com/dvdksn/buildme.git#eb6279e0ad8a10003718656c6867539bd9426ad8 .
    -RUN go build -o server .
    +RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -o server .
-   
+
    FROM alpine
    COPY --from=build /app/server /server
    ENTRYPOINT ["/server"]

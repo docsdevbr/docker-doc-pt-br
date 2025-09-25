@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,7 +19,7 @@ languages: [js]
 params:
   time: 20 minutes
 ---
-During local development and testing, it's quite common to encounter situations where your app is dependent on the remote APIs. Network issues, rate limits, or even downtime of the API provider can halt your progress. This can significantly hinder your productivity and make testing more challenging. This is where WireMock comes into play. 
+During local development and testing, it's quite common to encounter situations where your app is dependent on the remote APIs. Network issues, rate limits, or even downtime of the API provider can halt your progress. This can significantly hinder your productivity and make testing more challenging. This is where WireMock comes into play.
 
 WireMock is an open-source tool that helps developers to create a mock server that simulates the behavior of real APIs, providing a controlled environment for development and testing.
 
@@ -29,7 +29,7 @@ In this guide, you'll learn how to:
 
 - Use Docker to launch up a WireMock container.
 - Use mock data in the local development without relying on an external API
-- Use a Live API in production to fetch real-time weather data from AccuWeather. 
+- Use a Live API in production to fetch real-time weather data from AccuWeather.
 
 ## Using WireMock with Docker
 
@@ -57,7 +57,7 @@ Launch a quick demo of WireMock by using the following steps:
     $ cd wiremock-node-docker/
     ```
 
-    WireMock acts as the mock API that your backend will communicate with to retrieve data. The mock API responses have already been created for you in the mappings directory. 
+    WireMock acts as the mock API that your backend will communicate with to retrieve data. The mock API responses have already been created for you in the mappings directory.
 
  3. Start the Compose stack by running the following command at the root of the cloned project directory
 
@@ -65,7 +65,7 @@ Launch a quick demo of WireMock by using the following steps:
     $ docker compose up -d
     ```
 
-    After a moment, the application will be up and running. 
+    After a moment, the application will be up and running.
 
     ![Diagram showing the WireMock container running on Docker Desktop ](./images/wiremock-using-docker.webp)
 
@@ -79,7 +79,7 @@ Launch a quick demo of WireMock by using the following steps:
     ```console
     $ curl http://localhost:8080/api/v1/getWeather\?city\=Bengaluru
     ```
- 
+
     It will return the following canned response with mock data:
 
     ```plaintext
@@ -89,7 +89,7 @@ Launch a quick demo of WireMock by using the following steps:
     With WireMock, you define canned responses using mapping files.
     For this request, the mock data is defined in the JSON file at
     `wiremock-endpoint/mappings/getWeather/getWeatherBengaluru.json`.
-    
+
     For more information about stubbing canned responses, refer to the
     [WireMock documentation](https://wiremock.org/docs/stubbing/).
 
@@ -127,12 +127,12 @@ Follow the steps to setup a non-containerized Node application:
 2. Set the environment variable.
 
    Open `.env` file placed under `accuweather-api/` directory. Remove the old entries and ensure that it just contains the following single line.
- 
+
    ```plaintext
    API_ENDPOINT_BASE=http://localhost:8080
    ```
 
-   This will tell your Node.js application to use the WireMock server for API calls. 
+   This will tell your Node.js application to use the WireMock server for API calls.
 
 3. Examine the Application Entry Point
 
@@ -171,17 +171,17 @@ Follow the steps to setup a non-containerized Node application:
       });
       return locationData[0]?.Key;
     }
-    ```  
+    ```
 
 4. Start the Node server
 
-   Before you start the Node server, ensure that you have already installed the node packages listed in the package.json file by running `npm install`. 
+   Before you start the Node server, ensure that you have already installed the node packages listed in the package.json file by running `npm install`.
 
    ```console
-   npm install 
+   npm install
    npm run start
    ```
- 
+
    You should see the following output:
 
     ```plaintext
@@ -193,8 +193,8 @@ Follow the steps to setup a non-containerized Node application:
     Listening: http://localhost:5001
     ```
 
-   The output indicates that your Node application has successfully started. 
-   Keep this terminal window open. 
+   The output indicates that your Node application has successfully started.
+   Keep this terminal window open.
 
 5. Test the Mocked API
 
@@ -252,7 +252,7 @@ Follow the steps to setup a non-containerized Node application:
    ```plaintext
    ACCUWEATHER_API_KEY=XXXXXX
    API_ENDPOINT_BASE=http://dataservice.accuweather.com
-   ``` 
+   ```
 
    Make sure to populate `ACCUWEATHER_API_KEY` with the correct value.
 
@@ -273,7 +273,7 @@ Follow the steps to setup a non-containerized Node application:
    ```console
    $ npm run start
    ```
-  
+
    You should see the following output:
 
    ```plaintext
@@ -281,10 +281,10 @@ Follow the steps to setup a non-containerized Node application:
    > node src/index.js
 
    API_ENDPOINT_BASE: http://dataservice.accuweather.com
-   ACCUWEATHER_API_KEY is set: true 
+   ACCUWEATHER_API_KEY is set: true
    Listening: http://localhost:5001
-   ``` 
-   
+   ```
+
    Keep this terminal window open.
 
 6. Run the curl command to send a GET request to the server URL.
@@ -293,11 +293,11 @@ Follow the steps to setup a non-containerized Node application:
 
    ```console
    $ curl "http://localhost:5000/api/v1/getWeather?city=Bengaluru"
-   ``` 
+   ```
 
    By running the command, you're essentially telling your local server to provide you with weather data for a city named `Bengaluru`. The request is specifically targeting the `/api/v1/getWeather` endpoint, and you're providing the query parameter `city=Bengaluru`. Once you execute the command, the server processes this request, fetches the data and returns it as a response, which `curl` will display in your terminal.
 
-   When fetching data from the external AccuWeather API, you're interacting with live data that reflects the latest weather conditions. 
+   When fetching data from the external AccuWeather API, you're interacting with live data that reflects the latest weather conditions.
 
 
 ## Recap

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -20,7 +20,7 @@ This page contains instructions on how to install Docker Compose standalone on L
 
 > [!WARNING]
 >
-> The Docker Compose standalone uses the `-compose` syntax instead of the current standard syntax `compose`.  
+> The Docker Compose standalone uses the `-compose` syntax instead of the current standard syntax `compose`.
 > For example, you must type `docker-compose up` when using Docker Compose standalone, instead of `docker compose up`.
 
 ## On Linux
@@ -56,7 +56,7 @@ on Microsoft Windows Server](/manuals/engine/install/binaries.md#install-server-
 1.  Run PowerShell as an administrator.
     In order to proceed with the installation, select **Yes** when asked if you want this app to make changes to your device.
 
-2.  Optional. Ensure TLS1.2 is enabled. 
+2.  Optional. Ensure TLS1.2 is enabled.
     GitHub requires TLS1.2 for secure connections. If you’re using an older version of Windows Server, for example 2016, or suspect that TLS1.2 is not enabled, run the following command in PowerShell:
 
     ```powershell
@@ -74,7 +74,7 @@ on Microsoft Windows Server](/manuals/engine/install/binaries.md#install-server-
     > [!NOTE]
     >
     > On Windows Server 2019 you can add the Compose executable to `$Env:ProgramFiles\Docker`.
-     Because this directory is registered in the system `PATH`, you can run the `docker-compose --version` 
+     Because this directory is registered in the system `PATH`, you can run the `docker-compose --version`
      command on the subsequent step with no additional configuration.
 
 4.  Test the installation.

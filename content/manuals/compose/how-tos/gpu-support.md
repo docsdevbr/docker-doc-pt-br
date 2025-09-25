@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,14 +19,14 @@ aliases:
 ---
 Compose services can define GPU device reservations if the Docker host contains such devices and the Docker Daemon is set accordingly. For this, make sure you install the [prerequisites](/manuals/engine/containers/resource_constraints.md#gpu) if you haven't already done so.
 
-The examples in the following sections focus specifically on providing service containers access to GPU devices with Docker Compose. 
+The examples in the following sections focus specifically on providing service containers access to GPU devices with Docker Compose.
 You can use either `docker-compose` or `docker compose` commands. For more information, see [Migrate to Compose V2](/manuals/compose/releases/migrate.md).
 
 ## Enabling GPU access to service containers
 
 GPUs are referenced in a `compose.yaml` file using the [device](/reference/compose-file/deploy.md#devices) attribute from the Compose Deploy specification, within your services that need them.
 
-This provides more granular control over a GPU reservation as custom values can be set for the following device properties: 
+This provides more granular control over a GPU reservation as custom values can be set for the following device properties:
 
 - `capabilities`. This value specifies as a list of strings (eg. `capabilities: [gpu]`). You must set this field in the Compose file. Otherwise, it returns an error on service deployment.
 - `count`. This value, specified as an integer or the value `all`, represents the number of GPU devices that should be reserved (providing the host holds that number of GPUs). If `count` is set to `all` or not specified, all GPUs available on the host are used by default.
@@ -65,7 +65,7 @@ Run with Docker Compose:
 $ docker compose up
 Creating network "gpu_default" with the default driver
 Creating gpu_test_1 ... done
-Attaching to gpu_test_1    
+Attaching to gpu_test_1
 test_1  | +-----------------------------------------------------------------------------+
 test_1  | | NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.1     |
 test_1  | |-------------------------------+----------------------+----------------------+
@@ -77,7 +77,7 @@ test_1  | |   0  Tesla T4            On   | 00000000:00:1E.0 Off |              
 test_1  | | N/A   23C    P8     9W /  70W |      0MiB / 15109MiB |      0%      Default |
 test_1  | |                               |                      |                  N/A |
 test_1  | +-------------------------------+----------------------+----------------------+
-test_1  |                                                                                
+test_1  |
 test_1  | +-----------------------------------------------------------------------------+
 test_1  | | Processes:                                                                  |
 test_1  | |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -89,12 +89,12 @@ gpu_test_1 exited with code 0
 
 ```
 
-On machines hosting multiple GPUs, the `device_ids` field can be set to target specific GPU devices and `count` can be used to limit the number of GPU devices assigned to a service container. 
+On machines hosting multiple GPUs, the `device_ids` field can be set to target specific GPU devices and `count` can be used to limit the number of GPU devices assigned to a service container.
 
 You can use `count` or `device_ids` in each of your service definitions. An error is returned if you try to combine both, specify an invalid device ID, or use a value of count that’s higher than the number of GPUs in your system.
 
 ```console
-$ nvidia-smi   
+$ nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+

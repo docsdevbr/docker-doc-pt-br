@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -16,7 +16,7 @@ keywords: name, compose, project, -p flag, name top-level element
 aliases:
 - /compose/project-name/
 ---
-In Compose, the default project name is derived from the base name of the project directory. However, you have the flexibility to set a custom project name. 
+In Compose, the default project name is derived from the base name of the project directory. However, you have the flexibility to set a custom project name.
 
 This page offers examples of scenarios where custom project names can be helpful, outlines the various methods to set a project name, and provides the order of precedence for each approach.
 
@@ -42,10 +42,10 @@ constraint, alternative mechanisms are available.
 
 The precedence order for each method, from highest to lowest, is as follows:
 
-1. The `-p` command line flag. 
+1. The `-p` command line flag.
 2. The [COMPOSE_PROJECT_NAME environment variable](environment-variables/envvars.md).
 3. The [top-level `name:` attribute](/reference/compose-file/version-and-name.md) in your Compose file. Or the last `name:` if you [specify multiple Compose files](multiple-compose-files/merge.md) in the command line with the `-f` flag.
-4. The base name of the project directory containing your Compose file. Or the base name of the first Compose file if you [specify multiple Compose files](multiple-compose-files/merge.md) in the command line with the `-f` flag. 
+4. The base name of the project directory containing your Compose file. Or the base name of the first Compose file if you [specify multiple Compose files](multiple-compose-files/merge.md) in the command line with the `-f` flag.
 5. The base name of the current directory if no Compose file is specified.
 
 ## What's next?

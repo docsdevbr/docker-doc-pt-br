@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -25,12 +25,12 @@ aliases:
 ---
 This page contains summary information about the available options for installing Docker Compose.
 
-## Installation scenarios 
+## Installation scenarios
 
 ### Scenario one: Install Docker Desktop
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop
-includes Docker Compose along with Docker Engine and Docker CLI which are Compose prerequisites. 
+includes Docker Compose along with Docker Engine and Docker CLI which are Compose prerequisites.
 
 Docker Desktop is available on:
 - [Linux](/manuals/desktop/setup/install/linux/_index.md)
@@ -39,12 +39,12 @@ Docker Desktop is available on:
 
 If you have already installed Docker Desktop, you can check which version of Compose you have by selecting **About Docker Desktop** from the Docker menu {{< inline-image src="../../desktop/images/whale-x.svg" alt="whale menu" >}}.
 
-> [!NOTE] 
+> [!NOTE]
 >
 > After Docker Compose V1 was removed in Docker Desktop version [4.23.0](/desktop/release-notes/#4230) as it had reached end-of-life,
-> the `docker-compose` command now points directly to the Docker Compose V2 binary, running in standalone mode. 
-> If you rely on Docker Desktop auto-update, the symlink might be broken and command unavailable, as the update doesn't ask for administrator password. 
-> 
+> the `docker-compose` command now points directly to the Docker Compose V2 binary, running in standalone mode.
+> If you rely on Docker Desktop auto-update, the symlink might be broken and command unavailable, as the update doesn't ask for administrator password.
+>
 > This only affects Mac users. To fix this, either recreate the symlink:
 > ```console
 > $ sudo rm /usr/local/bin/docker-compose
@@ -62,7 +62,7 @@ If you already have Docker Engine and Docker CLI installed, you can install the 
 - [Using Docker's repository](linux.md#install-using-the-repository)
 - [Downloading and installing manually](linux.md#install-the-plugin-manually)
 
-### Scenario three: Install the Docker Compose standalone 
+### Scenario three: Install the Docker Compose standalone
 
 > [!WARNING]
 >

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -31,7 +31,7 @@ VirtualBox or VMware Fusion.
 
 HyperKit is thinner than VirtualBox and VMware fusion, and the version included is customized for Docker workloads on Mac.
 
-### Where does Docker Desktop store Linux containers and images? 
+### Where does Docker Desktop store Linux containers and images?
 
 Docker Desktop stores Linux containers and images in a single, large "disk image" file in the Mac filesystem. This is different from Docker on Linux, which usually stores containers and images in the `/var/lib/docker` directory.
 

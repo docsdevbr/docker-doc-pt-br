@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -39,13 +39,13 @@ aliases:
 - /winkit/getting-started/
 - /desktop/get-started/
 ---
-Docker recommends that you authenticate using the **Sign in** option in the top-right corner of the Docker Dashboard. 
+Docker recommends that you authenticate using the **Sign in** option in the top-right corner of the Docker Dashboard.
 
-In large enterprises where admin access is restricted, administrators can [enforce sign-in](/manuals/security/for-admins/enforce-sign-in/_index.md). 
+In large enterprises where admin access is restricted, administrators can [enforce sign-in](/manuals/security/for-admins/enforce-sign-in/_index.md).
 
 > [!TIP]
 >
-> Explore [Docker's core subscriptions](https://www.docker.com/pricing/) to see what else Docker can offer you. 
+> Explore [Docker's core subscriptions](https://www.docker.com/pricing/) to see what else Docker can offer you.
 
 ## Benefits of signing in
 
@@ -57,7 +57,7 @@ In large enterprises where admin access is restricted, administrators can [enfor
 
 > [!NOTE]
 >
-> Docker Desktop automatically signs you out after 90 days, or after 30 days of inactivity. 
+> Docker Desktop automatically signs you out after 90 days, or after 30 days of inactivity.
 
 ## Signing in with Docker Desktop for Linux
 
@@ -69,7 +69,7 @@ You can initialize pass by using a gpg key. To generate a gpg key, run:
 
 ``` console
 $ gpg --generate-key
-``` 
+```
 
 The following is an example similar to what you see once you run the previous command:
 
@@ -94,7 +94,7 @@ To initialize `pass`, run the following command using the public key generated f
 
 ```console
 $ pass init <your_generated_gpg-id_public_key>
-``` 
+```
 The following is an example similar to what you see once you run the previous command:
 
 ```console
@@ -109,7 +109,7 @@ When Docker CLI or Docker Desktop use credentials, a user prompt may pop up for 
 $ docker pull molly/privateimage
 Using default tag: latest
 latest: Pulling from molly/privateimage
-3b9cc81c3203: Pull complete 
+3b9cc81c3203: Pull complete
 Digest: sha256:3c6b73ce467f04d4897d7a7439782721fd28ec9bf62ea2ad9e81a5fb7fb3ff96
 Status: Downloaded newer image for molly/privateimage:latest
 docker.io/molly/privateimage:latest
@@ -117,6 +117,6 @@ docker.io/molly/privateimage:latest
 
 ## What's next?
 
-- [Explore Docker Desktop](/manuals/desktop/use-desktop/_index.md) and its features. 
+- [Explore Docker Desktop](/manuals/desktop/use-desktop/_index.md) and its features.
 - Change your Docker Desktop settings
 - [Browse common FAQs](/manuals/desktop/troubleshoot-and-support/faqs/general.md)

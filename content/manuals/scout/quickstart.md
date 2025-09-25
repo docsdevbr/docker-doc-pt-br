@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -124,16 +124,16 @@ $ docker scout cves --only-package express
 
   ## Overview
 
-                      │                  Analyzed Image                   
+                      │                  Analyzed Image
   ────────────────────┼───────────────────────────────────────────────────
-    Target            │  mobywhale/scout-demo:v2                   
-      digest          │  ef68417b2866                                     
-      platform        │ linux/arm64                                       
-      provenance      │ https://github.com/docker/scout-demo-service.git  
-                      │  7c3a06793fc8f97961b4a40c73e0f7ed85501857         
-      vulnerabilities │    0C     0H     0M     0L                        
-      size            │ 19 MB                                             
-      packages        │ 1                                                 
+    Target            │  mobywhale/scout-demo:v2
+      digest          │  ef68417b2866
+      platform        │ linux/arm64
+      provenance      │ https://github.com/docker/scout-demo-service.git
+                      │  7c3a06793fc8f97961b4a40c73e0f7ed85501857
+      vulnerabilities │    0C     0H     0M     0L
+      size            │ 19 MB
+      packages        │ 1
 
 
   ## Packages and Vulnerabilities

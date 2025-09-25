@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -35,9 +35,9 @@ For an extra layer of security, you can also use Settings Management to enable a
 
 You can configure several Docker Desktop settings using either:
  - An `admin-settings.json` file. This file is located on the Docker Desktop host and can only be accessed by developers with root or administrator privileges.
- - Creating a settings policy in the Docker Admin Console 
+ - Creating a settings policy in the Docker Admin Console
 
-Settings that are defined by an administrator override any previous values set by developers and ensure that these cannot be modified. 
+Settings that are defined by an administrator override any previous values set by developers and ensure that these cannot be modified.
 
 ## What features can I configure with Settings Management?
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -34,7 +34,7 @@ In addition, the Docker Desktop Dashboard lets you:
 - Navigate to the **Settings** menu to configure your Docker Desktop settings. Select the **Settings** icon in the Dashboard header.
 - Access the **Troubleshoot** menu to debug and perform restart operations. Select the **Troubleshoot** icon in the Dashboard header.
 - Be notified of new releases, installation progress updates, and more in the **Notifications center**. Select the bell icon in the bottom-right corner of the Docker Desktop Dashboard to access the notification center.
-- Access the **Learning center** from the Dashboard header. It helps you get started with quick in-app walkthroughs and provides other resources for learning about Docker. 
+- Access the **Learning center** from the Dashboard header. It helps you get started with quick in-app walkthroughs and provides other resources for learning about Docker.
 
   For a more detailed guide about getting started, see [Get started](/get-started/introduction/_index.md).
 - Get to the [Docker Scout](../../scout/_index.md) dashboard.
@@ -54,7 +54,7 @@ From the Docker Desktop Dashboard you can use Quick Search, which is located in 
 
 - Any volume. From here you can view the associated container.
 
-- Docs. Find help from Docker's official documentation straight from Docker Desktop. 
+- Docs. Find help from Docker's official documentation straight from Docker Desktop.
 
 ## The Docker menu
 

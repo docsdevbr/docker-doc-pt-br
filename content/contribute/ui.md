@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -46,7 +46,7 @@ Don't use UI elements as if they were English verbs or nouns.
 
 ## Prepositions
 
-When documenting the UI, use the following prepositions. 
+When documenting the UI, use the following prepositions.
 
 |Preposition   |UI element   |  Example |
 |:-----------|:------------|:-----------|

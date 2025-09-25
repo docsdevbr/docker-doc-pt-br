@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -37,7 +37,7 @@ a container quitting) and then work to make the actual state reflect the expecte
 
 ## Cloud Native Computing Foundation projects
 
-The CNCF is a vendor-neutral home for various open-source projects, including Kubernetes, Prometheus, 
+The CNCF is a vendor-neutral home for various open-source projects, including Kubernetes, Prometheus,
 Envoy, Linkerd, NATS, and more. You can view the [graduated and incubated projects here](https://www.cncf.io/projects/)
 and the entire [CNCF Landscape here](https://landscape.cncf.io/). There are a lot of projects to help
 solve problems around monitoring, logging, security, image registries, messaging, and more.

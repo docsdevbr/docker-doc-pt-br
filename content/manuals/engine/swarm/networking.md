@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -233,7 +233,7 @@ For example, the following command is used when initializing Swarm:
 $ docker swarm init --default-addr-pool 10.20.0.0/16 --default-addr-pool-mask-length 26
 ```
 
-Whenever a user creates a network, but does not use the `--subnet` command line option, the subnet for this network will be allocated sequentially from the next available subnet from the pool. If the specified network is already allocated, that network will not be used for Swarm. 
+Whenever a user creates a network, but does not use the `--subnet` command line option, the subnet for this network will be allocated sequentially from the next available subnet from the pool. If the specified network is already allocated, that network will not be used for Swarm.
 
 Multiple pools can be configured if discontiguous address space is required. However, allocation from specific pools is not supported. Network subnets will be allocated sequentially from the IP pool space and subnets will be reused as they are deallocated from networks that are deleted.
 
@@ -245,11 +245,11 @@ The default mask length can be configured and is the same for all networks. It i
 
 ##### Overlay network size limitations
 
-Docker recommends creating overlay networks with `/24` blocks. The `/24` overlay network blocks limit the network to 256 IP addresses. 
+Docker recommends creating overlay networks with `/24` blocks. The `/24` overlay network blocks limit the network to 256 IP addresses.
 
-This recommendation addresses [limitations with swarm mode](https://github.com/moby/moby/issues/30820). 
-If you need more than 256 IP addresses, do not increase the IP block size. You can either use `dnsrr` 
-endpoint mode with an external load balancer, or use multiple smaller overlay networks. See 
+This recommendation addresses [limitations with swarm mode](https://github.com/moby/moby/issues/30820).
+If you need more than 256 IP addresses, do not increase the IP block size. You can either use `dnsrr`
+endpoint mode with an external load balancer, or use multiple smaller overlay networks. See
 [Configure service discovery](#configure-service-discovery) for more information about different endpoint modes.
 
 #### Configure encryption of application data {#encryption}
@@ -428,7 +428,7 @@ the `--data-path-addr` flag when initializing or joining the swarm. If there are
 multiple interfaces, `--advertise-addr` must be specified explicitly, and
 `--data-path-addr` defaults to `--advertise-addr` if not specified. Traffic about
 joining, leaving, and managing the swarm is sent over the
-`--advertise-addr` interface, and traffic among a service's containers is sent 
+`--advertise-addr` interface, and traffic among a service's containers is sent
 over the `--data-path-addr` interface. These flags can take an IP address or
 a network device name, such as `eth0`.
 

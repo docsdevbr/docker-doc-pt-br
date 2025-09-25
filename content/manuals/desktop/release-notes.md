@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -26,7 +26,7 @@ aliases:
 - /mackit/release-notes/
 weight: 220
 ---
-This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. 
+This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases.
 
 Releases are gradually rolled out to ensure quality control. If the latest version is not yet available to you, allow some time — updates typically become available within a week of the release date.
 

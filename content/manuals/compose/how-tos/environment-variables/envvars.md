@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -36,10 +36,10 @@ This page contains information on how you can set or change the following pre-de
 - `COMPOSE_MENU`
 - `COMPOSE_EXPERIMENTAL`
 
-## Methods to override 
+## Methods to override
 
 You can set or change the pre-defined environment variables:
-- With an [`.env` file located in your working directory](/manuals/compose/how-tos/environment-variables/variable-interpolation.md) 
+- With an [`.env` file located in your working directory](/manuals/compose/how-tos/environment-variables/variable-interpolation.md)
 - From the command line
 - From your [shell](variable-interpolation.md#substitute-from-the-shell)
 
@@ -52,12 +52,12 @@ When changing or setting any environment variables, be aware of [Environment var
 Sets the project name. This value is prepended along with the service name to
 the container's name on startup.
 
-For example, if your project name is `myapp` and it includes two services `db` and `web`, 
+For example, if your project name is `myapp` and it includes two services `db` and `web`,
 then Compose starts containers named `myapp-db-1` and `myapp-web-1` respectively.
 
 Compose can set the project name in different ways. The level of precedence (from highest to lowest) for each method is as follows:
 
-1. The `-p` command line flag 
+1. The `-p` command line flag
 2. `COMPOSE_PROJECT_NAME`
 3. The top level `name:` variable from the config file (or the last `name:` from
   a series of config files specified using `-f`)
@@ -84,8 +84,8 @@ Specifies the path to a Compose file. Specifying multiple Compose files is suppo
 
       ```console
       COMPOSE_FILE=compose.yaml:compose.prod.yaml
-      ```  
-   The path separator can also be customized using [`COMPOSE_PATH_SEPARATOR`](#compose_path_separator).  
+      ```
+   The path separator can also be customized using [`COMPOSE_PATH_SEPARATOR`](#compose_path_separator).
 
 See also the [command-line options overview](/reference/cli/docker/compose/_index.md#command-options-overview-and-help) and [using `-f` to specify name and path of one or more Compose files](/reference/cli/docker/compose/_index.md#use--f-to-specify-name-and-path-of-one-or-more-compose-files).
 
@@ -95,12 +95,12 @@ Specifies one or more profiles to be enabled when `docker compose up` is run.
 
 Services with matching profiles are started as well as any services for which no profile has been defined.
 
-For example, calling `docker compose up`with `COMPOSE_PROFILES=frontend` selects services with the 
+For example, calling `docker compose up`with `COMPOSE_PROFILES=frontend` selects services with the
 `frontend` profile as well as any services without a profile specified.
 
 If specifying multiple profiles, use a comma as a separator.
 
-This following example enables all services matching both the `frontend` and `debug` profiles and services without a profile. 
+This following example enables all services matching both the `frontend` and `debug` profiles and services without a profile.
 
 ```console
 COMPOSE_PROFILES=frontend,debug
@@ -112,7 +112,7 @@ See also [Using profiles with Compose](../profiles.md) and the [`--profile` comm
 
 When enabled, Compose performs path conversion from Windows-style to Unix-style in volume definitions.
 
-- Supported values: 
+- Supported values:
     - `true` or `1`, to enable
     - `false` or `0`, to disable
 - Defaults to: `0`
@@ -129,7 +129,7 @@ Specifies a different path separator for items listed in `COMPOSE_FILE`.
 
 When enabled, Compose doesn't try to detect orphaned containers for the project.
 
-- Supported values: 
+- Supported values:
    - `true` or `1`, to enable
    - `false` or `0`, to disable
 - Defaults to: `0`
@@ -149,7 +149,7 @@ Specifies the maximum level of parallelism for concurrent engine calls.
 
 ### COMPOSE\_ANSI
 
-Specifies when to print ANSI control characters. 
+Specifies when to print ANSI control characters.
 
 - Supported values:
    - `auto`, Compose detects if TTY mode can be used. Otherwise, use plain text mode
@@ -159,7 +159,7 @@ Specifies when to print ANSI control characters.
 
 ### COMPOSE\_STATUS\_STDOUT
 
-When enabled, Compose writes its internal status and progress messages to `stdout` instead of `stderr`. 
+When enabled, Compose writes its internal status and progress messages to `stdout` instead of `stderr`.
 The default value is false to clearly separate the output streams between Compose messages and your container's logs.
 
 - Supported values:
@@ -171,7 +171,7 @@ The default value is false to clearly separate the output streams between Compos
 
 Lets you specify which environment files Compose should use if `--env-file` isn't used.
 
-When using multiple environment files, use a comma as a separator. For example: 
+When using multiple environment files, use a comma as a separator. For example:
 
 ```console
 COMPOSE_ENV_FILES=.env.envfile1, .env.envfile2
@@ -207,7 +207,7 @@ The following environment variables have no effect in Compose V2.
 For more information, see [Migrate to Compose V2](/manuals/compose/releases/migrate.md).
 
 - `COMPOSE_API_VERSION`
-    By default the API version is negotiated with the server. Use `DOCKER_API_VERSION`.  
+    By default the API version is negotiated with the server. Use `DOCKER_API_VERSION`.
     See the [Docker CLI environment variable reference](/reference/cli/docker/#environment-variables) page.
 - `COMPOSE_HTTP_TIMEOUT`
 - `COMPOSE_TLS_VERSION`

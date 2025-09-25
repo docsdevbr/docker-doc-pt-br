@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -111,8 +111,8 @@ testuser:231072:65536
   This step is not required on Debian 12.
 
 - Rootless docker requires version of `slirp4netns` greater than `v0.4.0` (when `vpnkit` is not installed).
-  Check you have this with 
-  
+  Check you have this with
+
   ```console
   $ slirp4netns --version
   ```
@@ -172,7 +172,7 @@ testuser:231072:65536
 >```
 > Should you choose not to shut down the `docker` service and socket, you will need to use the `--force`
 > parameter in the next section. There are no known issues, but until you shutdown and disable you're
-> still running rootful Docker. 
+> still running rootful Docker.
 
 {{< tabs >}}
 {{< tab name="With packages (RPM/DEB)" >}}

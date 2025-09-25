@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -9,7 +9,7 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Customize Compose Bridge 
+title: Customize Compose Bridge
 linkTitle: Customize
 weight: 20
 description: Learn about the Compose Bridge templates syntax
@@ -17,11 +17,11 @@ keywords: compose, bridge, templates
 ---
 {{< summary-bar feature_name="Compose bridge" >}}
 
-This page explains how Compose Bridge utilizes templating to efficiently translate Docker Compose files into Kubernetes manifests. It also explain how you can customize these templates for your specific requirements and needs, or how you can build your own transformation. 
+This page explains how Compose Bridge utilizes templating to efficiently translate Docker Compose files into Kubernetes manifests. It also explain how you can customize these templates for your specific requirements and needs, or how you can build your own transformation.
 
-## How it works 
+## How it works
 
-Compose bridge uses transformations to let you convert a Compose model into another form. 
+Compose bridge uses transformations to let you convert a Compose model into another form.
 
 A transformation is packaged as a Docker image that receives the fully-resolved Compose model as `/in/compose.yaml` and can produce any target format file under `/out`.
 
@@ -65,7 +65,7 @@ kind: DaemonSet
 {{ end }}
 ```
 
-You can check the [Compose Specification JSON schema](https://github.com/compose-spec/compose-go/blob/main/schema/compose-spec.json) to have a full overview of the Compose model. This schema outlines all possible configurations and their data types in the Compose model. 
+You can check the [Compose Specification JSON schema](https://github.com/compose-spec/compose-go/blob/main/schema/compose-spec.json) to have a full overview of the Compose model. This schema outlines all possible configurations and their data types in the Compose model.
 
 ### Helpers
 
@@ -78,7 +78,7 @@ As part of the Go templating syntax, Compose Bridge offers a set of YAML helper 
 - `truncate`: Removes the N first elements from a list
 - `join`: Groups elements from a list into a single string, using a separator
 - `base64`: Encodes a string as base64 used in Kubernetes for encoding secrets
-- `map`: Transforms a value according to mappings expressed as `"value -> newValue"` strings 
+- `map`: Transforms a value according to mappings expressed as `"value -> newValue"` strings
 - `indent`: Writes string content indented by N spaces
 - `helmValue`: Writes the string content as a template value in the final file
 
@@ -100,12 +100,12 @@ decisions and preferences, with various level of flexibility and effort.
 ### Modify the default templates
 
 You can extract templates used by the default transformation `docker/compose-bridge-kubernetes`,
-by running `compose-bridge transformations create --from docker/compose-bridge-kubernetes my-template` 
+by running `compose-bridge transformations create --from docker/compose-bridge-kubernetes my-template`
 and adjusting the templates to match your needs.
 
-The templates are extracted into a directory named after your template name, in this case `my-template`.  
-It includes a Dockerfile that lets you create your own image to distribute your template, as well as a directory containing the templating files.  
-You are free to edit the existing files, delete them, or [add new ones](#add-your-own-templates) to subsequently generate Kubernetes manifests that meet your needs.  
+The templates are extracted into a directory named after your template name, in this case `my-template`.
+It includes a Dockerfile that lets you create your own image to distribute your template, as well as a directory containing the templating files.
+You are free to edit the existing files, delete them, or [add new ones](#add-your-own-templates) to subsequently generate Kubernetes manifests that meet your needs.
 You can then use the generated Dockerfile to package your changes into a new transformation image, which you can then use with Compose Bridge:
 
 ```console
@@ -115,13 +115,13 @@ $ docker build --tag mycompany/transform --push .
 You can then use your transformation as a replacement:
 
 ```console
-$ compose-bridge convert --transformations mycompany/transform 
+$ compose-bridge convert --transformations mycompany/transform
 ```
 
 ### Add your own templates
 
-For resources that are not managed by Compose Bridge's default transformation, 
-you can build your own templates. The `compose.yaml` model may not offer all 
+For resources that are not managed by Compose Bridge's default transformation,
+you can build your own templates. The `compose.yaml` model may not offer all
 the configuration attributes required to populate the target manifest. If this is the case, you can
 then rely on Compose custom extensions to better describe the
 application, and offer an agnostic transformation.
@@ -140,7 +140,7 @@ metadata:
   name: virtual-host-ingress
   namespace: {{ $project }}
 spec:
-  rules:  
+  rules:
 {{ range $name, $service := .services }}
 {{ if $service.x-virtual-host }}
   - host: ${{ $service.x-virtual-host }}
@@ -151,7 +151,7 @@ spec:
           service:
             name: ${{ name }}
             port:
-              number: 80  
+              number: 80
 {{ end }}
 {{ end }}
 ```
@@ -163,7 +163,7 @@ transformations:
 ```console
 $ compose-bridge convert \
     --transformation docker/compose-bridge-kubernetes \
-    --transformation mycompany/transform 
+    --transformation mycompany/transform
 ```
 
 ### Build your own transformation
@@ -172,8 +172,8 @@ While Compose Bridge templates make it easy to customize with minimal changes,
 you may want to make significant changes, or rely on an existing conversion tool.
 
 A Compose Bridge transformation is a Docker image that is designed to get a Compose model
-from `/in/compose.yaml` and produce platform manifests under `/out`. This simple 
-contract makes it easy to bundle an alternate transformation using 
+from `/in/compose.yaml` and produce platform manifests under `/out`. This simple
+contract makes it easy to bundle an alternate transformation using
 [Kompose](https://kompose.io/):
 
 ```Dockerfile

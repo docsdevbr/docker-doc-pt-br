@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -56,7 +56,7 @@ $ docker compose run webapp env | grep NODE_ENV
 NODE_ENV=production
 ```
 
-## Advanced example 
+## Advanced example
 
 The following table uses `VALUE`, an environment variable defining the version for an image, as an example.
 
@@ -96,7 +96,7 @@ Result 3: The `environment` attribute in the Compose file defines an explicit va
 
 Result 4: The image's `ENV` directive declares the variable `VALUE`, and since the Compose file is not set to override this value, this variable is defined by image
 
-Result 5: The `docker compose run` command has the `--env` flag set which an explicit value, and overrides the value set by the image. 
+Result 5: The `docker compose run` command has the `--env` flag set which an explicit value, and overrides the value set by the image.
 
 Result 6: The `docker compose run` command has the `--env` flag set to replicate the value from the environment. Host OS value takes precedence and is replicated into the container's environment.
 
@@ -112,4 +112,4 @@ Result 11: The `environment` attribute in the Compose file is set to replicate `
 
 Result 12: The `--env` flag has higher precedence than the `environment` and `env_file` attributes and is to set to replicate `VALUE` from the local environment. Host OS value takes precedence and is replicated into the container's environment.
 
-Results 13 to 15: The `--env` flag has higher precedence than the `environment` and `env_file` attributes and so sets the value. 
+Results 13 to 15: The `--env` flag has higher precedence than the `environment` and `env_file` attributes and so sets the value.

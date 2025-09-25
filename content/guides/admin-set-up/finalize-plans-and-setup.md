@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,7 +13,7 @@ title: Finalize plans and begin setup
 description: Collaborate with your MDM team to distribute configurations and set up SSO and Docker product trials.
 weight: 20
 ---
-## Step one: Send finalized settings files to the MDM team 
+## Step one: Send finalized settings files to the MDM team
 
 After reaching an agreement with the relevant teams about your baseline and security configurations as outlined in module one, configure Settings Management using either the [Docker Admin Console](/manuals/security/for-admins/hardened-desktop/settings-management/configure-admin-console.md) or an [`admin-settings.json` file](/manuals/security/for-admins/hardened-desktop/settings-management/configure-json-file.md).
 
@@ -37,7 +37,7 @@ You can also enable [SCIM](/manuals/security/for-admins/provisioning/scim.md) fo
 
 ### Set up Docker product entitlements included in the subscription
 
-[Docker Build Cloud](/manuals/build-cloud/_index.md) significantly reduces build times, both locally and in CI, by providing a dedicated remote builder and shared cache. Powered by the cloud, developer time and local resources are freed up so your team can focus on more important things, like innovation. To get started, [set up a cloud builder](https://app.docker.com/build/). 
+[Docker Build Cloud](/manuals/build-cloud/_index.md) significantly reduces build times, both locally and in CI, by providing a dedicated remote builder and shared cache. Powered by the cloud, developer time and local resources are freed up so your team can focus on more important things, like innovation. To get started, [set up a cloud builder](https://app.docker.com/build/).
 
 [Docker Scout](manuals/scout/_index.md) is a solution for proactively enhancing your software supply chain security. By analyzing your images, Docker Scout compiles an inventory of components, also known as a Software Bill of Materials (SBOM). The SBOM is matched against a continuously updated vulnerability database to pinpoint security weaknesses. To get started, see [Quickstart](/manuals/scout/quickstart.md).
 
@@ -45,8 +45,8 @@ You can also enable [SCIM](/manuals/security/for-admins/provisioning/scim.md) fo
 
 > [!WARNING]
 >
-> This step could affect the experience for users on older versions of Docker Desktop.  
+> This step could affect the experience for users on older versions of Docker Desktop.
 
 Existing users may be running outdated or unsupported versions of Docker Desktop. It is highly recommended that all users update to a supported version. Docker Desktop versions released within the past 6 months from the latest release are supported.
 
-It's recommended that you use a MDM solution to manage the version of Docker Desktop for users. Users may also get Docker Desktop directly from Docker or through a company software portal.  
+It's recommended that you use a MDM solution to manage the version of Docker Desktop for users. Users may also get Docker Desktop directly from Docker or through a company software portal.

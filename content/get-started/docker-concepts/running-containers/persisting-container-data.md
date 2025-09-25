@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -27,9 +27,9 @@ While this ephemeral nature of containers is great, it poses a challenge when yo
 
 ### Container volumes
 
-Volumes are a storage mechanism that provide the ability to persist data beyond the lifecycle of an individual container. Think of it like providing a shortcut or symlink from inside the container to outside the container. 
+Volumes are a storage mechanism that provide the ability to persist data beyond the lifecycle of an individual container. Think of it like providing a shortcut or symlink from inside the container to outside the container.
 
-As an example, imagine you create a volume named `log-data`. 
+As an example, imagine you create a volume named `log-data`.
 
 ```console
 $ docker volume create log-data
@@ -41,7 +41,7 @@ When starting a container with the following command, the volume will be mounted
 $ docker run -d -p 80:80 -v log-data:/logs docker/welcome-to-docker
 ```
 
-If the volume `log-data` doesn't exist, Docker will automatically create it for you. 
+If the volume `log-data` doesn't exist, Docker will automatically create it for you.
 
 When the container runs, all files it writes into the `/logs` folder will be saved in this volume, outside of the container. If you delete the container and start a new container using the same volume, the files will still be there.
 
@@ -124,7 +124,7 @@ In this guide, you’ll practice creating and using volumes to persist data crea
 8. Start a new container by running the following command, attaching the same volume with the persisted data:
 
     ```console
-    $ docker run --name=new-db -d -v postgres_data:/var/lib/postgresql/data postgres 
+    $ docker run --name=new-db -d -v postgres_data:/var/lib/postgresql/data postgres
     ```
 
     You might have noticed that the `POSTGRES_PASSWORD` environment variable has been omitted. That’s because that variable is only used when bootstrapping a new database.

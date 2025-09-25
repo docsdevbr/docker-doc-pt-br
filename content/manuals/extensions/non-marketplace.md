@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -31,7 +31,7 @@ You can install an extension that has been developed by the community or interna
 > [!NOTE]
 >
 > Ensure the option **Allow only extensions distributed through the Docker Marketplace** is disabled. Otherwise, this prevents any extension not listed in the Marketplace, via the Extension SDK tools from, being installed.
-> You can change this option in **Settings**. 
+> You can change this option in **Settings**.
 
 To install an extension which is not present in the Marketplace, you can use the Extensions CLI that is bundled with Docker Desktop.
 
@@ -53,7 +53,7 @@ john/my-extension   John                latest              1 tab(My-Extension) 
 Go to the Docker Desktop Dashboard, select **Add Extensions** and on the **Managed** tab to see the new extension installed.
 Notice that an `UNPUBLISHED` label displays which indicates that the extension has not been installed from the Marketplace.
 
-## Update an extension 
+## Update an extension
 
 To update an extension which isn't present in the Marketplace, in a terminal type `docker extension update IMAGE[:TAG]` where the `TAG` should be different from the extension that's already installed.
 

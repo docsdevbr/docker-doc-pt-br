@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -18,15 +18,15 @@ aliases:
 ---
 {{< summary-bar feature_name="Synchronized file sharing" >}}
 
-Synchronized file shares is an alternative file sharing mechanism that provides fast and flexible host-to-VM file sharing, enhancing bind mount performance through the use of synchronized filesystem caches. 
+Synchronized file shares is an alternative file sharing mechanism that provides fast and flexible host-to-VM file sharing, enhancing bind mount performance through the use of synchronized filesystem caches.
 
 ![Image of Synchronized file shares pane](../images/synched-file-shares.webp)
- 
+
 ## Who is it for?
 
-Synchronized file shares is ideal for developers who: 
+Synchronized file shares is ideal for developers who:
 - Have large repositories or monorepos with 100 000 files or more totaling hundreds of megabytes or even gigabytes.
-- Are using virtual filesystems, such as VirtioFS, gRPC FUSE, and osxfs, which are no longer scaling well with their codebases. 
+- Are using virtual filesystems, such as VirtioFS, gRPC FUSE, and osxfs, which are no longer scaling well with their codebases.
 - Regularly encounter performance limitations.
 - Don't want to worry about file ownership or spend time resolving conflicting file-ownership information when modifying multiple containers.
 
@@ -42,13 +42,13 @@ After creating a file share instance, any container using a bind mount that poin
 
 > [!IMPORTANT]
 >
-> Synchronized file shares isn't available on WSL or when using Windows containers. 
+> Synchronized file shares isn't available on WSL or when using Windows containers.
 
-## Create a file share instance 
+## Create a file share instance
 
 To create a file share instance:
 1. Sign in to Docker Desktop.
-2. In **Settings**, navigate to the **File sharing** tab within the **Resources** section. 
+2. In **Settings**, navigate to the **File sharing** tab within the **Resources** section.
 3. In the **Synchronized File Shares** section, select the **Create share** icon.
 4. Select a host folder to share. The synchronized file share should initialize and be usable.
 
@@ -58,11 +58,11 @@ When the status indicator displays **Watching for filesystem changes**, your fil
 
 > [!NOTE]
 >
-> When you create a new service, setting the [bind mount option consistency](/reference/cli/docker/service/create.md#options-for-bind-mounts) to `:consistent` bypasses Synchronized file shares. 
+> When you create a new service, setting the [bind mount option consistency](/reference/cli/docker/service/create.md#options-for-bind-mounts) to `:consistent` bypasses Synchronized file shares.
 
 > [!TIP]
 >
-> Compose can now automatically create file shares for bind mounts. 
+> Compose can now automatically create file shares for bind mounts.
 > Ensure you're signed in to Docker with a paid subscription and have enabled both **Access experimental features** and **Manage Synchronized file shares with Compose** in Docker Desktop's settings.
 
 ## Explore your file share instance
@@ -80,7 +80,7 @@ Selecting a file share instance expands the dropdown and exposes this informatio
 ## Use `.syncignore`
 
 You can use a `.syncignore` file at the root of each file share, to exclude local files from your file share instance. It supports the same syntax as `.dockerignore` files and excludes, and/or re-includes, paths from synchronization. `.syncignore` files are ignored at any location other than the root of the file share.
- 
+
 Some example of things you might want to add to your `.syncignore` file are:
 - Large dependency directories, for example `node_modules` and `composer` directories (unless you rely on accessing them via a bind mount)
 - `.git` directories (again, unless you need them)

@@ -25,7 +25,7 @@ Você pode apoiar o projeto através do [GitHub Sponsors][github-sponsors] ou
 
 ## Licença
 
-Copyright (c) 2016 Docker, Inc.<br>
+Copyright (c) 2013-2025 Docker Inc.<br>
 **Docker** e o logotipo **Docker** são marcas comerciais ou marcas registradas
 da Docker, Inc. nos Estados Unidos e/ou outros países.<br>
 Docker, Inc. e outras partes também podem ter direitos de marca registrada em

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -11,16 +11,16 @@
 
 title: How Compose works
 weight: 10
-description: Understand how Compose works and the Compose application model with an illustrative example 
-keywords: compose, docker compose, compose specification, compose model 
+description: Understand how Compose works and the Compose application model with an illustrative example
+keywords: compose, docker compose, compose specification, compose model
 aliases:
 - /compose/compose-file/02-model/
 - /compose/compose-yaml-file/
 - /compose/compose-application-model/
 ---
-With Docker Compose you use a YAML configuration file, known as the [Compose file](#the-compose-file), to configure your application’s services, and then you create and start all the services from your configuration with the [Compose CLI](#cli). 
+With Docker Compose you use a YAML configuration file, known as the [Compose file](#the-compose-file), to configure your application’s services, and then you create and start all the services from your configuration with the [Compose CLI](#cli).
 
-The Compose file, or `compose.yaml` file, follows the rules provided by the [Compose Specification](/reference/compose-file/_index.md) in how to define multi-container applications. This is the Docker Compose implementation of the formal [Compose Specification](https://github.com/compose-spec/compose-spec). 
+The Compose file, or `compose.yaml` file, follows the rules provided by the [Compose Specification](/reference/compose-file/_index.md) in how to define multi-container applications. This is the Docker Compose implementation of the formal [Compose Specification](https://github.com/compose-spec/compose-spec).
 
 {{< accordion title="The Compose application model" >}}
 
@@ -44,7 +44,7 @@ set the label `com.docker.compose.project`.
 
 Compose offers a way for you to set a custom project name and override this name, so that the same `compose.yaml` file can be deployed twice on the same infrastructure, without changes, by just passing a distinct name.
 
-{{< /accordion >}} 
+{{< /accordion >}}
 
 ## The Compose file
 
@@ -54,7 +54,7 @@ If both files exist, Compose prefers the canonical `compose.yaml`.
 
 You can use [fragments](/reference/compose-file/fragments.md) and [extensions](/reference/compose-file/extension.md) to keep your Compose file efficient and easy to maintain.
 
-Multiple Compose files can be [merged](/reference/compose-file/merge.md) together to define the application model. The combination of YAML files is implemented by appending or overriding YAML elements based on the Compose file order you set. 
+Multiple Compose files can be [merged](/reference/compose-file/merge.md) together to define the application model. The combination of YAML files is implemented by appending or overriding YAML elements based on the Compose file order you set.
 Simple attributes and maps get overridden by the highest order Compose file, lists get merged by appending. Relative
 paths are resolved based on the first Compose file's parent folder, whenever complimentary files being
 merged are hosted in other folders. As some Compose file elements can both be expressed as single strings or complex objects, merges apply to
@@ -66,7 +66,7 @@ If you want to reuse other Compose files, or factor out parts of your applicatio
 
 The Docker CLI lets you interact with your Docker Compose applications through the `docker compose` command, and its subcommands. Using the CLI, you can manage the lifecycle of your multi-container applications defined in the `compose.yaml` file. The CLI commands enable you to start, stop, and configure your applications effortlessly.
 
-### Key commands 
+### Key commands
 
 To start all the services defined in your `compose.yaml` file:
 
@@ -77,10 +77,10 @@ $ docker compose up
 To stop and remove the running services:
 
 ```console
-$ docker compose down 
+$ docker compose down
 ```
 
-If you want to monitor the output of your running containers and debug issues, you can view the logs with: 
+If you want to monitor the output of your running containers and debug issues, you can view the logs with:
 
 ```console
 $ docker compose logs
@@ -169,7 +169,7 @@ example-frontend-1  example/webapp       "nginx -g 'daemon of…"   frontend    
 example-backend-1   example/database     "docker-entrypoint.s…"   backend             2 minutes ago       Up 2 minutes
 ```
 
-## What's next 
+## What's next
 
 - [Quickstart](/manuals/compose/gettingstarted.md)
 - [Explore some sample applications](/manuals/compose/support-and-feedback/samples-for-compose.md)

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,7 +19,7 @@ This guide provides steps to address a recent issue affecting some macOS users o
 
 > [!NOTE]
 >
-> Docker Desktop versions 4.28 and earlier are not impacted by this issue. 
+> Docker Desktop versions 4.28 and earlier are not impacted by this issue.
 
 ## Available solutions
 
@@ -27,7 +27,7 @@ There are a few options available depending on your situation:
 
 ### Upgrade to Docker Desktop version 4.37.2 (recommended)
 
-The recommended way is to upgrade to the latest Docker Desktop version which is version 4.37.2. 
+The recommended way is to upgrade to the latest Docker Desktop version which is version 4.37.2.
 
 If possible, update directly through the app. If not, and you’re still seeing the malware pop-up, follow the steps below:
 
@@ -35,14 +35,14 @@ If possible, update directly through the app. If not, and you’re still seeing 
    ```console
    $ sudo launchctl bootout system/com.docker.vmnetd 2>/dev/null || true
    $ sudo launchctl bootout system/com.docker.socket 2>/dev/null || true
-    
+
    $ sudo rm /Library/PrivilegedHelperTools/com.docker.vmnetd || true
    $ sudo rm /Library/PrivilegedHelperTools/com.docker.socket || true
- 
+
    $ ps aux | grep -i docker | awk '{print $2}' | sudo xargs kill -9 2>/dev/null
    ```
-    
-2. Make sure the malware pop-up is permanently closed. 
+
+2. Make sure the malware pop-up is permanently closed.
 
 3. [Download and install version 4.37.2](/manuals/desktop/release-notes.md#4372).
 
@@ -64,10 +64,10 @@ If you can’t upgrade to the latest version and you’re seeing the malware pop
    ```console
    $ sudo launchctl bootout system/com.docker.vmnetd 2>/dev/null || true
    $ sudo launchctl bootout system/com.docker.socket 2>/dev/null || true
-    
+
    $ sudo rm /Library/PrivilegedHelperTools/com.docker.vmnetd || true
    $ sudo rm /Library/PrivilegedHelperTools/com.docker.socket || true
- 
+
    $ ps aux | grep docker | awk '{print $2}' | sudo xargs kill -9 2>/dev/null
    ```
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -9,7 +9,7 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Custom kernels on WSL 
+title: Custom kernels on WSL
 description: Using custom kernels with Docker Desktop on WSL 2
 keywords: wsl, docker desktop, custom kernel
 tags: [Best practices, troubleshooting]

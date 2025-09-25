@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Compose Build Specification
 description: Learn about the Compose Build Specification
 keywords: compose, compose specification, compose file reference, compose build specification
-aliases: 
+aliases:
  - /compose/compose-file/build/
 weight: 130
 ---
@@ -20,16 +20,16 @@ weight: 130
 
 In the former case, the whole path is used as a Docker context to execute a Docker build, looking for a canonical
 `Dockerfile` at the root of the directory. The path can be absolute or relative. If it is relative, it is resolved
-from the directory containing your Compose file. If it is absolute, the path prevents the Compose file from being portable so Compose displays a warning. 
+from the directory containing your Compose file. If it is absolute, the path prevents the Compose file from being portable so Compose displays a warning.
 
 In the latter case, build arguments can be specified, including an alternate `Dockerfile` location. The path can be absolute or relative. If it is relative, it is resolved
 from the directory containing your Compose file. If it is absolute, the path prevents the Compose file from being portable so Compose displays a warning.
 
 ## Using `build` and `image`
 
-When Compose is confronted with both a `build` subsection for a service and an `image` attribute, it follows the rules defined by the [`pull_policy`](services.md#pull_policy) attribute. 
+When Compose is confronted with both a `build` subsection for a service and an `image` attribute, it follows the rules defined by the [`pull_policy`](services.md#pull_policy) attribute.
 
-If `pull_policy` is missing from the service definition, Compose attempts to pull the image first and then builds from source if the image isn't found in the registry or platform cache. 
+If `pull_policy` is missing from the service definition, Compose attempts to pull the image first and then builds from source if the image isn't found in the registry or platform cache.
 
 
 ## Publishing built images
@@ -203,7 +203,7 @@ services:
     build: https://github.com/mycompany/webapp.git
 ```
 
-If not set explicitly, `context` defaults to project directory (`.`). 
+If not set explicitly, `context` defaults to project directory (`.`).
 
 ### `cache_from`
 
@@ -358,7 +358,7 @@ Set the network containers connect to for the `RUN` instructions during build.
 build:
   context: .
   network: host
-```  
+```
 
 ```yaml
 build:

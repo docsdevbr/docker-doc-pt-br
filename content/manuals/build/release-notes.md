@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -32,7 +32,7 @@ The full release note for this release is available
 
 ### Enhancements
 
-- The history inspection command `buildx history inspect` now supports custom formatting with `--format` flag and JSON formatting for machine-readable output. [docker/buildx#2964](https://github.com/docker/buildx/pull/2964) 
+- The history inspection command `buildx history inspect` now supports custom formatting with `--format` flag and JSON formatting for machine-readable output. [docker/buildx#2964](https://github.com/docker/buildx/pull/2964)
 - Support for CDI device entitlement in build and bake. [docker/buildx#2994](https://github.com/docker/buildx/pull/2994)
 - Supported CDI devices are now shown in the builder inspection. [docker/buildx#2983](https://github.com/docker/buildx/pull/2983)
 - When using [GitHub Cache backend `type=gha`](cache/backends/gha.md), the URL for the Version 2 or API is now read from the environment and sent to BuildKit. Version 2 backend requires BuildKit v0.20.0 or later. [docker/buildx#2983](https://github.com/docker/buildx/pull/2983), [docker/buildx#3001](https://github.com/docker/buildx/pull/3001)

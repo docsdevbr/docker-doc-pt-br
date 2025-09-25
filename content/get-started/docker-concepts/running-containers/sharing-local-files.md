@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,7 +13,7 @@ title: Sharing local files with containers
 weight: 4
 keywords: concepts, images, container, docker desktop
 description: This concept page will teach you the various storage options available in Docker and their common usage.
-aliases: 
+aliases:
  - /guides/docker-concepts/running-containers/sharing-local-files/
 ---
 {{< youtube-embed 2dAzsVg3Dek >}}
@@ -158,8 +158,8 @@ Using a bind mount, you can map the configuration file on your host computer to 
    {{< /tabs >}}
 
 
-   > [!TIP]  
-   > When using the `-v` or `--mount` flag in Windows PowerShell, you need to provide the absolute path to your directory instead of just `./`. This is because PowerShell handles relative paths differently from bash (commonly used in Mac and Linux environments).    
+   > [!TIP]
+   > When using the `-v` or `--mount` flag in Windows PowerShell, you need to provide the absolute path to your directory instead of just `./`. This is because PowerShell handles relative paths differently from bash (commonly used in Mac and Linux environments).
 
 
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -173,9 +173,9 @@ and the SBOM is exported to file `sbom.spdx.json` in SPDX format.
 ```console
 $ docker pull docker/scout-cli:latest
 latest: Pulling from docker/scout-cli
-257973a141f5: Download complete 
-1f2083724dd1: Download complete 
-5c8125a73507: Download complete 
+257973a141f5: Download complete
+1f2083724dd1: Download complete
+5c8125a73507: Download complete
 Digest: sha256:13318bb059b0f8b0b87b35ac7050782462b5d0ac3f96f9f23d165d8ed68d0894
 $ docker save docker/scout-cli:latest -o scout-cli.tar
 $ docker scout sbom --format spdx -o sbom.spdx.json archive://scout-cli.tar

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,11 +12,11 @@
 title: Secrets top-level elements
 description: Explore all the attributes the secrets top-level element can have.
 keywords: compose, compose specification, secrets, compose file reference
-aliases: 
+aliases:
  - /compose/compose-file/09-secrets/
 weight: 60
 ---
-Secrets are a flavor of [Configs](configs.md) focusing on sensitive data, with specific constraint for this usage. 
+Secrets are a flavor of [Configs](configs.md) focusing on sensitive data, with specific constraint for this usage.
 
 Services can only access secrets when explicitly granted by a [`secrets` attribute](services.md#secrets) within the `services` top-level element.
 
@@ -37,7 +37,7 @@ secrets:
     file: ./server.cert
 ```
 
-## Example 2 
+## Example 2
 
 `token` secret  is created as `<project_name>_token` when the application is deployed,
 by registering the content of the `OAUTH_TOKEN` environment variable as a platform secret.

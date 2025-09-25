@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -25,7 +25,7 @@ summary: |
   construção e envio de sua imagem para o Docker Hub.
   Isso permitirá que você compartilhe sua imagem facilmente com seu time.
 weight: 3
-aliases: 
+aliases:
  - /guides/getting-started/build-and-push-first-image/
 ---
 {{< youtube-embed 7ge1s5nAa34 >}}

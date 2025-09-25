@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Publish in the Marketplace
 description: Docker extension distribution
 keywords: Docker, extensions, publish
-aliases: 
+aliases:
  - /desktop/extensions-sdk/extensions/publish/
 weight: 50
 ---
@@ -37,7 +37,7 @@ Whenever you are [ready to publish](DISTRIBUTION.md) your extension in the Marke
 Before you submit your extension, it must pass the [validation](validate.md) checks.
 
 It is highly recommended that your extension follows the guidelines outlined in this section before submitting your
-extension. If you request a review from the Docker Extensions team and have not followed the guidelines, the review process may take longer. 
+extension. If you request a review from the Docker Extensions team and have not followed the guidelines, the review process may take longer.
 
 These guidelines don't replace Docker's terms of service or guarantee approval:
 - Review the [design guidelines](../design/design-guidelines.md)

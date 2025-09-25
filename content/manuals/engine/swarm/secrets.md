@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -183,7 +183,7 @@ real-world example, continue to
     $ docker service ps redis
 
     ID            NAME     IMAGE         NODE              DESIRED STATE  CURRENT STATE          ERROR  PORTS
-    bkna6bpn8r1a  redis.1  redis:alpine  ip-172-31-46-109  Running        Running 8 seconds ago  
+    bkna6bpn8r1a  redis.1  redis:alpine  ip-172-31-46-109  Running        Running 8 seconds ago
     ```
 
     If there were an error, and the task were failing and repeatedly restarting,
@@ -193,10 +193,10 @@ real-world example, continue to
     $ docker service ps redis
 
     NAME                      IMAGE         NODE  DESIRED STATE  CURRENT STATE          ERROR                      PORTS
-    redis.1.siftice35gla      redis:alpine  moby  Running        Running 4 seconds ago                             
-     \_ redis.1.whum5b7gu13e  redis:alpine  moby  Shutdown       Failed 20 seconds ago      "task: non-zero exit (1)"  
-     \_ redis.1.2s6yorvd9zow  redis:alpine  moby  Shutdown       Failed 56 seconds ago      "task: non-zero exit (1)"  
-     \_ redis.1.ulfzrcyaf6pg  redis:alpine  moby  Shutdown       Failed about a minute ago  "task: non-zero exit (1)"  
+    redis.1.siftice35gla      redis:alpine  moby  Running        Running 4 seconds ago
+     \_ redis.1.whum5b7gu13e  redis:alpine  moby  Shutdown       Failed 20 seconds ago      "task: non-zero exit (1)"
+     \_ redis.1.2s6yorvd9zow  redis:alpine  moby  Shutdown       Failed 56 seconds ago      "task: non-zero exit (1)"
+     \_ redis.1.ulfzrcyaf6pg  redis:alpine  moby  Shutdown       Failed about a minute ago  "task: non-zero exit (1)"
      \_ redis.1.wrny5v4xyps6  redis:alpine  moby  Shutdown       Failed 2 minutes ago       "task: non-zero exit (1)"
     ```
 
@@ -520,7 +520,7 @@ generate the site key and certificate, name the files `site.key` and
          sh -c "exec nginx -g 'daemon off;'"
     ```
 
-    The `site.key` and `site.crt` secrets use the short-hand syntax, without a 
+    The `site.key` and `site.crt` secrets use the short-hand syntax, without a
     custom `target` location set. The short syntax mounts the secrets in `/run/secrets/
     with the same name as the secret. Within the running containers, the following
     three files now exist:
@@ -814,7 +814,7 @@ line.
     $ docker service ps wordpress
 
     ID            NAME         IMAGE             NODE  DESIRED STATE  CURRENT STATE           ERROR  PORTS
-    aukx6hgs9gwc  wordpress.1  wordpress:latest  moby  Running        Running 52 seconds ago   
+    aukx6hgs9gwc  wordpress.1  wordpress:latest  moby  Running        Running 52 seconds ago
     ```
 
     At this point, you could actually revoke the WordPress service's access to
@@ -923,7 +923,7 @@ use it, then remove the old secret.
     $ docker service update \
          --secret-rm mysql_password \
          --secret-add source=mysql_password_v2,target=wp_db_password \
-         wordpress    
+         wordpress
     ```
 
 5.  Verify that WordPress works by browsing to http://localhost:30000/ on any

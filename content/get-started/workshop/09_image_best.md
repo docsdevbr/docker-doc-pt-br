@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -35,23 +35,23 @@ to create each layer within an image.
 
     ```plaintext
     IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-    a78a40cbf866        18 seconds ago      /bin/sh -c #(nop)  CMD ["node" "src/index.j…    0B                  
-    f1d1808565d6        19 seconds ago      /bin/sh -c yarn install --production            85.4MB              
-    a2c054d14948        36 seconds ago      /bin/sh -c #(nop) COPY dir:5dc710ad87c789593…   198kB               
-    9577ae713121        37 seconds ago      /bin/sh -c #(nop) WORKDIR /app                  0B                  
-    b95baba1cfdb        13 days ago         /bin/sh -c #(nop)  CMD ["node"]                 0B                  
-    <missing>           13 days ago         /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B                  
-    <missing>           13 days ago         /bin/sh -c #(nop) COPY file:238737301d473041…   116B                
-    <missing>           13 days ago         /bin/sh -c apk add --no-cache --virtual .bui…   5.35MB              
-    <missing>           13 days ago         /bin/sh -c #(nop)  ENV YARN_VERSION=1.21.1      0B                  
-    <missing>           13 days ago         /bin/sh -c addgroup -g 1000 node     && addu…   74.3MB              
-    <missing>           13 days ago         /bin/sh -c #(nop)  ENV NODE_VERSION=12.14.1     0B                  
-    <missing>           13 days ago         /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B                  
-    <missing>           13 days ago         /bin/sh -c #(nop) ADD file:e69d441d729412d24…   5.59MB   
+    a78a40cbf866        18 seconds ago      /bin/sh -c #(nop)  CMD ["node" "src/index.j…    0B
+    f1d1808565d6        19 seconds ago      /bin/sh -c yarn install --production            85.4MB
+    a2c054d14948        36 seconds ago      /bin/sh -c #(nop) COPY dir:5dc710ad87c789593…   198kB
+    9577ae713121        37 seconds ago      /bin/sh -c #(nop) WORKDIR /app                  0B
+    b95baba1cfdb        13 days ago         /bin/sh -c #(nop)  CMD ["node"]                 0B
+    <missing>           13 days ago         /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B
+    <missing>           13 days ago         /bin/sh -c #(nop) COPY file:238737301d473041…   116B
+    <missing>           13 days ago         /bin/sh -c apk add --no-cache --virtual .bui…   5.35MB
+    <missing>           13 days ago         /bin/sh -c #(nop)  ENV YARN_VERSION=1.21.1      0B
+    <missing>           13 days ago         /bin/sh -c addgroup -g 1000 node     && addu…   74.3MB
+    <missing>           13 days ago         /bin/sh -c #(nop)  ENV NODE_VERSION=12.14.1     0B
+    <missing>           13 days ago         /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
+    <missing>           13 days ago         /bin/sh -c #(nop) ADD file:e69d441d729412d24…   5.59MB
     ```
 
     Each of the lines represents a layer in the image. The display here shows the base at the bottom with
-    the newest layer at the top. Using this, you can also quickly see the size of each layer, helping 
+    the newest layer at the top. Using this, you can also quickly see the size of each layer, helping
     diagnose large images.
 
 2. You'll notice that several of the lines are truncated. If you add the `--no-trunc` flag, you'll get the
@@ -152,7 +152,7 @@ dependencies if there was a change to the `package.json`.
 
     First off, you should notice that the build was much faster. And, you'll see
     that several steps are using previously cached layers. Pushing and pulling
-    this image and updates to it will be much faster as well. 
+    this image and updates to it will be much faster as well.
 
 ## Multi-stage builds
 
@@ -176,7 +176,7 @@ COPY . .
 RUN mvn package
 
 FROM tomcat
-COPY --from=build /app/target/file.war /usr/local/tomcat/webapps 
+COPY --from=build /app/target/file.war /usr/local/tomcat/webapps
 ```
 
 In this example, you use one stage (called `build`) to perform the actual Java build using Maven. In the second

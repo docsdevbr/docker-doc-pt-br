@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,13 +12,13 @@
 title: Merge
 description: Learn about merging rules
 keywords: compose, compose specification, merge, compose file reference
-aliases: 
+aliases:
  - /compose/compose-file/13-merge/
 weight: 100
 ---
 {{% include "compose/merge.md" %}}
 
-These rules are outlined below. 
+These rules are outlined below.
 
 ## Mapping
 
@@ -66,7 +66,7 @@ services:
 ```yaml
 services:
   foo:
-    DNS: 
+    DNS:
       - 8.8.8.8
 ```
 
@@ -152,7 +152,7 @@ services:
 In addition to the previously described mechanism, an override Compose file can also be used to remove elements from your application model.
 For this purpose, the custom [YAML tag](https://yaml.org/spec/1.2.2/#24-tags) `!reset` can be set to
 override a value set by the overridden Compose file. A valid value for attribute must be provided,
-but will be ignored and target attribute will be set with type's default value or `null`. 
+but will be ignored and target attribute will be set with type's default value or `null`.
 
 For readability, it is recommended to explicitly set the attribute value to the null (`null`) or empty
 array `[]` (with `!reset null` or `!reset []`) so that it is clear that resulting attribute will be
@@ -165,9 +165,9 @@ services:
   app:
     image: myapp
     ports:
-      - "8080:80" 
+      - "8080:80"
     environment:
-      FOO: BAR           
+      FOO: BAR
 ```
 
 And a `compose.override.yaml` file:
@@ -212,20 +212,20 @@ To remove the original port, but expose a new one, the following override file i
 services:
   app:
     ports: !override
-      - "8443:443" 
+      - "8443:443"
 ```
 
-This results in: 
+This results in:
 
 ```yaml
 services:
   app:
     image: myapp
     ports:
-      - "8443:443" 
+      - "8443:443"
 ```
 
-If `!override` had not been used, both `8080:80` and `8443:443` would be exposed as per the [merging rules outlined above](#sequence). 
+If `!override` had not been used, both `8080:80` and `8443:443` would be exposed as per the [merging rules outlined above](#sequence).
 
 ## Additional resources
 

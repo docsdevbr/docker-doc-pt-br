@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,7 +19,7 @@ aliases:
 ---
 ## Extension capabilities
 
-An extension can have the following optional parts: 
+An extension can have the following optional parts:
 * A user interface in HTML or JavaScript, displayed in Docker Desktop Dashboard
 * A backend part that runs as a container
 * Executables deployed on the host machine.

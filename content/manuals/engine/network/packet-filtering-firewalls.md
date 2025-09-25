@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -29,9 +29,9 @@ containers or other services running on your host. This page describes how
 to achieve that, and the caveats you need to be aware of.
 
 > [!NOTE]
-> 
+>
 > Docker creates `iptables` rules for bridge networks.
-> 
+>
 > No `iptables` rules are created for `ipvlan`, `macvlan` or `host` networking.
 
 ## Docker and iptables chains
@@ -53,7 +53,7 @@ following custom `iptables` chains:
 * `DOCKER-ISOLATION-STAGE-1` and `DOCKER-ISOLATION-STAGE-2`
   * Rules to isolate Docker networks from each other.
 * `DOCKER-INGRESS`
-  * Rules related to Swarm networking. 
+  * Rules related to Swarm networking.
 
 In the `FORWARD` chain, Docker adds rules that unconditionally jump to the
 `DOCKER-USER`, `DOCKER-FORWARD` and `DOCKER-INGRESS` chains.
@@ -240,7 +240,7 @@ Then:
   outgoing packets will use the container's IP address.
 - For IPv4, using the default `nat` mode, the container's port 80 will be
   accessible via port 8080 on the host's IP addresses, as well as directly.
-  Connections originating from the container will masquerade, using the 
+  Connections originating from the container will masquerade, using the
   host's IP address.
 
 In `docker inspect`, this port mapping will be shown as follows. Note that

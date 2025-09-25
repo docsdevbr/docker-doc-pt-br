@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -28,7 +28,7 @@ To view a project’s README, open a new or existing project and then select the
 
 3. Optionally, use the menu in the top right corner of the logs to copy the logs to your clipboard or clear the logs.
 
-## View service-level information 
+## View service-level information
 
 With Docker Projects, you can view the following information about your containers within your project:
 
@@ -47,14 +47,14 @@ Select **Logs** to see logs from the containers in your project. You can also:
 - Use `Cmd + f`/`Ctrl + f` to open the search bar and find specific entries.
   Search matches are highlighted in yellow.
 - Press `Enter` or `Shift + Enter` to jump to the next or previous search match
-  respectively. 
+  respectively.
 - Use the **Copy** icon in the top right-hand corner to copy all the logs to
   your clipboard.
 - Automatically copy any logs content by highlighting a few lines or a section
   of the logs.
 - Use the **Clear terminal** icon in the top right-hand corner to clear the
-  logs terminal. 
-- Select and view external links that may be in your logs. 
+  logs terminal.
+- Select and view external links that may be in your logs.
 
 ### Image
 

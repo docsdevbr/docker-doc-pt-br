@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -26,14 +26,14 @@ Docker Compose supports working with [OCI artifacts](/manuals/docker-hub/repos/m
 
 ## Publish your Compose application as an OCI artifact
 
-To distribute your Compose application as an OCI artifact, you can use the `docker compose publish` command, to publish it to an OCI-compliant registry. 
+To distribute your Compose application as an OCI artifact, you can use the `docker compose publish` command, to publish it to an OCI-compliant registry.
 This allows others to deploy your application directly from the registry.
 
 The publish function supports most of the composition capabilities of Compose, like overrides, extends or include, [with some limitations](#limitations).
 
 ### General steps
 
-1. Navigate to your Compose application's directory.  
+1. Navigate to your Compose application's directory.
    Ensure you're in the directory containing your `compose.yml` file or that you are specifying your Compose file with the `-f` flag.
 
 2. In your terminal, sign in to your Docker account so you're authenticated with Docker Hub.
@@ -55,7 +55,7 @@ The publish function supports most of the composition capabilities of Compose, l
 
 ### Advanced publishing options
 
-When publishing, you can pass additional options: 
+When publishing, you can pass additional options:
 - `--oci-version`: Specify the OCI version (default is automatically determined).
 - `--resolve-image-digests`: Pin image tags to digests.
 - `--with-env`: Include environment variables in the published OCI artifact.
@@ -88,7 +88,7 @@ Service/Config  serviceB
 FOO=bar
 QUIX=
 BAR=baz
-Are you ok to publish these environment variables? [y/N]: 
+Are you ok to publish these environment variables? [y/N]:
 ```
 
 If you decline, the publish process stops without sending anything to the registry.
@@ -124,22 +124,22 @@ When you run an application from an OCI artifact, Compose may display warning me
 - A list of all environment variables used by the application
 - If your OCI artifact application is using another remote resources, for example via [`include`](/reference/compose-file/include/).
 
-```text 
+```text
 $ REGISTRY=myregistry.com docker compose -f oci://docker.io/username/my-compose-app:latest up
 
 Found the following variables in configuration:
 VARIABLE     VALUE                SOURCE        REQUIRED    DEFAULT
-REGISTRY     myregistry.com      command-line   yes         
+REGISTRY     myregistry.com      command-line   yes
 TAG          v1.0                environment    no          latest
 DOCKERFILE   Dockerfile          default        no          Dockerfile
-API_KEY      <unset>             none           no          
+API_KEY      <unset>             none           no
 
 Do you want to proceed with these variables? [Y/n]:y
 
 Warning: This Compose project includes files from remote sources:
 - oci://registry.example.com/stack:latest
 Remote includes could potentially be malicious. Make sure you trust the source.
-Do you want to continue? [y/N]: 
+Do you want to continue? [y/N]:
 ```
 
 If you agree to start the application, Compose displays the directory where all the resources from the OCI artifact have been downloaded:

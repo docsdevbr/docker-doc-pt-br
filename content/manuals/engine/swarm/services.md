@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -89,7 +89,7 @@ For more details about image tag resolution, see
 >
 > This example only works for a Windows container.
 
-Swarm now allows using a Docker config as a gMSA credential spec - a requirement for Active Directory-authenticated applications. This reduces the burden of distributing credential specs to the nodes they're used on. 
+Swarm now allows using a Docker config as a gMSA credential spec - a requirement for Active Directory-authenticated applications. This reduces the burden of distributing credential specs to the nodes they're used on.
 
 The following example assumes a gMSA and its credential spec (called credspec.json) already exists, and that the nodes being deployed to are correctly configured for the gMSA.
 
@@ -129,7 +129,7 @@ nodes are able to log into the registry and pull the image.
 
 ### Provide credential specs for managed service accounts
 
- In Enterprise Edition 3.0, security is improved through the centralized distribution and management of Group Managed Service Account(gMSA) credentials using Docker config functionality. Swarm now allows using a Docker config as a gMSA credential spec, which reduces the burden of distributing credential specs to the nodes on which they are used. 
+ In Enterprise Edition 3.0, security is improved through the centralized distribution and management of Group Managed Service Account(gMSA) credentials using Docker config functionality. Swarm now allows using a Docker config as a gMSA credential spec, which reduces the burden of distributing credential specs to the nodes on which they are used.
 
 > [!NOTE]
 >
@@ -140,8 +140,8 @@ nodes are able to log into the registry and pull the image.
  The `--credential-spec` must be in one of the following formats:
 
  - `file://<filename>`: The referenced file must be present in the `CredentialSpecs` subdirectory in the docker data directory, which defaults to `C:\ProgramData\Docker\` on Windows. For example, specifying `file://spec.json` loads `C:\ProgramData\Docker\CredentialSpecs\spec.json`.
-- `registry://<value-name>`: The credential spec is read from the Windows registry on the daemon’s host. 
-- `config://<config-name>`: The config name is automatically converted to the config ID in the CLI. 
+- `registry://<value-name>`: The credential spec is read from the Windows registry on the daemon’s host.
+- `config://<config-name>`: The config name is automatically converted to the config ID in the CLI.
 The credential spec contained in the specified `config` is used.
 
  The following simple example retrieves the gMSA name and JSON contents from your Active Directory (AD) instance:
@@ -154,8 +154,8 @@ $ echo $contents > contents.json
 
 Make sure that the nodes to which you are deploying are correctly configured for the gMSA.
 
- To use a config as a credential spec, create a Docker config in a credential spec file named `credpspec.json`. 
- You can specify any name for the name of the `config`. 
+ To use a config as a credential spec, create a Docker config in a credential spec file named `credpspec.json`.
+ You can specify any name for the name of the `config`.
 
 ```console
 $ docker config create --label com.docker.gmsa.name=mygmsa credspec credspec.json

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -39,12 +39,12 @@ computer, for example.
 
 2. Use [`docker push`](/reference/cli/docker/image/push.md) to push any
    images you have built locally and want to keep to the [Docker Hub registry](/manuals/docker-hub/_index.md).
-   
+
    Make sure to configure the [repository's visibility as "private"](/manuals/docker-hub/repos/_index.md)
-   for images that should not be publicly accessible. 
+   for images that should not be publicly accessible.
 
    Alternatively, use [`docker image save -o images.tar image1 [image2 ...]`](/reference/cli/docker/image/save.md)
-   to save any images you want to keep to a local tar file. 
+   to save any images you want to keep to a local tar file.
 
 After backing up your data, you can uninstall the current version of Docker Desktop
 and [install a different version](/manuals/desktop/release-notes.md) or reset Docker Desktop to factory defaults.

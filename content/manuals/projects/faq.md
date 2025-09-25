@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -28,4 +28,4 @@ Without a Compose file, Docker Projects doesn't have a way to understand how you
 
 ## What if my project doesn’t have a Compose file?
 
-If your project doesn't include a `compose.yml` file, you need to create one before opening it in Docker Projects. 
+If your project doesn't include a `compose.yml` file, you need to create one before opening it in Docker Projects.

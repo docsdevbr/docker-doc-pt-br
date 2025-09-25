@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -11,14 +11,14 @@
 
 title: Build, tag, and publish an image
 keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you how to build, tag, and publish an image to Docker Hub or any other registry 
+description: This concept page will teach you how to build, tag, and publish an image to Docker Hub or any other registry
 summary: |
   Building, tagging, and publishing Docker images are key steps in the
   containerization workflow. In this guide, you’ll learn how to create Docker
   images, how to tag those images with a unique identifier, and how to publish
   your image to a public registry.
 weight: 3
-aliases: 
+aliases:
  - /guides/docker-concepts/building-images/build-tag-and-publish-an-image/
 ---
 {{< youtube-embed chiiGLlYRlY >}}
@@ -196,7 +196,7 @@ Now that you have a repository on Docker Hub, it's time for you to build an imag
     ```plaintext
     IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
     f279389d5f01   8 seconds ago   CMD ["node" "./src/index.js"]                   0B        buildkit.dockerfile.v0
-    <missing>      8 seconds ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0 
+    <missing>      8 seconds ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0
     <missing>      8 seconds ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
     <missing>      4 days ago      /bin/sh -c #(nop)  CMD ["node"]                 0B
     <missing>      4 days ago      /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B

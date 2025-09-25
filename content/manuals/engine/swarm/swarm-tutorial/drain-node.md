@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -24,7 +24,7 @@ availability. `Drain` availability  prevents a node from receiving new tasks
 from the swarm manager. It also means the manager stops tasks running on the
 node and launches replica tasks on a node with `Active` availability.
 
-> [!IMPORTANT]: 
+> [!IMPORTANT]:
 >
 > Setting a node to `Drain` does not remove standalone containers from that node,
 > such as those created with `docker run`, `docker compose up`, or the Docker Engine

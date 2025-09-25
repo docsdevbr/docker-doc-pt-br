@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,7 +13,7 @@ title: Extension architecture
 linkTitle: Architecture
 description: Docker extension architecture
 keywords: Docker, extensions, sdk, metadata
-aliases: 
+aliases:
  - /desktop/extensions-sdk/architecture/
 weight: 50
 ---
@@ -28,7 +28,7 @@ Extensions can be composed of three (optional) components:
 
 ![Overview of the three components of an extension](images/extensions-architecture.png?w=600h=400)
 
-An extension doesn't necessarily need to have all these components, but at least one of them depending on the extension features. 
+An extension doesn't necessarily need to have all these components, but at least one of them depending on the extension features.
 To configure and run those components, Docker Desktop uses a `metadata.json` file. See the
 [metadata](metadata) section for more details.
 
@@ -37,7 +37,7 @@ To configure and run those components, Docker Desktop uses a `metadata.json` fil
 The frontend is basically a web application made from HTML, Javascript, and CSS. It can be built with a simple HTML
 file, some vanilla Javascript or any frontend framework, such as React or Vue.js.
 
-When Docker Desktop installs the extension, it extracts the UI folder from the extension image, as defined by the 
+When Docker Desktop installs the extension, it extracts the UI folder from the extension image, as defined by the
 `ui` section in the `metadata.json`. See the [ui metadata section](metadata.md#ui-section) for more details.
 
 Every time users click on the **Extensions** tab, Docker Desktop initializes the extension's UI as if it was the first time. When they navigate away from the tab, both the UI itself and all the sub-processes started by it (if any) are terminated.
@@ -76,7 +76,7 @@ attaches it to the Compose project. See the [ui metadata section](metadata.md#vm
 In some cases, a `compose.yaml` file can be used instead of an `image`. This is useful when the backend container
 needs more specific options, such as mounting volumes or requesting [capabilities](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
 that can't be expressed just with a Docker image. The `compose.yaml` file can also be used to add multiple containers
-needed by the extension, like a database or a message broker. 
+needed by the extension, like a database or a message broker.
 Note that, if the Compose file defines many services, the SDK can only contact the first of them.
 
 > [!NOTE]

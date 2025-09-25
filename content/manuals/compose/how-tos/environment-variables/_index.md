@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -18,7 +18,7 @@ keywords: compose, orchestration, environment, env file
 aliases:
 - /compose/environment-variables/
 ---
-By leveraging environment variables and interpolation in Docker Compose, you can create versatile and reusable configurations, making your Dockerized applications easier to manage and deploy across different environments. 
+By leveraging environment variables and interpolation in Docker Compose, you can create versatile and reusable configurations, making your Dockerized applications easier to manage and deploy across different environments.
 
 > [!TIP]
 >
@@ -30,6 +30,6 @@ This section covers:
 - [How environment variable precedence works within your container's environment](envvars-precedence.md).
 - [Pre-defined environment variables](envvars.md).
 
-It also covers: 
+It also covers:
 - How [interpolation](variable-interpolation.md) can be used to set variables within your Compose file and how it relates to a container's environment.
 - Some [best practices](best-practices.md).

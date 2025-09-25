@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/main/LICENSE
 
 title: Virtual Machine Manager for Docker Desktop on Mac
-linkTitle: Virtual Machine Manager 
+linkTitle: Virtual Machine Manager
 keywords: virtualization software, resource allocation, mac, docker desktop, vm monitoring, vm performance, apple silicon
 description: Discover Docker Desktop for Mac's Virtual Machine Manager (VMM) options, including the new Docker VMM for Apple Silicon, offering enhanced performance and efficiency
 weight: 110
@@ -52,9 +52,9 @@ The Apple Virtualization Framework is a stable and well-established option for m
 
 > [!NOTE]
 >
-> QEMU will be deprecated in a future release. 
+> QEMU will be deprecated in a future release.
 
-QEMU is a legacy virtualization option for Apple Silicon Macs, primarily supported for older use cases. 
+QEMU is a legacy virtualization option for Apple Silicon Macs, primarily supported for older use cases.
 
 Docker recommends transitioning to newer alternatives, such as Docker VMM or the Apple Virtualization Framework, as they offer superior performance and ongoing support. Docker VMM, in particular, offers substantial speed improvements and a more efficient development environment, making it a compelling choice for developers working with Apple Silicon.
 

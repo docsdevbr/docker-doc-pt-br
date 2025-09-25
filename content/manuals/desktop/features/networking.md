@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -66,15 +66,15 @@ See [Proxies](/manuals/desktop/settings-and-maintenance/settings.md#proxies)
 >
 > Requires a Business subscription.
 
-SOCKS (Socket Secure) is a protocol that facilitates the routing of network packets between a client and a server through a proxy server. It provides a way to enhance privacy, security, and network performance for users and applications. 
+SOCKS (Socket Secure) is a protocol that facilitates the routing of network packets between a client and a server through a proxy server. It provides a way to enhance privacy, security, and network performance for users and applications.
 
-You can enable SOCKS proxy support to allow outgoing requests, such as pulling images, and access Linux container backend IPs from the host. 
+You can enable SOCKS proxy support to allow outgoing requests, such as pulling images, and access Linux container backend IPs from the host.
 
 To enable and set up SOCKS proxy support:
 
-1. Navigate to the **Resources** tab in **Settings**. 
+1. Navigate to the **Resources** tab in **Settings**.
 2. From the dropdown menu select **Proxies**.
-3. Switch on the **Manual proxy configuration** toggle. 
+3. Switch on the **Manual proxy configuration** toggle.
 4. In the **Secure Web Server HTTPS** box, paste your `socks5://host:port` URL.
 
 ## Networking features for Mac and Linux
@@ -131,7 +131,7 @@ ping the Windows containers.
 This is because the Docker `bridge` network is not reachable from the host.
 However if you are a Windows user, per-container IP addressing is possible with Windows containers.
 
-## Use cases and workarounds 
+## Use cases and workarounds
 
 ### I want to connect from a container to a service on the host
 

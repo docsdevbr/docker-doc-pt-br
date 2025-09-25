@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -63,7 +63,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
         with:
           buildkitd-flags: --debug
-      
+
       - name: Build
         uses: docker/build-push-action@v6
 ```
@@ -216,7 +216,7 @@ jobs:
           host: graviton2
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           private-key-name: aws_graviton2
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
@@ -276,12 +276,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
           driver: kubernetes
-      
+
       - name: Build
         run: |
           buildx build .
@@ -314,17 +314,17 @@ jobs:
       - name: Set up builder1
         uses: docker/setup-buildx-action@v3
         id: builder1
-      
+
       - name: Set up builder2
         uses: docker/setup-buildx-action@v3
         id: builder2
-      
+
       - name: Build against builder1
         uses: docker/build-push-action@v6
         with:
           builder: ${{ steps.builder1.outputs.name }}
           target: mytarget1
-      
+
       - name: Build against builder2
         uses: docker/build-push-action@v6
         with:

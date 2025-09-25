@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -20,7 +20,7 @@ aliases:
 ---
 {{< summary-bar feature_name="Intune" >}}
 
-Learn how to deploy Docker Desktop for Windows and Mac using Intune, Microsoft's cloud-based device management tool. 
+Learn how to deploy Docker Desktop for Windows and Mac using Intune, Microsoft's cloud-based device management tool.
 
 {{< tabs >}}
 {{< tab name="Windows" >}}
@@ -28,9 +28,9 @@ Learn how to deploy Docker Desktop for Windows and Mac using Intune, Microsoft's
 1. Sign in to your Intune admin center.
 2. Add a new app. Select **Apps**, then **Windows**, then **Add**.
 3. For the app type, select **Windows app (Win32)**
-4. Select the `intunewin` package. 
-5. Complete any relevant details such as the description, publisher, or app version and then select **Next**. 
-6. Optional: On the **Program** tab, you can update the **Install command** field to suit your needs. The field is pre-populated with `msiexec /i "DockerDesktop.msi" /qn`. See the [Common installation scenarios](msi-install-and-configure.md) for examples on the changes you can make. 
+4. Select the `intunewin` package.
+5. Complete any relevant details such as the description, publisher, or app version and then select **Next**.
+6. Optional: On the **Program** tab, you can update the **Install command** field to suit your needs. The field is pre-populated with `msiexec /i "DockerDesktop.msi" /qn`. See the [Common installation scenarios](msi-install-and-configure.md) for examples on the changes you can make.
 
    > [!TIP]
    >
@@ -38,9 +38,9 @@ Learn how to deploy Docker Desktop for Windows and Mac using Intune, Microsoft's
    >
    > This is because the Docker Desktop installer installs Windows features depending on your engine selection and also updates the membership of the `docker-users` local group.
    >
-   > You may also want to set Intune to determine behaviour based on return codes and watch for a return code of `3010`. 
+   > You may also want to set Intune to determine behaviour based on return codes and watch for a return code of `3010`.
 
-7. Complete the rest of the tabs and then review and create the app. 
+7. Complete the rest of the tabs and then review and create the app.
 
 {{< /tab >}}
 {{< tab name="Mac" >}}

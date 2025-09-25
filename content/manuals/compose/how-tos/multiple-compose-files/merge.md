@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -26,13 +26,13 @@ contain configuration overrides for existing services or entirely new
 services.
 
 If a service is defined in both files, Compose merges the configurations using
-the rules described below and in the 
+the rules described below and in the
 [Compose Specification](/reference/compose-file/merge.md).
 
 ## How to merge multiple Compose files
 
 To use multiple override files, or an override file with a different name, you
-can either use the pre-defined [COMPOSE_FILE](../environment-variables/envvars.md#compose_file) environment variable, or use the `-f` option to specify the list of files. 
+can either use the pre-defined [COMPOSE_FILE](../environment-variables/envvars.md#compose_file) environment variable, or use the `-f` option to specify the list of files.
 
 Compose merges files in
 the order they're specified on the command line. Subsequent files may merge, override, or
@@ -55,7 +55,7 @@ webapp:
     - "/data"
 ```
 
-The `compose.admin.yaml` may also specify this same service: 
+The `compose.admin.yaml` may also specify this same service:
 
 ```yaml
 webapp:
@@ -78,7 +78,7 @@ webapp:
     - DEBUG=1
 ```
 
-## Merging rules 
+## Merging rules
 
 - Paths are evaluated relative to the base file. When you use multiple Compose files, you must make sure all paths in the files are relative to the base Compose file (the first Compose file specified
 with `-f`). This is required because override files need not be valid
@@ -231,13 +231,13 @@ service, the local value replaces or extends the original value.
             - ./local:/baz
       ```
 
-For more merging rules, see [Merge and override](/reference/compose-file/merge.md) in the Compose Specification. 
+For more merging rules, see [Merge and override](/reference/compose-file/merge.md) in the Compose Specification.
 
 ### Additional information
 
 - Using `-f` is optional. If not provided, Compose searches the working directory and its parent directories for a `compose.yaml` and a `compose.override.yaml` file. You must supply at least the `compose.yaml` file. If both files exist on the same directory level, Compose combines them into a single configuration.
 
-- You can use a `-f` with `-` (dash) as the filename to read the configuration from `stdin`. For example: 
+- You can use a `-f` with `-` (dash) as the filename to read the configuration from `stdin`. For example:
    ```console
    $ docker compose -f - <<EOF
      webapp:
@@ -250,9 +250,9 @@ For more merging rules, see [Merge and override](/reference/compose-file/merge.m
         - DEBUG=1
      EOF
    ```
-   
+
    When `stdin` is used, all paths in the configuration are relative to the current working directory.
-   
+
 - You can use the `-f` flag to specify a path to a Compose file that is not located in the current directory, either from the command line or by setting up a [COMPOSE_FILE environment variable](../environment-variables/envvars.md#compose_file) in your shell or in an environment file.
 
    For example, if you are running the [Compose Rails sample](https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/README.md), and have a `compose.yaml` file in a directory called `sandbox/rails`. You can use a command like [docker compose pull](/reference/cli/docker/compose/pull.md) to get the postgres image for the `db` service from anywhere by using the `-f` flag as follows: `docker compose -f ~/sandbox/rails/compose.yaml pull db`
@@ -363,12 +363,12 @@ This deploys all three services using the configuration in
 `compose.yaml` and `compose.prod.yaml` but not the
 dev configuration in `compose.override.yaml`.
 
-For more information, see [Using Compose in production](../production.md). 
+For more information, see [Using Compose in production](../production.md).
 
 ## Limitations
 
 Docker Compose supports relative paths for the many resources to be included in the application model: build context for service images, location of file defining environment variables, path to a local directory used in a bind-mounted volume.
-With such a constraint, code organization in a monorepo can become hard as a natural choice would be to have dedicated folders per team or component, but then the Compose files relative paths become irrelevant. 
+With such a constraint, code organization in a monorepo can become hard as a natural choice would be to have dedicated folders per team or component, but then the Compose files relative paths become irrelevant.
 
 ## Reference information
 

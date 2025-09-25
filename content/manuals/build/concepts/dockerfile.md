@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -203,7 +203,7 @@ use the command to install the flask web framework.
 
 The next instruction uses the
 [`COPY` instruction](/reference/dockerfile.md#copy) to copy the
-`hello.py` file from the local build context into the root directory of our image. 
+`hello.py` file from the local build context into the root directory of our image.
 
 ```dockerfile
 COPY hello.py /

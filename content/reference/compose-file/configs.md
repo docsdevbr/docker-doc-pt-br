@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -12,7 +12,7 @@
 title: Configs top-level elements
 description: Explore all the attributes the configs top-level element can have.
 keywords: compose, compose specification, configs, compose file reference
-aliases: 
+aliases:
  - /compose/compose-file/08-configs/
 weight: 50
 ---
@@ -71,7 +71,7 @@ configs:
 
 ## Example 3
 
-External configs lookup can also use a distinct key by specifying a `name`. 
+External configs lookup can also use a distinct key by specifying a `name`.
 
 The following
 example modifies the previous one to look up a config using the parameter `HTTP_CONFIG_KEY`. The actual lookup key is set at deployment time by the [interpolation](interpolation.md) of

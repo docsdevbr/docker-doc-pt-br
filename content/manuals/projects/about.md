@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -10,11 +10,11 @@
 # https://github.com/docker/docs/blob/main/LICENSE
 
 title: How it works
-description: Understand how Docker Projects works 
+description: Understand how Docker Projects works
 keywords: docker projects
 weight: 10
 ---
-Docker Projects requires a Compose file (`compose.yml`) to define your application's services, networks, and configurations. When you open a project, Docker Projects automatically detects the Compose file, allowing you to configure and run services with pre-set commands. 
+Docker Projects requires a Compose file (`compose.yml`) to define your application's services, networks, and configurations. When you open a project, Docker Projects automatically detects the Compose file, allowing you to configure and run services with pre-set commands.
 
 By integrating with Docker Compose, Docker Projects ensures a consistent, easy-to-manage workflow for both individual developers and teams. Whether you're starting a new project, configuring it, or collaborating with a team, Docker Projects keeps the process simple.
 

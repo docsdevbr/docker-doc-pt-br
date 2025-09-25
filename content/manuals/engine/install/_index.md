@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -67,7 +67,7 @@ see: [Overview of Docker Desktop](/manuals/desktop/_index.md).
 > While the following instructions may work, Docker doesn't test or verify
 > installation on distribution derivatives.
 
-- If you use Debian derivatives such as "BunsenLabs Linux", "Kali Linux" or 
+- If you use Debian derivatives such as "BunsenLabs Linux", "Kali Linux" or
   "LMDE" (Debian-based Mint) should follow the installation instructions for
   [Debian](debian.md), substitute the version of your distribution for the
   corresponding Debian release. Refer to the documentation of your distribution to find

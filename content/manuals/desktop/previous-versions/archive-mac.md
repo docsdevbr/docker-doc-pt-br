@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -289,7 +289,7 @@ This page contains release notes for older versions of Docker Desktop for Mac.
 
 ### Docker Community Edition 17.03.0-ce-mac1, 2017-03-02- Renamed to Docker Community Edition
 
-**New** 
+**New**
 
 - Integration with Docker Cloud: control remote Swarms from the local CLI and view your repositories. This feature is going to be rolled out to all users progressively
 - Docker will now securely store your IDs in the macOS keychain
@@ -549,7 +549,7 @@ We did not distribute a 1.12.4 stable release
 
 * HyperKit updated with `dtrace` support and lock fixes
 
-### Docker for Mac 2016-08-11 1.12.0-afix release contains osxfs improvements. 
+### Docker for Mac 2016-08-11 1.12.0-afix release contains osxfs improvements.
 
 The fixed issues may have
 been seen as failures with apt-get and npm in containers, missed inotify

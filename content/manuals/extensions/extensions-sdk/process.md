@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -16,7 +16,7 @@ aliases:
  - /desktop/extensions-sdk/process/
 weight: 10
 ---
-This documentation is structured so that it matches the steps you need to take when creating your extension. 
+This documentation is structured so that it matches the steps you need to take when creating your extension.
 
 There are two main parts to creating a Docker extension:
 
@@ -26,7 +26,7 @@ There are two main parts to creating a Docker extension:
 > [!NOTE]
 >
 > You do not need to pay to create a Docker extension. The [Docker Extension SDK](https://www.npmjs.com/package/@docker/extension-api-client) is licensed under the Apache 2.0 License and is free to use. Anyone can create new extensions and share them without constraints.
-> 
+>
 > There is also no constraint on how each extension should be licensed, this is up to you to decide when creating a new extension.
 
 ## Part one: Build the foundations

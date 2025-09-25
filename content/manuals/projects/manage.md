@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -30,7 +30,7 @@ weight: 50
 
 ## Remove a project from Docker Desktop
 
-If a project is associated with a Git repository, you can remove it from Docker Desktop. When a project is deleted, you can no longer run the project from the **Projects** view, but its run configuration still exists remotely in the cloud. 
+If a project is associated with a Git repository, you can remove it from Docker Desktop. When a project is deleted, you can no longer run the project from the **Projects** view, but its run configuration still exists remotely in the cloud.
 
 This means that you can later [open the project](/manuals/projects/open.md#open-an-existing-remote-project) and associate it with the remote run configuration without having to specify the run command again.
 None of your local code is deleted when removing a project from Docker Desktop.

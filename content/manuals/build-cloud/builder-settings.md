@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -24,7 +24,7 @@ To make disk allocation changes, navigate to **Builder settings** in Docker Buil
 Any changes take effect immediately.
 
 > [!TIP]
-> 
+>
 > If you build very large images, consider allocating less storage for caching.
 
 ## Private resource access
@@ -35,7 +35,7 @@ For example, if your organization hosts a private [PyPI](https://pypi.org/) repo
 
 To enable your cloud builders to access your private resources, enter the host name and port of your private resource and then select **Add**.
 
-### Authentication 
+### Authentication
 
 If your internal artifacts require authentication, make sure that you
 authenticate with the repository either before or during the build. For

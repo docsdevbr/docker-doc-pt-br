@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -15,7 +15,7 @@ title: Troubleshoot topics for Docker Desktop
 linkTitle: Common topics
 toc_max: 3
 tags: [ Troubleshooting ]
-weight: 10 
+weight: 10
 aliases:
  - /desktop/troubleshoot/topics/
  - /manuals/desktop/troubleshoot-and-support/troubleshoot/workarounds/
@@ -30,9 +30,9 @@ aliases:
 
 ## Topics for all platforms
 
-### Certificates not set up correctly 
+### Certificates not set up correctly
 
-#### Error message 
+#### Error message
 
 When attempting to pull from a registry using `docker run`, you may encounter the following error:
 
@@ -47,12 +47,12 @@ Additionally, logs from the registry may show:
 2017/06/20 18:15:30 http: TLS handshake error from 192.168.203.139:52883: tls: first record does not look like a TLS handshake
 ```
 
-#### Possible causes 
+#### Possible causes
 
 - Docker Desktop ignores certificates listed under insecure registries.
 - Client certificates are not sent to insecure registries, causing handshake failures.
 
-#### Solution 
+#### Solution
 
 - Ensure that your registry is properly configured with valid SSL certificates.
 - If your registry is self-signed, configure Docker to trust the certificate by adding it to Docker’s certificates directory (/etc/docker/certs.d/ on Linux).
@@ -97,7 +97,7 @@ Enable file sharing in Docker Desktop for Mac and Linux:
 
 Enable file sharing in Docker Desktop for Windows:
 
-1. From **Settings**, select **Shared Folders**. 
+1. From **Settings**, select **Shared Folders**.
 2. Share the folder that contains the Dockerfile and volume mount paths.
 
 ### `port already allocated` errors
@@ -126,7 +126,7 @@ listen tcp:0.0.0.0:8080: bind: address is already in use
 To discover the identity of this software, either:
 - Use the `resmon.exe` GUI, select **Network** and then **Listening Ports**
 - In PowerShell, use `netstat -aon | find /i "listening "` to discover the PID of the process
-currently using the port (the PID is the number in the rightmost column). 
+currently using the port (the PID is the number in the rightmost column).
 
 Then, decide whether to shut the other process down, or to use a different port in your
 Docker app.
@@ -135,7 +135,7 @@ Docker app.
 
 ### Docker Desktop fails to start on Mac or Linux platforms
 
-#### Error message 
+#### Error message
 
 Docker fails to start due to Unix domain socket path length limitations:
 
@@ -167,7 +167,7 @@ Ensure your username is short enough to keep paths within the allowed limit:
 
 ### Persistent notification telling me an application has changed my Desktop configurations
 
-#### Cause 
+#### Cause
 
 You receive this notification because the Configuration integrity check feature has detected that a third-party application has altered your Docker Desktop configuration. This usually happens due to incorrect or missing symlinks. The notification ensures you are aware of these changes so you can review and repair any potential issues to maintain system reliability.
 
@@ -177,7 +177,7 @@ Opening the notification presents a pop-up window which provides detailed inform
 
 If you choose to ignore the notification, it will be shown again only at the next Docker Desktop startup. If you choose to repair your configuration, you won't be prompted again.
 
-If you want to switch off Configuration integrity check notifications, navigate to Docker Desktop's settings and in the **General** tab, clear the **Automatically check configuration** setting. 
+If you want to switch off Configuration integrity check notifications, navigate to Docker Desktop's settings and in the **General** tab, clear the **Automatically check configuration** setting.
 
 ### `com.docker.vmnetd` is still running after I quit the app
 
@@ -195,7 +195,7 @@ framework](https://developer.apple.com/library/mac/documentation/DriversKernelHa
 
 #### Solution
 
-Check that: 
+Check that:
 
  - You've installed the correct Docker Desktop for your architecture
  - Your Mac supports Apple's Hypervisor framework. To check if your Mac supports the Hypervisor framework, run the following command in a terminal window.
@@ -248,24 +248,24 @@ add Docker to the exclusions/exceptions in your antivirus software.
 
 ### Permissions errors on data directories for shared volumes
 
-#### Cause 
+#### Cause
 
 When sharing files from Windows, Docker Desktop sets permissions on [shared volumes](/manuals/desktop/settings-and-maintenance/settings.md#file-sharing)
 to a default value of [0777](https://chmodcommand.com/chmod-0777/)
 (`read`, `write`, `execute` permissions for `user` and for `group`).
 
-The default permissions on shared volumes are not configurable. 
+The default permissions on shared volumes are not configurable.
 
 #### Solution
 
 If you are
 working with applications that require different permissions, either:
- - Use non-host-mounted volumes  
+ - Use non-host-mounted volumes
  - Find a way to make the applications work with the default file permissions
 
 ### Unexpected syntax errors, use Unix style line endings for files in containers
 
-#### Cause 
+#### Cause
 
 Docker containers expect Unix-style line `\n` endings, not Windows style: `\r\n`. This includes files referenced at the command line for builds and in RUN commands in Docker files.
 
@@ -275,10 +275,10 @@ commands ultimately get passed to Unix commands inside a Unix based container
 (for example, a shell script passed to `/bin/sh`). If Windows style line endings
 are used, `docker run` fails with syntax errors.
 
-#### Solution 
+#### Solution
 
  - Convert files to Unix-style line endings using:
-   
+
    ```console
    $ dos2unix script.sh
    ```
@@ -301,7 +301,7 @@ It adds a `/work` directory to the target container to mirror the specified path
 
 #### Solution
 
-Update the source path. For example, if you are using 
+Update the source path. For example, if you are using
 the legacy Windows shell (`cmd.exe`), you can use the following command:
 
 ```console
@@ -334,11 +334,11 @@ docker: Error response from daemon: OCI runtime create failed: invalid mount {De
 #### Cause
 
 Git Bash (or MSYS) provides a Unix-like environment on Windows. These tools apply their own
-preprocessing on the command line. 
+preprocessing on the command line.
 
 This affects `$(pwd)`, colon-separated paths, and tilde (`~`)
 
-Also, the `\` character has a special meaning in Git Bash. 
+Also, the `\` character has a special meaning in Git Bash.
 
 #### Solution
 
@@ -404,7 +404,7 @@ Performance tab on the Task Manager. Alternatively, you can type `systeminfo` in
 ![Task Manager](../../images/virtualization-enabled.png)
 
 If you manually uninstall Hyper-V, WSL 2 or turn off virtualization,
-Docker Desktop cannot start. 
+Docker Desktop cannot start.
 
 To turn on nested virtualization, see [Run Docker Desktop for Windows in a VM or VDI environment](/manuals/desktop/setup/vm-vdi.md#turn-on-nested-virtualization).
 
@@ -412,7 +412,7 @@ To turn on nested virtualization, see [Run Docker Desktop for Windows in a VM or
 
 If you have completed the previous steps and are still experiencing
 Docker Desktop startup issues, this could be because the Hypervisor is installed,
-but not launched during Windows startup. Some tools (such as older versions of 
+but not launched during Windows startup. Some tools (such as older versions of
 Virtual Box) and video game installers turn off hypervisor on boot. To turn it back on:
 
 1. Open an administrative console prompt.

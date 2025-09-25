@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -186,7 +186,7 @@ isso em seções posteriores.
    (troque o nome de pessoa usuária pelo seu nome de pessoa usuária):
 
     ```console
-    docker run -d -p 8080:8080 <YOUR_DOCKER_USERNAME>/docker-quickstart 
+    docker run -d -p 8080:8080 <YOUR_DOCKER_USERNAME>/docker-quickstart
     ```
 
    Você pode verificar se o contêiner está funcionando visitando
@@ -196,21 +196,21 @@ isso em seções posteriores.
    adicionar uma _tag_ à imagem do Docker.
    As _tags_ do Docker permitem que você rotule e versione suas imagens.
 
-    ```console 
-    docker tag <YOUR_DOCKER_USERNAME>/docker-quickstart <YOUR_DOCKER_USERNAME>/docker-quickstart:1.0 
+    ```console
+    docker tag <YOUR_DOCKER_USERNAME>/docker-quickstart <YOUR_DOCKER_USERNAME>/docker-quickstart:1.0
     ```
 
 7. Por fim, é hora de enviar a imagem recém-criada para o seu repositório do
    Docker Hub usando o comando [`docker push`](/reference/cli/docker/image/push/):
 
-    ```console 
+    ```console
     docker push <YOUR_DOCKER_USERNAME>/docker-quickstart:1.0
     ```
 
 8. Abra o [Docker Hub](https://hub.docker.com) e navegue até seu repositório.
    Navegue até a seção **Tags** e veja sua imagem recém-enviada.
 
-    ![Captura de tela da página do Docker Hub que exibe a tag da imagem recém-adicionada](images/dockerhub-tags.webp?border=true) 
+    ![Captura de tela da página do Docker Hub que exibe a tag da imagem recém-adicionada](images/dockerhub-tags.webp?border=true)
 
 Neste tutorial, você criou uma conta do Docker, criou seu primeiro repositório
 do Docker Hub e construiu, adicionou uma _tag_ e enviou uma imagem de contêiner

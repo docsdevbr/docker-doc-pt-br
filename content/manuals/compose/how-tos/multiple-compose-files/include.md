@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,7 +19,7 @@ aliases:
 
 {{% include "compose/include.md" %}}
 
-The [`include` top-level element](/reference/compose-file/include.md) helps to reflect the engineering team responsible for the code directly in the config file's organization. It also solves the relative path problem that [`extends`](extends.md) and [merge](merge.md) present. 
+The [`include` top-level element](/reference/compose-file/include.md) helps to reflect the engineering team responsible for the code directly in the config file's organization. It also solves the relative path problem that [`extends`](extends.md) and [merge](merge.md) present.
 
 Each path listed in the `include` section loads as an individual Compose application model, with its own project directory, in order to resolve relative paths.
 
@@ -41,7 +41,7 @@ services:
       - serviceB #use serviceB directly as if it was declared in this Compose file
 ```
 
-`my-compose-include.yaml` manages `serviceB` which details some replicas, web UI to inspect data, isolated networks, volumes for data persistence, etc. The application relying on `serviceB` doesn’t need to know about the infrastructure details, and consumes the Compose file as a building block it can rely on. 
+`my-compose-include.yaml` manages `serviceB` which details some replicas, web UI to inspect data, isolated networks, volumes for data persistence, etc. The application relying on `serviceB` doesn’t need to know about the infrastructure details, and consumes the Compose file as a building block it can rely on.
 
 This means the team managing `serviceB` can refactor its own database component to introduce additional services without impacting any dependent teams. It also means that the dependent teams don't need to include additional flags on each Compose command they run.
 
@@ -52,7 +52,7 @@ unexpected conflicts with resources defined by the included compose file author.
 included model. This can be achieved by adding an override file to the include directive:
 ```yaml
 include:
-  - path : 
+  - path :
       - third-party/compose.yaml
       - override.yaml  # local override for third-party model
 ```

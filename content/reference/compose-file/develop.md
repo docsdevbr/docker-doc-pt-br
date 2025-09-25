@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -16,7 +16,7 @@ aliases:
  - /compose/compose-file/develop/
 weight: 150
 ---
-> [!NOTE] 
+> [!NOTE]
 >
 > Develop is an optional part of the Compose Specification. It is available with Docker Compose version 2.22.0 and later.
 
@@ -32,7 +32,7 @@ services:
     image: example/webapp
     build: ./webapp
     develop:
-      watch: 
+      watch:
         # sync static content
         - path: ./webapp/html
           action: sync
@@ -44,7 +44,7 @@ services:
     image: example/backend
     build: ./backend
     develop:
-      watch: 
+      watch:
         # rebuild image and recreate service
         - path: ./backend/src
           action: rebuild
@@ -58,7 +58,7 @@ The `develop` subsection defines configuration options that are applied by Compo
 
 ### `watch`
 
-The `watch` attribute defines a list of rules that control automatic service updates based on local file changes. `watch` is a sequence, each individual item in the sequence defines a rule to be applied by 
+The `watch` attribute defines a list of rules that control automatic service updates based on local file changes. `watch` is a sequence, each individual item in the sequence defines a rule to be applied by
 Compose to monitor source code for changes. For more information, see [Use Compose Watch](/manuals/compose/how-tos/file-watch.md).
 
 #### `action`
@@ -88,7 +88,7 @@ services:
   frontend:
     image: ...
     develop:
-      watch: 
+      watch:
         # sync content then run command to reload service without interruption
         - path: ./etc/config
           action: sync+exec
@@ -100,11 +100,11 @@ services:
 #### `ignore`
 
 The `ignore` attribute can be used to define a list of patterns for paths to be ignored. Any updated file
-that matches a pattern, or belongs to a folder that matches a pattern, won't trigger services to be re-created. 
-The syntax is the same as `.dockerignore` file: 
+that matches a pattern, or belongs to a folder that matches a pattern, won't trigger services to be re-created.
+The syntax is the same as `.dockerignore` file:
 
-- `*` matches 0 or more characters in a filename. 
-- `?` matches a single character in filename. 
+- `*` matches 0 or more characters in a filename.
+- `?` matches a single character in filename.
 - `*/*` matches two nested folders with arbitrary names
 - `**` matches an arbitrary number of nested folders
 
@@ -123,10 +123,10 @@ services:
   backend:
     image: example/backend
     develop:
-      watch: 
+      watch:
         # rebuild image and recreate service
         - path: ./src
-          include: *.go  
+          include: *.go
           action: rebuild
 ```
 

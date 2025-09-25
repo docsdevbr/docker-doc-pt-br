@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -18,7 +18,7 @@ aliases:
 ---
 In some cases, your extension may need to invoke some command from the host. For example, you
 might want to invoke the CLI of your cloud provider to create a new resource, or the CLI of a tool your extension
-provides, or even a shell script that you want to run on the host. 
+provides, or even a shell script that you want to run on the host.
 
 You could do that by executing the CLI from a container with the extension SDK. But this CLI needs to access the host's filesystem, which isn't easy nor fast if it runs in a container.
 
@@ -30,9 +30,9 @@ Learn more about extensions [architecture](../architecture/_index.md).
 
 > [!NOTE]
 >
-> Only executables shipped as part of the extension can be invoked with the SDK. 
+> Only executables shipped as part of the extension can be invoked with the SDK.
 
-In this example, the CLI is a simple `Hello world` script that must be invoked with a parameter and returns a 
+In this example, the CLI is a simple `Hello world` script that must be invoked with a parameter and returns a
 string.
 
 ## Add the executables to the extension
@@ -97,7 +97,7 @@ export function App() {
     };
     run();
   }, [ddClient]);
-    
+
   return (
     <div>
       {hello}

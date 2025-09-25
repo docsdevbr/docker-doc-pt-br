@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -126,10 +126,10 @@ $ docker compose run db-migrations
 ```
 
 But keep in mind that `docker compose` only automatically starts the
-profiles of the services on the command line and not of any dependencies. 
+profiles of the services on the command line and not of any dependencies.
 
 This means that any other services the targeted service `depends_on` should either:
-- Share a common profile 
+- Share a common profile
 - Always be started, by omitting `profiles` or having a matching profile started explicitly
 
 ```yaml
@@ -166,7 +166,7 @@ $ docker compose up -d mock-backend
 $ docker compose up phpmyadmin
 ```
 
-Although targeting `phpmyadmin` automatically starts the profiles `debug`, it doesn't automatically start the profiles required by `db` which is `dev`. 
+Although targeting `phpmyadmin` automatically starts the profiles `debug`, it doesn't automatically start the profiles required by `db` which is `dev`.
 
 To fix this you either have to add the `debug` profile to the `db` service:
 
@@ -216,12 +216,12 @@ services:
     image: mysql
 ```
 
-if you only want to stop the `phpmyadmin` service, you can run 
-```console 
+if you only want to stop the `phpmyadmin` service, you can run
+```console
 $ docker compose down phpmyadmin
-``` 
-or 
-```console 
+```
+or
+```console
 $ docker compose stop phpmyadmin
 ```
 

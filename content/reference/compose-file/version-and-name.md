@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -18,13 +18,13 @@ weight: 10
 ---
 ## Version top-level element (obsolete)
 
-The top-level `version` property is defined by the Compose Specification for backward compatibility. It is only informative and you'll receive a warning message that it is obsolete if used. 
+The top-level `version` property is defined by the Compose Specification for backward compatibility. It is only informative and you'll receive a warning message that it is obsolete if used.
 
 Compose doesn't use `version` to select an exact schema to validate the Compose file, but
 prefers the most recent schema when it's implemented.
 
 Compose validates whether it can fully parse the Compose file. If some fields are unknown, typically
-because the Compose file was written with fields defined by a newer version of the Specification, you'll receive a warning message. 
+because the Compose file was written with fields defined by a newer version of the Specification, you'll receive a warning message.
 
 ## Name top-level element
 

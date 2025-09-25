@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -156,7 +156,7 @@ Use `sign up` or `create account` instead of `register` when talking about creat
 
 #### tab versus view
 
-Use `view` when referring to a major section in a UI. Use `tab` when referring to a sub-section in the UI. 
+Use `view` when referring to a major section in a UI. Use `tab` when referring to a sub-section in the UI.
 
 For example, in Docker Desktop, the **Images** view and the **Local** tab.
 

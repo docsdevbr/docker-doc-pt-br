@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -50,7 +50,7 @@ Docker Desktop for Linux runs a Virtual Machine (VM) for the following reasons:
 
 Docker Desktop for Linux uses [VirtioFS](https://virtio-fs.gitlab.io/) as the
 default (and currently only) mechanism to enable file sharing between the host
-and Docker Desktop VM. 
+and Docker Desktop VM.
 
 {{< accordion title="Additional information for Docker Desktop version 4.34 and earlier" >}}
 

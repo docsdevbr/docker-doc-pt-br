@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -24,7 +24,7 @@ summary: |
   Você obterá uma compreensão abrangente de como as camadas são criadas,
   empilhadas e utilizadas para garantir contêineres eficientes e otimizados.
 weight: 1
-aliases: 
+aliases:
  - /guides/docker-concepts/building-images/understanding-image-layers/
 ---
 {{< youtube-embed wJwqtAkmtQA >}}

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -18,7 +18,7 @@ Docker and the broader community of Docker experts have put together many differ
 
 ## Docker Training
 
-Expand your knowledge on all things Docker with [basic to advanced trainings from Docker experts](https://www.docker.com/resources/trainings/). 
+Expand your knowledge on all things Docker with [basic to advanced trainings from Docker experts](https://www.docker.com/resources/trainings/).
 
 You can find recorded content at your own convenience, or register for a live session to participate in Q&A.
 

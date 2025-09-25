@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -9,12 +9,12 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Wasm workloads 
+title: Wasm workloads
 weight: 20
 description: How to run Wasm workloads with Docker Desktop
 keywords: Docker, WebAssembly, wasm, containerd, engine
 toc_max: 3
-aliases: 
+aliases:
 - /desktop/wasm/
 params:
   sidebar:

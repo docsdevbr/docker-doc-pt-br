@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -19,13 +19,13 @@ aliases:
 - /compose/environment-variables/env-file/
 - /compose/environment-variables/variable-interpolation/
 ---
-A Compose file can use variables to offer more flexibility. If you want to quickly switch 
+A Compose file can use variables to offer more flexibility. If you want to quickly switch
 between image tags to test multiple versions, or want to adjust a volume source to your local
 environment, you don't need to edit the Compose file each time, you can just set variables that insert values into your Compose file at run time.
 
 Interpolation can also be used to insert values into your Compose file at run time, which is then used to pass variables into your container's environment
 
-Below is a simple example: 
+Below is a simple example:
 
 ```console
 $ cat .env
@@ -64,11 +64,11 @@ For braced expressions, the following formats are supported:
   - `${VAR:+replacement}` -> `replacement` if `VAR` is set and non-empty, otherwise empty
   - `${VAR+replacement}` -> `replacement` if `VAR` is set, otherwise empty
 
-For more information, see [Interpolation](/reference/compose-file/interpolation.md) in the Compose Specification. 
+For more information, see [Interpolation](/reference/compose-file/interpolation.md) in the Compose Specification.
 
 ## Ways to set variables with interpolation
 
-Docker Compose can interpolate variables into your Compose file from multiple sources. 
+Docker Compose can interpolate variables into your Compose file from multiple sources.
 
 Note that when the same variable is declared by multiple sources, precedence applies:
 
@@ -84,14 +84,14 @@ An `.env` file in Docker Compose is a text file used to define variables that sh
 
 The `.env` file is the default method for setting variables. The `.env` file should be placed at the root of the project directory next to your `compose.yaml` file. For more information on formatting an environment file, see [Syntax for environment files](#env-file-syntax).
 
-Basic example: 
+Basic example:
 
 ```console
 $ cat .env
 ## define COMPOSE_DEBUG based on DEV_MODE, defaults to false
 COMPOSE_DEBUG=${DEV_MODE:-false}
 
-$ cat compose.yaml 
+$ cat compose.yaml
   services:
     webapp:
       image: my-webapp-image
@@ -105,7 +105,7 @@ services:
       DEBUG: "true"
 ```
 
-#### Additional information 
+#### Additional information
 
 - If you define a variable in your `.env` file, you can reference it directly in your `compose.yaml` with the [`environment` attribute](/reference/compose-file/services.md#environment). For example, if your `.env` file contains the environment variable `DEBUG=1` and your `compose.yaml` file looks like this:
    ```yaml
@@ -163,17 +163,17 @@ The following syntax rules apply to environment files:
 
 You can set default values for multiple environment variables, in an `.env` file and then pass the file as an argument in the CLI.
 
-The advantage of this method is that you can store the file anywhere and name it appropriately, for example, 
+The advantage of this method is that you can store the file anywhere and name it appropriately, for example,
 This file path is relative to the current working directory where the Docker Compose command is executed. Passing the file path is done using the `--env-file` option:
 
 ```console
 $ docker compose --env-file ./config/.env.dev up
 ```
 
-#### Additional information 
+#### Additional information
 
 - This method is useful if you want to temporarily override an `.env` file that is already referenced in your `compose.yaml` file. For example you may have different `.env` files for production ( `.env.prod`) and testing (`.env.test`).
-  In the following example, there are two environment files, `.env` and `.env.dev`. Both have different values set for `TAG`. 
+  In the following example, there are two environment files, `.env` and `.env.dev`. Both have different values set for `TAG`.
   ```console
   $ cat .env
   TAG=v1.5
@@ -207,18 +207,18 @@ $ docker compose --env-file ./config/.env.dev up
   ```console
   $ docker compose --env-file .env --env-file .env.override up
   ```
-- You can override specific environment variables from the command line when starting containers. 
+- You can override specific environment variables from the command line when starting containers.
   ```console
   $ docker compose --env-file .env.dev up -e DATABASE_URL=mysql://new_user:new_password@new_db:3306/new_database
   ```
 
 ### local `.env` file versus &lt;project directory&gt; `.env` file
 
-An `.env` file can also be used to declare [pre-defined environment variables](envvars.md) used to control Compose behavior and files to be loaded. 
+An `.env` file can also be used to declare [pre-defined environment variables](envvars.md) used to control Compose behavior and files to be loaded.
 
-When executed without an explicit `--env-file` flag, Compose searches for an `.env` file in your working directory ([PWD](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html#index-PWD)) and loads values 
-both for self-configuration and interpolation. If the values in this file define the `COMPOSE_FILE` pre-defined variable, which results in a project directory being set to another folder, 
-Compose will load a second `.env` file, if present. This second `.env` file has a lower precedence. 
+When executed without an explicit `--env-file` flag, Compose searches for an `.env` file in your working directory ([PWD](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html#index-PWD)) and loads values
+both for self-configuration and interpolation. If the values in this file define the `COMPOSE_FILE` pre-defined variable, which results in a project directory being set to another folder,
+Compose will load a second `.env` file, if present. This second `.env` file has a lower precedence.
 
 This mechanism makes it possible to invoke an existing Compose project with a custom set of variables as overrides, without the need to pass environment variables by the command line.
 
@@ -227,7 +227,7 @@ $ cat .env
 COMPOSE_FILE=../compose.yaml
 POSTGRES_VERSION=9.3
 
-$ cat ../compose.yaml 
+$ cat ../compose.yaml
 services:
   db:
     image: "postgres:${POSTGRES_VERSION}"
@@ -240,7 +240,7 @@ services:
     image: "postgres:9.3"
 ```
 
-### Substitute from the shell 
+### Substitute from the shell
 
 You can use existing environment variables from your host machine or from the shell environment where you execute `docker compose` commands. This lets you dynamically inject values into your Docker Compose configuration at runtime.
 For example, suppose the shell contains `POSTGRES_VERSION=9.3` and you supply the following configuration:

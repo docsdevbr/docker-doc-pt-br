@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -178,7 +178,7 @@ There is no dependency on `stage1`, so it's skipped.
 
 ```console
 $ DOCKER_BUILDKIT=1 docker build --no-cache -f Dockerfile --target stage2 .
-[+] Building 0.4s (7/7) FINISHED                                                                    
+[+] Building 0.4s (7/7) FINISHED
  => [internal] load build definition from Dockerfile                                            0.0s
  => => transferring dockerfile: 36B                                                             0.0s
  => [internal] load .dockerignore                                                               0.0s

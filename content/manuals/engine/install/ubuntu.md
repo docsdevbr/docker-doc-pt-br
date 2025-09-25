@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -69,7 +69,7 @@ Docker Engine for Ubuntu is compatible with x86_64 (or amd64), armhf, arm64,
 s390x, and ppc64le (ppc64el) architectures.
 
 > [!NOTE]
-> 
+>
 > Installation on Ubuntu derivative distributions, such as Linux Mint, is not officially
 > supported (though it may work).
 
@@ -157,7 +157,7 @@ Docker from the repository.
    ```console
    $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
-  
+
    {{< /tab >}}
    {{< tab name="Specific version" >}}
 

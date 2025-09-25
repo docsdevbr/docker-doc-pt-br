@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -123,7 +123,7 @@ Use as seguintes instruções para executar um contêiner.
 7. Selecione **Run** para iniciar seu contêiner.
 
 Parabéns! Você acabou de executar seu primeiro contêiner! 🎉
- 
+
 ### Visualize seu contêiner
 
 Você pode visualizar todos os seus contêineres acessando a visualização
@@ -167,7 +167,7 @@ Faça um teste.
 
 ### Pare seu contêiner
 
-O contêiner `docker/welcome-to-docker` continua em execução até que você o pare. 
+O contêiner `docker/welcome-to-docker` continua em execução até que você o pare.
 
 1. Vá para a visualização **Containers** no Painel do Docker.
 

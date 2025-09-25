@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -186,7 +186,7 @@ To deploy your Go backend when installing the extension, you need first to confi
 - Starts the binary when the container starts listening on the extension socket
 
 > [!TIP]
-> 
+>
 > To ease version management, you can reuse the same image to build the frontend, build the
 backend service, and package the extension.
 

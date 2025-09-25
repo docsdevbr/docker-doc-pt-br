@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -91,22 +91,22 @@ This page contains download URLs, information about system requirements, and ins
 
 4. The Docker menu displays the Docker Subscription Service Agreement.
 
-    Here’s a summary of the key points: 
+    Here’s a summary of the key points:
     - Docker Desktop is free for small businesses (fewer than 250 employees AND less than $10 million in annual revenue), personal use, education, and non-commercial open source projects.
     - Otherwise, it requires a paid subscription for professional use.
     - Paid subscriptions are also required for government entities.
     - Docker Pro, Team, and Business subscriptions include commercial use of Docker Desktop.
 
-5. Select **Accept** to continue. 
+5. Select **Accept** to continue.
 
    Note that Docker Desktop won't run if you do not agree to the terms. You can choose to accept the terms at a later date by opening Docker Desktop.
 
    For more information, see [Docker Desktop Subscription Service Agreement](https://www.docker.com/legal/docker-subscription-service-agreement). It is recommended that you also read the [FAQs](https://www.docker.com/pricing/faq).
 
-6. From the installation window, select either: 
-   - **Use recommended settings (Requires password)**. This lets Docker Desktop automatically set the necessary configuration settings. 
+6. From the installation window, select either:
+   - **Use recommended settings (Requires password)**. This lets Docker Desktop automatically set the necessary configuration settings.
    - **Use advanced settings**. You can then set the location of the Docker CLI tools either in the system or user directory, enable the default Docker socket, and enable privileged port mapping. See [Settings](/manuals/desktop/settings-and-maintenance/settings.md#advanced), for more information and how to set the location of the Docker CLI tools.
-7. Select **Finish**. If you have applied any of the previous configurations that require a password in step 6, enter your password to confirm your choice.  
+7. Select **Finish**. If you have applied any of the previous configurations that require a password in step 6, enter your password to confirm your choice.
 
 ### Install from the command line
 
@@ -125,7 +125,7 @@ The `install` command accepts the following flags:
 - `--allowed-org=<org name>`: Requires the user to sign in and be part of the specified Docker Hub organization when running the application
 - `--user=<username>`: Performs the privileged configurations once during installation. This removes the need for the user to grant root privileges on first run. For more information, see [Privileged helper permission requirements](/manuals/desktop/setup/install/mac-permission-requirements.md#permission-requirements). To find the username, enter `ls /Users` in the CLI.
 - `--admin-settings`: Automatically creates an `admin-settings.json` file which is used by administrators to control certain Docker Desktop settings on client machines within their organization. For more information, see [Settings Management](/manuals/security/for-admins/hardened-desktop/settings-management/_index.md).
-  - It must be used together with the `--allowed-org=<org name>` flag. 
+  - It must be used together with the `--allowed-org=<org name>` flag.
   - For example: `--allowed-org=<org name> --admin-settings="{'configurationFileVersion': 2, 'enhancedContainerIsolation': {'value': true, 'locked': false}}"`
 - `--proxy-http-mode=<mode>`: Sets the HTTP Proxy mode. The two modes are `system` (default) or `manual`.
 - `--override-proxy-http=<URL>`: Sets the URL of the HTTP proxy that must be used for outgoing HTTP requests. It requires `--proxy-http-mode` to be `manual`.

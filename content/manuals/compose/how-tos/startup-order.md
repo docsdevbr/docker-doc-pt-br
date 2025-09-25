@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -22,7 +22,7 @@ You can control the order of service startup and shutdown with the
 containers in dependency order, where dependencies are determined by
 `depends_on`, `links`, `volumes_from`, and `network_mode: "service:..."`.
 
-A good example of when you might use this is an application which needs to access a database. If both services are started with `docker compose up`, there is a chance this will fail since the application service might start before the database service and won't find a database able to handle its SQL statements. 
+A good example of when you might use this is an application which needs to access a database. If both services are started with `docker compose up`, there is a chance this will fail since the application service might start before the database service and won't find a database able to handle its SQL statements.
 
 ## Control startup
 
@@ -58,7 +58,7 @@ services:
       timeout: 10s
 ```
 
-Compose creates services in dependency order. `db` and `redis` are created before `web`. 
+Compose creates services in dependency order. `db` and `redis` are created before `web`.
 
 Compose waits for healthchecks to pass on dependencies marked with `service_healthy`. `db` is expected to be "healthy" (as indicated by `healthcheck`) before `web` is created.
 
@@ -68,7 +68,7 @@ The healthcheck for the `db` service uses the `pg_isready -U ${POSTGRES_USER} -d
 
 Compose also removes services in dependency order. `web` is removed before `db` and `redis`.
 
-## Reference information 
+## Reference information
 
 - [`depends_on`](/reference/compose-file/services.md#depends_on)
 - [`healthcheck`](/reference/compose-file/services.md#healthcheck)

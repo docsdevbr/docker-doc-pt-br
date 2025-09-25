@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -83,7 +83,7 @@ The unification process is referred to as a _union mount_.
 
 The diagram below shows a Docker container based on the `ubuntu:latest` image.
 
-![Layers of an Ubuntu container](images/aufs_layers.webp) 
+![Layers of an Ubuntu container](images/aufs_layers.webp)
 
 Each image layer, and the container layer, are represented on the Docker host as
 subdirectories within `/var/lib/docker/`. The union mount provides the unified

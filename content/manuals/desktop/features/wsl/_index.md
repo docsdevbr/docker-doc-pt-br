@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -107,7 +107,7 @@ Docker Desktop does not require any particular Linux distributions to be install
 >
 > With Docker Desktop version 4.30 and earlier, Docker Desktop installed two special-purpose internal Linux distributions `docker-desktop` and `docker-desktop-data`. `docker-desktop` is used to run the Docker engine `dockerd`, while `docker-desktop-data` stores containers and images. Neither can be used for general development.
 >
-> With fresh installations of Docker Desktop 4.30 and later, `docker-desktop-data` is no longer created. Instead, Docker Desktop creates and 
+> With fresh installations of Docker Desktop 4.30 and later, `docker-desktop-data` is no longer created. Instead, Docker Desktop creates and
 > manages its own virtual hard disk for storage. The `docker-desktop` distribution is still created and used to run the Docker engine.
 >
 > Note that Docker Desktop version 4.30 and later keeps using the `docker-desktop-data` distribution if it was already created by an earlier version of Docker Desktop and has not been freshly installed or factory reset.
@@ -116,7 +116,7 @@ Docker Desktop does not require any particular Linux distributions to be install
 
 Docker Desktop’s WSL 2 integration operates within the existing security model of WSL and does not introduce additional security risks beyond standard WSL behavior.
 
-Docker Desktop runs within its own dedicated WSL distribution, `docker-desktop`, which follows the same isolation properties as any other WSL distribution. The only interaction between Docker Desktop and other installed WSL distributions occurs when the Docker Desktop **WSL integration** feature is enabled in settings. This feature allows easy access to the Docker CLI from integrated distributions. 
+Docker Desktop runs within its own dedicated WSL distribution, `docker-desktop`, which follows the same isolation properties as any other WSL distribution. The only interaction between Docker Desktop and other installed WSL distributions occurs when the Docker Desktop **WSL integration** feature is enabled in settings. This feature allows easy access to the Docker CLI from integrated distributions.
 
 WSL is designed to facilitate interoperability between Windows and Linux environments. Its file system is accessible from the Windows host `\\wsl$`, meaning Windows processes can read and modify files within WSL. This behavior is not specific to Docker Desktop, but rather a core aspect of WSL itself.
 

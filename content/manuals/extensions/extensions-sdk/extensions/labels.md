@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,7 +13,7 @@ title: Extension image labels
 linkTitle: Add labels
 description: Docker extension labels
 keywords: Docker, extensions, sdk, labels
-aliases: 
+aliases:
  - /desktop/extensions-sdk/extensions/labels/
 weight: 10
 ---
@@ -49,8 +49,8 @@ Here is the list of labels you can or need to specify when building your extensi
 
 > [!TIP]
 >
-> Docker Desktop applies CSS styles to the provided HTML content. You can make sure that it renders correctly 
-> [within the Marketplace](#preview-the-extension-in-the-marketplace). It is recommended that you follow the 
+> Docker Desktop applies CSS styles to the provided HTML content. You can make sure that it renders correctly
+> [within the Marketplace](#preview-the-extension-in-the-marketplace). It is recommended that you follow the
 > [styling guidelines](../design/_index.md).
 
 ## Preview the extension in the Marketplace

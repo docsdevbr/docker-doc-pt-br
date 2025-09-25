@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -127,7 +127,7 @@ Mirantis Kubernetes Engine or other products offered by Mirantis. Much of the
 technology and features found in Docker EE have been absorbed into the Mirantis
 product line.
 
-> [!NOTE]  
+> [!NOTE]
 > For information about enterprise-level features offered by Docker today,
 > see the [Docker Business subscription](/manuals/subscription/details.md#docker-business).
 

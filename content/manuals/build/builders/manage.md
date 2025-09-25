@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -61,7 +61,7 @@ You can add the `--bootstrap` flag to the command to start the builder.
 
 ```console
 $ docker buildx inspect --bootstrap my_builder
-[+] Building 1.7s (1/1) FINISHED                                                                  
+[+] Building 1.7s (1/1) FINISHED
  => [internal] booting buildkit                                                              1.7s
  => => pulling image moby/buildkit:buildx-stable-1                                           1.3s
  => => creating container buildx_buildkit_my_builder0                                        0.4s
@@ -132,4 +132,4 @@ It only removes your connection to the builder.
 
 If you have turned on the
 [Docker Desktop Builds view](/manuals/desktop/use-desktop/builds.md),
-you can inspect builders in [Docker Desktop settings](/manuals/desktop/settings-and-maintenance/settings.md#builders). 
+you can inspect builders in [Docker Desktop settings](/manuals/desktop/settings-and-maintenance/settings.md#builders).

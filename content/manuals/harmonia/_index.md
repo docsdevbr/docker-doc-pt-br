@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -23,9 +23,9 @@ aliases:
 Project Harmonia is in Private preview.
 {{% /restricted %}}
 
-Project Harmonia brings the power of the cloud to your local development workflow. You can now run your applications in the cloud whilst continuing to use your existing tools and workflows and without worrying about local resource limitations. Project Harmonia also lets you share previews of your cloud-based applications for real-time feedback. 
+Project Harmonia brings the power of the cloud to your local development workflow. You can now run your applications in the cloud whilst continuing to use your existing tools and workflows and without worrying about local resource limitations. Project Harmonia also lets you share previews of your cloud-based applications for real-time feedback.
 
-## Set up 
+## Set up
 
 To get started with Project Harmonia, you need to:
 
@@ -34,23 +34,23 @@ To get started with Project Harmonia, you need to:
 
 ## Quickstart
 
-You can use Project Harmonia from the Docker Desktop Dashboard or from the CLI. 
+You can use Project Harmonia from the Docker Desktop Dashboard or from the CLI.
 
-This guide introduces you to essential commands and steps for creating, managing, and sharing a cloud engine. 
+This guide introduces you to essential commands and steps for creating, managing, and sharing a cloud engine.
 
 ### Step one: Create a cloud engine
 
 {{< tabs group="method" >}}
 {{< tab name="Docker Desktop">}}
 
-1. In the Docker Desktop Dashboard, navigate to the **Project Harmonia** tab. 
+1. In the Docker Desktop Dashboard, navigate to the **Project Harmonia** tab.
 2. In the top right-hand corner, select **Create Cloud Engine**.
 3. Fill out the creation form:
    - Enter `cloudengine` as the name
    - Choose an organization to associate the cloud engine with
    - Select the engine size and architecture
 
-   Note that the **Switch Docker Context to use remote engine** is selected by default. The automatically switches you to your new cloud engine once it has been created. 
+   Note that the **Switch Docker Context to use remote engine** is selected by default. The automatically switches you to your new cloud engine once it has been created.
 4. Select **Create**.
 
 To verify creation, check the context switcher in the top-left corner of the Docker Desktop Dashboard; it should display `cloudengine`. You’re now ready to use it.
@@ -58,7 +58,7 @@ To verify creation, check the context switcher in the top-left corner of the Doc
 {{< /tab >}}
 {{< tab name="CLI">}}
 
-Run the following command: 
+Run the following command:
 
 ```console
 $ docker harmonia engine create cloudengine --type "standard-amd64"  --use
@@ -66,7 +66,7 @@ $ docker harmonia engine create cloudengine --type "standard-amd64"  --use
 
 This creates an engine called `cloudengine` and:
 - Immediately switches you to the new cloud engine with the `--use` flag.
-- Sets the engine size to standard and the engine's CPU architecture to amd64 with the `--type` flag. 
+- Sets the engine size to standard and the engine's CPU architecture to amd64 with the `--type` flag.
 
 Project Harmonia supports the following values for `--type`:
 - `standard-arm64`
@@ -95,7 +95,7 @@ You should see the following:
 {{< /tab >}}
 {{< /tabs >}}
 
-### Step two: Run and remove containers with the newly created cloud engine 
+### Step two: Run and remove containers with the newly created cloud engine
 
 1.  Run an Nginx container in the cloud engine:
     ```console
@@ -125,8 +125,8 @@ Running a container with a cloud engine is just as straightforward as running it
    - Enter `cloudengine2` as the name
    - Choose an organization to associate the cloud engine with
    - Select the **Standard** engine size with the **AMD-64** architecture
-   In the **Project Harmonia** view you should now see both `cloudengine` and `cloudengine2`. 
-2. Switch between engines, also known as your Docker contexts. Use the context switcher in the top-left corner of the Docker Desktop Dashboard to toggle between your cloud engines or switch from your local engine (`desktop-linux`) to a cloud engine. 
+   In the **Project Harmonia** view you should now see both `cloudengine` and `cloudengine2`.
+2. Switch between engines, also known as your Docker contexts. Use the context switcher in the top-left corner of the Docker Desktop Dashboard to toggle between your cloud engines or switch from your local engine (`desktop-linux`) to a cloud engine.
 
 {{< /tab >}}
 {{< tab name="CLI">}}
@@ -135,12 +135,12 @@ Running a container with a cloud engine is just as straightforward as running it
    ```console
    $ docker harmonia engine create cloudengine2
    ```
-   Docker automatically switches you to your new cloud engine. 
+   Docker automatically switches you to your new cloud engine.
 2. Switch between engines, also known as your Docker contexts. Either switch to your first cloud engine:
    ```console
    $ docker context use cloudengine
    ``` 
-   Or switch back to your local engine: 
+   Or switch back to your local engine:
    ```console
    $ docker context use desktop-linux
    ```
@@ -150,7 +150,7 @@ Running a container with a cloud engine is just as straightforward as running it
 
 ### Step four: Use a file sync for your cloud engine
 
-Project Harmonia takes advantage of [Synchronized file shares](/manuals/desktop/features/synchronized-file-sharing.md) to enable local-to-remote file shares and port mappings. 
+Project Harmonia takes advantage of [Synchronized file shares](/manuals/desktop/features/synchronized-file-sharing.md) to enable local-to-remote file shares and port mappings.
 
 {{< tabs group="method" >}}
 {{< tab name="Docker Desktop">}}
@@ -205,7 +205,7 @@ To view all shared ports for your Docker context, select the **Shared ports** ic
 {{< /tab >}}
 {{< tab name="CLI">}}
 
-To share a container port, make sure your Docker context is set to `cloudengine` and then run: 
+To share a container port, make sure your Docker context is set to `cloudengine` and then run:
 ``` console
 $ docker harmonia engine share create cloudengine 3000
 ```
@@ -214,13 +214,13 @@ This returns a publicly accessible URL for your React app hosted on port `3000`,
 To see a list of all your shared ports, run:
 
 ```console
-$ docker harmonia engine share list 
+$ docker harmonia engine share list
 ```
 
 {{< /tab >}}
 {{< /tabs >}}
 
-### Step six: Clean up 
+### Step six: Clean up
 
 {{< tabs group="method" >}}
 {{< tab name="Docker Desktop">}}
@@ -265,7 +265,7 @@ $ docker harmonia engine delete <name-of-engine>
 
 ## Troubleshoot
 
-Run `docker harmonia doctor` to print helpful troubleshooting information. 
+Run `docker harmonia doctor` to print helpful troubleshooting information.
 
 ## Known issues
 
@@ -275,6 +275,6 @@ Run `docker harmonia doctor` to print helpful troubleshooting information.
 - Bind _mounts_, such as `-v /localpath:/incontainer` in the `docker run` command, require creating a file-sync.
 - Creating a [synchronized file share](/manuals/desktop/features/synchronized-file-sharing.md) for a directory with a large amount of may take extra time to sync and become ready for use in a container.
 - Bind _volumes_, such as those created with `docker volume create --driver local --opt type=none --opt o=bind --opt device=/some/host/path myvolname` or via the compose equivalent, are not supported.
-- Port-forwarding for UDP is not supported. 
+- Port-forwarding for UDP is not supported.
 - Docker Compose projects relying on `watch` in `sync` mode are not working with the `tar` synchronizer. Configure it to use `docker cp` instead, disable tar sync by setting `COMPOSE_EXPERIMENTAL_WATCH_TAR=0` in your environment.
 - Some Docker Engine features that let you access the underlying host, such as `--pid=host`, `--network=host`, and `--ipc=host`, are currently disabled.

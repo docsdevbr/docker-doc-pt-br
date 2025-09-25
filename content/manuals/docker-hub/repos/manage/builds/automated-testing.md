@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -54,7 +54,7 @@ is that `sut` is defined. Its return code determines if tests passed or not.
 Tests pass if the `sut` service returns `0`, and fail otherwise.
 
 > [!NOTE]
-> 
+>
 > Only the `sut` service and all other services listed in
 > [`depends_on`](/reference/compose-file/services.md#depends_on) are
 > started. If you have services that poll for changes in other services, be sure

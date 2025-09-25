@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -13,7 +13,7 @@ title: Design guidelines for Docker extensions
 linkTitle: Guidelines
 description: Docker extension design
 keywords: Docker, extensions, design
-aliases: 
+aliases:
  - /desktop/extensions-sdk/design/design-guidelines/
 weight: 10
 ---
@@ -41,7 +41,7 @@ Use the [Docker Material UI Theme](https://www.npmjs.com/package/@docker/docker-
 
   ![Header that sets the context](images/header.webp)
 
-- Avoid embedding terminal windows. The advantage we have with Docker Desktop over the CLI is that we have the opportunity to provide rich information to users. Make use of this interface as much as possible. 
+- Avoid embedding terminal windows. The advantage we have with Docker Desktop over the CLI is that we have the opportunity to provide rich information to users. Make use of this interface as much as possible.
 
   ![Terminal window used incorrectly](images/terminal_window_dont.webp)
 
@@ -70,7 +70,7 @@ Use the [Docker Material UI Theme](https://www.npmjs.com/package/@docker/docker-
 When creating your extension, ensure that first time users of the extension and your product can understand its value-add and adopt it easily. Ensure you include contextual help within the extension.
 
 - Ensure that all necessary information is added to the extensions Marketplace as well as the extensions detail page. This should include:
-  - Screenshots of the extension. Note that the recommended size for screenshots is 2400x1600 pixels. 
+  - Screenshots of the extension. Note that the recommended size for screenshots is 2400x1600 pixels.
   - A detailed description that covers what the purpose of the extension is, who would find it useful and how it works.
   - Link to necessary resources such as documentation.
 - If your extension has particularly complex functionality, add a demo or video to the start page. This helps onboard a first time user quickly.

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -15,9 +15,9 @@ weight: 30
 ---
 ## SSO and SCIM testing
 
-You can test SSO and SCIM by signing in to Docker Desktop or Docker Hub with the email address linked to a Docker account that is part of the verified domain. Developers who sign in using their Docker usernames will remain unaffected by the SSO and/or SCIM setup. 
+You can test SSO and SCIM by signing in to Docker Desktop or Docker Hub with the email address linked to a Docker account that is part of the verified domain. Developers who sign in using their Docker usernames will remain unaffected by the SSO and/or SCIM setup.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 >
 > Some users may need CLI based logins to Docker Hub, and for this they will need a [personal access token (PAT)](/manuals/security/for-developers/access-tokens.md).
 
@@ -34,7 +34,7 @@ Deploy the Docker settings and enforce sign-in for a small group of test users v
 
 ## Test Docker Build Cloud capabilities
 
-Have one of your Docker Desktop testers [connect to the cloud builder you created and use it to build](/manuals/build-cloud/usage.md). 
+Have one of your Docker Desktop testers [connect to the cloud builder you created and use it to build](/manuals/build-cloud/usage.md).
 
 ## Verify Docker Scout monitoring of repositories
 

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -25,7 +25,7 @@ You can launch a dev environment from a:
 - Sub-folder of a Git repository
 - Local folder
 
-This does not conflict with any of the local files or local tooling set up on your host. 
+This does not conflict with any of the local files or local tooling set up on your host.
 
 >Tip
 >
@@ -35,7 +35,7 @@ This does not conflict with any of the local files or local tooling set up on yo
 
 To get started with Dev Environments, you must also install the following tools and extension on your machine:
 
-- [Git](https://git-scm.com). Make sure add Git to your PATH if you're a Windows user. 
+- [Git](https://git-scm.com). Make sure add Git to your PATH if you're a Windows user.
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Visual Studio Code Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
@@ -80,7 +80,7 @@ fi
 To launch a dev environment:
 
 1. From the **Dev Environments** tab in Docker Dashboard, select **Create**. The **Create a Dev Environment** dialog displays.
-2. Select **Get Started**. 
+2. Select **Get Started**.
 3. Optional: Provide a name for you dev environment.
 4. Select **Existing Git repo** as the source and then paste your Git repository link into the field provided.
 5. Choose your IDE. You can choose either:
@@ -107,7 +107,7 @@ Docker then clones the repository with your specified branch or tag.
 
 >Note
 >
->Currently, Dev Environments is not able to detect the main language of the subdirectory. You need to define your own base image or services in a `compose-dev.yaml`file located in your subdirectory. For more information on how to configure, see the [React application with a Spring backend and a MySQL database sample](https://github.com/docker/awesome-compose/tree/master/react-java-mysql) or the [Go server with an Nginx proxy and a Postgres database sample](https://github.com/docker/awesome-compose/tree/master/nginx-golang-postgres). 
+>Currently, Dev Environments is not able to detect the main language of the subdirectory. You need to define your own base image or services in a `compose-dev.yaml`file located in your subdirectory. For more information on how to configure, see the [React application with a Spring backend and a MySQL database sample](https://github.com/docker/awesome-compose/tree/master/react-java-mysql) or the [Go server with an Nginx proxy and a Postgres database sample](https://github.com/docker/awesome-compose/tree/master/nginx-golang-postgres).
 
 1. From **Dev Environments** in Docker Dashboard, select **Create**. The **Create a Dev Environment** dialog displays.
 2. Select **Get Started**.
@@ -127,7 +127,7 @@ To launch the application, run the command `make run` in your terminal. This ope
 3. Optional: Provide a name for your dev environment.
 4. Choose **Local directory** as the source.
 5. Select **Select** to open the root directory of the code that you would like to work on.
-   
+
    A directory from your computer is bind mounted to the container, so any changes you make locally is reflected in the dev environment. You can use an editor or IDE of your choice.
 
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -11,9 +11,9 @@
 
 title: Publishing and exposing ports
 keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you the significance of publishing and exposing ports in Docker 
+description: This concept page will teach you the significance of publishing and exposing ports in Docker
 weight: 1
-aliases: 
+aliases:
  - /guides/docker-concepts/running-containers/publishing-ports/
 ---
 {{< youtube-embed 9JnqOmJ96ds >}}
@@ -49,14 +49,14 @@ Now, any traffic sent to port `8080` on your host machine will be forwarded to p
 
 ### Publishing to ephemeral ports
 
-At times, you may want to simply publish the port but don’t care which host port is used. In these cases, you can let Docker pick the port for you. To do so, simply omit the `HOST_PORT` configuration. 
+At times, you may want to simply publish the port but don’t care which host port is used. In these cases, you can let Docker pick the port for you. To do so, simply omit the `HOST_PORT` configuration.
 
 For example, the following command will publish the container’s port `80` onto an ephemeral port on the host:
 
 ```console
 $ docker run -p 80 nginx
 ```
- 
+
 Once the container is running, using `docker ps` will show you the port that was chosen:
 
 ```console
@@ -69,7 +69,7 @@ In this example, the app is exposed on the host at port `54772`.
 
 ### Publishing all ports
 
-When creating a container image, the `EXPOSE` instruction is used to indicate the packaged application will use the specified port. These ports aren't published by default. 
+When creating a container image, the `EXPOSE` instruction is used to indicate the packaged application will use the specified port. These ports aren't published by default.
 
 With the `-P` or `--publish-all` flag, you can automatically publish all exposed ports to ephemeral ports. This is quite useful when you’re trying to avoid port conflicts in development or testing environments.
 
@@ -124,7 +124,7 @@ This example will launch the same application using Docker Compose:
 
 2. Open a terminal and navigate to the directory you created in the previous step.
 
-3. Use the `docker compose up` command to start the application. 
+3. Use the `docker compose up` command to start the application.
 
 4. Open your browser to [http://localhost:8080](http://localhost:8080).
 

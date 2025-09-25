@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2016 Docker, Inc.
+# Copyright (c) 2013-2025 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -27,10 +27,10 @@ You can also make a badge a link.
 
 ### Usage guidelines
 
-We use badges to indicate new content and product content in various stages of the release lifecycle: 
+We use badges to indicate new content and product content in various stages of the release lifecycle:
 
-- The violet badge to highlight new early access or experimental content 
-- The blue badge to highlight beta content 
+- The violet badge to highlight new early access or experimental content
+- The blue badge to highlight beta content
 - The green badge to highlight new content that is either GA or not product-related content, such as guides/learning paths
 
 Best practice is to use this badge for no longer than 2 months post release of the feature.
