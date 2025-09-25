@@ -2,6 +2,8 @@
 
 [![Arquivo README em inglês][badge-readme-en]][readme-en]
 [![Arquivo README em português brasileiro][badge-readme-pt-br]][readme-pt-br]
+[![Licença: APACHE-2.0][badge-license]][license]
+[![Pessoas contribuidoras][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
 Tradução da Documentação do Docker para português brasileiro.
@@ -34,24 +36,30 @@ outros termos usados aqui.
 Documentação licenciada sob a [Licença Apache, Versão 2.0][license].<br>
 A obra original foi traduzida do inglês para o português brasileiro.
 
+[badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/docker-doc-pt-br
+
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 
-[badge-readme-en]: https://img.shields.io/badge/lang-en-blue.svg
+[badge-license]: https://img.shields.io/github/license/docsdevbr/docker-doc-pt-br
 
-[badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-dark--green.svg
+[badge-readme-en]: https://img.shields.io/badge/lang-en-blue
+
+[badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-blue
+
+[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.md
 
 [contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.md
 
-[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.md
+[contributors]: https://github.com/docsdevbr/nomad-doc-pt-br/graphs/contributors
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
 [license]: LICENSE
 
-[page]: https://docs.dev.br/pt-br/docs/docker/doc/
+[page]: https://pt.docs.dev.br/p/docker/docs/
 
 [readme-en]: README.EN.md
 
 [readme-pt-br]: README.md
 
-[sponsor]: https://docs.dev.br/pt-br/support-us
+[sponsor]: https://pt.docs.dev.br/sponsor

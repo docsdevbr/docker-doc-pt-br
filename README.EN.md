@@ -2,6 +2,8 @@
 
 [![README file in English][badge-readme-en]][readme-en]
 [![README file in Brazilian Portuguese][badge-readme-pt-br]][readme-pt-br]
+[![License: APACHE-2.0][badge-license]][license]
+[![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
 Translation of the Docker Documentation into Brazilian Portuguese.
@@ -34,24 +36,30 @@ used herein.
 Documentation licensed under the [Apache License, Version 2.0][license].<br>
 The original work was translated from English into Brazilian Portuguese.
 
+[badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/docker-doc-pt-br
+
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 
-[badge-readme-en]: https://img.shields.io/badge/lang-en-blue.svg
+[badge-license]: https://img.shields.io/github/license/docsdevbr/docker-doc-pt-br
 
-[badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-dark--green.svg
+[badge-readme-en]: https://img.shields.io/badge/lang-en-blue
+
+[badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-blue
+
+[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.EN.md
 
 [contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.EN.md
 
-[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.EN.md
+[contributors]: https://github.com/docsdevbr/nomad-doc-pt-br/graphs/contributors
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
 [license]: LICENSE
 
-[page]: https://docs.dev.br/pt-br/docs/docker/doc/
+[page]: https://pt.docs.dev.br/p/docker/docs/
 
 [readme-en]: README.EN.md
 
 [readme-pt-br]: README.md
 
-[sponsor]: https://docs.dev.br/pt-br/support-us
+[sponsor]: https://pt.docs.dev.br/sponsor
