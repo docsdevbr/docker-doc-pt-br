@@ -13,13 +13,14 @@ source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-
 revision: 6e4790e2912429d3e06e461d60732a7a5dba3c2a
 status: ready
 
-description: Obtenha uma visão geral aprofundada da plataforma Docker, incluindo
-    para que ela pode ser usada, a arquitetura que ela emprega e sua tecnologia
-    subjacente.
-keywords: o que é docker, daemon docker, por que usar docker, arquitetura
-    docker, para que usar docker, cliente docker, para que serve o docker, por
-    que docker, usos para docker, para que o contêiner docker é usado, para que
-    os contêineres docker são usados
+description: >-
+  Obtenha uma visão geral aprofundada da plataforma Docker, incluindo para que
+  ela pode ser usada, a arquitetura que ela emprega e sua tecnologia subjacente.
+keywords: >-
+  o que é docker, daemon docker, por que usar docker, arquitetura docker, para
+  que usar docker, cliente docker, para que serve o docker, por que docker, usos
+  para docker, para que o contêiner docker é usado, para que os contêineres
+  docker são usados
 title: O que é Docker?
 weight: 20
 aliases:
@@ -31,6 +32,7 @@ aliases:
  - /get-started/overview/
  - /guides/docker-overview/
 ---
+
 Docker é uma plataforma aberta para desenvolver, distribuir e executar
 aplicações.
 O Docker permite que você separe suas aplicações da sua infraestrutura para que
@@ -50,18 +52,18 @@ simultaneamente em uma determinada máquina hospedeira.
 Os contêineres são leves e contêm tudo o que é necessário para executar a
 aplicação, então você não precisa depender do que está instalado na máquina
 hospedeira.
-Você pode compartilhar contêineres enquanto trabalha e ter certeza de que todos
-com quem você compartilha recebam o mesmo contêiner que funciona da mesma
-maneira.
+Você pode compartilhar contêineres enquanto trabalha e ter certeza de que todas
+as pessoas com quem você compartilha recebam o mesmo contêiner que funciona da
+mesma maneira.
 
 O Docker fornece ferramentas e uma plataforma para gerenciar o ciclo de vida
 dos seus contêineres:
 
 * Desenvolva sua aplicação e seus componentes de suporte usando contêineres.
 * O contêiner se torna a unidade para distribuir e testar sua aplicação.
-* Quando estiver pronto, implante sua aplicação em seu ambiente de produção,
+* Quando tiver terminado, implante sua aplicação em seu ambiente de produção,
   como um contêiner ou um serviço orquestrado.
-  Isso funciona da mesma forma, seja seu ambiente de produção um _data center_
+  Isso funciona da mesma forma, seja seu ambiente de produção um data center
   local, um provedor de nuvem ou um híbrido dos dois.
 
 ## Para que posso usar o Docker?
@@ -80,19 +82,19 @@ Considere o seguinte cenário de exemplo:
   trabalho com suas colegas usando contêineres Docker.
 * Elas usam o Docker para enviar suas aplicações para um ambiente de teste e
   executar testes automatizados e manuais.
-* Quando as pessoas desenvolvedoras encontram falhas, elas podem corrigi-los no
+* Quando as pessoas desenvolvedoras encontram falhas, elas podem corrigi-las no
   ambiente de desenvolvimento e reimplantar as aplicações no ambiente de teste
   para teste e validação.
-* Quando os testes são concluídos, obter a correção para a pessoa cliente é tão
+* Quando os testes estiverem concluídos, enviar a correção ao cliente será tão
   simples quanto enviar a imagem atualizada para o ambiente de produção.
 
 ### Implantação e escalonamento responsivos
 
 A plataforma baseada em contêineres do Docker permite cargas de trabalho
 altamente portáteis.
-Os contêineres do Docker podem ser executados no _notebook_ local de uma
-pessoa desenvolvedora, em máquinas físicas ou virtuais em um _data center_, em
-provedores de nuvem ou em uma mistura de ambientes.
+Os contêineres do Docker podem ser executados no notebook local de uma pessoa
+desenvolvedora, em máquinas físicas ou virtuais em um data center, em provedores
+de nuvem ou em uma mistura de ambientes.
 
 A portabilidade e a natureza leve do Docker também facilitam o gerenciamento
 dinâmico de cargas de trabalho, aumentando ou reduzindo a escala de aplicações e
@@ -103,30 +105,30 @@ serviços conforme as necessidades comerciais, quase em tempo real.
 O Docker é leve e rápido.
 Ele fornece uma alternativa viável e econômica às máquinas virtuais baseadas em
 hipervisor, para que você possa usar mais da capacidade do seu servidor para
-atingir suas metas comerciais.
+atingir seus objetivos de negócios.
 O Docker é perfeito para ambientes de alta densidade e para implantações
 pequenas e médias, nas quais você precisa fazer mais com menos recursos.
 
 ## Arquitetura do Docker
 
 O Docker usa uma arquitetura cliente-servidor.
-O cliente Docker fala com o _daemon_ do Docker, que faz o trabalho pesado de
+O cliente Docker fala com o daemon do Docker, que faz o trabalho pesado de
 construir, executar e distribuir seus contêineres Docker.
-O cliente e o _daemon_ do Docker podem ser executados no mesmo sistema, ou você
-pode conectar um cliente Docker a um _daemon_ remoto do Docker.
-O cliente e o _daemon_ do Docker se comunicam usando uma API REST, por soquetes
+O cliente e o daemon do Docker podem ser executados no mesmo sistema, ou você
+pode conectar um cliente Docker a um daemon remoto do Docker.
+O cliente e o daemon do Docker se comunicam usando uma API REST, por soquetes
 UNIX ou uma interface de rede.
 Outro cliente Docker é o Docker Compose, que permite que você trabalhe com
 aplicações que consistem em um conjunto de contêineres.
 
-![Diagrama de arquitetura do Docker](images/docker-architecture.webp?border=true)
+![Diagrama de arquitetura do Docker](images/docker-architecture.webp)
 
-### O _daemon_ do Docker
+### O daemon do Docker
 
-O _daemon_ do Docker (`dockerd`) escuta as requisições da API do Docker e
-gerencia objetos do Docker, como imagens, contêineres, redes e volumes.
-Um _daemon_ também pode se comunicar com outros _daemons_ para gerenciar
-serviços do Docker.
+O daemon do Docker (`dockerd`) escuta as requisições da API do Docker e gerencia
+objetos do Docker, como imagens, contêineres, redes e volumes.
+Um daemon também pode se comunicar com outros daemons para gerenciar serviços do
+Docker.
 
 ### O cliente Docker
 
@@ -135,17 +137,18 @@ usuárias do Docker interagem com o Docker.
 Quando você usa comandos como `docker run`, o cliente envia esses comandos para
 o `dockerd`, que os executa.
 O comando `docker` usa a API do Docker.
-O cliente Docker pode se comunicar com mais de um _daemon_.
+O cliente Docker pode se comunicar com mais de um daemon.
 
 ### Docker Desktop
 
 O Docker Desktop é uma aplicação fácil de instalar para seu ambiente Mac,
 Windows ou Linux que permite que você crie e compartilhe aplicações e
 microsserviços em contêineres.
-O Docker Desktop inclui o _daemon_ do Docker (`dockerd`), o cliente Docker
+O Docker Desktop inclui o daemon do Docker (`dockerd`), o cliente Docker
 (`docker`), o Docker Compose, o Docker Content Trust, o Kubernetes e o
 Credential Helper.
-Para obter mais informações, consulte [Docker Desktop](/manuals/desktop/_index.md).
+Para obter mais informações, consulte
+[Docker Desktop](/manuals/desktop/_index.md).
 
 ### Registros do Docker
 
@@ -162,23 +165,23 @@ registro configurado.
 ### Objetos do Docker
 
 Quando você usa o Docker, você está criando e usando imagens, contêineres,
-redes, volumes, _plugins_ e outros objetos.
+redes, volumes, plugins e outros objetos.
 Esta seção é uma breve visão geral de alguns desses objetos.
 
 #### Imagens
 
-Uma imagem é um modelo somente leitura com instruções para criar um contêiner
+Uma imagem é um template somente leitura com instruções para criar um contêiner
 Docker.
 Frequentemente, uma imagem é baseada em outra imagem, com alguma personalização
 adicional.
 Por exemplo, você pode construir uma imagem baseada na imagem `ubuntu`, mas
-instalar o servidor _web_ Apache e sua aplicação, bem como os detalhes de
+instalar o servidor web Apache e sua aplicação, bem como os detalhes de
 configuração necessários para fazer sua aplicação rodar.
 
 Você pode criar suas próprias imagens ou pode usar apenas aquelas criadas por
 outras pessoas e publicadas em um registro.
 Para construir sua própria imagem, você cria um Dockerfile com uma sintaxe
-simples para definir as etapas necessárias para criar a imagem e executá-la.
+simples para definir as etapas necessárias para construir a imagem e executá-la.
 Cada instrução em um Dockerfile cria uma camada na imagem.
 Quando você altera o Dockerfile e reconstrói a imagem, apenas as camadas que
 foram alteradas são reconstruídas.
@@ -202,15 +205,15 @@ hospedeira.
 Um contêiner é definido por sua imagem, bem como por quaisquer opções de
 configuração que você fornece a ele ao criá-lo ou iniciá-lo.
 Quando um contêiner é removido, quaisquer alterações em seu estado que não
-estejam armazenadas no armazenamento persistente desaparecem.
+estejam armazenadas em armazenamento persistente desaparecem.
 
 ##### Exemplo de comando `docker run`
 
-O comando a seguir executa um contêiner `ubuntu`, se vincula interativamente à
+O comando a seguir executa um contêiner `ubuntu`, se conecta interativamente à
 sua sessão de linha de comando local e executa `/bin/bash`.
 
-```shell
-docker run -i -t ubuntu /bin/bash
+```console
+$ docker run -i -t ubuntu /bin/bash
 ```
 
 Ao executar este comando, o seguinte acontece (supondo que você esteja usando a
@@ -246,15 +249,15 @@ configuração padrão do registro):
 ## A tecnologia subjacente
 
 O Docker é escrito na [linguagem de programação Go](https://golang.org/) e
-aproveita vários recursos do _kernel_ Linux para fornecer sua funcionalidade.
-O Docker usa uma tecnologia chamada _namespaces_ para fornecer o espaço de
+aproveita vários recursos do kernel Linux para fornecer sua funcionalidade.
+O Docker usa uma tecnologia chamada namespaces para fornecer o espaço de
 trabalho isolado chamado contêiner.
-Quando você executa um contêiner, o Docker cria um conjunto de _namespaces_ para
+Quando você executa um contêiner, o Docker cria um conjunto de namespaces para
 esse contêiner.
 
-Esses _namespaces_ fornecem uma camada de isolamento.
-Cada aspecto de um contêiner é executado em um _namespace_ separado e seu acesso
-é limitado a esse _namespace_.
+Esses namespaces fornecem uma camada de isolamento.
+Cada aspecto de um contêiner é executado em um namespace separado e seu acesso é
+limitado a esse namespace.
 
 ## Próximos passos
 
