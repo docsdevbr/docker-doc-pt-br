@@ -14,10 +14,10 @@ revision: 49dc2a288b67a1b88407f3377ada49d66365e2a3
 status: ready
 
 title: Documentação do Docker
-description: |
+description: >-
   A Documentação do Docker é a biblioteca oficial de recursos, manuais e guias
   do Docker para te ajudar a criar contêineres de aplicações.
-keywords: |
+keywords: >-
   Docker, documentação, manual, guia, referência, API, exemplos, tutoriais,
   contêiner, aplicação, desenvolvimento, DevOps, orquestração, Kubernetes,
   Swarm, segurança, rede, armazenamento, volumes, imagens, Dockerfile,
@@ -25,7 +25,7 @@ keywords: |
 grid:
   - title: Docker Desktop
     icon: computer
-    description: |
+    description: >-
       Gerencie contêineres, aplicações e imagens diretamente de sua máquina.
     links:
       - text: "Visão geral"
@@ -36,7 +36,7 @@ grid:
         url: "/desktop/release-notes/"
   - title: Imagens Reforçadas do Docker
     icon: /icons/dhi.svg
-    description: |
+    description: >-
       Imagens mínimas e seguras para entrega confiável de software.
     links:
       - text: "Visão geral"
@@ -47,7 +47,7 @@ grid:
         url: "/dhi/how-to/use/"
   - title: Catálogo e kit de ferramentas do Docker MCP
     icon: /icons/toolkit.svg
-    description: |
+    description: >-
       Aumente seus fluxos de trabalho de IA com servidores MCP.
     links:
       - text: "Visão geral"
@@ -58,7 +58,7 @@ grid:
         url: "/ai/mcp-catalog-and-toolkit/toolkit/"
       - title: Docker Engine
         icon: developer_board
-        description: |
+        description: >-
           O cliente e runtime de contêiner definitivo de código aberto.
         links:
           - text: "Visão geral"
@@ -69,7 +69,7 @@ grid:
             url: "/engine/release-notes/"
       - title: Docker Build
         icon: build
-        description: |
+        description: >-
           Empacote, teste e distribua suas aplicações.
         links:
           - text: "Visão geral"
@@ -80,7 +80,7 @@ grid:
             url: "/build/release-notes/"
       - title: Docker Build Cloud
         icon: cloud
-        description: |
+        description: >-
           Execute suas construções na nuvem.
         links:
           - text: "Visão geral"
@@ -91,7 +91,7 @@ grid:
             url: "/build-cloud/release-notes/"
       - title: Docker Compose
         icon: polyline
-        description: |
+        description: >-
           Defina e execute aplicações multicontêiner com o Docker.
         links:
           - text: "Visão geral"
@@ -102,7 +102,7 @@ grid:
             url: "/compose/releases/release-notes/"
       - title: Docker Hub
         icon: device_hub
-        description: |
+        description: >-
           Encontre e compartilhe imagens de contêineres e outros artefatos.
         links:
           - text: "Visão geral"
@@ -113,7 +113,7 @@ grid:
             url: "/docker-hub/repos/create/"
       - title: Docker Scout
         icon: query_stats
-        description: |
+        description: >-
           Fortaleça sua cadeia de suprimentos de software com o Docker Scout.
         links:
           - text: "Visão geral"
@@ -124,7 +124,7 @@ grid:
             url: "/scout/image-analysis/"
       - title: Assinatura
         icon: card_membership
-        description: |
+        description: >-
           Licenciamento para uso comercial de componentes do Docker.
         links:
           - text: "Visão geral"
@@ -135,7 +135,7 @@ grid:
             url: "/subscription/change/"
       - title: Cobrança
         icon: payments
-        description: |
+        description: >-
           Gerencie as configurações de faturamento e pagamento da sua
           assinatura.
         links:
@@ -147,7 +147,7 @@ grid:
             url: "/billing/history/"
       - title: Administração
         icon: admin_panel_settings
-        description: |
+        description: >-
           Gerencie pessoas usuárias, permissões e muito mais da empresa e da
           organização.
         links:
@@ -159,7 +159,7 @@ grid:
             url: "/admin/company/"
       - title: Segurança
         icon: shield
-        description: |
+        description: >-
           Proteções de segurança para pessoas administradoras e desenvolvedoras.
         links:
           - text: "Visão geral"
@@ -170,7 +170,7 @@ grid:
             url: "/security/for-admins/provisioning/scim/"
       - title: Testcontainers Cloud
         icon: cloud
-        description: |
+        description: >-
           A Testcontainers Cloud permite que você execute cargas de trabalho de
           testes pesadas remotamente.
         links:

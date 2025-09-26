@@ -31,18 +31,18 @@ params:
     icon: summarize
   get-started2:
   - title: Introdução
-    description: |
+    description: >-
       Comece com os conceitos básicos e os benefícios da conteinerização de suas
       aplicações.
     link: /get-started/introduction/
     icon: rocket
   - title: Conceitos do Docker
-    description: |
+    description: >-
       Obtenha uma melhor compreensão dos conceitos básicos do Docker.
     link: /get-started/docker-concepts/the-basics/what-is-a-container/
     icon: foundation
   - title: Workshop sobre Docker
-    description: |
+    description: >-
       Participe de um workshop de 45 minutos para aprender sobre o Docker.
     link: /get-started/workshop/
     icon: desk

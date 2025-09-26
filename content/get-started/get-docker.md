@@ -10,13 +10,15 @@
 # https://github.com/docker/docs/blob/main/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/get-docker.md
-revision: 50e986c308252f63bb0f9ff5f734f4a167f2fdfd
+revision: 038e6dc6824586c9c9081274f7716ec0e119d6a2
 status: ready
 
-description: Baixe e instale o Docker na plataforma de sua escolha, incluindo
-  Mac, Linux ou Windows.
-keywords: instalar docker, baixar docker, instalação do docker, como instalar
-  docker, obter docker, docker localmente
+description: >-
+  Baixe e instale o Docker na plataforma de sua escolha, incluindo Mac, Linux ou
+  Windows.
+keywords: >-
+  instalar docker, baixar docker, instalação do docker, como instalar docker,
+  obter docker, docker localmente
 title: Obtenha o Docker
 weight: 10
 aliases:
@@ -25,6 +27,7 @@ aliases:
  - /installation/
  - /get-docker/
 ---
+
 Docker é uma plataforma aberta para desenvolver, distribuir e executar
 aplicações.
 
@@ -46,27 +49,25 @@ Consulte a seção a seguir e escolha a melhor forma de instalação para você.
 > funcionárias OU mais de US$ 10 milhões em receita anual) requer uma
 > [assinatura paga](https://www.docker.com/pricing/).
 
+<div class="not-prose">
 {{< card
   title="Docker Desktop para Mac"
-  description="Uma aplicação nativa que usa o modelo de segurança de _sandbox_ do macOS que fornece todas as ferramentas do Docker para o seu Mac."
+  description="Uma aplicação nativa que usa o modelo de segurança de sandbox do macOS que fornece todas as ferramentas do Docker para o seu Mac."
   link="/desktop/setup/install/mac-install/"
-  icon="/assets/images/apple_48.svg" >}}
-
-<br>
+  icon="/icons/AppleMac.svg" >}}
 
 {{< card
   title="Docker Desktop para Windows"
   description="Uma aplicação nativa do Windows que fornece todas as ferramentas do Docker para o seu computador Windows."
   link="/desktop/setup/install/windows-install/"
-  icon="/assets/images/windows_48.svg" >}}
-
-<br>
+  icon="/icons/Windows.svg" >}}
 
 {{< card
   title="Docker Desktop para Linux"
   description="Uma aplicação nativa do Linux que fornece todas as ferramentas do Docker para seu computador Linux."
   link="/desktop/setup/install/linux/"
-  icon="/assets/images/linux_48.svg" >}}
+  icon="/icons/Linux.svg" >}}
+</div>
 
 > [!NOTE]
 >
