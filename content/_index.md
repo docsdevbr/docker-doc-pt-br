@@ -176,7 +176,7 @@ grid:
         links:
           - text: "Visão geral"
             url: "https://testcontainers.com/cloud/docs/"
-          - text: "Introdução"
+          - text: "Começando"
             url: "https://testcontainers.com/cloud/docs/#getting-started"
           - text: "TCC para CI"
             url: "https://testcontainers.com/cloud/docs/#tcc-for-ci"

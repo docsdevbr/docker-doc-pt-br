@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/main/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/_index.md
-revision: d3718efac93abdab71ad2350e72d001ec26f5e60
+revision: ec19565b9ca532bff7cb672cd9f6d7e30a44fa28
 status: ready
 
 title: Começando
@@ -25,24 +25,29 @@ params:
     description: Escolha a melhor forma de instalação para sua configuração.
     link: /get-started/get-docker/
     icon: download
-  - title: What is Docker?
-    description: Learn about the Docker platform.
+  - title: O que é o Docker?
+    description: Saiba mais sobre a plataforma Docker.
     link: /get-started/docker-overview/
     icon: summarize
   get-started2:
-  - title: Introduction
-    description: Get started with the basics and the benefits of containerizing your applications.
+  - title: Introdução
+    description: |
+      Comece com os conceitos básicos e os benefícios da conteinerização de suas
+      aplicações.
     link: /get-started/introduction/
     icon: rocket
-  - title: Docker concepts
-    description: Gain a better understanding of foundational Docker concepts.
+  - title: Conceitos do Docker
+    description: |
+      Obtenha uma melhor compreensão dos conceitos básicos do Docker.
     link: /get-started/docker-concepts/the-basics/what-is-a-container/
     icon: foundation
-  - title: Docker workshop
-    description: Get guided through a 45-minute workshop to learn about Docker.
+  - title: Workshop sobre Docker
+    description: |
+      Participe de um workshop de 45 minutos para aprender sobre o Docker.
     link: /get-started/workshop/
     icon: desk
 ---
+
 Se você é uma pessoa nova no Docker, esta seção te guiará pelos recursos
 essenciais para começar.
 
@@ -52,12 +57,12 @@ seus fluxos de trabalho de desenvolvimento.
 Para conceitos e cenários mais avançados no Docker, consulte os
 [Guias](/guides/).
 
-## Foundations of Docker
+## Fundamentos do Docker
 
-Install Docker and jump into discovering what Docker is.
+Instale o Docker e descubra o que é o Docker.
 
 {{< grid items="get-started" >}}
 
-Learn the foundational concepts and workflows of Docker.
+Aprenda os conceitos básicos e fluxos de trabalho do Docker.
 
 {{< grid items="get-started2" >}}
