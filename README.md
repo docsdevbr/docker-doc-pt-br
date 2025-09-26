@@ -50,7 +50,7 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.md
 
-[contributors]: https://github.com/docsdevbr/nomad-doc-pt-br/graphs/contributors
+[contributors]: https://github.com/docsdevbr/docker-doc-pt-br/graphs/contributors
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 

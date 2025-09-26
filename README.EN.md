@@ -50,7 +50,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.EN.md
 
-[contributors]: https://github.com/docsdevbr/nomad-doc-pt-br/graphs/contributors
+[contributors]: https://github.com/docsdevbr/docker-doc-pt-br/graphs/contributors
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
