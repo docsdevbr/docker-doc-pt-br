@@ -180,4 +180,15 @@ grid:
         url: "https://testcontainers.com/cloud/docs/#getting-started"
       - text: "TCC para CI"
         url: "https://testcontainers.com/cloud/docs/#tcc-for-ci"
+  - title: Docker Offload
+    icon: cloud
+    description: >-
+      Crie e execute contêineres na nuvem.
+    links:
+    - text: "Visão geral"
+      url: "/offload/"
+    - text: "Início rápido"
+      url: "/offload/quickstart/"
+    - text: "Sobre o Docker Offload"
+      url: "/offload/about/"
 ---
