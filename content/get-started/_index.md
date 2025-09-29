@@ -13,8 +13,8 @@ source_url: https://github.com/docker/docs/blob/main/content/get-started/_index.
 revision: ec19565b9ca532bff7cb672cd9f6d7e30a44fa28
 status: ready
 
-title: Começando
-keywords: Docker, começando
+title: Comece
+keywords: Docker, comece
 description: Comece a usar o Docker.
 layout: wide
 params:
