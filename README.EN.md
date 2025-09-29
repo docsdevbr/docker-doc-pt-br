@@ -1,4 +1,4 @@
-# [docker-website-pt-br][page]
+# [docker-doc-pt-br][page]
 
 [![README file in English][badge-readme-en]][readme-en]
 [![README file in Brazilian Portuguese][badge-readme-pt-br]][readme-pt-br]
@@ -6,7 +6,7 @@
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
-Translation of the Docker website into Brazilian Portuguese.
+Translation of the Docker Documentation into Brazilian Portuguese.
 
 ## Contributing
 
@@ -36,11 +36,11 @@ used herein.
 Documentation licensed under the [Apache License, Version 2.0][license].<br>
 The original work was translated from English into Brazilian Portuguese.
 
-[badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/docker-website-pt-br
+[badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/docker-doc-pt-br
 
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 
-[badge-license]: https://img.shields.io/github/license/docsdevbr/docker-website-pt-br
+[badge-license]: https://img.shields.io/github/license/docsdevbr/docker-doc-pt-br
 
 [badge-readme-en]: https://img.shields.io/badge/lang-en-blue
 
@@ -50,13 +50,13 @@ The original work was translated from English into Brazilian Portuguese.
 
 [contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.EN.md
 
-[contributors]: https://github.com/docsdevbr/docker-website-pt-br/graphs/contributors
+[contributors]: https://github.com/docsdevbr/docker-doc-pt-br/graphs/contributors
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
 [license]: LICENSE
 
-[page]: https://pt.docs.dev.br/p/docker/
+[page]: https://pt.docs.dev.br/p/docker/docs/
 
 [readme-en]: README.EN.md
 

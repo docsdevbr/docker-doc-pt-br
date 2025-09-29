@@ -1,4 +1,4 @@
-# [docker-website-pt-br][page]
+# [docker-doc-pt-br][page]
 
 [![Arquivo README em inglês][badge-readme-en]][readme-en]
 [![Arquivo README em português brasileiro][badge-readme-pt-br]][readme-pt-br]
@@ -6,7 +6,7 @@
 [![Pessoas contribuidoras][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
-Tradução do site do Docker para português brasileiro.
+Tradução da Documentação do Docker para português brasileiro.
 
 ## Contribuindo
 
@@ -36,11 +36,11 @@ outros termos usados aqui.
 Documentação licenciada sob a [Licença Apache, Versão 2.0][license].<br>
 A obra original foi traduzida do inglês para o português brasileiro.
 
-[badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/docker-website-pt-br
+[badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/docker-doc-pt-br
 
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 
-[badge-license]: https://img.shields.io/github/license/docsdevbr/docker-website-pt-br
+[badge-license]: https://img.shields.io/github/license/docsdevbr/docker-doc-pt-br
 
 [badge-readme-en]: https://img.shields.io/badge/lang-en-blue
 
@@ -50,13 +50,13 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.md
 
-[contributors]: https://github.com/docsdevbr/docker-website-pt-br/graphs/contributors
+[contributors]: https://github.com/docsdevbr/docker-doc-pt-br/graphs/contributors
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
 [license]: LICENSE
 
-[page]: https://pt.docs.dev.br/p/docker/
+[page]: https://pt.docs.dev.br/p/docker/docs/
 
 [readme-en]: README.EN.md
 
