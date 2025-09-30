@@ -19,7 +19,7 @@ description: >-
 keywords: >-
   instalar docker, baixar docker, instalação do docker, como instalar docker,
   obter docker, docker localmente
-title: Obtenha o Docker
+title: Baixe o Docker
 weight: 10
 aliases:
  - /install/
