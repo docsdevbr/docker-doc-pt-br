@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/main/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/build-and-push-first-image.md
-revision: abd030c3fe2b5db526fb7a16d6d9892d46d678e5
+revision: 41e2d0c9a137ccb4338cfda13d969a76b85c03dc
 status: ready
 
 title: Crie e envie sua primeira imagem
