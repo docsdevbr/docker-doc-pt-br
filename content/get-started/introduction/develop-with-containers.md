@@ -16,7 +16,7 @@ status: ready
 title: Desenvolva com contêineres
 keywords: conceitos, construção, imagens, contêiner, docker desktop
 description: Esta página conceitual ensinará como desenvolver com contêineres.
-summary: |
+summary: >-
   Aprenda a executar seu primeiro contêiner, ganhando experiência prática com os
   recursos poderosos do Docker.
   Abordaremos como fazer alterações em tempo real no código de back-end e
