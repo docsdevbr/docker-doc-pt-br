@@ -21,7 +21,7 @@ params:
   icon: download
   notoc: true
   get-started:
-  - title: Obtenha o Docker
+  - title: Baixe o Docker
     description: Escolha a melhor forma de instalação para sua configuração.
     link: /get-started/get-docker/
     icon: download
