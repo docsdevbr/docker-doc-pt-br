@@ -17,11 +17,11 @@ description: >-
   Obtenha uma visão geral aprofundada da plataforma Docker, incluindo para que
   ela pode ser usada, a arquitetura que ela emprega e sua tecnologia subjacente.
 keywords: >-
-  o que é docker, daemon docker, por que usar docker, arquitetura docker, para
+  o que é o docker, daemon docker, por que usar docker, arquitetura docker, para
   que usar docker, cliente docker, para que serve o docker, por que docker, usos
   para docker, para que o contêiner docker é usado, para que os contêineres
   docker são usados
-title: O que é Docker?
+title: O que é o Docker?
 weight: 20
 aliases:
  - /introduction/understanding-docker/
