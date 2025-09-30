@@ -15,19 +15,20 @@ status: ready
 
 title: Crie e envie sua primeira imagem
 keywords: conceitos, container, docker desktop
-description: |
+description: >-
   Esta página conceitual lhe ensinará como construir e enviar sua primeira
   imagem.
-summary: |
+summary: >-
   Aprenda a construir sua primeira imagem Docker, uma etapa fundamental na
-  conteinerização de sua aplicação.
+  conteinerização da sua aplicação.
   Nós te guiaremos pelo processo de criação de um repositório de imagens e
-  construção e envio de sua imagem para o Docker Hub.
+  construção e envio da sua imagem para o Docker Hub.
   Isso permitirá que você compartilhe sua imagem facilmente com seu time.
 weight: 3
 aliases:
  - /guides/getting-started/build-and-push-first-image/
 ---
+
 {{< youtube-embed 7ge1s5nAa34 >}}
 
 ## Explicação
@@ -38,10 +39,10 @@ já pode criar uma imagem de contêiner para a aplicação e compartilhá-la no
 Docker Hub.
 Para fazer isso, você precisará fazer o seguinte:
 
-1. Entrar com sua conta do Docker
-2. Criar um repositório de imagens no Docker Hub
-3. Criar a imagem do contêiner
-4. Enviar a imagem para o Docker Hub
+1. Entrar com sua conta do Docker;
+2. Criar um repositório de imagens no Docker Hub;
+3. Criar a imagem do contêiner;
+4. Enviar a imagem para o Docker Hub.
 
 Antes de mergulhar no guia prático, a seguir estão alguns conceitos básicos dos
 quais você deve estar ciente.
@@ -51,7 +52,7 @@ quais você deve estar ciente.
 Se você é uma pessoa nova em imagens de contêiner, pense nelas como um pacote
 padronizado que contém tudo o que é necessário para executar uma aplicação,
 incluindo seus arquivos, configuração e dependências.
-Esses pacotes podem ser distribuídos e compartilhados com outros.
+Esses pacotes podem ser distribuídos e compartilhados com outras pessoas.
 
 ### Docker Hub
 
@@ -60,45 +61,48 @@ armazená-las.
 É aqui que os registros entram.
 Embora existam muitos registros, o Docker Hub é o registro padrão e de
 referência para imagens.
-O Docker Hub fornece um lugar para você armazenar suas imagens e encontrar
-outras imagens para executar ou usar como base para suas imagens.
+O Docker Hub fornece um lugar para você armazenar suas próprias imagens e
+encontrar outras imagens para executar ou usar como base para suas próprias
+imagens.
 
 Em [Desenvolva com contêineres](develop-with-containers.md), você usou as
 seguintes imagens que vieram do Docker Hub, cada uma das quais são
 [Imagens Oficiais do Docker](/manuals/docker-hub/image-library/trusted-content.md#docker-official-images):
 
-* [node](https://hub.docker.com/_/node) - fornece um ambiente Node e é usada
+* [node](https://hub.docker.com/_/node) - Fornece um ambiente Node e é usada
   como base para seu trabalho de desenvolvimento.
-  Esta imagem também é usada como base para a imagem final da aplicação.
-* [mysql](https://hub.docker.com/_/mysql) - fornece um banco de dados MySQL para
-  armazenar os itens da lista de tarefas.
-* [phpmyadmin](https://hub.docker.com/_/phpmyadmin) - fornece o phpMyAdmin, uma
-  interface _web_ para o banco de dados MySQL.
+  Esta imagem também é usada como base para a imagem final da aplicação;
+* [mysql](https://hub.docker.com/_/mysql) - Fornece um banco de dados MySQL para
+  armazenar os itens da lista de tarefas;
+* [phpmyadmin](https://hub.docker.com/_/phpmyadmin) - Fornece o phpMyAdmin, uma
+  interface web para o banco de dados MySQL;
 * [traefik](https://hub.docker.com/_/traefik) - fornece o Traefik, um moderno
-  _proxy_ reverso HTTP e balanceador de carga que roteia requisições para o
+  proxy reverso HTTP e balanceador de carga que roteia requisições para o
   contêiner apropriado com base em regras de roteamento.
 
 Explore o catálogo completo de
-[Imagens Oficiais do Docker](https://hub.docker.com/search?image_filter=official&q=),
-editores verificados pelo Docker e imagens do
-[programa de código aberto patrocinado pelo Docker](https://hub.docker.com/search?q=&image_filter=open_source)
+[Imagens Oficiais do Docker](https://hub.docker.com/search?image_filter=official&q=)
+e imagens de
+[Editores Verificados pelo Docker](https://hub.docker.com/search?q=&image_filter=store)
+e de
+[Software de Código Aberto Patrocinado pelo Docker](https://hub.docker.com/search?q=&image_filter=open_source)
 para ver mais do que há para executar e desenvolver.
 
 ## Experimente
 
-Neste guia prático, você aprenderá como fazer o _login_ no Docker Hub e enviar
+Neste guia prático, você aprenderá como fazer o login no Docker Hub e enviar
 imagens para o repositório do Docker Hub.
 
 ## Entre com sua conta do Docker
 
-Para enviar imagens para o Docker Hub, você precisará fazer o _login_ com uma
+Para enviar imagens para o Docker Hub, você precisará fazer o login com uma
 conta do Docker.
 
 1. Abra o Painel do Docker.
 
 2. Selecione **Sign in** no canto superior direito.
 
-3. Se necessário, crie uma conta e conclua o fluxo de _login_.
+3. Se necessário, crie uma conta e conclua o fluxo de login.
 
 Quando terminar, você verá o botão **Sign in** se transformar em uma foto de
 perfil.
@@ -114,11 +118,12 @@ armazena imagens de contêiner.
 2. Selecione **Create repository**.
 
 3. Na página **Create repository**, insira as seguintes informações:
-    * **Repository name** - `getting-started-todo-app`
-    * **Short description** - sinta-se à vontade para inserir uma descrição, se
-      desejar.
-    * **Visibility** - selecione **Public** para permitir que outros baixem sua
-      aplicação de tarefas personalizada.
+
+   * **Repository name** - `getting-started-todo-app`;
+   * **Short description** - Sinta-se à vontade para inserir uma descrição, se
+     desejar;
+   * **Visibility** - Selecione **Public** para permitir que outras pessoas
+     baixem sua aplicação de tarefas personalizada.
 
 4. Selecione **Create** para criar o repositório.
 
@@ -135,14 +140,14 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 >
 > Sem entrar muito em detalhes ainda, pense em uma imagem de contêiner como um
 > único pacote que contém tudo o que é necessário para executar um processo.
-> Nesse caso, ela conterá um ambiente Node, o código de _backend_ e o código
+> Nesse caso, ela conterá um ambiente Node, o código de back-end e o código
 > React compilado.
 >
 > Qualquer máquina que execute um contêiner usando a imagem poderá executar a
 > aplicação como ela foi criada, sem precisar de mais nada pré-instalado na
 > máquina.
 >
-> Um `Dockerfile` é um _script_ baseado em texto que fornece o conjunto de
+> Um `Dockerfile` é um script baseado em texto que fornece o conjunto de
 > instruções sobre como criar a imagem.
 > Para esse início rápido, o repositório já contém o `Dockerfile`.
 
@@ -152,7 +157,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 
 1. Para começar, clone ou
    [baixe o projeto como um arquivo ZIP](https://github.com/docker/getting-started-todo-app/archive/refs/heads/main.zip)
-   para sua máquina local:
+   para sua máquina local.
 
    ```console
    $ git clone https://github.com/docker/getting-started-todo-app
@@ -168,23 +173,23 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 2. Construa o projeto executando o seguinte comando, trocando `DOCKER_USERNAME`
    pelo seu nome de pessoa usuária:
 
-    ```console
-    $ docker build -t <DOCKER_USERNAME>/getting-started-todo-app .
-    ```
+   ```console
+   $ docker build -t <DOCKER_USERNAME>/getting-started-todo-app .
+   ```
 
    Por exemplo, se seu nome de pessoa usuária do Docker fosse `mobydock`, você
    executaria o seguinte:
 
-    ```console
-    $ docker build -t mobydock/getting-started-todo-app .
-    ```
+   ```console
+   $ docker build -t mobydock/getting-started-todo-app .
+   ```
 
 3. Para verificar se a imagem existe localmente, você pode usar o comando
    `docker image ls`:
 
-    ```console
-    $ docker image ls
-    ```
+   ```console
+   $ docker image ls
+   ```
 
    Você verá uma saída semelhante à seguinte:
 
@@ -198,53 +203,57 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
    Certifique-se de substituir `DOCKER_USERNAME` pelo seu nome de pessoa
    usuária:
 
-    ```console
-    $ docker push <DOCKER_USERNAME>/getting-started-todo-app
-    ```
+   ```console
+   $ docker push <DOCKER_USERNAME>/getting-started-todo-app
+   ```
 
-   Dependendo da sua velocidade de _upload_, isso pode levar um tempo para ser
+   Dependendo da sua velocidade de upload, isso pode levar um tempo para ser
    concluído.
 
 {{< /tab >}}
 {{< tab name="VS Code" >}}
 
 1. Abra o Visual Studio Code.
-   No menu **File**, selecione **Open Folder**.
-   Escolha **Clone Git Repository...** e cole esta URL:
+   Certifique-se de ter a **extensão Docker para VS Code** instalada do [Mercado de Extensões](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker).
+
+   ![Captura de tela do mercado de extensões do VS Code](images/install-docker-extension.webp)
+
+2. No menu **File**, selecione **Open Folder**.
+   Escolha **Clone Git Repository** e cole esta URL:
    [https://github.com/docker/getting-started-todo-app](https://github.com/docker/getting-started-todo-app)
+
    ![Captura de tela do VS Code mostrando como clonar um repositório](images/clone-the-repo.webp?border=true)
 
-2. Clique com o botão direito no `Dockerfile` e selecione o item de menu **Build
+3. Clique com o botão direito no `Dockerfile` e selecione o item de menu **Build
    Image...**.
+
    ![Captura de tela do VS Code mostrando o menu do botão direito e o item de menu "Build Image"](images/build-vscode-menu-item.webp?border=true)
 
-
-
-3. Na caixa de diálogo que aparece, insira o nome
+4. Na caixa de diálogo que aparece, insira o nome
    `DOCKER_USERNAME/getting-started-todo-app`, substituindo `DOCKER_USERNAME`
    pelo seu nome de pessoa usuária do Docker.
 
-4. Após pressionar **Enter**, você verá um terminal aparecer onde a construção
+5. Após pressionar **Enter**, você verá um terminal aparecer onde a construção
    ocorrerá.
    Quando estiver concluído, sinta-se à vontade para fechar o terminal.
 
-5. Abra a Extensão Docker para VS Code selecionando o logotipo do Docker no menu
+6. Abra a Extensão Docker para VS Code selecionando o logotipo do Docker no menu
    de navegação esquerdo.
 
-6. Encontre a imagem que você criou.
+7. Encontre a imagem que você criou.
    Ela terá um nome de `docker.io/DOCKER_USERNAME/getting-started-todo-app`.
 
-7. Expanda a imagem para visualizar as _tags_ (ou versões diferentes) da imagem.
-   Você deve ver uma _tag_ chamada `latest`, que é a _tag_ padrão dada a uma
-   imagem.
+8. Expanda a imagem para visualizar as tags (ou versões diferentes) da imagem.
+   Você deve ver uma tag chamada `latest`, que é a tag padrão dada a uma imagem.
 
-8. Clique com o botão direito no item **latest** e selecione a opção
+9. Clique com o botão direito no item **latest** e selecione a opção
    **Push...**.
-   ![Captura de tela da extensão Docker e do menu do botão direito para enviar uma imagem](images/build-vscode-push-image.webp?border=true)
 
-9. Pressione **Enter** para confirmar e então observe enquanto sua imagem é
+   ![Captura de tela da extensão Docker e do menu do botão direito para enviar uma imagem](images/build-vscode-push-image.webp)
+
+10. Pressione **Enter** para confirmar e então observe enquanto sua imagem é
    enviada para o Docker Hub.
-   Dependendo da sua velocidade de _upload_, pode levar um tempo para enviar a
+   Dependendo da sua velocidade de upload, pode levar um tempo para enviar a
    imagem.
 
 {{< /tab >}}
@@ -255,7 +264,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 
 Antes de prosseguir, reserve um momento para refletir sobre o que aconteceu
 aqui.
-Em alguns momentos, você conseguiu criar uma imagem de contêiner que empacota
+Em alguns instantes, você conseguiu criar uma imagem de contêiner que empacota
 sua aplicação e enviar a imagem para o Docker Hub.
 
 No futuro, você vai querer lembrar que:
@@ -267,9 +276,9 @@ No futuro, você vai querer lembrar que:
 
 * O Docker Hub fornece um mercado para distribuir suas aplicações.
   Qualquer pessoa pode criar uma conta e distribuir imagens.
-  Enquanto você está distribuindo publicamente a imagem que criou, repositórios
-  privados podem garantir que suas imagens sejam acessíveis apenas a pessoas
-  usuárias autorizadas.
+  Enquanto você distribui publicamente a imagem criada, repositórios privados
+  podem garantir que suas imagens sejam acessíveis apenas a pessoas usuárias
+  autorizadas.
 
 > **Uso de outros registros**
 >
@@ -282,12 +291,13 @@ No futuro, você vai querer lembrar que:
 > esses registros privados.
 
 
+
 ## Próximos passos
 
 Agora que você construiu uma imagem, é hora de discutir por que você, como
 pessoa desenvolvedora, deve aprender mais sobre o Docker e como ele te ajudará
 em suas tarefas do dia a dia.
 
-{{< button text="What's Next" url="whats-next" >}}
+{{< button text="O que vem a seguir" url="whats-next" >}}
 
 
