@@ -15,10 +15,10 @@ status: ready
 
 title: Baixe o Docker Desktop
 keywords: conceitos, contêiner, docker desktop
-description: |
+description: >-
   Esta página conceitual ensinará você a baixar o Docker Desktop e instalá-lo no
   Windows, Mac e Linux.
-summary: |
+summary: >-
   Colocar o Docker Desktop em funcionamento é o primeiro passo crucial para
   pessoas desenvolvedoras que estão mergulhando na conteinerização, oferecendo
   uma interface perfeita e amigável para gerenciar contêineres Docker.
@@ -70,8 +70,8 @@ um contêiner do Docker.
 
 ## Experimente
 
-Neste guia prático, você verá como executar um contêiner Docker usando o Docker
-Desktop.
+Neste guia prático, você aprenderá como executar um contêiner Docker usando o
+Docker Desktop.
 
 Siga as instruções para executar um contêiner usando a CLI.
 
