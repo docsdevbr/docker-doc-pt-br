@@ -10,13 +10,14 @@
 # https://github.com/docker/docs/blob/main/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-container.md
-revision: 656d1a871c6837fae1e4538b82a3a5c01b70ed1e
+revision: ec19565b9ca532bff7cb672cd9f6d7e30a44fa28
 status: ready
 
 title: O que é um contêiner?
 weight: 10
 keywords: conceitos, construção, imagens, contêiner, docker desktop
-description: |
+description: >-
+  O que é um contêiner?
   Esta página conceitual ensinará sobre contêineres e fornecerá uma rápida
   introdução onde você executará seu primeiro contêiner.
 aliases:
@@ -24,24 +25,26 @@ aliases:
 - /guides/walkthroughs/run-a-container/
 - /guides/walkthroughs/
 - /get-started/run-your-own-container/
+- /get-started/what-is-a-container/
 - /guides/docker-concepts/the-basics/what-is-a-container/
 ---
+
 {{< youtube-embed W1kWqFkiu7k >}}
 
 ## Explicação
 
-Imagine que você está desenvolvendo uma aplicação _web_ matadora que tem três
-componentes principais - um _frontend_ React, uma API Python e um banco de dados
+Imagine que você esteja desenvolvendo uma aplicação web incrível com três
+componentes principais - um front-end React, uma API Python e um banco de dados
 PostgreSQL.
 Se você quisesse trabalhar neste projeto, teria que instalar o Node, Python e
 PostgreSQL.
 
 Como você garante que tem as mesmas versões que as outras pessoas
 desenvolvedoras do seu time?
-Ou seu sistema de CI/CD?
-Ou o que é usado em produção?
+Ou do seu sistema de CI/CD?
+Ou do que é usado em produção?
 
-Como você garante que a versão do Python (ou Node ou o banco de dados) que sua
+Como você garante que a versão do Python (ou Node ou do banco de dados) que sua
 aplicação precisa não seja afetada pelo que já está na sua máquina?
 Como você gerencia potenciais conflitos?
 
@@ -50,7 +53,7 @@ Como você gerencia potenciais conflitos?
 O que é um contêiner?
 Simplificando, os contêineres são processos isolados para cada um dos
 componentes da sua aplicação.
-Cada componente - a aplicação _frontend_ React, o motor da API Python e o banco
+Cada componente - a aplicação front-end React, o motor da API Python e o banco
 de dados - é executado em seu próprio ambiente isolado, completamente isolado de
 todo o resto na sua máquina.
 
@@ -69,27 +72,27 @@ Aqui está o que os torna incríveis. Os contêineres são:
 * Portáteis.
   Os contêineres podem ser executados em qualquer lugar!
   O contêiner que é executado na sua máquina de desenvolvimento funcionará da
-  mesma forma em um _data center_ ou em qualquer lugar na nuvem!
+  mesma forma em um data center ou em qualquer lugar na nuvem!
 
-### Contêineres _versus_ máquinas virtuais (VMs)
+### Contêineres versus máquinas virtuais (VMs)
 
 Sem entrar muito em detalhes, uma VM é um sistema operacional inteiro com seu
-próprio _kernel_, _drivers_ de _hardware_, programas e aplicações.
-Iniciar uma VM apenas para isolar uma única aplicação é muita sobrecarga.
+próprio kernel, drivers de hardware, programas e aplicações.
+Executar uma VM apenas para isolar uma única aplicação gera muita sobrecarga.
 
 Um contêiner é simplesmente um processo isolado com todos os arquivos
-necessários para ser executado.
-Se você executar vários contêineres, todos eles compartilharão o mesmo _kernel_,
+necessários para sua execução.
+Se você executar vários contêineres, todos eles compartilharão o mesmo kernel,
 permitindo que você execute mais aplicações usando menos infraestrutura.
 
 > **Usando VMs e contêineres juntos**
 >
-> Muitas vezes, você verá contêineres e VMs usados juntos.
-> Como exemplo, em um ambiente de nuvem, as máquinas provisionadas são
-> normalmente VMs.
+> É bastante comum ver contêineres e VMs sendo usados juntos.
+> Por exemplo, em um ambiente de nuvem, as máquinas provisionadas normalmente
+> são VMs.
 > No entanto, em vez de provisionar uma máquina para executar uma aplicação, uma
-> VM com um tempo de execução de contêiner pode executar várias aplicações em
-> contêineres, melhorando a utilização de recursos e reduzindo custos.
+> VM com um runtime de contêiner pode executar várias aplicações em contêineres,
+> melhorando a utilização de recursos e reduzindo custos.
 
 
 ## Experimente
@@ -100,7 +103,7 @@ Docker Desktop.
 {{< tabs group=concept-usage persist=true >}}
 {{< tab name="Usando a GUI" >}}
 
-Use as seguintes instruções para executar um contêiner.
+Use as instruções a seguir para executar um contêiner.
 
 1. Abra o Docker Desktop e selecione o campo **Search** na barra de navegação
    superior.
@@ -108,7 +111,7 @@ Use as seguintes instruções para executar um contêiner.
 2. Especifique `welcome-to-docker` na entrada de pesquisa e selecione o botão
    **Pull**.
 
-    ![Uma captura de tela do Painel do Docker mostrando o resultado da pesquisa para a imagem welcome-to-docker do Docker](images/search-the-docker-image.webp?border=true&w=1000&h=700)
+    ![Uma captura de tela do Painel do Docker Desktop mostrando o resultado da pesquisa para a imagem welcome-to-docker do Docker](images/search-the-docker-image.webp?border=true&w=1000&h=700)
 
 3. Depois que a imagem for baixada com sucesso, selecione o botão **Run**.
 
@@ -118,7 +121,7 @@ Use as seguintes instruções para executar um contêiner.
 
 6. Em **Host port**, especifique `8080`.
 
-    ![Uma captura de tela do Painel do Docker mostrando a caixa de diálogo de execução do contêiner com welcome-to-docker digitado como o nome do contêiner e 8080 especificado como o número da porta](images/run-a-new-container.webp?border=true&w=550&h=400)
+    ![Uma captura de tela do Painel do Docker Desktop mostrando a caixa de diálogo de execução do contêiner com welcome-to-docker digitado como o nome do contêiner e 8080 especificado como o número da porta](images/run-a-new-container.webp?border=true&w=550&h=400)
 
 7. Selecione **Run** para iniciar seu contêiner.
 
@@ -127,26 +130,25 @@ Parabéns! Você acabou de executar seu primeiro contêiner! 🎉
 ### Visualize seu contêiner
 
 Você pode visualizar todos os seus contêineres acessando a visualização
-**Containers** do Painel do Docker.
+**Containers** do Painel do Docker Desktop.
 
 ![Captura de tela da visualização do contêiner da GUI do Docker Desktop mostrando o contêiner welcome-to-docker em execução na porta 8080 da máquina hospedeira](images/view-your-containers.webp?border=true&w=750&h=600)
 
-Este contêiner executa um servidor _web_ que exibe um site simples.
+Este contêiner executa um servidor web que exibe um site simples.
 Ao trabalhar com projetos mais complexos, você executará partes diferentes em
 contêineres diferentes.
-Por exemplo, você pode executar um contêiner diferente para o _frontend_,
-_backend_ e banco de dados.
+Por exemplo, você pode executar um contêiner diferente para o front-end, o
+back-end e o banco de dados.
 
-### Acesse o _frontend_
+### Acesse o front-end
 
-Quando você iniciou o contêiner, expôs uma das portas do contêiner na sua
-máquina.
-Pense nisso como criar uma configuração para permitir que você se conecte
-através do ambiente isolado do contêiner.
+Ao iniciar o contêiner, você expôs uma das portas do contêiner na sua máquina.
+Pense nisso como criar uma configuração que lhe permitirá conectar-se através do
+ambiente isolado do contêiner.
 
-Para este contêiner, o _frontend_ é acessível na porta `8080`.
-Para abrir o site, selecione o _link_ na coluna **Port(s)** do seu contêiner ou
-visite [http://localhost:8080](https://localhost:8080) no seu navegador.
+Para este contêiner, o front-end pode ser acessado na porta `8080`.
+Para abrir o site, selecione o link na coluna **Port(s)** do seu contêiner ou
+visite [http://localhost:8080](http://localhost:8080) no seu navegador.
 
 ![Captura de tela da página inicial vinda do contêiner em execução](images/access-the-frontend.webp?border)
 
@@ -156,26 +158,26 @@ O Docker Desktop permite que você explore e interaja com diferentes aspectos do
 seu contêiner.
 Faça um teste.
 
-1. Vá para a visualização **Containers** no Painel do Docker.
+1. Acesse a visualização **Containers** no Painel do Docker Desktop.
 
 2. Selecione seu contêiner.
 
 3. Selecione a aba **Files** para explorar o sistema de arquivos isolado do seu
    contêiner.
 
-    ![Captura de tela do Painel do Docker mostrando os arquivos e diretórios dentro de um contêiner em execução](images/explore-your-container.webp?border)
+    ![Captura de tela do Painel do Docker Desktop mostrando os arquivos e diretórios dentro de um contêiner em execução](images/explore-your-container.webp?border)
 
 ### Pare seu contêiner
 
 O contêiner `docker/welcome-to-docker` continua em execução até que você o pare.
 
-1. Vá para a visualização **Containers** no Painel do Docker.
+1. Acesse a visualização **Containers** no Painel do Docker Desktop.
 
 2. Localize o contêiner que você gostaria de parar.
 
 3. Selecione a ação **Stop** na coluna **Actions**.
 
-    ![Captura de tela do Painel do Docker com o contêiner de boas-vindas selecionado e sendo preparado para parar](images/stop-your-container.webp?border)
+    ![Captura de tela do Painel do Docker Desktop com o contêiner de boas-vindas selecionado e sendo preparado para parar](images/stop-your-container.webp?border)
 
 {{< /tab >}}
 {{< tab name="Usando a CLI" >}}
@@ -195,7 +197,8 @@ Parabéns! Você acabou de iniciar seu primeiro contêiner! 🎉
 
 ### Visualize seus contêineres em execução
 
-Você pode verificar se o contêiner está ativo e em execução usando o comando [`docker ps`](/reference/cli/docker/container/ls/):
+Você pode verificar se o contêiner está ativo e em execução usando o comando
+[`docker ps`](/reference/cli/docker/container/ls/):
 
 ```console
 docker ps
@@ -208,11 +211,10 @@ Você verá uma saída como a seguinte:
  a1f7a4bb3a27   docker/welcome-to-docker   "/docker-entrypoint.…"   11 seconds ago   Up 11 seconds   0.0.0.0:8080->80/tcp       gracious_keldysh
 ```
 
-Este contêiner executa um servidor _web_ que exibe um site simples.
+Este contêiner executa um servidor web que exibe um site simples.
 Ao trabalhar com projetos mais complexos, você executará partes diferentes em
 contêineres diferentes.
-Por exemplo, um contêiner diferente para o _frontend_, _backend_ e banco de
-dados.
+Por exemplo, um contêiner diferente para `frontend`, `backend` e `database`.
 
 > [!TIP]
 >
@@ -221,14 +223,13 @@ dados.
 > listar todos os contêineres: `docker ps -a`.
 
 
-### Acesse o _frontend_
+### Acesse o front-end
 
-Quando você iniciou o contêiner, expôs uma das portas do contêiner na sua
-máquina.
-Pense nisso como criar uma configuração para permitir que você se conecte
-através do ambiente isolado do contêiner.
+Ao iniciar o contêiner, você expôs uma das portas do contêiner na sua máquina.
+Pense nisso como criar uma configuração que lhe permitirá conectar-se através do
+ ambiente isolado do contêiner.
 
-Para este contêiner, o _frontend_ é acessível na porta `8080`.
+Para este contêiner, o front-end pode ser acessado na porta `8080`.
 Para abrir o site, selecione o link na coluna **Port(s)** do seu contêiner ou
 visite [http://localhost:8080](http://localhost:8080) no seu navegador.
 
@@ -245,14 +246,14 @@ Você pode parar um contêiner usando o comando `docker stop`.
    [`docker stop`](/reference/cli/docker/container/stop/):
 
     ```console
-    docker stop <the-container-id>
+    docker stop <id-do-container>
     ```
 
 > [!TIP]
 >
 > Ao referenciar contêineres por ID, você não precisa fornecer o ID completo.
-> Você só precisa fornecer o suficiente do ID para torná-lo único.
-> Como exemplo, o contêiner anterior pode ser parado executando o seguinte
+> Basta fornecer o suficiente do ID para torná-lo único.
+> Por exemplo, o contêiner anterior pode ser parado executando o seguinte
 > comando:
 >
 > ```console
@@ -264,7 +265,7 @@ Você pode parar um contêiner usando o comando `docker stop`.
 
 ## Recursos adicionais
 
-Os links a seguir fornecem orientação adicional sobre contêineres:
+Os links a seguir fornecem orientações adicionais sobre contêineres:
 
 - [Executando um contêiner](/engine/containers/run/)
 - [Visão geral do contêiner](https://www.docker.com/resources/what-container/)
@@ -272,7 +273,7 @@ Os links a seguir fornecem orientação adicional sobre contêineres:
 
 ## Próximos passos
 
-Agora que você aprendeu o básico de um contêiner Docker, é hora de aprender
+Agora que você aprendeu o básico sobre um contêiner Docker, é hora de aprender
 sobre imagens Docker.
 
-{{< button text="What is an image?" url="what-is-an-image" >}}
+{{< button text="O que é uma imagem?" url="what-is-an-image" >}}
