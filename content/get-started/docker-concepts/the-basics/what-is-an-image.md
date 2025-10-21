@@ -10,23 +10,24 @@
 # https://github.com/docker/docs/blob/main/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-an-image.md
-revision: 656d1a871c6837fae1e4538b82a3a5c01b70ed1e
+revision: 336aab878b72ccad04c8109df4ec8a1902fbb278
 status: ready
 
 title: O que é uma imagem?
 weight: 20
 keywords: conceitos, construção, imagens, contêiner, docker desktop
-description: |
-  Aprenda o básico sobre camadas de imagem.
+description: O que é uma imagem.
 aliases:
   - /guides/docker-concepts/the-basics/what-is-an-image/
+  - /get-started/run-docker-hub-images/
 ---
+
 {{< youtube-embed NyvT9REqLe4 >}}
 
 ## Explicação
 
-Vendo que um [contêiner](./what-is-a-container.md) é um processo isolado, de onde
-ele obtém seus arquivos e configurações?
+Considerando que um [contêiner](./what-is-a-container.md) é um processo isolado,
+de onde ele obtém seus arquivos e configurações?
 Como você compartilha esses ambientes?
 
 É aí que entram as imagens de contêiner.
@@ -36,20 +37,20 @@ binários, bibliotecas e configurações para executar um contêiner.
 Para uma imagem [PostgreSQL](https://hub.docker.com/_/postgres), essa imagem
 empacotará os binários do banco de dados, arquivos de configuração e outras
 dependências.
-Para uma aplicação _web_ Python, ela incluirá o tempo de execução do Python, o
-código da sua aplicação e todas as suas dependências.
+Para uma aplicação web Python, ela incluirá o runtime Python, o código da sua
+aplicação e todas as suas dependências.
 
-Há dois princípios importantes de imagens:
+Existem dois princípios importantes das imagens:
 
-1. As imagens são imutáveis.
-   Depois que uma imagem é criada, ela não pode ser modificada.
-   Você só pode fazer uma nova imagem ou adicionar alterações sobre ela.
+1. Imagens são imutáveis.
+   Uma vez criada, uma imagem não pode ser modificada.
+   Você só pode criar uma nova imagem ou adicionar alterações sobre ela.
 
-2. As imagens de contêiner são compostas de camadas.
+2. Imagens de contêiner são compostas por camadas.
    Cada camada representa um conjunto de alterações no sistema de arquivos que
    adicionam, removem ou modificam arquivos.
 
-Esses dois princípios permitem que você estenda ou adicione imagens existentes.
+Esses dois princípios permitem estender ou complementar imagens existentes.
 Por exemplo, se você estiver criando uma aplicação Python, pode começar pela
 [imagem do Python](https://hub.docker.com/_/python) e adicionar camadas
 adicionais para instalar as dependências da sua aplicação e adicionar seu
@@ -58,37 +59,37 @@ Isso permite que você se concentre na sua aplicação, em vez do Python em si.
 
 ### Encontrando imagens
 
-[Docker Hub](https://hub.docker.com) é o mercado global padrão para armazenar e
-distribuir imagens.
-Ele tem mais de 100.000 imagens criadas por pessoas desenvolvedoras que você
+[Docker Hub](https://hub.docker.com) é o mercado global padrão para
+armazenamento e distribuição de imagens.
+Ele possui mais de 100.000 imagens criadas por pessoas desenvolvedoras que você
 pode executar localmente.
 Você pode pesquisar imagens do Docker Hub e executá-las diretamente do Docker
 Desktop.
 
-O Docker Hub fornece uma variedade de imagens suportadas e endossadas pelo
+O Docker Hub oferece uma variedade de imagens suportadas e aprovadas pelo
 Docker, conhecidas como Conteúdo Confiável do Docker.
 Elas fornecem serviços totalmente gerenciados ou ótimos pontos de partida para
-suas imagens.
+suas próprias imagens.
 Isso inclui:
 
 - [Imagens Oficiais do Docker](https://hub.docker.com/search?q=&type=image&image_filter=official) -
   um conjunto selecionado de repositórios do Docker, servem como ponto de
-  partida para a maioria das pessoas usuárias e são algumas das mais seguras no
+  partida para a maioria das pessoas usuárias e estão entre as mais seguras do
   Docker Hub.
-- [Editores Verificados pelo Docker](https://hub.docker.com/search?q=&image_filter=store) -
+- [Editores Verificados do Docker](https://hub.docker.com/search?q=&image_filter=store) -
   imagens de alta qualidade de editores comerciais verificados pelo Docker.
 - [Programa de Código Aberto Patrocinado pelo Docker](https://hub.docker.com/search?q=&image_filter=open_source) -
   imagens publicadas e mantidas por projetos de código aberto patrocinados pelo
   Docker por meio do programa de código aberto do Docker.
 
 Por exemplo, [Redis](https://hub.docker.com/_/redis) e
-[Memcached](https://hub.docker.com/_/memcached) são algumas imagens oficiais do
-Docker populares e prontas para uso.
+[Memcached](https://hub.docker.com/_/memcached) são algumas imagens oficiais
+populares do Docker prontas para uso.
 Você pode baixar essas imagens e ter esses serviços funcionando em questão de
 segundos.
 Há também imagens base, como a imagem Docker do
 [Node.js](https://hub.docker.com/_/node), que você pode usar como ponto de
-partida e adicionar seus arquivos e configurações.
+partida e adicionar seus próprios arquivos e configurações.
 
 ## Experimente
 
@@ -100,35 +101,35 @@ usando a GUI do Docker Desktop.
 
 ### Pesquise e baixe uma imagem
 
-1. Abra o Docker Dashboard e selecione a visualização **Images** no menu de
-   navegação à esquerda.
+1. Abra o Painel do Docker Desktop e selecione a visualização **Images** no menu
+   de navegação à esquerda.
 
-   ![Uma captura de tela do Painel do Docker mostrando a visualização da imagem na barra lateral esquerda](images/click-image.webp?border=true&w=1050&h=400)
+   ![Uma captura de tela do Painel do Docker Desktop mostrando a visualização da imagem na barra lateral esquerda](images/click-image.webp?border=true&w=1050&h=400)
 
 2. Selecione o botão **Search images to run**.
-   Se não o vir, selecione a _barra de pesquisa global_ na parte superior da
-   tela.
+   Caso não o encontre, selecione a _barra de pesquisa global_ na parte superior
+   da tela.
 
-   ![Uma captura de tela do Painel do Docker mostrando a guia de pesquisa](images/search-image.webp?border)
+   ![Uma captura de tela do Painel do Docker Desktop mostrando a aba de pesquisa](images/search-image.webp?border)
 
 3. No campo **Search**, digite "welcome-to-docker".
    Após a conclusão da pesquisa, selecione a imagem `docker/welcome-to-docker`.
 
-   ![Uma captura de tela do Painel do Docker mostrando os resultados da pesquisa para a imagem docker/welcome-to-docker](images/select-image.webp?border=true&w=1050&h=400)
+   ![Uma captura de tela do Painel do Docker Desktop mostrando os resultados da pesquisa para a imagem docker/welcome-to-docker](images/select-image.webp?border=true&w=1050&h=400)
 
 4. Selecione **Pull** para baixar a imagem.
 
-### Aprenda sobre a imagem
+### Saiba mais sobre a imagem
 
-Depois de baixar uma imagem, você pode aprender alguns detalhes sobre ela por
+Depois de baixar uma imagem, você pode aprender vários detalhes sobre ela por
 meio da GUI ou da CLI.
 
-1. No Painel do Docker, selecione a visualização **Images**.
+1. No Painel do Docker Desktop, selecione a visualização **Images**.
 
 2. Selecione a imagem **docker/welcome-to-docker** para abrir detalhes sobre a
    imagem.
 
-   ![Uma captura de tela do Docker Dashboard mostrando a visualização de imagens com uma seta apontando para a imagem docker/welcome-to-docker](images/pulled-image.webp?border=true&w=1050&h=400)
+   ![Uma captura de tela do Painel do Docker Desktop mostrando a visualização de imagens com uma seta apontando para a imagem docker/welcome-to-docker](images/pulled-image.webp?border=true&w=1050&h=400)
 
 3. A página de detalhes da imagem apresenta informações sobre as camadas da
    imagem, os pacotes e bibliotecas instalados na imagem e quaisquer
@@ -187,10 +188,10 @@ visualizar suas camadas.
    ```
 
    Cada linha representa uma camada diferente baixada da imagem.
-   Lembre-se de que cada camada é um conjunto de alterações do sistema de
-   arquivos e fornece funcionalidade da imagem.
+   Lembre-se de que cada camada é um conjunto de alterações no sistema de
+   arquivos e fornece funcionalidade à imagem.
 
-### Aprenda sobre a imagem
+### Saiba mais sobre a imagem
 
 1. Liste suas imagens baixadas usando o comando
    [`docker image ls`](/reference/cli/docker/image/ls.md):
@@ -206,7 +207,7 @@ visualizar suas camadas.
    docker/welcome-to-docker   latest    eedaff45e3c7   4 months ago   29.7MB
    ```
 
-   O comando mostra uma lista de imagens do Docker atualmente disponíveis no seu
+   O comando exibe uma lista de imagens do Docker atualmente disponíveis no seu
    sistema.
    A imagem `docker/welcome-to-docker` tem um tamanho total de aproximadamente
    29,7 MB.
@@ -246,20 +247,20 @@ visualizar suas camadas.
    ```
 
    Esta saída mostra todas as camadas, seus tamanhos e o comando usado para
-   criar a camada.
+   criá-las.
 
    > **Visualizando o comando completo**
    >
    > Se você adicionar o sinalizador `--no-trunc` ao comando, verá o comando
    > completo.
    > Observe que, como a saída está em um formato semelhante a uma tabela,
-   > comandos mais longos farão com que a saída seja muito difícil de navegar.
+   > comandos mais longos dificultarão a navegação na saída.
 
 {{< /tab >}}
 {{< /tabs >}}
 
-Neste tutorial, você pesquisou e extraiu uma imagem do Docker.
-Além de extrair uma imagem do Docker, você também aprendeu sobre as camadas de
+Neste tutorial, você pesquisou e baixou uma imagem do Docker.
+Além de baixar uma imagem do Docker, você também aprendeu sobre as camadas de
 uma imagem do Docker.
 
 ## Recursos adicionais
@@ -269,7 +270,7 @@ encontrar e construir imagens:
 
 - [Conteúdo Confiável do Docker](/manuals/docker-hub/image-library/trusted-content.md)
 - [Explore a visualização de imagens no Docker Desktop](/manuals/desktop/use-desktop/images.md)
-- [Docker Build overview](/manuals/build/concepts/overview.md)
+- [Visão geral do Docker Build](/manuals/build/concepts/overview.md)
 - [Docker Hub](https://hub.docker.com)
 
 ## Próximos passos
@@ -277,4 +278,4 @@ encontrar e construir imagens:
 Agora que você aprendeu o básico sobre imagens, é hora de aprender sobre como
 distribuir imagens por meio de registros.
 
-{{< button text="What is a registry?" url="what-is-a-registry" >}}
+{{< button text="O que é um registro?" url="what-is-a-registry" >}}
