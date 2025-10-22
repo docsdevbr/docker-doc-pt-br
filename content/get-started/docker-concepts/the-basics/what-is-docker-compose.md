@@ -123,11 +123,11 @@ Siga as instruções para executar a aplicação de lista de tarefas no seu sist
 
    Muita coisa aconteceu aqui! Algumas coisas para destacar:
 
-  * Duas imagens de contêiner foram baixadas do Docker Hub - node e MySQL;
-  * Uma rede foi criada para sua aplicação;
-  * Um volume foi criado para persistir os arquivos do banco de dados entre
-    reinicializações do contêiner;
-  * Dois contêineres foram iniciados com todas as configurações necessárias.
+   * Duas imagens de contêiner foram baixadas do Docker Hub - node e MySQL;
+   * Uma rede foi criada para sua aplicação;
+   * Um volume foi criado para persistir os arquivos do banco de dados entre
+     reinicializações do contêiner;
+   * Dois contêineres foram iniciados com todas as configurações necessárias.
 
    Se isso parece assustador, não se preocupe! Você vai chegar lá!
 
