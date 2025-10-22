@@ -16,15 +16,15 @@ status: ready
 title: Construindo imagens
 weight: 20
 keywords: construir imagens, Dockerfile, camadas, tag, push, cache, multiestágio
-description: |
+description: >-
   Aprenda a construir imagens Docker a partir de um Dockerfile.
   Você entenderá a estrutura de um Dockerfile, como construir uma imagem e como
   personalizar o processo de construção.
-summary: |
+summary: >-
   Construir imagens de contêineres é uma tarefa técnica e uma arte.
-  Você quer manter a imagem pequena e focada para aumentar sua postura de
-  segurança, mas também precisa equilibrar potenciais compensações, como
-  impactos no cache.
+  Você deseja manter a imagem pequena e focada para aumentar sua postura de
+  segurança, mas também precisa equilibrar possíveis compensações, como os
+  impactos do cache.
   Nesta série, você se aprofundará nos segredos das imagens, como elas são
   construídas e nas melhores práticas.
 layout: series
@@ -33,6 +33,7 @@ params:
   time: 25 minutos
   prereq: Nenhum
 ---
+
 ## Sobre esta série
 
 Aprenda a criar imagens Docker enxutas e eficientes prontas para produção,
@@ -43,6 +44,6 @@ produção.
 
 * Entender camadas de imagem
 * Escrever um Dockerfile
-* Construir, adicionar _tags_ e publicar uma imagem
-* Usar o _cache_ de construção
+* Construir, adicionar tags e publicar uma imagem
+* Usar o cache de construção
 * Contruções em vários estágios
