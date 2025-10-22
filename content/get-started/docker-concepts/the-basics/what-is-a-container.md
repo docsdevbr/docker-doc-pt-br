@@ -165,7 +165,7 @@ Faça um teste.
 3. Selecione a aba **Files** para explorar o sistema de arquivos isolado do seu
    contêiner.
 
-    ![Captura de tela do Painel do Docker Desktop mostrando os arquivos e diretórios dentro de um contêiner em execução](images/explore-your-container.webp?border)
+   ![Captura de tela do Painel do Docker Desktop mostrando os arquivos e diretórios dentro de um contêiner em execução](images/explore-your-container.webp?border)
 
 ### Pare seu contêiner
 
@@ -177,7 +177,7 @@ O contêiner `docker/welcome-to-docker` continua em execução até que você o 
 
 3. Selecione a ação **Stop** na coluna **Actions**.
 
-    ![Captura de tela do Painel do Docker Desktop com o contêiner de boas-vindas selecionado e sendo preparado para parar](images/stop-your-container.webp?border)
+   ![Captura de tela do Painel do Docker Desktop com o contêiner de boas-vindas selecionado e sendo preparado para parar](images/stop-your-container.webp?border)
 
 {{< /tab >}}
 {{< tab name="Usando a CLI" >}}
@@ -187,11 +187,11 @@ Siga as instruções para executar um contêiner usando a CLI:
 1. Abra o terminal da CLI e inicie um contêiner usando o comando
    [`docker run`](/reference/cli/docker/container/run/):
 
-    ```console
-    $ docker run -d -p 8080:80 docker/welcome-to-docker
-    ```
+   ```console
+   $ docker run -d -p 8080:80 docker/welcome-to-docker
+   ```
 
-    A saída deste comando é o ID completo do contêiner.
+   A saída deste comando é o ID completo do contêiner.
 
 Parabéns! Você acabou de iniciar seu primeiro contêiner! 🎉
 
@@ -245,9 +245,9 @@ Você pode parar um contêiner usando o comando `docker stop`.
 2. Forneça o ID ou nome do contêiner para o comando
    [`docker stop`](/reference/cli/docker/container/stop/):
 
-    ```console
-    docker stop <id-do-container>
-    ```
+   ```console
+   docker stop <id-do-container>
+   ```
 
 > [!TIP]
 >
