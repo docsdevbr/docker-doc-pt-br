@@ -188,22 +188,22 @@ Agora que você tem o projeto, está pronta para criar o `Dockerfile`.
 
 > **Este Dockerfile ainda não está pronto para produção**
 >
-> É importante observar que este Dockerfile ainda _não_ segue todas as práticas
-> recomendadas (intencionalmente).
-> Ele criará a aplicação, mas as construções não serão tão rápidas, ou as
-> imagens tão seguras, quanto poderiam ser.
+> É importante observar que este Dockerfile _não_ segue todas as práticas
+> recomendadas ainda (intencionalmente).
+> Ele criará a aplicação, mas as construções não serão tão rápidas, nem as
+> imagens tão seguras quanto poderiam ser.
 >
-> Continue lendo para saber mais sobre como fazer a imagem maximizar o _cache_
-> de construção, executar como um usuário não root e construções em vários
-> estágios.
+> Continue lendo para saber mais sobre como fazer a imagem maximizar o cache de
+> construção, como executar como um usuário não root e sobre construções em
+> vários estágios.
 
-> **Conteinerize novos projetos rapidamente com `docker init`**
+> **Crie contêineres de novos projetos rapidamente com `docker init`**
 >
 > O comando `docker init` analisará seu projeto e criará rapidamente um
 > `Dockerfile`, um `compose.yaml` e um `.dockerignore`, ajudando você a começar.
-> Como aqui você está aprendendo especificamente sobre Dockerfiles, não o usará
-> agora.
-> Mas, [aprenda mais sobre ele aqui](/engine/reference/commandline/init/).
+> Como aqui você está aprendendo especificamente sobre Dockerfiles, você não o
+> usará agora.
+> Mas, [saiba mais sobre ele aqui](/engine/reference/commandline/init/).
 
 ## Recursos adicionais
 
@@ -216,7 +216,7 @@ Para saber mais sobre como escrever um Dockerfile, visite os seguintes recursos:
 
 ## Próximos passos
 
-Agora que você criou um Dockerfile e aprendeu o básico, é hora de aprender sobre
-como construir, adicionar _tags_ e enviar as imagens.
+Agora que você criou um Dockerfile e aprendeu o básico, é hora de aprender a
+construir, adicionar tags e enviar as imagens.
 
-{{< button text="Build, tag and publish the Image" url="build-tag-and-publish-an-image" >}}
+{{< button text="Construa, crie tags e publique a imagem" url="build-tag-and-publish-an-image" >}}
