@@ -110,7 +110,6 @@ etapas seguintes.
 1. [Baixe e instale](https://www.docker.com/products/docker-desktop/) o Docker
    Desktop.
 
-
 2. Em um terminal, execute o seguinte comando para iniciar um novo contêiner:
 
    ```console
