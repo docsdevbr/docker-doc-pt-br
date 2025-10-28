@@ -9,61 +9,77 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Reference documentation
-linkTitle: Reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/_index.md
+revision: c69c0b53dd46ec56dc63e43e9fe6bd279f910431
+status: ready
+
+title: Documentação de referência
+linkTitle: Referência
 layout: wide
-description: Find reference documentation for the Docker platform’s various APIs, CLIs, and file formats
+description: >-
+  Encontre documentação de referência para as diversas APIs, CLIs e formatos de
+  arquivo da plataforma Docker.
 params:
   icon: terminal
   notoc: true
   grid_files:
   - title: Dockerfile
-    description: Defines the contents and startup behavior of a single container.
+    description: >-
+      Define o conteúdo e o comportamento de inicialização de um único
+      contêiner.
     icon: edit_document
     link: /reference/dockerfile/
-  - title: Compose file
-    description: Defines a multi-container application.
+  - title: Arquivo Compose
+    description: Define uma aplicação multicontêiner.
     icon: polyline
     link: /reference/compose-file/
   grid_clis:
-  - title: Docker CLI
-    description: The main Docker CLI, includes all `docker` commands.
+  - title: CLI do Docker
+    description: A CLI principal do Docker, inclui todos os comandos `docker`.
     icon: terminal
     link: /reference/cli/docker/
-  - title: Compose CLI
-    description: The CLI for Docker Compose, for building and running multi-container
-      applications.
+  - title: CLI do Compose
+    description: >-
+      A CLI do Docker Compose, para criar e executar aplicações
+      multicontêineres.
     icon: subtitles
     link: /reference/cli/docker/compose/
-  - title: Daemon CLI (dockerd)
-    description: Persistent process that manages containers.
+  - title: CLI do daemon (dockerd)
+    description: Processo persistente que gerencia contêineres.
     icon: developer_board
     link: /reference/cli/dockerd/
   grid_apis:
-  - title: Engine API
-    description: The main API for Docker, provides programmatic access to a daemon.
+  - title: API da engine
+    description: >-
+      A API principal do Docker, fornece acesso programático a um daemon.
     icon: api
     link: /reference/api/engine/
-  - title: Docker Hub API
-    description: API to interact with Docker Hub.
+  - title: API do Docker Hub
+    description: API para interagir com o Docker Hub.
     icon: communities
     link: /reference/api/hub/latest/
-  - title: DVP Data API
-    description: API for Docker Verified Publishers to fetch analytics data.
+  - title: API de Dados DVP
+    description: >-
+      API para Editores Verificados do Docker para buscar dados analíticos.
     icon: area_chart
-    link: /reference/api/hub/dvp/
+    link: /reference/api/dvp/latest/
+  - title: API do Docker Registry
+    description: API do Docker Registry.
+    icon: database
+    link: /reference/api/registry/latest/
 ---
-This section includes the reference documentation for the Docker platform's
-various APIs, CLIs, drivers and specifications, and file formats.
 
-## File formats
+Esta seção inclui a documentação de referência para as diversas APIs, CLIs,
+drivers e especificações da plataforma Docker, além de formatos de arquivo.
+
+## Formatos de arquivo
 
 {{< grid items="grid_files" >}}
 
-## Command-line interfaces (CLIs)
+## Interfaces de linha de comando (CLIs)
 
 {{< grid items="grid_clis" >}}
 
-## Application programming interfaces (APIs)
+## Interfaces de programação de aplicações (APIs)
 
 {{< grid items="grid_apis" >}}
