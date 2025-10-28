@@ -28,8 +28,10 @@ params:
   sidebar:
     groups:
       - Open source
+      - AI
       - Products
       - Platform
+      - Enterprise
   notoc: true
   open-source:
   - title: Docker Build
@@ -42,22 +44,50 @@ params:
     link: /engine/
   - title: Docker Compose
     description: Defina e execute aplicações multicontêineres.
-    icon: /assets/icons/Compose.svg
+    icon: /icons/Compose.svg
     link: /compose/
   - title: Testcontainers
     description: >-
       Execute contêineres programaticamente em sua linguagem de programação
       preferida.
-    icon: /assets/icons/Testcontainers.svg
+    icon: /icons/Testcontainers.svg
     link: /testcontainers/
+  - title: Cagent
+    description: >-
+      A solução multiagente de código aberto para ajudar você em suas tarefas.
+    icon: /icons/cagent.svg
+    link: /ai/cagent
+  ai:
+  - title: Ask Gordon
+    description: >-
+      Simplifique seu fluxo de trabalho e aproveite ao máximo o ecossistema do
+      Docker com seu assistente pessoal de IA.
+    icon: note_add
+    link: /ai/gordon/
+  - title: Docker Model Runner
+    description: Visualize e gerencie seus modelos locais.
+    icon: /icons/models.svg
+    link: /ai/model-runner/
+  - title: Catálogo e Kit de Ferramentas MCP
+    description: Aumente seu fluxo de trabalho de IA com servidores MCP.
+    icon: /icons/toolkit.svg
+    link: /ai/mcp-catalog-and-toolkit/
   products:
   - title: Docker Desktop
     description: Seu centro de comando para desenvolvimento de contêineres.
-    icon: /assets/icons/Whale.svg
+    icon: /icons/Whale.svg
     link: /desktop/
+  - title: Docker Hardened Images
+    description: Imagens seguras e mínimas para entrega confiável de software.
+    icon: /icons/dhi.svg
+    link: /dhi/
+  - title: Docker Offload
+    description: Crie e execute contêineres na nuvem.
+    icon: cloud
+    link: /offload/
   - title: Build Cloud
     description: Crie suas imagens mais rapidamente na nuvem.
-    icon: /assets/images/logo-build-cloud.svg
+    icon: /icons/logo-build-cloud.svg
     link: /build-cloud/
   - title: Docker Hub
     description: Descubra, compartilhe e integre imagens de contêineres.
@@ -65,7 +95,7 @@ params:
     link: /docker-hub/
   - title: Docker Scout
     description: Análise de imagens e validação de políticas.
-    icon: /assets/icons/Scout.svg
+    icon: /icons/Scout.svg
     link: /scout/
   - title: Docker para GitHub Copilot
     description: Integre os recursos do Docker com o GitHub Copilot.
@@ -79,12 +109,6 @@ params:
     description: Execute testes de integração, com dependências reais, na nuvem.
     icon: package_2
     link: https://testcontainers.com/cloud/docs/
-  - title: Projetos Docker
-    description: >-
-      Use um fluxo de trabalho unificado e baseado em projetos para executar
-      seus projetos em contêineres.
-    icon: folder
-    link: /projects/
   platform:
   - title: Administração
     description: Observabilidade centralizada para empresas e organizações.
@@ -107,6 +131,11 @@ params:
     description: Licenças de uso comercial para produtos Docker.
     icon: card_membership
     link: /subscription/
+  enterprise:
+  - title: Implante o Docker Desktop
+    description: Implante o Docker Desktop em escala na sua empresa.
+    icon: download
+    link: /enterprise/enterprise-deployment/
 ---
 
 Esta seção contém guias da pessoa usuária sobre como instalar, configurar,
@@ -117,6 +146,12 @@ configurar e usar produtos Docker.
 Tecnologias de desenvolvimento e conteinerização de código aberto.
 
 {{< grid items=open-source >}}
+
+## IA
+
+Todas as ferramentas de IA do Docker em um local de fácil acesso.
+
+{{< grid items=ai >}}
 
 ## Produtos
 
@@ -130,3 +165,11 @@ Documentação relacionada à plataforma Docker, como administração e gerencia
 de assinaturas para organizações.
 
 {{< grid items=platform >}}
+
+## Corporativo
+
+Destinado a pessoas administradoras de TI com ajuda na implantação do Docker
+Desktop em escala, com orientação de configuração sobre recursos relacionados à
+segurança.
+
+{{< grid items=enterprise >}}
