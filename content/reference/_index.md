@@ -58,7 +58,7 @@ params:
     description: API para interagir com o Docker Hub.
     icon: communities
     link: /reference/api/hub/latest/
-  - title: API de Dados DVP
+  - title: API de dados do DVP
     description: >-
       API para Editores Verificados do Docker para buscar dados analíticos.
     icon: area_chart
