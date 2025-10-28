@@ -9,9 +9,13 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Docker guides
-linkTitle: Guides
-description: Explore the Docker guides
+source_url: https://github.com/docker/docs/blob/main/content/guides/_index.md
+revision: f062709f4b94be29523a2631d0e371e04578fa40
+status: ready
+
+title: Guias do Docker
+linkTitle: Guias
+description: Explore os guias do Docker.
 params:
   icon: developer_guide
 layout: landing
@@ -20,10 +24,11 @@ aliases:
   - /language/
   - /learning-paths/
 ---
-Explore our collection of guides to learn how Docker can optimize your
-development workflows and how to use it with specific languages, frameworks, or
-technologies.
 
-Can't find the guide you're looking for? Open an issue on the
-[docker/docs](https://github.com/docker/docs/issues/new) repository to let us
-know.
+Explore nossa coleção de guias para saber como o Docker pode otimizar seus
+fluxos de trabalho de desenvolvimento e como usá-lo com linguagens, frameworks
+ou tecnologias específicos.
+
+Não encontrou o guia que procura?
+Abra uma issue no repositório
+[docker/docs](https://github.com/docker/docs/issues/new) para nos informar.
