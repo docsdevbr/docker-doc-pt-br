@@ -9,9 +9,17 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/main/LICENSE
 
-title: Manuals
-description: Learn how to install, set up, configure, and use Docker products with this collection of user guides
-keywords: docker, docs, manuals, products, user guides, how-to
+source_url: https://github.com/docker/docs/blob/main/content/manuals/_index.md
+revision: b6a1061fe80c0246455465e1f13ccc3e6b658e4d
+status: ready
+
+title: Manuais
+description: >-
+  Aprenda a instalar, configurar e usar produtos Docker com esta coleção de
+  guias da pessoa usuária.
+keywords: >-
+  docker, docs, documentação, manuais, produtos, guias da pessoa usuária,
+  instruções
 # hard-code the URL of this page
 url: /manuals/
 layout: wide
@@ -25,94 +33,100 @@ params:
   notoc: true
   open-source:
   - title: Docker Build
-    description: Build and ship any application anywhere.
+    description: Crie e lance qualquer aplicação em qualquer lugar.
     icon: build
     link: /build/
   - title: Docker Engine
-    description: The industry-leading container runtime.
+    description: O runtime de contêiner líder do setor.
     icon: developer_board
     link: /engine/
   - title: Docker Compose
-    description: Define and run multi-container applications.
+    description: Defina e execute aplicações multicontêineres.
     icon: /assets/icons/Compose.svg
     link: /compose/
   - title: Testcontainers
-    description: Run containers programmatically in your preferred programming language.
+    description: >-
+      Execute contêineres programaticamente em sua linguagem de programação
+      preferida.
     icon: /assets/icons/Testcontainers.svg
     link: /testcontainers/
   products:
   - title: Docker Desktop
-    description: Your command center for container development.
+    description: Seu centro de comando para desenvolvimento de contêineres.
     icon: /assets/icons/Whale.svg
     link: /desktop/
   - title: Build Cloud
-    description: Build your images faster in the cloud.
+    description: Crie suas imagens mais rapidamente na nuvem.
     icon: /assets/images/logo-build-cloud.svg
     link: /build-cloud/
   - title: Docker Hub
-    description: Discover, share, and integrate container images.
+    description: Descubra, compartilhe e integre imagens de contêineres.
     icon: hub
     link: /docker-hub/
   - title: Docker Scout
-    description: Image analysis and policy evaluation.
+    description: Análise de imagens e validação de políticas.
     icon: /assets/icons/Scout.svg
     link: /scout/
-  - title: Docker for GitHub Copilot
-    description: Integrate Docker's capabilities with GitHub Copilot.
+  - title: Docker para GitHub Copilot
+    description: Integre os recursos do Docker com o GitHub Copilot.
     icon: chat
     link: /copilot/
-  - title: Docker Extensions
-    description: Customize your Docker Desktop workflow.
+  - title: Extensões do Docker
+    description: Personalize seu fluxo de trabalho do Docker Desktop.
     icon: extension
     link: /extensions/
   - title: Testcontainers Cloud
-    description: Run integration tests, with real dependencies, in the cloud.
+    description: Execute testes de integração, com dependências reais, na nuvem.
     icon: package_2
     link: https://testcontainers.com/cloud/docs/
-  - title: Docker Projects
-    description: Use a unified, project-based workflow to run your containerized projects.
+  - title: Projetos Docker
+    description: >-
+      Use um fluxo de trabalho unificado e baseado em projetos para executar
+      seus projetos em contêineres.
     icon: folder
     link: /projects/
   platform:
-  - title: Administration
-    description: Centralized observability for companies and organizations.
+  - title: Administração
+    description: Observabilidade centralizada para empresas e organizações.
     icon: admin_panel_settings
     link: /admin/
-  - title: Billing
-    description: Manage billing and payment methods.
+  - title: Faturamento
+    description: Gerencie métodos de faturamento e pagamento.
     icon: payments
     link: /billing/
-  - title: Accounts
-    description: Manage your Docker account.
+  - title: Contas
+    description: Gerencie sua conta Docker.
     icon: account_circle
     link: /accounts/
-  - title: Security
-    description: Security guardrails for both administrators and developers.
+  - title: Segurança
+    description: >-
+      Trilhos de segurança para pessoas administradoras e desenvolvedoras.
     icon: lock
     link: /security/
-  - title: Subscription
-    description: Commercial use licenses for Docker products.
+  - title: Assinatura
+    description: Licenças de uso comercial para produtos Docker.
     icon: card_membership
     link: /subscription/
 ---
-This section contains user guides on how to install, set up, configure, and use
-Docker products.
 
-## Open source
+Esta seção contém guias da pessoa usuária sobre como instalar, configurar,
+configurar e usar produtos Docker.
 
-Open source development and containerization technologies.
+## Código aberto
+
+Tecnologias de desenvolvimento e conteinerização de código aberto.
 
 {{< grid items=open-source >}}
 
-## Products
+## Produtos
 
-End-to-end developer solutions for innovative teams.
+Soluções completas para pessoas desenvolvedoras, para times inovadores.
 
 {{< grid items=products >}}
 
-## Platform
+## Plataforma
 
-Documentation related to the Docker platform, such as administration and
-subscription management for organizations.
+Documentação relacionada à plataforma Docker, como administração e gerenciamento
+de assinaturas para organizações.
 
 {{< grid items=platform >}}
