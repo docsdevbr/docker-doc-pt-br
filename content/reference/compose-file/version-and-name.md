@@ -9,39 +9,61 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-title: Version and name top-level elements
-description: Understand when and if to set the version and name top-level element
-keywords: compose, compose specification, services, compose file reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/version-and-name.md
+revision: 4c6f75f19facf9fcba938315035addd2949f180b
+status: ready
+
+title: Elementos de nível superior version e name
+description: >-
+  Entenda quando e se deve definir os elementos de nível superior version e
+  name.
+keywords: >-
+  compose, especificação do compose, serviços, referência do arquivo compose
 aliases:
- - /compose/compose-file/04-version-and-name/
+  - /compose/compose-file/04-version-and-name/
 weight: 10
 ---
-## Version top-level element (obsolete)
 
-The top-level `version` property is defined by the Compose Specification for backward compatibility. It is only informative and you'll receive a warning message that it is obsolete if used.
+## Elemento de nível superior `version` (obsoleto)
 
-Compose doesn't use `version` to select an exact schema to validate the Compose file, but
-prefers the most recent schema when it's implemented.
+> [!IMPORTANT]
+>
+> A propriedade de nível superior `version` é definida pela Especificação do
+> Compose para compatibilidade com versões anteriores.
+> Ela é apenas informativa e você receberá uma mensagem de alerta informando que
+> está obsoleta se for usada.
 
-Compose validates whether it can fully parse the Compose file. If some fields are unknown, typically
-because the Compose file was written with fields defined by a newer version of the Specification, you'll receive a warning message.
+O Compose sempre usa o esquema mais recente para validar o arquivo Compose,
+independentemente do campo `version`.
 
-## Name top-level element
+O Compose valida se consegue analisar completamente o arquivo Compose.
+Se alguns campos forem desconhecidos, normalmente porque o arquivo Compose foi
+escrito com campos definidos por uma versão mais recente da Especificação, você
+receberá uma mensagem de alerta.
 
-The top-level `name` property is defined by the Compose Specification as the project name to be used if you don't set one explicitly.
-Compose offers a way for you to override this name, and sets a
-default project name to be used if the top-level `name` element is not set.
+## Elemento de nível superior `name`
 
-Whenever a project name is defined by top-level `name` or by some custom mechanism, it is exposed for
-[interpolation](interpolation.md) and environment variable resolution as `COMPOSE_PROJECT_NAME`
+A propriedade de nível superior `name` é definida pela Especificação do Compose
+como o nome do projeto a ser usado caso você não defina um explicitamente.
+
+O Compose oferece uma maneira de sobrescrever esse nome e define um nome de
+projeto padrão a ser usado se o elemento de nível superior `name` não estiver
+definido.
+
+Sempre que um nome de projeto é definido pelo elemento de nível superior `name`
+ou por algum mecanismo personalizado, ele é exposto para
+[interpolação](interpolation.md) e resolução de variáveis de ambiente como
+`COMPOSE_PROJECT_NAME`.
 
 ```yml
-name: myapp
+name: minha-aplicacao
 
 services:
   foo:
     image: busybox
-    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
+    command: echo "Estou executando ${COMPOSE_PROJECT_NAME}"
 ```
 
-For more information on other ways to name Compose projects, see [Specify a project name](/manuals/compose/how-tos/project-name.md).
+Para obter mais informações sobre outras maneiras de nomear projetos Compose,
+consulte
+[Especificar um nome de projeto](/manuals/compose/how-tos/project-name.md).
