@@ -9,55 +9,84 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-description: Find the latest recommended version of the Docker Compose file format
-  for defining multi-container applications.
-keywords: docker compose file, docker compose yml, docker compose reference, docker
-  compose cmd, docker compose user, docker compose image, yaml spec, docker compose
-  syntax, yaml specification, docker compose specification
-title: Compose file reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/_index.md
+revision: 4c6f75f19facf9fcba938315035addd2949f180b
+status: ready
+
+description: >-
+  Encontre a versão mais recente recomendada do formato de arquivo Docker
+  Compose para definir aplicações multicontêineres.
+keywords: >-
+  arquivo docker compose, docker compose yml, referência do docker compose,
+  comando docker compose, usuário docker compose, imagem docker compose, sintaxe
+  do docker compose, especificação yaml, especificação docker compose
+title: Referência do arquivo compose
 toc_max: 4
 toc_min: 1
 grid:
-- title: Version and name top-level element
-  description: Understand version and name attributes for Compose.
-  icon: text_snippet
-  link: /reference/compose-file/version-and-name/
-- title: Services top-level element
-  description: Explore all services attributes for Compose.
-  icon: construction
-  link: /reference/compose-file/services/
-- title: Networks top-level element
-  description: Find all networks attributes for Compose.
-  icon: lan
-  link: /reference/compose-file/networks/
-- title: Volumes top-level element
-  description: Explore all volumes attributes for Compose.
-  icon: database
-  link: /reference/compose-file/volumes/
-- title: Configs top-level element
-  description: Find out about configs in Compose.
-  icon: settings
-  link: /reference/compose-file/configs/
-- title: Secrets top-level element
-  description: Learn about secrets in Compose.
-  icon: lock
-  link: /reference/compose-file/secrets/
+  - title: Elementos version e name de nível superior
+    description: Entenda os atributos version e name do Compose.
+    icon: text_snippet
+    link: /reference/compose-file/version-and-name/
+  - title: Elemento services de nível superior
+    description: Explore all services attributes for Compose.
+    icon: construction
+    link: /reference/compose-file/services/
+  - title: Elemento networks de nível superior
+    description: Encontre todos os atributos de networks do Compose.
+    icon: lan
+    link: /reference/compose-file/networks/
+  - title: Elemento volumes de nível superior
+    description: Explore todos os atributos de volumes do Compose.
+    icon: database
+    link: /reference/compose-file/volumes/
+  - title: Elemento configs de nível superior
+    description: Saiba mais sobre configs no Compose.
+    icon: settings
+    link: /reference/compose-file/configs/
+  - title: Elemento secrets de nível superior
+    description: Saiba mais sobre secrets no Compose.
+    icon: lock
+    link: /reference/compose-file/secrets/
 aliases:
- - /compose/yaml/
- - /compose/compose-file/compose-file-v1/
- - /compose/compose-file/
- - /compose/reference/overview/
+  - /compose/yaml/
+  - /compose/compose-file/compose-file-v1/
+  - /compose/compose-file/
+  - /compose/reference/overview/
 ---
->**New to Docker Compose?**
+
+>**Iniciando no Docker Compose?**
 >
-> Find more information about the [key features and use cases of Docker Compose](/manuals/compose/intro/features-uses.md) or [try the quickstart guide](/manuals/compose/gettingstarted.md).
+> Encontre mais informações sobre os
+> [principais recursos e casos de uso do Docker Compose](/manuals/compose/intro/features-uses.md)
+> ou [experimente o guia de início rápido](/manuals/compose/gettingstarted.md).
 
-The Compose Specification is the latest and recommended version of the Compose file format. It helps you define a [Compose file](/manuals/compose/intro/compose-application-model.md) which is used to configure your Docker application’s services, networks, volumes, and more.
+A Especificação do Compose é a versão mais recente e recomendada do formato de
+arquivo Compose.
+Ela ajuda você a definir um
+[arquivo Compose](/manuals/compose/intro/compose-application-model.md) que é
+usado para configurar os serviços, redes, volumes e muito mais da sua aplicação
+Docker.
 
-Legacy versions 2.x and 3.x of the Compose file format were merged into the Compose Specification. It is implemented in versions 1.27.0 and above (also known as Compose V2) of the Docker Compose CLI.
+As versões legadas 2.x e 3.x do formato de arquivo Compose foram incorporadas à
+Especificação do Compose.
+Ela é implementada nas versões 1.27.0 e superiores (também conhecidas como
+Compose V2) da CLI do Docker Compose.
 
-The Compose Specification on Docker Docs is the Docker Compose implementation. If you wish to implement your own version of the Compose Specification, see the [Compose Specification repository](https://github.com/compose-spec/compose-spec).
+A Especificação do Compose na documentação do Docker é a implementação do Docker
+Compose.
+Se você deseja implementar sua própria versão da Especificação do Compose,
+consulte o
+[repositório da Especificação do Compose](https://github.com/compose-spec/compose-spec).
 
-Use the following links to navigate key sections of the Compose Specification.
+Use os links a seguir para navegar pelas seções principais da Especificação do
+Compose.
+
+> [!TIP]
+>
+> Quer uma experiência de edição melhor para arquivos Compose no VS Code?
+> Confira a
+> [Extensão Docker para VS Code (Beta)](https://marketplace.visualstudio.com/items?itemName=docker.docker)
+> para linting, navegação de código e verificação de vulnerabilidades.
 
 {{< grid >}}
