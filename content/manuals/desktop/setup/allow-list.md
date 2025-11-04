@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: A list of domain URLs required for Docker Desktop to function correctly within an organization.
 keywords: Docker Desktop, allowlist, allow list, firewall, authentication URLs, analytics

@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/get-docker-desktop.md
 revision: 9eff1ba5fca35efedbd543f846573e95bff5f60e
@@ -38,7 +38,6 @@ O Docker Desktop é o pacote completo para criar imagens, executar contêineres 
 muito mais.
 Este guia te guiará pelo processo de instalação, permitindo que você experimente
 o Docker Desktop em primeira mão.
-
 
 > **Termos do Docker Desktop**
 >
@@ -75,12 +74,9 @@ Docker Desktop.
 
 Siga as instruções para executar um contêiner usando a CLI.
 
-
 ## Execute seu primeiro contêiner
 
 Abra seu terminal CLI e inicie um contêiner executando o comando `docker run`:
-
-
 
 ```console
 $ docker run -d -p 8080:80 docker/welcome-to-docker
@@ -92,14 +88,9 @@ Para este contêiner, o front-end é acessível na porta `8080`.
 Para abrir o site, visite [http://localhost:8080](http://localhost:8080) no seu
  navegador.
 
-
-
-
-
 ![Captura de tela da página inicial do servidor web Nginx, vinda do contêiner em execução](../docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
 
 ## Gerencie contêineres usando o Docker Desktop
-
 
 1. Abra o Docker Desktop e selecione o campo **Containers** na barra lateral
    esquerda;
@@ -107,7 +98,6 @@ Para abrir o site, visite [http://localhost:8080](http://localhost:8080) no seu
    arquivos, e até mesmo acessar o shell selecionando a aba **Exec**;
 
    ![Captura de tela do exec no contêiner em execução no Docker Desktop](images/exec-into-docker-container.webp?border=true)
-
 
 3. Selecione o campo **Inspect** para obter informações detalhadas sobre o
    contêiner.

@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/_index.md
 revision: c69c0b53dd46ec56dc63e43e9fe6bd279f910431

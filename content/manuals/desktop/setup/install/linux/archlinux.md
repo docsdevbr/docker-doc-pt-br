@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Instructions for installing Docker Desktop Arch package. Mostly meant
   for hackers who want to try out Docker Desktop on a variety of Arch-based distributions.

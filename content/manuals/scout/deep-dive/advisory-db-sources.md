@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: More details on the advisory database and CVE-to-package matching service
   behind Docker Scout analysis.

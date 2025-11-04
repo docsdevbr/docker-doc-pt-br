@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/build-and-push-first-image.md
 revision: 41e2d0c9a137ccb4338cfda13d969a76b85c03dc
@@ -127,7 +127,6 @@ armazena imagens de contêiner.
 
 4. Selecione **Create** para criar o repositório.
 
-
 ## Crie e envie a imagem
 
 Agora que você tem um repositório, já pode criar e enviar sua imagem.
@@ -150,7 +149,6 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 > Um `Dockerfile` é um script baseado em texto que fornece o conjunto de
 > instruções sobre como criar a imagem.
 > Para esse início rápido, o repositório já contém o `Dockerfile`.
-
 
 {{< tabs group="cli-or-vs-code" persist=true >}}
 {{< tab name="CLI" >}}
@@ -259,7 +257,6 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 {{< /tab >}}
 {{< /tabs >}}
 
-
 ## Recapitulando
 
 Antes de prosseguir, reserve um momento para refletir sobre o que aconteceu
@@ -291,7 +288,6 @@ No futuro, você vai querer lembrar que:
 > esses registros privados.
 
 
-
 ## Próximos passos
 
 Agora que você construiu uma imagem, é hora de discutir por que você, como
@@ -299,5 +295,4 @@ pessoa desenvolvedora, deve aprender mais sobre o Docker e como ele te ajudará
 em suas tarefas do dia a dia.
 
 {{< button text="O que vem a seguir" url="whats-next" >}}
-
 

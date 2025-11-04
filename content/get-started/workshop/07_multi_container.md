@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Multi container apps
 weight: 70
@@ -32,7 +32,6 @@ container or run it separately?" In general, each container should do one thing 
 And there are more reasons. So, like the following diagram, it's best to run your app in multiple containers.
 
 ![Todo App connected to MySQL container](images/multi-container.webp?w=350h=250)
-
 
 ## Container networking
 

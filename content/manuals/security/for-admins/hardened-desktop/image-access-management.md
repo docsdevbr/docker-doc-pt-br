@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Manage Docker Hub image access with Image Access Management, restricting developers to trusted images for enhanced security
 keywords: image, access, management, trusted content, permissions, Docker Business feature, security, admin

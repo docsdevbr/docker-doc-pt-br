@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/_index.md
 revision: 49dc2a288b67a1b88407f3377ada49d66365e2a3
@@ -89,7 +89,7 @@ grid:
   - title: Docker Compose
     icon: polyline
     description: >-
-      Defina e execute aplicações multicontêiner com o Docker.
+      Defina e execute aplicações multicontêineres com o Docker.
     links:
       - text: "Visão geral"
         url: "/compose/"

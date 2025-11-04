@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Learn how to keep containers running when the daemon isn't available
 keywords: docker, upgrade, daemon, dockerd, live-restore, daemonless container

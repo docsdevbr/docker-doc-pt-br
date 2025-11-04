@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Find the answers to common security related FAQs
 keywords: Docker, Docker Hub, Docker Desktop security FAQs, platform, Docker Scout, admin, security

@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Multi-container applications
 weight: 5
@@ -48,7 +48,6 @@ Docker Compose defines your entire multi-container application in a single YAML 
 
 By leveraging Docker Compose for running multi-container setups, you can build complex applications with modularity, scalability, and consistency at their core.
 
-
 ## Try it out
 
 In this hands-on guide, you'll first see how to build and run a counter web application based on Node.js, an Nginx reverse proxy, and a Redis database using the `docker run` commands. You’ll also see how you can simplify the entire deployment process using Docker Compose.
@@ -74,14 +73,12 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
 
    Inside this directory, you'll find two sub-directories - `nginx` and `web`.
 
-
    {{< /tab >}}
    {{< tab name="Download" >}}
 
    Download the source and extract it.
 
    {{< button url="https://github.com/dockersamples/nginx-node-redis/archive/refs/heads/main.zip" text="Download the source" >}}
-
 
    Navigate into the `nginx-node-redis-main` directory:
 
@@ -94,14 +91,11 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
    {{< /tab >}}
    {{< /tabs >}}
 
-
 2. [Download and install](/get-started/get-docker.md) Docker Desktop.
 
 ### Build the images
 
-
 1. Navigate into the `nginx` directory to build the image by running the following command:
-
 
     ```console
     $ docker build -t nginx .
@@ -149,7 +143,6 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
      >
      > Nginx is typically used as a reverse proxy for web applications, routing traffic to backend servers. In this case, it routes to the Node.js backend containers (web1 or web2).
 
-
 6.  Verify the containers are up by running the following command:
 
     ```console
@@ -189,9 +182,7 @@ In this hands-on guide, you'll first see how to build and run a counter web appl
 
 ## Simplify the deployment using Docker Compose
 
-
 Docker Compose provides a structured and streamlined approach for managing multi-container deployments. As stated earlier, with Docker Compose, you don’t need to run multiple `docker run` commands. All you need to do is define your entire multi-container application in a single YAML file called `compose.yml`. Let’s see how it works.
-
 
 Navigate to the root of the project directory. Inside this directory, you'll find a file named `compose.yml`. This YAML file is where all the magic happens. It defines all the services that make up your application, along with their configurations. Each service specifies its image, ports, volumes, networks, and any other settings necessary for its functionality.
 
@@ -202,7 +193,6 @@ Navigate to the root of the project directory. Inside this directory, you'll fin
     ```
 
     When you run this command, you should see output similar to the following:
-
 
     ```console
     Running 5/5
@@ -215,13 +205,11 @@ Navigate to the root of the project directory. Inside this directory, you'll fin
 
 2. If you look at the Docker Desktop Dashboard, you can see the containers and dive deeper into their configuration.
 
-
     ![A screenshot of the Docker Desktop Dashboard showing the containers of the application stack deployed using Docker Compose](images/list-containers.webp?border=true)
 
 3. Alternatively, you can use the Docker Desktop Dashboard to remove the containers by selecting the application stack and selecting the **Delete** button.
 
    ![A screenshot of Docker Desktop Dashboard that shows how to remove the containers that you deployed using Docker Compose](images/delete-containers.webp?border=true)
-
 
 In this guide, you learned how easy it is to use Docker Compose to start and stop a multi-container application compared to `docker run` which is error-prone and difficult to manage.
 

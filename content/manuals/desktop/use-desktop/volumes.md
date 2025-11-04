@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Understand what you can do with the Volumes view on Docker Dashboard
 keywords: Docker Desktop Dashboard, manage, containers, gui, dashboard, volumes, user manual

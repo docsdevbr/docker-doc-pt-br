@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-container.md
 revision: ec19565b9ca532bff7cb672cd9f6d7e30a44fa28
@@ -93,7 +93,6 @@ permitindo que você execute mais aplicações usando menos infraestrutura.
 > No entanto, em vez de provisionar uma máquina para executar uma aplicação, uma
 > VM com um runtime de contêiner pode executar várias aplicações em contêineres,
 > melhorando a utilização de recursos e reduzindo custos.
-
 
 ## Experimente
 
@@ -221,7 +220,6 @@ Por exemplo, um contêiner diferente para `frontend`, `backend` e `database`.
 > O comando `docker ps` mostrará _apenas_ os contêineres em execução.
 > Para visualizar os contêineres parados, adicione o sinalizador `-a` para
 > listar todos os contêineres: `docker ps -a`.
-
 
 ### Acesse o front-end
 

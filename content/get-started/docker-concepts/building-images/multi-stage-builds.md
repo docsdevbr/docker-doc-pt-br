@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Multi-stage builds
 keywords: concepts, build, images, container, docker desktop
@@ -35,9 +35,7 @@ Multi-stage builds are recommended for all types of applications.
 - For interpreted languages, like JavaScript or Ruby or Python, you can build and minify your code in one stage, and copy the production-ready files to a smaller runtime image. This optimizes your image for deployment.
 - For compiled languages, like C or Go or Rust, multi-stage builds let you compile in one stage and copy the compiled binaries into a final runtime image. No need to bundle the entire compiler in your final image.
 
-
 Here's a simplified example of a multi-stage build structure using pseudo-code. Notice there are multiple `FROM` statements and a new `AS <stage-name>`. In addition, the `COPY` statement in the second stage is copying `--from` the previous stage.
-
 
 ```dockerfile
 # Stage 1: Build Environment
@@ -53,12 +51,10 @@ COPY --from=build-stage /path/in/build/stage /path/to/place/in/final/stage
 # Define runtime configuration (e.g., CMD, ENTRYPOINT)
 ```
 
-
 This Dockerfile uses two stages:
 
 - The build stage uses a base image containing build tools needed to compile your application. It includes commands to install build tools, copy source code, and execute build commands.
 - The final stage uses a smaller base image suitable for running your application. It copies the compiled artifacts (a JAR file, for example) from the build stage. Finally, it defines the runtime configuration (using `CMD` or `ENTRYPOINT`) for starting your application.
-
 
 ## Try it out
 
@@ -66,12 +62,9 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
 
 1. [Download and install](https://www.docker.com/products/docker-desktop/) Docker Desktop.
 
-
 2. Open this [pre-initialized project](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.4.0-M3&packaging=jar&jvmVersion=21&groupId=com.example&artifactId=spring-boot-docker&name=spring-boot-docker&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.spring-boot-docker&dependencies=web) to generate a ZIP file. Here’s how that looks:
 
-
     ![A screenshot of Spring Initializr tool selected with Java 21, Spring Web and Spring Boot 3.4.0](images/multi-stage-builds-spring-initializer.webp?border=true)
-
 
     [Spring Initializr](https://start.spring.io/) is a quickstart generator for Spring projects. It provides an extensible API to generate JVM-based projects with implementations for several common concepts — like basic language generation for Java, Kotlin, and Groovy.
 
@@ -79,9 +72,7 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
 
     For this demonstration, you’ve paired Maven build automation with Java, a Spring Web dependency, and Java 21 for your metadata.
 
-
 3. Navigate the project directory. Once you unzip the file, you'll see the following project directory structure:
-
 
     ```plaintext
     spring-boot-docker
@@ -119,10 +110,8 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
 
 4. Create a RESTful web service that displays "Hello World!".
 
-
     Under the `src/main/java/com/example/spring_boot_docker/` directory, you can modify your
     `SpringBootDockerApplication.java` file with the following content:
-
 
     ```java
     package com.example.spring_boot_docker;
@@ -131,7 +120,6 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
     import org.springframework.boot.autoconfigure.SpringBootApplication;
     import org.springframework.web.bind.annotation.RequestMapping;
     import org.springframework.web.bind.annotation.RestController;
-
 
     @RestController
     @SpringBootApplication
@@ -150,7 +138,6 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
     ```
 
     The `SpringbootDockerApplication.java` file starts by declaring your `com.example.spring_boot_docker` package and importing necessary Spring frameworks. This Java file creates a simple Spring Boot web application that responds with "Hello World" when a user visits its homepage.
-
 
 ### Create the Dockerfile
 
@@ -189,7 +176,6 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
      COPY src ./src
      ```
 
-
  7. Set the default command to be executed when the container starts. This command instructs the container to run the Maven wrapper (`./mvnw`) with the `spring-boot:run` goal, which will build and execute your Spring Boot application.
 
      ```dockerfile
@@ -210,9 +196,7 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
 
 ### Build the container image
 
-
  1. Execute the following command to build the Docker image:
-
 
     ```console
     $ docker build -t spring-helloworld .
@@ -231,9 +215,7 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
     spring-helloworld   latest    ff708d5ee194   3 minutes ago    880MB
     ```
 
-
     This output shows that your image is 880MB in size. It contains the full JDK, Maven toolchain, and more. In production, you don’t need that in your final image.
-
 
 ### Run the Spring Boot application
 
@@ -263,7 +245,6 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
     21.0.2 with PID 159 (/app/target/classes started by root in /app)
      ….
      ```
-
 
 2. Access your “Hello World” page through your web browser at [http://localhost:8080](http://localhost:8080), or via this curl command:
 
@@ -298,11 +279,9 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
 
     - The second stage is a new stage named `final`. It uses a slimmer `eclipse-temurin:21.0.2_13-jre-jammy` image, containing just the Java Runtime Environment (JRE) needed to run the application. This image provides a Java Runtime Environment (JRE) which is enough for running the compiled application (JAR file).
 
-
    > For production use, it's highly recommended that you produce a custom JRE-like runtime using jlink. JRE images are available for all versions of Eclipse Temurin, but `jlink` allows you to create a minimal runtime containing only the necessary Java modules for your application. This can significantly reduce the size and improve the security of your final image. [Refer to this page](https://hub.docker.com/_/eclipse-temurin) for more information.
 
    With multi-stage builds, a Docker build uses one base image for compilation, packaging, and unit tests and then a separate image for the application runtime. As a result, the final image is smaller in size since it doesn’t contain any development or debugging tools. By separating the build environment from the final runtime environment, you can significantly reduce the image size and increase the security of your final images.
-
 
 2. Now, rebuild your image and run your ready-to-use production build.
 
@@ -312,11 +291,9 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
 
     This command builds a Docker image named `spring-helloworld-builder` using the final stage from your `Dockerfile` file located in the current directory.
 
-
      > [!NOTE]
      >
      > In your multi-stage Dockerfile, the final stage (final) is the default target for building. This means that if you don't explicitly specify a target stage using the `--target` flag in the `docker build` command, Docker will automatically build the last stage by default. You could use `docker build -t spring-helloworld-builder --target builder .` to build only the builder stage with the JDK environment.
-
 
 3. Look at the image size difference by using the `docker images` command:
 
@@ -332,7 +309,6 @@ Now that you have the project, you’re ready to create the `Dockerfile`.
     ```
 
     Your final image is just 428 MB, compared to the original build size of 880 MB.
-
 
     By optimizing each stage and only including what's necessary, you were able to significantly reduce the overall image size while still achieving the same functionality. This not only improves performance but also makes your Docker images more lightweight, more secure, and easier to manage.
 

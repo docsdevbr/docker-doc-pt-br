@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: "Interface: Docker"
 description: Docker extension API reference
@@ -56,7 +56,7 @@ For convenience, the command result object also has methods to easily parse it d
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 Streams the output as a result of the execution of a Docker command.
 It is useful when the output of the command is too long, or you need to get the output as a stream.

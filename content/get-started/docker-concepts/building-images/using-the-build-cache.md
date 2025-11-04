@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Using the build cache
 keywords: concepts, build, images, container, docker desktop
@@ -28,7 +28,6 @@ aliases:
 ## Explanation
 
 Consider the following Dockerfile that you created for the [getting-started](./writing-a-dockerfile/) app.
-
 
 ```dockerfile
 FROM node:20-alpine
@@ -62,20 +61,17 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
 
 2. Open a terminal and [clone this sample application](https://github.com/dockersamples/todo-list-app).
 
-
     ```console
     $ git clone https://github.com/dockersamples/todo-list-app
     ```
 
 3. Navigate into the `todo-list-app` directory:
 
-
     ```console
     $ cd todo-list-app
     ```
 
     Inside this directory, you'll find a file named `Dockerfile` with the following content:
-
 
     ```dockerfile
     FROM node:20-alpine
@@ -125,9 +121,7 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
      => => exporting manifest
    ```
 
-
    The subsequent build was completed in just 1.0 second by leveraging the cached layers. No need to repeat time-consuming steps like installing dependencies.
-
 
     <table>
       <tr>
@@ -234,7 +228,6 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
      </tr>
     </table>
 
-
     Going back to the `docker image history` output, you see that each command in the Dockerfile becomes a new layer in the image. You might remember that when you made a change to the image, the `yarn` dependencies had to be reinstalled. Is there a way to fix this? It doesn't make much sense to reinstall the same dependencies every time you build, right?
 
     To fix this, restructure your Dockerfile so that the dependency cache remains valid unless it really needs to be invalidated. For Node-based applications, dependencies are defined in the `package.json` file. You'll want to reinstall the dependencies if that file changes, but use cached dependencies if the file is unchanged. So, start by copying only that file first, then install the dependencies, and finally copy everything else. Then, you only need to recreate the yarn dependencies if there was a change to the `package.json` file.
@@ -328,7 +321,6 @@ By following these optimization techniques, you can make your Docker builds fast
 * [Optimizing builds with cache management](/build/cache/)
 * [Cache Storage Backend](/build/cache/backends/)
 * [Build cache invalidation](/build/cache/invalidation/)
-
 
 ## Next steps
 

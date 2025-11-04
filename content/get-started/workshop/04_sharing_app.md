@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Share the application
 weight: 40
@@ -43,7 +43,6 @@ To push an image, you first need to create a repository on Docker Hub.
 In the following image, you can see an example Docker command from Docker Hub. This command will push to this repository.
 
 ![Docker command with push example](images/push-command.webp)
-
 
 ## Push the image
 
@@ -92,7 +91,6 @@ new instance that has never seen this container image. To do this, you will use 
 > ```
 >
 > Docker buildx also supports building multi-platform images. To learn more, see [Multi-platform images](/manuals/build/building/multi-platform.md).
-
 
 1. Open your browser to [Play with Docker](https://labs.play-with-docker.com/).
 

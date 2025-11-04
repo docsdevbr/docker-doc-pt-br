@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Learn how to deploy pre-trained models in a TensorFlow.js web applications to perform face detection.
 keywords: tensorflow.js, machine learning, ml, mediapipe, blazeface, face detection

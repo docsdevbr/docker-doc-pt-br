@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/develop-with-containers.md
 revision: 29e9c2d8c4c504412d677a779610dc6749da0df6
@@ -43,7 +43,6 @@ Especificamente, você fará o seguinte:
 
 Neste guia prático, você aprenderá como desenvolver com contêineres.
 
-
 ## Inicie o projeto
 
 1. Para começar, clone ou
@@ -63,7 +62,6 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
 2. Depois de ter o projeto, inicie o ambiente de desenvolvimento usando o Docker
    Compose.
 
-
    Para iniciar o projeto usando a CLI, execute o seguinte comando:
 
    ```console
@@ -75,7 +73,6 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
    Não se preocupe se você não entender tudo neste ponto.
    Mas, dentro de um momento ou dois, as coisas devem se estabilizar e terminar.
 
-
 3. Abra seu navegador em [http://localhost](http://localhost) para ver a
    aplicação instalada e funcionando.
    Pode levar alguns minutos para a aplicação ser executada.
@@ -84,7 +81,6 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
    excluir um item.
 
    ![Captura de tela da aplicação de tarefas inicial após seu primeiro lançamento](images/develop-getting-started-app-first-launch.webp)
-
 
 ### O que há no ambiente?
 
@@ -112,7 +108,6 @@ configurar nenhum serviço, preencher um esquema de banco de dados, configurar
 credenciais de banco de dados ou qualquer coisa.
 Você só precisa do Docker Desktop.
 O resto simplesmente funciona.
-
 
 ## Faça alterações na aplicação
 
@@ -156,7 +151,6 @@ você poderá escolher).
 
    ![Captura de tela da aplicação de tarefas com uma nova saudação](images/develop-app-with-greetings.webp)
 
-
 ### Altere o texto do espaço reservado
 
 Quando você acessar a aplicação, notará que o texto do espaço reservado é
@@ -186,7 +180,6 @@ Você também fará algumas alterações no estilo da aplicação.
 
 ![Captura de tela da aplicação de tarefas com um espaço reservado atualizado no campo de texto "Add Item"](images/develop-app-with-updated-placeholder.webp)
 
-
 ### Altere a cor de fundo
 
 Antes de considerar a aplicação finalizada, você precisa melhorar as cores.
@@ -215,11 +208,9 @@ Antes de considerar a aplicação finalizada, você precisa melhorar as cores.
    navegador.
    Continue ajustando até que esteja na configuração perfeita para você.
 
-
    ![Captura de tela da aplicação de tarefas com um novo espaço reservado e cor de fundo"](images/develop-app-with-updated-client.webp)
 
 E com isso, você terminou. Parabéns por atualizar seu site.
-
 
 ## Recapitulando
 

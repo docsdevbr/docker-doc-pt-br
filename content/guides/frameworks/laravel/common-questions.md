@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Common Questions on Using Laravel with Docker
 description: Find answers to common questions about setting up and managing Laravel environments with Docker Compose, including troubleshooting and best practices.

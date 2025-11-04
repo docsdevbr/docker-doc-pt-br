@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Build, tag, and publish an image
 keywords: concepts, build, images, container, docker desktop
@@ -73,7 +73,6 @@ docker run sha256:9924dfd9350407b3df01d1a0e1033b1e543523ce7d5d5e2c83a724480ebe8f
 ```
 
 That name certainly isn't memorable, which is where tagging becomes useful.
-
 
 ### Tagging images
 
@@ -150,11 +149,9 @@ In this hands-on guide, you will build a simple image using a provided Dockerfil
    {{< /tab >}}
    {{< /tabs >}}
 
-
 2. [Download and install](https://www.docker.com/products/docker-desktop/) Docker Desktop.
 
 3. If you don't have a Docker account yet, [create one now](https://hub.docker.com/). Once you've done that, sign in to Docker Desktop using that account.
-
 
 ### Build an image
 
@@ -240,5 +237,4 @@ To learn more about building, tagging, and publishing images, visit the followin
 Now that you have learned about building and publishing images, it's time to learn how to speed up the build process using the Docker build cache.
 
 {{< button text="Using the build cache" url="using-the-build-cache" >}}
-
 

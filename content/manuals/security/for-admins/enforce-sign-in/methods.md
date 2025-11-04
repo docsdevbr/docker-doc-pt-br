@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Learn about the different ways you can force your developers to sign in to Docker Desktop
 keywords: authentication, registry.json, configure, enforce sign-in, docker desktop, security, .plist. registry key, mac, windows

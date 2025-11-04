@@ -7,18 +7,19 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Educational resources
 keywords: get started, setup, orientation, quickstart, intro, concepts, kubernetes,
   docker desktop
 description: Get started resources learning docker
 ---
+
 Docker and the broader community of Docker experts have put together many different ways to get further training and hands-on experience with Docker. Expand your understanding of Docker and Kubernetes with these additional free and paid resources.
 
 ## Docker Training
 
-Expand your knowledge on all things Docker with [basic to advanced trainings from Docker experts](https://www.docker.com/resources/trainings/).
+Expand your knowledge on all things Docker with [basic to advanced trainings from Docker experts](https://www.docker.com/trainings/).
 
 You can find recorded content at your own convenience, or register for a live session to participate in Q&A.
 

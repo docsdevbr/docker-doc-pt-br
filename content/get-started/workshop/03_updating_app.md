@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Update the application
 weight: 30
@@ -24,7 +24,6 @@ In [part 1](./02_our_app.md), you containerized a todo application. In this part
 ## Update the source code
 
 In the following steps, you'll change the "empty text" when you don't have any todo list items to "You have no todo items yet! Add one above!"
-
 
 1. In the `src/static/js/app.js` file, update line 56 to use the new empty text.
 

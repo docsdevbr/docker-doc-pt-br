@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Use Docker Compose
 weight: 80
@@ -189,7 +189,6 @@ $ docker run -d \
    ```
 
 At this point, your complete `compose.yaml` should look like this:
-
 
 ```yaml
 services:

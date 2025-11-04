@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Install Docker on Linux with ease using our step-by-step installation
   guide covering system requirements, supported platforms, and where to go next.
@@ -19,7 +19,7 @@ linkTitle: Linux
 weight: 60
 aliases:
 - /desktop/linux/install/
-- /desktop/install/linux-install/
+- /desktop/install/linux/
 - /desktop/install/linux/
 ---
 > **Docker Desktop terms**

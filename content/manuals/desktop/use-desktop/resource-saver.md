@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Understand what Docker Desktop Resource Saver mode is and how to configure it
 keywords: Docker Dashboard, resource saver, manage, containers, gui, dashboard, user manual

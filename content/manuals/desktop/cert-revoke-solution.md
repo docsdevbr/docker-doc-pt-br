@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Learn how to resolve issues affecting macOS users of Docker Desktop, including startup problems and false malware warnings, with upgrade, patch, and workaround solutions.
 keywords: Docker desktop, fix, mac, troubleshooting, macos, false malware warning, patch, upgrade solution

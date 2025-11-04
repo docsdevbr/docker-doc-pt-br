@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Overriding container defaults
 weight: 2
@@ -132,7 +132,6 @@ Follow the steps to see how to connect a Postgres container to a custom network.
 
     This will start Postgres container in the background, mapped to the host port 5434 and attached to the `mynetwork` network. You passed the `--network` parameter to override the container default by connecting the container to custom Docker network for better isolation and communication with other containers. You can use `docker network inspect` command to see if the container is tied to this new bridge network.
 
-
     > **Key difference between default bridge and custom networks**
     >
     > 1. DNS resolution: By default, containers connected to the default bridge network can communicate with each other, but only by IP address. (unless you use `--link` option which is considered legacy). It is not recommended for production use due to the various [technical shortcomings](/engine/network/drivers/bridge/#differences-between-user-defined-bridges-and-the-default-bridge). On a custom network, containers can resolve each other by name or alias.
@@ -153,7 +152,6 @@ The `--cpus` flag specifies the CPU quota for the container. Here, it's set to h
 ### Override the default CMD and ENTRYPOINT in Docker Compose
 
 
-
 Sometimes, you might need to override the default commands (`CMD`) or entry points (`ENTRYPOINT`) defined in a Docker image, especially when using Docker Compose.
 
 1. Create a `compose.yml` file with the following content:
@@ -167,7 +165,6 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
         environment:
           POSTGRES_PASSWORD: secret
     ```
-
 
     The Compose file defines a service named `postgres` that uses the official Postgres image, sets an entrypoint script, and starts the container with password authentication.
 
@@ -189,7 +186,6 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
 
     ![A screenshot of the Docker Desktop Dashboard selecting the Postgres container and entering into its shell using EXEC button](images/exec-into-postgres-container.webp?border=true)
 
-
     > [!NOTE]
     >
     > The PostgreSQL image sets up trust authentication locally so you may notice a password isn't required when connecting from localhost (inside the same container). However, a password will be required if connecting from a different host/container.
@@ -203,7 +199,6 @@ $ docker run -e POSTGRES_PASSWORD=secret postgres docker-entrypoint.sh -h localh
 ```
 
 This command runs a Postgres container, sets an environment variable for password authentication, overrides the default startup commands and configures hostname and port mapping.
-
 
 ## Additional resources
 

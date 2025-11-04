@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Learn how to use the Docker Desktop Dashboard within Docker Desktop, including Quick search, the Docker menu, and more
 keywords: Docker Desktop Dashboard, manage, containers, gui, dashboard, images, user manual,

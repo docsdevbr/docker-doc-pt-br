@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Source file conventions
 description: How new .md files should be formatted
@@ -56,7 +56,7 @@ the metadata elements in the front matter isn't important.
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Instructions for installing Docker Engine on Ubuntu
 keywords: requirements, apt, installation, ubuntu, install, uninstall, upgrade, update
@@ -99,7 +99,7 @@ This is useful in combination with `build.render` set to `always`, which creates
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Dummy sidebar link
 build:

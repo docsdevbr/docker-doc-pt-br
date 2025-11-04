@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/understanding-image-layers.md
 revision: 6bce6d72cf3c0adab9f1675340a40f8718a6f5b4
@@ -53,7 +53,7 @@ Vejamos uma imagem teórica:
 3. A terceira camada copia o arquivo `requirements.txt` específico de uma
    aplicação;
 4. A quarta camada instala as dependências específicas dessa aplicação;
-5. A quinta camada copia o código fonte da aplicação.
+5. A quinta camada copia o código-fonte da aplicação.
 
 Este exemplo pode ser parecido com:
 

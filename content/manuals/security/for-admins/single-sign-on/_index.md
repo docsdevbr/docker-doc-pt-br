@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Learn how single sign-on works, how to set it up, and the required SSO attributes.
 keywords: Single Sign-On, SSO, sign-on, admin, docker hub, admin console, security

@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Persisting container data
 weight: 3
@@ -49,7 +49,6 @@ When the container runs, all files it writes into the `/logs` folder will be sav
 >
 > You can attach the same volume to multiple containers to share files between containers. This might be helpful in scenarios such as log aggregation, data pipelines, or other event-driven applications.
 
-
 ### Managing volumes
 
 Volumes have their own lifecycle beyond that of containers and can grow quite large depending on the type of data and applications you’re using. The following commands will be helpful to manage volumes:
@@ -57,7 +56,6 @@ Volumes have their own lifecycle beyond that of containers and can grow quite la
 - `docker volume ls` - list all volumes
 - `docker volume rm <volume-name-or-id>` - remove a volume (only works when the volume is not attached to any containers)
 - `docker volume prune` - remove all unused (unattached) volumes
-
 
 
 ## Try it out
@@ -147,7 +145,6 @@ The Docker Desktop Dashboard provides the ability to view the contents of any vo
 
 4. Right-click on any file to save it or delete it.
 
-
 ### Remove volumes
 
 Before removing a volume, it must not be attached to any containers. If you haven’t removed the previous container, do so with the following command (the `-f` will stop the container first and then remove it):
@@ -170,7 +167,6 @@ There are a few methods to remove volumes, including the following:
     $ docker volume prune
     ```
 
-
 ## Additional resources
 
 The following resources will help you learn more about volumes:
@@ -179,11 +175,9 @@ The following resources will help you learn more about volumes:
 - [Volumes](/engine/storage/volumes)
 - [Volume mounts](/engine/containers/run/#volume-mounts)
 
-
 ## Next steps
 
 Now that you have learned about persisting container data, it’s time to learn about sharing local files with containers.
 
 {{< button text="Sharing local files with containers" url="sharing-local-files" >}}
-
 

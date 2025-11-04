@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 description: Control access to approved registries with Registry Access Management, ensuring secure Docker Desktop usage
 keywords: registry, access, management, permissions, Docker Business feature, security, admin

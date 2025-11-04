@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/_index.md
 revision: ec19565b9ca532bff7cb672cd9f6d7e30a44fa28
@@ -46,6 +46,9 @@ params:
       Participe de um workshop de 45 minutos para aprender sobre o Docker.
     link: /get-started/workshop/
     icon: desk
+aliases:
+  - /engine/get-started/
+  - /engine/tutorials/usingdocker/
 ---
 
 Se você é uma pessoa nova no Docker, esta seção te guiará pelos recursos

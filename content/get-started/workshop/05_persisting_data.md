@@ -7,7 +7,7 @@
 #
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/main/LICENSE
+# https://github.com/docker/docs/blob/-/LICENSE
 
 title: Persist the DB
 weight: 50
@@ -125,7 +125,6 @@ You can create the volume and start the container using the CLI or Docker Deskto
    > For more details about Git Bash's syntax differences, see
    > [Working with Git Bash](/desktop/troubleshoot-and-support/troubleshoot/topics/#docker-commands-failing-in-git-bash).
 
-
 {{< /tab >}}
 {{< tab name="Docker Desktop" >}}
 
@@ -165,7 +164,6 @@ To start the todo app container with the volume mounted:
 1. Once the container starts up, open the app and add a few items to your todo list.
 
     ![Items added to todo list](images/items-added.webp)
-
 
 2. Stop and remove the container for the todo app. Use Docker Desktop or `docker ps` to get the ID and then `docker rm -f <id>` to remove it.
 
