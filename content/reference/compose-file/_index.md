@@ -24,27 +24,27 @@ title: Referência do arquivo compose
 toc_max: 4
 toc_min: 1
 grid:
-  - title: Elementos version e name de nível superior
+  - title: Elementos de nível superior version e name
     description: Entenda os atributos version e name do Compose.
     icon: text_snippet
     link: /reference/compose-file/version-and-name/
-  - title: Elemento services de nível superior
+  - title: Elemento de nível superior services
     description: Explore all services attributes for Compose.
     icon: construction
     link: /reference/compose-file/services/
-  - title: Elemento networks de nível superior
+  - title: Elemento de nível superior networks
     description: Encontre todos os atributos de networks do Compose.
     icon: lan
     link: /reference/compose-file/networks/
-  - title: Elemento volumes de nível superior
+  - title: Elemento de nível superior volumes
     description: Explore todos os atributos de volumes do Compose.
     icon: database
     link: /reference/compose-file/volumes/
-  - title: Elemento configs de nível superior
+  - title: Elemento de nível superior configs
     description: Saiba mais sobre configs no Compose.
     icon: settings
     link: /reference/compose-file/configs/
-  - title: Elemento secrets de nível superior
+  - title: Elemento de nível superior secrets
     description: Saiba mais sobre secrets no Compose.
     icon: lock
     link: /reference/compose-file/secrets/
