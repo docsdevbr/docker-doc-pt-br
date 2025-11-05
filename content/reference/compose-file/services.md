@@ -9,28 +9,50 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-title: Services top-level elements
-description: Explore all the attributes the services top-level element can have.
-keywords: compose, compose specification, services, compose file reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/services.md
+revision: 9fe8e768d1e8f8ad4c56b9068fb045afe3185bb8
+status: wip
+
+linkTitle: Serviços
+title: Defina serviços no Docker Compose
+description: >-
+  Explore todos os atributos que o elemento de nível superior `services` pode
+  ter.
+keywords: >-
+  compose, especificação do compose, serviços, referência do arquivo compose
 aliases:
- - /compose/compose-file/05-services/
+  - /compose/compose-file/05-services/
 weight: 20
 ---
+
 {{% include "compose/services.md" %}}
 
-A Compose file must declare a `services` top-level element as a map whose keys are string representations of service names,
-and whose values are service definitions. A service definition contains the configuration that is applied to each
-service container.
+Um arquivo Compose deve declarar um elemento de nível superior `services` como
+um mapa cujas chaves são representações em string de nomes de serviços e cujos
+valores são definições de serviços.
+Uma definição de serviço contém a configuração que é aplicada a cada contêiner
+de serviço.
 
-Each service may also include a `build` section, which defines how to create the Docker image for the service.
-Compose supports building Docker images using this service definition. If not used, the `build` section is ignored and the Compose file is still considered valid. Build support is an optional aspect of the Compose Specification, and is
-described in detail in the [Compose Build Specification](build.md) documentation.
+Cada serviço também pode incluir uma seção `build`, que define como criar a
+imagem Docker para o serviço.
+O Compose oferece suporte à criação de imagens Docker usando essa definição de
+serviço.
+Se não for usada, a seção `build` é ignorada e o arquivo Compose ainda é
+considerado válido.
+O suporte à criação é um aspecto opcional da Especificação do Compose e é
+descrito em detalhes na documentação da
+[Especificação do Compose Build](build.md).
 
-Each service defines runtime constraints and requirements to run its containers. The `deploy` section groups
-these constraints and lets the platform adjust the deployment strategy to best match containers' needs with
-available resources. Deploy support is an optional aspect of the Compose Specification, and is
-described in detail in the [Compose Deploy Specification](deploy.md) documentation.
-If not implemented the `deploy` section is ignored and the Compose file is still considered valid.
+Cada serviço define restrições e requisitos de tempo de execução para executar
+seus contêineres.
+A seção `deploy` agrupa essas restrições e permite que a plataforma ajuste a
+estratégia de implantação para melhor atender às necessidades dos contêineres
+com os recursos disponíveis.
+O suporte à implantação é um aspecto opcional da Especificação do Compose e é
+descrito em detalhes na documentação da
+[Especificação do Compose Deploy](deploy.md).
+Caso não seja implementada, a seção `deploy` é ignorada e o arquivo Compose
+ainda é considerado válido.
 
 ## Examples
 
@@ -327,7 +349,7 @@ The long syntax provides more granularity in how the config is created within th
 - `target`: The path and name of the file to be mounted in the service's
   task containers. Defaults to `/<source>` if not specified.
 - `uid` and `gid`: The numeric uid or gid that owns the mounted config file
-  within the service's task containers. Default value when not specified is `USER`.
+  within the service's task containers.
 - `mode`: The [permissions](https://wintelguy.com/permissions-calc.pl) for the file that is mounted within the service's
   task containers, in octal notation. Default value is world-readable (`0444`).
   Writable bit must be ignored. The executable bit can be set.
@@ -385,7 +407,9 @@ credential_spec:
 When using `registry:`, the credential spec is read from the Windows registry on
 the daemon's host. A registry value with the given name must be located in:
 
+```bash
     HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Containers\CredentialSpecs
+```
 
 The following example loads the credential spec from a value named `my-credential-spec`
 in the registry:
@@ -409,7 +433,7 @@ services:
 
 configs:
   my_credentials_spec:
-    file: ./my-credential-spec.json|
+    file: ./my-credential-spec.json
 ```
 
 ### `depends_on`
@@ -694,9 +718,13 @@ Each line in an `.env` file must be in `VAR[=[VAL]]` format. The following synta
 - Blank lines are ignored.
 - Unquoted and double-quoted (`"`) values have [Interpolation](interpolation.md) applied.
 - Each line represents a key-value pair. Values can optionally be quoted.
+- Delimiter separating key and value can be either `=` or `:`.
+- Spaces before and after value are ignored.
   - `VAR=VAL` -> `VAL`
   - `VAR="VAL"` -> `VAL`
   - `VAR='VAL'` -> `VAL`
+  - `VAR: VAL` -> `VAL`
+  - `VAR = VAL  ` -> `VAL` <!-- markdownlint-disable-line no-space-in-code -->
 - Inline comments for unquoted values must be preceded with a space.
   - `VAR=VAL # comment` -> `VAL`
   - `VAR=VAL# not a comment` -> `VAL# not a comment`
@@ -1297,6 +1325,41 @@ There is a performance penalty for applications that swap memory to disk often.
 - If `memswap_limit` is unset, and `memory` is set, the container can use as much swap as the `memory` setting, if the host container has swap memory configured. For instance, if `memory`="300m" and `memswap_limit` is not set, the container can use 600m in total of memory and swap.
 - If `memswap_limit` is explicitly set to -1, the container is allowed to use unlimited swap, up to the amount available on the host system.
 
+### `models`
+
+{{< summary-bar feature_name="Compose models" >}}
+
+`models` defines which AI models the service should use at runtime. Each referenced model must be defined under the [`models` top-level element](models.md).
+
+```yaml
+services:
+  short_syntax:
+    image: app
+    models:
+      - my_model
+  long_syntax:
+    image: app
+    models:
+      my_model:
+        endpoint_var: MODEL_URL
+        model_var: MODEL
+```
+
+When a service is linked to a model, Docker Compose injects environment variables to pass connection details and model identifiers to the container. This allows the application to locate and communicate with the model dynamically at runtime, without hard-coding values.
+
+#### Long syntax
+
+The long syntax gives you more control over the environment variable names.
+
+- `endpoint_var` sets the name of the environment variable that holds the model runner’s URL.
+- `model_var` sets the name of the environment variable that holds the model identifier.
+
+If either is omitted, Compose automatically generates the environment variable names based on the model key using the following rules:
+
+ - Convert the model key to uppercase
+ - Replace any '-' characters with '_'
+ - Append `_URL` for the endpoint variable
+
 ### `network_mode`
 
 `network_mode` sets a service container's network mode.
@@ -1330,7 +1393,7 @@ services:
 ```
 For more information about the `networks` top-level element, see [Networks](networks.md).
 
-### Implicit default network
+#### Implicit default network
 
 If `networks` is empty or absent from the Compose file, Compose considers an implicit definition for the service to be
 connected to the `default` network:
@@ -1404,9 +1467,31 @@ services:
           - mysql
 
 networks:
-  front-tier:
+  front-tier: {}
+  back-tier: {}
+  admin: {}
+```
+
+#### `interface_name`
+
+{{< summary-bar feature_name="Compose interface-name" >}}
+
+`interface_name` lets you specify the name of the network interface used to connect a service to a given network. This ensures consistent and predictable interface naming across services and networks.
+
+```yaml
+services:
+  backend:
+    image: alpine
+    command: ip link show
+    networks:
   back-tier:
-  admin:
+        interface_name: eth0
+```
+
+Running the example Compose application shows:
+
+```console
+backend-1  | 11: eth0@if64: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue state UP
 ```
 
 #### `ipv4_address`, `ipv6_address`
@@ -1462,6 +1547,21 @@ networks:
 {{< summary-bar feature_name="Compose mac address" >}}
 
 `mac_address` sets the Mac address used by the service container when connecting to this particular network.
+
+#### `driver_opts`
+
+`driver_opts` specifies a list of options as key-value pairs to pass to the driver. These options are
+driver-dependent. Consult the driver's documentation for more information.
+
+```yml
+services:
+  app:
+    networks:
+      app_net:
+        driver_opts:
+          foo: "bar"
+          baz: 1
+```
 
 #### `gw_priority`
 
@@ -1579,7 +1679,7 @@ in the form:
 
 - `HOST` is `[IP:](port | range)` (optional). If it is not set, it binds to all network interfaces (`0.0.0.0`).
 - `CONTAINER` is `port | range`.
-- `PROTOCOL` restricts ports to a specified protocol either `tcp` or `upd`(optional). Default is `tcp`.
+- `PROTOCOL` restricts ports to a specified protocol either `tcp` or `udp`(optional). Default is `tcp`.
 
 Ports can be either a single value or a range. `HOST` and `CONTAINER` must use equivalent ranges.
 
@@ -1624,7 +1724,7 @@ expressed in the short form.
 - `protocol`: The port protocol (`tcp` or `udp`). Defaults to `tcp`.
 - `app_protocol`: The application protocol (TCP/IP level 4 / OSI level 7) this port is used for. This is optional and can be used as a hint for Compose to offer richer behavior for protocols that it understands. Introduced in Docker Compose version [2.26.0](/manuals/compose/releases/release-notes.md#2260).
 - `mode`: Specifies how the port is published in a Swarm setup. If set to `host`, it publishes the port on every node in Swarm. If set to `ingress`, it allows load balancing across the nodes in Swarm. Defaults to `ingress`.
-- `name`: A human-readable name for the port, used to document it's usage within the service.
+- `name`: A human-readable name for the port, used to document its usage within the service.
 
 ```yml
 ports:
@@ -1702,6 +1802,46 @@ services:
       - debug
 ```
 
+### `provider`
+
+{{< summary-bar feature_name="Compose provider services" >}}
+
+`provider` can be used to define a service that Compose won't manage directly. Compose delegated the service lifecycle to a dedicated or third-party component.
+
+```yaml
+  database:
+    provider:
+      type: awesomecloud
+      options:
+        type: mysql
+        foo: bar
+  app:
+    image: myapp
+    depends_on:
+       - database
+```
+
+As Compose runs the application, the `awesomecloud` binary is used to manage the `database` service setup.
+Dependent service `app` receives additional environment variables prefixed by the service name so it can access the resource.
+
+For illustration, assuming `awesomecloud` execution produced variables `URL` and `API_KEY`, the `app` service
+runs with environment variables `DATABASE_URL` and `DATABASE_API_KEY`.
+
+As Compose stops the application, the `awesomecloud` binary is used to manage the `database` service tear down.
+
+The mechanism used by Compose to delegate the service lifecycle to an external binary is described in the [Compose extensibility documentation](https://github.com/docker/compose/tree/main/docs/extension.md).
+
+For more information on using the `provider` attribute, see [Use provider services](/manuals/compose/how-tos/provider-services.md).
+
+#### `type`
+
+`type` attribute is required. It defines the external component used by Compose to manage setup and tear down lifecycle
+events.
+
+#### `options`
+
+`options` are specific to the selected provider and not validated by the compose specification
+
 ### `pull_policy`
 
 `pull_policy` defines the decisions Compose makes when it starts to pull images. Possible values are:
@@ -1711,7 +1851,7 @@ services:
    If there is no cached image, a failure is reported.
 - `missing`: Compose pulls the image only if it's not available in the platform cache.
    This is the default option if you are not also using the [Compose Build Specification](build.md).
-  `if_not_present` is considered an alias for this value for backward compatibility.
+  `if_not_present` is considered an alias for this value for backward compatibility. The `latest` tag is always pulled even when the `missing` pull policy is used.
 - `build`: Compose builds the image. Compose rebuilds the image if it's already present.
 - `daily`: Compose checks the registry for image updates if the last pull took place more than 24 hours ago.
 - `weekly`: Compose checks the registry for image updates if the last pull took place more than 7 days ago.
@@ -1814,7 +1954,7 @@ the service's containers.
 - `target`: The name of the file to be mounted in `/run/secrets/` in the
   service's task container, or absolute path of the file if an alternate location is required. Defaults to `source` if not specified.
 - `uid` and `gid`: The numeric uid or gid that owns the file within
-  `/run/secrets/` in the service's task containers. Default value is `USER`.
+  `/run/secrets/` in the service's task containers.
 - `mode`: The [permissions](https://wintelguy.com/permissions-calc.pl) for the file to be mounted in `/run/secrets/`
   in the service's task containers, in octal notation.
   The default value is world-readable permissions (mode `0444`).
@@ -1836,7 +1976,7 @@ services:
         target: server.cert
         uid: "103"
         gid: "103"
-        mode: "0o440"
+        mode: 0o440
 secrets:
   server-certificate:
     file: ./server.cert
@@ -1966,6 +2106,12 @@ ulimits:
     hard: 40000
 ```
 
+### `use_api_socket`
+
+When `use_api_socket` is set, the container is able to interact with the underlying container engine through the API socket.
+Your credentials are mounted inside the container so the container acts as a pure delegate for your commands relating to the container engine.
+Typically, commands ran by container can `pull` and `push` to your registry.
+
 ### `user`
 
 `user` overrides the user used to run the container process. The default is set by the image, for example Dockerfile `USER`. If it's not set, then `root`.
@@ -2044,22 +2190,25 @@ The short syntax uses a single string with colon-separated values to specify a v
 > platform it rejects Compose files which use relative host paths with an error. To avoid ambiguities
 > with named volumes, relative paths should always begin with `.` or `..`.
 
+> [!NOTE]
+>
+> For bind mounts, the short syntax creates a directory at the source path on the host if it doesn't exist. This is for backward compatibility with `docker-compose` legacy.
+> It can be prevented by using long syntax and setting `create_host_path` to `false`.
+
 #### Long syntax
 
 The long form syntax lets you configure additional fields that can't be
 expressed in the short form.
 
-- `type`: The mount type. Either `volume`, `bind`, `tmpfs`, `npipe`, or `cluster`
-- `source`: The source of the mount, a path on the host for a bind mount, or the
+- `type`: The mount type. Either `volume`, `bind`, `tmpfs`, `image`, `npipe`, or `cluster`
+- `source`: The source of the mount, a path on the host for a bind mount, a Docker image reference for an image mount, or the
   name of a volume defined in the
   [top-level `volumes` key](volumes.md). Not applicable for a tmpfs mount.
 - `target`: The path in the container where the volume is mounted.
 - `read_only`: Flag to set the volume as read-only.
 - `bind`: Used to configure additional bind options:
   - `propagation`: The propagation mode used for the bind.
-  - `create_host_path`: Creates a directory at the source path on host if there is nothing present.
-    Compose does nothing if there is something present at the path. This is automatically implied by short syntax
-    for backward compatibility with `docker-compose` legacy.
+  - `create_host_path`: Creates a directory at the source path on host if there is nothing present. Defaults to `true`.
   - `selinux`: The SELinux re-labeling option `z` (shared) or `Z` (private)
 - `volume`: Configures additional volume options:
   - `nocopy`: Flag to disable copying of data from a container when a volume is created.
@@ -2067,6 +2216,8 @@ expressed in the short form.
 - `tmpfs`: Configures additional tmpfs options:
   - `size`: The size for the tmpfs mount in bytes (either numeric or as bytes unit).
   - `mode`: The file mode for the tmpfs mount as Unix permission bits as an octal number. Introduced in Docker Compose version [2.14.0](/manuals/compose/releases/release-notes.md#2260).
+- `image`: Configures additional image options:
+  - `subpath`: Path inside the source image to mount instead of the image root. Available in [Docker Compose version 2.35.0](/manuals/compose/releases/release-notes.md#2350)
 - `consistency`: The consistency requirements of the mount. Available values are platform specific.
 
 > [!TIP]
