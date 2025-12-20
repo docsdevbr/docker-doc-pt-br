@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/build-and-push-first-image.md
-revision: 41e2d0c9a137ccb4338cfda13d969a76b85c03dc
+revision: 5ec771e17cc6790969fb7bef84b9ec84c67ed4cc
 status: ready
 
 title: Crie e envie sua primeira imagem
@@ -81,11 +81,11 @@ seguintes imagens que vieram do Docker Hub, cada uma das quais são
   contêiner apropriado com base em regras de roteamento.
 
 Explore o catálogo completo de
-[Imagens Oficiais do Docker](https://hub.docker.com/search?image_filter=official&q=)
+[Imagens Oficiais do Docker](https://hub.docker.com/search?badges=official)
 e imagens de
-[Editores Verificados pelo Docker](https://hub.docker.com/search?q=&image_filter=store)
+[Editores Verificados pelo Docker](https://hub.docker.com/search?badges=verified_publisher)
 e de
-[Software de Código Aberto Patrocinado pelo Docker](https://hub.docker.com/search?q=&image_filter=open_source)
+[Software de Código Aberto Patrocinado pelo Docker](https://hub.docker.com/search?badges=open_source)
 para ver mais do que há para executar e desenvolver.
 
 ## Experimente
