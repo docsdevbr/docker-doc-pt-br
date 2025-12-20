@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/_index.md
-revision: 49dc2a288b67a1b88407f3377ada49d66365e2a3
+revision: 937744b3a425af793cd5409846937e79a27180b4
 status: ready
 
 title: Documentação do Docker
@@ -127,7 +127,7 @@ grid:
       - text: "Visão geral"
         url: "/subscription/"
       - text: "Assinaturas e recursos"
-        url: "/subscription/details/"
+        url: "https://www.docker.com/pricing/"
       - text: "Altere a assinatura"
         url: "/subscription/change/"
   - title: Cobrança
