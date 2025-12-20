@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-overview.md
-revision: 6e4790e2912429d3e06e461d60732a7a5dba3c2a
+revision: dc95063e4cbe4a7ef46a2dc9f3c0ebb0f910b40f
 status: ready
 
 description: >-
@@ -172,11 +172,11 @@ Esta seção é uma breve visão geral de alguns desses objetos.
 
 Uma imagem é um template somente leitura com instruções para criar um contêiner
 Docker.
-Frequentemente, uma imagem é baseada em outra imagem, com alguma personalização
-adicional.
-Por exemplo, você pode construir uma imagem baseada na imagem `ubuntu`, mas
-instalar o servidor web Apache e sua aplicação, bem como os detalhes de
-configuração necessários para fazer sua aplicação rodar.
+Frequentemente, uma imagem é baseada em outra imagem, com algumas
+personalizações adicionais.
+Por exemplo, você pode criar uma imagem baseada na imagem do Ubuntu, mas que
+inclua o servidor web Apache e sua aplicação, bem como os detalhes de
+configuração necessários para fazer com que sua aplicação seja executada.
 
 Você pode criar suas próprias imagens ou pode usar apenas aquelas criadas por
 outras pessoas e publicadas em um registro.
