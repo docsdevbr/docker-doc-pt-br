@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/_index.md
-revision: b6a1061fe80c0246455465e1f13ccc3e6b658e4d
+revision: 26db073d5edddbd783232ff0b722c06d2fa38544
 status: ready
 
 title: Manuais
@@ -97,10 +97,6 @@ params:
     description: Análise de imagens e validação de políticas.
     icon: /icons/Scout.svg
     link: /scout/
-  - title: Docker para GitHub Copilot
-    description: Integre os recursos do Docker com o GitHub Copilot.
-    icon: chat
-    link: /copilot/
   - title: Extensões do Docker
     description: Personalize seu fluxo de trabalho do Docker Desktop.
     icon: extension
