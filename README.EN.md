@@ -6,7 +6,7 @@
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
-Translation of the Docker Documentation into Brazilian Portuguese.
+Translation of the Docker documentation into Brazilian Portuguese.
 
 ## Contributing
 
@@ -20,20 +20,20 @@ We are committed to providing a welcoming community.
 Please read our [Code of Conduct][code-of-conduct] to understand our community
 standards.
 
-## Support
+## Sponsor
 
-You can support the project through [GitHub Sponsors][github-sponsors] or
-[Pix][sponsor].
+Please visit our [sponsor page][sponsor] to know how you can support the
+project.
 
 ## License
 
-Copyright (c) 2013-2025 Docker Inc.<br>
+Copyright (c) 2013-2025 Docker Inc.<br/>
 **Docker** and the **Docker** logo are trademarks or registered trademarks of
-Docker, Inc. in the United States and/or other countries.<br>
+Docker, Inc. in the United States and/or other countries.<br/>
 Docker, Inc. and other parties may also have trademark rights in other terms
 used herein.
 
-Documentation licensed under the [Apache License, Version 2.0][license].<br>
+Documentation licensed under the [Apache License, Version 2.0][license].<br/>
 The original work was translated from English into Brazilian Portuguese.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/docker-doc-pt-br
@@ -56,7 +56,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [license]: LICENSE
 
-[page]: https://pt.docs.dev.br/p/docker/docs/
+[page]: https://pt.docs.dev.br/tech/d/docker/
 
 [readme-en]: README.EN.md
 
