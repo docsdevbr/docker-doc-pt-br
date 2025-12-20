@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md
-revision: a99cd5a1317f4252b5319d95f803260f2bdbd14a
+revision: 9944982ec08e4a1a9beee41b795b3425025a415c
 status: ready
 
 title: O que é o Docker Compose?
@@ -134,7 +134,10 @@ Siga as instruções para executar a aplicação de lista de tarefas no seu sist
 5. Com tudo instalado e funcionando, você pode abrir
    [http://localhost:3000](http://localhost:3000) no seu navegador para ver o
    site.
-   Sinta-se à vontade para adicionar itens à lista, marcá-los e removê-los.
+   Observe que a aplicação pode levar de 10 a 15 segundos para iniciar
+   completamente.
+   Se a página não carregar imediatamente, aguarde um momento e atualize a
+   página.
 
    ![Uma captura de tela de uma página web mostrando a aplicação de lista de tarefas em execução na porta 3000](images/todo-list-app.webp?border=true&w=950&h=400)
 
