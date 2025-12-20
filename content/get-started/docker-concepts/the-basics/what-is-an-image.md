@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-an-image.md
-revision: 336aab878b72ccad04c8109df4ec8a1902fbb278
+revision: 5ec771e17cc6790969fb7bef84b9ec84c67ed4cc
 status: ready
 
 title: O que é uma imagem?
@@ -72,13 +72,13 @@ Elas fornecem serviços totalmente gerenciados ou ótimos pontos de partida para
 suas próprias imagens.
 Isso inclui:
 
-- [Imagens Oficiais do Docker](https://hub.docker.com/search?q=&type=image&image_filter=official) -
+- [Imagens Oficiais do Docker](https://hub.docker.com/search?badges=official) -
   um conjunto selecionado de repositórios do Docker, servem como ponto de
   partida para a maioria das pessoas usuárias e estão entre as mais seguras do
   Docker Hub.
-- [Editores Verificados do Docker](https://hub.docker.com/search?q=&image_filter=store) -
+- [Editores Verificados do Docker](https://hub.docker.com/search?badges=verified_publisher) -
   imagens de alta qualidade de editores comerciais verificados pelo Docker.
-- [Programa de Código Aberto Patrocinado pelo Docker](https://hub.docker.com/search?q=&image_filter=open_source) -
+- [Programa de Código Aberto Patrocinado pelo Docker](https://hub.docker.com/search?badges=open_source) -
   imagens publicadas e mantidas por projetos de código aberto patrocinados pelo
   Docker por meio do programa de código aberto do Docker.
 
