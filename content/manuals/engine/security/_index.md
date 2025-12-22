@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/_index.md
-revision: f77ddf37286554aa46f0e7e8a03c21359c747922
+revision: b398f346a7e38451cacda1cfe54f1697d2685cdc
 status: ready
 
 description: Análise da superfície de ataque do Docker Daemon
