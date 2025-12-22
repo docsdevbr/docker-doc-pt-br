@@ -9,10 +9,14 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-description: Review of the Docker Daemon attack surface
-keywords: Docker, Docker documentation, security
-title: Docker Engine security
-linkTitle: Security
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/_index.md
+revision: f77ddf37286554aa46f0e7e8a03c21359c747922
+status: ready
+
+description: Análise da superfície de ataque do Docker Daemon
+keywords: docker, documentação do docker, segurança
+title: Segurança da Docker Engine
+linkTitle: Segurança
 weight: 80
 aliases:
 - /articles/security/
@@ -20,275 +24,302 @@ aliases:
 - /engine/security/security/
 - /security/security/
 ---
-There are four major areas to consider when reviewing Docker security:
 
- - The intrinsic security of the kernel and its support for
-   namespaces and cgroups
- - The attack surface of the Docker daemon itself
- - Loopholes in the container configuration profile, either by default,
-   or when customized by users.
- - The "hardening" security features of the kernel and how they
-   interact with containers.
+Há quatro áreas principais a serem consideradas ao analisar a segurança do
+Docker:
 
-## Kernel namespaces
+- A segurança intrínseca do kernel e seu suporte a namespaces e cgroups;
+- A superfície de ataque do próprio daemon do Docker;
+- Brechas no perfil de configuração do contêiner, seja por padrão, ou quando
+personalizado pelas pessoas usuárias;
+- Os recursos de segurança de "endurecimento" do kernel e como eles interagem
+com os contêineres.
 
-Docker containers are very similar to LXC containers, and they have
-similar security features. When you start a container with
-`docker run`, behind the scenes Docker creates a set of namespaces and control
-groups for the container.
+## Namespaces do kernel
 
-Namespaces provide the first and most straightforward form of
-isolation. Processes running within a container cannot see, and even
-less affect, processes running in another container, or in the host
-system.
+Os contêineres Docker são muito semelhantes aos contêineres LXC e possuem
+recursos de segurança similares.
+Ao iniciar um contêiner com `docker run`, o Docker cria, nos bastidores, um
+conjunto de namespaces e grupos de controle para o contêiner.
 
-Each container also gets its own network stack, meaning that a
-container doesn't get privileged access to the sockets or interfaces
-of another container. Of course, if the host system is setup
-accordingly, containers can interact with each other through their
-respective network interfaces — just like they can interact with
-external hosts. When you specify public ports for your containers or use
-[links](/manuals/engine/network/links.md)
-then IP traffic is allowed between containers. They can ping each other,
-send/receive UDP packets, and establish TCP connections, but that can be
-restricted if necessary. From a network architecture point of view, all
-containers on a given Docker host are sitting on bridge interfaces. This
-means that they are just like physical machines connected through a
-common Ethernet switch; no more, no less.
+Os namespaces fornecem a primeira e mais direta forma de isolamento.
+Os processos em execução dentro de um contêiner não podem ver, e muito menos
+afetar, os processos em execução em outro contêiner ou no sistema host.
 
-How mature is the code providing kernel namespaces and private
-networking? Kernel namespaces were introduced [between kernel version
-2.6.15 and
-2.6.26](https://man7.org/linux/man-pages/man7/namespaces.7.html).
-This means that since July 2008 (date of the 2.6.26 release
-), namespace code has been exercised and scrutinized on a large
-number of production systems. And there is more: the design and
-inspiration for the namespaces code are even older. Namespaces are
-actually an effort to reimplement the features of [OpenVZ](
-https://en.wikipedia.org/wiki/OpenVZ) in such a way that they could be
-merged within the mainstream kernel. And OpenVZ was initially released
-in 2005, so both the design and the implementation are pretty mature.
+Cada contêiner também recebe sua própria pilha de rede, o que significa que um
+contêiner não obtém acesso privilegiado aos sockets ou interfaces de outro
+contêiner.
+Obviamente, se o sistema host estiver configurado de acordo, os contêineres
+podem interagir entre si por meio de suas respectivas interfaces de rede — assim
+como podem interagir com hosts externos.
+Ao especificar portas públicas para seus contêineres ou usar
+[links](/manuals/engine/network/links.md), o tráfego IP é permitido entre os
+contêineres.
+Eles podem se comunicar entre si, enviar/receber pacotes UDP e estabelecer
+conexões TCP, mas isso pode ser restringido, se necessário.
+Do ponto de vista da arquitetura de rede, todos os contêineres em um determinado
+host Docker estão em interfaces de ponte.
+Isso significa que eles são como máquinas físicas conectadas por meio de um
+switch Ethernet comum; nada mais, nada menos.
 
-## Control groups
+Quão maduro é o código que fornece namespaces do kernel e redes privadas?
+Os namespaces do kernel foram introduzidos
+[entre as versões 2.6.15 e 2.6.26 do kernel](https://man7.org/linux/man-pages/man7/namespaces.7.html).
+Isso significa que, desde julho de 2008 (data do lançamento da versão 2.6.26), o
+código de namespaces foi testado e analisado em um grande número de sistemas de
+produção.
+E tem mais: o design e a inspiração para o código de namespaces são ainda mais
+antigos.
+Na verdade, os namespaces são um esforço para reimplementar os recursos do
+[OpenVZ](https://en.wikipedia.org/wiki/OpenVZ) de forma que pudessem ser
+integrados ao kernel principal.
+E o OpenVZ foi lançado inicialmente em 2005, então tanto o design quanto a
+implementação são bastante maduros.
 
-Control Groups are another key component of Linux containers. They
-implement resource accounting and limiting. They provide many
-useful metrics, but they also help ensure that each container gets
-its fair share of memory, CPU, disk I/O; and, more importantly, that a
-single container cannot bring the system down by exhausting one of those
-resources.
+## Grupos de controle
 
-So while they do not play a role in preventing one container from
-accessing or affecting the data and processes of another container, they
-are essential to fend off some denial-of-service attacks. They are
-particularly important on multi-tenant platforms, like public and
-private PaaS, to guarantee a consistent uptime (and performance) even
-when some applications start to misbehave.
+Os grupos de controle são outro componente essencial dos contêineres Linux.
+Eles implementam a responsabilização e a limitação de recursos.
+Fornecem muitas métricas úteis, mas também ajudam a garantir que cada contêiner
+receba sua parte justa de memória, CPU e E/S de disco; e, mais importante, que
+um único contêiner não possa derrubar o sistema esgotando um desses recursos.
 
-Control Groups have been around for a while as well: the code was
-started in 2006, and initially merged in kernel 2.6.24.
+Portanto, embora não impeçam um contêiner de acessar ou afetar os dados e
+processos de outro contêiner, eles são essenciais para repelir alguns ataques de
+negação de serviço.
+São particularmente importantes em plataformas multi-tenant, como PaaS públicas
+e privadas, para garantir um tempo de atividade (e desempenho) consistente,
+mesmo quando algumas aplicações começam a apresentar comportamento inadequado.
 
-## Docker daemon attack surface
+Os grupos de controle também existem há algum tempo: o código foi iniciado em
+2006 e inicialmente integrado ao kernel 2.6.24.
 
-Running containers (and applications) with Docker implies running the
-Docker daemon. This daemon requires `root` privileges unless you opt-in
-to [Rootless mode](rootless.md), and you should therefore be aware of
-some important details.
+## Superfície de ataque do daemon do Docker
 
-First of all, only trusted users should be allowed to control your
-Docker daemon. This is a direct consequence of some powerful Docker
-features. Specifically, Docker allows you to share a directory between
-the Docker host and a guest container; and it allows you to do so
-without limiting the access rights of the container. This means that you
-can start a container where the `/host` directory is the `/` directory
-on your host; and the container can alter your host filesystem
-without any restriction. This is similar to how virtualization systems
-allow filesystem resource sharing. Nothing prevents you from sharing your
-root filesystem (or even your root block device) with a virtual machine.
-
-This has a strong security implication: for example, if you instrument Docker
-from a web server to provision containers through an API, you should be
-even more careful than usual with parameter checking, to make sure that
-a malicious user cannot pass crafted parameters causing Docker to create
-arbitrary containers.
-
-For this reason, the REST API endpoint (used by the Docker CLI to
-communicate with the Docker daemon) changed in Docker 0.5.2, and now
-uses a Unix socket instead of a TCP socket bound on 127.0.0.1 (the
-latter being prone to cross-site request forgery attacks if you happen to run
-Docker directly on your local machine, outside of a VM). You can then
-use traditional Unix permission checks to limit access to the control
-socket.
-
-You can also expose the REST API over HTTP if you explicitly decide to do so.
-However, if you do that, be aware of the above mentioned security implications.
-Note that even if you have a firewall to limit accesses to the REST API
-endpoint from other hosts in the network, the endpoint can be still accessible
-from containers, and it can easily result in the privilege escalation.
-Therefore it is *mandatory* to secure API endpoints with
-[HTTPS and certificates](protect-access.md).
-Exposing the daemon API over HTTP without TLS is not permitted,
-and such a configuration causes the daemon to fail early on startup, see
-[Unauthenticated TCP connections](../deprecated.md#unauthenticated-tcp-connections).
-It is also recommended to ensure that it is reachable only from a trusted
-network or VPN.
-
-You can also use `DOCKER_HOST=ssh://USER@HOST` or `ssh -L /path/to/docker.sock:/var/run/docker.sock`
-instead if you prefer SSH over TLS.
-
-The daemon is also potentially vulnerable to other inputs, such as image
-loading from either disk with `docker load`, or from the network with
-`docker pull`. As of Docker 1.3.2, images are now extracted in a chrooted
-subprocess on Linux/Unix platforms, being the first-step in a wider effort
-toward privilege separation. As of Docker 1.10.0, all images are stored and
-accessed by the cryptographic checksums of their contents, limiting the
-possibility of an attacker causing a collision with an existing image.
-
-Finally, if you run Docker on a server, it is recommended to run
-exclusively Docker on the server, and move all other services within
-containers controlled by Docker. Of course, it is fine to keep your
-favorite admin tools (probably at least an SSH server), as well as
-existing monitoring/supervision processes, such as NRPE and collectd.
-
-## Linux kernel capabilities
-
-By default, Docker starts containers with a restricted set of
-capabilities. What does that mean?
-
-Capabilities turn the binary "root/non-root" dichotomy into a
-fine-grained access control system. Processes (like web servers) that
-just need to bind on a port below 1024 do not need to run as root: they
-can just be granted the `net_bind_service` capability instead. And there
-are many other capabilities, for almost all the specific areas where root
-privileges are usually needed. This means a lot for container security.
-
-Typical servers run several processes as `root`, including the SSH daemon,
-`cron` daemon, logging daemons, kernel modules, network configuration tools,
-and more. A container is different, because almost all of those tasks are
-handled by the infrastructure around the container:
-
- - SSH access are typically managed by a single server running on
-   the Docker host
- - `cron`, when necessary, should run as a user
-   process, dedicated and tailored for the app that needs its
-   scheduling service, rather than as a platform-wide facility
- - Log management is also typically handed to Docker, or to
-   third-party services like Loggly or Splunk
- - Hardware management is irrelevant, meaning that you never need to
-   run `udevd` or equivalent daemons within
-   containers
- - Network management happens outside of the containers, enforcing
-   separation of concerns as much as possible, meaning that a container
-   should never need to perform `ifconfig`,
-   `route`, or ip commands (except when a container
-   is specifically engineered to behave like a router or firewall, of
-   course)
-
-This means that in most cases, containers do not need "real" root
-privileges at all* And therefore, containers can run with a reduced
-capability set; meaning that "root" within a container has much less
-privileges than the real "root". For instance, it is possible to:
-
- - Deny all "mount" operations
- - Deny access to raw sockets (to prevent packet spoofing)
- - Deny access to some filesystem operations, like creating new device
-   nodes, changing the owner of files, or altering attributes (including
-   the immutable flag)
- - Deny module loading
-
-This means that even if an intruder manages to escalate to root within a
-container, it is much harder to do serious damage, or to escalate
-to the host.
-
-This doesn't affect regular web apps, but reduces the vectors of attack by
-malicious users considerably. By default Docker
-drops all capabilities except [those
-needed](https://github.com/moby/moby/blob/master/oci/caps/defaults.go#L6-L19),
-an allowlist instead of a denylist approach. You can see a full list of
-available capabilities in [Linux
-manpages](https://man7.org/linux/man-pages/man7/capabilities.7.html).
-
-One primary risk with running Docker containers is that the default set
-of capabilities and mounts given to a container may provide incomplete
-isolation, either independently, or when used in combination with
-kernel vulnerabilities.
-
-Docker supports the addition and removal of capabilities, allowing use
-of a non-default profile. This may make Docker more secure through
-capability removal, or less secure through the addition of capabilities.
-The best practice for users would be to remove all capabilities except
-those explicitly required for their processes.
-
-## Docker Content Trust signature verification
-
-Docker Engine can be configured to only run signed images. The Docker Content
-Trust signature verification feature is built directly into the `dockerd` binary.
-This is configured in the Dockerd configuration file.
-
-To enable this feature, trustpinning can be configured in `daemon.json`, whereby
-only repositories signed with a user-specified root key can be pulled and run.
-
-This feature provides more insight to administrators than previously available with
-the CLI for enforcing and performing image signature verification.
-
-For more information on configuring Docker Content Trust Signature Verification, go to
-[Content trust in Docker](trust/_index.md).
-
-## Other kernel security features
-
-Capabilities are just one of the many security features provided by
-modern Linux kernels. It is also possible to leverage existing,
-well-known systems like TOMOYO, AppArmor, SELinux, GRSEC, etc. with
+Executar contêineres (e aplicações) com o Docker implica executar o daemon do
 Docker.
+Este daemon requer privilégios de `root`, a menos que você opte pelo
+[Modo sem root](rootless.md), e, portanto, você deve estar ciente de alguns
+detalhes importantes.
 
-While Docker currently only enables capabilities, it doesn't interfere
-with the other systems. This means that there are many different ways to
-harden a Docker host. Here are a few examples.
+Primeiramente, somente pessoas usuárias confiáveis ​​devem ter permissão para
+controlar o seu daemon do Docker.
+Isso é uma consequência direta de alguns recursos poderosos do Docker.
+Especificamente, o Docker permite que você compartilhe um diretório entre o host
+do Docker e um contêiner convidado; e permite que você faça isso sem limitar os
+direitos de acesso do contêiner.
+Isso significa que você pode iniciar um contêiner onde o diretório `/host` é o
+diretório `/` em seu host; e o contêiner pode alterar o sistema de arquivos do
+seu host sem qualquer restrição.
+Isso é semelhante à forma como os sistemas de virtualização permitem o
+compartilhamento de recursos do sistema de arquivos.
+Nada impede que você compartilhe seu sistema de arquivos raiz (ou mesmo seu
+dispositivo de bloco raiz) com uma máquina virtual.
 
- - You can run a kernel with GRSEC and PAX. This adds many safety
-   checks, both at compile-time and run-time; it also defeats many
-   exploits, thanks to techniques like address randomization. It doesn't
-   require Docker-specific configuration, since those security features
-   apply system-wide, independent of containers.
- - If your distribution comes with security model templates for
-   Docker containers, you can use them out of the box. For instance, we
-   ship a template that works with AppArmor and Red Hat comes with SELinux
-   policies for Docker. These templates provide an extra safety net (even
-   though it overlaps greatly with capabilities).
- - You can define your own policies using your favorite access control
-   mechanism.
+Isso tem uma forte implicação de segurança: por exemplo, se você instrumentar o
+Docker a partir de um servidor web para provisionar contêineres por meio de uma
+API, você deve ser ainda mais cuidadoso do que o normal com a verificação de
+parâmetros, para garantir que uma pessoa usuária maliciosa não possa passar
+parâmetros manipulados que façam o Docker criar contêineres arbitrários.
 
-Just as you can use third-party tools to augment Docker containers, including
-special network topologies or shared filesystems, tools exist to harden Docker
-containers without the need to modify Docker itself.
+Por esse motivo, o endpoint da API REST (usado pela CLI do Docker para se
+comunicar com o daemon do Docker) foi alterado no Docker 0.5.2 e agora usa um
+socket Unix em vez de um socket TCP vinculado a 127.0.0.1 (este sendo vulnerável
+a ataques de falsificação de requisições entre sites se você executar o Docker
+diretamente em sua máquina local, fora de uma VM).
+Você pode então usar verificações de permissão Unix tradicionais para limitar o
+acesso ao socket de controle.
 
-As of Docker 1.10 User Namespaces are supported directly by the docker
-daemon. This feature allows for the root user in a container to be mapped
-to a non uid-0 user outside the container, which can help to mitigate the
-risks of container breakout. This facility is available but not enabled
-by default.
+Você também pode expor a API REST via HTTP, se assim o desejar explicitamente.
+No entanto, se fizer isso, esteja ciente das implicações de segurança
+mencionadas acima.
+Observe que, mesmo que você tenha um firewall para limitar o acesso ao endpoint
+da API REST a partir de outros hosts na rede, o endpoint ainda poderá ser
+acessado de contêineres, o que pode facilmente resultar em escalonamento de
+privilégios.
+Portanto, é *obrigatório* proteger os endpoints da API com
+[HTTPS e certificados](protect-access.md).
+Expor a API do daemon via HTTP sem TLS não é permitido, e tal configuração faz
+com que o daemon falhe logo no início da inicialização, consulte
+[Conexões TCP não autenticadas](../deprecated.md#unauthenticated-tcp-connections).
+Também é recomendável garantir que ela seja acessível apenas a partir de uma
+rede confiável ou VPN.
 
-Refer to the [daemon command](/reference/cli/dockerd.md#daemon-user-namespace-options)
-in the command line reference for more information on this feature.
-Additional information on the implementation of User Namespaces in Docker
-can be found in
-[this blog post](https://integratedcode.us/2015/10/13/user-namespaces-have-arrived-in-docker/).
+Você também pode usar `DOCKER_HOST=ssh://USER@HOST` ou
+`ssh -L /caminho/para/docker.sock:/var/run/docker.sock` se preferir SSH em vez
+de TLS.
 
-## Conclusions
+O daemon também é potencialmente vulnerável a outras entradas, como o
+carregamento de imagens do disco com `docker load` ou da rede com `docker pull`.
+A partir do Docker 1.3.2, as imagens são extraídas em um subprocesso chroot em
+plataformas Linux/Unix, sendo este o primeiro passo em um esforço mais amplo em
+direção à separação de privilégios.
+A partir do Docker 1.10.0, todas as imagens são armazenadas e acessadas pelos
+checksums criptográficos de seu conteúdo, limitando a possibilidade de um
+invasor causar uma colisão com uma imagem existente.
 
-Docker containers are, by default, quite secure; especially if you
-run your processes as non-privileged users inside the container.
+Por fim, se você executar o Docker em um servidor, recomenda-se executar
+exclusivamente o Docker no servidor e mover todos os outros serviços para
+containers controlados pelo Docker.
+Claro, não há problema em manter suas ferramentas administrativas favoritas
+(provavelmente pelo menos um servidor SSH), bem como processos de
+monitoramento/supervisão existentes, como NRPE e collectd.
 
-You can add an extra layer of safety by enabling AppArmor, SELinux,
-GRSEC, or another appropriate hardening system.
+## Capacidades do kernel Linux
 
-If you think of ways to make docker more secure, we welcome feature requests,
-pull requests, or comments on the Docker community forums.
+Por padrão, o Docker inicia contêineres com um conjunto restrito de capacidades.
+O que isso significa?
 
-## Related information
+As capacidades transformam a dicotomia binária "root/não-root" em um sistema de
+controle de acesso granular.
+Processos (como servidores web) que precisam apenas se conectar a uma porta
+abaixo de 1024 não precisam ser executados como root: eles podem simplesmente
+receber a capacidade `net_bind_service`.
+E existem muitas outras capacidades, para quase todas as áreas específicas onde
+privilégios de root geralmente são necessários.
+Isso significa muito para a segurança de contêineres.
 
-* [Use trusted images](trust/_index.md)
-* [Seccomp security profiles for Docker](seccomp.md)
-* [AppArmor security profiles for Docker](apparmor.md)
-* [On the Security of Containers (2014)](https://medium.com/@ewindisch/on-the-security-of-containers-2c60ffe25a9e)
-* [Docker swarm mode overlay network security model](/manuals/engine/network/drivers/overlay.md)
+Servidores típicos executam vários processos como `root`, incluindo o daemon
+SSH, o daemon `cron`, daemons de logging, módulos do kernel, ferramentas de
+configuração de rede, e muito mais.
+Um contêiner é diferente, porque quase todas essas tarefas são gerenciadas pela
+infraestrutura ao redor do contêiner:
+
+- O acesso SSH geralmente é gerenciado por um único servidor em execução no host
+  Docker;
+- O `cron`, quando necessário, deve ser executado como um processo de usuário
+  dedicado e personalizado para a aplicação que precisa do seu serviço de
+  agendamento, em vez de como um recurso de toda a plataforma;
+- O gerenciamento de logs também geralmente é delegado ao Docker ou a serviços
+  de terceiros como Loggly ou Splunk;
+- O gerenciamento de hardware é irrelevante, o que significa que você nunca
+  precisa executar `udevd` ou daemons equivalentes dentro de contêineres;
+- O gerenciamento de redes ocorre fora dos contêineres, reforçando a separação
+  de responsabilidades o máximo possível, o que significa que um contêiner nunca
+  deve precisar executar comandos `ifconfig`, `route` ou `ip` (exceto quando um
+  contêiner é especificamente projetado para se comportar como um roteador ou
+  firewall, é claro).
+
+Isso significa que, na maioria dos casos, os contêineres não precisam de
+privilégios de root "reais" e, portanto, podem ser executados com um conjunto de
+capacidades reduzido; isso significa que o "root" dentro de um contêiner tem
+muito menos privilégios do que o "root" real.
+Por exemplo, é possível:
+
+- Negar todas as operações de "montagem";
+- Negar acesso a sockets brutos (para evitar falsificação de pacotes);
+- Negar acesso a algumas operações do sistema de arquivos, como criar novos nós
+  de dispositivo, alterar o proprietário de arquivos ou alterar atributos
+  (incluindo o sinalizador imutável);
+- Negar o carregamento de módulos.
+
+Isso significa que, mesmo que uma pessoa invasora consiga escalar para root
+dentro de um contêiner, é muito mais difícil causar danos sérios ou escalar para
+o host.
+
+Isso não afeta aplicações web comuns, mas reduz consideravelmente os vetores de
+ataque por pessoas usuárias maliciosas.
+Por padrão, o Docker descarta todas as capacidades, exceto
+[aquelas necessárias](https://github.com/moby/moby/blob/master/daemon/pkg/oci/caps/defaults.go#L6-L19),
+adotando uma abordagem de lista de permissões em vez de lista de bloqueios.
+Você pode ver uma lista completa das capacidades disponíveis nas
+[páginas de manual do Linux](https://man7.org/linux/man-pages/man7/capabilities.7.html).
+
+Um dos principais riscos ao executar contêineres Docker é que o conjunto padrão
+de capacidades e montagens fornecido a um contêiner pode oferecer isolamento
+incompleto, seja de forma independente ou quando usado em combinação com
+vulnerabilidades do kernel.
+
+O Docker suporta a adição e remoção de capacidades, permitindo o uso de um
+perfil não padrão.
+Isso pode tornar o Docker mais seguro por meio da remoção de capacidades ou
+menos seguro por meio da adição de capacidades.
+A melhor prática para as pessoas usuárias seria remover todas as capacidades,
+exceto aquelas explicitamente necessárias para seus processos.
+
+## Verificação de assinatura do Docker Content Trust
+
+A Docker Engine pode ser configurada para executar apenas imagens assinadas.
+O recurso de verificação de assinatura do Docker Content Trust está integrado
+diretamente ao binário `dockerd`.
+Isso é configurado no arquivo de configuração do Dockerd.
+
+Para habilitar esse recurso, o trustpinning pode ser configurado em
+`daemon.json`, permitindo que apenas repositórios assinados com uma chave raiz
+especificada pela pessoa usuária sejam baixados e executados.
+
+Esse recurso oferece às pessoas administradoras mais informações do que as
+disponíveis anteriormente com a CLI para impor e realizar a verificação de
+assinatura de imagem.
+
+Para obter mais informações sobre como configurar a verificação de assinatura do
+Docker Content Trust, consulte [Content trust no Docker](trust/_index.md).
+
+## Outros recursos de segurança do kernel
+
+As capacidades são apenas um dos muitos recursos de segurança fornecidos pelos
+kernels Linux modernos.
+Também é possível aproveitar sistemas existentes e conhecidos, como TOMOYO,
+AppArmor, SELinux, GRSEC, etc., com o Docker.
+
+Embora o Docker atualmente habilite apenas capacidades, ele não interfere com os
+outros sistemas.
+Isso significa que existem muitas maneiras diferentes de reforçar a segurança de
+um host Docker.
+Aqui estão alguns exemplos:
+
+- Você pode executar um kernel com GRSEC e PAX.
+  Isso adiciona muitas verificações de segurança, tanto em tempo de compilação
+  quanto em tempo de execução; também impede muitas explorações, graças a
+  técnicas como randomização de endereços.
+  Não requer configuração específica do Docker, já que esses recursos de
+  segurança se aplicam a todo o sistema, independentemente dos contêineres;
+- Se sua distribuição vier com modelos de segurança para contêineres Docker,
+  você pode usá-los imediatamente.
+  Por exemplo, nós fornecemos um template que funciona com o AppArmor e a Red
+  Hat vem com políticas SELinux para o Docker.
+  Esses templates fornecem uma camada extra de segurança (mesmo que haja grande
+  sobreposição com as capacidades);
+- Você pode definir suas próprias políticas usando seu mecanismo de controle de
+  acesso favorito.
+
+Assim como você pode usar ferramentas de terceiros para aprimorar contêineres
+Docker, incluindo topologias de rede especiais ou sistemas de arquivos
+compartilhados, existem ferramentas para reforçar a segurança de contêineres
+Docker sem a necessidade de modificar o próprio Docker.
+
+A partir do Docker 1.10, os namespaces de usuário são suportados diretamente
+pelo daemon docker.
+Esse recurso permite que o usuário root em um contêiner seja mapeado para um
+usuário com UID diferente de 0 fora do contêiner, o que pode ajudar a mitigar os
+riscos de vazamento de dados do contêiner.
+Esse recurso está disponível, mas não habilitado por padrão.
+
+Consulte o
+[comando daemon](/reference/cli/dockerd.md#daemon-user-namespace-options)
+na referência da linha de comando para obter mais informações sobre esse
+recurso.
+Informações adicionais sobre a implementação de namespaces de usuário no Docker
+podem ser encontradas
+[nesta postagem de blog](https://integratedcode.us/2015/10/13/user-namespaces-have-arrived-in-docker/).
+
+## Conclusões
+
+Os contêineres Docker são, por padrão, bastante seguros; especialmente se você
+executar seus processos como usuários sem privilégios de administrador dentro do
+contêiner.
+
+Você pode adicionar uma camada extra de segurança habilitando o AppArmor,
+SELinux, GRSEC ou outro sistema de segurança apropriado.
+
+Se você tiver ideias para tornar o Docker mais seguro, ficaremos felizes em
+receber sugestões de recursos, pull requests ou comentários nos fóruns da
+comunidade Docker.
+
+## Informações relacionadas
+
+* [Use imagens confiáveis](trust/_index.md)
+* [Perfis de segurança Seccomp para o Docker](seccomp.md)
+* [Perfis de segurança AppArmor para o Docker](apparmor.md)
+* [Sobre a segurança de contêineres (2014)](https://medium.com/@ewindisch/on-the-security-of-containers-2c60ffe25a9e)
+* [Modelo de segurança de rede overlay do modo swarm do Docker](/manuals/engine/network/drivers/overlay.md)
