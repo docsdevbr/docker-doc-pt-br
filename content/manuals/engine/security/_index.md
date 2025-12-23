@@ -99,7 +99,7 @@ Os grupos de controle também existem há algum tempo: o código foi iniciado em
 Executar contêineres (e aplicações) com o Docker implica executar o daemon do
 Docker.
 Este daemon requer privilégios de `root`, a menos que você opte pelo
-[Modo sem root](rootless.md), e, portanto, você deve estar ciente de alguns
+[Modo sem privilégios de root](rootless.md), e, portanto, você deve estar ciente de alguns
 detalhes importantes.
 
 Primeiramente, somente pessoas usuárias confiáveis ​​devem ter permissão para
