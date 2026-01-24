@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/_index.md
-revision: ec19565b9ca532bff7cb672cd9f6d7e30a44fa28
+revision: 54ca9b78c4bf83a1da664b66a7f39dc21166df18
 status: ready
 
 title: Comece
@@ -49,23 +49,24 @@ params:
 aliases:
   - /engine/get-started/
   - /engine/tutorials/usingdocker/
+  - /guides/getting-started/get-docker-desktop/
 ---
 
-Se você é uma pessoa nova no Docker, esta seção te guiará pelos recursos
-essenciais para começar.
+Se você é iniciante no Docker, esta seção guiará você pelos recursos essenciais
+para começar.
 
-Siga os guias para ajudar você a começar e aprender como o Docker pode otimizar
-seus fluxos de trabalho de desenvolvimento.
+Siga os guias para começar e aprender como o Docker pode otimizar seus fluxos de
+trabalho de desenvolvimento.
 
 Para conceitos e cenários mais avançados no Docker, consulte os
 [Guias](/guides/).
 
 ## Fundamentos do Docker
 
-Instale o Docker e descubra o que é o Docker.
+Instale o Docker e comece a descobrir o que ele é.
 
 {{< grid items="get-started" >}}
 
-Aprenda os conceitos básicos e fluxos de trabalho do Docker.
+Aprenda os conceitos e fluxos de trabalho fundamentais do Docker.
 
 {{< grid items="get-started2" >}}
