@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/understanding-image-layers.md
-revision: 6bce6d72cf3c0adab9f1675340a40f8718a6f5b4
+revision: f482b78ec94de3c39bc6371aa8210f559432d12a
 status: ready
 
 title: Entendendo as camadas de imagem
@@ -34,7 +34,7 @@ aliases:
 
 Como você aprendeu em
 [O que é uma imagem?](../the-basics/what-is-an-image/),
-imagens de contêiner são compostas de camadas.
+as imagens de contêiner são compostas de camadas.
 E cada uma dessas camadas, uma vez criada, é imutável.
 Mas o que isso realmente significa?
 E como essas camadas são usadas para criar o sistema de arquivos que um
@@ -47,44 +47,43 @@ arquivos - adições, exclusões ou modificações.
 Vejamos uma imagem teórica:
 
 1. A primeira camada adiciona comandos básicos e um gerenciador de pacotes, como
-   o apt;
-2. A segunda camada instala um runtime Python e o pip para gerenciamento de
-   dependências;
+   o apt.
+2. A segunda camada instala um ambiente de execução Python e o pip para
+   gerenciamento de dependências.
 3. A terceira camada copia o arquivo `requirements.txt` específico de uma
-   aplicação;
-4. A quarta camada instala as dependências específicas dessa aplicação;
+   aplicação.
+4. A quarta camada instala as dependências específicas dessa aplicação.
 5. A quinta camada copia o código-fonte da aplicação.
 
-Este exemplo pode ser parecido com:
+Este exemplo pode ser semelhante a este:
 
 ![Captura de tela do fluxograma mostrando o conceito das camadas da imagem](images/container_image_layers.webp?border=true)
 
-Isso é benéfico porque permite que camadas sejam reutilizadas entre imagens.
+Isso é vantajoso porque permite que camadas sejam reutilizadas entre imagens.
 Por exemplo, imagine que você queira criar outra aplicação Python.
-Graças à disposição em camadas, você pode aproveitar a mesma base Python.
+Graças ao empilhamento em camadas, você pode aproveitar a mesma base Python.
 Isso tornará as construções mais rápidas e reduzirá a quantidade de
 armazenamento e largura de banda necessária para distribuir as imagens.
-A disposição em camadas da imagem pode ser semelhante à seguinte:
+O empilhamento da imagem em camadas pode ser semelhante ao seguinte:
 
-![Captura de tela do fluxograma mostrando os benefícios da sobreposição de imagens](images/container_image_layer_reuse.webp?border=true)
+![Captura de tela do fluxograma mostrando os benefícios do empilhamento das imagens em camadas](images/container_image_layer_reuse.webp?border=true)
 
-As camadas permitem que você estenda imagens de outras pessoas reutilizando suas
-camadas base, permitindo que você adicione apenas os dados que sua aplicação
-precisa.
+As camadas permitem estender imagens de outras pessoas reutilizando suas camadas
+base, permitindo que você adicione apenas os dados que sua aplicação precisa.
 
 ### Empilhando as camadas
 
-A disposição em camadas é possível graças ao armazenamento endereçável por
+O empilhamento em camadas é possível graças ao armazenamento endereçável por
 conteúdo e aos sistemas de arquivos de união.
-Embora isso seja um pouco técnico, veja como funciona:
+Embora isso envolva alguns detalhes técnicos, veja como funciona:
 
 1. Após o download de cada camada, ela é extraída para seu próprio diretório no
-   sistema de arquivos do host;
+   sistema de arquivos do host.
 2. Ao executar um contêiner a partir de uma imagem, um sistema de arquivos de
-   união é criado, no qual as camadas são empilhadas umas sobre as outras,
-   criando uma visualização nova e unificada;
+   união é criado, onde as camadas são empilhadas umas sobre as outras, criando
+   uma nova visualização unificada.
 3. Quando o contêiner é iniciado, seu diretório raiz é definido como o local
-   deste diretório unificado, usando `chroot`.
+   desse diretório unificado, usando `chroot`.
 
 Quando o sistema de arquivos de união é criado, além das camadas de imagem, um
 diretório é criado especificamente para o contêiner em execução.
@@ -95,17 +94,17 @@ subjacente.
 
 ## Experimente
 
-Neste guia prático, você criará novas camadas de imagem manualmente usando o
+Neste guia prático, você criará manualmente novas camadas de imagem usando o
 comando
 [`docker container commit`](https://docs.docker.com/reference/cli/docker/container/commit/).
-Observe que você raramente criará imagens dessa maneira, pois normalmente
+Observe que você raramente criará imagens dessa forma, pois normalmente
 [usará um Dockerfile](./writing-a-dockerfile.md).
-Mas isso facilita a compreensão de como tudo funciona.
+No entanto, isso facilita a compreensão de como tudo funciona.
 
 ### Crie uma imagem base
 
-Neste primeiro passo, você criará sua própria imagem base, que será usada nas
-etapas seguintes.
+Neste primeiro passo, você criará sua própria imagem base, que será usada nos
+passos seguintes.
 
 1. [Baixe e instale](https://www.docker.com/products/docker-desktop/) o Docker
    Desktop.
@@ -131,23 +130,22 @@ etapas seguintes.
    $ apt update && apt install -y nodejs
    ```
 
-   Quando este comando é executado, ele baixa e instala o Node dentro do
-   contêiner.
+   Ao executar este comando, o Node é baixado e instalado dentro do contêiner.
    No contexto do sistema de arquivos de união, essas alterações no sistema de
    arquivos ocorrem dentro do diretório exclusivo desse contêiner.
 
-4. Valide se o Node está instalado, executando o seguinte comando:
+4. Verifique se o Node está instalado, executando o seguinte comando:
 
    ```console
    $ node -e 'console.log("Olá, mundo!")'
    ```
 
-   Você deverá ver a mensagem "Olá, mundo!" aparecer no console.
+   Você deverá ver a mensagem "Olá, mundo!" no console.
 
-5. Agora que o Node está instalado, você está pronta para salvar as alterações
-   feitas como uma nova camada de imagem, a partir da qual poderá iniciar novos
-   contêineres ou construir novas imagens.
-   Para fazer isso, use o comando
+5. Agora que o Node está instalado, você pode salvar as alterações feitas como
+   uma nova camada de imagem, a partir da qual poderá iniciar novos contêineres
+   ou criar novas imagens.
+   Para fazer isso, você usará o comando
    [`docker container commit`](https://docs.docker.com/reference/cli/docker/container/commit/).
    Execute o seguinte comando em um novo terminal:
 
@@ -165,29 +163,29 @@ etapas seguintes.
 
    ```console
    IMAGE          CREATED          CREATED BY                                      SIZE      COMMENT
-   d5c1fca2cdc4   10 seconds ago   /bin/bash                                       126MB     Adiciona o Node
-   2b7cc08dcdbb   5 weeks ago      /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B
-   <missing>      5 weeks ago      /bin/sh -c #(nop) ADD file:07cdbabf782942af0…   69.2MB
-   <missing>      5 weeks ago      /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
-   <missing>      5 weeks ago      /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
-   <missing>      5 weeks ago      /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B
-   <missing>      5 weeks ago      /bin/sh -c #(nop)  ARG RELEASE                  0B
+   9e274734bb25   10 seconds ago   /bin/bash                                       157MB     Adiciona o Node
+   cd1dba651b30   7 days ago       /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B
+   <missing>      7 days ago       /bin/sh -c #(nop) ADD file:6089c6bede9eca8ec…   110MB
+   <missing>      7 days ago       /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
+   <missing>      7 days ago       /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
+   <missing>      7 days ago       /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B
+   <missing>      7 days ago       /bin/sh -c #(nop)  ARG RELEASE                  0B
    ```
 
-   Observe o comentário "Adiciona o Node" na linha superior.
+   Observe o comentário "Adiciona o Node" na primeira linha.
    Esta camada contém a instalação do Node.js que você acabou de fazer.
 
-7. Para provar que sua imagem tem o Node instalado, você pode iniciar um novo
+7. Para comprovar que sua imagem tem o Node instalado, você pode iniciar um novo
    contêiner usando esta nova imagem:
 
    ```console
    $ docker run node-base node -e "console.log('Olá novamente')"
    ```
 
-   Com isso, você deve obter uma saída "Olá novamente" no terminal, mostrando
+   Com isso, você deve obter a mensagem "Olá novamente" no terminal, mostrando
    que o Node foi instalado e está funcionando.
 
-8. Agora que você terminou de criar sua imagem base, você pode remover esse
+8. Agora que você terminou de criar sua imagem base, pode remover esse
    contêiner:
 
    ```console
@@ -197,7 +195,7 @@ etapas seguintes.
 > **Definição da imagem base**
 >
 > Uma imagem base é a base para a construção de outras imagens.
-> É possível usar qualquer imagem como imagem base.
+> É possível usar qualquer imagem como base.
 > No entanto, algumas imagens são criadas intencionalmente como blocos de
 > construção, fornecendo uma base ou ponto de partida para uma aplicação.
 >
@@ -216,14 +214,14 @@ adicionais.
    $ docker run --name=app-container -ti node-base
    ```
 
-2. Dentro deste contêiner, execute o seguinte comando para criar um programa
+2. Dentro deste contêiner, execute o seguinte comando para criar uma aplicação
    Node:
 
    ```console
    $ echo 'console.log("Olá de uma aplicação")' > app.js
    ```
 
-   Para executar este programa Node, você pode usar o seguinte comando e ver a
+   Para executar esta aplicação Node, você pode usar o seguinte comando e ver a
    mensagem impressa na tela:
 
    ```console
@@ -240,7 +238,7 @@ adicionais.
    Este comando não apenas cria uma nova imagem chamada `sample-app`, mas também
    adiciona configurações adicionais à imagem para definir o comando padrão ao
    iniciar um contêiner.
-   Neste caso, você está configurando a imagem para executar automaticamente
+   Neste caso, você está configurando o contêiner para executar automaticamente
    `node app.js`.
 
 4. Em um terminal fora do contêiner, execute o seguinte comando para visualizar
@@ -251,19 +249,19 @@ adicionais.
    ```
 
    Você verá uma saída semelhante à seguinte.
-   Observe que o comentário da camada superior tem "Adiciona aplicação" e a
-   próxima camada tem "Adiciona o Node":
+   Observe que o comentário da camada superior contém "Adiciona aplicação" e o
+   da camada seguinte contém "Adiciona o Node":
 
    ```console
    IMAGE          CREATED              CREATED BY                                      SIZE      COMMENT
    c1502e2ec875   About a minute ago   /bin/bash                                       33B       Adiciona aplicação
    5310da79c50a   4 minutes ago        /bin/bash                                       126MB     Adiciona o Node
-   2b7cc08dcdbb   5 weeks ago          /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B
-   <missing>      5 weeks ago          /bin/sh -c #(nop) ADD file:07cdbabf782942af0…   69.2MB
-   <missing>      5 weeks ago          /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
-   <missing>      5 weeks ago          /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
-   <missing>      5 weeks ago          /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B
-   <missing>      5 weeks ago          /bin/sh -c #(nop)  ARG RELEASE                  0B
+   cd1dba651b30   7 days ago           /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B
+   <missing>      7 days ago           /bin/sh -c #(nop) ADD file:6089c6bede9eca8ec…   110MB
+   <missing>      7 days ago           /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
+   <missing>      7 days ago           /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
+   <missing>      7 days ago           /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B
+   <missing>      7 days ago           /bin/sh -c #(nop)  ARG RELEASE                  0B
    ```
 
 5. Por fim, inicie um novo contêiner usando a nova imagem.
@@ -273,11 +271,11 @@ adicionais.
    $ docker run sample-app
    ```
 
-   Você deverá ver sua saudação aparecer no terminal, vinda do seu programa
-   Node.
+   Você deverá ver sua mensagem de boas-vindas aparecer no terminal, vinda da
+   sua aplicação Node.
 
-6. Agora que você terminou de usar seus contêineres, você pode removê-los usando
-   o seguinte comando:
+6. Agora que você terminou de usar seus contêineres, pode removê-los usando o
+   seguinte comando:
 
    ```console
    $ docker rm -f app-container
@@ -285,7 +283,7 @@ adicionais.
 
 ## Recursos adicionais
 
-Se você quiser se aprofundar mais nas coisas que aprendeu, confira os seguintes
+Se você quiser se aprofundar mais no que aprendeu, confira os seguintes
 recursos:
 
 * [`docker image history`](/reference/cli/docker/image/history/)
@@ -293,7 +291,7 @@ recursos:
 
 ## Próximos passos
 
-Como sugerido anteriormente, a maioria das construções de imagem não usa
+Como mencionado anteriormente, a maioria das construções de imagem não usa
 `docker container commit`.
 Em vez disso, você usará um Dockerfile que automatiza essas etapas para você.
 
