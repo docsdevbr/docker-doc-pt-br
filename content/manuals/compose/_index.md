@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/compose/_index.md
-revision: a1774fe925fa8ea1065cceb3877e67fc57967c9f
+revision: 3415afac4033c6befb133d63ca992a72b288dd7a
 status: ready
 
 title: Docker Compose
@@ -26,11 +26,11 @@ params:
     group: Open source
 grid:
   - title: Por que usar o Compose?
-    description: Entenda os principais benefícios do Docker Compose
+    description: Entenda os principais benefícios do Docker Compose.
     icon: feature_search
     link: /compose/intro/features-uses/
   - title: Como o Compose funciona
-    description: Entenda como o Compose funciona
+    description: Entenda como o Compose funciona.
     icon: category
     link: /compose/intro/compose-application-model/
   - title: Instale o Compose
@@ -45,9 +45,9 @@ grid:
     link: /compose/gettingstarted
   - title: Veja as notas de lançamento
     description: >-
-      Saiba mais sobre as melhorias e correções de bugs mais recentes.
+      Descubra as melhorias e correções de bugs mais recentes.
     icon: note_add
-    link: /compose/release-notes
+    link: "https://github.com/docker/compose/releases"
   - title: Explore a referência do arquivo Compose
     description: >-
       Encontre informações sobre como definir serviços, redes e volumes para uma
@@ -65,22 +65,19 @@ grid:
       Explore as perguntas frequentes gerais e descubra como enviar feedback.
     icon: help
     link: /compose/faq
-  - title: Migre para o Compose v2
-    description: Aprenda como migrar do Compose v1 para o v2
-    icon: folder_delete
-    link: /compose/releases/migrate/
 aliases:
   - /compose/cli-command/
   - /compose/networking/swarm/
   - /compose/overview/
   - /compose/swarm/
   - /compose/completion/
+  - /compose/releases/migrate/
 ---
 
 O Docker Compose é uma ferramenta para definir e executar aplicações
 multicontêineres.
-É a chave para desbloquear uma experiência de desenvolvimento e implantação
-simplificada e eficiente.
+É a chave para uma experiência de desenvolvimento e implantação simplificada e
+eficiente.
 
 O Compose simplifica o controle de toda a sua pilha de aplicações, facilitando o
 gerenciamento de serviços, redes e volumes em um único arquivo de configuração
@@ -89,12 +86,12 @@ Em seguida, com um único comando, você cria e inicia todos os serviços a part
 do seu arquivo de configuração.
 
 O Compose funciona em todos os ambientes - produção, homologação,
-desenvolvimento, teste, bem como fluxos de trabalho de CI.
+desenvolvimento, testes e fluxos de trabalho de CI.
 Ele também possui comandos para gerenciar todo o ciclo de vida da sua aplicação:
 
-- Iniciar, parar e reconstruir serviços;
-- Visualizar o status dos serviços em execução;
-- Transmitir a saída de log dos serviços em execução;
+- Iniciar, parar e reconstruir serviços.
+- Visualizar o status dos serviços em execução.
+- Transmitir a saída de log dos serviços em execução.
 - Executar um comando único em um serviço.
 
 {{< grid >}}
