@@ -9,135 +9,177 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-linktitle: Quickstart
-title: Docker Hardened Images quickstart
-description: Follow a quickstart guide to explore, mirror, and run a Docker Hardened Image.
+source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/get-started.md
+revision: 1d23bf5aae42f2968af92141a580c1f9fef26873
+status: ready
+
+linktitle: Início rápido
+title: Início rápido das Imagens Docker Reforçadas
+description: >-
+  Siga um guia de início rápido para explorar e executar uma Imagem Docker
+  Reforçada.
 weight: 2
-keywords: docker hardened images quickstart, mirror container image, run secure image
+keywords: início rápido das imagens docker reforçadas, executar imagem segura
 ---
 
-{{< summary-bar feature_name="Docker Hardened Images" >}}
+Este guia mostra como executar uma Imagem Docker Reforçada (DHI) do zero usando
+um exemplo real.
+Ao final, você comparará a DHI com uma imagem Docker padrão para entender melhor
+as diferenças.
+Embora as etapas usem uma imagem específica como exemplo, elas podem ser
+aplicadas a qualquer DHI.
 
-This guide shows you how to go from zero to running a Docker Hardened Image
-(DHI) using a real example. While the steps use a specific image as an
-example, they can be applied to any DHI.
+> [!NOTE]
+>
+> As Imagens Docker Reforçadas estão disponíveis gratuitamente para todas as
+> pessoas, sem necessidade de assinatura, restrições de uso ou dependência de
+> fornecedor.
+> Você pode atualizar para uma assinatura DHI Enterprise quando precisar de
+> recursos corporativos, como variantes de conformidade com FIPS ou STIG,
+> recursos de personalização ou suporte com SLA.
+
+## Passo 1: encontre uma imagem para usar
+
+1. Acesse o catálogo de Imagens Reforçadas no
+   [Docker Hub](https://hub.docker.com/hardened-images/catalog) e faça o login.
+2. Na barra lateral esquerda, selecione **Hardened Images**.
+   Se você tiver o DHI Enterprise, selecione **Hardened Images** > **Catalog**.
+3. Use a barra de pesquisa ou os filtros para encontrar uma imagem (por exemplo,
+   `python`, `node`, `golang`).
+   Para este guia, usaremos a imagem do Python como exemplo.
+4. Selecione o repositório do Python para visualizar seus detalhes.
+
+Continue para o próximo passo para baixar e executar a imagem.
+Para explorar as imagens com mais detalhes, consulte
+[Explore as Imagens Reforçadas do Docker](./how-to/explore.md).
+
+## Passo 2: baixe e execute a imagem
+
+Você pode baixar e executar uma imagem DHI como qualquer outra imagem do Docker.
+Observe que as Imagens Docker Reforçadas são projetadas para serem minimalistas
+e seguras, portanto, podem não incluir todas as ferramentas ou bibliotecas que
+você espera em uma imagem típica.
+Você pode ver as diferenças típicas em
+[Considerações ao adotar DHIs](./how-to/use.md#considerations-when-adopting-dhis).
 
 > [!TIP]
 >
-> You can keep using the same tools and workflows you already know when moving
-> to DHI from other images on Docker Hub, such as Bitnami public catalog images.
-> Note that [Bitnami announced](https://github.com/bitnami/charts/issues/35164)
-> that its public catalog images will no longer be available after September 29,
-> 2025.
->
-> In most cases, migrating is as simple as updating the image reference in your
-> configuration or commands. Start with this guide, then see the [migration
-> guide](./how-to/migrate.md) for more details and examples.
+> Em cada página de repositório no catálogo de DHIs, você encontrará instruções
+> para baixar e analisar a imagem selecionando **Use this image**.
 
-## Step 1: Start a free trial to access DHI
+O exemplo a seguir demonstra que você pode executar a imagem Python e executar
+um comando Python simples, assim como faria com qualquer outra imagem Docker:
 
-You can browse the Docker Hardened Images catalog without a subscription, but to
-use an image, you must either [contact sales to
-subscribe](https://www.docker.com/products/hardened-images/#getstarted) or start
-a free trial for an [organization](/admin/organization/). This guide walks you
-through starting a free trial.
-
-To start a free trial:
-
-1. Go to the Hardened Images catalog in [Docker
-   Hub](https://hub.docker.com/hardened-images/catalog) and sign in.
-2. Select **Start trial** and follow the on-screen instructions.
-
-## Step 2: Find an image to use
-
-1. Go to the Hardened Images catalog in [Docker
-   Hub](https://hub.docker.com/hardened-images/catalog) and sign in.
-2. In the left sidebar, choose your organization that has DHI access.
-3. In the left sidebar, select **Hardened Images** > **Catalog**.
-
-   ![Docker Hub sidebar showing DHI catalog](./images/dhi-catalog.png)
-
-4. Use the search bar or filters to find an image (e.g., `python`, `node`,
-   `golang`). For this guide, use the Python image as an example.
-
-    ![DHI catalog with Python repository shown](./images/dhi-python-search.png)
-
-5. Select the Python repository to view its details.
-
-Continue to the next step to mirror the image. To dive deeper into exploring
-images see [Explore Docker Hardened Images](./how-to/explore.md).
-
-## Step 3: Mirror the image
-
-To use a Docker Hardened Image, you must mirror it to your organization. Only
-organization owners can perform this action. Mirroring creates a copy of the
-image in your organization's namespace, allowing team members to pull and use
-it.
-
-1. In the image repository page, select **Mirror to repository**.
-
-   ![An image of the Python page with the Mirror to repository button showing](./images/dhi-mirror-button.png)
-
-   > [!NOTE]
-   >
-   > If you don't see the **Mirror to repository** button, the repository may
-   > already be mirrored to your organization. In this case, you can select
-   > **View in repository** to see the mirrored image's location or mirror it to
-   > another repository.
-
-2. Follow the on-screen instructions to mirror the repository.
-
-It may take a few minutes for all the tags to finish mirroring. Once
-mirrored, the image repository appears in your organization's namespace. For
-example, in [Docker Hub](https://hub.docker.com), go to **My Hub** > ***YOUR_ORG*** > **Repositories**,
-and you should see `dhi-python` listed. You can now pull it
-like any other image.
-
-![Repository list with mirrored repository showing](./images/dhi-python-mirror.png)
-
-Continue to the next step to pull and run the image. To dive deeper into
-mirroring images see [Mirror a Docker Hardened Image
-repository](./how-to/mirror.md).
-
-## Step 4: Pull and run the image
-
-Once you've mirrored the image to your organization, you can pull and run it
-like any other Docker image. Note that Docker Hardened Images are designed to be
-minimal and secure, so they may not include all the tools or libraries you
-expect in a typical image. You can view the typical differences in
-[Considerations when adopting
-DHIs](./how-to/use.md#considerations-when-adopting-dhis).
-
-The following example demonstrates that you can run the Python image and execute
-a simple Python command just like you would with any other Docker image:
-
-1. Pull the mirrored image. Open a terminal and run the following command,
-   replacing `<your-namespace>` with your organization's namespace:
+1. Abra um terminal e faça o login no registro de Imagens Docker Reforçadas
+   usando suas credenciais do Docker ID.
 
    ```console
-   $ docker pull <your-namespace>/dhi-python:3.13
+   $ docker login dhi.io
    ```
 
-2. Run the image to confirm everything works:
+2. Baixe a imagem:
 
-    ```console
-    $ docker run --rm <your-namespace>/dhi-python:3.13 python -c "print('Hello from DHI')"
-    ```
+   ```console
+   $ docker pull dhi.io/python:3.13
+   ```
 
-    This starts a container from the `dhi-python:3.13` image and runs a simple
-    Python script that prints `Hello from DHI`.
+3. Execute a imagem para confirmar que tudo funciona:
 
-To dive deeper into using images see [Use a Docker Hardened Image](./how-to/use.md).
+   ```console
+   $ docker run --rm dhi.io/python:3.13 python -c "print('Olá da DHI')"
+   ```
 
-## What's next
+   Isso inicia um contêiner a partir da imagem `python:3.13` e executa um script
+   Python simples que imprime `Olá da DHI`.
 
-You've pulled and run your first Docker Hardened Image. Here are a few ways to keep going:
+Para obter mais informações sobre como usar imagens, consulte:
 
-- [Migrate existing applications to DHIs](./how-to/migrate.md): Learn how to
-  update your Dockerfiles to use Docker Hardened Images as the base.
+- [Use uma Imagem Docker Reforçada](./how-to/use.md) para uso geral.
+- [Use no Kubernetes](./how-to/k8s.md) para implantações no Kubernetes.
+- [Use um chart do Helm](./how-to/helm.md) para implantações com o Helm.
 
-- [Verify DHIs](./how-to/verify.md): Use tools like [Docker Scout](/scout/) or
-  Cosign to inspect and verify signed attestations, like SBOMs and provenance.
+## Passo 3: compare com outras imagens
 
-- [Scan DHIs](./how-to/scan.md): Analyze the image with Docker
-  Scout or other scanners to identify known CVEs.
+Você pode comparar rapidamente as Imagens Docker Reforçadas (DHIs) com outras
+imagens para ver as melhorias de segurança e as diferenças.
+Essa comparação ajuda você a entender o valor de usar imagens reforçadas.
+
+Execute o seguinte comando para ver uma comparação resumida entre a Imagem
+Docker Reforçada para Python e a Imagem Docker Oficial não-reforçada para Python
+do Docker Hub:
+
+```console
+$ docker scout compare dhi.io/python:3.13 \
+    --to python:3.13 \
+    --platform linux/amd64 \
+    --ignore-unchanged \
+    2>/dev/null | sed -n '/## Overview/,/^  ## /p' | head -n -1
+```
+
+Exemplo de saída:
+
+```plaintext
+  ## Overview
+
+                      │                    Analyzed Image                     │               Comparison Image
+  ────────────────────┼───────────────────────────────────────────────────────┼───────────────────────────────────────────────
+    Target            │  dhi.io/python:3.13                                   │  python:3.13
+      digest          │  c215e9da9f84                                         │  7f48e892134c
+      tag             │  3.13                                                 │  3.13
+      platform        │ linux/amd64                                           │ linux/amd64
+      provenance      │ https://github.com/docker-hardened-images/definitions │ https://github.com/docker-library/python.git
+                      │  77a629b3d0db035700206c2a4e7ed904e5902ea8             │  3f2d7e4c339ab883455b81a873519f1d0f2cd80a
+      vulnerabilities │    0C     0H     0M     0L                            │    0C     1H     5M   141L     2?
+                      │           -1     -5   -141     -2                     │
+      size            │ 35 MB (-377 MB)                                       │ 412 MB
+      packages        │ 80 (-530)                                             │ 610
+                      │                                                       │
+```
+
+> [!NOTE]
+>
+> Este é um exemplo de saída.
+> Seus resultados podem variar dependendo de novas CVEs descobertas e
+> atualizações de imagem.
+>
+> O Docker mantém quase zero CVEs em suas Imagens Docker Reforçadas.
+> Para assinaturas DHI Enterprise, quando novas CVEs são descobertas, elas são
+> corrigidas dentro do prazo do SLA líder do setor.
+> Saiba mais sobre os
+> [recursos de segurança com garantia de SLA](./features.md#sla-backed-security).
+
+Esta comparação mostra que a Imagem Docker Reforçada:
+
+- Remove vulnerabilidades: 1 CVE de alta gravidade, 5 de gravidade média, 141 de
+  baixa gravidade e 2 de gravidade não especificada removidas.
+- Reduz o tamanho: de 412 MB para 35 MB (redução de 91%).
+- Minimiza pacotes: de 610 pacotes para 80 (redução de 87%).
+
+Para obter mais detalhes sobre a comparação de imagens, consulte
+[Compare Imagens Docker Reforçadas](./how-to/compare.md).
+
+## Próximos passos
+
+Você baixou e executou sua primeira Imagem Docker Reforçada.
+Aqui estão algumas maneiras de continuar:
+
+- [Migre aplicações existentes para DHIs](./migration/migrate-with-ai.md): Use
+  o assistente de IA do Docker para atualizar seus Dockerfiles e usar as Imagens
+  Docker Reforçadas como base.
+
+- [Inicie um teste gratuito](https://hub.docker.com/hardened-images/start-free-trial)
+  para explorar os benefícios de uma assinatura DHI Enterprise, como acesso a
+  variantes FIPS e STIG, imagens personalizadas e atualizações com garantia de
+  SLA.
+
+- [Espelhe um repositório](./how-to/mirror.md): Após assinar o DHI Enterprise
+  ou iniciar um teste gratuito, aprenda como espelhar um repositório DHI para
+  habilitar a personalização, acessar variantes de conformidade e obter
+  atualizações com garantia de SLA.
+
+- [Verifique DHIs](./how-to/verify.md): Use ferramentas como o
+  [Docker Scout](/scout/) ou o Cosign para inspecionar e verificar atestados
+  assinados, como SBOMs e procedência.
+
+- [Escaneie DHIs](./how-to/scan.md): Analise a imagem com o Docker Scout ou
+  outros scanners para identificar CVEs conhecidos.
