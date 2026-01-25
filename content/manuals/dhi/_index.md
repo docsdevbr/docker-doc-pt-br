@@ -9,51 +9,76 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-title: Docker Hardened Images
-description: Secure, minimal, and production-ready base images
-weight: 13
+title: Imagens Docker Reforçadas
+description: Imagens base seguras, minimalistas e prontas para produção.
+weight: 8
 params:
   sidebar:
+    group: Products
     badge:
       color: green
       text: New
-    group: Products
   grid_sections:
-    - title: Quickstart
-      description: Follow a step-by-step guide to explore, mirror, and run a Docker Hardened Image.
+    - title: Início rápido
+      description: >-
+        Siga um guia passo a passo para explorar e executar uma imagem Docker
+        reforçada.
       icon: rocket_launch
       link: /dhi/get-started/
-    - title: About
-      description: Learn what Docker Hardened Images are, how they're built, and what sets them apart from typical base images.
+    - title: Explore
+      description: >-
+        Aprenda o que são Imagens Docker Reforçadas, como elas são construídas e
+        o que as diferencia das imagens base típicas.
       icon: info
-      link: /dhi/about/
-    - title: Features
-      description: Discover the security, compliance, and enterprise-readiness features built into Docker Hardened Images.
+      link: /dhi/explore/
+    - title: Recursos
+      description: >-
+        Descubra os recursos de segurança, conformidade e prontidão corporativa
+        integrados às Imagens Docker Reforçadas.
       icon: lock
       link: /dhi/features/
-    - title: How-tos
-      description: Step-by-step guides for using, verifying, scanning, and migrating to Docker Hardened Images.
+    - title: Tutoriais
+      description: >-
+        Guias passo a passo para usar, verificar, analisar e migrar para Imagens
+        Docker Reforçadas.
       icon: play_arrow
       link: /dhi/how-to/
-    - title: Core concepts
-      description: Understand the secure supply chain principles that make Docker Hardened Images production-ready.
+    - title: Conceitos básicos
+      description: >-
+        Compreenda os princípios da cadeia de suprimentos segura que tornam as
+        Imagens Docker Reforçadas prontas para produção.
       icon: fact_check
       link: /dhi/core-concepts/
-    - title: Troubleshoot
-      description: Resolve common issues with building, running, or debugging Docker Hardened Images.
+    - title: Solução de problemas
+      description: >-
+        Resolva problemas comuns na criação, execução ou depuração de Imagens
+        Docker Reforçadas.
       icon: help_center
       link: /dhi/troubleshoot/
+    - title: Recursos adicionais
+      description: >-
+        Links para posts de blog, catálogo do Docker Hub, repositórios do GitHub
+        e muito mais.
+      icon: link
+      link: /dhi/resources/
 ---
 
-{{< summary-bar feature_name="Docker Hardened Images" >}}
+As Imagens Docker Reforçadas (DHI) são imagens de contêineres e aplicações
+minimalistas, seguras e prontas para produção, mantidas pelo Docker.
+Projetadas para reduzir vulnerabilidades e simplificar a conformidade, as DHI se
+integram facilmente aos seus fluxos de trabalho existentes baseados em Docker,
+com pouca ou nenhuma necessidade de reconfiguração.
 
-Docker Hardened Images (DHIs) are minimal, secure, and production-ready
-container base and application images maintained by Docker. Designed to reduce
-vulnerabilities and simplify compliance, DHIs integrate easily into your
-existing Docker-based workflows with little to no retooling required.
+As DHI estão disponíveis em dois níveis: **DHI Free** oferece recursos de
+segurança essenciais sem custo, enquanto o **DHI Enterprise** adiciona suporte
+com SLA, variantes de conformidade, personalização e Suporte Estendido ao Ciclo
+de Vida para organizações com requisitos avançados.
 
-Explore the sections below to get started with Docker Hardened Images, integrate
-them into your workflow, and learn what makes them secure and enterprise-ready.
+![Assinatura DHI](./images/dhi-subscription.png)
+
+Explore as seções abaixo para começar a usar as Imagens Docker Reforçadas,
+integrá-las ao seu fluxo de trabalho e aprender o que as torna seguras e prontas
+para uso corporativo.
 
 {{< grid
   items="grid_sections"

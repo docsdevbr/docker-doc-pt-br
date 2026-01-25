@@ -73,12 +73,12 @@ Elas fornecem serviços totalmente gerenciados ou são ótimos pontos de partida
 para suas próprias imagens.
 Isso inclui:
 
-- [Imagens Oficiais do Docker](https://hub.docker.com/search?badges=official) -
+- [Imagens Docker Oficiais](https://hub.docker.com/search?badges=official) -
   um conjunto selecionado de repositórios do Docker, que serve como ponto de
   partida para a maioria das pessoas usuárias e estão entre as imagens mais
   seguras do Docker Hub.
-- [Imagens Reforçadas do Docker](https://hub.docker.com/hardened-images/catalog)
-  \- imagens minimalistas, seguras e prontas para produção, com quase zero CVEs,
+- [Imagens Docker Reforçadas](https://hub.docker.com/hardened-images/catalog) -
+  imagens minimalistas, seguras e prontas para produção, com quase zero CVEs,
   projetadas para reduzir a superfície de ataque e simplificar a conformidade.
   Gratuitas e de código aberto sob a licença Apache 2.0.
 - [Editores Verificados do Docker](https://hub.docker.com/search?badges=verified_publisher)

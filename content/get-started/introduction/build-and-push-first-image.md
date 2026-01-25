@@ -67,17 +67,17 @@ próprias imagens.
 Ao escolher imagens base, o Docker Hub oferece duas categorias de imagens
 confiáveis e mantidas pela equipe do Docker:
 
-- [Imagens Oficiais do Docker (DOI)](/manuals/docker-hub/image-library/trusted-content.md#docker-official-images)
+- [Imagens Docker Oficiais (DOI)](/manuals/docker-hub/image-library/trusted-content.md#docker-official-images)
   \- Imagens selecionadas de softwares populares, seguindo as melhores práticas
   e atualizadas regularmente.
-- [Imagens Reforçadas do Docker (DHI)](/manuals/dhi/_index.md) - Imagens
+- [Imagens Docker Reforçadas (DHI)](/manuals/dhi/_index.md) - Imagens
   mínimas, seguras e prontas para produção, com quase zero CVEs, projetadas para
   reduzir a superfície de ataque e simplificar a conformidade.
   As imagens DHI são gratuitas e de código aberto sob a licença Apache 2.0.
 
 Em [Desenvolva com contêineres](develop-with-containers.md), você usou as
 seguintes imagens provenientes do Docker Hub, as quais são
-[Imagens Oficiais do Docker](/manuals/docker-hub/image-library/trusted-content.md#docker-official-images):
+[Imagens Docker Oficiais](/manuals/docker-hub/image-library/trusted-content.md#docker-official-images):
 
 * [node](https://hub.docker.com/_/node) - Fornece um ambiente Node e é usada
   como base para seu trabalho de desenvolvimento.
@@ -91,10 +91,10 @@ seguintes imagens provenientes do Docker Hub, as quais são
   contêiner apropriado com base em regras de roteamento.
 
 Explore o catálogo completo de conteúdo confiável no Docker Hub:
-- [Imagens Oficiais do Docker](https://hub.docker.com/search?badges=official) -
+- [Imagens Docker Oficiais](https://hub.docker.com/search?badges=official) -
   Imagens selecionadas de softwares populares.
-- [Imagens Reforçadas do Docker](https://hub.docker.com/hardened-images/catalog)
-  \- Imagens de produção mínimas e com segurança reforçada (também disponíveis
+- [Imagens Docker Reforçadas](https://hub.docker.com/hardened-images/catalog) -
+  Imagens de produção mínimas e com segurança reforçada (também disponíveis
   em [dhi.io](https://dhi.io)).
 - [Editores Verificados pelo Docker](https://hub.docker.com/search?badges=verified_publisher)
   \- Imagens de fornecedores de software verificados.
