@@ -25,12 +25,12 @@ params:
   grid_files:
   - title: Dockerfile
     description: >-
-      Define o conteúdo e o comportamento de inicialização de um único
+      Defina o conteúdo e o comportamento de inicialização de um único
       contêiner.
     icon: edit_document
     link: /reference/dockerfile/
   - title: Arquivo Compose
-    description: Define uma aplicação multicontêiner.
+    description: Defina uma aplicação multicontêiner.
     icon: polyline
     link: /reference/compose-file/
   grid_clis:
@@ -49,7 +49,7 @@ params:
     icon: developer_board
     link: /reference/cli/dockerd/
   grid_apis:
-  - title: API da engine
+  - title: API da Engine
     description: >-
       A API principal do Docker, fornece acesso programático a um daemon.
     icon: api
@@ -63,7 +63,7 @@ params:
       API para Editores Verificados do Docker para buscar dados analíticos.
     icon: area_chart
     link: /reference/api/dvp/latest/
-  - title: API do Docker Registry
+  - title: API do Registry
     description: API do Docker Registry.
     icon: database
     link: /reference/api/registry/latest/
