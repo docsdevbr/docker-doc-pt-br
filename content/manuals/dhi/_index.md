@@ -9,6 +9,10 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
+source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/_index.md
+revision: 296fbdd23a3d4f846f27553a5e3b8ce61d15ac0b
+status: ready
+
 title: Imagens Docker Reforçadas
 description: Imagens base seguras, minimalistas e prontas para produção.
 weight: 8
