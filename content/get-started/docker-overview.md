@@ -48,10 +48,10 @@ executá-lo em produção.
 O Docker fornece a capacidade de empacotar e executar uma aplicação em um
 ambiente levemente isolado chamado contêiner.
 O isolamento e a segurança permitem que você execute muitos contêineres
-simultaneamente em uma determinada máquina hospedeira.
+simultaneamente em uma determinada máquina host.
 Os contêineres são leves e contêm tudo o que é necessário para executar a
 aplicação, então você não precisa depender do que está instalado na máquina
-hospedeira.
+host.
 Você pode compartilhar contêineres enquanto trabalha e ter certeza de que todas
 as pessoas com quem você compartilha recebam o mesmo contêiner que funciona da
 mesma maneira.
@@ -197,10 +197,10 @@ Você pode conectar um contêiner a uma ou mais redes, anexar armazenamento a el
 ou até mesmo criar uma nova imagem com base em seu estado atual.
 
 Por padrão, um contêiner é relativamente bem isolado de outros contêineres e de
-sua máquina hospedeira.
+sua máquina host.
 Você pode controlar o quão isolados a rede, o armazenamento ou outros
 subsistemas subjacentes de um contêiner são de outros contêineres ou da máquina
-hospedeira.
+host.
 
 Um contêiner é definido por sua imagem, bem como por quaisquer opções de
 configuração que você fornece a ele ao criá-lo ou iniciá-lo.
@@ -235,12 +235,12 @@ configuração padrão do registro):
    já que você não especificou nenhuma opção de rede.
    Isso inclui atribuir um endereço IP ao contêiner.
    Por padrão, os contêineres podem se conectar a redes externas usando a
-   conexão de rede da máquina hospedeira.
+   conexão de rede da máquina host.
 
 5. O Docker inicia o contêiner e executa `/bin/bash`.
    Como o contêiner está sendo executado interativamente e conectado ao seu
-   terminal (devido aos sinalizadores `-i` e `-t`), você pode fornecer entrada
-   usando seu teclado enquanto o Docker envia a saída para o seu terminal.
+   terminal (devido às flags `-i` e `-t`), você pode fornecer entrada usando seu
+   teclado enquanto o Docker envia a saída para o seu terminal.
 
 6. Quando você executa `exit` para encerrar o comando `/bin/bash`, o contêiner
    para, mas não é removido.

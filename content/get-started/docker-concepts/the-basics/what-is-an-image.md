@@ -80,7 +80,7 @@ Isso inclui:
 - [Imagens Reforçadas do Docker](https://hub.docker.com/hardened-images/catalog)
   \- imagens minimalistas, seguras e prontas para produção, com quase zero CVEs,
   projetadas para reduzir a superfície de ataque e simplificar a conformidade.
-  Gratuito e de código aberto sob a licença Apache 2.0.
+  Gratuitas e de código aberto sob a licença Apache 2.0.
 - [Editores Verificados do Docker](https://hub.docker.com/search?badges=verified_publisher)
   \- imagens de alta qualidade de editores comerciais verificados pelo Docker.
 - [Programa de Código Aberto Patrocinado pelo Docker](https://hub.docker.com/search?badges=open_source)

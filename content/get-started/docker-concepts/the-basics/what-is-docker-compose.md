@@ -40,8 +40,8 @@ Embora haja exceções a essa regra, evite a tendência de ter um contêiner faz
 várias coisas ao mesmo tempo.
 
 Você pode usar vários comandos `docker run` para iniciar vários contêineres.
-Mas logo perceberá que precisará gerenciar redes, todos os sinalizadores
-necessários para conectar contêineres a essas redes e muito mais.
+Mas logo perceberá que precisará gerenciar redes, todas as flags necessárias
+para conectar contêineres a essas redes e muito mais.
 E quando terminar, a limpeza será um pouco mais complicada.
 
 Com o Docker Compose, você pode definir todos os seus contêineres e suas
@@ -174,8 +174,8 @@ quando terminar.
    > remove uma pilha do Compose.
    > A ideia é que você possa querer os dados de volta se reiniciar a pilha.
    >
-   > Se você quiser remover os volumes, adicione o sinalizador `--volumes` ao
-   > executar o comando `docker compose down`:
+   > Se você quiser remover os volumes, adicione a flag `--volumes` ao executar
+   > o comando `docker compose down`:
    >
    > ```console
    > docker compose down --volumes
