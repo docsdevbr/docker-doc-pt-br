@@ -21,8 +21,8 @@ params:
   grid_sections:
     - title: Início rápido
       description: >-
-        Siga um guia passo a passo para explorar e executar uma imagem Docker
-        reforçada.
+        Siga um guia passo a passo para explorar e executar uma Imagem Docker
+        Reforçada.
       icon: rocket_launch
       link: /dhi/get-started/
     - title: Explore

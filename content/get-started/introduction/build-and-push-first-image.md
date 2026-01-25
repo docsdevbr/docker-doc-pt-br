@@ -70,9 +70,9 @@ confiáveis e mantidas pela equipe do Docker:
 - [Imagens Docker Oficiais (DOI)](/manuals/docker-hub/image-library/trusted-content.md#docker-official-images)
   \- Imagens selecionadas de softwares populares, seguindo as melhores práticas
   e atualizadas regularmente.
-- [Imagens Docker Reforçadas (DHI)](/manuals/dhi/_index.md) - Imagens
-  mínimas, seguras e prontas para produção, com quase zero CVEs, projetadas para
-  reduzir a superfície de ataque e simplificar a conformidade.
+- [Imagens Docker Reforçadas (DHI)](/manuals/dhi/_index.md) - Imagens mínimas,
+  seguras e prontas para produção, com quase zero CVEs, projetadas para reduzir
+  a superfície de ataque e simplificar a conformidade.
   As imagens DHI são gratuitas e de código aberto sob a licença Apache 2.0.
 
 Em [Desenvolva com contêineres](develop-with-containers.md), você usou as
