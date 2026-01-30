@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/get-started.md
-revision: 1d23bf5aae42f2968af92141a580c1f9fef26873
+revision: 52e4c9824e133cc83e8f20ee9c33c2d9db0ceaa9
 status: ready
 
 linktitle: Início rápido
@@ -41,13 +41,11 @@ aplicadas a qualquer DHI.
 ## Passo 1: encontre uma imagem para usar
 
 1. Acesse o catálogo de Imagens Reforçadas no
-   [Docker Hub](https://hub.docker.com/hardened-images/catalog) e faça o login.
-2. Na barra lateral esquerda, selecione **Hardened Images**.
-   Se você tiver o DHI Enterprise, selecione **Hardened Images** > **Catalog**.
-3. Use a barra de pesquisa ou os filtros para encontrar uma imagem (por exemplo,
+   [Docker Hub](https://hub.docker.com/hardened-images/catalog).
+2. Use a barra de pesquisa ou os filtros para encontrar uma imagem (por exemplo,
    `python`, `node`, `golang`).
-   Para este guia, usaremos a imagem do Python como exemplo.
-4. Selecione o repositório do Python para visualizar seus detalhes.
+   Para este guia, use a imagem do Python como exemplo.
+3. Selecione o repositório do Python para visualizar seus detalhes.
 
 Continue para o próximo passo para baixar e executar a imagem.
 Para explorar as imagens com mais detalhes, consulte
@@ -100,13 +98,13 @@ Para obter mais informações sobre como usar imagens, consulte:
 
 ## Passo 3: compare com outras imagens
 
-Você pode comparar rapidamente as Imagens Docker Reforçadas (DHIs) com outras
-imagens para ver as melhorias de segurança e as diferenças.
+Você pode comparar rapidamente DHIs com outras imagens para ver as melhorias de
+segurança e as diferenças.
 Essa comparação ajuda você a entender o valor de usar imagens reforçadas.
 
 Execute o seguinte comando para ver uma comparação resumida entre a Imagem
-Docker Reforçada para Python e a Imagem Docker Oficial não-reforçada para Python
-do Docker Hub:
+Docker Reforçada do Python e a Imagem Docker Oficial não-reforçada do Python do
+Docker Hub:
 
 ```console
 $ docker scout compare dhi.io/python:3.13 \
