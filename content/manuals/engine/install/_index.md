@@ -9,14 +9,22 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-title: Install Docker Engine
-linkTitle: Install
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/_index.md
+revision: 9181177b0efd89584fb1b7c5b9e25ffc81456ae8
+status: wip
+
+title: Instale a Docker Engine
+linkTitle: Instalar
 weight: 10
-description: Learn how to choose the best method for you to install Docker Engine. This client-server
-  application is available on Linux, Mac, Windows, and as a static binary.
-keywords: install engine, docker engine install, install docker engine, docker engine
-  installation, engine install, docker ce installation, docker ce install, engine
-  installer, installing docker engine, docker server install, docker desktop vs docker engine
+description: >-
+  Aprenda como escolher o melhor método para instalar a Docker Engine.
+  Esta aplicação cliente-servidor está disponível para Linux, Mac, Windows e
+  como um binário estático.
+keywords:  >-
+  instalar engine, instalação da docker engine, instalar docker engine, docker
+  engine instalação, instalação da engine, instalação do docker ce, instalador
+  engine, instalando a docker engine, instalação do servidor docker, docker
+  desktop vs. docker engine
 aliases:
 - /cs-engine/
 - /cs-engine/1.12/
@@ -42,61 +50,76 @@ aliases:
 - /enterprise/supported-platforms/
 - /install/linux/docker-ee/oracle/
 ---
-This section describes how to install Docker Engine on Linux, also known as
-Docker CE. Docker Engine is also available for Windows, macOS, and Linux,
-through Docker Desktop. For instructions on how to install Docker Desktop,
-see: [Overview of Docker Desktop](/manuals/desktop/_index.md).
 
-## Supported platforms
+Esta seção descreve como instalar a Docker Engine no Linux, também conhecida
+como Docker CE.
+A Docker Engine também está disponível para Windows, macOS e Linux, através do
+Docker Desktop.
+Para obter instruções sobre como instalar o Docker Desktop, consulte:
+[Visão geral do Docker Desktop](/manuals/desktop/_index.md).
 
-| Platform                                       | x86_64 / amd64 | arm64 / aarch64 | arm (32-bit) | ppc64le | s390x |
-| :--------------------------------------------- | :------------: | :-------------: | :----------: | :-----: | :---: |
-| [CentOS](centos.md)                            |       ✅       |       ✅        |              |   ✅    |       |
-| [Debian](debian.md)                            |       ✅       |       ✅        |      ✅      |   ✅    |       |
-| [Fedora](fedora.md)                            |       ✅       |       ✅        |              |   ✅    |       |
-| [Raspberry Pi OS (32-bit)](raspberry-pi-os.md) |                |                 |      ✅      |         |       |
-| [RHEL](rhel.md)                                |       ✅       |       ✅        |              |         |  ✅   |
-| [SLES](sles.md)                                |                |                 |              |         |  ✅   |
-| [Ubuntu](ubuntu.md)                            |       ✅       |       ✅        |      ✅      |   ✅    |  ✅   |
-| [Binaries](binaries.md)                        |       ✅       |       ✅        |      ✅      |         |       |
+## Procedimentos de instalação para plataformas suportadas
 
-### Other Linux distributions
+Clique no link de uma plataforma para visualizar o procedimento de instalação
+correspondente.
+
+| Plataforma                                     | x86_64 / amd64 | arm64 / aarch64 | arm (32-bit) | ppc64le | s390x |
+|:-----------------------------------------------|:--------------:|:---------------:|:------------:|:-------:|:-----:|
+| [CentOS](centos.md)                            |    ✅           |        ✅        |              |    ✅    |       |
+| [Debian](debian.md)                            |       ✅        |      ✅          |      ✅       |    ✅    |       |
+| [Fedora](fedora.md)                            |       ✅        |        ✅        |              |    ✅    |       |
+| [Raspberry Pi OS (32-bit)](raspberry-pi-os.md) |                |                 |      ⚠️      |         |       |
+| [RHEL](rhel.md)                                |       ✅        |        ✅        |              |         |   ✅   |
+| [SLES](sles.md)                                |                |                 |              |         |   ❌   |
+| [Ubuntu](ubuntu.md)                            |       ✅        |        ✅        |      ✅       |    ✅    |   ✅   |
+| [Binários](binaries.md)                        |       ✅        |        ✅        |      ✅       |         |       |
+
+### Outras distribuições Linux
 
 > [!NOTE]
 >
-> While the following instructions may work, Docker doesn't test or verify
-> installation on distribution derivatives.
+> Embora as instruções a seguir possam funcionar, o Docker não testa nem
+> verifica a instalação em distribuições derivadas.
 
-- If you use Debian derivatives such as "BunsenLabs Linux", "Kali Linux" or
-  "LMDE" (Debian-based Mint) should follow the installation instructions for
-  [Debian](debian.md), substitute the version of your distribution for the
-  corresponding Debian release. Refer to the documentation of your distribution to find
-  which Debian release corresponds with your derivative version.
-- Likewise, if you use Ubuntu derivatives such as "Kubuntu", "Lubuntu" or "Xubuntu"
-  you should follow the installation instructions for [Ubuntu](ubuntu.md),
-  substituting the version of your distribution for the corresponding Ubuntu release.
-  Refer to the documentation of your distribution to find which Ubuntu release
-  corresponds with your derivative version.
-- Some Linux distributions provide a package of Docker Engine through their
-  package repositories. These packages are built and maintained by the Linux
-  distribution's package maintainers and may have differences in configuration
-  or are built from modified source code. Docker isn't involved in releasing these
-  packages and you should report any bugs or issues involving these packages to
-  your Linux distribution's issue tracker.
+- Se você usa distribuições derivadas do Debian, como "BunsenLabs Linux", "Kali
+  Linux" ou "LMDE" (Mint baseado em Debian), siga as instruções de instalação
+  para [Debian](debian.md), substituindo a versão da sua distribuição pela
+  versão correspondente do Debian.
+  Consulte a documentação da sua distribuição para encontrar qual versão do
+  Debian corresponde à sua versão derivada.
+- Da mesma forma, se você usa distribuições derivadas do Ubuntu, como "Kubuntu",
+  "Lubuntu" ou "Xubuntu", siga as instruções de instalação para
+  [Ubuntu](ubuntu.md), substituindo a versão da sua distribuição pela versão
+  correspondente do Ubuntu.
+  Consulte a documentação da sua distribuição para encontrar qual versão do
+  Ubuntu corresponde à sua versão derivada.
+- Algumas distribuições Linux fornecem um pacote da Docker Engine por meio de
+  seus repositórios de pacotes.
+  Esses pacotes são construídos e mantidos pelas pessoas mantenedoras de pacotes
+  da distribuição Linux e podem apresentar diferenças de configuração ou serem
+  construídos a partir de código-fonte modificado.
+  O Docker não está envolvido na distribuição desses pacotes e você deve relatar
+  quaisquer falhas ou problemas relacionados a eles no rastreador de issues da
+  sua distribuição Linux.
 
-Docker provides [binaries](binaries.md) for manual installation of Docker Engine.
-These binaries are statically linked and you can use them on any Linux distribution.
+O Docker fornece [binários](binaries.md) para instalação manual da Docker
+Engine.
+Esses binários são vinculados estaticamente e você pode usá-los em qualquer
+distribuição Linux.
 
-## Release channels
+## Canais de lançamento
 
-Docker Engine has two types of update channels, **stable** and **test**:
+A Docker Engine possui dois tipos de canais de atualização: **stable** e
+**test**:
 
-* The **stable** channel gives you the latest versions released for general availability.
-* The **test** channel gives you pre-release versions that are ready for testing before
-  general availability.
+- O canal **stable** fornece as versões mais recentes lançadas para
+  disponibilidade geral.
+- O canal **test** fornece versões de pré-lançamento prontas para testes antes
+  da disponibilização geral.
 
-Use the test channel with caution. Pre-release versions include experimental and
-early-access features that are subject to breaking changes.
+Use o canal de teste com cautela.
+As versões de pré-lançamento incluem recursos experimentais e de acesso
+antecipado que estão sujeitos a alterações que podem causar incompatibilidade.
 
 ## Support
 
@@ -114,9 +137,10 @@ Patch releases are always backward compatible with its major and minor version.
 
 ### Licensing
 
-Docker Engine is licensed under the Apache License, Version 2.0. See
-[LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full
-license text.
+Commercial use of Docker Engine obtained via Docker Desktop
+within larger enterprises (exceeding 250 employees OR with annual revenue surpassing
+$10 million USD), requires a [paid subscription](https://www.docker.com/pricing/).
+Apache License, Version 2.0. See [LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full license.
 
 ## Reporting security issues
 
