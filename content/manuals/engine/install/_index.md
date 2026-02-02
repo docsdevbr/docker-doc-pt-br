@@ -11,7 +11,7 @@
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/_index.md
 revision: 9181177b0efd89584fb1b7c5b9e25ffc81456ae8
-status: wip
+status: ready
 
 title: Instale a Docker Engine
 linkTitle: Instalar
@@ -20,7 +20,7 @@ description: >-
   Aprenda como escolher o melhor método para instalar a Docker Engine.
   Esta aplicação cliente-servidor está disponível para Linux, Mac, Windows e
   como um binário estático.
-keywords:  >-
+keywords: >-
   instalar engine, instalação da docker engine, instalar docker engine, docker
   engine instalação, instalação da engine, instalação do docker ce, instalador
   engine, instalando a docker engine, instalação do servidor docker, docker
@@ -65,8 +65,8 @@ correspondente.
 
 | Plataforma                                     | x86_64 / amd64 | arm64 / aarch64 | arm (32-bit) | ppc64le | s390x |
 |:-----------------------------------------------|:--------------:|:---------------:|:------------:|:-------:|:-----:|
-| [CentOS](centos.md)                            |    ✅           |        ✅        |              |    ✅    |       |
-| [Debian](debian.md)                            |       ✅        |      ✅          |      ✅       |    ✅    |       |
+| [CentOS](centos.md)                            |       ✅        |        ✅        |              |    ✅    |       |
+| [Debian](debian.md)                            |       ✅        |        ✅        |      ✅       |    ✅    |       |
 | [Fedora](fedora.md)                            |       ✅        |        ✅        |              |    ✅    |       |
 | [Raspberry Pi OS (32-bit)](raspberry-pi-os.md) |                |                 |      ⚠️      |         |       |
 | [RHEL](rhel.md)                                |       ✅        |        ✅        |              |         |   ✅   |
@@ -121,36 +121,43 @@ Use o canal de teste com cautela.
 As versões de pré-lançamento incluem recursos experimentais e de acesso
 antecipado que estão sujeitos a alterações que podem causar incompatibilidade.
 
-## Support
+## Suporte
 
-Docker Engine is an open source project, supported by the Moby project maintainers
-and community members. Docker doesn't provide support for Docker Engine.
-Docker provides support for Docker products, including Docker Desktop, which uses
-Docker Engine as one of its components.
+A Docker Engine é um projeto de código aberto, mantido pelos mantenedores do
+projeto Moby e membros da comunidade.
+O Docker não oferece suporte ao Docker Engine.
+O Docker oferece suporte aos produtos Docker, incluindo o Docker Desktop, que
+usa a Docker Engine como um de seus componentes.
 
-For information about the open source project, refer to the
-[Moby project website](https://mobyproject.org/).
+Para obter informações sobre o projeto de código aberto, consulte o
+[site do projeto Moby](https://mobyproject.org/).
 
-### Upgrade path
+### Caminho de atualização
 
-Patch releases are always backward compatible with its major and minor version.
+As versões de correção são sempre compatíveis com versões anteriores, tanto
+principais quanto secundárias.
 
-### Licensing
+### Licenciamento
 
-Commercial use of Docker Engine obtained via Docker Desktop
-within larger enterprises (exceeding 250 employees OR with annual revenue surpassing
-$10 million USD), requires a [paid subscription](https://www.docker.com/pricing/).
-Apache License, Version 2.0. See [LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full license.
+O uso comercial da Docker Engine obtida por meio do Docker Desktop em grandes
+empresas (com mais de 250 pessoas funcionárias OU com receita anual superior a
+US$ 10 milhões) requer uma [assinatura paga](https://www.docker.com/pricing/).
+Licença Apache, versão 2.0.
+Consulte o [arquivo LICENSE](https://github.com/moby/moby/blob/master/LICENSE)
+para obter a licença completa.
 
-## Reporting security issues
+## Relatando problemas de segurança
 
-If you discover a security issue, we request that you bring it to our attention immediately.
+Se você descobrir um problema de segurança, pedimos que nos informe
+imediatamente.
 
-DO NOT file a public issue. Instead, submit your report privately to security@docker.com.
+NÃO abra uma issue pública.
+Em vez disso, envie seu relatório de forma privada para security@docker.com.
 
-Security reports are greatly appreciated, and Docker will publicly thank you for it.
+Relatórios de segurança são muito apreciados, e o Docker agradecerá publicamente
+por isso.
 
-## Get started
+## Introdução
 
-After setting up Docker, you can learn the basics with
-[Getting started with Docker](/get-started/introduction/_index.md).
+Após configurar o Docker, você pode aprender o básico com o guia
+[Primeiros passos com o Docker](/get-started/introduction/_index.md).
