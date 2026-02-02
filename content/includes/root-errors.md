@@ -21,6 +21,6 @@ status: ready
 > O grupo de usuários `docker` existe, mas não contém usuários, por isso, é
 > necessário usar `sudo` para executar comandos do Docker.
 > Continue para a seção de
-> [pós-instalação do Linux](/engine/install/linux-postinstall) para permitir que
-> usuários sem privilégios de root executem comandos do Docker e para outras
+> [pós-instalação para Linux](/engine/install/linux-postinstall) para permitir
+> que usuários sem privilégios de root executem comandos do Docker e para outras
 > etapas de configuração opcionais.
