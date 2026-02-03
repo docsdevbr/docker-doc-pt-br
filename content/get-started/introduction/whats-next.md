@@ -13,8 +13,8 @@ source_url: https://github.com/docker/docs/blob/main/content/get-started/introdu
 revision: abd030c3fe2b5db526fb7a16d6d9892d46d678e5
 status: ready
 
-title: O que vem a seguir
-keywords: conceitos, construir, imagens, contêiner, docker desktop
+title: Próximos passos
+keywords: conceitos, construção, imagens, contêiner, docker desktop
 description: >-
   Explore guias passo a passo para ajudar você a entender os principais
   conceitos do Docker, criar imagens e executar contêineres.
@@ -50,9 +50,9 @@ building-images:
 - title: Escrevendo um Dockerfile
   description: Aprenda a criar uma imagem usando um Dockerfile.
   link: /get-started/docker-concepts/building-images/writing-a-dockerfile/
-- title: Crie, adicione tags e publique uma imagem
+- title: Construa, crie tags e publique uma imagem
   description: >-
-    Aprenda a criar, adicionar tags e publicar uma imagem no Docker Hub ou em
+    Aprenda a construir, criar tags e publicar uma imagem no Docker Hub ou em
     qualquer outro registro.
   link: /get-started/docker-concepts/building-images/build-tag-and-publish-an-image/
 - title: Usando o cache de construção
@@ -86,7 +86,7 @@ running-containers:
 - title: Aplicações multicontêineres
   description: >-
     Aprenda a importância das aplicações multicontêineres e como elas são
-    diferentes das aplicações de contêiner único.
+    diferentes das aplicações de um único contêiner.
   link: /get-started/docker-concepts/running-containers/multi-container-applications/
 ---
 
