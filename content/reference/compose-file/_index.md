@@ -29,7 +29,7 @@ grid:
     icon: text_snippet
     link: /reference/compose-file/version-and-name/
   - title: Elemento de nível superior services
-    description: Explore all services attributes for Compose.
+    description: Explore todos os atributos de services do Compose.
     icon: construction
     link: /reference/compose-file/services/
   - title: Elemento de nível superior networks
@@ -64,8 +64,8 @@ aliases:
 A Especificação do Compose é a versão mais recente e recomendada do formato de
 arquivo Compose.
 Ela ajuda você a definir um
-[arquivo Compose](/manuals/compose/intro/compose-application-model.md) que é
-usado para configurar os serviços, redes, volumes e muito mais da sua aplicação
+[arquivo Compose](/manuals/compose/intro/compose-application-model.md) usado
+para configurar os serviços, redes, volumes e muito mais da sua aplicação
 Docker.
 
 As versões legadas 2.x e 3.x do formato de arquivo Compose foram incorporadas à
