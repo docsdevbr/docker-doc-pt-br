@@ -10,15 +10,16 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-registry.md
-revision: cb0c7885214b5b6bf676182bf25a15d539d12614
+revision: f61c34a1f685e37d07cc9504b84c8f2e2dcafdcf
 status: ready
 
 title: O que é um registro?
 weight: 30
 keywords: conceitos, construção, imagens, contêiner, docker desktop
 description: >-
-  O que é um registro? Esta página conceitual explicará o que é um registro,
-  explorará sua interoperabilidade e fará você interagir com registros.
+  O que é um registro?
+  Esta página conceitual explicará o que é um registro, explorará sua
+  interoperabilidade e fará você interagir com registros.
 aliases:
 - /guides/walkthroughs/run-hub-images/
 - /guides/walkthroughs/publish-your-image/
@@ -55,11 +56,11 @@ Por exemplo, Harbor, JFrog Artifactory, GitLab Container Registry, etc.
 
 Ao trabalhar com registros, você pode ouvir os termos _registro_ e _repositório_
 como se fossem intercambiáveis.
-Embora estejam relacionados, não são exatamente a mesma coisa.
+Embora estejam relacionados, não são o mesmo.
 
 Um _registro_ é um local centralizado que armazena e gerencia imagens de
 contêiner, enquanto um _repositório_ é uma coleção de imagens de contêiner
-relacionadas dentro de um registro.
+relacionadas em um registro.
 Pense nele como uma pasta onde você organiza suas imagens com base em projetos.
 Cada repositório contém uma ou mais imagens de contêiner.
 
@@ -105,6 +106,8 @@ o repositório do Docker Hub.
 
 1. Se você ainda não criou uma, acesse a página do
    [Docker Hub](https://hub.docker.com) para criar uma nova conta do Docker.
+   Certifique-se de concluir os passos de verificação enviados para o seu
+   e-mail.
 
    ![Captura de tela da página oficial do Docker Hub mostrando a página de inscrição](images/dockerhub-signup.webp?border)
 
@@ -122,12 +125,13 @@ o repositório do Docker Hub.
 4. Defina a visibilidade como **Public**.
 5. Selecione o botão **Create** para criar o repositório.
 
-Pronto. Você criou seu primeiro repositório com sucesso. 🎉
+Pronto.
+Você criou seu primeiro repositório com sucesso. 🎉
 
 Este repositório está vazio no momento.
 Agora você pode corrigir isso enviando uma imagem para ele.
 
-### Entre com o Docker Desktop
+### Faça o login com o Docker Desktop
 
 1. [Baixe e instale](https://www.docker.com/products/docker-desktop/) o Docker
    Desktop, caso ainda não esteja instalado.
@@ -190,7 +194,7 @@ nas seções posteriores.
    ```
 
    Você pode verificar se o contêiner está funcionando visitando
-   [http://localhost:8080](http://localhost:8080) com seu navegador.
+   [http://localhost:8080](http://localhost:8080) com o seu navegador.
 
 6. Use o comando [`docker tag`](/reference/cli/docker/image/tag/) para adicionar
    uma tag à imagem do Docker.
