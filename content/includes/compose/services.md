@@ -14,12 +14,11 @@ revision: e3aa78b72c9faf56e97896681c33425cafc1c847
 status: ready
 ---
 
-Um serviço é uma definição abstrata de um recurso computacional dentro de uma
-aplicação que pode ser escalado ou substituído independentemente de outros
-componentes.
+Um serviço é uma definição abstrata de um recurso computacional em uma aplicação
+que pode ser escalado ou substituído independentemente de outros componentes.
 Os serviços são suportados por um conjunto de contêineres, executados pela
-plataforma de acordo com os requisitos de replicação e restrições de alocação.
+plataforma conforme os requisitos de replicação e restrições de alocação.
 Como os serviços são suportados por contêineres, eles são definidos por uma
 imagem Docker e um conjunto de argumentos de tempo de execução.
-Todos os contêineres dentro de um serviço são criados de forma idêntica com
-esses argumentos.
+Todos os contêineres em um serviço são criados de forma idêntica com esses
+argumentos.
