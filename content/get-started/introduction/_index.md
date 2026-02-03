@@ -14,7 +14,7 @@ revision: 656d1a871c6837fae1e4538b82a3a5c01b70ed1e
 status: ready
 
 title: Introdução
-keywords: começar, começando, como começar
+keywords: introdução, começando, como começar
 weight: 30
 description: >-
   Comece com o Docker.
@@ -42,14 +42,14 @@ com a instalação e configuração do Docker Desktop em sua máquina local.
 Você aprenderá como executar seu primeiro contêiner, entendendo os conceitos
 básicos da conteinerização e seus benefícios.
 Esta série guiará você na construção da sua primeira imagem do Docker,
-fornecendo percepções sobre como criar imagens eficientes e reutilizáveis.
+fornecendo conhecimentos sobre como criar imagens eficientes e reutilizáveis.
 Por fim, você explorará como publicar sua imagem no Docker Hub, permitindo que
 você compartilhe seu trabalho com a comunidade mais ampla e aproveite o poderoso
 ecossistema do Docker para desenvolvimento e implantação colaborativos.
 
 ## O que você aprenderá
 
-* Configurar o Docker Desktop
-* Executar seu primeiro contêiner
-* Construir sua primeira imagem
-* Publicar sua imagem no Docker Hub
+- Configurar o Docker Desktop.
+- Executar seu primeiro contêiner.
+- Construir sua primeira imagem.
+- Publicar sua imagem no Docker Hub.
