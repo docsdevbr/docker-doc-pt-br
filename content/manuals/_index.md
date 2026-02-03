@@ -39,7 +39,7 @@ params:
     icon: build
     link: /build/
   - title: Docker Engine
-    description: O runtime de contêiner líder do setor.
+    description: O tempo de execução de contêiner líder do setor.
     icon: developer_board
     link: /engine/
   - title: Docker Compose
@@ -74,7 +74,7 @@ params:
     link: /ai/mcp-catalog-and-toolkit/
   products:
   - title: Docker Desktop
-    description: Seu centro de comando para desenvolvimento de contêineres.
+    description: Seu centro de comando para desenvolvimento com contêineres.
     icon: /icons/Whale.svg
     link: /desktop/
   - title: Docker Hardened Images
@@ -158,7 +158,7 @@ Soluções completas para pessoas desenvolvedoras, para times inovadores.
 ## Plataforma
 
 Documentação relacionada à plataforma Docker, como administração e gerenciamento
-de assinaturas para organizações.
+de assinaturas.
 
 {{< grid items=platform >}}
 
