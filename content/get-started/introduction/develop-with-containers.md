@@ -73,7 +73,7 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
    Não se preocupe se você não entender tudo neste ponto.
    Mas, em um momento ou dois, as coisas devem se estabilizar e terminar.
 
-4. Abra seu navegador em [http://localhost](http://localhost) para ver a
+3. Abra seu navegador em [http://localhost](http://localhost) para ver a
    aplicação instalada e funcionando.
    Pode levar alguns minutos para a aplicação ser executada.
    A aplicação é uma aplicação de tarefas simples, então sinta-se à vontade para
