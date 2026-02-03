@@ -13,8 +13,8 @@ source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/secu
 revision: 6e8ef4cf2140a8f48485eb17820e5bb5bd66931c
 status: ready
 
-description: Solução de problemas no modo sem privilégios de root
-keywords: segurança, namespaces, sem privilégios de root, solução de problemas
+description: Solução de problemas no modo sem root
+keywords: segurança, namespaces, sem root, solução de problemas
 title: Solução de problemas
 weight: 30
 ---
@@ -82,7 +82,7 @@ weight: 30
 - Para o RHEL 8 e distribuições similares, recomenda-se a instalação do
   `fuse-overlayfs`.
   Execute `sudo dnf install -y fuse-overlayfs`.
-  Esta etapa não é necessária no RHEL 9 e distribuições similares;
+  Esta etapa não é necessária no RHEL 9 e distribuições similares.
 - Você pode precisar executar `sudo dnf install -y iptables`.
 
 {{< /tab >}}
@@ -91,32 +91,32 @@ weight: 30
 ## Limitações conhecidas
 
 - Somente os seguintes drivers de armazenamento são suportados:
-  - `overlay2` (somente se estiver executando com o kernel 5.11 ou posterior);
+  - `overlay2` (somente se estiver executando com o kernel 5.11 ou posterior).
   - `fuse-overlayfs` (somente se estiver executando com o kernel 4.18 ou
-    posterior e o `fuse-overlayfs` estiver instalado);
+    posterior e o `fuse-overlayfs` estiver instalado).
   - `btrfs` (somente se estiver executando com o kernel 4.18 ou posterior ou se
     `~/.local/share/docker` estiver montado com a opção de montagem
-    `user_subvol_rm_allowed`);
+    `user_subvol_rm_allowed`).
   - `vfs`.
 - O cgroup é suportado somente quando executado com cgroup v2 e systemd.
-  Consulte [Limitando recursos](./tips.md#limiting-resources);
+  Consulte [Limitando recursos](./tips.md#limitando-recursos).
 - Os seguintes recursos não são suportados:
   - AppArmor;
   - Checkpoint;
   - Rede overlay;
-  - Expondo as portas SCTP.
+  - Expor as portas SCTP.
 - Para usar o comando `ping`, consulte
-  [Roteamento de pacotes ping](./tips.md#routing-ping-packets);
+  [Roteamento de pacotes ping](./tips.md#roteamento-de-pacotes-ping).
 - Para expor portas TCP/UDP privilegiadas (< 1024), consulte
-  [Expondo portas privilegiadas](./tips.md#exposing-privileged-ports);
+  [Expondo portas privilegiadas](./tips.md#expondo-portas-privilegiadas).
 - O `IPAddress` exibido em `docker inspect` está dentro do namespace de rede do
   RootlessKit.
   Isso significa que o endereço IP não é acessível a partir do host sem usar o
-  `nsenter` para acessar o namespace de rede;
+  `nsenter` para acessar o namespace de rede.
 - A rede do host (`docker run --net=host`) também está dentro do namespace do
-  RootlessKit;
+  RootlessKit.
 - Montagens NFS como "data-root" do Docker não são suportadas.
-  Essa limitação não é específica do modo sem privilégios de root.
+  Essa limitação não é específica do modo sem root.
 
 ## Solução de problemas
 
@@ -174,7 +174,7 @@ arquivo `/etc/sysctl.conf` (ou `/etc/sysctl.d`) e execute
 **\[rootlesskit:parent\] error: failed to setup UID/GID map: failed to compute uid/gid map: No subuid ranges found for user 1001 ("<usuario-de-teste>")**
 
 Este erro ocorre quando `/etc/subuid` e `/etc/subgid` não estão configurados.
-Consulte [Pré-requisitos](./_index.md#prerequisites).
+Consulte [Pré-requisitos](./_index.md#pré-requisitos).
 
 **could not get XDG_RUNTIME_DIR**
 
@@ -213,7 +213,7 @@ Em vez de `sudo -iu <nome-de-usuario>`, você precisa fazer login usando
 `pam_systemd`.
 Por exemplo:
 
-- Faça login através do console gráfico;
+- Faça login através do console gráfico.
 - `ssh <nome-de-usuario>@localhost`
 - `machinectl shell <nome-de-usuario>@`
 
@@ -221,7 +221,7 @@ Por exemplo:
 
 Você precisa executar `sudo loginctl enable-linger $(whoami)` para habilitar a
 inicialização automática do daemon.
-Consulte [Uso avançado](./tips.md/#advanced-usage).
+Consulte [Uso avançado](./tips.md/#uso-avançado).
 
 ### Erros do `docker pull`
 
@@ -231,7 +231,7 @@ Este erro ocorre quando o número de entradas disponíveis em `/etc/subuid` ou
 `/etc/subgid` não é suficiente.
 O número de entradas necessárias varia entre as imagens.
 No entanto, 65.536 entradas são suficientes para a maioria das imagens.
-Consulte [Pré-requisitos](./_index.md#prerequisites).
+Consulte [Pré-requisitos](./_index.md#pré-requisitos).
 
 **docker: failed to register layer: ApplyLayer exit status 1 stdout:  stderr: lchown &lt;FILE&gt;: operation not permitted**
 
@@ -275,13 +275,13 @@ Este é o comportamento esperado no modo cgroup v1.
 Para usar essas opções, o host precisa ser configurado para habilitar o cgroup
 v2.
 Para obter mais informações, consulte
-[Limitando recursos](./tips.md#limiting-resources).
+[Limitando recursos](./tips.md#limitando-recursos).
 
 ### Erros de rede
 
-Esta seção fornece dicas de solução de problemas para redes em modo rootless.
+Esta seção fornece dicas de solução de problemas para redes em modo sem root.
 
-A rede em modo rootless é suportada por meio de drivers de rede e porta no
+A rede em modo sem root é suportada por meio de drivers de rede e porta no
 RootlessKit.
 O desempenho e as características da rede dependem da combinação de drivers de
 rede e porta que você utiliza.
@@ -326,7 +326,7 @@ $ docker run -p 8080:80 nginx:alpine
 ```
 
 Para permitir a exposição de portas privilegiadas, consulte
-[Expondo portas privilegiadas](./tips.md#exposing-privileged-ports).
+[Expondo portas privilegiadas](./tips.md#expondo-portas-privilegiadas).
 
 #### O ping não funciona
 
@@ -339,7 +339,7 @@ $ cat /proc/sys/net/ipv4/ping_group_range
 ```
 
 Para mais detalhes, consulte
-[Roteamento de pacotes ping](./tips.md#routing-ping-packets).
+[Roteamento de pacotes ping](./tips.md#roteamento-de-pacotes-ping).
 
 #### O `IPAddress` exibido em `docker inspect` está inacessível
 
@@ -355,7 +355,7 @@ Use `docker run -p` em vez disso.
 
 #### Rede lenta
 
-O Docker em modo rootless utiliza o
+O Docker em modo sem root utiliza o
 [slirp4netns](https://github.com/rootless-containers/slirp4netns) como pilha de
 rede padrão, caso a versão 0.4.0 ou posterior do slirp4netns esteja instalada.
 Se o slirp4netns não estiver instalado, o Docker utiliza o
@@ -383,21 +383,21 @@ $ systemctl --user restart docker
 
 #### `docker run -p` não propaga endereços IP de origem
 
-Isso ocorre porque o Docker no modo rootless usa o driver de porta `builtin` do
+Isso ocorre porque o Docker no modo sem root usa o driver de porta `builtin` do
 RootlessKit por padrão, que não suporta a propagação de IP de origem.
 Para habilitar a propagação de IP de origem, você pode:
 
-- Usar o driver de porta `slirp4netns` do RootlessKit;
+- Usar o driver de porta `slirp4netns` do RootlessKit.
 - Usar o driver de rede `pasta` do RootlessKit, com o driver de porta
   `implicit`.
 
 O driver de rede `pasta` é experimental, mas oferece melhor desempenho de
 throughput em comparação com o driver de porta `slirp4netns`.
-O driver `pasta` requer o Docker Engine versão 25.0 ou posterior.
+O driver `pasta` requer a Docker Engine versão 25.0 ou posterior.
 
 Para alterar a configuração de rede do RootlessKit:
 
-1. Crie um arquivo em `~/.config/systemd/user/docker.service.d/override.conf`;
+1. Crie um arquivo em `~/.config/systemd/user/docker.service.d/override.conf`.
 2. Adicione o seguinte conteúdo, dependendo da configuração que você deseja
    usar:
 
@@ -454,7 +454,7 @@ Removed /home/<usuario-de-teste>/.config/systemd/user/default.target.wants/docke
 [INFO] To remove data, run: `/usr/bin/rootlesskit rm -rf /home/<usuario-de-teste>/.local/share/docker`
 ```
 
-Remova as variáveis ​​de ambiente PATH e DOCKER_HOST, caso as tenha adicionado ao
+Remova as variáveis de ambiente PATH e DOCKER_HOST, caso as tenha adicionado ao
 arquivo `~/.bashrc`.
 
 Para remover o diretório de dados, execute
@@ -463,8 +463,8 @@ Para remover o diretório de dados, execute
 Para remover os binários, remova o pacote `docker-ce-rootless-extras` caso tenha
 instalado o Docker com um gerenciador de pacotes.
 Se você instalou o Docker com https://get.docker.com/rootless
-([Instalação sem pacotes](./_index.md#install)), remova os arquivos binários em
-`~/bin`:
+([Instalação sem pacotes](./_index.md#instalação)), remova os arquivos binários
+em `~/bin`:
 
 ```console
 $ cd ~/bin
