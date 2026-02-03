@@ -9,12 +9,20 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-description: Jumpstart your client-side server applications with Docker Engine on
-  Ubuntu. This guide details prerequisites and multiple methods to install Docker Engine on Ubuntu.
-keywords: docker install script, ubuntu docker server, ubuntu server docker, install
-  docker engine ubuntu, install docker on ubuntu server, ubuntu 22.04 docker-ce, install
-  docker engine on ubuntu, ubuntu install docker ce, ubuntu install docker engine
-title: Install Docker Engine on Ubuntu
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/ubuntu.md
+revision: 556eed6f35c59f9b1e12ff159879a990caf66520
+status: ready
+
+description: >-
+  Impulsione suas aplicações de servidor do lado do cliente com a Docker Engine
+  no Ubuntu.
+  Este guia detalha os pré-requisitos e vários métodos para instalar a Docker
+  Engine no Ubuntu.
+keywords: >-
+  script de instalação do docker, servidor docker no ubuntu, instalar docker
+  engine no ubuntu, instalar docker no servidor ubuntu, docker ce no ubuntu
+  22.04, instalar docker ce no ubuntu, instalar docker engine no ubuntu
+title: Instalar a Docker Engine no Ubuntu
 linkTitle: Ubuntu
 weight: 10
 toc_max: 4
@@ -32,56 +40,63 @@ aliases:
 - /linux/step_one/
 download-url-base: https://download.docker.com/linux/ubuntu
 ---
+
 To get started with Docker Engine on Ubuntu, make sure you
 [meet the prerequisites](#prerequisites), and then follow the
 [installation steps](#installation-methods).
 
-## Prerequisites
+## Pré-requisitos
 
-### Firewall limitations
+### Limitações do firewall
 
 > [!WARNING]
 >
-> Before you install Docker, make sure you consider the following
-> security implications and firewall incompatibilities.
+> Antes de instalar o Docker, certifique-se de considerar as seguintes
+> implicações de segurança e incompatibilidades de firewall.
 
-- If you use ufw or firewalld to manage firewall settings, be aware that
-  when you expose container ports using Docker, these ports bypass your
-  firewall rules. For more information, refer to
-  [Docker and ufw](/manuals/engine/network/packet-filtering-firewalls.md#docker-and-ufw).
-- Docker is only compatible with `iptables-nft` and `iptables-legacy`.
-  Firewall rules created with `nft` are not supported on a system with Docker installed.
-  Make sure that any firewall rulesets you use are created with `iptables` or `ip6tables`,
-  and that you add them to the `DOCKER-USER` chain,
-  see [Packet filtering and firewalls](/manuals/engine/network/packet-filtering-firewalls.md).
+- Se você usa o ufw ou o firewalld para gerenciar as configurações do firewall,
+  esteja ciente de que ao expor portas de contêiner usando o Docker, essas
+  portas ignoram suas regras de firewall.
+  Para obter mais informações, consulte
+  [Docker e ufw](/manuals/engine/network/packet-filtering-firewalls.md#docker-and-ufw).
+- O Docker é compatível apenas com `iptables-nft` e `iptables-legacy`.
+  Regras de firewall criadas com `nft` não são compatíveis com um sistema com o
+  Docker instalado.
+  Certifique-se de que todos os conjuntos de regras de firewall que você usa
+  sejam criados com `iptables` ou `ip6tables`, e que você os adicione à cadeia
+  `DOCKER-USER`.
+  Consulte
+  [Filtragem de pacotes e firewalls](/manuals/engine/network/packet-filtering-firewalls.md).
 
-### OS requirements
+### Requisitos do sistema operacional
 
-To install Docker Engine, you need the 64-bit version of one of these Ubuntu
-versions:
+Para instalar a Docker Engine, você precisa da versão de 64 bits de uma destas
+versões do Ubuntu:
 
 - Ubuntu Oracular 24.10
 - Ubuntu Noble 24.04 (LTS)
 - Ubuntu Jammy 22.04 (LTS)
 - Ubuntu Focal 20.04 (LTS)
 
-Docker Engine for Ubuntu is compatible with x86_64 (or amd64), armhf, arm64,
-s390x, and ppc64le (ppc64el) architectures.
+A Docker Engine para Ubuntu é compatível com as arquiteturas x86_64 (ou amd64),
+armhf, arm64, s390x e ppc64le (ppc64el).
 
 > [!NOTE]
 >
-> Installation on Ubuntu derivative distributions, such as Linux Mint, is not officially
-> supported (though it may work).
+> A instalação em distribuições derivadas do Ubuntu, como o Linux Mint, não é
+> oficialmente suportada (embora possa funcionar).
 
-### Uninstall old versions
+### Desinstale versões antigas
 
-Before you can install Docker Engine, you need to uninstall any conflicting packages.
+Antes de instalar a Docker Engine, você precisa desinstalar quaisquer pacotes
+conflitantes.
 
-Your Linux distribution may provide unofficial Docker packages, which may conflict
-with the official packages provided by Docker. You must uninstall these packages
-before you install the official version of Docker Engine.
+Sua distribuição Linux pode fornecer pacotes Docker não oficiais, que podem
+entrar em conflito com os pacotes oficiais fornecidos pelo Docker.
+Você deve desinstalar esses pacotes antes de instalar a versão oficial da Docker
+Engine.
 
-The unofficial packages to uninstall are:
+Os pacotes não oficiais a serem desinstalados são:
 
 - `docker.io`
 - `docker-compose`
@@ -89,57 +104,60 @@ The unofficial packages to uninstall are:
 - `docker-doc`
 - `podman-docker`
 
-Moreover, Docker Engine depends on `containerd` and `runc`. Docker Engine
-bundles these dependencies as one bundle: `containerd.io`. If you have
-installed the `containerd` or `runc` previously, uninstall them to avoid
-conflicts with the versions bundled with Docker Engine.
+Além disso, a Docker Engine depende do `containerd` e do `runc`.
+A Docker Engine agrupa essas dependências em um único pacote: `containerd.io`.
+Se você já instalou o `containerd` ou o `runc` anteriormente, desinstale-os para
+evitar conflitos com as versões incluídas na Docker Engine.
 
-Run the following command to uninstall all conflicting packages:
+Execute o seguinte comando para desinstalar todos os pacotes conflitantes:
 
 ```console
 $ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
 
-`apt-get` might report that you have none of these packages installed.
+O `apt-get` pode informar que você não tem nenhum desses pacotes instalado.
 
-Images, containers, volumes, and networks stored in `/var/lib/docker/` aren't
-automatically removed when you uninstall Docker. If you want to start with a
-clean installation, and prefer to clean up any existing data, read the
-[uninstall Docker Engine](#uninstall-docker-engine) section.
+Imagens, contêineres, volumes e redes armazenados em `/var/lib/docker/` não são
+removidos automaticamente ao desinstalar o Docker.
+Se você deseja começar com uma instalação limpa e prefere remover todos os dados
+existentes, leia a seção
+[desinstalar a Docker Engine](#uninstall-docker-engine).
 
-## Installation methods
+## Métodos de instalação
 
-You can install Docker Engine in different ways, depending on your needs:
+Você pode instalar a Docker Engine de diferentes maneiras, dependendo das suas
+necessidades:
 
-- Docker Engine comes bundled with
-  [Docker Desktop for Linux](/manuals/desktop/setup/install/linux/_index.md). This is
-  the easiest and quickest way to get started.
+- A Docker Engine vem incluída no
+  [Docker Desktop para Linux](/manuals/desktop/setup/install/linux/_index.md).
+  Esta é a maneira mais fácil e rápida de começar.
 
-- Set up and install Docker Engine from
-  [Docker's `apt` repository](#install-using-the-repository).
+- Configure e instale a Docker Engine a partir do
+  [repositório `apt` do Docker](#install-using-the-repository).
 
-- [Install it manually](#install-from-a-package) and manage upgrades manually.
+- Instale-a manualmente](#install-from-a-package) e gerencie as atualizações
+  manualmente.
 
-- Use a [convenience script](#install-using-the-convenience-script). Only
-  recommended for testing and development environments.
+- Use um [script de conveniência](#install-using-the-convenience-script).
+  Recomendado apenas para ambientes de teste e desenvolvimento.
 
-### Install using the `apt` repository {#install-using-the-repository}
+### Instalar usando o repositório `apt` {#install-using-the-repository}
 
-Before you install Docker Engine for the first time on a new host machine, you
-need to set up the Docker `apt` repository. Afterward, you can install and update
-Docker from the repository.
+Antes de instalar a Docker Engine pela primeira vez em uma nova máquina host,
+você precisa configurar o repositório `apt` do Docker.
+Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
 
-1. Set up Docker's `apt` repository.
+1. Configure o repositório `apt` do Docker.
 
    ```bash
-   # Add Docker's official GPG key:
+   # Adicione a chave GPG oficial do Docker:
    sudo apt-get update
    sudo apt-get install ca-certificates curl
    sudo install -m 0755 -d /etc/apt/keyrings
    sudo curl -fsSL {{% param "download-url-base" %}}/gpg -o /etc/apt/keyrings/docker.asc
    sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-   # Add the repository to Apt sources:
+   # Adicione o repositório às fontes do Apt:
    echo \
      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] {{% param "download-url-base" %}} \
      $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
@@ -147,25 +165,25 @@ Docker from the repository.
    sudo apt-get update
    ```
 
-2. Install the Docker packages.
+2. Instale os pacotes do Docker.
 
    {{< tabs >}}
-   {{< tab name="Latest" >}}
+   {{< tab name="Versão mais recente" >}}
 
-   To install the latest version, run:
+   Para instalar a versão mais recente, execute:
 
    ```console
    $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
    {{< /tab >}}
-   {{< tab name="Specific version" >}}
+   {{< tab name="Versão específica" >}}
 
-   To install a specific version of Docker Engine, start by listing the
-   available versions in the repository:
+   Para instalar uma versão específica da Docker Engine, comece listando as
+   versões disponíveis no repositório:
 
    ```console
-   # List the available versions:
+   # Liste as versões disponíveis:
    $ apt-cache madison docker-ce | awk '{ print $3 }'
 
    5:{{% param "docker_ce_version" %}}-1~ubuntu.24.04~noble
@@ -173,7 +191,7 @@ Docker from the repository.
    ...
    ```
 
-   Select the desired version and install:
+   Selecione a versão desejada e instale:
 
    ```console
    $ VERSION_STRING=5:{{% param "docker_ce_version" %}}-1~ubuntu.24.04~noble
@@ -183,107 +201,113 @@ Docker from the repository.
    {{< /tab >}}
    {{< /tabs >}}
 
-3. Verify that the installation is successful by running the `hello-world` image:
+3. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 
    ```console
    $ sudo docker run hello-world
    ```
 
-   This command downloads a test image and runs it in a container. When the
-   container runs, it prints a confirmation message and exits.
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
+   encerrado.
 
-You have now successfully installed and started Docker Engine.
+Você instalou e iniciou a Docker Engine com sucesso.
 
 {{% include "root-errors.md" %}}
 
-#### Upgrade Docker Engine
+#### Atualize a Docker Engine
 
-To upgrade Docker Engine, follow step 2 of the
-[installation instructions](#install-using-the-repository),
-choosing the new version you want to install.
+Para atualizar a Docker Engine, siga o passo 2 das
+[instruções de instalação](#install-using-the-repository),
+escolhendo a nova versão que deseja instalar.
 
-### Install from a package
+### Instale a partir de um pacote
 
-If you can't use Docker's `apt` repository to install Docker Engine, you can
-download the `deb` file for your release and install it manually. You need to
-download a new file each time you want to upgrade Docker Engine.
+Se você não puder usar o repositório `apt` do Docker para instalar a Docker
+Engine, você pode baixar o arquivo `deb` da sua versão e instalá-lo manualmente.
+Você precisará baixar um novo arquivo sempre que quiser atualizar a Docker
+Engine.
 
 <!-- markdownlint-disable-next-line -->
-1. Go to [`{{% param "download-url-base" %}}/dists/`]({{% param "download-url-base" %}}/dists/).
+1. Acesse [`{{% param "download-url-base" %}}/dists/`]({{% param "download-url-base" %}}/dists/).
 
-2. Select your Ubuntu version in the list.
+2. Selecione sua versão do Ubuntu na lista.
 
-3. Go to `pool/stable/` and select the applicable architecture (`amd64`,
-   `armhf`, `arm64`, or `s390x`).
+3. Acesse `pool/stable/` e selecione a arquitetura aplicável (`amd64`, `armhf`,
+   `arm64` ou `s390x`).
 
-4. Download the following `deb` files for the Docker Engine, CLI, containerd,
-   and Docker Compose packages:
+4. Baixe os seguintes arquivos `.deb` para a Docker Engine, CLI, containerd e
+   pacotes do Docker Compose:
 
-   - `containerd.io_<version>_<arch>.deb`
-   - `docker-ce_<version>_<arch>.deb`
-   - `docker-ce-cli_<version>_<arch>.deb`
-   - `docker-buildx-plugin_<version>_<arch>.deb`
-   - `docker-compose-plugin_<version>_<arch>.deb`
+   - `containerd.io_<versao>_<arquitetura>.deb`
+   - `docker-ce_<versao>_<arquitetura>.deb`
+   - `docker-ce-cli_<versao>_<arquitetura>.deb`
+   - `docker-buildx-plugin_<versao>_<arquitetura>.deb`
+   - `docker-compose-plugin_<versao>_<arquitetura>.deb`
 
-5. Install the `.deb` packages. Update the paths in the following example to
-   where you downloaded the Docker packages.
+5. Instale os pacotes `.deb`.
+   Atualize os caminhos no exemplo a seguir para onde você baixou os pacotes do
+   Docker.
 
    ```console
-   $ sudo dpkg -i ./containerd.io_<version>_<arch>.deb \
-     ./docker-ce_<version>_<arch>.deb \
-     ./docker-ce-cli_<version>_<arch>.deb \
-     ./docker-buildx-plugin_<version>_<arch>.deb \
-     ./docker-compose-plugin_<version>_<arch>.deb
+   $ sudo dpkg -i ./containerd.io_<versao>_<arquitetura>.deb \
+     ./docker-ce_<versao>_<arquitetura>.deb \
+     ./docker-ce-cli_<versao>_<arquitetura>.deb \
+     ./docker-buildx-plugin_<versao>_<arquitetura>.deb \
+     ./docker-compose-plugin_<versao>_<arquitetura>.deb
    ```
 
-   The Docker daemon starts automatically.
+   O daemon do Docker inicia automaticamente.
 
-6. Verify that the installation is successful by running the `hello-world` image:
+6. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 
    ```console
    $ sudo service docker start
    $ sudo docker run hello-world
    ```
 
-   This command downloads a test image and runs it in a container. When the
-   container runs, it prints a confirmation message and exits.
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele exibe uma mensagem de confirmação e é
+   encerrado.
 
-You have now successfully installed and started Docker Engine.
+Você instalou e iniciou a Docker Engine com sucesso.
 
 {{% include "root-errors.md" %}}
 
-#### Upgrade Docker Engine
+#### Atualize a Docker Engine
 
-To upgrade Docker Engine, download the newer package files and repeat the
-[installation procedure](#install-from-a-package), pointing to the new files.
+Para atualizar a Docker Engine, baixe os arquivos de pacote mais recentes e
+repita o [procedimento de instalação](#install-from-a-package), apontando para
+os novos arquivos.
 
 {{% include "install-script.md" %}}
 
-## Uninstall Docker Engine
+## Desinstale a Docker Engine
 
-1. Uninstall the Docker Engine, CLI, containerd, and Docker Compose packages:
+1. Desinstale os pacotes Docker Engine, CLI, containerd e Docker Compose:
 
    ```console
    $ sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
    ```
 
-2. Images, containers, volumes, or custom configuration files on your host
-   aren't automatically removed. To delete all images, containers, and volumes:
+2. Imagens, contêineres, volumes ou arquivos de configuração personalizados em
+   seu host não são removidos automaticamente.
+   Para excluir todas as imagens, contêineres e volumes:
 
    ```console
    $ sudo rm -rf /var/lib/docker
    $ sudo rm -rf /var/lib/containerd
    ```
 
-3. Remove source list and keyrings
+3. Remover a lista de fontes e os keyrings.
 
    ```console
    $ sudo rm /etc/apt/sources.list.d/docker.list
    $ sudo rm /etc/apt/keyrings/docker.asc
    ```
 
-You have to delete any edited configuration files manually.
+Você precisa excluir manualmente quaisquer arquivos de configuração editados.
 
-## Next steps
+## Próximos passos
 
-- Continue to [Post-installation steps for Linux](linux-postinstall.md).
+- Continue para [Etapas de pós-instalação para Linux](linux-postinstall.md).
