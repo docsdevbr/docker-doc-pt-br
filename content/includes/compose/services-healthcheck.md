@@ -14,8 +14,8 @@ revision: e3aa78b72c9faf56e97896681c33425cafc1c847
 status: ready
 ---
 
-O atributo `healthcheck` declara uma verificação que é executada para determinar
-se os contêineres do serviço estão "saudáveis".
+O atributo `healthcheck` declara uma verificação executada para determinar se os
+contêineres do serviço estão "saudáveis".
 Ele funciona da mesma forma e tem os mesmos valores padrão que a instrução
 `HEALTHCHECK` do Dockerfile, definida pela imagem Docker do serviço.
 Seu arquivo Compose pode substituir os valores definidos no Dockerfile.
