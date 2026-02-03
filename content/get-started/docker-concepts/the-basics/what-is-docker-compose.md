@@ -15,7 +15,7 @@ status: ready
 
 title: O que é o Docker Compose?
 weight: 40
-keywords: conceitos, construção, imagens, container, docker desktop
+keywords: conceitos, construção, imagens, contêiner, docker desktop
 description: O que é o Docker Compose?
 aliases:
  - /guides/walkthroughs/multi-container-apps/
@@ -26,7 +26,7 @@ aliases:
 
 ## Explicação
 
-Se você seguiu os guias até agora, provavelmente trabalhou com aplicações de
+Se você seguiu os guias até agora, trabalhou provavelmente com aplicações de
 contêiner único.
 Mas, agora você quer fazer algo mais complexo: executar bancos de dados, filas
 de mensagens, caches ou uma variedade de outros serviços.
@@ -121,15 +121,17 @@ Siga as instruções para executar a aplicação de lista de tarefas no seu sist
      ✔ Container todo-list-app-mysql-1         Started         0.3s
    ```
 
-   Muita coisa aconteceu aqui! Algumas coisas para destacar:
+   Muita coisa aconteceu aqui!
+   Algumas coisas para destacar:
 
-   * Duas imagens de contêiner foram baixadas do Docker Hub - node e MySQL;
-   * Uma rede foi criada para sua aplicação;
-   * Um volume foi criado para persistir os arquivos do banco de dados entre
-     reinicializações do contêiner;
-   * Dois contêineres foram iniciados com todas as configurações necessárias.
+   - Duas imagens de contêiner foram baixadas do Docker Hub - node e MySQL.
+   - Uma rede foi criada para sua aplicação.
+   - Um volume foi criado para persistir os arquivos do banco de dados entre
+     reinicializações do contêiner.
+   - Dois contêineres foram iniciados com todas as configurações necessárias.
 
-   Se isso parece assustador, não se preocupe! Você vai chegar lá!
+   Se isso parece assustador, não se preocupe!
+   Você vai chegar lá!
 
 5. Com tudo instalado e funcionando, você pode abrir
    [http://localhost:3000](http://localhost:3000) no seu navegador para ver o
@@ -138,6 +140,7 @@ Siga as instruções para executar a aplicação de lista de tarefas no seu sist
    completamente.
    Se a página não carregar imediatamente, aguarde um momento e atualize a
    página.
+   Fique à vontade para adicionar itens à lista, marcá-los como concluídos e removê-los.
 
    ![Uma captura de tela de uma página web mostrando a aplicação de lista de tarefas em execução na porta 3000](images/todo-list-app.webp?border=true&w=950&h=400)
 
