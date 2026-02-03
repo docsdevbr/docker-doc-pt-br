@@ -14,41 +14,40 @@ revision: 89344f43f19c68ef2d6941de0a5633ff6f1754e5
 status: ready
 
 description: >-
-  Execute o daemon do Docker como um usuário não root (modo sem privilégios de
-  root).
-keywords: segurança, namespaces, sem privilégios de root
-title: Modo sem privilégios de root
+  Execute o daemon do Docker como um usuário não root (modo sem root).
+keywords: segurança, namespaces, sem root
+title: Modo sem root
 weight: 10
 ---
 
-O modo sem privilégios de root permite executar o daemon e os contêineres do
-Docker como um usuário não root para mitigar possíveis vulnerabilidades no
-daemon e no ambiente de execução do contêiner.
+O modo sem root permite executar o daemon e os contêineres do Docker como um
+usuário não root para mitigar possíveis vulnerabilidades no daemon e no ambiente
+de execução do contêiner.
 
-O modo sem privilégios de root não requer privilégios de root, mesmo durante a
-instalação do daemon do Docker, desde que os [pré-requisitos](#pré-requisitos)
-sejam atendidos.
+O modo sem root não requer privilégios de root, mesmo durante a instalação do
+daemon do Docker, desde que os [pré-requisitos](#pré-requisitos) sejam
+atendidos.
 
 ## Como funciona
 
-O modo sem privilégios de root executa o daemon e os contêineres do Docker
-dentro de um namespace de usuário.
+O modo sem root executa o daemon e os contêineres do Docker em um namespace de
+usuário.
 Isso é semelhante ao [modo `userns-remap`](../userns-remap.md), exceto que no
 modo `userns-remap`, o próprio daemon é executado com privilégios de root,
-enquanto no modo sem privilégios de root, tanto o daemon quanto o contêiner são
-executados sem privilégios de root.
+enquanto no modo sem root, tanto o daemon quanto o contêiner são executados sem
+privilégios de root.
 
-O modo sem privilégios de root não usa binários com bits `SETUID` ou capacidades
-de arquivo, exceto `newuidmap` e `newgidmap`, que são necessários para permitir
-que vários UIDs/GIDs sejam usados ​​no namespace do usuário.
+O modo sem root não usa binários com bits `SETUID` ou capacidades de arquivo,
+exceto `newuidmap` e `newgidmap`, que são necessários para permitir que vários
+UIDs/GIDs sejam usados no namespace do usuário.
 
 ## Pré-requisitos
 
 - Você deve instalar `newuidmap` e `newgidmap` no host.
   Esses comandos são fornecidos pelo pacote `uidmap` na maioria das
-  distribuições;
-- Os arquivos `/etc/subuid` e `/etc/subgid` devem conter pelo menos 65.536
-  UIDs/GIDs subordinados para o usuário.
+  distribuições.
+- `/etc/subuid` e `/etc/subgid` devem conter pelo menos 65.536 UIDs/GIDs
+  subordinados para o usuário.
   No exemplo a seguir, o usuário `testuser` possui 65.536 UIDs/GIDs subordinados
   (231072-296607).
 
@@ -156,7 +155,7 @@ Os arquivos binários serão instalados em `~/bin`.
 {{< /tabs >}}
 
 Execute o comando `docker info` para confirmar que o cliente `docker` está se
-conectando ao daemon sem privilégios de root:
+conectando ao daemon sem root:
 
 ```console
 $ docker info
