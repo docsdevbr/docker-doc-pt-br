@@ -174,8 +174,8 @@ satisfeitas.
 Quando essas condições não são satisfeitas, o modo sem root ignora os parâmetros
 `docker run` relacionados a cgroups.
 Consulte
-[Limitando recursos sem cgroup](#limiting-resources-without-cgroup) para
-soluções alternativas.
+[Limitando recursos sem cgroup](#limitando-recursos-sem-cgroup) para soluções
+alternativas.
 
 Se `docker info` mostrar `systemd` como `Cgroup Driver`, as condições foram
 satisfeitas.
