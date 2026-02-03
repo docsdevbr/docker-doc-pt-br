@@ -19,7 +19,7 @@ description: >-
 keywords: >-
   o que é o docker, daemon docker, por que usar docker, arquitetura docker, para
   que usar docker, cliente docker, para que serve o docker, por que docker, usos
-  para docker, para que o contêiner docker é usado, para que os contêineres
+  para o docker, para que o contêiner docker é usado, para que os contêineres
   docker são usados
 title: O que é o Docker?
 weight: 20
@@ -59,16 +59,16 @@ mesma maneira.
 O Docker fornece ferramentas e uma plataforma para gerenciar o ciclo de vida
 dos seus contêineres:
 
-* Desenvolva sua aplicação e seus componentes de suporte usando contêineres.
-* O contêiner se torna a unidade para distribuir e testar sua aplicação.
-* Quando tiver terminado, implante sua aplicação em seu ambiente de produção,
+- Desenvolva sua aplicação e seus componentes de suporte usando contêineres.
+- O contêiner se torna a unidade para distribuir e testar sua aplicação.
+- Quando tiver terminado, implante sua aplicação em seu ambiente de produção,
   como um contêiner ou um serviço orquestrado.
-  Isso funciona da mesma forma, seja seu ambiente de produção um data center
+  Ele funciona da mesma forma, seja seu ambiente de produção um data center
   local, um provedor de nuvem ou um híbrido dos dois.
 
 ## Para que posso usar o Docker?
 
-### Entrega rápida e consistente de suas aplicações
+### Entrega rápida e consistente das suas aplicações
 
 O Docker simplifica o ciclo de vida do desenvolvimento permitindo que as pessoas
 desenvolvedoras trabalhem em ambientes padronizados usando contêineres locais
@@ -78,14 +78,14 @@ entrega contínua (CI/CD).
 
 Considere o seguinte cenário de exemplo:
 
-* Suas pessoas desenvolvedoras escrevem código localmente e compartilham seu
+- Suas pessoas desenvolvedoras escrevem código localmente e compartilham seu
   trabalho com suas colegas usando contêineres Docker.
-* Elas usam o Docker para enviar suas aplicações para um ambiente de teste e
+- Elas usam o Docker para enviar suas aplicações para um ambiente de teste e
   executar testes automatizados e manuais.
-* Quando as pessoas desenvolvedoras encontram falhas, elas podem corrigi-las no
+- Quando as pessoas desenvolvedoras encontram falhas, elas podem corrigi-las no
   ambiente de desenvolvimento e reimplantar as aplicações no ambiente de teste
   para teste e validação.
-* Quando os testes estiverem concluídos, enviar a correção ao cliente será tão
+- Quando os testes estiverem concluídos, enviar a correção ao cliente será tão
   simples quanto enviar a imagem atualizada para o ambiente de produção.
 
 ### Implantação e escalonamento responsivos
@@ -97,8 +97,8 @@ desenvolvedora, em máquinas físicas ou virtuais em um data center, em provedor
 de nuvem ou em uma mistura de ambientes.
 
 A portabilidade e a natureza leve do Docker também facilitam o gerenciamento
-dinâmico de cargas de trabalho, aumentando ou reduzindo a escala de aplicações e
-serviços conforme as necessidades comerciais, quase em tempo real.
+dinâmico de cargas de trabalho, aumentando ou reduzindo o escalonamento de
+aplicações e serviços conforme as necessidades de negócio, quase em tempo real.
 
 ### Executando mais cargas de trabalho no mesmo equipamento
 
@@ -121,7 +121,7 @@ UNIX ou uma interface de rede.
 Outro cliente Docker é o Docker Compose, que permite que você trabalhe com
 aplicações que consistem em um conjunto de contêineres.
 
-![Diagrama de arquitetura do Docker](images/docker-architecture.webp)
+![Diagrama da arquitetura do Docker](images/docker-architecture.webp)
 
 ### O daemon do Docker
 
@@ -191,7 +191,7 @@ comparadas a outras tecnologias de virtualização.
 #### Contêineres
 
 Um contêiner é uma instância executável de uma imagem.
-Você pode criar, iniciar, parar, mover ou excluir um contêiner usando a API ou
+Você pode criar, iniciar, parar, mover ou excluir um contêiner usando a API ou a
 CLI do Docker.
 Você pode conectar um contêiner a uma ou mais redes, anexar armazenamento a ele
 ou até mesmo criar uma nova imagem com base em seu estado atual.
@@ -226,7 +226,7 @@ configuração padrão do registro):
 2. O Docker cria um novo contêiner, como se você tivesse executado um comando
    `docker container create` manualmente.
 
-3. O Docker aloca um sistema de arquivos de leitura e escrita para o contêiner,
+3. O Docker aloca um sistema de arquivos de leitura e escrita para o contêiner
    como sua camada final.
    Isso permite que um contêiner em execução crie ou modifique arquivos e
    diretórios em seu sistema de arquivos local.
@@ -250,7 +250,7 @@ configuração padrão do registro):
 
 O Docker é escrito na [linguagem de programação Go](https://golang.org/) e
 aproveita vários recursos do kernel Linux para fornecer sua funcionalidade.
-O Docker usa uma tecnologia chamada namespaces para fornecer o espaço de
+O Docker usa uma tecnologia chamada `namespaces` para fornecer o espaço de
 trabalho isolado chamado contêiner.
 Quando você executa um contêiner, o Docker cria um conjunto de namespaces para
 esse contêiner.
