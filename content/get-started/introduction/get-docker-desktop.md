@@ -19,9 +19,9 @@ description: >-
   Esta página conceitual ensinará você a baixar o Docker Desktop e instalá-lo no
   Windows, Mac e Linux.
 summary: >-
-  Colocar o Docker Desktop em funcionamento é o primeiro passo crucial para
-  pessoas desenvolvedoras que estão mergulhando na conteinerização, oferecendo
-  uma interface perfeita e amigável para gerenciar contêineres Docker.
+  Fazer o Docker Desktop funcionar é o primeiro passo crucial para pessoas
+  desenvolvedoras que estão mergulhando na conteinerização, oferecendo uma
+  interface perfeita e amigável para gerenciar contêineres Docker.
   O Docker Desktop simplifica o processo de construção, compartilhamento e
   execução de aplicações em contêineres, garantindo consistência em diferentes
   ambientes.
@@ -41,28 +41,26 @@ o Docker Desktop em primeira mão.
 
 > **Termos do Docker Desktop**
 >
-> O uso comercial do Docker Desktop em empresas maiores (mais de 250
-> funcionários OU mais de US$ 10 milhões em receita anual) requer uma
+> O uso comercial do Docker Desktop em empresas maiores (mais de 250 pessoas
+> funcionárias OU mais de US$ 10 milhões em receita anual) requer uma
 > [assinatura paga](https://www.docker.com/pricing/?_gl=1*1nyypal*_ga*MTYxMTUxMzkzOS4xNjgzNTM0MTcw*_ga_XJWPQMJYHQ*MTcxNjk4MzU4Mi4xMjE2LjEuMTcxNjk4MzkzNS4xNy4wLjA.).
 
+<div class="not-prose">
 {{< card
   title="Docker Desktop para Mac"
   description="[Baixar (Apple Silicon)](https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-arm64) | [Baixar (Intel)](https://desktop.docker.com/mac/main/amd64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-amd64) | [Instruções de instalação](/desktop/setup/install/mac-install)"
-  icon="/assets/images/apple_48.svg" >}}
-
-<br>
+  icon="/icons/AppleMac.svg" >}}
 
 {{< card
   title="Docker Desktop para Windows"
   description="[Baixar](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-windows) | [Instruções de instalação](/desktop/setup/install/windows-install)"
-  icon="/assets/images/windows_48.svg" >}}
-
-<br>
+  icon="/icons/Windows.svg" >}}
 
 {{< card
   title="Docker Desktop para Linux"
   description="[Instruções de instalação](/desktop/setup/install/linux/)"
-  icon="/assets/images/linux_48.svg" >}}
+  icon="/icons/Linux.svg" >}}
+</div>
 
 Após a instalação, conclua o processo de configuração e você conseguirá executar
 um contêiner do Docker.
@@ -84,7 +82,7 @@ $ docker run -d -p 8080:80 docker/welcome-to-docker
 
 ## Acesse o front-end
 
-Para este contêiner, o front-end é acessível na porta `8080`.
+Para este contêiner, o front-end está acessível na porta `8080`.
 Para abrir o site, visite [http://localhost:8080](http://localhost:8080) no seu
  navegador.
 
@@ -93,15 +91,15 @@ Para abrir o site, visite [http://localhost:8080](http://localhost:8080) no seu
 ## Gerencie contêineres usando o Docker Desktop
 
 1. Abra o Docker Desktop e selecione o campo **Containers** na barra lateral
-   esquerda;
+   esquerda.
 2. Você pode visualizar informações sobre seu contêiner, incluindo logs e
-   arquivos, e até mesmo acessar o shell selecionando a aba **Exec**;
+   arquivos, e até mesmo acessar o shell selecionando a aba **Exec**.
 
    ![Captura de tela do exec no contêiner em execução no Docker Desktop](images/exec-into-docker-container.webp?border=true)
 
 3. Selecione o campo **Inspect** para obter informações detalhadas sobre o
    contêiner.
-   Você pode executar várias ações, como pausar, retomar, iniciar ou parar
+   Você pode executar várias ações, como pausar, continuar, iniciar ou parar
    contêineres, ou explorar as abas **Logs**, **Bind mounts**, **Exec**,
    **Files** e **Stats**.
 
@@ -112,10 +110,9 @@ desenvolvedoras ao otimizar a instalação, configuração e compatibilidade de
 aplicações em diferentes ambientes, abordando assim os pontos problemáticos de
 inconsistências de ambiente e desafios de implantação.
 
-## O que vem a seguir?
+## Próximos passos
 
 Agora que você instalou o Docker Desktop e executou seu primeiro contêiner, é
 hora de começar a desenvolver com contêineres.
 
 {{< button text="Desenvolva com contêineres" url="develop-with-containers" >}}
-
