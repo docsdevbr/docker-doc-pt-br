@@ -71,5 +71,5 @@ Consulte a seção a seguir e escolha a melhor forma de instalação para você.
 
 > [!NOTE]
 >
-> Se você estiver procurando informações sobre como instalar o Docker Engine,
+> Se você estiver procurando informações sobre como instalar a Docker Engine,
 > consulte a [visão geral da instalação da Docker Engine](/engine/install/).
