@@ -25,7 +25,7 @@ aliases:
   - /learning-paths/
 ---
 
-Explore nossa coleção de guias para saber como o Docker pode otimizar seus
+Explore nossa coleção de guias para aprender como o Docker pode otimizar seus
 fluxos de trabalho de desenvolvimento e como usá-lo com linguagens, frameworks
 ou tecnologias específicos.
 
