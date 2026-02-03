@@ -15,12 +15,12 @@ status: ready
 
 title: Desenvolva com contêineres
 keywords: conceitos, construção, imagens, contêiner, docker desktop
-description: Esta página conceitual ensinará como desenvolver com contêineres.
+description: Esta página conceitual ensinará você a desenvolver com contêineres.
 summary: >-
   Aprenda a executar seu primeiro contêiner, ganhando experiência prática com os
   recursos poderosos do Docker.
   Abordaremos como fazer alterações em tempo real no código de back-end e
-  front-end dentro do ambiente em contêiner, garantindo integração e testes
+  front-end dentro do ambiente conteinerizado, garantindo integração e testes
   perfeitos.
 weight: 2
 aliases:
@@ -31,12 +31,11 @@ aliases:
 
 ## Explicação
 
-Agora que você instalou o Docker Desktop, já pode fazer algum desenvolvimento de
-aplicação.
+Agora que você instalou o Docker Desktop, já pode desenvolver alguma aplicação.
 Especificamente, você fará o seguinte:
 
-1. Clonar e iniciar um projeto de desenvolvimento;
-2. Fazer alterações no back-end e front-end;
+1. Clonar e iniciar um projeto de desenvolvimento.
+2. Fazer alterações no back-end e front-end.
 3. Ver as alterações imediatamente.
 
 ## Experimente
@@ -46,7 +45,8 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
 ## Inicie o projeto
 
 1. Para começar, clone ou
-   [baixe o projeto como um arquivo ZIP para sua máquina local](https://github.com/docker/getting-started-todo-app/archive/refs/heads/main.zip).
+   [baixe o projeto como um arquivo ZIP](https://github.com/docker/getting-started-todo-app/archive/refs/heads/main.zip)
+   para sua máquina local.
 
    ```console
    $ git clone https://github.com/docker/getting-started-todo-app
@@ -59,7 +59,7 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
    $ cd getting-started-todo-app
    ```
 
-2. Depois de ter o projeto, inicie o ambiente de desenvolvimento usando o Docker
+2. Após ter o projeto, inicie o ambiente de desenvolvimento usando o Docker
    Compose.
 
    Para iniciar o projeto usando a CLI, execute o seguinte comando:
@@ -71,9 +71,9 @@ Neste guia prático, você aprenderá como desenvolver com contêineres.
    Você verá uma saída que mostra imagens de contêineres sendo baixadas,
    contêineres iniciando e mais.
    Não se preocupe se você não entender tudo neste ponto.
-   Mas, dentro de um momento ou dois, as coisas devem se estabilizar e terminar.
+   Mas, em um momento ou dois, as coisas devem se estabilizar e terminar.
 
-3. Abra seu navegador em [http://localhost](http://localhost) para ver a
+4. Abra seu navegador em [http://localhost](http://localhost) para ver a
    aplicação instalada e funcionando.
    Pode levar alguns minutos para a aplicação ser executada.
    A aplicação é uma aplicação de tarefas simples, então sinta-se à vontade para
@@ -88,14 +88,14 @@ Agora que o ambiente está instalado e funcionando, o que realmente há nele?
 Em um alto nível, há vários contêineres (ou processos) que atendem a uma
 necessidade específica da aplicação:
 
-* Front-end React - um contêiner Node que está executando o servidor de
+- Front-end React - um contêiner Node que está executando o servidor de
   desenvolvimento React, usando [Vite](https://vitejs.dev/).
-* Back-end Node - o back-end fornece uma API que fornece a capacidade de
+- Back-end Node - o back-end fornece uma API que fornece a capacidade de
   recuperar, criar e excluir itens de tarefas.
-* Banco de dados MySQL - um banco de dados para armazenar a lista de itens.
-* phpMyAdmin - uma interface web para interagir com o banco de dados que pode
+- Banco de dados MySQL - um banco de dados para armazenar a lista de itens.
+- phpMyAdmin - uma interface web para interagir com o banco de dados que pode
   ser acessada em [http://db.localhost](http://db.localhost).
-* Proxy Traefik - Traefik é um proxy de aplicação que roteia requisições para o
+- Proxy Traefik - Traefik é um proxy de aplicação que roteia requisições para o
   serviço correto.
   Ele envia todas as requisições para `localhost/api/*` para o back-end,
   requisições para `localhost/*` para o front-end e, finalmente, requisições
@@ -111,12 +111,12 @@ O resto simplesmente funciona.
 
 ## Faça alterações na aplicação
 
-Com esse ambiente instalado e funcionando, você já pode fazer algumas alterações
+Com esse ambiente instalado e funcionando, você pode fazer algumas alterações
 na aplicação e ver como o Docker ajuda a fornecer um ciclo rápido de resposta.
 
 ### Altere a saudação
 
-A saudação no topo da página é preenchida por uma chamada de API a
+A saudação no topo da página é preenchida por uma chamada de API para
 `/api/greeting`.
 Atualmente, ela sempre retorna "Hello world!".
 Agora você a modificará para retornar uma das três mensagens aleatórias (que
@@ -147,7 +147,7 @@ você poderá escolher).
 
 3. Se você ainda não fez isso, salve o arquivo.
    Se você atualizar seu navegador, deverá ver uma nova saudação.
-   Se você continuar atualizando, deverá ver todas as mensagens aparecerem.
+   Caso continue atualizando, deverá ver todas as mensagens aparecerem.
 
    ![Captura de tela da aplicação de tarefas com uma nova saudação](images/develop-app-with-greetings.webp)
 
@@ -217,18 +217,18 @@ E com isso, você terminou. Parabéns por atualizar seu site.
 Antes de prosseguir, reserve um momento e reflita sobre o que aconteceu aqui.
 Em poucos instantes, você conseguiu:
 
-* Iniciar um projeto de desenvolvimento completo com esforço zero de instalação.
+- Iniciar um projeto de desenvolvimento completo com esforço zero de instalação.
   O ambiente conteinerizado forneceu o ambiente de desenvolvimento, garantindo
   que você tenha tudo o que precisa.
   Você não precisou instalar o Node, MySQL ou qualquer outra dependência
   diretamente na sua máquina.
   Tudo o que você precisou foi o Docker Desktop e um editor de código.
 
-* Fazer alterações e vê-las imediatamente.
+- Fazer alterações e vê-las imediatamente.
   Isso foi possível porque:
     1. Os processos em execução em cada contêiner estão observando e respondendo
-      às alterações de arquivo e;
-    2. Os arquivos são compartilhados com o ambiente em contêiner.
+       às alterações de arquivo e;
+    2. Os arquivos são compartilhados com o ambiente conteinerizado.
 
 O Docker Desktop permite tudo isso e muito mais.
 Depois que você começar a pensar com contêineres, poderá criar quase qualquer
@@ -241,4 +241,3 @@ empacotá-la como uma imagem de contêiner e enviá-la para um registro,
 especificamente o Docker Hub.
 
 {{< button text="Crie e envie sua primeira imagem" url="build-and-push-first-image" >}}
-
