@@ -15,8 +15,7 @@ status: ready
 ---
 
 O atributo `networks` define as redes às quais os contêineres de serviço estão
-conectados, fazendo referência às entradas no elemento de nível superior
-`networks`.
+conectados, referenciando as entradas no elemento de nível superior `networks`.
 O atributo `networks` ajuda a gerenciar os aspectos de rede dos contêineres,
 fornecendo controle sobre como os serviços são segmentados e interagem dentro do
 ambiente Docker.
