@@ -15,7 +15,7 @@ status: ready
 ---
 
 O atributo `volumes` define caminhos de montagem de hosts ou volumes nomeados
-que são acessíveis por contêineres de serviço.
+acessíveis por contêineres de serviço.
 Você pode usar `volumes` para definir vários tipos de montagens: `volume`,
 `bind`, `tmpfs` ou `npipe`.
 
