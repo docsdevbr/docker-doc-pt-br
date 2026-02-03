@@ -13,8 +13,8 @@ source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/secu
 revision: 89344f43f19c68ef2d6941de0a5633ff6f1754e5
 status: ready
 
-description: Dicas para o modo sem privilégios de root
-keywords: segurança, namespaces, sem privilégios de root
+description: Dicas para o modo sem root
+keywords: segurança, namespaces, sem root
 title: Dicas
 weight: 20
 ---
@@ -43,7 +43,7 @@ $ systemctl --user enable docker
 $ sudo loginctl enable-linger $(whoami)
 ```
 
-Iniciar o Docker sem privilégios de root como um serviço do systemd
+Iniciar o Docker sem root como um serviço do systemd
 (`/etc/systemd/system/docker.service`) não é suportado, mesmo com a diretiva
 `User=`.
 
@@ -53,9 +53,9 @@ Iniciar o Docker sem privilégios de root como um serviço do systemd
 Para executar o daemon diretamente sem o systemd, você precisa executar
 `dockerd-rootless.sh` em vez de `dockerd`.
 
-As seguintes variáveis ​​de ambiente devem ser definidas:
+As seguintes variáveis de ambiente devem ser definidas:
 
-- `$HOME`: o diretório home;
+- `$HOME`: o diretório home.
 - `$XDG_RUNTIME_DIR`: um diretório temporário acessível apenas pelo usuário
   esperado, por exemplo, `~/.docker/run`.
   O diretório deve ser removido a cada desligamento do host.
@@ -68,9 +68,9 @@ As seguintes variáveis ​​de ambiente devem ser definidas:
 É importante observar que, em relação aos caminhos de diretório:
 
 - O caminho do socket é definido como `$XDG_RUNTIME_DIR/docker.sock` por padrão.
-  `$XDG_RUNTIME_DIR` geralmente é definido como `/run/user/$UID`;
+  `$XDG_RUNTIME_DIR` geralmente é definido como `/run/user/$UID`.
 - O diretório de dados é definido como `~/.local/share/docker` por padrão.
-  O diretório de dados não deve estar em NFS;
+  O diretório de dados não deve estar em NFS.
 - O diretório de configuração do daemon é definido como `~/.config/docker` por
   padrão.
   Este diretório é diferente de `~/.docker`, que é usado pelo cliente.
@@ -101,11 +101,10 @@ $ docker run -d -p 8080:80 nginx
 
 ## Boas práticas
 
-### Docker sem privilégios de root no Docker
+### Docker sem root no Docker
 
-Para executar o Docker sem privilégios de root dentro do Docker com privilégios
-de root, use a imagem `docker:<versão>-dind-rootless` em vez de
-`docker:<versão>-dind`.
+Para executar o Docker sem root dentro do Docker com privilégios de root, use a
+imagem `docker:<versão>-dind-rootless` em vez de `docker:<versão>-dind`.
 
 ```console
 $ docker run -d --name dind-rootless --privileged docker:25.0-dind-rootless
@@ -171,9 +170,9 @@ Consulte
 habilitar o cgroup v2.
 
 Se `docker info` mostrar `none` como `Cgroup Driver`, as condições não foram
-atendidas.
-Quando essas condições não são satisfeitas, o modo sem privilégios de root
-ignora os parâmetros `docker run` relacionados a cgroups.
+satisfeitas.
+Quando essas condições não são satisfeitas, o modo sem root ignora os parâmetros
+`docker run` relacionados a cgroups.
 Consulte
 [Limitando recursos sem cgroup](#limiting-resources-without-cgroup) para
 soluções alternativas.
@@ -214,9 +213,9 @@ desativados arbitrariamente pelo processo do contêiner.
 Por exemplo:
 
 - Para limitar o uso da CPU a 0,5 núcleo (similar a `docker run --cpus 0.5`):
-  `docker run <IMAGE> cpulimit --limit=50 --include-children <COMMAND>`
+  `docker run <IMAGE> cpulimit --limit=50 --include-children <COMMAND>`.
 - Para limitar o VSZ máximo a 64 MiB (similar a `docker run --memory 64m`):
-  `docker run <IMAGE> sh -c "ulimit -v 65536; <COMMAND>"`
+  `docker run <IMAGE> sh -c "ulimit -v 65536; <COMMAND>"`.
 - Para limitar o número máximo de processos a 100 por UID de namespace 2000
   (similar a `docker run --pids-limit=100`):
-  `docker run --user 2000 --ulimit nproc=100 <IMAGE> <COMMAND>`
+  `docker run --user 2000 --ulimit nproc=100 <IMAGE> <COMMAND>`.
