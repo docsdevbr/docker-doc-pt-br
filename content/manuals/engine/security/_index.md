@@ -28,12 +28,12 @@ aliases:
 Há quatro áreas principais a serem consideradas ao analisar a segurança do
 Docker:
 
-- A segurança intrínseca do kernel e seu suporte a namespaces e cgroups;
-- A superfície de ataque do próprio daemon do Docker;
+- A segurança intrínseca do kernel e seu suporte a namespaces e cgroups.
+- A superfície de ataque do próprio daemon do Docker.
 - Brechas no perfil de configuração do contêiner, seja por padrão, ou quando
-personalizado pelas pessoas usuárias;
-- Os recursos de segurança de "endurecimento" do kernel e como eles interagem
-com os contêineres.
+  personalizado por pessoas usuárias.
+- Os recursos de segurança de "reforço" do kernel e como eles interagem com os
+  contêineres.
 
 ## Namespaces do kernel
 
@@ -43,8 +43,8 @@ Ao iniciar um contêiner com `docker run`, o Docker cria, nos bastidores, um
 conjunto de namespaces e grupos de controle para o contêiner.
 
 Os namespaces fornecem a primeira e mais direta forma de isolamento.
-Os processos em execução dentro de um contêiner não podem ver, e muito menos
-afetar, os processos em execução em outro contêiner ou no sistema host.
+Os processos em execução em um contêiner não podem ver, e muito menos afetar, os
+processos em execução em outro contêiner ou no sistema host.
 
 Cada contêiner também recebe sua própria pilha de rede, o que significa que um
 contêiner não obtém acesso privilegiado aos sockets ou interfaces de outro
@@ -66,15 +66,14 @@ Quão maduro é o código que fornece namespaces do kernel e redes privadas?
 Os namespaces do kernel foram introduzidos
 [entre as versões 2.6.15 e 2.6.26 do kernel](https://man7.org/linux/man-pages/man7/namespaces.7.html).
 Isso significa que, desde julho de 2008 (data do lançamento da versão 2.6.26), o
-código de namespaces foi testado e analisado em um grande número de sistemas de
-produção.
+código de namespaces foi testado e analisado em inúmeros sistemas de produção.
 E tem mais: o design e a inspiração para o código de namespaces são ainda mais
 antigos.
 Na verdade, os namespaces são um esforço para reimplementar os recursos do
 [OpenVZ](https://en.wikipedia.org/wiki/OpenVZ) de forma que pudessem ser
 integrados ao kernel principal.
 E o OpenVZ foi lançado inicialmente em 2005, então tanto o design quanto a
-implementação são bastante maduros.
+implementação são bem maduros.
 
 ## Grupos de controle
 
@@ -99,10 +98,10 @@ Os grupos de controle também existem há algum tempo: o código foi iniciado em
 Executar contêineres (e aplicações) com o Docker implica executar o daemon do
 Docker.
 Este daemon requer privilégios de `root`, a menos que você opte pelo
-[Modo sem privilégios de root](rootless.md), e, portanto, você deve estar ciente de alguns
+[Modo sem root](rootless.md), e, portanto, você deve estar ciente de alguns
 detalhes importantes.
 
-Primeiramente, somente pessoas usuárias confiáveis ​​devem ter permissão para
+Primeiramente, somente pessoas usuárias confiáveis devem ter permissão para
 controlar o seu daemon do Docker.
 Isso é uma consequência direta de alguns recursos poderosos do Docker.
 Especificamente, o Docker permite que você compartilhe um diretório entre o host
@@ -185,37 +184,36 @@ configuração de rede, e muito mais.
 Um contêiner é diferente, porque quase todas essas tarefas são gerenciadas pela
 infraestrutura ao redor do contêiner:
 
-- O acesso SSH geralmente é gerenciado por um único servidor em execução no host
-  Docker;
+- O acesso SSH é geralmente gerenciado por um único servidor em execução no host
+  Docker.
 - O `cron`, quando necessário, deve ser executado como um processo de usuário
   dedicado e personalizado para a aplicação que precisa do seu serviço de
-  agendamento, em vez de como um recurso de toda a plataforma;
+  agendamento, em vez de como um recurso de toda a plataforma.
 - O gerenciamento de logs também geralmente é delegado ao Docker ou a serviços
-  de terceiros como Loggly ou Splunk;
+  de terceiros como Loggly ou Splunk.
 - O gerenciamento de hardware é irrelevante, o que significa que você nunca
-  precisa executar `udevd` ou daemons equivalentes dentro de contêineres;
+  precisa executar `udevd` ou daemons equivalentes dentro de contêineres.
 - O gerenciamento de redes ocorre fora dos contêineres, reforçando a separação
   de responsabilidades o máximo possível, o que significa que um contêiner nunca
   deve precisar executar comandos `ifconfig`, `route` ou `ip` (exceto quando um
   contêiner é especificamente projetado para se comportar como um roteador ou
   firewall, é claro).
 
-Isso significa que, na maioria dos casos, os contêineres não precisam de
-privilégios de root "reais" e, portanto, podem ser executados com um conjunto de
-capacidades reduzido; isso significa que o "root" dentro de um contêiner tem
-muito menos privilégios do que o "root" real.
+Isso significa que, geralmente, os contêineres não precisam de privilégios de
+root "reais" e, portanto, podem ser executados com um conjunto de capacidades
+reduzido; isso significa que o "root" em um contêiner tem muito menos
+privilégios do que o "root" real.
 Por exemplo, é possível:
 
-- Negar todas as operações de "montagem";
-- Negar acesso a sockets brutos (para evitar falsificação de pacotes);
+- Negar todas as operações de "montagem".
+- Negar acesso a sockets brutos (para evitar falsificação de pacotes).
 - Negar acesso a algumas operações do sistema de arquivos, como criar novos nós
   de dispositivo, alterar o proprietário de arquivos ou alterar atributos
-  (incluindo o sinalizador imutável);
+  (incluindo a flag imutável).
 - Negar o carregamento de módulos.
 
-Isso significa que, mesmo que uma pessoa invasora consiga escalar para root
-dentro de um contêiner, é muito mais difícil causar danos sérios ou escalar para
-o host.
+Isso significa que, mesmo que uma pessoa invasora consiga escalar para root em
+um contêiner, é muito mais difícil causar danos sérios ou escalar para o host.
 
 Isso não afeta aplicações web comuns, mas reduz consideravelmente os vetores de
 ataque por pessoas usuárias maliciosas.
@@ -253,7 +251,8 @@ disponíveis anteriormente com a CLI para impor e realizar a verificação de
 assinatura de imagem.
 
 Para obter mais informações sobre como configurar a verificação de assinatura do
-Docker Content Trust, consulte [Content trust no Docker](trust/_index.md).
+Docker Content Trust, consulte
+[Confiança de conteúdo no Docker](trust/_index.md).
 
 ## Outros recursos de segurança do kernel
 
@@ -264,8 +263,8 @@ AppArmor, SELinux, GRSEC, etc., com o Docker.
 
 Embora o Docker atualmente habilite apenas capacidades, ele não interfere com os
 outros sistemas.
-Isso significa que existem muitas maneiras diferentes de reforçar a segurança de
-um host Docker.
+Isso significa que existem muitas maneiras de reforçar a segurança de um host
+Docker.
 Aqui estão alguns exemplos:
 
 - Você pode executar um kernel com GRSEC e PAX.
@@ -273,13 +272,13 @@ Aqui estão alguns exemplos:
   quanto em tempo de execução; também impede muitas explorações, graças a
   técnicas como randomização de endereços.
   Não requer configuração específica do Docker, já que esses recursos de
-  segurança se aplicam a todo o sistema, independentemente dos contêineres;
+  segurança se aplicam a todo o sistema, independentemente dos contêineres.
 - Se sua distribuição vier com modelos de segurança para contêineres Docker,
   você pode usá-los imediatamente.
   Por exemplo, nós fornecemos um template que funciona com o AppArmor e a Red
   Hat vem com políticas SELinux para o Docker.
   Esses templates fornecem uma camada extra de segurança (mesmo que haja grande
-  sobreposição com as capacidades);
+  sobreposição com as capacidades).
 - Você pode definir suas próprias políticas usando seu mecanismo de controle de
   acesso favorito.
 
@@ -289,7 +288,7 @@ compartilhados, existem ferramentas para reforçar a segurança de contêineres
 Docker sem a necessidade de modificar o próprio Docker.
 
 A partir do Docker 1.10, os namespaces de usuário são suportados diretamente
-pelo daemon docker.
+pelo daemon do Docker.
 Esse recurso permite que o usuário root em um contêiner seja mapeado para um
 usuário com UID diferente de 0 fora do contêiner, o que pode ajudar a mitigar os
 riscos de vazamento de dados do contêiner.
@@ -310,7 +309,7 @@ executar seus processos como usuários sem privilégios de administrador dentro 
 contêiner.
 
 Você pode adicionar uma camada extra de segurança habilitando o AppArmor,
-SELinux, GRSEC ou outro sistema de segurança apropriado.
+SELinux, GRSEC ou outro sistema de reforço de segurança apropriado.
 
 Se você tiver ideias para tornar o Docker mais seguro, ficaremos felizes em
 receber sugestões de recursos, pull requests ou comentários nos fóruns da
@@ -318,8 +317,8 @@ comunidade Docker.
 
 ## Informações relacionadas
 
-* [Use imagens confiáveis](trust/_index.md)
-* [Perfis de segurança Seccomp para o Docker](seccomp.md)
-* [Perfis de segurança AppArmor para o Docker](apparmor.md)
-* [Sobre a segurança de contêineres (2014)](https://medium.com/@ewindisch/on-the-security-of-containers-2c60ffe25a9e)
-* [Modelo de segurança de rede overlay do modo swarm do Docker](/manuals/engine/network/drivers/overlay.md)
+- [Use imagens confiáveis](trust/_index.md)
+- [Perfis de segurança Seccomp para o Docker](seccomp.md)
+- [Perfis de segurança AppArmor para o Docker](apparmor.md)
+- [Sobre a segurança de contêineres (2014)](https://medium.com/@ewindisch/on-the-security-of-containers-2c60ffe25a9e)
+- [Modelo de segurança de rede overlay do modo swarm do Docker](/manuals/engine/network/drivers/overlay.md)
