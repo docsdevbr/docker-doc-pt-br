@@ -15,5 +15,5 @@ status: ready
 ---
 
 O atributo `secrets` concede acesso a dados sensíveis definidos pelo elemento de
-nível superior `secrets` para cada serviço individualmente.
+nível superior `secrets` para cada serviço.
 Os serviços podem ter acesso a múltiplos segredos.
