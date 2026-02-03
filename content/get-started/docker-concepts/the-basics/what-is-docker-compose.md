@@ -26,8 +26,8 @@ aliases:
 
 ## Explicação
 
-Se você seguiu os guias até agora, trabalhou provavelmente com aplicações de
-contêiner único.
+Se você seguiu os guias até agora, trabalhou provavelmente com aplicações de um
+único contêiner.
 Mas, agora você quer fazer algo mais complexo: executar bancos de dados, filas
 de mensagens, caches ou uma variedade de outros serviços.
 Você instala tudo em um único contêiner?
