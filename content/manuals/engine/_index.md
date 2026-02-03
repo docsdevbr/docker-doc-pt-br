@@ -16,16 +16,16 @@ status: ready
 title: Docker Engine
 weight: 10
 description: >-
-  Encontre uma visão geral completa do Docker Engine, incluindo instruções de
+  Encontre uma visão geral completa da Docker Engine, incluindo instruções de
   instalação, detalhes de armazenamento, rede e muito mais.
 keywords: Engine
 params:
   sidebar:
     group: Open source
 grid:
-  - title: Instalar o Docker Engine
+  - title: Instale a Docker Engine
     description: >-
-      Aprenda como instalar o Docker Engine de código aberto para sua
+      Aprenda como instalar a Docker Engine de código aberto para sua
       distribuição.
     icon: download
     link: /engine/install
@@ -49,13 +49,13 @@ grid:
     description: Explore as opções de configuração do daemon do Docker.
     icon: tune
     link: /config/daemon
-  - title: Modo sem privilégios de root
+  - title: Modo sem root
     description: Execute o Docker sem privilégios de root.
     icon: security
     link: /engine/security/rootless
   - title: Recursos obsoletos
     description: >-
-      Descubra quais recursos do Docker Engine você deve parar de usar.
+      Descubra quais recursos da Docker Engine você deve parar de usar.
     icon: folder_delete
     link: /engine/deprecated/
   - title: Notas de lançamento
@@ -70,9 +70,9 @@ grid:
     - /linux/
 ---
 
-O Docker Engine é uma tecnologia de conteinerização de código aberto para
+A Docker Engine é uma tecnologia de conteinerização de código aberto para
 construir e conteinerizar suas aplicações.
-O Docker Engine funciona como uma aplicação cliente-servidor com:
+A Docker Engine funciona como uma aplicação cliente-servidor com:
 
 - Um servidor com um processo daemon de longa duração
   [`dockerd`](/reference/cli/dockerd).
@@ -94,9 +94,9 @@ Para obter mais detalhes, consulte a
 
 ## Licenciamento
 
-O uso comercial do Docker Engine obtido via Docker Desktop em grandes empresas
-(com mais de 250 funcionários OU com receita anual superior a US$ 10 milhões)
-requer uma [assinatura paga](https://www.docker.com/pricing/).
+O uso comercial da Docker Engine obtido via Docker Desktop em grandes empresas
+(com mais de 250 pessoas funcionárias OU com receita anual superior a US$ 10
+milhões) requer uma [assinatura paga](https://www.docker.com/pricing/).
 Licença Apache, versão 2.0.
 Consulte o arquivo [LICENSE](https://github.com/moby/moby/blob/master/LICENSE)
 para obter a licença completa.
