@@ -19,6 +19,6 @@ que pode ser escalado ou substituído independentemente de outros componentes.
 Os serviços são suportados por um conjunto de contêineres, executados pela
 plataforma conforme os requisitos de replicação e restrições de alocação.
 Como os serviços são suportados por contêineres, eles são definidos por uma
-imagem Docker e um conjunto de argumentos de tempo de execução.
+imagem Docker e um conjunto de argumentos do tempo de execução.
 Todos os contêineres em um serviço são criados de forma idêntica com esses
 argumentos.
