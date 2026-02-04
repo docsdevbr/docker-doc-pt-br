@@ -37,8 +37,8 @@ download-url-base: https://download.docker.com/linux/centos
 ---
 
 Para começar a usar a Docker Engine no CentOS, certifique-se de que você
-[atende aos pré-requisitos](#prerequisites) e, em seguida, siga as
-[etapas de instalação](#installation-methods).
+[atende aos pré-requisitos](#pré-requisitos) e, em seguida, siga as
+[etapas de instalação](#métodos-de-instalação).
 
 ## Pré-requisitos
 
@@ -85,22 +85,22 @@ Você pode instalar a Docker Engine de diferentes maneiras, dependendo das suas
 necessidades:
 
 - Você pode
-  [configurar os repositórios do Docker](#install-using-the-repository) e
+  [configurar os repositórios do Docker](#instale-usando-o-repositório) e
   instalar a partir deles, para facilitar as tarefas de instalação e
   atualização.
   Esta é a abordagem recomendada.
 
 - Você pode baixar o pacote RPM,
-  [instalá-lo manualmente](#install-from-a-package) e gerenciar as atualizações
-  completamente de forma manual.
+  [instalá-lo manualmente](#instale-a-partir-de-um-pacote) e gerenciar as
+  atualizações completamente de forma manual.
   Isso é útil em situações como a instalação do Docker em sistemas isolados da
   internet.
 
 - Em ambientes de teste e desenvolvimento, você pode usar
-  [scripts automatizados](#install-using-the-convenience-script) para instalar o
-  Docker.
+  [scripts automatizados](#instale-usando-o-script-de-conveniência) para
+  instalar o Docker.
 
-### Instale usando o repositório rpm {#install-using-the-repository}
+### Instale usando o repositório rpm {#instale-usando-o-repositório}
 
 Antes de instalar a Docker Engine pela primeira vez em uma nova máquina host,
 você precisa configurar o repositório do Docker.
@@ -121,7 +121,7 @@ $ sudo dnf config-manager --add-repo {{% param "download-url-base" %}}/docker-ce
 1. Instale os pacotes do Docker.
 
    {{< tabs >}}
-   {{< tab name="Mais recente" >}}
+   {{< tab name="Versão mais recente" >}}
 
    Para instalar a versão mais recente, execute:
 
@@ -201,7 +201,7 @@ Você instalou e iniciou a Docker Engine com sucesso.
 #### Atualize a Docker Engine
 
 Para atualizar a Docker Engine, siga as
-[instruções de instalação](#install-using-the-repository), escolhendo a nova
+[instruções de instalação](#instale-usando-o-repositório), escolhendo a nova
 versão que deseja instalar.
 
 ### Instale a partir de um pacote
@@ -257,7 +257,7 @@ Você instalou e iniciou a Docker Engine com sucesso.
 #### Atualize a Docker Engine
 
 Para atualizar a Docker Engine, baixe os arquivos de pacote mais recentes e
-repita o [procedimento de instalação](#install-from-a-package), usando
+repita o [procedimento de instalação](#instale-a-partir-de-um-pacote), usando
 `dnf upgrade` em vez de `dnf install`, e aponte para os novos arquivos.
 
 {{% include "install-script.md" %}}
