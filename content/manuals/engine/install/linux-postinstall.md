@@ -78,8 +78,8 @@ Para criar o grupo `docker` e adicionar seu usuário:
    reavaliada.
 
    > Se você estiver executando o Linux em uma máquina virtual, pode ser
-   > necessário reiniciar a máquina virtual para que as alterações entrem em
-   > vigor.
+   > necessário reiniciar a máquina virtual para que as alterações tenham
+   > efeito.
 
    Você também pode executar o seguinte comando para ativar as alterações nos
    grupos:
@@ -140,7 +140,7 @@ $ sudo systemctl disable containerd.service
 
 Você pode usar arquivos de unidade do systemd para configurar o serviço Docker
 na inicialização, por exemplo, para adicionar um proxy HTTP, definir um
-diretório ou partição diferente para os arquivos de tempo de execução do Docker
+diretório ou partição diferente para os arquivos do tempo de execução do Docker
 ou outras personalizações.
 Para obter um exemplo, consulte
 [Configure o daemon para usar um proxy](/manuals/engine/daemon/proxy.md#systemd-unit-file).
