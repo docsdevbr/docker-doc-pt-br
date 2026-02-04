@@ -66,22 +66,22 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
 
 Algumas das instruções mais comuns em um `Dockerfile` incluem:
 
-* `FROM <imagem>` - especifica a imagem base que a construção estenderá;
-* `WORKDIR <caminho>` - esta instrução especifica o "diretório de trabalho" ou o
+- `FROM <imagem>` - Especifica a imagem base que a construção estenderá.
+- `WORKDIR <caminho>` - Esta instrução especifica o "diretório de trabalho" ou o
   caminho na imagem onde os arquivos serão copiados e os comandos serão
-  executados;
-* `COPY <caminho-no-host> <caminho-na-imagem>` - esta instrução informa ao
+  executados.
+- `COPY <caminho-no-host> <caminho-na-imagem>` - Esta instrução informa ao
   construtor para copiar os arquivos do host e colocá-los na imagem do
-  contêiner;
-* `RUN <comando>` - esta instrução informa ao construtor para executar o comando
-  especificado;
-* `ENV <nome> <valor>` - esta instrução define uma variável de ambiente que um
-  contêiner em execução usará;
-* `EXPOSE <numero-da-porta>` - esta instrução define a configuração na imagem
-  que indica uma porta que a imagem gostaria de expor;
-* `USER <usuario-ou-uid>` - esta instrução define o usuário padrão para todas as
-  instruções subsequentes;
-* `CMD ["<comando>", "<arg1>"]` - esta instrução define o comando padrão que um
+  contêiner.
+- `RUN <comando>` - Esta instrução informa ao construtor para executar o comando
+  especificado.
+- `ENV <nome> <valor>` - Esta instrução define uma variável de ambiente que um
+  contêiner em execução usará.
+- `EXPOSE <numero-da-porta>` - Esta instrução define a configuração na imagem
+  que indica uma porta que a imagem gostaria de expor.
+- `USER <usuario-ou-uid>` - Esta instrução define o usuário padrão para todas as
+  instruções subsequentes.
+- `CMD ["<comando>", "<arg1>"]` - Esta instrução define o comando padrão que um
   contêiner que usa esta imagem executará.
 
 Para ler todas as instruções ou entrar em mais detalhes, confira a
@@ -92,9 +92,9 @@ Para ler todas as instruções ou entrar em mais detalhes, confira a
 Assim como você viu no exemplo anterior, um Dockerfile normalmente segue estas
 etapas:
 
-1. Determina a imagem base;
-2. Instala as dependências da aplicação;
-3. Copia qualquer código-fonte e/ou binários relevantes;
+1. Determina a imagem base.
+2. Instala as dependências da aplicação.
+3. Copia qualquer código-fonte e/ou binários relevantes.
 4. Configura a imagem final.
 
 Neste guia prático rápido, você escreverá um Dockerfile que cria uma aplicação
@@ -114,7 +114,7 @@ https://github.com/docker/getting-started-todo-app e faça o checkout do branch
 
 ### Criando o Dockerfile
 
-Agora que você tem o projeto, está pronta para criar o `Dockerfile`.
+Agora que você tem o projeto, pode criar o `Dockerfile`.
 
 1. [Baixe e instale](https://www.docker.com/products/docker-desktop/) o Docker
    Desktop.
@@ -209,14 +209,14 @@ Agora que você tem o projeto, está pronta para criar o `Dockerfile`.
 
 Para saber mais sobre como escrever um Dockerfile, visite os seguintes recursos:
 
-* [Referência do Dockerfile](/reference/dockerfile/)
-* [Melhores práticas do Dockerfile](/develop/develop-images/dockerfile_best-practices/)
-* [Imagens base](/build/building/base-images/)
-* [Introdução ao `docker init`](/reference/cli/docker/init/)
+- [Referência do Dockerfile](/reference/dockerfile/)
+- [Melhores práticas do Dockerfile](/develop/develop-images/dockerfile_best-practices/)
+- [Imagens base](/build/building/base-images/)
+- [Começando com `docker init`](/reference/cli/docker/init/)
 
 ## Próximos passos
 
 Agora que você criou um Dockerfile e aprendeu o básico, é hora de aprender a
-construir, adicionar tags e enviar as imagens.
+construir, criar tags e publicar as imagens.
 
 {{< button text="Construa, crie tags e publique a imagem" url="build-tag-and-publish-an-image" >}}
