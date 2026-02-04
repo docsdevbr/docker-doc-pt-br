@@ -125,7 +125,7 @@ antecipado que estão sujeitos a alterações que podem causar incompatibilidade
 
 A Docker Engine é um projeto de código aberto, mantido pelos mantenedores do
 projeto Moby e membros da comunidade.
-O Docker não oferece suporte ao Docker Engine.
+O Docker não oferece suporte à Docker Engine.
 O Docker oferece suporte aos produtos Docker, incluindo o Docker Desktop, que
 usa a Docker Engine como um de seus componentes.
 
