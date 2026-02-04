@@ -82,7 +82,7 @@ Cada imagem inclui metadados de segurança completos e verificáveis:
 - Suporte a glibc e musl: Disponível em ambas as variantes para ampla
   compatibilidade de aplicações.
 - Variantes de desenvolvimento e tempo de execução: Use imagens de
-  desenvolvimento para compilação e imagens de tempo de execução mínimas para
+  desenvolvimento para compilação e imagens do tempo de execução mínimas para
   produção.
 - Compatibilidade imediata: Funciona perfeitamente com fluxos de trabalho Docker
   existentes, pipelines de CI/CD e ferramentas.
