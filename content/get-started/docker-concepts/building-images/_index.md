@@ -42,8 +42,8 @@ produção.
 
 ## O que você aprenderá
 
-* Entender camadas de imagem
-* Escrever um Dockerfile
-* Construir, adicionar tags e publicar uma imagem
-* Usar o cache de construção
-* Contruções em vários estágios
+- Entender camadas de imagem.
+- Escrever um Dockerfile.
+- Construir, adicionar tags e publicar uma imagem.
+- Usar o cache de construção.
+- Contruções em vários estágios.
