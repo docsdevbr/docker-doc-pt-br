@@ -94,7 +94,7 @@ Para obter mais informações sobre como usar imagens, consulte:
 
 - [Use uma Imagem Docker Reforçada](./how-to/use.md) para uso geral.
 - [Use no Kubernetes](./how-to/k8s.md) para implantações no Kubernetes.
-- [Use um chart do Helm](./how-to/helm.md) para implantações com o Helm.
+- [Use um chart Helm](./how-to/helm.md) para implantações com o Helm.
 
 ## Passo 3: compare com outras imagens
 
@@ -180,4 +180,4 @@ Aqui estão algumas maneiras de continuar:
   assinados, como SBOMs e procedência.
 
 - [Escaneie DHIs](./how-to/scan.md): Analise a imagem com o Docker Scout ou
-  outros scanners para identificar CVEs conhecidos.
+  outros escaneadores para identificar CVEs conhecidos.
