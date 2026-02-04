@@ -22,7 +22,7 @@ keywords: >-
   script de instalação do docker, servidor docker no ubuntu, instalar docker
   engine no ubuntu, instalar docker no servidor ubuntu, docker ce no ubuntu
   22.04, instalar docker ce no ubuntu, instalar docker engine no ubuntu
-title: Instalar a Docker Engine no Ubuntu
+title: Instale a Docker Engine no Ubuntu
 linkTitle: Ubuntu
 weight: 10
 toc_max: 4
@@ -73,10 +73,10 @@ Para começar a usar a Docker Engine no Ubuntu, certifique-se de que você
 Para instalar a Docker Engine, você precisa da versão de 64 bits de uma destas
 versões do Ubuntu:
 
-- Ubuntu Oracular 24.10
+- Ubuntu Questing 25.10
+- Ubuntu Plucky 25.04
 - Ubuntu Noble 24.04 (LTS)
 - Ubuntu Jammy 22.04 (LTS)
-- Ubuntu Focal 20.04 (LTS)
 
 A Docker Engine para Ubuntu é compatível com as arquiteturas x86_64 (ou amd64),
 armhf, arm64, s390x e ppc64le (ppc64el).
@@ -112,10 +112,10 @@ evitar conflitos com as versões incluídas na Docker Engine.
 Execute o seguinte comando para desinstalar todos os pacotes conflitantes:
 
 ```console
-$ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+$ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
 ```
 
-O `apt-get` pode informar que você não tem nenhum desses pacotes instalado.
+O `apt` pode informar que você não tem nenhum desses pacotes instalado.
 
 Imagens, contêineres, volumes e redes armazenados em `/var/lib/docker/` não são
 removidos automaticamente ao desinstalar o Docker.
@@ -141,6 +141,8 @@ necessidades:
 - Use um [script de conveniência](#instale-usando-o-script-de-conveniência).
   Recomendado apenas para ambientes de teste e desenvolvimento.
 
+{{% include "engine-license.md" %}}
+
 ### Instale usando o repositório `apt`
 
 Antes de instalar a Docker Engine pela primeira vez em uma nova máquina host,
@@ -151,18 +153,22 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
 
    ```bash
    # Adicione a chave GPG oficial do Docker:
-   sudo apt-get update
-   sudo apt-get install ca-certificates curl
+   sudo apt update
+   sudo apt install ca-certificates curl
    sudo install -m 0755 -d /etc/apt/keyrings
    sudo curl -fsSL {{% param "download-url-base" %}}/gpg -o /etc/apt/keyrings/docker.asc
    sudo chmod a+r /etc/apt/keyrings/docker.asc
 
    # Adicione o repositório às fontes do Apt:
-   echo \
-     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] {{% param "download-url-base" %}} \
-     $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
-     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-   sudo apt-get update
+   sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+   Types: deb
+   URIs: {{% param "download-url-base" %}}
+   Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+   Components: stable
+   Signed-By: /etc/apt/keyrings/docker.asc
+   EOF
+
+   sudo apt update
    ```
 
 2. Instale os pacotes do Docker.
@@ -173,7 +179,7 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
    Para instalar a versão mais recente, execute:
 
    ```console
-   $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   $ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
    {{< /tab >}}
@@ -183,11 +189,10 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
    versões disponíveis no repositório:
 
    ```console
-   # Liste as versões disponíveis:
-   $ apt-cache madison docker-ce | awk '{ print $3 }'
+   $ apt list --all-versions docker-ce
 
-   5:{{% param "docker_ce_version" %}}-1~ubuntu.24.04~noble
-   5:{{% param "docker_ce_version_prev" %}}-1~ubuntu.24.04~noble
+   docker-ce/noble 5:{{% param "docker_ce_version" %}}-1~ubuntu.24.04~noble <arquitetura>
+   docker-ce/noble 5:{{% param "docker_ce_version_prev" %}}-1~ubuntu.24.04~noble <arquitetura>
    ...
    ```
 
@@ -195,7 +200,7 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
 
    ```console
    $ VERSION_STRING=5:{{% param "docker_ce_version" %}}-1~ubuntu.24.04~noble
-   $ sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
+   $ sudo apt install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
    {{< /tab >}}
@@ -257,12 +262,25 @@ Engine.
      ./docker-compose-plugin_<versao>_<arquitetura>.deb
    ```
 
-   O daemon do Docker inicia automaticamente.
+   > [!NOTE]
+   >
+   > O serviço Docker inicia automaticamente após a instalação.
+   > Para verificar se o Docker está em execução, use:
+   >
+   > ```console
+   > $ sudo systemctl status docker
+   > ```
+   >
+   > Alguns sistemas podem ter esse comportamento desativado e exigirão uma
+   > inicialização manual:
+   >
+   > ```console
+   > $ sudo systemctl start docker
+   > ```
 
 6. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 
    ```console
-   $ sudo service docker start
    $ sudo docker run hello-world
    ```
 
@@ -287,7 +305,7 @@ os novos arquivos.
 1. Desinstale os pacotes Docker Engine, CLI, containerd e Docker Compose:
 
    ```console
-   $ sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+   $ sudo apt purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
    ```
 
 2. Imagens, contêineres, volumes ou arquivos de configuração personalizados em
@@ -302,7 +320,7 @@ os novos arquivos.
 3. Remover a lista de fontes e os keyrings.
 
    ```console
-   $ sudo rm /etc/apt/sources.list.d/docker.list
+   $ sudo rm /etc/apt/sources.list.d/docker.sources
    $ sudo rm /etc/apt/keyrings/docker.asc
    ```
 
