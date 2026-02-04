@@ -121,7 +121,7 @@ Imagens, contêineres, volumes e redes armazenados em `/var/lib/docker/` não s�
 removidos automaticamente ao desinstalar o Docker.
 Se você deseja começar com uma instalação limpa e prefere remover todos os dados
 existentes, leia a seção
-[desinstalar a Docker Engine](#desinstale-a-docker-engine).
+[Desinstale a Docker Engine](#desinstale-a-docker-engine).
 
 ## Métodos de instalação
 
@@ -196,7 +196,7 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
    ...
    ```
 
-   Selecione a versão desejada e instale:
+   Selecione e instale a versão desejada:
 
    ```console
    $ VERSION_STRING=5:{{% param "docker_ce_version" %}}-1~ubuntu.24.04~noble
@@ -205,6 +205,22 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
 
    {{< /tab >}}
    {{< /tabs >}}
+
+   > [!NOTE]
+   >
+   > O serviço Docker inicia automaticamente após a instalação.
+   > Para verificar se o Docker está em execução, use:
+   >
+   > ```console
+   > $ sudo systemctl status docker
+   > ```
+   >
+   > Alguns sistemas podem ter esse comportamento desativado e exigirão uma
+   > inicialização manual:
+   >
+   > ```console
+   > $ sudo systemctl start docker
+   > ```
 
 3. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 
