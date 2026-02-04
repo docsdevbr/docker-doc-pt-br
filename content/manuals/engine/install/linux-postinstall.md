@@ -9,145 +9,164 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-description: Find the recommended Docker Engine post-installation steps for Linux
-  users, including how to run Docker as a non-root user and more.
-keywords: run docker without sudo, docker running as root, docker post install, docker
-  post installation, run docker as non root, docker non root user, how to run docker
-  in linux, how to run docker linux, how to start docker in linux, run docker on linux
-title: Linux post-installation steps for Docker Engine
-linkTitle: Post-installation steps
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/linux-postinstall.md
+revision: f4ac24cacfd7915b18c5eb0257094ebc77f663a4
+status: ready
+
+description: >-
+  Encontre os passos recomendados para a pós-instalação da Docker Engine para
+  pessoas usuárias Linux, incluindo como executar o Docker como um usuário não
+  root e muito mais.
+keywords: >-
+  executar docker sem sudo, executar docker como root, pós-instalação do docker,
+  executar docker como usuário não root, como executar docker no linux, como
+  iniciar o docker no Linux, executar o docker no linux
+title: Etapas de pós-instalação da Docker Engine no Linux
+linkTitle: Etapas de pós-instalação
 weight: 90
 aliases:
 - /engine/installation/linux/docker-ee/linux-postinstall/
 - /engine/installation/linux/linux-postinstall/
 - /install/linux/linux-postinstall/
 ---
-These optional post-installation procedures describe how to configure your
-Linux host machine to work better with Docker.
 
-## Manage Docker as a non-root user
+Esses procedimentos opcionais de pós-instalação descrevem como configurar sua
+máquina host Linux para funcionar melhor com o Docker.
 
-The Docker daemon binds to a Unix socket, not a TCP port. By default it's the
-`root` user that owns the Unix socket, and other users can only access it using
-`sudo`. The Docker daemon always runs as the `root` user.
+## Gerencie o Docker como um usuário não root
 
-If you don't want to preface the `docker` command with `sudo`, create a Unix
-group called `docker` and add users to it. When the Docker daemon starts, it
-creates a Unix socket accessible by members of the `docker` group. On some Linux
-distributions, the system automatically creates this group when installing
-Docker Engine using a package manager. In that case, there is no need for you to
-manually create the group.
+O daemon do Docker se vincula a um socket Unix, não a uma porta TCP.
+Por padrão, é o usuário `root` que possui o socket Unix, e outros usuários só
+podem acessá-lo usando `sudo`.
+O daemon do Docker sempre é executado como o usuário `root`.
+
+Se você não quiser preceder o comando `docker` com `sudo`, crie um grupo Unix
+chamado `docker` e adicione usuários a ele.
+Quando o daemon do Docker é iniciado, ele cria um socket Unix acessível aos
+membros do grupo `docker`.
+Em algumas distribuições Linux, o sistema cria esse grupo automaticamente ao
+instalar a Docker Engine usando um gerenciador de pacotes.
+Nesse caso, não é necessário criar o grupo manualmente.
 
 <!-- prettier-ignore -->
 > [!WARNING]
 >
-> The `docker` group grants root-level privileges to the user. For
-> details on how this impacts security in your system, see
-> [Docker Daemon Attack Surface](../security/_index.md#docker-daemon-attack-surface).
+> O grupo `docker` concede privilégios de nível root ao usuário.
+> Para detalhes sobre como isso afeta a segurança do seu sistema, consulte
+> [Superfície de ataque do daemon do Docker](../security/_index.md#superfície-de-ataque-do-daemon-do-docker).
 
 > [!NOTE]
 >
-> To run Docker without root privileges, see
-> [Run the Docker daemon as a non-root user (Rootless mode)](../security/rootless.md).
+> Para executar o Docker sem privilégios de root, consulte
+> [Executar o daemon Docker como um usuário não root (Modo sem root)](../security/rootless.md).
 
-To create the `docker` group and add your user:
+Para criar o grupo `docker` e adicionar seu usuário:
 
-1. Create the `docker` group.
+1. Crie o grupo `docker`.
 
    ```console
    $ sudo groupadd docker
    ```
 
-2. Add your user to the `docker` group.
+2. Adicione seu usuário ao grupo `docker`.
 
    ```console
    $ sudo usermod -aG docker $USER
    ```
 
-3. Log out and log back in so that your group membership is re-evaluated.
+3. Saia da sessão e entre novamente para que sua associação ao grupo seja
+   reavaliada.
 
-   > If you're running Linux in a virtual machine, it may be necessary to
-   > restart the virtual machine for changes to take effect.
+   > Se você estiver executando o Linux em uma máquina virtual, pode ser
+   > necessário reiniciar a máquina virtual para que as alterações entrem em
+   > vigor.
 
-   You can also run the following command to activate the changes to groups:
+   Você também pode executar o seguinte comando para ativar as alterações nos
+   grupos:
 
    ```console
    $ newgrp docker
    ```
 
-4. Verify that you can run `docker` commands without `sudo`.
+4. Verifique se você pode executar comandos do `docker` sem `sudo`.
 
    ```console
    $ docker run hello-world
    ```
 
-   This command downloads a test image and runs it in a container. When the
-   container runs, it prints a message and exits.
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
+   encerrado.
 
-   If you initially ran Docker CLI commands using `sudo` before adding your user
-   to the `docker` group, you may see the following error:
+   Se você executou comandos da CLI do Docker usando `sudo` antes de adicionar
+   seu usuário ao grupo `docker`, você pode ver o seguinte erro:
 
-   ```none
+   ```text
    WARNING: Error loading config file: /home/user/.docker/config.json -
    stat /home/user/.docker/config.json: permission denied
    ```
 
-   This error indicates that the permission settings for the `~/.docker/`
-   directory are incorrect, due to having used the `sudo` command earlier.
+   Este erro indica que as configurações de permissão para o diretório
+   `~/.docker/` estão incorretas, devido ao uso do comando `sudo` anteriormente.
 
-   To fix this problem, either remove the `~/.docker/` directory (it's recreated
-   automatically, but any custom settings are lost), or change its ownership and
-   permissions using the following commands:
+   Para corrigir esse problema, remova o diretório `~/.docker/` (ele é recriado
+   automaticamente, mas quaisquer configurações personalizadas serão perdidas)
+   ou altere sua propriedade e permissões usando os seguintes comandos:
 
    ```console
    $ sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
    $ sudo chmod g+rwx "$HOME/.docker" -R
    ```
 
-## Configure Docker to start on boot with systemd
+## Configure o Docker para iniciar na inicialização com o systemd
 
-Many modern Linux distributions use [systemd](https://systemd.io/) to
-manage which services start when the system boots. On Debian and Ubuntu, the
-Docker service starts on boot by default. To automatically start Docker and
-containerd on boot for other Linux distributions using systemd, run the
-following commands:
+Muitas distribuições Linux modernas usam o [systemd](https://systemd.io/) para
+gerenciar quais serviços são iniciados quando o sistema é inicializado.
+No Debian e no Ubuntu, o serviço Docker é iniciado na inicialização por padrão.
+Para iniciar automaticamente o Docker e o containerd na inicialização de outras
+distribuições Linux usando o systemd, execute os seguintes comandos:
 
 ```console
 $ sudo systemctl enable docker.service
 $ sudo systemctl enable containerd.service
 ```
 
-To stop this behavior, use `disable` instead.
+Para interromper esse comportamento, use `disable` em vez disso.
 
 ```console
 $ sudo systemctl disable docker.service
 $ sudo systemctl disable containerd.service
 ```
 
-You can use systemd unit files to configure the Docker service on startup,
-for example to add an HTTP proxy, set a different directory or partition for the
-Docker runtime files, or other customizations. For an example, see
-[Configure the daemon to use a proxy](/manuals/engine/daemon/proxy.md#systemd-unit-file).
+Você pode usar arquivos de unidade do systemd para configurar o serviço Docker
+na inicialização, por exemplo, para adicionar um proxy HTTP, definir um
+diretório ou partição diferente para os arquivos de tempo de execução do Docker
+ou outras personalizações.
+Para obter um exemplo, consulte
+[Configure o daemon para usar um proxy](/manuals/engine/daemon/proxy.md#systemd-unit-file).
 
-## Configure default logging driver
+## Configure o driver de logging padrão
 
-Docker provides [logging drivers](/manuals/engine/logging/_index.md) for
-collecting and viewing log data from all containers running on a host. The
-default logging driver, `json-file`, writes log data to JSON-formatted files on
-the host filesystem. Over time, these log files expand in size, leading to
-potential exhaustion of disk resources.
+O Docker fornece [drivers de logging](/manuals/engine/logging/_index.md) para
+coletar e visualizar dados de log de todos os contêineres em execução em um
+host.
+O driver de logging padrão, `json-file`, grava dados de log em arquivos
+formatados em JSON no sistema de arquivos do host.
+Com o tempo, esses arquivos de log aumentam de tamanho, levando a possível
+esgotamento dos recursos de disco.
 
-To avoid issues with overusing disk for log data, consider one of the following
-options:
+Para evitar problemas com o uso excessivo de disco para dados de log, considere
+uma das seguintes opções:
 
-- Configure the `json-file` logging driver to turn on
-  [log rotation](/manuals/engine/logging/drivers/json-file.md).
-- Use an
-  [alternative logging driver](/manuals/engine/logging/configure.md#configure-the-default-logging-driver)
-  such as the ["local" logging driver](/manuals/engine/logging/drivers/local.md)
-  that performs log rotation by default.
-- Use a logging driver that sends logs to a remote logging aggregator.
+- Configure o driver de logging `json-file` para ativar a
+  [rotação de logs](/manuals/engine/logging/drivers/json-file.md).
+- Use um
+  [driver de logging alternativo](/manuals/engine/logging/configure.md#configure-the-default-logging-driver)
+  como o [driver de logging "local"](/manuals/engine/logging/drivers/local.md)
+  que realiza a rotação de logs por padrão.
+- Use um driver de logging que envie logs para um agregador de logs remoto.
 
-## Next steps
+## Próximos passos
 
-- Take a look at the [Docker workshop](/get-started/workshop/_index.md) to learn how to build an image and run it as a containerized application.
+- Consulte o [workshop do Docker](/get-started/workshop/_index.md) para aprender
+  como criar uma imagem e executá-la como uma aplicação conteinerizada.
