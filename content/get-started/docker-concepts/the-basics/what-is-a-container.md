@@ -59,16 +59,16 @@ independente do resto dos componentes na sua máquina.
 
 É isso que os torna incríveis. Os contêineres são:
 
-* Autocontidos.
+- Autocontidos.
   Cada contêiner tem tudo o que precisa para funcionar sem depender de nenhuma
   dependência pré-instalada na máquina host.
-* Isolados.
+- Isolados.
   Como os contêineres são executados isoladamente, eles têm influência mínima no
   host e em outros contêineres, aumentando a segurança das suas aplicações.
-* Independentes.
+- Independentes.
   Cada contêiner é gerenciado de forma independente.
   Excluir um contêiner não afetará nenhum outro.
-* Portáteis.
+- Portáteis.
   Os contêineres podem ser executados em qualquer lugar!
   O contêiner executado na sua máquina de desenvolvimento funcionará da mesma
   forma em um data center ou em qualquer lugar na nuvem!
@@ -165,7 +165,7 @@ Faça um teste.
 3. Selecione a aba **Files** para explorar o sistema de arquivos isolado do seu
    contêiner.
 
-   ![Captura de tela do Painel do Docker Desktop mostrando os arquivos e diretórios dentro de um contêiner em execução](images/explore-your-container.webp?border)
+   ![Captura de tela do Painel do Docker Desktop mostrando os arquivos e diretórios em um contêiner em execução](images/explore-your-container.webp?border)
 
 ### Pare seu contêiner
 
