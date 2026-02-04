@@ -23,7 +23,7 @@ O script de conveniência não é recomendado para ambientes de produção, mas 
 útil para criar um script de provisionamento personalizado para suas
 necessidades.
 Consulte também as etapas de
-[instalação usando o repositório](#install-using-the-repository) para saber mais
+[instalação usando o repositório](#instale-usando-o-repositório) para saber mais
 sobre as etapas de instalação usando o repositório de pacotes.
 O código-fonte do script é de código aberto e você pode encontrá-lo no
 [repositório `docker-install` no GitHub](https://github.com/docker/docker-install).
