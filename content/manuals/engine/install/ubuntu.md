@@ -41,9 +41,9 @@ aliases:
 download-url-base: https://download.docker.com/linux/ubuntu
 ---
 
-To get started with Docker Engine on Ubuntu, make sure you
-[meet the prerequisites](#prerequisites), and then follow the
-[installation steps](#installation-methods).
+Para começar a usar a Docker Engine no Ubuntu, certifique-se de que você
+[atende aos pré-requisitos](#pré-requisitos) e, em seguida, siga as
+[etapas de instalação](#métodos-de-instalação).
 
 ## Pré-requisitos
 
@@ -121,7 +121,7 @@ Imagens, contêineres, volumes e redes armazenados em `/var/lib/docker/` não s�
 removidos automaticamente ao desinstalar o Docker.
 Se você deseja começar com uma instalação limpa e prefere remover todos os dados
 existentes, leia a seção
-[desinstalar a Docker Engine](#uninstall-docker-engine).
+[desinstalar a Docker Engine](#desinstale-a-docker-engine).
 
 ## Métodos de instalação
 
@@ -133,15 +133,15 @@ necessidades:
   Esta é a maneira mais fácil e rápida de começar.
 
 - Configure e instale a Docker Engine a partir do
-  [repositório `apt` do Docker](#install-using-the-repository).
+  [repositório `apt` do Docker](#instale-usando-o-repositório-apt).
 
-- Instale-a manualmente](#install-from-a-package) e gerencie as atualizações
-  manualmente.
+- [Instale-a manualmente](#instale-a-partir-de-um-pacote) e gerencie as
+  atualizações manualmente.
 
-- Use um [script de conveniência](#install-using-the-convenience-script).
+- Use um [script de conveniência](#instale-usando-o-script-de-conveniência).
   Recomendado apenas para ambientes de teste e desenvolvimento.
 
-### Instalar usando o repositório `apt` {#install-using-the-repository}
+### Instale usando o repositório `apt`
 
 Antes de instalar a Docker Engine pela primeira vez em uma nova máquina host,
 você precisa configurar o repositório `apt` do Docker.
@@ -218,7 +218,7 @@ Você instalou e iniciou a Docker Engine com sucesso.
 #### Atualize a Docker Engine
 
 Para atualizar a Docker Engine, siga o passo 2 das
-[instruções de instalação](#install-using-the-repository),
+[instruções de instalação](#instale-usando-o-repositório-apt),
 escolhendo a nova versão que deseja instalar.
 
 ### Instale a partir de um pacote
@@ -277,7 +277,7 @@ Você instalou e iniciou a Docker Engine com sucesso.
 #### Atualize a Docker Engine
 
 Para atualizar a Docker Engine, baixe os arquivos de pacote mais recentes e
-repita o [procedimento de instalação](#install-from-a-package), apontando para
+repita o [procedimento de instalação](#instale-a-partir-de-um-pacote), apontando para
 os novos arquivos.
 
 {{% include "install-script.md" %}}
