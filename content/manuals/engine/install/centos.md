@@ -247,7 +247,7 @@ Engine.
    ```
 
    Este comando baixa uma imagem de teste e a executa em um contêiner.
-   Quando o contêiner é executado, ele exibe uma mensagem de confirmação e é
+   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
    encerrado.
 
 Você instalou e iniciou a Docker Engine com sucesso.
