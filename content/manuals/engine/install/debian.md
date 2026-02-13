@@ -224,8 +224,7 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
    ```
 
    Este comando baixa uma imagem de teste e a executa em um contêiner.
-   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
-   encerrado.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
 Você instalou e iniciou a Docker Engine com sucesso.
 
@@ -296,8 +295,7 @@ Engine.
    ```
 
    Este comando baixa uma imagem de teste e a executa em um contêiner.
-   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
-   encerrado.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
 Você instalou e iniciou a Docker Engine com sucesso.
 
@@ -339,4 +337,4 @@ Você precisa excluir manualmente quaisquer arquivos de configuração editados.
 
 ## Próximos passos
 
-- Continue para [Etapas de pós-instalação para Linux](linux-postinstall.md).
+- Continue para [Passos da pós-instalação no Linux](linux-postinstall.md).
