@@ -9,8 +9,8 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/_index.md
-revision: b398f346a7e38451cacda1cfe54f1697d2685cdc
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/binaries.md
+revision: d083617e9d835b3c2300d7952a7e4ced36635adb
 status: ready
 
 description: >-
