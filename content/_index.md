@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/_index.md
-revision: 2c59158bc3102b19e43aa66e2057d67c1e548f9b
+revision: 0150180a43df91ded692d222728f2aa1e5724671
 status: ready
 
 title: Documentação do Docker
