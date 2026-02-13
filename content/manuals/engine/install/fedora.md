@@ -9,11 +9,18 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-description: Learn how to install Docker Engine on Fedora. These instructions cover
-  the different installation methods, how to uninstall, and next steps.
-keywords: requirements, dnf, installation, fedora, install fedora, install docker engine, rpm, install, uninstall, upgrade,
-  update
-title: Install Docker Engine on Fedora
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/fedora.md
+revision: 91baa8dd4e25352763ddea376f26c8626dfae78d
+status: ready
+
+description: >-
+  Aprenda como instalar a Docker Engine no Fedora.
+  Estas instruções abrangem os diferentes métodos de instalação, como
+  desinstalar e os próximos passos.
+keywords: >-
+  requisitos, dnf, instalação, fedora, instalar fedora, instalar docker engine,
+  rpm, instalar, desinstalar, atualizar
+title: Instale a Docker Engine no Fedora
 linkTitle: Fedora
 weight: 40
 toc_max: 4
@@ -24,27 +31,31 @@ aliases:
 - /install/linux/docker-ce/fedora/
 download-url-base: https://download.docker.com/linux/fedora
 ---
-To get started with Docker Engine on Fedora, make sure you
-[meet the prerequisites](#prerequisites), and then follow the
-[installation steps](#installation-methods).
 
-## Prerequisites
+Para começar a usar a Docker Engine no Fedora, certifique-se de que você
+[atende aos pré-requisitos](#prerequisites) e, em seguida, siga os
+[passos da instalação](#métodos-de-instalação).
 
-### OS requirements
+## Pré-requisitos
 
-To install Docker Engine, you need a maintained version of one of the following
-Fedora versions:
+### Requisitos do sistema operacional
 
-- Fedora 40
+Para instalar a Docker Engine, você precisa de uma versão com suporte de uma das
+seguintes versões do Fedora:
+
+- Fedora 43
+- Fedora 42
 - Fedora 41
 
-### Uninstall old versions
+### Desinstale versões antigas
 
-Before you can install Docker Engine, you need to uninstall any conflicting packages.
+Antes de instalar a Docker Engine, você precisa desinstalar quaisquer pacotes
+conflitantes.
 
-Your Linux distribution may provide unofficial Docker packages, which may conflict
-with the official packages provided by Docker. You must uninstall these packages
-before you install the official version of Docker Engine.
+Sua distribuição Linux pode fornecer pacotes Docker não oficiais, que podem
+entrar em conflito com os pacotes oficiais fornecidos pelo Docker.
+Você deve desinstalar esses pacotes antes de instalar a versão oficial da Docker
+Engine.
 
 ```console
 $ sudo dnf remove docker \
@@ -59,68 +70,72 @@ $ sudo dnf remove docker \
                   docker-engine
 ```
 
-`dnf` might report that you have none of these packages installed.
+O `dnf` pode informar que você não tem nenhum desses pacotes instalados.
 
-Images, containers, volumes, and networks stored in `/var/lib/docker/` aren't
-automatically removed when you uninstall Docker.
+Imagens, contêineres, volumes e redes armazenados em `/var/lib/docker/` não são
+removidos automaticamente ao desinstalar o Docker.
 
-## Installation methods
+## Métodos de instalação
 
-You can install Docker Engine in different ways, depending on your needs:
+Você pode instalar a Docker Engine de diferentes maneiras, dependendo das suas
+necessidades:
 
-- You can
-  [set up Docker's repositories](#install-using-the-repository) and install
-  from them, for ease of installation and upgrade tasks. This is the
-  recommended approach.
+- Você pode
+  [configurar os repositórios do Docker](#instale-usando-o-repositório) e
+  instalar a partir deles, para facilitar as tarefas de instalação e
+  atualização.
+  Esta é a abordagem recomendada.
 
-- You can download the RPM package,
-  [install it manually](#install-from-a-package), and manage
-  upgrades completely manually. This is useful in situations such as installing
-  Docker on air-gapped systems with no access to the internet.
+- Você pode baixar o pacote RPM,
+  [instalá-lo manualmente](#instale-a-partir-de-um-pacote) e gerenciar as
+  atualizações completamente de forma manual.
+  Isso é útil em situações como a instalação do Docker em sistemas isolados da
+  internet.
 
-- In testing and development environments, you can use automated
-  [convenience scripts](#install-using-the-convenience-script) to install Docker.
+- Em ambientes de teste e desenvolvimento, você pode usar um
+  [script de conveniência](#instale-usando-o-script-de-conveniência) para
+  instalar o Docker.
 
-### Install using the rpm repository {#install-using-the-repository}
+{{% include "engine-license.md" %}}
 
-Before you install Docker Engine for the first time on a new host machine, you
-need to set up the Docker repository. Afterward, you can install and update
-Docker from the repository.
+### Instale usando o repositório rpm {#instale-usando-o-repositório}
 
-#### Set up the repository
+Antes de instalar a Docker Engine pela primeira vez em uma nova máquina host,
+você precisa configurar o repositório do Docker.
+Depois disso, você poderá instalar e atualizar o Docker a partir do repositório.
 
-Install the `dnf-plugins-core` package (which provides the commands to manage
-your DNF repositories) and set up the repository.
+#### Configure o repositório
 
 ```console
-$ sudo dnf -y install dnf-plugins-core
-$ sudo dnf-3 config-manager --add-repo {{% param "download-url-base" %}}/docker-ce.repo
+$ sudo dnf config-manager addrepo --from-repofile {{% param "download-url-base" %}}/docker-ce.repo
 ```
 
-#### Install Docker Engine
+#### Instale a Docker Engine
 
-1. Install the Docker packages.
+1. Instale os pacotes do Docker.
 
    {{< tabs >}}
-   {{< tab name="Latest" >}}
+   {{< tab name="Versão mais recente" >}}
 
-   To install the latest version, run:
+   Para instalar a versão mais recente, execute:
 
    ```console
    $ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
-   If prompted to accept the GPG key, verify that the fingerprint matches
-   `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, and if so, accept it.
+   Se solicitada a aceitar a chave GPG, verifique se a impressão digital
+   corresponde a `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, e, em caso
+   afirmativo, aceite-a.
 
-   This command installs Docker, but it doesn't start Docker. It also creates a
-   `docker` group, however, it doesn't add any users to the group by default.
+   Este comando instala o Docker, mas não o inicia.
+   Ele também cria um grupo `docker`, porém, não adiciona nenhum usuário ao
+   grupo por padrão.
 
    {{< /tab >}}
-   {{< tab name="Specific version" >}}
+   {{< tab name="Versão específica" >}}
 
-   To install a specific version, start by listing the available versions in
-   the repository:
+   Para instalar uma versão específica, comece listando as versões disponíveis
+   no repositório:
 
    ```console
    $ dnf list docker-ce --showduplicates | sort -r
@@ -130,124 +145,134 @@ $ sudo dnf-3 config-manager --add-repo {{% param "download-url-base" %}}/docker-
    <...>
    ```
 
-   The list returned depends on which repositories are enabled, and is specific
-   to your version of Fedora (indicated by the `.fc40` suffix in this example).
+   A lista retornada depende dos repositórios habilitados e é específica para a
+   sua versão do Fedora (indicada pelo sufixo `.fc41` neste exemplo).
 
-   Install a specific version by its fully qualified package name, which is
-   the package name (`docker-ce`) plus the version string (2nd column),
-   separated by a hyphen (`-`). For example, `docker-ce-3:{{% param "docker_ce_version" %}}-1.fc41`.
+   Instale uma versão específica pelo seu nome de pacote totalmente qualificado,
+   que é o nome do pacote (`docker-ce`) mais a string da versão (segunda
+   coluna), separados por um hífen (`-`).
+   Por exemplo, `docker-ce-3:{{% param "docker_ce_version" %}}-1.fc41`.
 
-   Replace `<VERSION_STRING>` with the desired version and then run the following
-   command to install:
+   Substitua `<VERSION_STRING>` pela versão desejada e execute o seguinte
+   comando para instalar:
 
    ```console
    $ sudo dnf install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
-   This command installs Docker, but it doesn't start Docker. It also creates a
-   `docker` group, however, it doesn't add any users to the group by default.
+   Este comando instala o Docker, mas não o inicia.
+   Ele também cria um grupo `docker`, porém, não adiciona nenhum usuário ao
+   grupo por padrão.
 
    {{< /tab >}}
    {{< /tabs >}}
 
-2. Start Docker Engine.
+2. Inicie a Docker Engine.
 
    ```console
    $ sudo systemctl enable --now docker
    ```
 
-   This configures the Docker systemd service to start automatically when you
-   boot your system. If you don't want Docker to start automatically, use `sudo
-   systemctl start docker` instead.
+   Isso configura o serviço systemd do Docker para iniciar automaticamente
+   quando você inicializar o sistema.
+   Se você não quiser que o Docker inicie automaticamente, use
+   `sudo systemctl start docker` em vez disso.
 
-3. Verify that the installation is successful by running the `hello-world` image:
+3. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 
    ```console
    $ sudo docker run hello-world
    ```
 
-   This command downloads a test image and runs it in a container. When the
-   container runs, it prints a confirmation message and exits.
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
-You have now successfully installed and started Docker Engine.
+Você instalou e iniciou a Docker Engine com sucesso.
 
 {{% include "root-errors.md" %}}
 
-#### Upgrade Docker Engine
+#### Atualize a Docker Engine
 
-To upgrade Docker Engine, follow the [installation instructions](#install-using-the-repository),
-choosing the new version you want to install.
+Para atualizar a Docker Engine, siga as
+[instruções de instalação](#instale-usando-o-repositório), escolhendo a nova
+versão que deseja instalar.
 
-### Install from a package
+### Instale a partir de um pacote
 
-If you can't use Docker's `rpm` repository to install Docker Engine, you can
-download the `.rpm` file for your release and install it manually. You need to
-download a new file each time you want to upgrade Docker Engine.
+Se você não puder usar o repositório `rpm` do Docker para instalar a Docker
+Engine, você pode baixar o arquivo `.rpm` da sua versão e instalá-lo
+manualmente.
+Você precisará baixar um novo arquivo sempre que quiser atualizar a Docker
+Engine.
 
 <!-- markdownlint-disable-next-line -->
-1. Go to [{{% param "download-url-base" %}}/]({{% param "download-url-base" %}}/)
-   and choose your version of Fedora. Then browse to `x86_64/stable/Packages/`
-   and download the `.rpm` file for the Docker version you want to install.
+1. Acesse
+   [{{% param "download-url-base" %}}/]({{% param "download-url-base" %}}/)
+   e escolha sua versão do Fedora.
+   Em seguida, navegue até `x86_64/stable/Packages/` e baixe o arquivo `.rpm` da
+   versão do Docker que deseja instalar.
 
-2. Install Docker Engine, changing the following path to the path where you downloaded
-   the Docker package.
+2. Instale a Docker Engine, alterando o seguinte caminho para o caminho onde
+   você baixou o pacote do Docker.
 
    ```console
-   $ sudo dnf install /path/to/package.rpm
+   $ sudo dnf install /caminho/para/o/pacote.rpm
    ```
 
-   Docker is installed but not started. The `docker` group is created, but no
-   users are added to the group.
+   O Docker está instalado, mas não foi iniciado.
+   O grupo `docker` foi criado, mas nenhum usuário foi adicionado ao grupo.
 
-3. Start Docker Engine.
+3. Inicie a Docker Engine.
 
    ```console
    $ sudo systemctl enable --now docker
    ```
 
-   This configures the Docker systemd service to start automatically when you
-   boot your system. If you don't want Docker to start automatically, use `sudo
-   systemctl start docker` instead.
+   Isso configura o serviço systemd do Docker para iniciar automaticamente
+   quando você inicializar o sistema.
+   Se você não quiser que o Docker inicie automaticamente, use
+   `sudo systemctl start docker` em vez disso.
 
-4. Verify that the installation is successful by running the `hello-world` image:
+4. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 
    ```console
    $ sudo docker run hello-world
    ```
 
-   This command downloads a test image and runs it in a container. When the
-   container runs, it prints a confirmation message and exits.
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
-You have now successfully installed and started Docker Engine.
+Você instalou e iniciou a Docker Engine com sucesso.
 
 {{% include "root-errors.md" %}}
 
-#### Upgrade Docker Engine
+#### Atualize a Docker Engine
 
-To upgrade Docker Engine, download the newer package files and repeat the
-[installation procedure](#install-from-a-package), using `dnf upgrade`
-instead of `dnf install`, and point to the new files.
+Para atualizar a Docker Engine, baixe os arquivos de pacote mais recentes e
+repita o [procedimento de instalação](#instale-a-partir-de-um-pacote), usando
+`dnf upgrade` em vez de `dnf install`, e aponte para os novos arquivos.
 
 {{% include "install-script.md" %}}
 
-## Uninstall Docker Engine
+## Desinstale a Docker Engine
 
-1. Uninstall the Docker Engine, CLI, containerd, and Docker Compose packages:
+1. Desinstale os pacotes Docker Engine, CLI, containerd e Docker Compose:
 
    ```console
    $ sudo dnf remove docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
    ```
 
-2. Images, containers, volumes, or custom configuration files on your host
-   aren't automatically removed. To delete all images, containers, and volumes:
+2. Imagens, contêineres, volumes ou arquivos de configuração personalizados no
+   seu host não são removidos automaticamente.
+   Para excluir todas as imagens, contêineres e volumes:
 
    ```console
    $ sudo rm -rf /var/lib/docker
    $ sudo rm -rf /var/lib/containerd
    ```
 
-You have to delete any edited configuration files manually.
+Você precisa excluir manualmente todos os arquivos de configuração editados.
 
-## Next steps
+## Próximos passos
 
-- Continue to [Post-installation steps for Linux](linux-postinstall.md).
+- Continue para [Passos da pós-instalação no Linux](linux-postinstall.md).
