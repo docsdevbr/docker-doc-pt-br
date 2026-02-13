@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/ubuntu.md
-revision: 556eed6f35c59f9b1e12ff159879a990caf66520
+revision: be37c0192d11476dbbe95c4d37308aee9c4f75c5
 status: ready
 
 description: >-
