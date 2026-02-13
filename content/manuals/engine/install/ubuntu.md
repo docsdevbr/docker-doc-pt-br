@@ -42,8 +42,8 @@ download-url-base: https://download.docker.com/linux/ubuntu
 ---
 
 Para começar a usar a Docker Engine no Ubuntu, certifique-se de que você
-[atende aos pré-requisitos](#pré-requisitos) e, em seguida, siga as
-[etapas de instalação](#métodos-de-instalação).
+[atende aos pré-requisitos](#pré-requisitos) e, em seguida, siga os
+[passos da instalação](#métodos-de-instalação).
 
 ## Pré-requisitos
 
