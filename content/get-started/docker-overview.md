@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-overview.md
-revision: dc95063e4cbe4a7ef46a2dc9f3c0ebb0f910b40f
+revision: 88db8a35ad90f096c3bed808fad90192b6144c78
 status: ready
 
 description: >-
