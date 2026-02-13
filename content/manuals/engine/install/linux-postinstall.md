@@ -21,8 +21,8 @@ keywords: >-
   executar docker sem sudo, executar docker como root, pós-instalação do docker,
   executar docker como usuário não root, como executar docker no linux, como
   iniciar o docker no Linux, executar o docker no linux
-title: Etapas de pós-instalação da Docker Engine no Linux
-linkTitle: Etapas de pós-instalação
+title: Passos da pós-instalação da Docker Engine no Linux
+linkTitle: Passos da pós-instalação
 weight: 90
 aliases:
 - /engine/installation/linux/docker-ee/linux-postinstall/
@@ -95,8 +95,7 @@ Para criar o grupo `docker` e adicionar seu usuário:
    ```
 
    Este comando baixa uma imagem de teste e a executa em um contêiner.
-   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
-   encerrado.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
    Se você executou comandos da CLI do Docker usando `sudo` antes de adicionar
    seu usuário ao grupo `docker`, você pode ver o seguinte erro:
