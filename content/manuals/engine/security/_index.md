@@ -13,7 +13,7 @@ source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/secu
 revision: b398f346a7e38451cacda1cfe54f1697d2685cdc
 status: ready
 
-description: Análise da superfície de ataque do Docker Daemon
+description: Análise da superfície de ataque do daemon do Docker.
 keywords: docker, documentação do docker, segurança
 title: Segurança da Docker Engine
 linkTitle: Segurança
