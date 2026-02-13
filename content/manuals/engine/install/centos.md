@@ -37,8 +37,8 @@ download-url-base: https://download.docker.com/linux/centos
 ---
 
 Para começar a usar a Docker Engine no CentOS, certifique-se de que você
-[atende aos pré-requisitos](#pré-requisitos) e, em seguida, siga as
-[etapas de instalação](#métodos-de-instalação).
+[atende aos pré-requisitos](#pré-requisitos) e, em seguida, siga os
+[passos da instalação](#métodos-de-instalação).
 
 ## Pré-requisitos
 
@@ -191,8 +191,7 @@ $ sudo dnf config-manager --add-repo {{% param "download-url-base" %}}/docker-ce
    ```
 
    Este comando baixa uma imagem de teste e a executa em um contêiner.
-   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
-   encerrado.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
 Você instalou e iniciou a Docker Engine com sucesso.
 
@@ -247,8 +246,7 @@ Engine.
    ```
 
    Este comando baixa uma imagem de teste e a executa em um contêiner.
-   Quando o contêiner é executado, ele imprime uma mensagem de confirmação e é
-   encerrado.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
 Você instalou e iniciou a Docker Engine com sucesso.
 
@@ -283,4 +281,4 @@ Você precisa excluir manualmente todos os arquivos de configuração editados.
 
 ## Próximos passos
 
-- Continue para [Etapas de pós-instalação para Linux](linux-postinstall.md).
+- Continue para [Passos da pós-instalação no Linux](linux-postinstall.md).
