@@ -18,4 +18,6 @@ description: >-
   A Documentação do Docker é a biblioteca oficial de recursos, manuais e guias
   do Docker para ajudar você a criar contêineres de aplicações.
 keywords: Docker, documentação, manual, guia, referência, API, exemplos
+aliases:
+  - /search/
 ---
