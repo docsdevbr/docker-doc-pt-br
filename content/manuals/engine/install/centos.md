@@ -74,7 +74,7 @@ $ sudo dnf remove docker \
                   docker-engine
 ```
 
-O comando `dnf` pode informar que você não tem nenhum desses pacotes instalados.
+O `dnf` pode informar que você não tem nenhum desses pacotes instalados.
 
 Imagens, contêineres, volumes e redes armazenados em `/var/lib/docker/` não são
 removidos automaticamente ao desinstalar o Docker.
@@ -96,9 +96,11 @@ necessidades:
   Isso é útil em situações como a instalação do Docker em sistemas isolados da
   internet.
 
-- Em ambientes de teste e desenvolvimento, você pode usar
-  [scripts automatizados](#instale-usando-o-script-de-conveniência) para
+- Em ambientes de teste e desenvolvimento, você pode usar um
+  [script de conveniência](#instale-usando-o-script-de-conveniência) para
   instalar o Docker.
+
+{{% include "engine-license.md" %}}
 
 ### Instale usando o repositório rpm {#instale-usando-o-repositório}
 
@@ -222,7 +224,7 @@ Engine.
    você baixou o pacote do Docker.
 
    ```console
-   $ sudo dnf install /path/to/package.rpm
+   $ sudo dnf install /caminho/para/o/pacote.rpm
    ```
 
    O Docker está instalado, mas não foi iniciado.
