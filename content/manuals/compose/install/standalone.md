@@ -51,7 +51,7 @@ This page contains instructions on how to install Docker Compose standalone on L
 ## On Windows Server
 
 Follow these instructions if you are [running the Docker daemon directly
-on Microsoft Windows Server](/manuals/engine/install/binaries.md#install-server-and-client-binaries-on-windows) and want to install Docker Compose.
+on Microsoft Windows Server](/manuals/engine/install/binaries.md#instale-os-binários-do-servidor-e-do-cliente-no-windows) and want to install Docker Compose.
 
 1.  Run PowerShell as an administrator.
     In order to proceed with the installation, select **Yes** when asked if you want this app to make changes to your device.

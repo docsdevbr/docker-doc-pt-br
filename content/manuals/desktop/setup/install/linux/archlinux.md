@@ -36,7 +36,7 @@ To install Docker Desktop successfully, you must meet the [general system requir
 
 ## Install Docker Desktop
 
-1. [Install the Docker client binary on Linux](/manuals/engine/install/binaries.md#install-daemon-and-client-binaries-on-linux). Static binaries for the Docker client are available for Linux as `docker`. You can use:
+1. [Install the Docker client binary on Linux](/manuals/engine/install/binaries.md#instale-os-binários-do-daemon-e-do-cliente-no-linux). Static binaries for the Docker client are available for Linux as `docker`. You can use:
 
    ```console
    $ wget https://download.docker.com/linux/static/stable/x86_64/docker-{{% param "docker_ce_version" %}}.tgz -qO- | tar xvfz - docker/docker --strip-components=1

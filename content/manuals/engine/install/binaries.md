@@ -9,10 +9,17 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
-description: Learn how to install Docker as a binary. These instructions are most suitable for testing purposes.
-keywords: binaries, installation, docker, documentation, linux, install docker engine
-title: Install Docker Engine from binaries
-linkTitle: Binaries
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/_index.md
+revision: b398f346a7e38451cacda1cfe54f1697d2685cdc
+status: ready
+
+description: >-
+  Aprenda como instalar o Docker como um binário.
+  Estas instruções são mais adequadas para fins de teste.
+keywords: >-
+  binários, instalação, docker, documentação, linux, instalar a docker engine
+title: Instale a Docker Engine a partir dos binários
+linkTitle: Binários
 weight: 80
 aliases:
 - /engine/installation/binaries/
@@ -20,243 +27,265 @@ aliases:
 - /install/linux/docker-ce/binaries/
 - /installation/binaries/
 ---
+
 > [!IMPORTANT]
 >
-> This page contains information on how to install Docker using binaries. These
-> instructions are mostly suitable for testing purposes. We do not recommend
-> installing Docker using binaries in production environments as they don't have automatic security updates. The Linux binaries described on this
-> page are statically linked, which means that vulnerabilities in build-time
-> dependencies are not automatically patched by security updates of your Linux
-> distribution.
+> Esta página contém informações sobre como instalar o Docker usando binários.
+> Estas instruções são mais adequadas para fins de teste.
+> Não recomendamos a instalação do Docker usando binários em ambientes de
+> produção, pois eles não possuem atualizações de segurança automáticas.
+> Os binários do Linux descritos nesta página são vinculados estaticamente, o
+> que significa que vulnerabilidades em dependências de tempo de compilação não
+> são corrigidas automaticamente por atualizações de segurança da sua
+> distribuição Linux.
 >
-> Updating binaries is also slightly more involved when compared to Docker packages
-> installed using a package manager or through Docker Desktop, as it requires
-> (manually) updating the installed version whenever there is a new release of
-> Docker.
+> Atualizar binários também é um pouco mais complexo em comparação com pacotes
+> Docker instalados usando um gerenciador de pacotes ou através do Docker
+> Desktop, pois requer a atualização manual da versão instalada sempre que
+> houver uma nova versão do Docker.
 >
-> Also, static binaries may not include all functionalities provided by the dynamic
-> packages.
+> Além disso, binários estáticos podem não incluir todas as funcionalidades
+> fornecidas pelos pacotes dinâmicos.
 >
-> On Windows and Mac, we recommend that you install [Docker Desktop](/manuals/desktop/_index.md)
-> instead. For Linux, we recommend that you follow the instructions specific for
-> your distribution.
+> No Windows e Mac, recomendamos que você instale o
+> [Docker Desktop](/manuals/desktop/_index.md).
+> Para o Linux, recomendamos que você siga as instruções específicas da sua
+> distribuição.
 
-If you want to try Docker or use it in a testing environment, but you're not on
-a supported platform, you can try installing from static binaries. If possible,
-you should use packages built for your operating system, and use your operating
-system's package management system to manage Docker installation and upgrades.
+Se você deseja experimentar o Docker ou usá-lo em um ambiente de teste, mas não
+está em uma plataforma compatível, pode tentar instalar a partir dos binários
+estáticos.
+Se possível, use pacotes criados para o seu sistema operacional e utilize o
+sistema de gerenciamento de pacotes do seu sistema operacional para gerenciar a
+instalação e as atualizações do Docker.
 
-Static binaries for the Docker daemon binary are only available for Linux (as
-`dockerd`) and Windows (as `dockerd.exe`).
-Static binaries for the Docker client are available for Linux, Windows, and macOS (as `docker`).
+Binários estáticos para o daemon do Docker estão disponíveis apenas para Linux
+(como `dockerd`) e Windows (como `dockerd.exe`).
+Binários estáticos para o cliente Docker estão disponíveis para Linux, Windows e
+macOS (como `docker`).
 
-This topic discusses binary installation for Linux, Windows, and macOS:
+Este tópico aborda a instalação dos binários para Linux, Windows e macOS:
 
-- [Install daemon and client binaries on Linux](#install-daemon-and-client-binaries-on-linux)
-- [Install client binaries on macOS](#install-client-binaries-on-macos)
-- [Install server and client binaries on Windows](#install-server-and-client-binaries-on-windows)
+- [Instale os binários do daemon e do cliente no Linux](#instale-os-binários-do-daemon-e-do-cliente-no-linux)
+- [Instale os binários do cliente no macOS](#instale-os-binários-do-cliente-no-macos)
+- [Instale os binários do servidor e do cliente no Windows](#instale-os-binários-do-servidor-e-do-cliente-no-windows)
 
-## Install daemon and client binaries on Linux
+## Instale os binários do daemon e do cliente no Linux
 
-### Prerequisites
+### Pré-requisitos
 
-Before attempting to install Docker from binaries, be sure your host machine
-meets the prerequisites:
+Antes de tentar instalar o Docker a partir dos binários, certifique-se de que
+sua máquina host atende aos pré-requisitos:
 
-- A 64-bit installation
-- Version 3.10 or higher of the Linux kernel. The latest version of the kernel
-  available for your platform is recommended.
-- `iptables` version 1.4 or higher
-- `git` version 1.7 or higher
-- A `ps` executable, usually provided by `procps` or a similar package.
-- [XZ Utils](https://tukaani.org/xz/) 4.9 or higher
-- A [properly mounted](
-  https://github.com/tianon/cgroupfs-mount/blob/master/cgroupfs-mount)
-  `cgroupfs` hierarchy; a single, all-encompassing `cgroup` mount
-  point is not sufficient. See Github issues
+- Uma instalação de 64 bits.
+- Versão 3.10 ou superior do kernel Linux.
+  A versão mais recente do kernel disponível para sua plataforma é recomendada.
+- `iptables` versão 1.4 ou superior.
+- `git` versão 1.7 ou superior.
+- Um executável `ps`, geralmente fornecido por `procps` ou um pacote similar.
+- [XZ Utils](https://tukaani.org/xz/) 4.9 ou superior.
+- Uma hierarquia `cgroupfs`
+  [montada corretamente](https://github.com/tianon/cgroupfs-mount/blob/master/cgroupfs-mount);
+  um único ponto de montagem `cgroup` abrangente não é suficiente.
+  Consulte as issues no Github:
   [#2683](https://github.com/moby/moby/issues/2683),
   [#3485](https://github.com/moby/moby/issues/3485),
   [#4568](https://github.com/moby/moby/issues/4568)).
 
-#### Secure your environment as much as possible
+#### Proteja seu ambiente ao máximo
 
-##### OS considerations
+##### Considerações sobre o sistema operacional
 
-Enable SELinux or AppArmor if possible.
+Habilite o SELinux ou o AppArmor, se possível.
 
-It is recommended to use AppArmor or SELinux if your Linux distribution supports
-either of the two. This helps improve security and blocks certain
-types of exploits. Review the documentation for your Linux distribution for
-instructions for enabling and configuring AppArmor or SELinux.
+Recomenda-se o uso do AppArmor ou do SELinux se sua distribuição Linux for
+compatível com algum dos dois.
+Isso ajuda a melhorar a segurança e bloqueia certos tipos de explorações.
+Consulte a documentação da sua distribuição Linux para obter instruções sobre
+como habilitar e configurar o AppArmor ou o SELinux.
 
-> **Security warning**
+> **Aviso de segurança**
 >
-> If either of the security mechanisms is enabled, do not disable it as a
-> work-around to make Docker or its containers run. Instead, configure it
-> correctly to fix any problems.
+> Se algum dos mecanismos de segurança estiver habilitado, não o desabilite como
+> uma solução alternativa para fazer o Docker ou seus contêineres funcionarem.
+> Em vez disso, configure-o corretamente para corrigir quaisquer problemas.
 
-##### Docker daemon considerations
+##### Considerações sobre o daemon do Docker
 
-- Enable `seccomp` security profiles if possible. See
-  [Enabling `seccomp` for Docker](../security/seccomp.md).
+- Habilite os perfis de segurança `seccomp`, se possível.
+  Consulte [Habilitando `seccomp` para Docker](../security/seccomp.md).
+- Habilite os namespaces de usuário, se possível.
+  Consulte as
+  [Opções de namespace de usuário do daemon](/reference/cli/dockerd/#daemon-user-namespace-options).
 
-- Enable user namespaces if possible. See the
-  [Daemon user namespace options](/reference/cli/dockerd/#daemon-user-namespace-options).
+### Instale os binários estáticos
 
-### Install static binaries
+1. Baixe o arquivo binário estático.
+   Acesse
+   [https://download.docker.com/linux/static/stable/](https://download.docker.com/linux/static/stable/),
+   escolha sua plataforma de hardware e baixe o arquivo `.tgz` correspondente à
+   versão da Docker Engine que você deseja instalar.
 
-1.  Download the static binary archive. Go to
-    [https://download.docker.com/linux/static/stable/](https://download.docker.com/linux/static/stable/),
-    choose your hardware platform, and download the `.tgz` file relating to the
-    version of Docker Engine you want to install.
+2. Extraia o arquivo usando o utilitário `tar`.
+   Os binários `dockerd` e `docker` serão extraídos.
 
-2.  Extract the archive using the `tar` utility. The `dockerd` and `docker`
-    binaries are extracted.
+   ```console
+   $ tar xzvf /caminho/para/o/<arquivo>.tar.gz
+   ```
 
-    ```console
-    $ tar xzvf /path/to/<FILE>.tar.gz
-    ```
+3. **Opcional**: Mova os binários para um diretório no seu caminho executável,
+   como por exemplo, `/usr/bin/`.
+   Se você pular esta etapa, deverá fornecer o caminho para o executável ao
+   invocar os comandos `docker` ou `dockerd`.
 
-3.  **Optional**: Move the binaries to a directory on your executable path, such
-    as `/usr/bin/`. If you skip this step, you must provide the path to the
-    executable when you invoke `docker` or `dockerd` commands.
+   ```console
+   $ sudo cp docker/* /usr/bin/
+   ```
 
-    ```console
-    $ sudo cp docker/* /usr/bin/
-    ```
+4. Inicie o daemon do Docker:
 
-4.  Start the Docker daemon:
+   ```console
+   $ sudo dockerd &
+   ```
 
-    ```console
-    $ sudo dockerd &
-    ```
+   Se precisar iniciar o daemon com opções adicionais, modifique o comando acima
+   de acordo ou crie e edite o arquivo `/etc/docker/daemon.json` para adicionar
+   as opções de configuração personalizadas.
 
-    If you need to start the daemon with additional options, modify the above
-    command accordingly or create and edit the file `/etc/docker/daemon.json`
-    to add the custom configuration options.
+5. Verifique se o Docker está instalado corretamente executando a imagem
+   `hello-world`.
 
-5.  Verify that Docker is installed correctly by running the `hello-world`
-    image.
+   ```console
+   $ sudo docker run hello-world
+   ```
 
-    ```console
-    $ sudo docker run hello-world
-    ```
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
-    This command downloads a test image and runs it in a container. When the
-    container runs, it prints a message and exits.
-
-You have now successfully installed and started Docker Engine.
+Você instalou e iniciou a Docker Engine com sucesso.
 
 {{% include "root-errors.md" %}}
 
-## Install client binaries on macOS
+## Instale os binários do cliente no macOS
 
 > [!NOTE]
 >
-> The following instructions are mostly suitable for testing purposes. The macOS
-> binary includes the Docker client only. It does not include the `dockerd` daemon
-> which is required to run containers. Therefore, we recommend that you install
-> [Docker Desktop](/manuals/desktop/_index.md) instead.
+> As instruções a seguir são mais adequadas para fins de teste.
+> O binário para macOS inclui apenas o cliente Docker.
+> Ele não inclui o daemon `dockerd` necessário para executar contêineres.
+> Portanto, recomendamos que você instale o
+> [Docker Desktop](/manuals/desktop/_index.md).
 
-The binaries for Mac also do not contain:
+Os binários para Mac também não contêm:
 
-- A runtime environment. You must set up a functional engine either in a Virtual Machine, or on a remote Linux machine.
-- Docker components such as `buildx` and `docker compose`.
+- Um ambiente de execução.
+  Você deve configurar um mecanismo funcional em uma máquina virtual ou em uma
+  máquina Linux remota.
+- Componentes do Docker, como `buildx` e `docker compose`.
 
-To install client binaries, perform the following steps:
+Para instalar os binários do cliente, execute os seguintes passos:
 
-1.  Download the static binary archive. Go to
-    [https://download.docker.com/mac/static/stable/](https://download.docker.com/mac/static/stable/) and select `x86_64` (for Mac on Intel chip) or `aarch64` (for Mac on Apple silicon),
-    and then download the `.tgz` file relating to the version of Docker Engine you want
-    to install.
+1. Baixe o arquivo binário estático.
+   Acesse
+   [https://download.docker.com/mac/static/stable/](https://download.docker.com/mac/static/stable/)
+   e selecione `x86_64` (para Mac com chip Intel) ou `aarch64` (para Mac com
+   chip Apple), e então baixe o arquivo `.tgz` correspondente à versão da Docker
+   Engine que você deseja instalar.
 
-2.  Extract the archive using the `tar` utility. The `docker` binary is
-    extracted.
+2. Extraia o arquivo usando o utilitário `tar`.
+   O binário `docker` será extraído.
 
-    ```console
-    $ tar xzvf /path/to/<FILE>.tar.gz
-    ```
+   ```console
+   $ tar xzvf /caminho/para/o/<arquivo>.tar.gz
+   ```
 
-3.  Clear the extended attributes to allow it run.
+3. Limpe os atributos estendidos para permitir a execução.
 
-    ```console
-    $ sudo xattr -rc docker
-    ```
+   ```console
+   $ sudo xattr -rc docker
+   ```
 
-    Now, when you run the following command, you can see the Docker CLI usage instructions:
+   Agora, ao executar o seguinte comando, você poderá ver as instruções de uso
+   da CLI do Docker:
 
-    ```console
-    $ docker/docker
-    ```
+   ```console
+   $ docker/docker
+   ```
 
-4.  **Optional**: Move the binary to a directory on your executable path, such
-    as `/usr/local/bin/`. If you skip this step, you must provide the path to the
-    executable when you invoke `docker` or `dockerd` commands.
+4. **Opcional**: Mova o binário para um diretório no seu caminho de executáveis,
+   como por exemplo, `/usr/local/bin/`.
+   Se você pular esta etapa, você deve fornecer o caminho para o executável ao
+   invocar os comandos `docker` ou `dockerd`.
 
-    ```console
-    $ sudo cp docker/docker /usr/local/bin/
-    ```
+   ```console
+   $ sudo cp docker/docker /usr/local/bin/
+   ```
 
-5.  Verify that Docker is installed correctly by running the `hello-world`
-    image. The value of `<hostname>` is a hostname or IP address running the
-    Docker daemon and accessible to the client.
+5. Verifique se o Docker está instalado corretamente executando a imagem
+   `hello-world`.
+   O valor de `<hostname>` é um nome de host ou endereço IP que executa o daemon
+   do Docker e é acessível ao cliente.
 
-    ```console
-    $ sudo docker -H <hostname> run hello-world
-    ```
+   ```console
+   $ sudo docker -H <hostname> run hello-world
+   ```
 
-    This command downloads a test image and runs it in a container. When the
-    container runs, it prints a message and exits.
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
-## Install server and client binaries on Windows
+## Instale os binários do servidor e do cliente no Windows
 
 > [!NOTE]
 >
-> The following section describes how to install the Docker daemon on Windows
-> Server which allows you to run Windows containers only. When you install the
-> Docker daemon on Windows Server, the daemon doesn't contain Docker components
-> such as `buildx` and `compose`. If you're running Windows 10 or 11,
-> we recommend that you install [Docker Desktop](/manuals/desktop/_index.md) instead.
+> A seção a seguir descreve como instalar o daemon do Docker no Windows Server,
+> que permite executar apenas contêineres do Windows.
+> Ao instalar o daemon do Docker no Windows Server, o daemon não contém
+> componentes do Docker, como `buildx` e `compose`.
+> Se você estiver usando o Windows 10 ou 11, recomendamos que instale o
+> [Docker Desktop](/manuals/desktop/_index.md).
 
-Binary packages on Windows include both `dockerd.exe` and `docker.exe`. On Windows,
-these binaries only provide the ability to run native Windows containers (not
-Linux containers).
+Os pacotes binários no Windows incluem `dockerd.exe` e `docker.exe`.
+No Windows, esses binários fornecem apenas a capacidade de executar contêineres
+nativos do Windows (não contêineres do Linux).
 
-To install server and client binaries, perform the following steps:
+Para instalar os binários do servidor e do cliente, siga estes passos:
 
-1. Download the static binary archive. Go to
-    [https://download.docker.com/win/static/stable/x86_64](https://download.docker.com/win/static/stable/x86_64) and select the latest version from the list.
+1. Baixe o arquivo binário estático.
+   Acesse
+   [https://download.docker.com/win/static/stable/x86_64](https://download.docker.com/win/static/stable/x86_64)
+   e selecione a versão mais recente da lista.
 
-2. Run the following PowerShell commands to install and extract the archive to your program files:
+2. Execute os seguintes comandos do PowerShell para instalar e extrair o arquivo
+   para a pasta Arquivos de Programas:
 
-    ```powershell
-    PS C:\> Expand-Archive /path/to/<FILE>.zip -DestinationPath $Env:ProgramFiles
-    ```
+   ```powershell
+   PS C:\> Expand-Archive /caminho/para/o/<arquivo>.zip -DestinationPath $Env:ProgramFiles
+   ```
 
-3. Register the service and start the Docker Engine:
+3. Registre o serviço e inicie a Docker Engine:
 
-    ```powershell
-    PS C:\> &$Env:ProgramFiles\Docker\dockerd --register-service
-    PS C:\> Start-Service docker
-    ```
+   ```powershell
+   PS C:\> &$Env:ProgramFiles\Docker\dockerd --register-service
+   PS C:\> Start-Service docker
+   ```
 
-4.  Verify that Docker is installed correctly by running the `hello-world`
-    image.
+4. Verifique se o Docker foi instalado corretamente executando a imagem
+   `hello-world`.
 
-    ```powershell
-    PS C:\> &$Env:ProgramFiles\Docker\docker run hello-world:nanoserver
-    ```
+   ```powershell
+   PS C:\> &$Env:ProgramFiles\Docker\docker run hello-world:nanoserver
+   ```
 
-    This command downloads a test image and runs it in a container. When the
-    container runs, it prints a message and exits.
+   Este comando baixa uma imagem de teste e a executa em um contêiner.
+   Quando o contêiner é executado, ele imprime uma mensagem e é encerrado.
 
-## Upgrade static binaries
+## Atualize os binários estáticos
 
-To upgrade your manual installation of Docker Engine, first stop any
-`dockerd` or `dockerd.exe`  processes running locally, then follow the
-regular installation steps to install the new version on top of the existing
-version.
+Para atualizar sua instalação manual da Docker Engine, primeiro interrompa
+quaisquer processos `dockerd` ou `dockerd.exe` em execução localmente e, em
+seguida, siga os passos de instalação regulares para instalar a nova versão
+sobre a versão existente.
 
-## Next steps
+## Próximos passos
 
-- Continue to [Post-installation steps for Linux](linux-postinstall.md).
+- Continue para [Passos da pós-instalação no Linux](linux-postinstall.md).
