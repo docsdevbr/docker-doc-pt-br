@@ -20,7 +20,7 @@ description: >-
 keywords: >-
   requisitos, apt, instalação, debian, instalar, desinstalar, instalar debian,
   docker engine, instalar docker engine, atualizar, upgrade
-title: Instalar a Docker Engine no Debian
+title: Instale a Docker Engine no Debian
 linkTitle: Debian
 weight: 20
 toc_max: 4
