@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md
-revision: 9944982ec08e4a1a9beee41b795b3425025a415c
+revision: c5b3cb60ad63dca4d6fc7cf19c001ba893b0c6b2
 status: ready
 
 title: O que é o Docker Compose?
@@ -208,5 +208,5 @@ Nos recursos a seguir, você pode se aprofundar no Compose e aprender a escrever
 arquivos Compose.
 
 * [Visão geral do Docker Compose](/compose/)
-* [Visão geral da CLI do Docker Compose](/compose/reference/)
+* [Visão geral da CLI do Docker Compose](/reference/cli/docker/compose/)
 * [Como o Compose funciona](/compose/intro/compose-application-model/)
