@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-an-image.md
-revision: aa3af370e7a38eaab6d9d7359cd6beab78fdc314
+revision: 70d0c07c698bfc18bbe08b44c85f9dc859bd7718
 status: ready
 
 title: O que é uma imagem?
@@ -155,7 +155,7 @@ visualizar suas camadas.
 ### Pesquise e baixe uma imagem
 
 1. Abra um terminal e pesquise imagens usando o comando
-   [`docker search`](/reference/cli/docker/search.md):
+   [`docker search`](/reference/cli/docker/search/):
 
    ```console
    docker search docker/welcome-to-docker
@@ -172,7 +172,7 @@ visualizar suas camadas.
    Hub.
 
 2. Baixe a imagem usando o comando
-   [`docker pull`](/reference/cli/docker/image/pull.md):
+   [`docker pull`](/reference/cli/docker/image/pull/):
 
    ```console
    docker pull docker/welcome-to-docker
@@ -203,7 +203,7 @@ visualizar suas camadas.
 ### Saiba mais sobre a imagem
 
 1. Liste suas imagens baixadas usando o comando
-   [`docker image ls`](/reference/cli/docker/image/ls.md):
+   [`docker image ls`](/reference/cli/docker/image/ls/):
 
    ```console
    docker image ls
@@ -226,7 +226,7 @@ visualizar suas camadas.
    > imagem, não o tamanho do download das camadas.
 
 2. Liste as camadas da imagem usando o comando
-   [`docker image history`](/reference/cli/docker/image/history.md):
+   [`docker image history`](/reference/cli/docker/image/history/):
 
    ```console
    docker image history docker/welcome-to-docker
