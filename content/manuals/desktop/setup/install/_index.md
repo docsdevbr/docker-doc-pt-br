@@ -9,11 +9,12 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
+source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/install/_index.md
+revision: f4310aed2f865acfe962395874defedb61752c2a
+status: ready
+
 build:
   render: never
-title: Install
+title: Instale
 weight: 10
-aliases:
-- /desktop/install/
-- /desktop/setup/install/
 ---
