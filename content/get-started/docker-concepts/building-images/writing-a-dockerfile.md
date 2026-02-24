@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/writing-a-dockerfile.md
-revision: 88ef79f840fe9c1e1eb9251da4a9f2b61347e32b
+revision: c5b3cb60ad63dca4d6fc7cf19c001ba893b0c6b2
 status: ready
 
 title: Escrevendo um Dockerfile
@@ -203,7 +203,7 @@ Agora que você tem o projeto, pode criar o `Dockerfile`.
 > `Dockerfile`, um `compose.yaml` e um `.dockerignore`, ajudando você a começar.
 > Como aqui você está aprendendo especificamente sobre Dockerfiles, você não o
 > usará agora.
-> Mas, [saiba mais sobre ele aqui](/engine/reference/commandline/init/).
+> Mas, [saiba mais sobre ele aqui](/reference/cli/docker/init/).
 
 ## Recursos adicionais
 
