@@ -79,18 +79,19 @@ Em [Desenvolva com contêineres](develop-with-containers.md), você usou as
 seguintes imagens provenientes do Docker Hub, as quais são
 [Imagens Docker Oficiais](/manuals/docker-hub/image-library/trusted-content.md#docker-official-images):
 
-* [node](https://hub.docker.com/_/node) - Fornece um ambiente Node e é usada
+- [node](https://hub.docker.com/_/node) - Fornece um ambiente Node e é usada
   como base para seu trabalho de desenvolvimento.
   Esta imagem também é usada como base para a imagem final da aplicação.
-* [mysql](https://hub.docker.com/_/mysql) - Fornece um banco de dados MySQL para
+- [mysql](https://hub.docker.com/_/mysql) - Fornece um banco de dados MySQL para
   armazenar os itens da lista de tarefas.
-* [phpmyadmin](https://hub.docker.com/_/phpmyadmin) - Fornece o phpMyAdmin, uma
+- [phpmyadmin](https://hub.docker.com/_/phpmyadmin) - Fornece o phpMyAdmin, uma
   interface web para o banco de dados MySQL.
-* [traefik](https://hub.docker.com/_/traefik) - Fornece o Traefik, um moderno
+- [traefik](https://hub.docker.com/_/traefik) - Fornece o Traefik, um moderno
   proxy reverso HTTP e balanceador de carga que direciona as requisições para o
   contêiner apropriado com base em regras de roteamento.
 
 Explore o catálogo completo de conteúdo confiável no Docker Hub:
+
 - [Imagens Docker Oficiais](https://hub.docker.com/search?badges=official) -
   Imagens selecionadas de softwares populares.
 - [Imagens Docker Reforçadas](https://hub.docker.com/hardened-images/catalog) -
@@ -132,10 +133,10 @@ armazena imagens de contêiner.
 
 3. Na página **Create repository**, insira as seguintes informações:
 
-   * **Repository name** - `getting-started-todo-app`.
-   * **Short description** - Sinta-se à vontade para inserir uma descrição, se
+   - **Repository name** - `getting-started-todo-app`.
+   - **Short description** - Sinta-se à vontade para inserir uma descrição, se
      desejar.
-   * **Visibility** - Selecione **Public** para permitir que outras pessoas
+   - **Visibility** - Selecione **Public** para permitir que outras pessoas
      baixem sua aplicação de tarefas personalizada.
 
 4. Selecione **Create** para criar o repositório.
@@ -180,11 +181,11 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
    $ cd getting-started-todo-app
    ```
 
-2. Construa o projeto executando o seguinte comando, trocando `DOCKER_USERNAME`
+2. Construa o projeto executando o seguinte comando, trocando `usuário-do-docker`
    pelo seu nome de usuário:
 
    ```console
-   $ docker build -t <DOCKER_USERNAME>/getting-started-todo-app .
+   $ docker build -t <usuário-do-docker>/getting-started-todo-app .
    ```
 
    Por exemplo, se seu nome de usuário do Docker fosse `mobydock`, você
@@ -210,10 +211,10 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
     ```
 
 4. Para enviar a imagem, use o comando `docker push`.
-   Certifique-se de substituir `DOCKER_USERNAME` pelo seu nome de usuário:
+   Certifique-se de substituir `usuário-do-docker` pelo seu nome de usuário:
 
    ```console
-   $ docker push <DOCKER_USERNAME>/getting-started-todo-app
+   $ docker push <usuário-do-docker>/getting-started-todo-app
    ```
 
    Dependendo da sua velocidade de upload, o envio pode levar alguns instantes.
@@ -238,7 +239,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
    ![Captura de tela do VS Code mostrando o menu do botão direito e a opção "Build Image"](images/build-vscode-menu-item.webp?border=true)
 
 4. Na caixa de diálogo que aparece, insira o nome
-   `DOCKER_USERNAME/getting-started-todo-app`, substituindo `DOCKER_USERNAME`
+   `usuário-do-docker/getting-started-todo-app`, substituindo `usuário-do-docker`
    pelo seu nome de usuário do Docker.
 
 5. Após pressionar **Enter**, um terminal para a criação da imagem será aberto.
@@ -248,7 +249,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
    de navegação esquerdo.
 
 7. Encontre a imagem que você criou.
-   Ela terá um nome de `docker.io/DOCKER_USERNAME/getting-started-todo-app`.
+   Ela terá um nome de `docker.io/usuário-do-docker/getting-started-todo-app`.
 
 8. Expanda a imagem para visualizar as tags (ou diferentes versões) da imagem.
    Você deve ver uma tag chamada `latest`, que é a tag padrão atribuída a uma
@@ -278,13 +279,13 @@ sua aplicação e enviá-la para o Docker Hub.
 
 No futuro, lembre-se de que:
 
-* O Docker Hub é o registro de referência para encontrar conteúdo confiável.
+- O Docker Hub é o registro de referência para encontrar conteúdo confiável.
   O Docker fornece uma coleção de conteúdo confiável, composta por Imagens
   Oficiais do Docker, Editores Verificados pelo Docker e Software de Código
   Aberto Patrocinado pelo Docker, para usar diretamente ou como base para suas
   imagens.
 
-* O Docker Hub fornece um mercado para distribuir suas aplicações.
+- O Docker Hub fornece um mercado para distribuir suas aplicações.
   Qualquer pessoa pode criar uma conta e distribuir imagens.
   Enquanto você distribui publicamente a imagem criada, repositórios privados
   podem garantir que suas imagens sejam acessíveis apenas a pessoas usuárias
