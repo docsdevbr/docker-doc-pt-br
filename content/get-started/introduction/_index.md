@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/_index.md
-revision: 656d1a871c6837fae1e4538b82a3a5c01b70ed1e
+revision: 33226cf897eff35777786dcc75ac57d3cc0c073c
 status: ready
 
 title: Introdução
@@ -28,9 +28,9 @@ summary: >-
   Docker, criação de imagens e orquestração de contêineres.
 layout: series
 params:
-  skill: Iniciante
+  proficiencyLevel: Iniciante
   time: 15 minutos
-  prereq: Nenhum
+  prerequisites: Nenhum
 aliases:
   - /guides/getting-started/
 ---
