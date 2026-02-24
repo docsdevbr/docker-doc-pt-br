@@ -9,8 +9,12 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docker/docs/blob/-/LICENSE
 
+source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/_index.md
+revision: 3ea0cd758d468a97403c0cd2f5c0719a6a0ff863
+status: ready
+
 build:
   render: never
-title: Setup
+title: Configuração
 weight: 10
 ---
