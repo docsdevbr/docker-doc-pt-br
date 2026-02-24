@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/get-docker.md
-revision: 038e6dc6824586c9c9081274f7716ec0e119d6a2
+revision: f4310aed2f865acfe962395874defedb61752c2a
 status: ready
 
 description: >-
@@ -26,6 +26,8 @@ aliases:
  - /install/overview/
  - /installation/
  - /get-docker/
+ - /desktop/install/
+ - /desktop/setup/install/
 ---
 
 Docker é uma plataforma aberta para desenvolver, distribuir e executar
