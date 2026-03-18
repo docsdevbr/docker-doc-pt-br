@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-registry.md
-revision: f61c34a1f685e37d07cc9504b84c8f2e2dcafdcf
+revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
 status: ready
 
 title: O que é um registro?
@@ -48,8 +48,8 @@ contêiner disponíveis atualmente, incluindo
 [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/),
 [Azure Container Registry (ACR)](https://azure.microsoft.com/en-in/products/container-registry)
 e [Google Container Registry (GCR)](https://cloud.google.com/artifact-registry).
-Você pode até mesmo executar seu registro privado em seu sistema local ou dentro
-de sua organização.
+Você pode até mesmo executar seu registro privado em seu sistema local ou na sua
+organização.
 Por exemplo, Harbor, JFrog Artifactory, GitLab Container Registry, etc.
 
 ### Registro vs. repositório
@@ -90,17 +90,17 @@ imagens.
 +---------------------------------------+
 ```
 
-> [!NOTE]
+> [!TIP]
 >
-> Você pode criar um repositório privado e repositórios públicos ilimitados
-> usando a versão gratuita do Docker Hub.
-> Para mais informações, visite a
-> [página de assinatura do Docker Hub](https://www.docker.com/pricing/).
+> O plano Docker Personal oferece um repositório privado e repositórios públicos
+> ilimitados.
+> Para obter repositórios privados ilimitados, atualize para o
+> [plano Docker Team](https://www.docker.com/pricing?ref=Docs&refAction=DocsConceptsRegistry).
 
 ## Experimente
 
-Nesta prática, você aprenderá como construir e enviar uma imagem do Docker para
-o repositório do Docker Hub.
+Nesta prática, você aprenderá como construir e enviar uma imagem Docker para o
+repositório do Docker Hub.
 
 ### Crie uma conta gratuita do Docker
 
@@ -161,7 +161,7 @@ nas seções posteriores.
    cd helloworld-demo-node
    ```
 
-3. Execute o seguinte comando para criar uma imagem do Docker, trocando
+3. Execute o seguinte comando para criar uma imagem Docker, trocando
    `SEU_NOME_DE_USUARIO` pelo seu nome de usuário.
 
    ```console
@@ -183,7 +183,7 @@ nas seções posteriores.
 
    ```console
    REPOSITORY                                 TAG       IMAGE ID       CREATED         SIZE
-   <SEU_NOME_DE_USUARIO>/docker-quickstart   latest    476de364f70e   2 minutes ago   170MB
+   <SEU_NOME_DE_USUARIO>/docker-quickstart    latest    476de364f70e   2 minutes ago   170MB
    ```
 
 5. Inicie um contêiner para testar a imagem executando o seguinte comando
@@ -197,7 +197,7 @@ nas seções posteriores.
    [http://localhost:8080](http://localhost:8080) com o seu navegador.
 
 6. Use o comando [`docker tag`](/reference/cli/docker/image/tag/) para adicionar
-   uma tag à imagem do Docker.
+   uma tag à imagem Docker.
    As tags do Docker permitem que você rotule e versione suas imagens.
 
     ```console
@@ -228,7 +228,7 @@ contêiner para seu repositório do Docker Hub.
 
 ## Próximos passos
 
-Agora que você entende os conceitos básicos de contêineres e imagens, está
-pronta para aprender sobre o Docker Compose.
+Agora que você entende os conceitos básicos de contêineres e imagens, pode
+aprender sobre o Docker Compose.
 
 {{< button text="O que é o Docker Compose?" url="what-is-Docker-Compose" >}}
