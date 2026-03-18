@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/_index.md
-revision: 26db073d5edddbd783232ff0b722c06d2fa38544
+revision: eb22a5b867398c2eee72093c36d4d9b5d5b58906
 status: ready
 
 title: Manuais
@@ -52,13 +52,13 @@ params:
       preferida.
     icon: /icons/Testcontainers.svg
     link: /testcontainers/
-  - title: Cagent
+  - title: Docker Agent
     description: >-
       A solução multiagente de código aberto para ajudar você em suas tarefas.
     icon: /icons/cagent.svg
-    link: /ai/cagent
+    link: /ai/docker-agent
   ai:
-  - title: Ask Gordon
+  - title: Gordon
     description: >-
       Simplifique seu fluxo de trabalho e aproveite ao máximo o ecossistema do
       Docker com seu assistente pessoal de IA.
@@ -77,7 +77,7 @@ params:
     description: Seu centro de comando para desenvolvimento com contêineres.
     icon: /icons/Whale.svg
     link: /desktop/
-  - title: Docker Hardened Images
+  - title: Imagens Docker Reforçadas
     description: Imagens seguras e mínimas para entrega confiável de software.
     icon: /icons/dhi.svg
     link: /dhi/
@@ -97,7 +97,7 @@ params:
     description: Análise de imagens e validação de políticas.
     icon: /icons/Scout.svg
     link: /scout/
-  - title: Extensões do Docker
+  - title: Extensões Docker
     description: Personalize seu fluxo de trabalho do Docker Desktop.
     icon: extension
     link: /extensions/
@@ -120,7 +120,7 @@ params:
     link: /accounts/
   - title: Segurança
     description: >-
-      Trilhos de segurança para pessoas administradoras e desenvolvedoras.
+      Guardrails de segurança para pessoas administradoras e desenvolvedoras.
     icon: lock
     link: /security/
   - title: Assinatura
