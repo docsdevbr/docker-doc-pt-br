@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/get-docker-desktop.md
-revision: 9eff1ba5fca35efedbd543f846573e95bff5f60e
+revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
 status: ready
 
 title: Baixe o Docker Desktop
@@ -43,7 +43,7 @@ o Docker Desktop em primeira mão.
 >
 > O uso comercial do Docker Desktop em empresas maiores (mais de 250 pessoas
 > funcionárias OU mais de US$ 10 milhões em receita anual) requer uma
-> [assinatura paga](https://www.docker.com/pricing/?_gl=1*1nyypal*_ga*MTYxMTUxMzkzOS4xNjgzNTM0MTcw*_ga_XJWPQMJYHQ*MTcxNjk4MzU4Mi4xMjE2LjEuMTcxNjk4MzkzNS4xNy4wLjA.).
+> [assinatura paga](https://www.docker.com/pricing?ref=Docs&refAction=DocsGetDockerDesktop).
 
 <div class="not-prose">
 {{< card
@@ -63,7 +63,7 @@ o Docker Desktop em primeira mão.
 </div>
 
 Após a instalação, conclua o processo de configuração e você conseguirá executar
-um contêiner do Docker.
+um contêiner Docker.
 
 ## Experimente
 
