@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/_index.md
-revision: 296fbdd23a3d4f846f27553a5e3b8ce61d15ac0b
+revision: b6455e4b1d1855cf4c25be555ebedbd325fbaa34
 status: ready
 
 title: Imagens Docker Reforçadas
@@ -67,18 +67,34 @@ params:
       link: /dhi/resources/
 ---
 
-As Imagens Docker Reforçadas (DHI) são imagens de contêineres e aplicações
-minimalistas, seguras e prontas para produção, mantidas pelo Docker.
+As Imagens Docker Reforçadas (DHI) fornecem imagens de contêiner, gráficos Helm
+e pacotes de sistema mínimos, seguros e prontos para produção, mantidos pela
+Docker.
 Projetadas para reduzir vulnerabilidades e simplificar a conformidade, as DHI se
 integram facilmente aos seus fluxos de trabalho existentes baseados em Docker,
 com pouca ou nenhuma necessidade de reconfiguração.
 
-As DHI estão disponíveis em dois níveis: **DHI Free** oferece recursos de
-segurança essenciais sem custo, enquanto o **DHI Enterprise** adiciona suporte
-com SLA, variantes de conformidade, personalização e Suporte Estendido ao Ciclo
-de Vida para organizações com requisitos avançados.
+As DHI estão disponíveis nas seguintes três assinaturas:
 
-![Assinatura DHI](./images/dhi-subscription.png)
+| Recurso                                                                                            | Community | Select | Enterprise                                                                                                                                                                                                        |
+|----------------------------------------------------------------------------------------------------|-----------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Imagens reforçadas e mínimas                                                                       | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Quase zero CVEs                                                                                    | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Proveniência verificável de SBOMs e SLSA Build L3                                                  | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Visibilidade completa e sem supressão de CVEs                                                      | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Adoção imediata, sem alterações no fluxo de trabalho                                               | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Catálogo completo de imagens de código aberto sob Apache 2.0                                       | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Construído com Pacotes de Sistema Reforçados do Docker                                             | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Cadência upstream para patches lançados pelo Docker                                                | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
+| Variantes FIPS/STIG                                                                                | ❌         | ✅      | ✅                                                                                                                                                                                                                 |
+| Correções de CVE críticas em menos de 7 dias com aplicação contínua de patches com garantia de SLA | ❌         | ✅      | ✅                                                                                                                                                                                                                 |
+| Personalizações                                                                                    | ❌         | Até 5  | Ilimitado                                                                                                                                                                                                         |
+| Acesso ao repositório de Pacotes de Sistema Reforçados                                             | ❌         | ❌      | ✅                                                                                                                                                                                                                 |
+| Acesso ao catálogo completo disponível                                                             | ❌         | ❌      | ✅                                                                                                                                                                                                                 |
+| Suporte estendido ao ciclo de vida disponível                                                      | ❌         | ❌      | ✅<br/><br/>Inclui:<br/>✅ +5 anos de atualizações reforçadas.<br/>✅ Mantém atualizações de segurança após o fim do suporte upstream.<br/>✅ SBOMs e procedência.<br/>✅ Protege cargas de trabalho de longa duração. |
+
+Para preços e mais detalhes, consulte a
+[comparação de assinaturas das Imagens Docker Reforçadas](https://www.docker.com/products/hardened-images/#compare).
 
 Explore as seções abaixo para começar a usar as Imagens Docker Reforçadas,
 integrá-las ao seu fluxo de trabalho e aprender o que as torna seguras e prontas
