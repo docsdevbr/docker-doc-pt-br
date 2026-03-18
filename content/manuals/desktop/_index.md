@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/_index.md
-revision: befcaf0320bf6caaa13638d02f0f8fc93aa87400
+revision: 1bf9cb9c3b772826a9320ea4fe1cdbabca8711ee
 status: ready
 
 title: Docker Desktop
@@ -20,7 +20,7 @@ description: >-
   Dê o próximo passo baixando-o ou encontre recursos adicionais.
 keywords: >-
   como usar o docker desktop, para que serve o docker desktop, o que o docker
-  desktop faz, usando o docker desktop.
+  desktop faz, usando o docker desktop
 params:
   sidebar:
     group: Products
@@ -42,7 +42,7 @@ grid:
     mais.
   icon: category
 - title: Veja as notas de lançamento
-  description: Saiba mais sobre novos recursos, melhorias e correções de bugs.
+  description: Saiba mais sobre novos recursos, melhorias e correções de falhas.
   icon: note_add
   link: /desktop/release-notes/
 - title: Navegue pelas perguntas frequentes comuns
@@ -72,14 +72,14 @@ microsserviços conteinerizados.
 Ele oferece uma interface gráfica de pessoa usuária (GUI) intuitiva que permite
 gerenciar seus contêineres, aplicações e imagens diretamente da sua máquina.
 
-O Docker Desktop reduz o tempo gasto em configurações complexas, para que você
+O Docker Desktop reduz o tempo gasto em configurações complexas para que você
 possa se concentrar em escrever código.
 Ele cuida do mapeamento de portas, das configurações do sistema de arquivos e de
 outras configurações padrão, além de ser atualizado regularmente com correções
-de bugs e atualizações de segurança.
+de falhas e atualizações de segurança.
 
 O Docker Desktop se integra às suas ferramentas e linguagens de desenvolvimento
-preferidas e oferece acesso a um vasto ecossistema de imagens e modelos
+preferidas e oferece acesso a um vasto ecossistema de imagens e templates
 confiáveis por meio do Docker Hub.
 Isso permite que os times acelerem o desenvolvimento, automatizem contruções,
 habilitem fluxos de trabalho de CI/CD e colaborem com segurança por meio de
@@ -104,7 +104,7 @@ repositórios compartilhados.
 
 - [Catálogo e Kit de Ferramentas Docker MCP](/manuals/ai/mcp-catalog-and-toolkit/_index.md)
 - [Docker Model Runner](/manuals/ai/model-runner/_index.md)
-- [Ask Gordon](/manuals/ai/gordon/_index.md)
+- [Gordon](/manuals/ai/gordon/_index.md)
 - [Docker Offload](/manuals/offload/_index.md)
 - [Docker Engine](/manuals/engine/_index.md)
 - Cliente CLI do Docker
