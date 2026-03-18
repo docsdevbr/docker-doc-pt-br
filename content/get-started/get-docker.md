@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/get-docker.md
-revision: f4310aed2f865acfe962395874defedb61752c2a
+revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
 status: ready
 
 description: >-
@@ -49,7 +49,7 @@ Consulte a seção a seguir e escolha a melhor forma de instalação para você.
 >
 > O uso comercial do Docker Desktop em empresas maiores (mais de 250 pessoas
 > funcionárias OU mais de US$ 10 milhões em receita anual) requer uma
-> [assinatura paga](https://www.docker.com/pricing/).
+> [assinatura paga](https://www.docker.com/pricing?ref=Docs&refAction=DocsGetDocker).
 
 <div class="not-prose">
 {{< card
