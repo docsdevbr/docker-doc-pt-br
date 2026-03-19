@@ -25,7 +25,7 @@ summary: >-
   empilhadas e utilizadas para garantir contêineres eficientes e otimizados.
 weight: 1
 aliases:
- - /guides/docker-concepts/building-images/understanding-image-layers/
+  - /guides/docker-concepts/building-images/understanding-image-layers/
 ---
 
 {{< youtube-embed wJwqtAkmtQA >}}
@@ -48,7 +48,7 @@ Vejamos uma imagem teórica:
 
 1. A primeira camada adiciona comandos básicos e um gerenciador de pacotes, como
    o apt.
-2. A segunda camada instala um ambiente de execução Python e o pip para
+2. A segunda camada instala um tempo de execução Python e o pip para
    gerenciamento de dependências.
 3. A terceira camada copia o arquivo `requirements.txt` específico de uma
    aplicação.
