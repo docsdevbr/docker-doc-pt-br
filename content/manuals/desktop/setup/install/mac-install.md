@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/install/mac-install.md
-revision: 9b14e2d355610e623da1ad96254de619bfb11da3
+revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
 status: ready
 
 description: >-
@@ -43,7 +43,7 @@ Termos do Docker Desktop
 >
 > O uso comercial do Docker Desktop em empresas maiores (mais de 250 pessoas
 > funcionárias OU mais de US$ 10 milhões em receita anual) requer uma
-> [assinatura paga](https://www.docker.com/pricing/).
+> [assinatura paga](https://www.docker.com/pricing?ref=Docs&refAction=DocsDesktopMacInstall).
 
 Esta página fornece links para download, requisitos de sistema e instruções de
 instalação passo a passo para o Docker Desktop no Mac.
@@ -125,7 +125,7 @@ instalação passo a passo para o Docker Desktop no Mac.
 ### Instale interativamente
 
 1. Baixe o instalador usando os botões de download na parte superior da página
-   ou nas [notas de versão](/manuals/desktop/release-notes.md).
+   ou nas [notas de lançamento](/manuals/desktop/release-notes.md).
 
 2. Clique duas vezes em `Docker.dmg` para abrir o instalador e arraste o ícone
    do Docker para a pasta **Aplicativos**.
@@ -179,8 +179,9 @@ instalação passo a passo para o Docker Desktop no Mac.
 ### Instale pela linha de comando
 
 Após baixar o arquivo `Docker.dmg` pelos botões de download no topo da página ou
-pelas [notas de versão](/manuals/desktop/release-notes.md), execute os seguintes
-comandos em um terminal para instalar o Docker Desktop na pasta **Aplicativos**:
+pelas [notas de lançamento](/manuals/desktop/release-notes.md), execute os
+seguintes comandos em um terminal para instalar o Docker Desktop na pasta
+**Aplicativos**:
 
 ```console
 $ sudo hdiutil attach Docker.dmg
@@ -202,7 +203,7 @@ O comando `install` aceita as seguintes flags:
 - `--accept-license`: Aceita o
   [Contrato de Serviço de Assinatura do Docker](https://www.docker.com/legal/docker-subscription-service-agreement)
   agora, em vez de exigir que ele seja aceito na primeira execução da aplicação.
-- `--user=<nome de usuário>`: Executa as configurações privilegiadas uma única
+- `--user=<nome-de-usuário>`: Executa as configurações privilegiadas uma única
   vez durante a instalação.
   Isso elimina a necessidade de a pessoa usuária conceder privilégios de root na
   primeira execução.
@@ -234,10 +235,10 @@ O comando `install` aceita as seguintes flags:
 
 - `--proxy-http-mode=<modo>`: Define o modo do proxy HTTP. Os dois modos são
   `system` (padrão) ou `manual`.
-- `--override-proxy-http=<url>`: Define a URL do proxy HTTP que deve ser usada
+- `--override-proxy-http=<url>`: Define a URL do proxy HTTP que deve ser usado
   para requisições HTTP de saída.
   É necessário que `--proxy-http-mode` seja definido como `manual`.
-- `--override-proxy-https=<url>`: Define a URL do proxy HTTP que deve ser usada
+- `--override-proxy-https=<url>`: Define a URL do proxy HTTP que deve ser usado
   para requisições HTTPS de saída.
   É necessário que `--proxy-http-mode` seja definido como `manual`.
 - `--override-proxy-exclude=<hosts/domains>`: Ignora as configurações de proxy
@@ -279,9 +280,10 @@ $ sudo /Aplicativos/Docker.app/Contents/MacOS/install --user testuser --proxy-ht
 
 ## Próximos passos
 
-- Explore as [assinaturas do Docker](https://www.docker.com/pricing/) para ver o
-  que o Docker pode oferecer.
-- [Introdução ao Docker](/get-started/introduction/_index.md).
+- Explore as
+  [assinaturas do Docker](https://www.docker.com/pricing?ref=Docs&refAction=DocsDesktopMacInstall)
+  para ver o que o Docker pode oferecer.
+- [Começando com o Docker](/get-started/introduction/_index.md).
 - [Explore o Docker Desktop](/manuals/desktop/use-desktop/_index.md) e todos os
   seus recursos.
 - [Solução de problemas](/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md)
@@ -289,7 +291,7 @@ $ sudo /Aplicativos/Docker.app/Contents/MacOS/install --user testuser --proxy-ht
   diagnósticos e como relatar problemas.
 - [Perguntas frequentes](/manuals/desktop/troubleshoot-and-support/faqs/general.md)
   fornece respostas para perguntas frequentes.
-- [Notas de versão](/manuals/desktop/release-notes.md) lista atualizações de
+- [Notas de lançamento](/manuals/desktop/release-notes.md) lista atualizações de
   componentes, novos recursos e melhorias associadas às versões do Docker
   Desktop.
 - [Backup e restauração de dados](/manuals/desktop/settings-and-maintenance/backup-and-restore.md)
