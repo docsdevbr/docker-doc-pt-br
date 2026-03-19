@@ -13,8 +13,8 @@ source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/secu
 revision: 6e8ef4cf2140a8f48485eb17820e5bb5bd66931c
 status: ready
 
-description: Solução de problemas no modo sem root
-keywords: segurança, namespaces, sem root, solução de problemas
+description: Solução de problemas no modo rootless
+keywords: segurança, namespaces, rootless, solução de problemas
 title: Solução de problemas
 weight: 30
 ---
@@ -101,9 +101,9 @@ weight: 30
 - O cgroup é suportado somente quando executado com cgroup v2 e systemd.
   Consulte [Limitando recursos](./tips.md#limitando-recursos).
 - Os seguintes recursos não são suportados:
-  - AppArmor;
-  - Checkpoint;
-  - Rede overlay;
+  - AppArmor
+  - Checkpoint
+  - Rede overlay
   - Expor as portas SCTP.
 - Para usar o comando `ping`, consulte
   [Roteamento de pacotes ping](./tips.md#roteamento-de-pacotes-ping).
@@ -116,7 +116,7 @@ weight: 30
 - A rede do host (`docker run --net=host`) também está dentro do namespace do
   RootlessKit.
 - Montagens NFS como "data-root" do Docker não são suportadas.
-  Essa limitação não é específica do modo sem root.
+  Essa limitação não é específica do modo rootless.
 
 ## Solução de problemas
 
@@ -171,7 +171,7 @@ Para corrigir esse problema, adicione `user.max_user_namespaces=28633` ao
 arquivo `/etc/sysctl.conf` (ou `/etc/sysctl.d`) e execute
 `sudo sysctl --system`.
 
-**\[rootlesskit:parent\] error: failed to setup UID/GID map: failed to compute uid/gid map: No subuid ranges found for user 1001 ("<usuario-de-teste>")**
+**\[rootlesskit:parent\] error: failed to setup UID/GID map: failed to compute uid/gid map: No subuid ranges found for user 1001 ("testuser")**
 
 Este erro ocorre quando `/etc/subuid` e `/etc/subgid` não estão configurados.
 Consulte [Pré-requisitos](./_index.md#pré-requisitos).
@@ -204,7 +204,7 @@ Esse erro ocorre principalmente quando você alterna do usuário root para um
 usuário sem privilégios de root usando o comando `sudo`:
 
 ```console
-# sudo -iu <usuario-de-teste>
+# sudo -iu testuser
 $ systemctl --user start docker
 Failed to connect to bus: No such file or directory
 ```
@@ -249,8 +249,8 @@ em `~/.config/docker/daemon.json` da seguinte forma:
 
 **docker: Error response from daemon: OCI runtime create failed: ...: read unix @-&gt;/run/systemd/private: read: connection reset by peer: unknown.**
 
-Esse erro ocorre principalmente em hosts cgroup v2 quando o daemon dbus não está
-em execução para o usuário.
+Esse erro ocorre principalmente em hosts com cgroup v2 quando o daemon dbus não
+está em execução para o usuário.
 
 ```console
 $ systemctl --user is-active dbus
@@ -279,9 +279,9 @@ Para obter mais informações, consulte
 
 ### Erros de rede
 
-Esta seção fornece dicas de solução de problemas para redes em modo sem root.
+Esta seção fornece dicas de solução de problemas para redes em modo rootless.
 
-A rede em modo sem root é suportada por meio de drivers de rede e porta no
+A rede em modo rootless é suportada por meio de drivers de rede e porta no
 RootlessKit.
 O desempenho e as características da rede dependem da combinação de drivers de
 rede e porta que você utiliza.
@@ -355,10 +355,10 @@ Use `docker run -p` em vez disso.
 
 #### Rede lenta
 
-O Docker em modo sem root utiliza o
+O Docker em modo rootless usa o
 [slirp4netns](https://github.com/rootless-containers/slirp4netns) como pilha de
 rede padrão, caso a versão 0.4.0 ou posterior do slirp4netns esteja instalada.
-Se o slirp4netns não estiver instalado, o Docker utiliza o
+Se o slirp4netns não estiver instalado, o Docker usa o
 [VPNKit](https://github.com/moby/vpnkit).
 A instalação do slirp4netns pode melhorar a taxa de transferência da rede.
 
@@ -366,7 +366,7 @@ Para mais informações sobre os drivers de rede do RootlessKit, consulte a
 [documentação do RootlessKit](https://github.com/rootless-containers/rootlesskit/blob/v2.0.0/docs/network.md).
 
 Além disso, alterar o valor do MTU também pode melhorar a taxa de transferência.
-O valor de MTU pode ser especificado criando o arquivo
+O valor do MTU pode ser especificado criando o arquivo
 `~/.config/systemd/user/docker.service.d/override.conf` com o seguinte conteúdo:
 
 ```systemd
@@ -383,7 +383,7 @@ $ systemctl --user restart docker
 
 #### `docker run -p` não propaga endereços IP de origem
 
-Isso ocorre porque o Docker no modo sem root usa o driver de porta `builtin` do
+Isso ocorre porque o Docker no modo rootless usa o driver de porta `builtin` do
 RootlessKit por padrão, que não suporta a propagação de IP de origem.
 Para habilitar a propagação de IP de origem, você pode:
 
@@ -448,10 +448,10 @@ Para remover o serviço systemd do daemon do Docker, execute
 $ dockerd-rootless-setuptool.sh uninstall
 + systemctl --user stop docker.service
 + systemctl --user disable docker.service
-Removed /home/<usuario-de-teste>/.config/systemd/user/default.target.wants/docker.service.
+Removed /home/testuser/.config/systemd/user/default.target.wants/docker.service.
 [INFO] Uninstalled docker.service
 [INFO] This uninstallation tool does NOT remove Docker binaries and data.
-[INFO] To remove data, run: `/usr/bin/rootlesskit rm -rf /home/<usuario-de-teste>/.local/share/docker`
+[INFO] To remove data, run: `/usr/bin/rootlesskit rm -rf /home/testuser/.local/share/docker`
 ```
 
 Remova as variáveis de ambiente PATH e DOCKER_HOST, caso as tenha adicionado ao
