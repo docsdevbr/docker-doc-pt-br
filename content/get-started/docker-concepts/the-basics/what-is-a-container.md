@@ -90,8 +90,8 @@ permitindo que você execute mais aplicações usando menos infraestrutura.
 > Por exemplo, em um ambiente de nuvem, as máquinas provisionadas normalmente
 > são VMs.
 > No entanto, em vez de provisionar uma máquina para executar uma aplicação, uma
-> VM com um ambiente de execução de contêineres pode executar várias aplicações
-> em contêineres, melhorando a utilização de recursos e reduzindo custos.
+> VM com um tempo de execução de contêineres pode executar várias aplicações em
+> contêineres, melhorando a utilização de recursos e reduzindo custos.
 
 ## Experimente
 
