@@ -92,7 +92,7 @@ necessidades:
 
 - Você pode baixar o pacote RPM,
   [instalá-lo manualmente](#instale-a-partir-de-um-pacote) e gerenciar as
-  atualizações completamente de forma manual.
+  atualizações de forma completamente manual.
   Isso é útil em situações como a instalação do Docker em sistemas isolados da
   internet.
 
@@ -131,9 +131,9 @@ $ sudo dnf config-manager --add-repo {{% param "download-url-base" %}}/docker-ce
    $ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
-   Se solicitada a aceitar a chave GPG, verifique se a impressão digital
-   corresponde a `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, e, em caso
-   afirmativo, aceite-a.
+   Se a aceitação da chave GPG for solicitada, verifique se a impressão
+   digital corresponde a `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, e,
+   em caso afirmativo, aceite-a.
 
    Este comando instala o Docker, mas não o inicia.
    Ele também cria um grupo `docker`, porém, não adiciona nenhum usuário ao
