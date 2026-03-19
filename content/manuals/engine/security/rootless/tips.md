@@ -13,8 +13,8 @@ source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/secu
 revision: 89344f43f19c68ef2d6941de0a5633ff6f1754e5
 status: ready
 
-description: Dicas para o modo sem root
-keywords: segurança, namespaces, sem root
+description: Dicas para o modo rootless
+keywords: segurança, namespaces, rootless
 title: Dicas
 weight: 20
 ---
@@ -43,7 +43,7 @@ $ systemctl --user enable docker
 $ sudo loginctl enable-linger $(whoami)
 ```
 
-Iniciar o Docker sem root como um serviço do systemd
+Iniciar o Docker rootless como um serviço do systemd
 (`/etc/systemd/system/docker.service`) não é suportado, mesmo com a diretiva
 `User=`.
 
@@ -101,9 +101,9 @@ $ docker run -d -p 8080:80 nginx
 
 ## Boas práticas
 
-### Docker sem root no Docker
+### Docker rootless no Docker
 
-Para executar o Docker sem root dentro do Docker com privilégios de root, use a
+Para executar o Docker rootless dentro do Docker com privilégios de root, use a
 imagem `docker:<versão>-dind-rootless` em vez de `docker:<versão>-dind`.
 
 ```console
@@ -171,7 +171,7 @@ habilitar o cgroup v2.
 
 Se `docker info` mostrar `none` como `Cgroup Driver`, as condições não foram
 satisfeitas.
-Quando essas condições não são satisfeitas, o modo sem root ignora os parâmetros
+Quando essas condições não são satisfeitas, o modo rootless ignora os parâmetros
 `docker run` relacionados a cgroups.
 Consulte
 [Limitando recursos sem cgroup](#limitando-recursos-sem-cgroup) para soluções
