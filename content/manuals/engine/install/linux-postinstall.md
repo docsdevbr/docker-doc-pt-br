@@ -58,7 +58,7 @@ Nesse caso, não é necessário criar o grupo manualmente.
 > [!NOTE]
 >
 > Para executar o Docker sem privilégios de root, consulte
-> [Executar o daemon Docker como um usuário não root (Modo sem root)](../security/rootless.md).
+> [Executar o daemon Docker como um usuário não root (modo rootless)](../security/rootless.md).
 
 Para criar o grupo `docker` e adicionar seu usuário:
 
@@ -167,5 +167,5 @@ uma das seguintes opções:
 
 ## Próximos passos
 
-- Consulte o [workshop do Docker](/get-started/workshop/_index.md) para aprender
+- Consulte o [workshop de Docker](/get-started/workshop/_index.md) para aprender
   como criar uma imagem e executá-la como uma aplicação conteinerizada.
