@@ -40,7 +40,7 @@ Docker:
 Os contêineres Docker são muito semelhantes aos contêineres LXC e possuem
 recursos de segurança similares.
 Ao iniciar um contêiner com `docker run`, o Docker cria, nos bastidores, um
-conjunto de namespaces e grupos de controle para o contêiner.
+conjunto de namespaces e control groups para o contêiner.
 
 Os namespaces fornecem a primeira e mais direta forma de isolamento.
 Os processos em execução em um contêiner não podem ver, e muito menos afetar, os
@@ -58,7 +58,7 @@ contêineres.
 Eles podem se comunicar entre si, enviar/receber pacotes UDP e estabelecer
 conexões TCP, mas isso pode ser restringido, se necessário.
 Do ponto de vista da arquitetura de rede, todos os contêineres em um determinado
-host Docker estão em interfaces de ponte.
+host Docker estão usando interfaces de ponte.
 Isso significa que eles são como máquinas físicas conectadas por meio de um
 switch Ethernet comum; nada mais, nada menos.
 
@@ -75,9 +75,10 @@ integrados ao kernel principal.
 E o OpenVZ foi lançado inicialmente em 2005, então tanto o design quanto a
 implementação são bem maduros.
 
-## Grupos de controle
+## Control groups
 
-Os grupos de controle são outro componente essencial dos contêineres Linux.
+Control groups (cgroups, ou grupos de controle) são outro componente essencial
+dos contêineres Linux.
 Eles implementam a responsabilização e a limitação de recursos.
 Fornecem muitas métricas úteis, mas também ajudam a garantir que cada contêiner
 receba sua parte justa de memória, CPU e E/S de disco; e, mais importante, que
@@ -90,7 +91,7 @@ São particularmente importantes em plataformas multi-tenant, como PaaS pública
 e privadas, para garantir um tempo de atividade (e desempenho) consistente,
 mesmo quando algumas aplicações começam a apresentar comportamento inadequado.
 
-Os grupos de controle também existem há algum tempo: o código foi iniciado em
+Os control groups também existem há algum tempo: o código foi iniciado em
 2006 e inicialmente integrado ao kernel 2.6.24.
 
 ## Superfície de ataque do daemon do Docker
@@ -150,12 +151,12 @@ de TLS.
 
 O daemon também é potencialmente vulnerável a outras entradas, como o
 carregamento de imagens do disco com `docker load` ou da rede com `docker pull`.
-A partir do Docker 1.3.2, as imagens são extraídas em um subprocesso chroot em
-plataformas Linux/Unix, sendo este o primeiro passo em um esforço mais amplo em
-direção à separação de privilégios.
+A partir do Docker 1.3.2, as imagens são extraídas em um subprocesso com chroot
+em plataformas Linux/Unix, sendo este o primeiro passo em um esforço mais amplo
+em direção à separação de privilégios.
 A partir do Docker 1.10.0, todas as imagens são armazenadas e acessadas pelos
-checksums criptográficos de seu conteúdo, limitando a possibilidade de um
-invasor causar uma colisão com uma imagem existente.
+checksums criptográficos de seu conteúdo, limitando a possibilidade de uma
+pessoa invasora causar uma colisão com uma imagem existente.
 
 Por fim, se você executar o Docker em um servidor, recomenda-se executar
 exclusivamente o Docker no servidor e mover todos os outros serviços para
@@ -193,7 +194,7 @@ infraestrutura ao redor do contêiner:
   de terceiros como Loggly ou Splunk.
 - O gerenciamento de hardware é irrelevante, o que significa que você nunca
   precisa executar `udevd` ou daemons equivalentes dentro de contêineres.
-- O gerenciamento de redes ocorre fora dos contêineres, reforçando a separação
+- O gerenciamento de rede ocorre fora dos contêineres, reforçando a separação
   de responsabilidades o máximo possível, o que significa que um contêiner nunca
   deve precisar executar comandos `ifconfig`, `route` ou `ip` (exceto quando um
   contêiner é especificamente projetado para se comportar como um roteador ou
@@ -273,8 +274,8 @@ Aqui estão alguns exemplos:
   técnicas como randomização de endereços.
   Não requer configuração específica do Docker, já que esses recursos de
   segurança se aplicam a todo o sistema, independentemente dos contêineres.
-- Se sua distribuição vier com modelos de segurança para contêineres Docker,
-  você pode usá-los imediatamente.
+- Se sua distribuição vier com templates de modelos de segurança para
+  contêineres Docker, você pode usá-los imediatamente.
   Por exemplo, nós fornecemos um template que funciona com o AppArmor e a Red
   Hat vem com políticas SELinux para o Docker.
   Esses templates fornecem uma camada extra de segurança (mesmo que haja grande
@@ -305,7 +306,7 @@ podem ser encontradas
 ## Conclusões
 
 Os contêineres Docker são, por padrão, bastante seguros; especialmente se você
-executar seus processos como usuários sem privilégios de administrador dentro do
+executar seus processos como usuários sem privilégios de root dentro do
 contêiner.
 
 Você pode adicionar uma camada extra de segurança habilitando o AppArmor,
