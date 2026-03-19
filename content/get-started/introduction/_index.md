@@ -41,7 +41,7 @@ Nesta série de guias, você ganhará experiência prática com o Docker, começ
 com a instalação e configuração do Docker Desktop em sua máquina local.
 Você aprenderá como executar seu primeiro contêiner, entendendo os conceitos
 básicos da conteinerização e seus benefícios.
-Esta série guiará você na construção da sua primeira imagem do Docker,
+Esta série guiará você na construção da sua primeira imagem Docker,
 fornecendo conhecimentos sobre como criar imagens eficientes e reutilizáveis.
 Por fim, você explorará como publicar sua imagem no Docker Hub, permitindo que
 você compartilhe seu trabalho com a comunidade mais ampla e aproveite o poderoso

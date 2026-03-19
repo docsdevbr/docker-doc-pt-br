@@ -10,11 +10,11 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/_index.md
-revision: 9181177b0efd89584fb1b7c5b9e25ffc81456ae8
+revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
 status: ready
 
 title: Instale a Docker Engine
-linkTitle: Instalar
+linkTitle: Instale
 weight: 10
 description: >-
   Aprenda como escolher o melhor método para instalar a Docker Engine.
@@ -83,12 +83,12 @@ correspondente.
 
 - Se você usa distribuições derivadas do Debian, como "BunsenLabs Linux", "Kali
   Linux" ou "LMDE" (Mint baseado em Debian), siga as instruções de instalação
-  para [Debian](debian.md), substituindo a versão da sua distribuição pela
+  para o [Debian](debian.md), substituindo a versão da sua distribuição pela
   versão correspondente do Debian.
   Consulte a documentação da sua distribuição para encontrar qual versão do
   Debian corresponde à sua versão derivada.
 - Da mesma forma, se você usa distribuições derivadas do Ubuntu, como "Kubuntu",
-  "Lubuntu" ou "Xubuntu", siga as instruções de instalação para
+  "Lubuntu" ou "Xubuntu", siga as instruções de instalação para o
   [Ubuntu](ubuntu.md), substituindo a versão da sua distribuição pela versão
   correspondente do Ubuntu.
   Consulte a documentação da sua distribuição para encontrar qual versão do
@@ -141,7 +141,8 @@ principais quanto secundárias.
 
 O uso comercial da Docker Engine obtida por meio do Docker Desktop em grandes
 empresas (com mais de 250 pessoas funcionárias OU com receita anual superior a
-US$ 10 milhões) requer uma [assinatura paga](https://www.docker.com/pricing/).
+US$ 10 milhões) requer uma
+[assinatura paga](https://www.docker.com/pricing?ref=Docs&refAction=DocsEngineInstall).
 Licença Apache, versão 2.0.
 Consulte o [arquivo LICENSE](https://github.com/moby/moby/blob/master/LICENSE)
 para obter a licença completa.
@@ -160,4 +161,4 @@ por isso.
 ## Introdução
 
 Após configurar o Docker, você pode aprender o básico com o guia
-[Primeiros passos com o Docker](/get-started/introduction/_index.md).
+[Começando com o Docker](/get-started/introduction/_index.md).
