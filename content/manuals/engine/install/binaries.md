@@ -55,14 +55,14 @@ aliases:
 Se você deseja experimentar o Docker ou usá-lo em um ambiente de teste, mas não
 está em uma plataforma compatível, pode tentar instalar a partir dos binários
 estáticos.
-Se possível, use pacotes criados para o seu sistema operacional e utilize o
-sistema de gerenciamento de pacotes do seu sistema operacional para gerenciar a
+Se possível, use pacotes criados para o seu sistema operacional e use o sistema
+de gerenciamento de pacotes do seu sistema operacional para gerenciar a
 instalação e as atualizações do Docker.
 
-Binários estáticos para o daemon do Docker estão disponíveis apenas para Linux
-(como `dockerd`) e Windows (como `dockerd.exe`).
-Binários estáticos para o cliente Docker estão disponíveis para Linux, Windows e
-macOS (como `docker`).
+Os binários estáticos para o daemon do Docker estão disponíveis apenas para
+Linux (como `dockerd`) e Windows (como `dockerd.exe`).
+Os binários estáticos para o cliente Docker estão disponíveis para Linux,
+Windows e macOS (como `docker`).
 
 Este tópico aborda a instalação dos binários para Linux, Windows e macOS:
 
@@ -104,7 +104,7 @@ Isso ajuda a melhorar a segurança e bloqueia certos tipos de explorações.
 Consulte a documentação da sua distribuição Linux para obter instruções sobre
 como habilitar e configurar o AppArmor ou o SELinux.
 
-> **Aviso de segurança**
+> **Alerta de segurança**
 >
 > Se algum dos mecanismos de segurança estiver habilitado, não o desabilite como
 > uma solução alternativa para fazer o Docker ou seus contêineres funcionarem.
@@ -178,7 +178,7 @@ Você instalou e iniciou a Docker Engine com sucesso.
 
 Os binários para Mac também não contêm:
 
-- Um ambiente de execução.
+- Um ambiente de tempo de execução.
   Você deve configurar um mecanismo funcional em uma máquina virtual ou em uma
   máquina Linux remota.
 - Componentes do Docker, como `buildx` e `docker compose`.
@@ -189,8 +189,8 @@ Para instalar os binários do cliente, execute os seguintes passos:
    Acesse
    [https://download.docker.com/mac/static/stable/](https://download.docker.com/mac/static/stable/)
    e selecione `x86_64` (para Mac com chip Intel) ou `aarch64` (para Mac com
-   chip Apple), e então baixe o arquivo `.tgz` correspondente à versão da Docker
-   Engine que você deseja instalar.
+   Apple Silicon), e então baixe o arquivo `.tgz` correspondente à versão da
+   Docker Engine que você deseja instalar.
 
 2. Extraia o arquivo usando o utilitário `tar`.
    O binário `docker` será extraído.
@@ -246,7 +246,7 @@ Para instalar os binários do cliente, execute os seguintes passos:
 
 Os pacotes binários no Windows incluem `dockerd.exe` e `docker.exe`.
 No Windows, esses binários fornecem apenas a capacidade de executar contêineres
-nativos do Windows (não contêineres do Linux).
+nativos do Windows (não contêineres Linux).
 
 Para instalar os binários do servidor e do cliente, siga estes passos:
 
