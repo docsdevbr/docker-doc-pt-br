@@ -161,7 +161,7 @@ ao catálogo para grandes empresas com necessidades avançadas de segurança.
 Para uma comparação detalhada, consulte a
 [Comparação de assinaturas das Imagens Docker Reforçadas](https://www.docker.com/products/hardened-images/#compare).
 
-### Segurança com SLA garantido {tier="DHI Select e DHI Enterprise"}
+### Segurança com garantia de SLA {tier="DHI Select e DHI Enterprise"}
 
 - SLA de correção de CVE: SLA de 7 dias para vulnerabilidades críticas e de alta
   gravidade.

@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/get-started.md
-revision: 52e4c9824e133cc83e8f20ee9c33c2d9db0ceaa9
+revision: eb22a5b867398c2eee72093c36d4d9b5d5b58906
 status: ready
 
 linktitle: Início rápido
@@ -29,18 +29,23 @@ as diferenças.
 Embora as etapas usem uma imagem específica como exemplo, elas podem ser
 aplicadas a qualquer DHI.
 
-> [!NOTE]
->
-> As Imagens Docker Reforçadas estão disponíveis gratuitamente para todas as
-> pessoas, sem necessidade de assinatura, restrições de uso ou dependência de
-> fornecedor.
-> Você pode atualizar para uma assinatura DHI Enterprise quando precisar de
-> recursos corporativos, como variantes de conformidade com FIPS ou STIG,
-> recursos de personalização ou suporte com SLA.
+As Imagens Docker Reforçadas estão disponíveis gratuitamente para todas as
+pessoas, sem necessidade de assinatura, restrições de uso ou dependência de
+fornecedor.
+Este guia rápido aborda imagens DHI gratuitas baixadas do `dhi.io`.
+Se você possui uma assinatura DHI paga ou iniciou um período de avaliação e
+precisa de variantes de conformidade (FIPS), recursos de personalização ou
+atualizações com SLA, você deve
+[espelhar os repositórios DHI](./how-to/mirror.md) para o namespace da sua
+organização no Docker Hub.
+Em seguida, você obtém as imagens espelhadas do `docker.io` (e não do `dhi.io`)
+usando o caminho do namespace da sua organização.
+Por exemplo, `docker pull docker.io/<suaorganização>/dhi-python:3.13` em vez de
+`docker pull dhi.io/python:3.13`.
 
 ## Passo 1: encontre uma imagem para usar
 
-1. Acesse o catálogo de Imagens Reforçadas no
+1. Acesse o catálogo de Imagens Docker Reforçadas no
    [Docker Hub](https://hub.docker.com/hardened-images/catalog).
 2. Use a barra de pesquisa ou os filtros para encontrar uma imagem (por exemplo,
    `python`, `node`, `golang`).
@@ -49,11 +54,11 @@ aplicadas a qualquer DHI.
 
 Continue para o próximo passo para baixar e executar a imagem.
 Para explorar as imagens com mais detalhes, consulte
-[Explore as Imagens Reforçadas do Docker](./how-to/explore.md).
+[Explore as Imagens Docker Reforçadas](./how-to/explore.md).
 
 ## Passo 2: baixe e execute a imagem
 
-Você pode baixar e executar uma imagem DHI como qualquer outra imagem do Docker.
+Você pode baixar e executar uma imagem DHI como qualquer outra imagem Docker.
 Observe que as Imagens Docker Reforçadas são projetadas para serem minimalistas
 e seguras, portanto, podem não incluir todas as ferramentas ou bibliotecas que
 você espera em uma imagem típica.
@@ -141,10 +146,10 @@ Exemplo de saída:
 > atualizações de imagem.
 >
 > O Docker mantém quase zero CVEs em suas Imagens Docker Reforçadas.
-> Para assinaturas DHI Enterprise, quando novas CVEs são descobertas, elas são
+> Para assinaturas DHI pagas, quando novas CVEs são descobertas, elas são
 > corrigidas dentro do prazo do SLA líder do setor.
 > Saiba mais sobre os
-> [recursos de segurança com garantia de SLA](./features.md#sla-backed-security).
+> [recursos de segurança com garantia de SLA](./features.md#segurança-com-garantia-de-sla).
 
 Esta comparação mostra que a Imagem Docker Reforçada:
 
@@ -161,18 +166,18 @@ Para obter mais detalhes sobre a comparação de imagens, consulte
 Você baixou e executou sua primeira Imagem Docker Reforçada.
 Aqui estão algumas maneiras de continuar:
 
-- [Migre aplicações existentes para DHIs](./migration/migrate-with-ai.md): Use
-  o assistente de IA do Docker para atualizar seus Dockerfiles e usar as Imagens
-  Docker Reforçadas como base.
+- [Migre aplicações existentes para DHIs](./migration/migrate-with-ai.md): Use o
+  Gordon para atualizar seus Dockerfiles e usar as Imagens Docker Reforçadas
+  como base.
 
 - [Inicie um teste gratuito](https://hub.docker.com/hardened-images/start-free-trial)
-  para explorar os benefícios de uma assinatura DHI Enterprise, como acesso a
+  para explorar os benefícios de uma assinatura DHI paga, como acesso a
   variantes FIPS e STIG, imagens personalizadas e atualizações com garantia de
   SLA.
 
-- [Espelhe um repositório](./how-to/mirror.md): Após assinar o DHI Enterprise
-  ou iniciar um teste gratuito, aprenda como espelhar um repositório DHI para
-  habilitar a personalização, acessar variantes de conformidade e obter
+- [Espelhe um repositório](./how-to/mirror.md): Após obter uma assinatura DHI
+  paga ou iniciar um teste gratuito, aprenda como espelhar um repositório DHI
+  para habilitar a personalização, acessar variantes de conformidade e obter
   atualizações com garantia de SLA.
 
 - [Verifique DHIs](./how-to/verify.md): Use ferramentas como o
