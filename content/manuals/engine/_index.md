@@ -49,7 +49,7 @@ grid:
     description: Explore as opções de configuração do daemon do Docker.
     icon: tune
     link: /config/daemon
-  - title: Modo sem root
+  - title: Modo rootless
     description: Execute o Docker sem privilégios de root.
     icon: security
     link: /engine/security/rootless
