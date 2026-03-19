@@ -14,30 +14,30 @@ revision: 89344f43f19c68ef2d6941de0a5633ff6f1754e5
 status: ready
 
 description: >-
-  Execute o daemon do Docker como um usuário não root (modo sem root).
-keywords: segurança, namespaces, sem root
-title: Modo sem root
+  Execute o daemon do Docker como um usuário não root (modo rootless).
+keywords: segurança, namespaces, rootless
+title: Modo rootless
 weight: 10
 ---
 
-O modo sem root permite executar o daemon e os contêineres do Docker como um
+O modo rootless permite executar o daemon e os contêineres do Docker como um
 usuário não root para mitigar possíveis vulnerabilidades no daemon e no ambiente
 de execução do contêiner.
 
-O modo sem root não requer privilégios de root, mesmo durante a instalação do
+O modo rootless não requer privilégios de root, mesmo durante a instalação do
 daemon do Docker, desde que os [pré-requisitos](#pré-requisitos) sejam
 atendidos.
 
 ## Como funciona
 
-O modo sem root executa o daemon e os contêineres do Docker em um namespace de
+O modo rootless executa o daemon e os contêineres do Docker em um namespace de
 usuário.
 Isso é semelhante ao [modo `userns-remap`](../userns-remap.md), exceto que no
 modo `userns-remap`, o próprio daemon é executado com privilégios de root,
-enquanto no modo sem root, tanto o daemon quanto o contêiner são executados sem
+enquanto no modo rootless, tanto o daemon quanto o contêiner são executados sem
 privilégios de root.
 
-O modo sem root não usa binários com bits `SETUID` ou capacidades de arquivo,
+O modo rootless não usa binários com bits `SETUID` ou capacidades de arquivo,
 exceto `newuidmap` e `newgidmap`, que são necessários para permitir que vários
 UIDs/GIDs sejam usados no namespace do usuário.
 
@@ -76,7 +76,7 @@ automaticamente a ajuda quando os pré-requisitos não forem atendidos.
 >$ sudo rm /var/run/docker.sock
 >```
 >
-> Caso opte por não desligar o serviço e o socket do Docker, você precisará usar
+> Caso opte por não desligar o serviço e o socket `docker`, você precisará usar
 > o parâmetro `--force` na próxima seção.
 > Não há problemas conhecidos, mas até que você desligue e desative o serviço,
 > você ainda estará executando o Docker com privilégios de root.
@@ -155,7 +155,7 @@ Os arquivos binários serão instalados em `~/bin`.
 {{< /tabs >}}
 
 Execute o comando `docker info` para confirmar que o cliente `docker` está se
-conectando ao daemon sem root:
+conectando ao daemon rootless:
 
 ```console
 $ docker info
