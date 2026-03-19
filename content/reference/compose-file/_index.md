@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/_index.md
-revision: 4c6f75f19facf9fcba938315035addd2949f180b
+revision: 2c0dd7e08312f8b9470f1e30cd959a2c68b67dbf
 status: ready
 
 description: >-
@@ -55,7 +55,7 @@ aliases:
   - /compose/reference/overview/
 ---
 
->**Iniciando no Docker Compose?**
+> **Iniciando no Docker Compose?**
 >
 > Encontre mais informações sobre os
 > [principais recursos e casos de uso do Docker Compose](/manuals/compose/intro/features-uses.md)
@@ -63,15 +63,15 @@ aliases:
 
 A Especificação do Compose é a versão mais recente e recomendada do formato de
 arquivo Compose.
-Ela ajuda você a definir um
+Ela te ajuda a definir um
 [arquivo Compose](/manuals/compose/intro/compose-application-model.md) usado
-para configurar os serviços, redes, volumes e muito mais da sua aplicação
-Docker.
+para configurar os serviços, redes, volumes da sua aplicação Docker e muito
+mais.
 
 As versões legadas 2.x e 3.x do formato de arquivo Compose foram incorporadas à
 Especificação do Compose.
 Ela é implementada nas versões 1.27.0 e superiores (também conhecidas como
-Compose V2) da CLI do Docker Compose.
+Compose v2) da CLI do Docker Compose.
 
 A Especificação do Compose na documentação do Docker é a implementação do Docker
 Compose.
@@ -85,8 +85,8 @@ Compose.
 > [!TIP]
 >
 > Quer uma experiência de edição melhor para arquivos Compose no VS Code?
-> Confira a
-> [Extensão Docker para VS Code (Beta)](https://marketplace.visualstudio.com/items?itemName=docker.docker)
+> Confira a extensão
+> [Docker DX](https://marketplace.visualstudio.com/items?itemName=docker.docker)
 > para linting, navegação de código e verificação de vulnerabilidades.
 
 {{< grid >}}
