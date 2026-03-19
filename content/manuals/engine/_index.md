@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/_index.md
-revision: c6fe2a81f6d2cee3744fe88741e607270be8e213
+revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
 status: ready
 
 title: Docker Engine
@@ -30,7 +30,7 @@ grid:
     icon: download
     link: /engine/install
   - title: Armazenamento
-    description: Utilize dados persistentes com contêineres Docker.
+    description: Use dados persistentes com contêineres Docker.
     icon: database
     link: /storage
   - title: Redes
@@ -38,7 +38,7 @@ grid:
     icon: network_node
     link: /network
   - title: Logs de contêiner
-    description: Aprenda como visualizar e ler os logs de contêiner.
+    description: Aprenda como visualizar e ler logs de contêiner.
     icon: text_snippet
     link: /config/containers/logging/
   - title: Limpeza
@@ -53,7 +53,7 @@ grid:
     description: Execute o Docker sem privilégios de root.
     icon: security
     link: /engine/security/rootless
-  - title: Recursos obsoletos
+  - title: Recursos descontinuados
     description: >-
       Descubra quais recursos da Docker Engine você deve parar de usar.
     icon: folder_delete
@@ -96,7 +96,8 @@ Para obter mais detalhes, consulte a
 
 O uso comercial da Docker Engine obtido via Docker Desktop em grandes empresas
 (com mais de 250 pessoas funcionárias OU com receita anual superior a US$ 10
-milhões) requer uma [assinatura paga](https://www.docker.com/pricing/).
+milhões) requer uma
+[assinatura paga](https://www.docker.com/pricing?ref=Docs&refAction=DocsEngine).
 Licença Apache, versão 2.0.
 Consulte o arquivo [LICENSE](https://github.com/moby/moby/blob/master/LICENSE)
 para obter a licença completa.
