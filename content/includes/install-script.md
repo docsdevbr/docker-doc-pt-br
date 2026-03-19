@@ -82,7 +82,7 @@ Como a mensagem indica, usuários sem privilégios de root não podem executar
 comandos do Docker por padrão.
 
 > **Usar o Docker como um usuário sem privilégios ou instalar no modo
-> sem root?**
+> rootless?**
 >
 > O script de instalação requer privilégios de `root` ou `sudo` para instalar e
 > usar o Docker.
@@ -90,9 +90,9 @@ comandos do Docker por padrão.
 > consulte as etapas de
 > [pós-instalação para Linux](/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user).
 > Você também pode instalar o Docker sem privilégios de `root` ou configurá-lo
-> para ser executado no modo sem root.
-> Para obter instruções sobre como executar o Docker no modo sem root, consulte
-> [execute o daemon do Docker como um usuário não root (modo sem root)](/engine/security/rootless/).
+> para ser executado no modo rootless.
+> Para obter instruções sobre como executar o Docker no modo rootless, consulte
+> [execute o daemon do Docker como um usuário não root (modo rootless)](/engine/security/rootless/).
 
 #### Instale versões prévias
 
