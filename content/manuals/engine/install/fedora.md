@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/fedora.md
-revision: 91baa8dd4e25352763ddea376f26c8626dfae78d
+revision: 55c09cc1f26374b8feae41b6589fbb3a2d44f261
 status: ready
 
 description: >-
@@ -33,7 +33,7 @@ download-url-base: https://download.docker.com/linux/fedora
 ---
 
 Para começar a usar a Docker Engine no Fedora, certifique-se de que você
-[atende aos pré-requisitos](#prerequisites) e, em seguida, siga os
+[atende aos pré-requisitos](#pré-requisitos) e, em seguida, siga os
 [passos da instalação](#métodos-de-instalação).
 
 ## Pré-requisitos
@@ -45,7 +45,6 @@ seguintes versões do Fedora:
 
 - Fedora 43
 - Fedora 42
-- Fedora 41
 
 ### Desinstale versões antigas
 
@@ -88,7 +87,7 @@ necessidades:
 
 - Você pode baixar o pacote RPM,
   [instalá-lo manualmente](#instale-a-partir-de-um-pacote) e gerenciar as
-  atualizações completamente de forma manual.
+  atualizações de forma completamente manual.
   Isso é útil em situações como a instalação do Docker em sistemas isolados da
   internet.
 
@@ -123,9 +122,9 @@ $ sudo dnf config-manager addrepo --from-repofile {{% param "download-url-base" 
    $ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
-   Se solicitada a aceitar a chave GPG, verifique se a impressão digital
-   corresponde a `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, e, em caso
-   afirmativo, aceite-a.
+   Se a aceitação da chave GPG for solicitada, verifique se a impressão
+   digital corresponde a `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, e,
+   em caso afirmativo, aceite-a.
 
    Este comando instala o Docker, mas não o inicia.
    Ele também cria um grupo `docker`, porém, não adiciona nenhum usuário ao
