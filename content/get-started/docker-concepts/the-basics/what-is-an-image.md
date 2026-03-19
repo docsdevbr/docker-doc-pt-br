@@ -37,7 +37,7 @@ binários, bibliotecas e configurações necessários para executar um contêine
 Para uma imagem do [PostgreSQL](https://hub.docker.com/_/postgres), essa imagem
 empacotará os binários do banco de dados, arquivos de configuração e outras
 dependências.
-Para uma aplicação web Python, ela incluirá o ambiente de execução do Python, o
+Para uma aplicação web Python, ela incluirá o tempo de execução do Python, o
 código da sua aplicação e todas as suas dependências.
 
 Existem dois princípios importantes das imagens:
@@ -96,8 +96,8 @@ Há também imagens base, como a imagem Docker do
 [Node.js](https://hub.docker.com/_/node), que você pode usar como ponto de
 partida e adicionar seus próprios arquivos e configurações.
 Para cargas de trabalho de produção que exigem segurança reforçada, as Imagens
-Reforçadas do Docker oferecem variantes mínimas de imagens populares como
-Node.js, Python e Go.
+Docker Reforçadas oferecem variantes mínimas de imagens populares como Node.js,
+Python e Go.
 
 ## Experimente
 
@@ -129,8 +129,8 @@ usando a GUI do Docker Desktop.
 
 ### Saiba mais sobre a imagem
 
-Depois de baixar uma imagem, você pode obter várias informações sobre ela
-através da GUI ou da CLI.
+Após baixar uma imagem, você pode obter várias informações sobre ela através da
+GUI ou da CLI.
 
 1. No Painel do Docker Desktop, selecione a visualização **Images**.
 
@@ -266,7 +266,7 @@ visualizar suas camadas.
 {{< /tab >}}
 {{< /tabs >}}
 
-Neste tutorial, você pesquisou e baixou uma imagem do Docker.
+Neste tutorial, você pesquisou e baixou uma imagem Docker.
 Além de baixar uma imagem Docker, você também aprendeu sobre as camadas de uma
 imagem Docker.
 
