@@ -270,7 +270,7 @@ Você pode simplesmente se concentrar no que torna sua aplicação única.
 {{< /tab >}}
 {{< /tabs >}}
 
-## Resumo
+## Recapitulando
 
 Antes de prosseguir, reserve um momento para refletir sobre o que aconteceu
 aqui.
