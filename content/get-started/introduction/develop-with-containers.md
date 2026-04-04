@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/develop-with-containers.md
-revision: 29e9c2d8c4c504412d677a779610dc6749da0df6
+revision: 3e21d7caaa6f95057fb4708881a3decbfeb56090
 status: ready
 
 title: Desenvolva com contêineres
@@ -95,8 +95,8 @@ necessidade específica da aplicação:
 - Banco de dados MySQL - um banco de dados para armazenar a lista de itens.
 - phpMyAdmin - uma interface web para interagir com o banco de dados que pode
   ser acessada em [http://db.localhost](http://db.localhost).
-- Proxy Traefik - Traefik é um proxy de aplicação que roteia requisições para o
-  serviço correto.
+- Proxy Traefik - [Traefik](https://traefik.io/traefik/) é um proxy de aplicação
+  que roteia requisições para o serviço correto.
   Ele envia todas as requisições para `localhost/api/*` para o back-end,
   requisições para `localhost/*` para o front-end e, finalmente, requisições
   para `db.localhost` para o phpMyAdmin.
@@ -122,8 +122,11 @@ Atualmente, ela sempre retorna "Hello world!".
 Agora você a modificará para retornar uma das três mensagens aleatórias (que
 você poderá escolher).
 
-1. Abra o arquivo `backend/src/routes/getGreeting.js` em um editor de texto.
+1. Abra o arquivo `backend/src/routes/getGreeting.js` em um editor de texto em
+   sua máquina local (no diretório do projeto clonado).
    Este arquivo fornece o manipulador para o endpoint da API.
+   Suas alterações serão sincronizadas automaticamente com o contêiner em
+   execução.
 
 2. Modifique a variável no topo para um array de saudações.
    Sinta-se à vontade para usar as seguintes modificações ou personalizá-la
@@ -133,15 +136,15 @@ você poderá escolher).
 
    ```js {linenos=table,hl_lines=["1-5",9],linenostart=1}
    const GREETINGS = [
-       "Olá, mundo!",
-       "Todas as pessoas a postos!",
-       "Traçando o curso à frente!",
+     "Olá, mundo!",
+     "Todas as pessoas a postos!",
+     "Traçando o curso à frente!",
    ];
 
    module.exports = async (req, res) => {
-       res.send({
-           greeting: GREETINGS[ Math.floor( Math.random() * GREETINGS.length )],
-       });
+     res.send({
+       greeting: GREETINGS[ Math.floor( Math.random() * GREETINGS.length )],
+     });
    };
    ```
 
@@ -158,19 +161,21 @@ simplesmente "New Item".
 Agora você tornará isso um pouco mais descritivo e divertido.
 Você também fará algumas alterações no estilo da aplicação.
 
-1. Abra o arquivo `client/src/components/AddNewItemForm.jsx`.
-   Ele fornece o componente para adicionar um novo item à lista de tarefas.
+1. Abra o arquivo `client/src/components/AddNewItemForm.jsx` no diretório do seu
+   projeto local.
+   Este arquivo fornece o componente para adicionar um novo item à lista de
+   tarefas.
 
 2. Modifique o atributo `placeholder` do elemento `Form.Control` para o que você
    quiser exibir.
 
    ```js {linenos=table,hl_lines=[5],linenostart=33}
    <Form.Control
-       value={newItem}
-       onChange={(e) => setNewItem(e.target.value)}
-       type="text"
-       placeholder="What do you need to do?"
-       aria-label="New item"
+     value={newItem}
+     onChange={(e) => setNewItem(e.target.value)}
+     type="text"
+     placeholder="What do you need to do?"
+     aria-label="New item"
    />
    ```
 
@@ -184,7 +189,7 @@ Você também fará algumas alterações no estilo da aplicação.
 
 Antes de considerar a aplicação finalizada, você precisa melhorar as cores.
 
-1. Abra o arquivo `client/src/index.scss`.
+1. Abra o arquivo `client/src/index.scss` no diretório do seu projeto local.
 
 2. Ajuste o atributo `background-color` para qualquer cor que desejar.
    O trecho de código fornecido é um azul suave para combinar com o tema náutico
@@ -198,15 +203,15 @@ Antes de considerar a aplicação finalizada, você precisa melhorar as cores.
 
    ```css {linenos=table,hl_lines=2,linenostart=3}
    body {
-       background-color: #99bbff;
-       margin-top: 50px;
-       font-family: 'Lato';
+     background-color: #99bbff;
+     margin-top: 50px;
+     font-family: 'Lato';
    }
    ```
 
-   Cada salvamento deve permitir que você veja a alteração imediatamente no
+   Cada vez que você salvar as alterações, elas devem aparecer imediatamente no
    navegador.
-   Continue ajustando até que esteja na configuração perfeita para você.
+   Continue ajustando até encontrar a configuração perfeita para você.
 
    ![Captura de tela da aplicação de tarefas com um novo espaço reservado e cor de fundo"](images/develop-app-with-updated-client.webp)
 
@@ -228,7 +233,9 @@ Em poucos instantes, você conseguiu:
   Isso foi possível porque:
     1. Os processos em execução em cada contêiner estão observando e respondendo
        às alterações de arquivo e;
-    2. Os arquivos são compartilhados com o ambiente conteinerizado.
+    2. Os arquivos no diretório do seu projeto local são compartilhados com o
+       ambiente conteinerizado, portanto, as edições feitas localmente são
+       sincronizadas automaticamente com os contêineres.
 
 O Docker Desktop permite tudo isso e muito mais.
 Depois que você começar a pensar com contêineres, poderá criar quase qualquer
