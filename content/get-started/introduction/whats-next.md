@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/whats-next.md
-revision: abd030c3fe2b5db526fb7a16d6d9892d46d678e5
+revision: a09b94306da7763eb3dc752fa2c6db34ea126833
 status: ready
 
 title: Próximos passos
