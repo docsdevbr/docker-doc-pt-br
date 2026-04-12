@@ -41,7 +41,7 @@ grid:
     [Docker VMM](/desktop/features/vmm/), [WSL](/desktop/features/wsl/) e muito
     mais.
   icon: category
-- title: Veja as notas de lançamento
+- title: Consulte as notas de lançamento
   description: Saiba mais sobre novos recursos, melhorias e correções de falhas.
   icon: note_add
   link: /desktop/release-notes/
