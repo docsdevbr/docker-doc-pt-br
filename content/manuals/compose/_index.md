@@ -43,7 +43,7 @@ grid:
       aplicação web simples em Python.
     icon: explore
     link: /compose/gettingstarted
-  - title: Veja as notas de lançamento
+  - title: Consulte as notas de lançamento
     description: >-
       Descubra as melhorias e correções de bugs mais recentes.
     icon: note_add
