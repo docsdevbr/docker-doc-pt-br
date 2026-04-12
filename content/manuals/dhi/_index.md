@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/_index.md
-revision: b6455e4b1d1855cf4c25be555ebedbd325fbaa34
+revision: a960edbd5af1bb7bdcfd5fe786636648f4eb0d71
 status: ready
 
 title: Imagens Docker Reforçadas
@@ -61,8 +61,8 @@ params:
       link: /dhi/troubleshoot/
     - title: Recursos adicionais
       description: >-
-        Links para posts de blog, catálogo do Docker Hub, repositórios do GitHub
-        e muito mais.
+        Guias, posts de blog, catálogo do Docker Hub, repositórios do GitHub e
+        muito mais.
       icon: link
       link: /dhi/resources/
 ---
