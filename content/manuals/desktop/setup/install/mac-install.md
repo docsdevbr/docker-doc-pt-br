@@ -37,8 +37,6 @@ aliases:
 - /desktop/install/mac/
 ---
 
-Termos do Docker Desktop
-
 > **Termos do Docker Desktop**
 >
 > O uso comercial do Docker Desktop em empresas maiores (mais de 250 pessoas
@@ -272,6 +270,7 @@ $ sudo /Aplicativos/Docker.app/Contents/MacOS/install --user testuser --proxy-ht
 > Isso pode fornecer relatórios de licença precisos, ajudar a garantir que suas
 > máquinas usem a versão mais recente do Docker Desktop e permitir que você
 > [imponha o login](/manuals/enterprise/security/enforce-sign-in/_index.md).
+>
 > - [Intune](https://learn.microsoft.com/en-us/mem/intune/apps/app-discovered-apps)
 > - [Jamf](https://docs.jamf.com/10.25.0/jamf-pro/administrator-guide/Application_Usage.html)
 > - [Kandji](https://support.kandji.io/support/solutions/articles/72000559793-view-a-device-application-list)
