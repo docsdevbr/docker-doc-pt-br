@@ -46,25 +46,25 @@ the-basics:
 building-images:
   - title: Entendendo camadas de imagem
     description: Aprenda sobre as camadas de imagens de contêiner.
-  link: /get-started/docker-concepts/building-images/understanding-image-layers/
-- title: Escrevendo um Dockerfile
-  description: Aprenda a criar uma imagem usando um Dockerfile.
-  link: /get-started/docker-concepts/building-images/writing-a-dockerfile/
-- title: Construa, crie tags e publique uma imagem
-  description: >-
-    Aprenda a construir, criar tags e publicar uma imagem no Docker Hub ou em
-    qualquer outro registro.
-  link: /get-started/docker-concepts/building-images/build-tag-and-publish-an-image/
-- title: Usando o cache de construção
-  description: >-
-    Aprenda sobre o cache de construção, quais alterações invalidam o cache e
-    como usar o cache de construção de forma eficaz.
-  link: /get-started/docker-concepts/building-images/using-the-build-cache/
-- title: Construções em vários estágios
-  description: >-
-    Obtenha uma melhor compreensão das construções em vários estágios e seus
-    benefícios.
-  link: /get-started/docker-concepts/building-images/multi-stage-builds/
+    link: /get-started/docker-concepts/building-images/understanding-image-layers/
+  - title: Escrevendo um Dockerfile
+    description: Aprenda a criar uma imagem usando um Dockerfile.
+    link: /get-started/docker-concepts/building-images/writing-a-dockerfile/
+  - title: Construa, crie tags e publique uma imagem
+    description: >-
+      Aprenda a construir, criar tags e publicar uma imagem no Docker Hub ou em
+      qualquer outro registro.
+    link: /get-started/docker-concepts/building-images/build-tag-and-publish-an-image/
+  - title: Usando o cache de construção
+    description: >-
+      Aprenda sobre o cache de construção, quais alterações invalidam o cache e
+      como usar o cache de construção de forma eficaz.
+    link: /get-started/docker-concepts/building-images/using-the-build-cache/
+  - title: Construções em vários estágios
+    description: >-
+      Obtenha uma melhor compreensão das construções em vários estágios e seus
+      benefícios.
+    link: /get-started/docker-concepts/building-images/multi-stage-builds/
 
 running-containers:
 - title: Publicando portas
