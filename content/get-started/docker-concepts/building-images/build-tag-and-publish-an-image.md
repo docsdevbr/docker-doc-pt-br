@@ -10,41 +10,59 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Build, tag, and publish an image
-keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you how to build, tag, and publish an image to Docker Hub or any other registry
-summary: |
-  Building, tagging, and publishing Docker images are key steps in the
-  containerization workflow. In this guide, you’ll learn how to create Docker
-  images, how to tag those images with a unique identifier, and how to publish
-  your image to a public registry.
+source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md
+revision: c5b3cb60ad63dca4d6fc7cf19c001ba893b0c6b2
+status: ready
+
+title: Construa, adicione tags e publique uma imagem
+keywords: conceitos, construção, imagens, contêiner, docker desktop
+description: >-
+  Esta página conceitual ensinará você a construir, adicionar tags e publicar
+  uma imagem no Docker Hub ou em qualquer outro registro.
+summary: >-
+  Construir, adicionar tags e publicar imagens Docker são etapas essenciais no
+  fluxo de trabalho de conteinerização.
+  Neste guia, você aprenderá como construir imagens Docker, como adicionar tags
+  com um identificador exclusivo e como publicar sua imagem em um registro
+  público.
 weight: 3
 aliases:
  - /guides/docker-concepts/building-images/build-tag-and-publish-an-image/
 ---
+
 {{< youtube-embed chiiGLlYRlY >}}
 
-## Explanation
+## Explicação
 
-In this guide, you will learn the following:
+Neste guia, você aprenderá o seguinte:
 
-- Building images - the process of building an image based on a `Dockerfile`
-- Tagging images - the process of giving an image a name, which also determines where the image can be distributed
-- Publishing images - the process to distribute or share the newly created image using a container registry
+- Criação de imagens - o processo de construção de uma imagem baseada em um
+  `Dockerfile`.
+- Criação de tags de imagens - o processo de atribuir um nome a uma imagem, o
+  que também determina onde a imagem pode ser distribuída.
+- Publicação de imagens - o processo de distribuir ou compartilhar a imagem
+  recém-criada usando um registro de contêineres.
 
-### Building images
+### Criando imagens
 
-Most often, images are built using a Dockerfile. The most basic `docker build` command might look like the following:
+Na maioria das vezes, as imagens são construídas usando um Dockerfile.
+O comando `docker build` mais básico pode ser semelhante ao seguinte:
 
 ```bash
 docker build .
 ```
 
-The final `.` in the command provides the path or URL to the [build context](https://docs.docker.com/build/concepts/context/#what-is-a-build-context). At this location, the builder will find the `Dockerfile` and other referenced files.
+O ponto final (`.`) no comando fornece o caminho ou URL para o
+[contexto de construção](https://docs.docker.com/build/concepts/context/#what-is-a-build-context).
+Nesse local, o construtor encontrará o arquivo `Dockerfile` e outros arquivos
+referenciados.
 
-When you run a build, the builder pulls the base image, if needed, and then runs the instructions specified in the Dockerfile.
+Ao executar uma construção, o construtor baixa a imagem base, se necessário, e
+então executa as instruções especificadas no Dockerfile.
 
-With the previous command, the image will have no name, but the output will provide the ID of the image. As an example, the previous command might produce the following output:
+Com o comando anterior, a imagem não terá nome, mas a saída fornecerá o ID da
+imagem.
+Por exemplo, o comando anterior poderia produzir a seguinte saída:
 
 ```console
 $ docker build .
@@ -67,175 +85,224 @@ $ docker build .
  => => writing image sha256:9924dfd9350407b3df01d1a0e1033b1e543523ce7d5d5e2c83a724480ebe8f00    0.0s
 ```
 
-With the previous output, you could start a container by using the referenced image:
+Com a saída anterior, você poderia iniciar um contêiner usando a imagem
+referenciada:
 
 ```console
 docker run sha256:9924dfd9350407b3df01d1a0e1033b1e543523ce7d5d5e2c83a724480ebe8f00
 ```
 
-That name certainly isn't memorable, which is where tagging becomes useful.
+Esse nome certamente não é memorável, e é aí que a criação de tags se torna
+útil.
 
-### Tagging images
+### Criação de tags de imagens
 
-Tagging images is the method to provide an image with a memorable name. However, there is a structure to the name of an image. A full image name has the following structure:
+Criar tags de imagens é o método de atribuir um nome memorável a uma imagem.
+No entanto, existe uma estrutura para o nome de uma imagem.
+O nome completo de uma imagem tem a seguinte estrutura:
 
 ```text
 [HOST[:PORT_NUMBER]/]PATH[:TAG]
 ```
 
-- `HOST`: The optional registry hostname where the image is located. If no host is specified, Docker's public registry at `docker.io` is used by default.
-- `PORT_NUMBER`: The registry port number if a hostname is provided
-- `PATH`: The path of the image, consisting of slash-separated components. For Docker Hub, the format follows `[NAMESPACE/]REPOSITORY`, where namespace is either a user's or organization's name. If no namespace is specified, `library` is used, which is the namespace for Docker Official Images.
-- `TAG`: A custom, human-readable identifier that's typically used to identify different versions or variants of an image. If no tag is specified, `latest` is used by default.
+- `HOST`: O nome opcional do host do registro onde a imagem está localizada.
+  Se nenhum host for especificado, o registro público do Docker em `docker.io`
+  será usado por padrão.
+- `PORT_NUMBER`: O número da porta do registro, caso um nome de host seja
+  fornecido.
+- `PATH`: O caminho da imagem, composto por componentes separados por barra.
+  Para o Docker Hub, o formato segue `[NAMESPACE/]REPOSITORY`, onde namespace é
+  um nome de usuário ou organização.
+  Se nenhum namespace for especificado, `library` será usado, que é o namespace
+  para Imagens Oficiais do Docker.
+- `TAG`: Um identificador personalizado e legível por pessoas, normalmente usado
+  para identificar diferentes versões ou variantes de uma imagem.
+  Se nenhuma tag for especificada, `latest` será usada por padrão.
 
-Some examples of image names include:
+Alguns exemplos de nomes de imagens incluem:
 
-- `nginx`, equivalent to `docker.io/library/nginx:latest`: this pulls an image from the `docker.io` registry, the `library` namespace, the `nginx` image repository, and the `latest` tag.
-- `docker/welcome-to-docker`, equivalent to `docker.io/docker/welcome-to-docker:latest`: this pulls an image from the `docker.io` registry, the `docker` namespace, the `welcome-to-docker` image repository, and the `latest` tag
-- `ghcr.io/dockersamples/example-voting-app-vote:pr-311`: this pulls an image from the GitHub Container Registry, the `dockersamples` namespace, the `example-voting-app-vote` image repository, and the `pr-311` tag
+- `nginx`, equivalente a `docker.io/library/nginx:latest`: isso obtém uma imagem
+  do registro `docker.io`, do namespace `library`, do repositório de imagens
+  `nginx` e da tag `latest`.
+- `docker/welcome-to-docker`, equivalente a
+  `docker.io/docker/welcome-to-docker:latest`: obtém uma imagem do registro
+  `docker.io`, do namespace `docker`, do repositório de imagens
+  `welcome-to-docker` e da tag `latest`.
+- `ghcr.io/dockersamples/example-voting-app-vote:pr-311`: obtém uma imagem do
+  GitHub Container Registry, do namespace `dockersamples`, do repositório de
+  imagens `example-voting-app-vote` e da tag `pr-311`.
 
-To tag an image during a build, add the `-t` or `--tag` flag:
+Para adicionar uma tag a uma imagem durante a compilação, use a flag `-t` ou
+`--tag`.
 
 ```console
 docker build -t my-username/my-image .
 ```
 
-If you've already built an image, you can add another tag to the image by using the [`docker image tag`](https://docs.docker.com/engine/reference/commandline/image_tag/) command:
+Se você já construiu uma imagem, pode adicionar outra tag à imagem usando o
+comando
+[`docker image tag`](https://docs.docker.com/engine/reference/commandline/image_tag/):
 
 ```console
 docker image tag my-username/my-image another-username/another-image:v1
 ```
 
-### Publishing images
+### Publicando imagens
 
-Once you have an image built and tagged, you're ready to push it to a registry. To do so, use the [`docker push`](https://docs.docker.com/engine/reference/commandline/image_push/) command:
+Após construir uma imagem e adicionar uma tag, você está pronto para enviá-la
+para um registro.
+Para isso, use o comando
+[`docker push`](https://docs.docker.com/engine/reference/commandline/image_push/):
 
 ```console
 docker push my-username/my-image
 ```
 
-Within a few seconds, all of the layers for your image will be pushed to the registry.
+Em poucos segundos, todas as camadas da sua imagem serão enviadas para o
+registro.
 
-> **Requiring authentication**
+> **Autenticação necessária**
 >
-> Before you're able to push an image to a repository, you will need to be authenticated.
-> To do so, simply use the [docker login](https://docs.docker.com/engine/reference/commandline/login/) command.
+> Antes de poder enviar uma imagem para um repositório, você precisará realizar
+> a autenticação.
+> Para isso, basta usar o comando
+> [docker login](https://docs.docker.com/engine/reference/commandline/login/).
 { .information }
 
-## Try it out
+## Experimente
 
-In this hands-on guide, you will build a simple image using a provided Dockerfile and push it to Docker Hub.
+Neste guia prático, você criará uma imagem simples usando um Dockerfile
+fornecido e a enviará para o Docker Hub.
 
-### Set up
+### Configuração
 
-1. Get the sample application.
+1. Obtenha a aplicação de exemplo.
 
-   If you have Git, you can clone the repository for the sample application. Otherwise, you can download the sample application. Choose one of the following options.
+   Se você tiver o Git instalado, poderá clonar o repositório da aplicação de
+   exemplo.
+   Caso contrário, você pode baixar a aplicação de exemplo.
+   Escolha uma das seguintes opções.
 
    {{< tabs >}}
-   {{< tab name="Clone with git" >}}
+   {{< tab name="Clonar com o git" >}}
 
-   Use the following command in a terminal to clone the sample application repository.
+   Use o seguinte comando em um terminal para clonar o repositório da aplicação
+   de exemplo.
 
    ```console
    $ git clone https://github.com/docker/getting-started-todo-app
    ```
    {{< /tab >}}
-   {{< tab name="Download" >}}
+   {{< tab name="Baixar" >}}
 
-   Download the source and extract it.
+   Baixe o código-fonte e extraia-o.
 
-   {{< button url="https://github.com/docker/getting-started-todo-app/raw/cd61f824da7a614a8298db503eed6630eeee33a3/app.zip" text="Download the source" >}}
+   {{< button url="https://github.com/docker/getting-started-todo-app/raw/cd61f824da7a614a8298db503eed6630eeee33a3/app.zip" text="Baixe o arquivo fonte" >}}
 
    {{< /tab >}}
    {{< /tabs >}}
 
-2. [Download and install](https://www.docker.com/products/docker-desktop/) Docker Desktop.
+2. [Baixe e instale](https://www.docker.com/products/docker-desktop/) o Docker
+   Desktop.
 
-3. If you don't have a Docker account yet, [create one now](https://hub.docker.com/). Once you've done that, sign in to Docker Desktop using that account.
+3. Se você ainda não tem uma conta Docker,
+   [crie uma agora](https://hub.docker.com/).
+   Depois disso, faça login no Docker Desktop usando essa conta.
 
-### Build an image
+### Construa uma imagem
 
-Now that you have a repository on Docker Hub, it's time for you to build an image and push it to the repository.
+Agora que você tem um repositório no Docker Hub, é hora de construir uma imagem
+e enviá-la para o repositório.
 
-1. Using a terminal in the root of the sample app repository, run the following command. Replace `YOUR_DOCKER_USERNAME` with your Docker Hub username:
+1. Usando um terminal na raiz do repositório da aplicação de exemplo, execute o
+   seguinte comando.
+   Substitua `SEU_NOME_DE_USUARIO_DOCKER` pelo seu nome de usuário do Docker Hub:
 
-    ```console
-    $ docker build -t <YOUR_DOCKER_USERNAME>/concepts-build-image-demo .
-    ```
+   ```console
+   $ docker build -t <SEU_NOME_DE_USUARIO_DOCKER>/concepts-build-image-demo .
+   ```
 
-    As an example, if your username is `mobywhale`, you would run the command:
+   Por exemplo, se seu nome de usuário for `mobywhale`, você executaria o
+   comando:
 
     ```console
     $ docker build -t mobywhale/concepts-build-image-demo .
     ```
 
-2. Once the build has completed, you can view the image by using the following command:
+2. Após a conclusão da construção, você pode visualizar a imagem usando o
+   seguinte comando:
 
-    ```console
-    $ docker image ls
-    ```
+   ```console
+   $ docker image ls
+   ```
 
-    The command will produce output similar to the following:
+   O comando produzirá uma saída semelhante à seguinte:
 
-    ```plaintext
-    REPOSITORY                             TAG       IMAGE ID       CREATED          SIZE
-    mobywhale/concepts-build-image-demo    latest    746c7e06537f   24 seconds ago   354MB
-    ```
+   ```plaintext
+   REPOSITORY                             TAG       IMAGE ID       CREATED          SIZE
+   mobywhale/concepts-build-image-demo    latest    746c7e06537f   24 seconds ago   354MB
+   ```
 
-3. You can actually view the history (or how the image was created) by using the [docker image history](/reference/cli/docker/image/history/) command:
+3. Você pode visualizar o histórico (ou como a imagem foi criada) usando o
+   comando [docker image history](/reference/cli/docker/image/history/):
 
-    ```console
-    $ docker image history mobywhale/concepts-build-image-demo
-    ```
+   ```console
+   $ docker image history mobywhale/concepts-build-image-demo
+   ```
 
-    You'll then see output similar to the following:
+   Em seguida, você verá uma saída semelhante à seguinte:
 
-    ```plaintext
-    IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
-    f279389d5f01   8 seconds ago   CMD ["node" "./src/index.js"]                   0B        buildkit.dockerfile.v0
-    <missing>      8 seconds ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0
-    <missing>      8 seconds ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
-    <missing>      4 days ago      /bin/sh -c #(nop)  CMD ["node"]                 0B
-    <missing>      4 days ago      /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B
-    <missing>      4 days ago      /bin/sh -c #(nop) COPY file:4d192565a7220e13…   20.5kB
-    <missing>      4 days ago      /bin/sh -c apk add --no-cache --virtual .bui…   7.92MB
-    <missing>      4 days ago      /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.19     0B
-    <missing>      4 days ago      /bin/sh -c addgroup -g 1000 node     && addu…   126MB
-    <missing>      4 days ago      /bin/sh -c #(nop)  ENV NODE_VERSION=20.12.0     0B
-    <missing>      2 months ago    /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
-    <missing>      2 months ago    /bin/sh -c #(nop) ADD file:d0764a717d1e9d0af…   8.42MB
-    ```
+   ```plaintext
+   IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
+   f279389d5f01   8 seconds ago   CMD ["node" "./src/index.js"]                   0B        buildkit.dockerfile.v0
+   <missing>      8 seconds ago   EXPOSE map[3000/tcp:{}]                         0B        buildkit.dockerfile.v0
+   <missing>      8 seconds ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
+   <missing>      4 days ago      /bin/sh -c #(nop)  CMD ["node"]                 0B
+   <missing>      4 days ago      /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B
+   <missing>      4 days ago      /bin/sh -c #(nop) COPY file:4d192565a7220e13…   20.5kB
+   <missing>      4 days ago      /bin/sh -c apk add --no-cache --virtual .bui…   7.92MB
+   <missing>      4 days ago      /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.19     0B
+   <missing>      4 days ago      /bin/sh -c addgroup -g 1000 node     && addu…   126MB
+   <missing>      4 days ago      /bin/sh -c #(nop)  ENV NODE_VERSION=20.12.0     0B
+   <missing>      2 months ago    /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
+   <missing>      2 months ago    /bin/sh -c #(nop) ADD file:d0764a717d1e9d0af…   8.42MB
+   ```
 
-    This output shows the layers of the image, highlighting the layers you added and those that were inherited from your base image.
+   Esta saída mostra as camadas da imagem, destacando as camadas que você
+   adicionou e aquelas que foram herdadas da sua imagem base.
 
-### Push the image
+### Envie a imagem
 
-Now that you have an image built, it's time to push the image to a registry.
+Agora que você criou uma imagem, é hora de enviá-la para um registro.
 
-1. Push the image using the [docker push](/reference/cli/docker/image/push/) command:
+1. Envie a imagem usando o comando
+   [docker push](/reference/cli/docker/image/push/):
 
-    ```console
-    $ docker push <YOUR_DOCKER_USERNAME>/concepts-build-image-demo
-    ```
+   ```console
+   $ docker push <SEU_NOME_DE_USUARIO_DOCKER>/concepts-build-image-demo
+   ```
 
-    If you receive a `requested access to the resource is denied`, make sure you are both logged in and that your Docker username is correct in the image tag.
+   Se você receber a mensagem `requested access to the resource is denied`,
+   verifique se você fez o login e se o seu nome de usuário do Docker está
+   correto na tag da imagem.
 
-    After a moment, your image should be pushed to Docker Hub.
+   Após alguns instantes, sua imagem deverá ser enviada para o Docker Hub.
 
-## Additional resources
+## Recursos adicionais
 
-To learn more about building, tagging, and publishing images, visit the following resources:
+Para saber mais sobre como construir, criar tags e publicar imagens, visite os
+seguintes recursos:
 
-* [What is a build context?](/build/concepts/context/#what-is-a-build-context)
-* [docker build reference](/engine/reference/commandline/image_build/)
-* [docker image tag reference](/engine/reference/commandline/image_tag/)
-* [docker push reference](/engine/reference/commandline/image_push/)
-* [What is a registry?](/get-started/docker-concepts/the-basics/what-is-a-registry/)
+- [O que é um contexto de construção?](/build/concepts/context/#what-is-a-build-context)
+- [Referência do docker build](/reference/cli/docker/buildx/build/)
+- [Referência do docker image tag](/reference/cli/docker/image/tag/)
+- [Referência do docker push](/reference/cli/docker/image/push/)
+- [O que é um registro?](/get-started/docker-concepts/the-basics/what-is-a-registry/)
 
-## Next steps
+## Próximos passos
 
-Now that you have learned about building and publishing images, it's time to learn how to speed up the build process using the Docker build cache.
+Agora que você aprendeu sobre como cosntruir e publicar imagens, é hora de
+aprender como acelerar o processo de construção usando o cache de construção do
+Docker.
 
-{{< button text="Using the build cache" url="using-the-build-cache" >}}
-
+{{< button text="Usando o cache de construção" url="using-the-build-cache" >}}
