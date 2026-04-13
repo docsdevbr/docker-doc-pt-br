@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2013-2026 Docker Inc.
+# SPDX-FileCopyrightText: 2013-2026 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
@@ -69,7 +69,7 @@ spec:
           ports:
             - containerPort: 8080
 ---
-# Copyright (c) 2013-2026 Docker Inc.
+# SPDX-FileCopyrightText: 2013-2026 Docker Inc.
 # Docker and the Docker logo are trademarks or registered trademarks of Docker,
 # Inc. in the United States and/or other countries.
 # Docker, Inc. and other parties may also have trademark rights in other terms
