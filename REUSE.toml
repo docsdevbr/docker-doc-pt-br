@@ -1,0 +1,12 @@
+version = 1
+
+[[annotations]]
+path = [
+  ".github/secret_scanning.yml",
+  ".editorconfig",
+  ".gitignore",
+  "README.EN.md",
+  "README.md"
+]
+SPDX-FileCopyrightText = "2026 Adiel Cristo."
+SPDX-License-Identifier = "Apache-2.0"
