@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/fedora.md
-revision: 55c09cc1f26374b8feae41b6589fbb3a2d44f261
+revision: d0cf4cb7fc9a9c5adb135742aa201eeab35da7ca
 status: ready
 
 description: >-
@@ -43,6 +43,7 @@ Para começar a usar a Docker Engine no Fedora, certifique-se de que você
 Para instalar a Docker Engine, você precisa de uma versão com suporte de uma das
 seguintes versões do Fedora:
 
+- Fedora 44
 - Fedora 43
 - Fedora 42
 
