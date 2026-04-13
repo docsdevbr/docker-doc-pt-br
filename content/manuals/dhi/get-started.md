@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/get-started.md
-revision: eb22a5b867398c2eee72093c36d4d9b5d5b58906
+revision: 05e75eea72c7e0ef3b822314f7b7d10b5063e69a
 status: ready
 
 linktitle: Início rápido
@@ -29,32 +29,30 @@ as diferenças.
 Embora as etapas usem uma imagem específica como exemplo, elas podem ser
 aplicadas a qualquer DHI.
 
-As Imagens Docker Reforçadas estão disponíveis gratuitamente para todas as
-pessoas, sem necessidade de assinatura, restrições de uso ou dependência de
-fornecedor.
-Este guia rápido aborda imagens DHI gratuitas baixadas do `dhi.io`.
-Se você possui uma assinatura DHI paga ou iniciou um período de avaliação e
-precisa de variantes de conformidade (FIPS), recursos de personalização ou
-atualizações com SLA, você deve
-[espelhar os repositórios DHI](./how-to/mirror.md) para o namespace da sua
-organização no Docker Hub.
-Em seguida, você obtém as imagens espelhadas do `docker.io` (e não do `dhi.io`)
-usando o caminho do namespace da sua organização.
-Por exemplo, `docker pull docker.io/<suaorganização>/dhi-python:3.13` em vez de
-`docker pull dhi.io/python:3.13`.
+Este guia de início rápido usa imagens da comunidade DHI do `dhi.io`.
+Você faz o login com sua conta Docker, baixa e executa uma imagem e a compara
+com uma imagem oficial do Docker.
+
+> [!NOTE]
+>
+> Se você tiver uma assinatura DHI Select ou Enterprise, consulte
+> [Introdução ao DHI Select e Enterprise](./how-to/select-enterprise.md).
+> O Select e o Enterprise usam repositórios espelhados no namespace da sua
+> organização no Docker Hub para permitir a personalização, atualizações de
+> segurança com garantia de SLA e acesso a variantes de conformidade.
 
 ## Passo 1: encontre uma imagem para usar
 
 1. Acesse o catálogo de Imagens Docker Reforçadas no
    [Docker Hub](https://hub.docker.com/hardened-images/catalog).
 2. Use a barra de pesquisa ou os filtros para encontrar uma imagem (por exemplo,
-   `python`, `node`, `golang`).
-   Para este guia, use a imagem do Python como exemplo.
+   `python`, `node` ou `golang`).
+   Para este exemplo, pesquise por `python`.
 3. Selecione o repositório do Python para visualizar seus detalhes.
 
 Continue para o próximo passo para baixar e executar a imagem.
-Para explorar as imagens com mais detalhes, consulte
-[Explore as Imagens Docker Reforçadas](./how-to/explore.md).
+Para obter mais informações sobre como pesquisar e avaliar imagens, consulte
+[Pesquise e avalie Imagens Docker Reforçadas](./how-to/explore.md).
 
 ## Passo 2: baixe e execute a imagem
 
@@ -65,20 +63,20 @@ você espera em uma imagem típica.
 Você pode ver as diferenças típicas em
 [Considerações ao adotar DHIs](./how-to/use.md#considerations-when-adopting-dhis).
 
-> [!TIP]
->
-> Em cada página de repositório no catálogo de DHIs, você encontrará instruções
-> para baixar e analisar a imagem selecionando **Use this image**.
-
 O exemplo a seguir demonstra que você pode executar a imagem Python e executar
 um comando Python simples, assim como faria com qualquer outra imagem Docker:
 
 1. Abra um terminal e faça o login no registro de Imagens Docker Reforçadas
-   usando suas credenciais do Docker ID.
+   usando as credenciais da sua conta Docker.
 
    ```console
    $ docker login dhi.io
    ```
+
+   > [!TIP]
+   >
+   > Se você não tem uma conta Docker,
+   > [crie uma conta gratuita](https://hub.docker.com/signup) para começar.
 
 2. Baixe a imagem:
 
@@ -98,7 +96,6 @@ um comando Python simples, assim como faria com qualquer outra imagem Docker:
 Para obter mais informações sobre como usar imagens, consulte:
 
 - [Use uma Imagem Docker Reforçada](./how-to/use.md) para uso geral.
-- [Use no Kubernetes](./how-to/k8s.md) para implantações no Kubernetes.
 - [Use um chart Helm](./how-to/helm.md) para implantações com o Helm.
 
 ## Passo 3: compare com outras imagens
@@ -144,12 +141,12 @@ Exemplo de saída:
 > Este é um exemplo de saída.
 > Seus resultados podem variar dependendo de novas CVEs descobertas e
 > atualizações de imagem.
->
-> O Docker mantém quase zero CVEs em suas Imagens Docker Reforçadas.
-> Para assinaturas DHI pagas, quando novas CVEs são descobertas, elas são
-> corrigidas dentro do prazo do SLA líder do setor.
-> Saiba mais sobre os
-> [recursos de segurança com garantia de SLA](./features.md#segurança-com-garantia-de-sla).
+
+O Docker mantém quase zero CVEs em suas Imagens Docker Reforçadas.
+Para assinaturas DHI Select e Enterprise, quando novas CVEs são descobertas,
+elas são corrigidas dentro do prazo do SLA líder do setor.
+Saiba mais sobre os
+[recursos de segurança com garantia de SLA](./features.md#segurança-com-garantia-de-sla).
 
 Esta comparação mostra que a Imagem Docker Reforçada:
 
@@ -159,7 +156,7 @@ Esta comparação mostra que a Imagem Docker Reforçada:
 - Minimiza pacotes: de 610 pacotes para 80 (redução de 87%).
 
 Para obter mais detalhes sobre a comparação de imagens, consulte
-[Compare Imagens Docker Reforçadas](./how-to/compare.md).
+[Pesquise e avalie Imagens Docker Reforçadas](./how-to/explore.md#compare-and-evaluate-images).
 
 ## Próximos passos
 
@@ -171,18 +168,17 @@ Aqui estão algumas maneiras de continuar:
   como base.
 
 - [Inicie um teste gratuito](https://hub.docker.com/hardened-images/start-free-trial)
-  para explorar os benefícios de uma assinatura DHI paga, como acesso a
-  variantes FIPS e STIG, imagens personalizadas e atualizações com garantia de
-  SLA.
+  para explorar os benefícios de uma assinatura DHI, como acesso a variantes
+  FIPS e STIG, imagens personalizadas e atualizações com garantia de SLA.
 
-- [Espelhe um repositório](./how-to/mirror.md): Após obter uma assinatura DHI
-  paga ou iniciar um teste gratuito, aprenda como espelhar um repositório DHI
-  para habilitar a personalização, acessar variantes de conformidade e obter
-  atualizações com garantia de SLA.
+- [Introdução ao DHI Select e Enterprise](./how-to/select-enterprise.md): Após
+  assinar uma assinatura DHI ou iniciar um período de avaliação, aprenda como
+  espelhar repositórios, personalizar imagens e acessar variantes de
+  conformidade.
 
 - [Verifique DHIs](./how-to/verify.md): Use ferramentas como o
   [Docker Scout](/scout/) ou o Cosign para inspecionar e verificar atestados
   assinados, como SBOMs e procedência.
 
 - [Escaneie DHIs](./how-to/scan.md): Analise a imagem com o Docker Scout ou
-  outros escaneadores para identificar CVEs conhecidos.
+  outros scanners para identificar CVEs conhecidos.

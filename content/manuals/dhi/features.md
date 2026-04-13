@@ -115,8 +115,8 @@ Cada imagem inclui metadados de segurança completos e verificáveis:
   quando patches de segurança upstream estão disponíveis, sem compromissos de
   tempo com garantia de SLA para pessoas usuárias que não usam o plano DHI
   Enterprise.
-- Integração com escaneadores: Integração direta com escaneadores e outras
-  plataformas de segurança.
+- Integração com scanners: Integração direta com scanners e outras plataformas
+  de segurança.
 
 ### Suporte a Kubernetes e charts Helm
 
