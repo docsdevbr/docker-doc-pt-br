@@ -5,9 +5,10 @@
 # Docker, Inc. and other parties may also have trademark rights in other terms
 # used herein.
 #
+# SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/-/LICENSE
+# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 title: Source file conventions
 description: How new .md files should be formatted
@@ -54,9 +55,10 @@ the metadata elements in the front matter isn't important.
 # Docker, Inc. and other parties may also have trademark rights in other terms
 # used herein.
 #
+# SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/-/LICENSE
+# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 description: Instructions for installing Docker Engine on Ubuntu
 keywords: requirements, apt, installation, ubuntu, install, uninstall, upgrade, update
@@ -97,9 +99,10 @@ This is useful in combination with `build.render` set to `always`, which creates
 # Docker, Inc. and other parties may also have trademark rights in other terms
 # used herein.
 #
+# SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/-/LICENSE
+# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 title: Dummy sidebar link
 build:

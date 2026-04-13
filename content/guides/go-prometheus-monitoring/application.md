@@ -1,4 +1,15 @@
 ---
+# Copyright (c) 2013-2026 Docker Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# SPDX-License-Identifier: Apache-2.0
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
 title: Building the application
 linkTitle: Understand the application
 weight: 10 #
@@ -19,7 +30,7 @@ directory to a directory that you want to work in, and run the following
 command to clone the repository:
 
 ```console
-$ git clone https://github.com/dockersamples/go-prometheus-monitoring.git 
+$ git clone https://github.com/dockersamples/go-prometheus-monitoring.git
 ```
 
 Once you cloned you will see the following content structure inside `go-prometheus-monitoring` directory,
@@ -91,7 +102,7 @@ func main() {
 
 	// Register /metrics before middleware
 	router.GET("/metrics", PrometheusHandler())
-	
+
 	router.Use(RequestMetricsMiddleware())
 	router.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
@@ -130,7 +141,7 @@ func RequestMetricsMiddleware() gin.HandlerFunc {
 }
 ```
 
-In this part of the code, you have imported the required packages `gin`, `prometheus`, and `promhttp`. Then you have defined a couple of variables, `HttpRequestTotal` and `HttpRequestErrorTotal` are Prometheus counter metrics, and `customRegistry` is a custom registry that will be used to register these metrics. The name of the metric is a string that you can use to identify the metric. The help string is a string that will be shown when you query the `/metrics` endpoint to understand the metric. The reason you are using the custom registry is so avoid the default Go metrics that are registered by default by the Prometheus client. Then using the `init` function you are registering the metrics with the custom registry. 
+In this part of the code, you have imported the required packages `gin`, `prometheus`, and `promhttp`. Then you have defined a couple of variables, `HttpRequestTotal` and `HttpRequestErrorTotal` are Prometheus counter metrics, and `customRegistry` is a custom registry that will be used to register these metrics. The name of the metric is a string that you can use to identify the metric. The help string is a string that will be shown when you query the `/metrics` endpoint to understand the metric. The reason you are using the custom registry is so avoid the default Go metrics that are registered by default by the Prometheus client. Then using the `init` function you are registering the metrics with the custom registry.
 
 ```go
 import (
@@ -171,7 +182,7 @@ func main() {
 
 	// Register /metrics before middleware
 	router.GET("/metrics", PrometheusHandler())
-	
+
 	router.Use(RequestMetricsMiddleware())
 	router.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
@@ -218,10 +229,10 @@ That's it, this was the complete gist of the application. Now it's time to run a
 
 ## Running the application
 
-Make sure you are still inside `go-prometheus-monitoring` directory in the terminal, and run the following command. Install the dependencies by running `go mod tidy` and then build and run the application by running `go run main.go`. Then visit `http://localhost:8000/health` or `http://localhost:8000/v1/users`. You should see the output `{"message": "Up and running!"}` or `{"message": "Hello from /v1/users"}`. If you are able to see this then your app is successfully up and running. 
+Make sure you are still inside `go-prometheus-monitoring` directory in the terminal, and run the following command. Install the dependencies by running `go mod tidy` and then build and run the application by running `go run main.go`. Then visit `http://localhost:8000/health` or `http://localhost:8000/v1/users`. You should see the output `{"message": "Up and running!"}` or `{"message": "Hello from /v1/users"}`. If you are able to see this then your app is successfully up and running.
 
 
-Now, check your application's metrics by accessing the `/metrics` endpoint. 
+Now, check your application's metrics by accessing the `/metrics` endpoint.
 Open `http://localhost:8000/metrics` in your browser. You should see similar output to the following.
 
 ```sh

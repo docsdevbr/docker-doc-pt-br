@@ -1,4 +1,15 @@
 ---
+# Copyright (c) 2013-2026 Docker Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# SPDX-License-Identifier: Apache-2.0
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
 title: Connecting services with Docker Compose
 linkTitle: Connecting services with Docker Compose
 weight: 30 #
@@ -35,7 +46,7 @@ services:
       watch:
         - path: .
           action: rebuild
-      
+
   prometheus:
     container_name: prometheus
     image: prom/prometheus:v2.55.0
@@ -45,7 +56,7 @@ services:
       - 9090:9090
     networks:
       - go-network
-  
+
   grafana:
     container_name: grafana
     image: grafana/grafana:11.3.0
@@ -99,7 +110,7 @@ The Docker Compose file consists of three services:
       url: http://prometheus:9090
       isDefault: true
     ```
-      
+
     In the `grafana.yml` file, you have defined a Prometheus data source named `Prometheus (Main)`. The `type` field specifies the type of the data source, which is `prometheus`. The `url` field specifies the URL of the Prometheus server to fetch the metrics from. In this case, the URL is `http://prometheus:9090`. `prometheus` is the service name of the Prometheus server in the Docker Compose file. The `isDefault` field specifies whether the data source is the default data source in Grafana.
 
 Apart from the services, the Docker Compose file also defines a volume named `grafana-data` to persist the Grafana data and a network named `go-network` to connect the services together. You have created a custom network `go-network` to connect the services together. The `driver: bridge` field specifies the network driver to use for the network.
@@ -117,17 +128,17 @@ $ docker compose up
 The `docker compose up` command builds the services defined in the Docker Compose file and runs them together. You will see the similar output in the terminal:
 
 ```console
- ✔ Network go-prometheus-monitoring_go-network  Created                                                           0.0s 
- ✔ Container grafana                            Created                                                           0.3s 
- ✔ Container go-api                             Created                                                           0.2s 
- ✔ Container prometheus                         Created                                                           0.3s 
+ ✔ Network go-prometheus-monitoring_go-network  Created                                                           0.0s
+ ✔ Container grafana                            Created                                                           0.3s
+ ✔ Container go-api                             Created                                                           0.2s
+ ✔ Container prometheus                         Created                                                           0.3s
 Attaching to go-api, grafana, prometheus
 go-api      | [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-go-api      | 
+go-api      |
 go-api      | [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
 go-api      |  - using env:     export GIN_MODE=release
 go-api      |  - using code:    gin.SetMode(gin.ReleaseMode)
-go-api      | 
+go-api      |
 go-api      | [GIN-debug] GET    /metrics                  --> main.PrometheusHandler.func1 (3 handlers)
 go-api      | [GIN-debug] GET    /health                   --> main.main.func1 (4 handlers)
 go-api      | [GIN-debug] GET    /v1/users                 --> main.main.func2 (4 handlers)

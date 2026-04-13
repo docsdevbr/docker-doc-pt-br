@@ -5,9 +5,10 @@
 # Docker, Inc. and other parties may also have trademark rights in other terms
 # used herein.
 #
+# SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docker/docs/blob/-/LICENSE
+# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/_index.md
 revision: c69c0b53dd46ec56dc63e43e9fe6bd279f910431

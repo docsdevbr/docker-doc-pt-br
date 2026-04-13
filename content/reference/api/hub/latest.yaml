@@ -1,3 +1,14 @@
+# Copyright (c) 2013-2026 Docker Inc.
+# Docker and the Docker logo are trademarks or registered trademarks of Docker,
+# Inc. in the United States and/or other countries.
+# Docker, Inc. and other parties may also have trademark rights in other terms
+# used herein.
+#
+# SPDX-License-Identifier: Apache-2.0
+# Documentation licensed under the Apache License, Version 2.0.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
 # yaml-language-server: $schema=https://raw.githubusercontent.com/OAI/OpenAPI-Specification/refs/heads/main/schemas/v3.0/schema.yaml
 
 openapi: 3.0.3
@@ -62,32 +73,32 @@ tags:
       You must use each authentication type with the [Create access token](#tag/authentication-api/operation/AuthCreateAccessToken) route to obtain a bearer token.
 
       ## Password
-      Using a username and password is the most powerful, yet least secure way 
-      to authenticate with Docker as a user. It allows access to resources 
-      for the user without scopes. 
+      Using a username and password is the most powerful, yet least secure way
+      to authenticate with Docker as a user. It allows access to resources
+      for the user without scopes.
 
       _In general, it is recommended to use a personal access token (PAT) instead._
 
       _**The password authentication type is not available if your organization has SSO enforced.**_
 
       ## Personal Access Token (PAT)
-      Using a username and PAT is the most secure way to authenticate with 
+      Using a username and PAT is the most secure way to authenticate with
       Docker as a user. PATs are scoped to specific resources and scopes.
 
-      Currently, a PAT is a more secure password due to limited functionality. 
-      In the future, we may add fine-grained access like organization 
+      Currently, a PAT is a more secure password due to limited functionality.
+      In the future, we may add fine-grained access like organization
       access tokens for enhanced usage and security.
 
       ## Organization Access Token (OAT)
-      Organization access tokens are scoped to specific resources and scopes 
-      in an organization. They are managed by organization owners. 
-      
-      These tokens are meant for automation and are not meant to be used by 
+      Organization access tokens are scoped to specific resources and scopes
+      in an organization. They are managed by organization owners.
+
+      These tokens are meant for automation and are not meant to be used by
       users.
 
       # Labels
 
-      These labels will show up on routes in this reference that allow for use of bearer 
+      These labels will show up on routes in this reference that allow for use of bearer
       tokens issued from them.
 
       <span class="pat"></span>
@@ -169,7 +180,7 @@ paths:
         The returned token is used in the HTTP Authorization header like `Authorization: Bearer {TOKEN}`.
 
         _**As of September 16, 2024, this route requires a personal access token (PAT) instead of a password if your organization has SSO enforced.**_
-        
+
         <div style="background-color:rgb(255, 165, 0, .25); padding:5px; border-radius:4px">
           <strong>Deprecated</strong>: Use [<a href="#tag/authentication-api/operation/AuthCreateAccessToken">Create access token</a>] instead.
         </div>
@@ -237,8 +248,8 @@ paths:
       operationId: AuthCreateAccessToken
       description: |
         Creates and returns a short-lived access token in JWT format for use as a bearer when calling Docker APIs.
-        
-        If successful, the access token returned should be used in the HTTP Authorization header like 
+
+        If successful, the access token returned should be used in the HTTP Authorization header like
         `Authorization: Bearer {access_token}`.
 
         _**If your organization has SSO enforced, you must use a personal access token (PAT) instead of a password.**_
@@ -304,7 +315,7 @@ paths:
       description: Returns a paginated list of personal access tokens.
       tags:
         - access-tokens
-      security: 
+      security:
         - bearerAuth: []
       parameters:
         - in: query
@@ -341,7 +352,7 @@ paths:
         Updates a personal access token partially. You can either update the token's label or enable/disable it.
       tags:
         - access-tokens
-      security: 
+      security:
         - bearerAuth: []
       requestBody:
         content:
@@ -365,7 +376,7 @@ paths:
       description: Returns a personal access token by UUID.
       tags:
         - access-tokens
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -390,7 +401,7 @@ paths:
         Deletes a personal access token permanently. This cannot be undone.
       tags:
         - access-tokens
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '204':
@@ -407,7 +418,7 @@ paths:
 
         <span class="oat"></span>
       operationId: AuditLogs_ListAuditActions
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -618,7 +629,7 @@ paths:
         Returns organization settings by name.
       tags:
         - org-settings
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -644,7 +655,7 @@ paths:
         - `restricted_images`
       tags:
         - org-settings
-      security: 
+      security:
         - bearerAuth: []
       requestBody:
         content:
@@ -683,7 +694,7 @@ paths:
       summary: List repository tags
       tags:
         - repositories
-      security: 
+      security:
         - bearerAuth: []
       parameters:
         - in: query
@@ -709,7 +720,7 @@ paths:
       summary: Check repository tags
       tags:
         - repositories
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -727,7 +738,7 @@ paths:
       summary: Read repository tag
       tags:
         - repositories
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -740,7 +751,7 @@ paths:
       summary: Check repository tag
       tags:
         - repositories
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -774,7 +785,7 @@ paths:
         <span class="oat"></span>
       tags:
         - orgs
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -804,7 +815,7 @@ paths:
         <span class="oat"></span>
       tags:
         - orgs
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -879,7 +890,7 @@ paths:
         <span class="oat"></span>
       tags:
         - orgs
-      security: 
+      security:
         - bearerAuth: []
       requestBody:
         required: true
@@ -919,7 +930,7 @@ paths:
         <span class="oat"></span>
       tags:
         - orgs
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '204':
@@ -944,7 +955,7 @@ paths:
         <span class="oat"></span>
       tags:
         - invites
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -974,7 +985,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       parameters:
         - $ref: '#/components/parameters/page'
@@ -1023,7 +1034,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       requestBody:
         content:
@@ -1060,7 +1071,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '200':
@@ -1081,7 +1092,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       requestBody:
         content:
@@ -1113,7 +1124,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       requestBody:
         content:
@@ -1143,7 +1154,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '204':
@@ -1157,7 +1168,7 @@ paths:
   /v2/orgs/{org_name}/groups/{group_name}/members:
     x-audience: public
     get:
-      security: 
+      security:
         - bearerAuth: []
       parameters:
         - $ref: '#/components/parameters/org_name'
@@ -1212,7 +1223,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       requestBody:
         $ref: '#/components/requestBodies/add_member_to_org_group'
@@ -1239,7 +1250,7 @@ paths:
         <span class="oat"></span>
       tags:
         - groups
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '204':
@@ -1266,7 +1277,7 @@ paths:
         <span class="oat"></span>
       tags:
         - invites
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '204':
@@ -1293,7 +1304,7 @@ paths:
         <span class="oat"></span>
       tags:
         - invites
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '204':
@@ -1318,7 +1329,7 @@ paths:
         - invites
       requestBody:
         $ref: '#/components/requestBodies/bulk_invite_request'
-      security: 
+      security:
         - bearerAuth: []
       responses:
         '202':
@@ -2465,23 +2476,23 @@ components:
           type: string
           format: date-time
           description: |
-            Last time the user logged in. To access this field, you must have insights visible for your organization. See 
+            Last time the user logged in. To access this field, you must have insights visible for your organization. See
             [Insights](https://docs.docker.com/admin/organization/insights/#view-insights-for-organization-users).
           example: '2021-01-05T21:06:53.506400Z'
         last_seen_at:
           type: string
           format: date-time
           description: |
-            Last time the user was seen. To access this field, you must have insights visible for your organization. See 
+            Last time the user was seen. To access this field, you must have insights visible for your organization. See
             [Insights](https://docs.docker.com/admin/organization/insights/#view-insights-for-organization-users).
           example: '2021-01-05T21:06:53.506400Z'
         last_desktop_version:
           type: string
           description: |
-            Last desktop version the user used. To access this field, you must have insights visible for your organization. See 
+            Last desktop version the user used. To access this field, you must have insights visible for your organization. See
             [Insights](https://docs.docker.com/admin/organization/insights/#view-insights-for-organization-users).
           example: 4.29.0
-        
+
     org_member_paginated:
       type: object
       properties:
@@ -3014,6 +3025,6 @@ x-tagGroups:
       - org-settings
       - repositories
       - scim
-      - orgs 
+      - orgs
       - groups
       - invites

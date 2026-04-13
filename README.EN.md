@@ -2,7 +2,7 @@
 
 [![README file in English][badge-readme-en]][readme-en]
 [![README file in Brazilian Portuguese][badge-readme-pt-br]][readme-pt-br]
-[![License: APACHE-2.0][badge-license]][license]
+[![License: Apache-2.0][badge-license]][license]
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
@@ -40,7 +40,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 
-[badge-license]: https://img.shields.io/github/license/docsdevbr/docker-doc-pt-br
+[badge-license]: https://img.shields.io/badge/license-Apache--2.0-blue
 
 [badge-readme-en]: https://img.shields.io/badge/lang-en-blue
 
@@ -54,7 +54,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE
+[license]: LICENSES/Apache-2.0.txt
 
 [page]: https://pt.docs.dev.br/tech/d/docker/index.html
 
