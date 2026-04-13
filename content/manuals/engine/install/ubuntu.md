@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/ubuntu.md
-revision: be37c0192d11476dbbe95c4d37308aee9c4f75c5
+revision: d0cf4cb7fc9a9c5adb135742aa201eeab35da7ca
 status: ready
 
 description: >-
@@ -73,6 +73,7 @@ Para começar a usar a Docker Engine no Ubuntu, certifique-se de que você
 Para instalar a Docker Engine, você precisa da versão de 64 bits de uma destas
 versões do Ubuntu:
 
+- Ubuntu Resolute 26.04 (LTS)
 - Ubuntu Questing 25.10
 - Ubuntu Noble 24.04 (LTS)
 - Ubuntu Jammy 22.04 (LTS)
@@ -164,6 +165,7 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
    URIs: {{% param "download-url-base" %}}
    Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
    Components: stable
+   Architectures: $(dpkg --print-architecture)
    Signed-By: /etc/apt/keyrings/docker.asc
    EOF
 
