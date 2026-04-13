@@ -352,7 +352,7 @@ forma eficaz para uma aplicação Node.js.
    Perfeitamente normal, já que você alterou bastante o Dockerfile.
 
 9. Agora, faça uma alteração no arquivo `src/static/index.html` (como mudar o
-   título para "The Awesome Todo App").
+   título para "A incrível aplicação de tarefas").
 
 10. Construa a imagem Docker.
     Desta vez, a saída deverá ser um pouco diferente.
