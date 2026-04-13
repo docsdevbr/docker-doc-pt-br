@@ -10,6 +10,10 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
+source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/using-the-build-cache.md
+revision: 19961dd50fa5a23b4d9fabe272eb885b6a5311a9
+status: ready
+
 title: Using the build cache
 keywords: concepts, build, images, container, docker desktop
 description: This concept page will teach you about the build cache, what changes invalidate the cache and how to effectively use the build cache.
@@ -24,273 +28,340 @@ weight: 4
 aliases:
  - /guides/docker-concepts/building-images/using-the-build-cache/
 ---
+
 {{< youtube-embed Ri6jMknjprY >}}
 
-## Explanation
+## Explicação
 
-Consider the following Dockerfile that you created for the [getting-started](./writing-a-dockerfile/) app.
+Considere o seguinte Dockerfile que você criou para a aplicação
+[getting-started](./writing-a-dockerfile/).
 
 ```dockerfile
-FROM node:20-alpine
+FROM node:22-alpine
 WORKDIR /app
 COPY . .
 RUN yarn install --production
 CMD ["node", "./src/index.js"]
 ```
 
-When you run the `docker build` command to create a new image, Docker executes each instruction in your Dockerfile, creating a layer for each command and in the order specified. For each instruction, Docker checks whether it can reuse the instruction from a previous build. If it finds that you've already executed a similar instruction before, Docker doesn't need to redo it. Instead, it’ll use the cached result. This way, your build process becomes faster and more efficient, saving you valuable time and resources.
+Ao executar o comando `docker build` para criar uma nova imagem, o Docker
+executa cada instrução do seu Dockerfile, criando uma camada para cada comando
+na ordem especificada.
+Para cada instrução, o Docker verifica se pode reutilizá-la de uma construção
+anterior.
+Se encontrar uma instrução semelhante já executada, o Docker não precisa
+refazê-la.
+Em vez disso, utiliza o resultado em cache.
+Dessa forma, o processo de construção torna-se mais rápido e eficiente,
+economizando tempo e recursos valiosos.
 
-Using the build cache effectively lets you achieve faster builds by reusing results from previous builds and skipping unnecessary work.
-In order to maximize cache usage and avoid resource-intensive and time-consuming rebuilds, it's important to understand how cache invalidation works.
-Here are a few examples of situations that can cause cache to be invalidated:
+Usar o cache de construção de forma eficaz permite obter construções mais
+rápidas, reutilizando resultados de construções anteriores e evitando trabalho
+desnecessário.
+Para maximizar o uso do cache e evitar reconstruções demoradas que consomem
+muitos recursos, é importante entender como funciona a invalidação do cache.
+Aqui estão alguns exemplos de situações que podem invalidar o cache:
 
-- Any changes to the command of a `RUN` instruction invalidates that layer. Docker detects the change and invalidates the build cache if there's any modification to a `RUN` command in your Dockerfile.
+- Qualquer alteração no comando de uma instrução `RUN` invalida essa camada.
+  O Docker detecta a alteração e invalida o cache de construção se houver
+  qualquer modificação em um comando `RUN` no seu Dockerfile.
 
-- Any changes to files copied into the image with the `COPY` or `ADD` instructions. Docker keeps an eye on any alterations to files within your project directory. Whether it's a change in content or properties like permissions, Docker considers these modifications as triggers to invalidate the cache.
+- Qualquer alteração em arquivos copiados para a imagem com as instruções
+  `COPY` ou `ADD` também invalida o cache.
+  O Docker monitora quaisquer alterações em arquivos dentro do diretório do seu
+  projeto.
+  Seja uma mudança no conteúdo ou em propriedades como permissões, o Docker
+  considera essas modificações como gatilhos para invalidar o cache.
 
-- Once one layer is invalidated, all following layers are also invalidated. If any previous layer, including the base image or intermediary layers, has been invalidated due to changes, Docker ensures that subsequent layers relying on it are also invalidated. This keeps the build process synchronized and prevents inconsistencies.
+- Uma vez que uma camada é invalidada, todas as camadas subsequentes também são
+  invalidadas.
+  Se alguma camada anterior, incluindo a imagem base ou camadas intermediárias,
+  tiver sido invalidada devido a alterações, o Docker garante que as camadas
+  subsequentes que dependem dela também sejam invalidadas.
+  Isso mantém o processo de construção sincronizado e evita inconsistências.
 
-When you're writing or editing a Dockerfile, keep an eye out for unnecessary cache misses to ensure that builds run as fast and efficiently as possible.
+Ao escrever ou editar um Dockerfile, fique atento a cache misses desnecessários
+para garantir que as construções sejam executadas da forma mais rápida e
+eficiente possível.
 
-## Try it out
+## Experimente
 
-In this hands-on guide, you will learn how to use the Docker build cache effectively for a Node.js application.
+Neste guia prático, você aprenderá como usar o cache de construção do Docker de
+forma eficaz para uma aplicação Node.js.
 
-### Build the application
+### Construa a aplicação
 
-1. [Download and install](https://www.docker.com/products/docker-desktop/) Docker Desktop.
+1. [Baixe e instale](https://www.docker.com/products/docker-desktop/) o Docker
+   Desktop.
 
-2. Open a terminal and [clone this sample application](https://github.com/dockersamples/todo-list-app).
+2. Abra um terminal e
+   [clone esta aplicação de exemplo](https://github.com/dockersamples/todo-list-app).
 
-    ```console
-    $ git clone https://github.com/dockersamples/todo-list-app
-    ```
-
-3. Navigate into the `todo-list-app` directory:
-
-    ```console
-    $ cd todo-list-app
-    ```
-
-    Inside this directory, you'll find a file named `Dockerfile` with the following content:
-
-    ```dockerfile
-    FROM node:20-alpine
-    WORKDIR /app
-    COPY . .
-    RUN yarn install --production
-    EXPOSE 3000
-    CMD ["node", "./src/index.js"]
-    ```
-
-4. Execute the following command to build the Docker image:
-
-    ```console
-    $ docker build .
-    ```
-
-    Here’s the result of the build process:
-
-    ```console
-    [+] Building 20.0s (10/10) FINISHED
-    ```
-
-    The first line indicates that the entire build process took *20.0 seconds*. The first build may take some time as it installs dependencies.
-
-5. Rebuild without making changes.
-
-   Now, re-run the `docker build` command without making any change in the source code or Dockerfile as shown:
-
-    ```console
-    $ docker build .
-    ```
-
-   Subsequent builds after the initial are faster due to the caching mechanism, as long as the commands and context remain unchanged. Docker caches the intermediate layers generated during the build process. When you rebuild the image without making any changes to the Dockerfile or the source code, Docker can reuse the cached layers, significantly speeding up the build process.
-
-    ```console
-    [+] Building 1.0s (9/9) FINISHED                                                                            docker:desktop-linux
-     => [internal] load build definition from Dockerfile                                                                        0.0s
-     => => transferring dockerfile: 187B                                                                                        0.0s
-     ...
-     => [internal] load build context                                                                                           0.0s
-     => => transferring context: 8.16kB                                                                                         0.0s
-     => CACHED [2/4] WORKDIR /app                                                                                               0.0s
-     => CACHED [3/4] COPY . .                                                                                                   0.0s
-     => CACHED [4/4] RUN yarn install --production                                                                              0.0s
-     => exporting to image                                                                                                      0.0s
-     => => exporting layers                                                                                                     0.0s
-     => => exporting manifest
+   ```console
+   $ git clone https://github.com/dockersamples/todo-list-app
    ```
 
-   The subsequent build was completed in just 1.0 second by leveraging the cached layers. No need to repeat time-consuming steps like installing dependencies.
+3. Navegue até o diretório `todo-list-app`:
 
-    <table>
-      <tr>
-       <td>Steps
-       </td>
-       <td>Description
-       </td>
-       <td>Time Taken(1st Run)
-       </td>
-       <td>Time Taken (2nd Run)
-       </td>
-      </tr>
-      <tr>
-       <td>1
-       </td>
-       <td>Load build definition from Dockerfile
-       </td>
-       <td>0.0 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>2
-       </td>
-       <td>Load metadata for docker.io/library/node:20-alpine
-       </td>
-       <td>2.7 seconds
-       </td>
-       <td>0.9 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>3
-       </td>
-       <td>Load .dockerignore
-       </td>
-       <td>0.0 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>4
-       </td>
-       <td>Load build context
-    <p>
-    (Context size: 4.60MB)
-       </td>
-       <td>0.1 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>5
-       </td>
-       <td>Set the working directory (WORKDIR)
-       </td>
-       <td>0.1 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>6
-       </td>
-       <td>Copy the local code into the container
-       </td>
-       <td>0.0 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>7
-       </td>
-       <td>Run yarn install --production
-       </td>
-       <td>10.0 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>8
-       </td>
-       <td>Exporting layers
-       </td>
-       <td>2.2 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
-      </tr>
-      <tr>
-       <td>9
-       </td>
-       <td>Exporting the final image
-       </td>
-       <td>3.0 seconds
-       </td>
-       <td>0.0 seconds
-       </td>
+   ```console
+   $ cd todo-list-app
+   ```
+
+   Dentro deste diretório, você encontrará um arquivo chamado `Dockerfile` com o
+   seguinte conteúdo:
+
+   ```dockerfile
+   FROM node:22-alpine
+   WORKDIR /app
+   COPY . .
+   RUN yarn install --production
+   EXPOSE 3000
+   CMD ["node", "./src/index.js"]
+   ```
+
+4. Execute o seguinte comando para criar a imagem Docker:
+
+   ```console
+   $ docker build .
+   ```
+
+   Aqui está o resultado do processo de construção:
+
+   ```console
+   [+] Building 20.0s (10/10) FINISHED
+   ```
+
+   A primeira linha indica que todo o processo de construção levou
+   *20,0 segundos*.
+   A primeira construção pode demorar um pouco, pois instala as dependências.
+
+5. Reconstrua sem fazer alterações.
+
+   Agora, execute novamente o comando `docker build` sem fazer nenhuma alteração
+   no código-fonte ou no Dockerfile, conforme mostrado:
+
+   ```console
+   $ docker build .
+   ```
+
+   As construções subsequentes à inicial são mais rápidas devido ao mecanismo de
+   cache, desde que os comandos e o contexto permaneçam inalterados.
+   O Docker armazena em cache as camadas intermediárias geradas durante o
+   processo de construção.
+   Ao reconstruir a imagem sem fazer alterações no Dockerfile ou no
+   código-fonte, o Docker pode reutilizar as camadas em cache, acelerando
+   significativamente o processo de construção.
+
+   ```console
+   [+] Building 1.0s (9/9) FINISHED                                                                            docker:desktop-linux
+    => [internal] load build definition from Dockerfile                                                                        0.0s
+    => => transferring dockerfile: 187B                                                                                        0.0s
+    ...
+    => [internal] load build context                                                                                           0.0s
+    => => transferring context: 8.16kB                                                                                         0.0s
+    => CACHED [2/4] WORKDIR /app                                                                                               0.0s
+    => CACHED [3/4] COPY . .                                                                                                   0.0s
+    => CACHED [4/4] RUN yarn install --production                                                                              0.0s
+    => exporting to image                                                                                                      0.0s
+    => => exporting layers                                                                                                     0.0s
+    => => exporting manifest
+   ```
+
+   A construção subsequente foi concluída em apenas 1,0 segundo, aproveitando as
+   camadas em cache.
+   Não há necessidade de repetir etapas demoradas, como a instalação de
+   dependências.
+
+   <table>
+     <thead>
+       <tr>
+         <th>Passos
+         </th>
+         <th>Descrição
+         </th>
+         <th>Tempo gasto (1ª execução)
+         </th>
+         <th>Tempo gasto (2ª execução)
+         </th>
+       </tr>
+     </thead>
+     <tbody>
+     <tr>
+      <td>1
+      </td>
+      <td><code>Load build definition from Dockerfile</code>
+      </td>
+      <td>0,0 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
      </tr>
-    </table>
+     <tr>
+      <td>2
+      </td>
+      <td><code>Load metadata for docker.io/library/node:22-alpine</code>
+      </td>
+      <td>2,7 segundos
+      </td>
+      <td>0,9 segundos
+      </td>
+     </tr>
+     <tr>
+      <td>3
+      </td>
+      <td><code>Load .dockerignore</code>
+      </td>
+      <td>0,0 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
+     </tr>
+     <tr>
+      <td>4
+      </td>
+      <td><code>Load build context</code>
+   <p>
+   (Context size: 4.60MB)
+      </td>
+      <td>0,1 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
+     </tr>
+     <tr>
+      <td>5
+      </td>
+      <td><code>Set the working directory (WORKDIR)</code>
+      </td>
+      <td>0,1 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
+     </tr>
+     <tr>
+      <td>6
+      </td>
+      <td><code>Copy the local code into the container</code>
+      </td>
+      <td>0,0 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
+     </tr>
+     <tr>
+      <td>7
+      </td>
+      <td><code>Run yarn install --production</code>
+      </td>
+      <td>10,0 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
+     </tr>
+     <tr>
+      <td>8
+      </td>
+      <td><code>Exporting layers</code>
+      </td>
+      <td>2,2 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
+     </tr>
+     <tr>
+      <td>9
+      </td>
+      <td><code>Exporting the final image</code>
+      </td>
+      <td>3,0 segundos
+      </td>
+      <td>0,0 segundos
+      </td>
+    </tr>
+    </tbody>
+   </table>
 
-    Going back to the `docker image history` output, you see that each command in the Dockerfile becomes a new layer in the image. You might remember that when you made a change to the image, the `yarn` dependencies had to be reinstalled. Is there a way to fix this? It doesn't make much sense to reinstall the same dependencies every time you build, right?
+   Voltando à saída do `docker image history`, você verá que cada comando no
+   Dockerfile se torna uma nova camada na imagem.
+   Você deve se lembrar que, ao fazer uma alteração na imagem, as dependências
+   do Yarn precisavam ser reinstaladas.
+   Existe alguma maneira de corrigir isso?
+   Não faz muito sentido reinstalar as mesmas dependências a cada build, certo?
 
-    To fix this, restructure your Dockerfile so that the dependency cache remains valid unless it really needs to be invalidated. For Node-based applications, dependencies are defined in the `package.json` file. You'll want to reinstall the dependencies if that file changes, but use cached dependencies if the file is unchanged. So, start by copying only that file first, then install the dependencies, and finally copy everything else. Then, you only need to recreate the yarn dependencies if there was a change to the `package.json` file.
+   Para corrigir isso, reestruture seu Dockerfile para que o cache de
+   dependências permaneça válido, a menos que realmente precise ser invalidado.
+   Para aplicações baseadas em Node.js, as dependências são definidas no arquivo
+   `package.json`.
+   Você precisará reinstalar as dependências se esse arquivo for alterado, mas
+   usar as dependências em cache se o arquivo permanecer inalterado.
+   Portanto, comece copiando apenas esse arquivo, depois instale as dependências
+   e, por fim, copie o resto.
+   Assim, você só precisará recriar as dependências do Yarn se houver alguma
+   alteração no arquivo `package.json`.
 
-6. Update the Dockerfile to copy in the `package.json` file first, install dependencies, and then copy everything else in.
+6. Atualize o Dockerfile para copiar primeiro o arquivo `package.json`, instalar
+   as dependências e, em seguida, copiar o resto.
 
-     ```dockerfile
-     FROM node:20-alpine
-     WORKDIR /app
-     COPY package.json yarn.lock ./
-     RUN yarn install --production
-     COPY . .
-     EXPOSE 3000
-     CMD ["node", "src/index.js"]
-     ```
+   ```dockerfile
+   FROM node:22-alpine
+   WORKDIR /app
+   COPY package.json yarn.lock ./
+   RUN yarn install --production
+   COPY . .
+   EXPOSE 3000
+   CMD ["node", "src/index.js"]
+   ```
 
-7. Create a file named `.dockerignore` in the same folder as the Dockerfile with the following contents.
+7. Crie um arquivo chamado `.dockerignore` na mesma pasta do Dockerfile com o
+   seguinte conteúdo.
 
-     ```plaintext
-     node_modules
-     ```
+   ```plaintext
+   node_modules
+   ```
 
-8. Build the new image:
+8. Construa a nova imagem:
 
-    ```console
-    $ docker build .
-    ```
+   ```console
+   $ docker build .
+   ```
 
-    You'll then see output similar to the following:
+   Em seguida, você verá uma saída semelhante à seguinte:
 
-    ```console
-    [+] Building 16.1s (10/10) FINISHED
-    => [internal] load build definition from Dockerfile                                               0.0s
-    => => transferring dockerfile: 175B                                                               0.0s
-    => [internal] load .dockerignore                                                                  0.0s
-    => => transferring context: 2B                                                                    0.0s
-    => [internal] load metadata for docker.io/library/node:21-alpine                                  0.0s
-    => [internal] load build context                                                                  0.8s
-    => => transferring context: 53.37MB                                                               0.8s
-    => [1/5] FROM docker.io/library/node:21-alpine                                                    0.0s
-    => CACHED [2/5] WORKDIR /app                                                                      0.0s
-    => [3/5] COPY package.json yarn.lock ./                                                           0.2s
-    => [4/5] RUN yarn install --production                                                           14.0s
-    => [5/5] COPY . .                                                                                 0.5s
-    => exporting to image                                                                             0.6s
-    => => exporting layers                                                                            0.6s
-    => => writing image
-    sha256:d6f819013566c54c50124ed94d5e66c452325327217f4f04399b45f94e37d25        0.0s
-    => => naming to docker.io/library/node-app:2.0                                                 0.0s
-    ```
+   ```console
+   [+] Building 16.1s (10/10) FINISHED
+   => [internal] load build definition from Dockerfile                                               0.0s
+   => => transferring dockerfile: 175B                                                               0.0s
+   => [internal] load .dockerignore                                                                  0.0s
+   => => transferring context: 2B                                                                    0.0s
+   => [internal] load metadata for docker.io/library/node:22-alpine                                  0.0s
+   => [internal] load build context                                                                  0.8s
+   => => transferring context: 53.37MB                                                               0.8s
+   => [1/5] FROM docker.io/library/node:22-alpine                                                    0.0s
+   => CACHED [2/5] WORKDIR /app                                                                      0.0s
+   => [3/5] COPY package.json yarn.lock ./                                                           0.2s
+   => [4/5] RUN yarn install --production                                                           14.0s
+   => [5/5] COPY . .                                                                                 0.5s
+   => exporting to image                                                                             0.6s
+   => => exporting layers                                                                            0.6s
+   => => writing image
+   sha256:d6f819013566c54c50124ed94d5e66c452325327217f4f04399b45f94e37d25        0.0s
+   => => naming to docker.io/library/node-app:2.0                                                 0.0s
+   ```
 
-    You'll see that all layers were rebuilt. Perfectly fine since you changed the Dockerfile quite a bit.
+   Você verá que todas as camadas foram reconstruídas.
+   Perfeitamente normal, já que você alterou bastante o Dockerfile.
 
-9. Now, make a change to the `src/static/index.html` file (like change the title to say "The Awesome Todo App").
+9. Agora, faça uma alteração no arquivo `src/static/index.html` (como mudar o
+   título para "The Awesome Todo App").
 
-10. Build the Docker image. This time, your output should look a little different.
+10. Construa a imagem Docker.
+    Desta vez, a saída deverá ser um pouco diferente.
 
     ```console
     $ docker build -t node-app:3.0 .
     ```
 
-    You'll then see output similar to the following:
+    Em seguida, você verá uma saída semelhante à seguinte:
 
     ```console
     [+] Building 1.2s (10/10) FINISHED
@@ -298,10 +369,10 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
     => => transferring dockerfile: 37B                                                                0.0s
     => [internal] load .dockerignore                                                                  0.0s
     => => transferring context: 2B                                                                    0.0s
-    => [internal] load metadata for docker.io/library/node:21-alpine                                  0.0s
+    => [internal] load metadata for docker.io/library/node:22-alpine                                  0.0s
     => [internal] load build context                                                                  0.2s
     => => transferring context: 450.43kB                                                              0.2s
-    => [1/5] FROM docker.io/library/node:21-alpine                                                    0.0s
+    => [1/5] FROM docker.io/library/node:22-alpine                                                    0.0s
     => CACHED [2/5] WORKDIR /app                                                                      0.0s
     => CACHED [3/5] COPY package.json yarn.lock ./                                                    0.0s
     => CACHED [4/5] RUN yarn install --production                                                     0.0s
@@ -313,18 +384,26 @@ In this hands-on guide, you will learn how to use the Docker build cache effecti
     => => naming to docker.io/library/node-app:3.0                                                 0.0s
     ```
 
-    First off, you should notice that the build was much faster. You'll see that several steps are using previously cached layers. That's good news; you're using the build cache. Pushing and pulling this image and updates to it will be much faster as well.
+    Primeiramente, você notará que a construção foi muito mais rápida.
+    Você verá que várias etapas estão usando camadas previamente armazenadas em
+    cache.
+    Isso é uma ótima notícia; você está usando o cache de construção.
+    O envio e o download desta imagem e suas atualizações também serão muito
+    mais rápidos.
 
-By following these optimization techniques, you can make your Docker builds faster and more efficient, leading to quicker iteration cycles and improved development productivity.
+Ao seguir essas técnicas de otimização, você pode tornar suas construções do
+Docker mais rápidas e eficientes, resultando em ciclos de iteração mais curtos e
+maior produtividade no desenvolvimento.
 
-## Additional resources
+## Recursos adicionais
 
-* [Optimizing builds with cache management](/build/cache/)
-* [Cache Storage Backend](/build/cache/backends/)
-* [Build cache invalidation](/build/cache/invalidation/)
+* [Otimizando construções com gerenciamento de cache](/build/cache/)
+* [Backend de armazenamento de cache](/build/cache/backends/)
+* [Invalidação do cache de construção](/build/cache/invalidation/)
 
-## Next steps
+## Próximos passos
 
-Now that you understand how to use the Docker build cache effectively, you're ready to learn about Multi-stage builds.
+Agora que você entende como usar o cache de construção do Docker de forma
+eficaz, pode aprender sobre construções em várias etapas.
 
-{{< button text="Multi-stage builds" url="multi-stage-builds" >}}
+{{< button text="Construções em várias etapas" url="multi-stage-builds" >}}
