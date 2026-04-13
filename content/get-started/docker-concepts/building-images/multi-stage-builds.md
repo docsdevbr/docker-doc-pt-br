@@ -10,313 +10,425 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Multi-stage builds
-keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you about the purpose of the multi-stage build and its benefits
-summary: |
-  By separating the build environment from the final runtime environment, you
-  can significantly reduce the image size and attack surface. In this guide,
-  you'll unlock the power of multi-stage builds to create lean and efficient
-  Docker images, essential for minimizing overhead and enhancing deployment in
-  production environments.
+source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/multi-stage-builds.md
+revision: fbcabd5b97fcfdf62d76e6735765d3388ed184d6
+status: ready
+
+title: Construções multiestágio
+keywords: conceitos, construção, imagens, contêiner, docker desktop
+description: >-
+  Esta página conceitual ensinará você sobre o propósito da construção
+  multiestágio e seus benefícios.
+summary: >-
+  Ao separar o ambiente de construção do ambiente de execução final, você pode
+  reduzir significativamente o tamanho da imagem e a superfície de ataque.
+  Neste guia, você descobrirá o poder das construções multiestágio para criar
+  imagens Docker enxutas e eficientes, essenciais para minimizar a sobrecarga e
+  aprimorar a implantação em ambientes de produção.
 weight: 5
 aliases:
  - /guides/docker-concepts/building-images/multi-stage-builds/
 ---
+
 {{< youtube-embed vR185cjwxZ8 >}}
 
-## Explanation
+## Explicação
 
-In a traditional build, all build instructions are executed in sequence, and in a single build container: downloading dependencies, compiling code, and packaging the application. All those layers end up in your final image. This approach works, but it leads to bulky images carrying unnecessary weight and increasing your security risks. This is where multi-stage builds come in.
+Em uma construção tradicional, todas as instruções de construção são executadas
+em sequência e em um único contêiner de construção: baixar dependências,
+compilar o código e empacotar a aplicação.
+Todas essas camadas resultam na sua imagem final.
+Essa abordagem funciona, mas leva a imagens volumosas, com peso desnecessário e
+aumentando os riscos de segurança.
+É aí que entram as construções multiestágio.
 
-Multi-stage builds introduce multiple stages in your Dockerfile, each with a specific purpose. Think of it like the ability to run different parts of a build in multiple different environments, concurrently. By separating the build environment from the final runtime environment, you can significantly reduce the image size and attack surface. This is especially beneficial for applications with large build dependencies.
+As construções multiestágio introduzem várias etapas no seu Dockerfile, cada uma
+com um propósito específico.
+Pense nisso como a capacidade de executar diferentes partes de uma construção em
+vários ambientes diferentes, simultaneamente.
+Ao separar o ambiente de construção do ambiente de execução final, você pode
+reduzir significativamente o tamanho da imagem e a superfície de ataque.
+Isso é especialmente benéfico para aplicações com grandes dependências de
+construção.
 
-Multi-stage builds are recommended for all types of applications.
+As construções multiestágio são recomendadas para todos os tipos de aplicações.
 
-- For interpreted languages, like JavaScript or Ruby or Python, you can build and minify your code in one stage, and copy the production-ready files to a smaller runtime image. This optimizes your image for deployment.
-- For compiled languages, like C or Go or Rust, multi-stage builds let you compile in one stage and copy the compiled binaries into a final runtime image. No need to bundle the entire compiler in your final image.
+- Para linguagens interpretadas, como JavaScript, Ruby ou Python, você pode
+  construir e minificar seu código em uma etapa e copiar os arquivos prontos
+  para produção para uma imagem de execução menor.
+  Isso otimiza sua imagem para implantação.
+- Para linguagens compiladas, como C, Go ou Rust, a compilação multiestágio
+  permite compilar em uma etapa e copiar os binários compilados para uma imagem
+  de tempo de execução final.
+  Não é necessário incluir todo o compilador na imagem final.
 
-Here's a simplified example of a multi-stage build structure using pseudo-code. Notice there are multiple `FROM` statements and a new `AS <stage-name>`. In addition, the `COPY` statement in the second stage is copying `--from` the previous stage.
+Aqui está um exemplo simplificado de uma estrutura de construção multiestágio
+usando pseudocódigo.
+Observe que existem várias instruções `FROM` e uma nova instrução
+`AS <nome-da-etapa>`.
+Além disso, a instrução `COPY` na segunda etapa está copiando `--from` da etapa
+anterior.
 
 ```dockerfile
-# Stage 1: Build Environment
+# Etapa 1: ambiente de construção
 FROM builder-image AS build-stage
-# Install build tools (e.g., Maven, Gradle)
-# Copy source code
-# Build commands (e.g., compile, package)
+# Instala as ferramentas de construção (ex.: Maven, Gradle)
+# Copia o código-fonte
+# Comandos de construção (ex.: compile, package)
 
-# Stage 2: Runtime environment
+# Etapa 2: ambiente de execução
 FROM runtime-image AS final-stage
-#  Copy application artifacts from the build stage (e.g., JAR file)
+# Copia os artefatos da aplicação da etapa de construção (ex.: arquivo JAR)
 COPY --from=build-stage /path/in/build/stage /path/to/place/in/final/stage
-# Define runtime configuration (e.g., CMD, ENTRYPOINT)
+# Define a configuração de tempo de execução (ex.: CMD, ENTRYPOINT)
 ```
 
-This Dockerfile uses two stages:
+Este Dockerfile usa duas etapas:
+
+- A etapa de construção usa uma imagem base contendo as ferramentas de
+  compilação necessárias para compilar sua aplicação.
+  Ela inclui comandos para instalar as ferramentas de compilação, copiar o
+  código-fonte e executar os comandos de compilação.
+- A etapa final usa uma imagem base menor, adequada para executar sua aplicação.
+  Ela copia os artefatos compilados (um arquivo JAR, por exemplo) da etapa de
+  construção.
+  Finalmente, define a configuração de tempo de execução (usando `CMD` ou
+  `ENTRYPOINT`) para iniciar sua aplicação.
+
+## Experimente
+
+Neste guia prático, você descobrirá o poder das construções multiestágio para
+criar imagens Docker enxutas e eficientes para uma aplicação Java de exemplo.
+Você usará como exemplo uma aplicação simples "Olá Mundo" baseada em Spring
+Boot, construída com Maven.
+
+1. [Baixe e instale](https://www.docker.com/products/docker-desktop/) o Docker
+   Desktop.
+
+2. Abra este
+   [projeto pré-inicializado](https://start.spring.io/#!type=maven-project&language=java&platformVersion=4.0.1&packaging=jar&configurationFileFormat=properties&jvmVersion=21&groupId=com.example&artifactId=spring-boot-docker&name=spring-boot-docker&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.spring-boot-docker&dependencies=web)
+   para gerar um arquivo ZIP.
+   Veja como fica:
+
+   ![Uma captura de tela da ferramenta Spring Initializr selecionada com Java 21, Spring Web e Spring Boot 3.4.0](images/multi-stage-builds-spring-initializer.webp?border=true)
+
+   O [Spring Initializr](https://start.spring.io/) é um gerador de projetos
+   Spring de início rápido.
+   Ele fornece uma API extensível para gerar projetos baseados na JVM com
+   implementações para diversos conceitos comuns — como geração básica de
+   linguagem para Java, Kotlin, Groovy e Maven.
+
+   Selecione **Generate** para criar e baixar o arquivo zip deste projeto.
+
+   Para esta demonstração, você combinou a automação de compilação do Maven com
+   Java, uma dependência do Spring Web e Java 21 para seus metadados.
+
+3. Navegue até o diretório do projeto.
+   Após descompactar o arquivo, você verá a seguinte estrutura de diretórios do
+   projeto:
+
+   ```plaintext
+   spring-boot-docker
+   ├── HELP.md
+   ├── mvnw
+   ├── mvnw.cmd
+   ├── pom.xml
+   └── src
+       ├── main
+       │   ├── java
+       │   │   └── com
+       │   │       └── example
+       │   │           └── spring_boot_docker
+       │   │               └── SpringBootDockerApplication.java
+       │   └── resources
+       │       ├── application.properties
+       │       ├── static
+       │       └── templates
+       └── test
+           └── java
+               └── com
+                   └── example
+                       └── spring_boot_docker
+                           └── SpringBootDockerApplicationTests.java
+
+   15 directories, 7 files
+   ```
+
+   O diretório `src/main/java` contém o código-fonte do seu projeto, o diretório
+   `src/test/java` contém o código-fonte dos testes e o arquivo `pom.xml` é o
+   Modelo de Objeto do Projeto (POM) do seu projeto.
+
+   O arquivo `pom.xml` é o núcleo da configuração de um projeto Maven.
+   É um único arquivo de configuração que contém a maioria das informações
+   necessárias para construir um projeto personalizado.
+   O POM é enorme e pode parecer intimidante.
+   Felizmente, você ainda não precisa entender todas as suas complexidades para
+   usá-lo com eficácia.
+
+4. Crie um serviço web RESTful que exiba "Olá, Mundo!".
+
+   No diretório `src/main/java/com/example/spring_boot_docker/`, você pode
+   modificar o seu arquivo `SpringBootDockerApplication.java` com o seguinte
+   conteúdo:
+
+   ```java
+   package com.example.spring_boot_docker;
+
+   import org.springframework.boot.SpringApplication;
+   import org.springframework.boot.autoconfigure.SpringBootApplication;
+   import org.springframework.web.bind.annotation.RequestMapping;
+   import org.springframework.web.bind.annotation.RestController;
+
+   @RestController
+   @SpringBootApplication
+   public class SpringBootDockerApplication {
+
+       @RequestMapping("/")
+       public String home() {
+           return "Olá, Mundo!";
+       }
 
-- The build stage uses a base image containing build tools needed to compile your application. It includes commands to install build tools, copy source code, and execute build commands.
-- The final stage uses a smaller base image suitable for running your application. It copies the compiled artifacts (a JAR file, for example) from the build stage. Finally, it defines the runtime configuration (using `CMD` or `ENTRYPOINT`) for starting your application.
+       public static void main(String[] args) {
+           SpringApplication.run(SpringBootDockerApplication.class, args);
+       }
 
-## Try it out
+   }
+   ```
 
-In this hands-on guide, you'll unlock the power of multi-stage builds to create lean and efficient Docker images for a sample Java application. You'll use a simple “Hello World” Spring Boot-based application built with Maven as your example.
+   O arquivo `SpringbootDockerApplication.java` começa declarando o pacote
+   `com.example.spring_boot_docker` e importando os frameworks Spring
+   necessários.
+   Este arquivo Java cria uma aplicação web Spring Boot simples que responde com
+   "Olá, Mundo!" quando uma pessoa usuária visita sua página inicial.
 
-1. [Download and install](https://www.docker.com/products/docker-desktop/) Docker Desktop.
+### Crie o Dockerfile
 
-2. Open this [pre-initialized project](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.4.0-M3&packaging=jar&jvmVersion=21&groupId=com.example&artifactId=spring-boot-docker&name=spring-boot-docker&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.spring-boot-docker&dependencies=web) to generate a ZIP file. Here’s how that looks:
+Agora que você tem o projeto, já pode criar o `Dockerfile`.
 
-    ![A screenshot of Spring Initializr tool selected with Java 21, Spring Web and Spring Boot 3.4.0](images/multi-stage-builds-spring-initializer.webp?border=true)
+1. Crie um arquivo chamado `Dockerfile` na mesma pasta que contém todas as
+   outras pastas e arquivos (como src, pom.xml, etc.).
 
-    [Spring Initializr](https://start.spring.io/) is a quickstart generator for Spring projects. It provides an extensible API to generate JVM-based projects with implementations for several common concepts — like basic language generation for Java, Kotlin, and Groovy.
+2. No `Dockerfile`, defina sua imagem base adicionando a seguinte linha:
 
-    Select **Generate** to create and download the zip file for this project.
+   ```dockerfile
+   FROM eclipse-temurin:21.0.8_9-jdk-jammy
+   ```
 
-    For this demonstration, you’ve paired Maven build automation with Java, a Spring Web dependency, and Java 21 for your metadata.
+3. Agora, defina o diretório de trabalho usando a instrução `WORKDIR`.
+   Isso especificará onde os comandos futuros serão executados e onde os
+   arquivos do diretório serão copiados para dentro da imagem do contêiner.
 
-3. Navigate the project directory. Once you unzip the file, you'll see the following project directory structure:
+   ```dockerfile
+   WORKDIR /app
+   ```
 
-    ```plaintext
-    spring-boot-docker
-    ├── HELP.md
-    ├── mvnw
-    ├── mvnw.cmd
-    ├── pom.xml
-    └── src
-        ├── main
-        │   ├── java
-        │   │   └── com
-        │   │       └── example
-        │   │           └── spring_boot_docker
-        │   │               └── SpringBootDockerApplication.java
-        │   └── resources
-        │       ├── application.properties
-        │       ├── static
-        │       └── templates
-        └── test
-            └── java
-                └── com
-                    └── example
-                        └── spring_boot_docker
-                            └── SpringBootDockerApplicationTests.java
+4. Copie o script wrapper do Maven e o arquivo `pom.xml` do seu projeto para o
+   diretório de trabalho atual `/app` dentro do contêiner Docker.
 
-    15 directories, 7 files
-    ```
+   ```dockerfile
+   COPY .mvn/ .mvn
+   COPY mvnw pom.xml ./
+   ```
 
-   The `src/main/java` directory contains your project's source code, the `src/test/java` directory
-   contains the test source, and the `pom.xml` file is your project’s Project Object Model (POM).
+5. Execute um comando dentro do contêiner.
+   Ele executa o comando `./mvnw dependency:go-offline`, que usa o wrapper do
+   Maven (`./mvnw`) para baixar todas as dependências do seu projeto sem
+   construir o arquivo JAR final (útil para builds mais rápidos).
 
-   The `pom.xml` file is the core of a Maven project's configuration. It's a single configuration file that
-   contains most of the information needed to build a customized project. The POM is huge and can seem
-   daunting. Thankfully, you don't yet need to understand every intricacy to use it effectively.
+   ```dockerfile
+   RUN ./mvnw dependency:go-offline
+   ```
 
-4. Create a RESTful web service that displays "Hello World!".
+6. Copie o diretório `src` do seu projeto na máquina host para o diretório
+   `/app` dentro do contêiner.
 
-    Under the `src/main/java/com/example/spring_boot_docker/` directory, you can modify your
-    `SpringBootDockerApplication.java` file with the following content:
+   ```dockerfile
+   COPY src ./src
+   ```
 
-    ```java
-    package com.example.spring_boot_docker;
+7. Defina o comando padrão a ser executado quando o contêiner for iniciado.
+   Este comando instrui o contêiner a executar o wrapper do Maven (`./mvnw`) com
+   o goal `spring-boot:run`, que irá compilar e executar sua aplicação Spring
+   Boot.
 
-    import org.springframework.boot.SpringApplication;
-    import org.springframework.boot.autoconfigure.SpringBootApplication;
-    import org.springframework.web.bind.annotation.RequestMapping;
-    import org.springframework.web.bind.annotation.RestController;
+   ```dockerfile
+   CMD ["./mvnw", "spring-boot:run"]
+   ```
 
-    @RestController
-    @SpringBootApplication
-    public class SpringBootDockerApplication {
+   Com isso, você deverá ter o seguinte Dockerfile:
 
-        @RequestMapping("/")
-            public String home() {
-            return "Hello World";
-        }
+   ```dockerfile
+   FROM eclipse-temurin:21.0.8_9-jdk-jammy
+   WORKDIR /app
+   COPY .mvn/ .mvn
+   COPY mvnw pom.xml ./
+   RUN ./mvnw dependency:go-offline
+   COPY src ./src
+   CMD ["./mvnw", "spring-boot:run"]
+   ```
 
-    	public static void main(String[] args) {
-    		SpringApplication.run(SpringBootDockerApplication.class, args);
-    	}
-
-    }
-    ```
-
-    The `SpringbootDockerApplication.java` file starts by declaring your `com.example.spring_boot_docker` package and importing necessary Spring frameworks. This Java file creates a simple Spring Boot web application that responds with "Hello World" when a user visits its homepage.
-
-### Create the Dockerfile
-
-Now that you have the project, you’re ready to create the `Dockerfile`.
-
- 1. Create a file named `Dockerfile` in the same folder that contains all the other folders and files (like src, pom.xml, etc.).
-
- 2. In the `Dockerfile`, define your base image by adding the following line:
-
-     ```dockerfile
-     FROM eclipse-temurin:21.0.2_13-jdk-jammy
-     ```
-
- 3. Now, define the working directory by using the `WORKDIR` instruction. This will specify where future commands will run and the directory files will be copied inside the container image.
-
-     ```dockerfile
-     WORKDIR /app
-     ```
-
- 4. Copy both the Maven wrapper script and your project's `pom.xml` file into the current working directory `/app` within the Docker container.
-
-     ```dockerfile
-     COPY .mvn/ .mvn
-     COPY mvnw pom.xml ./
-     ```
-
- 5. Execute a command within the container. It runs the `./mvnw dependency:go-offline` command, which uses the Maven wrapper (`./mvnw`) to download all dependencies for your project without building the final JAR file (useful for faster builds).
-
-     ```dockerfile
-     RUN ./mvnw dependency:go-offline
-     ```
-
- 6. Copy the `src` directory from your project on the host machine to the `/app` directory within the container.
-
-     ```dockerfile
-     COPY src ./src
-     ```
-
- 7. Set the default command to be executed when the container starts. This command instructs the container to run the Maven wrapper (`./mvnw`) with the `spring-boot:run` goal, which will build and execute your Spring Boot application.
-
-     ```dockerfile
-     CMD ["./mvnw", "spring-boot:run"]
-     ```
-
-    And with that, you should have the following Dockerfile:
-
-    ```dockerfile
-    FROM eclipse-temurin:21.0.2_13-jdk-jammy
-    WORKDIR /app
-    COPY .mvn/ .mvn
-    COPY mvnw pom.xml ./
-    RUN ./mvnw dependency:go-offline
-    COPY src ./src
-    CMD ["./mvnw", "spring-boot:run"]
-    ```
-
-### Build the container image
-
- 1. Execute the following command to build the Docker image:
-
-    ```console
-    $ docker build -t spring-helloworld .
-    ```
-
- 2. Check the size of the Docker image by using the `docker images` command:
-
-    ```console
-    $ docker images
-    ```
-
-    Doing so will produce output like the following:
-
-    ```console
-    REPOSITORY          TAG       IMAGE ID       CREATED          SIZE
-    spring-helloworld   latest    ff708d5ee194   3 minutes ago    880MB
-    ```
-
-    This output shows that your image is 880MB in size. It contains the full JDK, Maven toolchain, and more. In production, you don’t need that in your final image.
-
-### Run the Spring Boot application
-
-1. Now that you have an image built, it's time to run the container.
-
-    ```console
-    $ docker run -p 8080:8080 spring-helloworld
-    ```
-
-    You'll then see output similar to the following in the container log:
-
-    ```plaintext
-    [INFO] --- spring-boot:3.3.4:run (default-cli) @ spring-boot-docker ---
-    [INFO] Attaching agents: []
-
-         .   ____          _            __ _ _
-        /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-       ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-        \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-         '  |____| .__|_| |_|_| |_\__, | / / / /
-        =========|_|==============|___/=/_/_/_/
-
-        :: Spring Boot ::                (v3.3.4)
-
-    2024-09-29T23:54:07.157Z  INFO 159 --- [spring-boot-docker] [           main]
-    c.e.s.SpringBootDockerApplication        : Starting SpringBootDockerApplication using Java
-    21.0.2 with PID 159 (/app/target/classes started by root in /app)
-     ….
-     ```
-
-2. Access your “Hello World” page through your web browser at [http://localhost:8080](http://localhost:8080), or via this curl command:
-
-    ```console
-    $ curl localhost:8080
-    Hello World
-    ```
-
-### Use multi-stage builds
-
-1. Consider the following Dockerfile:
-
-    ```dockerfile
-    FROM eclipse-temurin:21.0.2_13-jdk-jammy AS builder
-    WORKDIR /opt/app
-    COPY .mvn/ .mvn
-    COPY mvnw pom.xml ./
-    RUN ./mvnw dependency:go-offline
-    COPY ./src ./src
-    RUN ./mvnw clean install
-
-    FROM eclipse-temurin:21.0.2_13-jre-jammy AS final
-    WORKDIR /opt/app
-    EXPOSE 8080
-    COPY --from=builder /opt/app/target/*.jar /opt/app/*.jar
-    ENTRYPOINT ["java", "-jar", "/opt/app/*.jar"]
-    ```
-
-    Notice that this Dockerfile has been split into two stages.
-
-    - The first stage remains the same as the previous Dockerfile, providing a Java Development Kit (JDK) environment for building the application. This stage is given the name of builder.
-
-    - The second stage is a new stage named `final`. It uses a slimmer `eclipse-temurin:21.0.2_13-jre-jammy` image, containing just the Java Runtime Environment (JRE) needed to run the application. This image provides a Java Runtime Environment (JRE) which is enough for running the compiled application (JAR file).
-
-   > For production use, it's highly recommended that you produce a custom JRE-like runtime using jlink. JRE images are available for all versions of Eclipse Temurin, but `jlink` allows you to create a minimal runtime containing only the necessary Java modules for your application. This can significantly reduce the size and improve the security of your final image. [Refer to this page](https://hub.docker.com/_/eclipse-temurin) for more information.
-
-   With multi-stage builds, a Docker build uses one base image for compilation, packaging, and unit tests and then a separate image for the application runtime. As a result, the final image is smaller in size since it doesn’t contain any development or debugging tools. By separating the build environment from the final runtime environment, you can significantly reduce the image size and increase the security of your final images.
-
-2. Now, rebuild your image and run your ready-to-use production build.
-
-    ```console
-    $ docker build -t spring-helloworld-builder .
-    ```
-
-    This command builds a Docker image named `spring-helloworld-builder` using the final stage from your `Dockerfile` file located in the current directory.
-
-     > [!NOTE]
-     >
-     > In your multi-stage Dockerfile, the final stage (final) is the default target for building. This means that if you don't explicitly specify a target stage using the `--target` flag in the `docker build` command, Docker will automatically build the last stage by default. You could use `docker build -t spring-helloworld-builder --target builder .` to build only the builder stage with the JDK environment.
-
-3. Look at the image size difference by using the `docker images` command:
-
-    ```console
-    $ docker images
-    ```
-
-    You'll get output similar to the following:
-
-    ```console
-    spring-helloworld-builder latest    c5c76cb815c0   24 minutes ago      428MB
-    spring-helloworld         latest    ff708d5ee194   About an hour ago   880MB
-    ```
-
-    Your final image is just 428 MB, compared to the original build size of 880 MB.
-
-    By optimizing each stage and only including what's necessary, you were able to significantly reduce the overall image size while still achieving the same functionality. This not only improves performance but also makes your Docker images more lightweight, more secure, and easier to manage.
-
-## Additional resources
-
-* [Multi-stage builds](/build/building/multi-stage/)
-* [Dockerfile best practices](/develop/develop-images/dockerfile_best-practices/)
-* [Base images](/build/building/base-images/)
+### Construa a imagem do contêiner
+
+1. Execute o seguinte comando para criar a imagem Docker:
+
+   ```console
+   $ docker build -t spring-helloworld .
+   ```
+
+2. Verifique o tamanho da imagem Docker usando o comando `docker images`:
+
+   ```console
+   $ docker images
+   ```
+
+   Ao fazer isso, você verá uma saída semelhante a esta:
+
+   ```console
+   REPOSITORY          TAG       IMAGE ID       CREATED          SIZE
+   spring-helloworld   latest    ff708d5ee194   3 minutes ago    880MB
+   ```
+
+   Essa saída mostra que sua imagem tem 880 MB.
+   Ela contém o JDK completo, o conjunto de ferramentas Maven e outros recursos.
+   Em produção, você não precisa disso na sua imagem final.
+
+### Execute a aplicação Spring Boot
+
+1. Agora que você criou uma imagem, é hora de executar o contêiner.
+
+   ```console
+   $ docker run -p 8080:8080 spring-helloworld
+   ```
+
+   Você verá uma saída semelhante à seguinte no log do contêiner:
+
+   ```plaintext
+   [INFO] --- spring-boot:3.3.4:run (default-cli) @ spring-boot-docker ---
+   [INFO] Attaching agents: []
+
+        .   ____          _            __ _ _
+       /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+      ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+       \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+        '  |____| .__|_| |_|_| |_\__, | / / / /
+       =========|_|==============|___/=/_/_/_/
+
+       :: Spring Boot ::                (v3.3.4)
+
+   2024-09-29T23:54:07.157Z  INFO 159 --- [spring-boot-docker] [           main]
+   c.e.s.SpringBootDockerApplication        : Starting SpringBootDockerApplication using Java
+   21.0.2 with PID 159 (/app/target/classes started by root in /app)
+   ….
+   ```
+
+2. Acesse sua página “Olá, Mundo!” através do seu navegador em
+   [http://localhost:8080](http://localhost:8080), ou através deste comando
+   curl:
+
+   ```console
+   $ curl localhost:8080
+   Olá, Mundo!
+   ```
+
+### Use construções multiestágio
+
+1. Considere o seguinte Dockerfile:
+
+   ```dockerfile
+   FROM eclipse-temurin:21.0.8_9-jdk-jammy AS builder
+   WORKDIR /opt/app
+   COPY .mvn/ .mvn
+   COPY mvnw pom.xml ./
+   RUN ./mvnw dependency:go-offline
+   COPY ./src ./src
+   RUN ./mvnw clean install
+
+   FROM eclipse-temurin:21.0.8_9-jre-jammy AS final
+   WORKDIR /opt/app
+   EXPOSE 8080
+   COPY --from=builder /opt/app/target/*.jar /opt/app/*.jar
+   ENTRYPOINT ["java", "-jar", "/opt/app/*.jar"]
+   ```
+
+   Observe que este Dockerfile foi dividido em duas etapas.
+
+   - A primeira etapa permanece a mesma do Dockerfile anterior, fornecendo um
+     ambiente Java Development Kit (JDK) para a construção da aplicação.
+     Esta etapa recebeu o nome de `builder`.
+
+   - A segunda etapa é uma nova etapa chamada `final`.
+     Ela utiliza uma imagem mais enxuta `eclipse-temurin:21.0.2_13-jre-jammy`,
+     contendo apenas o Java Runtime Environment (JRE) necessário para executar a
+     aplicação.
+     Esta imagem fornece um Java Runtime Environment (JRE) suficiente para
+     executar a aplicação compilada (arquivo JAR).
+
+   > Para uso em produção, é altamente recomendável que você crie um ambiente de
+     execução personalizado semelhante ao JRE usando o jlink.
+     Imagens JRE estão disponíveis para todas as versões do Eclipse Temurin, mas
+     o jlink permite criar um ambiente de execução mínimo contendo apenas os
+     módulos Java necessários para sua aplicação.
+     Isso pode reduzir significativamente o tamanho e melhorar a segurança da
+     sua imagem final.
+     [Consulte esta página](https://hub.docker.com/_/eclipse-temurin) para obter
+     mais informações.
+
+   Com construções multiestágio, uma construção do Docker usa uma imagem base
+   para compilação, empacotamento e testes unitários e, em seguida, uma imagem
+   separada para o ambiente de execução da aplicação.
+   Como resultado, a imagem final tem um tamanho menor, pois não contém
+   ferramentas de desenvolvimento ou depuração.
+   Ao separar o ambiente de construção do ambiente de execução final, você pode
+   reduzir significativamente o tamanho da imagem e aumentar a segurança das
+   suas imagens finais.
+
+2. Agora, reconstrua sua imagem e execute sua construção de produção pronta para
+   uso.
+
+   ```console
+   $ docker build -t spring-helloworld-builder .
+   ```
+
+   Este comando cria uma imagem Docker chamada `spring-helloworld-builder`
+   usando o estágio final do seu arquivo `Dockerfile` localizado no diretório
+   atual.
+
+   > [!NOTE]
+   >
+   > Em seu Dockerfile multiestágio, o estágio final (final) é o alvo padrão
+   > para a construção.
+   > Isso significa que, se você não especificar explicitamente um estágio de
+   > destino usando a flag `--target` no comando `docker build`, o Docker
+   > construirá automaticamente o último estágio por padrão.
+   > Você pode usar
+   > `docker build -t spring-helloworld-builder --target builder .` para
+   > construir apenas o estágio builder com o ambiente JDK.
+
+3. Observe a diferença no tamanho da imagem usando o comando `docker images`:
+
+   ```console
+   $ docker images
+   ```
+
+   Você verá uma saída semelhante a esta:
+
+   ```console
+   spring-helloworld-builder latest    c5c76cb815c0   24 minutes ago      428MB
+   spring-helloworld         latest    ff708d5ee194   About an hour ago   880MB
+   ```
+
+   Sua imagem final tem apenas 428 MB, em comparação com o tamanho original de
+   880 MB.
+
+   Ao otimizar cada etapa e incluir apenas o necessário, você conseguiu reduzir
+   significativamente o tamanho total da imagem, mantendo a mesma
+   funcionalidade.
+   Isso não só melhora o desempenho, como também torna suas imagens Docker mais
+   leves, seguras e fáceis de gerenciar.
+
+## Recursos adicionais
+
+* [Construções multiestágio](/build/building/multi-stage/)
+* [Melhores práticas para o Dockerfile](/develop/develop-images/dockerfile_best-practices/)
+* [Imagens base](/build/building/base-images/)
 * [Spring Boot Docker](https://spring.io/guides/topicals/spring-boot-docker)
-
