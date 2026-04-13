@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/debian.md
-revision: 13789183d347434a3d1950444dc509c12ddf5db6
+revision: dd8720dadac6c21c8ff52c36f58cec0740b2d50e
 status: ready
 
 description: >-
@@ -148,6 +148,7 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
    URIs: {{% param "download-url-base" %}}
    Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
    Components: stable
+   Architectures: $(dpkg --print-architecture)
    Signed-By: /etc/apt/keyrings/docker.asc
    EOF
 
