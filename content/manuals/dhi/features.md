@@ -10,7 +10,7 @@
 # https://github.com/docker/docs/blob/-/LICENSE
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/features.md
-revision: f6c676ec7448e07f39a37bd1c12c8a42705209bd
+revision: 29752b98cea2e3bad6b2641ab0eb5cb07d676fb6
 status: ready
 
 title: Recursos das Imagens Docker Reforçadas
@@ -168,6 +168,9 @@ Para uma comparação detalhada, consulte a
 - Correção contínua: Atualizações de segurança regulares com garantia de SLA.
 - Suporte corporativo: Acesso ao time de suporte do Docker para aplicações de
   missão crítica.
+
+Para obter detalhes completos, consulte o
+[Support Service Level Agreement](https://docs.docker.com/go/dhi-sla/).
 
 ### Variantes de conformidade {tier="DHI Select e DHI Enterprise"}
 
