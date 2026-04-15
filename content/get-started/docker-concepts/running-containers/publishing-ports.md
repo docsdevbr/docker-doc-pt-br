@@ -10,55 +10,88 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Publishing and exposing ports
-keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you the significance of publishing and exposing ports in Docker
+source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/publishing-ports.md
+revision: b1256d572f75131b9feb85c30fb1c25f9813dcb5
+status: ready
+
+title: Publicando e expondo portas
+keywords: conceitos, construção, imagens, contêiner, docker desktop
+description: >-
+  Esta página conceitual ensinará a importância de publicar e expor portas no
+  Docker.
 weight: 1
 aliases:
  - /guides/docker-concepts/running-containers/publishing-ports/
 ---
+
 {{< youtube-embed 9JnqOmJ96ds >}}
 
-## Explanation
+## Explicação
 
-If you've been following the guides so far, you understand that containers provide isolated processes for each component of your application. Each component - a React frontend, a Python API, and a Postgres database - runs in its own sandbox environment, completely isolated from everything else on your host machine. This isolation is great for security and managing dependencies, but it also means you can’t access them directly. For example, you can’t access the web app in your browser.
+Se você seguiu os guias até aqui, já deve ter entendido que os contêineres
+fornecem processos isolados para cada componente da sua aplicação.
+Cada componente - um frontend React, uma API Python e um banco de dados Postgres
+\- é executado em seu próprio ambiente isolado, completamente livre de tudo o
+\- mais na sua máquina host.
+Esse isolamento é ótimo para segurança e gerenciamento de dependências, mas
+também significa que você não pode acessá-los diretamente.
+Por exemplo, você não pode acessar a aplicação web no seu navegador.
 
-That’s where port publishing comes in.
+É aí que entra a publicação de portas.
 
-### Publishing ports
+### Publicando portas
 
-Publishing a port provides the ability to break through a little bit of networking isolation by setting up a forwarding rule. As an example, you can indicate that requests on your host’s port `8080` should be forwarded to the container’s port `80`. Publishing ports happens during container creation using the `-p` (or `--publish`) flag with `docker run`. The syntax is:
+Publicar uma porta permite quebrar um pouco o isolamento da rede, configurando
+uma regra de encaminhamento.
+Por exemplo, você pode indicar que as requisições na porta `8080` do seu host
+devem ser encaminhadas para a porta `80` do contêiner.
+A publicação de portas ocorre durante a criação do contêiner usando a flag `-p`
+(ou `--publish`) com `docker run`.
+A sintaxe é:
 
 ```console
-$ docker run -d -p HOST_PORT:CONTAINER_PORT nginx
+$ docker run -d -p PORTA_DO_HOST:PORTA_DO_CONTÊINER nginx
 ```
 
-- `HOST_PORT`: The port number on your host machine where you want to receive traffic
-- `CONTAINER_PORT`: The port number within the container that's listening for connections
+- `PORTA_DO_HOST`: O número da porta na sua máquina host onde você deseja
+  receber tráfego.
+- `PORTA_DO_CONTÊINER`: O número da porta dentro do contêiner que está escutando
+  conexões.
 
-For example, to publish the container's port `80` to host port `8080`:
+Por exemplo, para publicar a porta `80` do contêiner na porta `8080` do host:
 
 ```console
 $ docker run -d -p 8080:80 nginx
 ```
 
-Now, any traffic sent to port `8080` on your host machine will be forwarded to port `80` within the container.
+Agora, qualquer tráfego enviado para a porta `8080` na sua máquina host será
+encaminhado para a porta `80` dentro do contêiner.
 
 > [!IMPORTANT]
 >
-> When a port is published, it's published to all network interfaces by default. This means any traffic that reaches your machine can access the published application. Be mindful of publishing databases or any sensitive information. [Learn more about published ports here](/engine/network/#published-ports).
+> Quando uma porta é publicada, ela é publicada em todas as interfaces de rede
+> por padrão.
+> Isso significa que qualquer tráfego que chegue à sua máquina poderá acessar a
+> aplicação publicada.
+> Tenha cuidado ao publicar bancos de dados ou qualquer informação sensível.
+> [Saiba mais sobre portas publicadas aqui](/engine/network/#published-ports).
 
-### Publishing to ephemeral ports
+### Publicando em portas efêmeras
 
-At times, you may want to simply publish the port but don’t care which host port is used. In these cases, you can let Docker pick the port for you. To do so, simply omit the `HOST_PORT` configuration.
+Às vezes, você pode simplesmente querer publicar a porta, mas não se importa com
+qual porta do host será usada.
+Nesses casos, você pode deixar o Docker escolher a porta para você.
+Para fazer isso, basta omitir a configuração `PORTA_DO_HOST`.
 
-For example, the following command will publish the container’s port `80` onto an ephemeral port on the host:
+Por exemplo, o comando a seguir publicará a porta `80` do contêiner em uma porta
+efêmera no host:
 
 ```console
 $ docker run -p 80 nginx
 ```
 
-Once the container is running, using `docker ps` will show you the port that was chosen:
+Assim que o contêiner estiver em execução, o comando `docker ps` mostrará a
+porta escolhida:
 
 ```console
 docker ps
@@ -66,78 +99,99 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 a527355c9c53   nginx         "/docker-entrypoint.…"   4 seconds ago    Up 3 seconds    0.0.0.0:54772->80/tcp    romantic_williamson
 ```
 
-In this example, the app is exposed on the host at port `54772`.
+Neste exemplo, a aplicação é exposta no host na porta `54772`.
 
-### Publishing all ports
+### Publicando todas as portas
 
-When creating a container image, the `EXPOSE` instruction is used to indicate the packaged application will use the specified port. These ports aren't published by default.
+Ao criar uma imagem de contêiner, a instrução `EXPOSE` é usada para indicar que
+a aplicação empacotada usará a porta especificada.
+Essas portas não são publicadas por padrão.
 
-With the `-P` or `--publish-all` flag, you can automatically publish all exposed ports to ephemeral ports. This is quite useful when you’re trying to avoid port conflicts in development or testing environments.
+Com a flag `-P` ou `--publish-all`, você pode publicar automaticamente todas as
+portas expostas em portas efêmeras.
+Isso é bastante útil quando você está tentando evitar conflitos de portas em
+ambientes de desenvolvimento ou teste.
 
-For example, the following command will publish all of the exposed ports configured by the image:
+Por exemplo, o comando a seguir publicará todas as portas expostas configuradas
+pela imagem:
 
 ```console
 $ docker run -P nginx
 ```
 
-## Try it out
+## Experimente
 
-In this hands-on guide, you'll learn how to publish container ports using both the CLI and Docker Compose for deploying a web application.
+Neste guia prático, você aprenderá como publicar portas de contêineres usando a
+CLI e o Docker Compose para implantar uma aplicação web.
 
-### Use the Docker CLI
+### Usando a CLI do Docker
 
-In this step, you will run a container and publish its port using the Docker CLI.
+Nesta etapa, você executará um contêiner e publicará sua porta usando a CLI do
+Docker.
 
-1. [Download and install](/get-started/get-docker/) Docker Desktop.
+1. [Baixe e instale](/get-started/get-docker/) o Docker Desktop.
 
-2. In a terminal, run the following command to start a new container:
+2. Em um terminal, execute o seguinte comando para iniciar um novo contêiner:
 
-    ```console
-    $ docker run -d -p 8080:80 docker/welcome-to-docker
-    ```
+   ```console
+   $ docker run -d -p 8080:80 docker/welcome-to-docker
+   ```
 
-    The first `8080` refers to the host port. This is the port on your local machine that will be used to access the application running inside the container. The second `80` refers to the container port. This is the port that the application inside the container listens on for incoming connections. Hence, the command binds to port `8080` of the host to port `80` on the container system.
+   O primeiro `8080` refere-se à porta do host.
+   Esta é a porta na sua máquina local que será usada para acessar a aplicação
+   em execução dentro do contêiner.
+   O segundo `80` refere-se à porta do contêiner.
+   Esta é a porta que a aplicação dentro do contêiner utiliza para aguardar
+   conexões de entrada.
+   Portanto, o comando vincula a porta `8080` do host à porta `80` do sistema do
+   contêiner.
 
-3. Verify the published port by going to the **Containers** view of the Docker Desktop Dashboard.
+3. Verifique a porta publicada acessando a visualização **Containers** do painel
+   do Docker Desktop.
 
-   ![A screenshot of Docker Desktop Dashboard showing the published port](images/published-ports.webp?w=5000&border=true)
+   ![Uma captura de tela do painel do Docker Desktop mostrando a porta publicada](images/published-ports.webp?w=5000&border=true)
 
-4. Open the website by either selecting the link in the **Port(s)** column of your container or visiting [http://localhost:8080](http://localhost:8080) in your browser.
+4. Abra o site selecionando o link na coluna **Port(s)** do seu contêiner ou
+   acessando [http://localhost:8080](http://localhost:8080) no seu navegador.
 
-   ![A screenshot of the landing page of the Nginx web server running in a container](/get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
+   ![Uma captura de tela da página inicial do servidor web Nginx em execução em um contêiner](/get-started/docker-concepts/the-basics/images/access-the-frontend.webp?border=true)
 
-### Use Docker Compose
+### Use o Docker Compose
 
-This example will launch the same application using Docker Compose:
+Este exemplo executará a mesma aplicação usando o Docker Compose:
 
-1. Create a new directory and inside that directory, create a `compose.yaml` file with the following contents:
+1. Crie um novo diretório e, dentro dele, crie um arquivo `compose.yaml` com o
+   seguinte conteúdo:
 
-    ```yaml
-    services:
-      app:
-        image: docker/welcome-to-docker
-        ports:
-          - 8080:80
-    ```
+   ```yaml
+   services:
+     app:
+       image: docker/welcome-to-docker
+       ports:
+         - 8080:80
+   ```
 
-    The `ports` configuration accepts a few different forms of syntax for the port definition. In this case, you’re using the same `HOST_PORT:CONTAINER_PORT` used in the `docker run` command.
+   A configuração `ports` aceita algumas sintaxes diferentes para a definição da
+   porta.
+   Neste caso, você está usando a mesma sintaxe
+   `PORTA_DO_HOST:PORTA_DO_CONTÊINER` usada no comando `docker run`.
 
-2. Open a terminal and navigate to the directory you created in the previous step.
+2. Abra um terminal e navegue até o diretório que você criou no passo anterior.
 
-3. Use the `docker compose up` command to start the application.
+3. Use o comando `docker compose up` para iniciar a aplicação.
 
-4. Open your browser to [http://localhost:8080](http://localhost:8080).
+4. Abra seu navegador e acesse [http://localhost:8080](http://localhost:8080).
 
-## Additional resources
+## Recursos adicionais
 
-If you’d like to dive in deeper on this topic, be sure to check out the following resources:
+Se você quiser se aprofundar neste tópico, confira os seguintes recursos:
 
-* [`docker container port` CLI reference](/reference/cli/docker/container/port/)
-* [Published ports](/engine/network/#published-ports)
+- [Referência da CLI do `docker container port`](/reference/cli/docker/container/port/)
+- [Portas publicadas](/engine/network/#published-ports)
 
-## Next steps
+## Próximos passos
 
-Now that you understand how to publish and expose ports, you're ready to learn how to override the container defaults using the `docker run` command.
+Agora que você entende como publicar e expor portas, pode aprender como
+sobrescrever as configurações padrão do contêiner usando o comando `docker run`.
 
-{{< button text="Overriding container defaults" url="overriding-container-defaults" >}}
-
+{{< button text="Sobrescrevendo as configurações padrão do contêiner" url="overriding-container-defaults" >}}
