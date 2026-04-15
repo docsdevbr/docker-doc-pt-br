@@ -10,175 +10,231 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Persisting container data
+source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/persisting-container-data.md
+revision: eaff43affd5b3bdedbbc65047bc41a58237b4f29
+status: ready
+
+title: Persistindo dados do contêiner
 weight: 3
-keywords: concepts, build, images, container, docker desktop
-description: This concept page will teach you the significance of data persistence in Docker
+keywords: conceitos, construção, imagens, contêiner, docker desktop
+description: >-
+  Esta página conceitual ensinará a importância da persistência de dados no
+  Docker.
 aliases:
  - /guides/walkthroughs/persist-data/
  - /guides/docker-concepts/running-containers/persisting-container-data/
 ---
+
 {{< youtube-embed 10_2BjqB_Ls >}}
 
-## Explanation
+## Explicação
 
-When a container starts, it uses the files and configuration provided by the image. Each container is able to create, modify, and delete files and does so without affecting any other containers. When the container is deleted, these file changes are also deleted.
+Quando um contêiner é iniciado, ele utiliza os arquivos e a configuração
+fornecidos pela imagem.
+Cada contêiner pode criar, modificar e excluir arquivos sem afetar outros
+contêineres.
+Quando o contêiner é excluído, essas alterações nos arquivos também são
+excluídas.
 
-While this ephemeral nature of containers is great, it poses a challenge when you want to persist the data. For example, if you restart a database container, you might not want to start with an empty database. So, how do you persist files?
+Embora essa natureza efêmera dos contêineres seja excelente, ela representa um
+desafio quando se deseja persistir os dados.
+Por exemplo, ao reiniciar um contêiner de banco de dados, você provavelmente não
+deseja começar com um banco de dados vazio.
+Então, como persistir os arquivos?
 
-### Container volumes
+### Volumes de contêiner
 
-Volumes are a storage mechanism that provide the ability to persist data beyond the lifecycle of an individual container. Think of it like providing a shortcut or symlink from inside the container to outside the container.
+Volumes são um mecanismo de armazenamento que permite persistir dados além do
+ciclo de vida de um contêiner individual.
+Pense nisso como um atalho ou link simbólico de dentro do contêiner para fora
+dele.
 
-As an example, imagine you create a volume named `log-data`.
+Por exemplo, imagine que você crie um volume chamado `log-data`.
 
 ```console
 $ docker volume create log-data
 ```
 
-When starting a container with the following command, the volume will be mounted (or attached) into the container at `/logs`:
+Ao iniciar um contêiner com o seguinte comando, o volume será montado (ou
+anexado) ao contêiner em `/logs`:
 
 ```console
 $ docker run -d -p 80:80 -v log-data:/logs docker/welcome-to-docker
 ```
 
-If the volume `log-data` doesn't exist, Docker will automatically create it for you.
+Se o volume `log-data` não existir, o Docker o criará automaticamente.
 
-When the container runs, all files it writes into the `/logs` folder will be saved in this volume, outside of the container. If you delete the container and start a new container using the same volume, the files will still be there.
+Quando o contêiner estiver em execução, todos os arquivos gravados na pasta
+`/logs` serão salvos nesse volume, fora do contêiner.
+Se você excluir o contêiner e iniciar um novo usando o mesmo volume, os arquivos
+ainda estarão lá.
 
-> **Sharing files using volumes**
+> ** Compartilhando arquivos usando volumes**
 >
-> You can attach the same volume to multiple containers to share files between containers. This might be helpful in scenarios such as log aggregation, data pipelines, or other event-driven applications.
+> Você pode anexar o mesmo volume a vários contêineres para compartilhar
+> arquivos entre eles.
+> Isso pode ser útil em cenários como agregação de logs, pipelines de dados ou
+> outras aplicações orientadas a eventos.
 
-### Managing volumes
+### Gerenciando volumes
 
-Volumes have their own lifecycle beyond that of containers and can grow quite large depending on the type of data and applications you’re using. The following commands will be helpful to manage volumes:
+Os volumes têm seu próprio ciclo de vida, diferente do dos contêineres, e podem
+crescer bastante dependendo do tipo de dados e aplicações que você estiver
+usando.
+Os comandos a seguir serão úteis para gerenciar volumes:
 
-- `docker volume ls` - list all volumes
-- `docker volume rm <volume-name-or-id>` - remove a volume (only works when the volume is not attached to any containers)
-- `docker volume prune` - remove all unused (unattached) volumes
+- `docker volume ls` - lista todos os volumes.
+- `docker volume rm <nome-ou-id-do-volume>` - remove um volume (funciona apenas
+  quando o volume não está associado a nenhum contêiner).
+- `docker volume prune` - remove todos os volumes não utilizados (não
+  associados).
 
+## Experimente
 
-## Try it out
-
-In this guide, you’ll practice creating and using volumes to persist data created by a Postgres container. When the database runs, it stores files into the `/var/lib/postgresql/data` directory. By attaching the volume here, you will be able to restart the container multiple times while keeping the data.
+Neste guia, você praticará a criação e o uso de volumes para persistir dados
+criados por um contêiner Postgres.
+Quando o banco de dados é executado, ele armazena arquivos no diretório
+`/var/lib/postgresql/data`.
+Ao associar o volume a este diretório, você poderá reiniciar o contêiner várias
+vezes, mantendo os dados.
 
 ### Use volumes
 
-1. [Download and install](/get-started/get-docker/) Docker Desktop.
+1. [Baixe e instale](/get-started/get-docker/) o Docker Desktop.
 
-2. Start a container using the [Postgres image](https://hub.docker.com/_/postgres) with the following command:
+2. Inicie um contêiner usando a
+   [imagem do Postgres](https://hub.docker.com/_/postgres) com o seguinte
+   comando:
 
-    ```console
-    $ docker run --name=db -e POSTGRES_PASSWORD=secret -d -v postgres_data:/var/lib/postgresql/data postgres
-    ```
+   ```console
+   $ docker run --name=db -e POSTGRES_PASSWORD=secret -d -v postgres_data:/var/lib/postgresql/data postgres
+   ```
 
-    This will start the database in the background, configure it with a password, and attach a volume to the directory PostgreSQL will persist the database files.
+   Isso iniciará o banco de dados em segundo plano, configurará uma senha e
+   associará um volume ao diretório onde o PostgreSQL armazenará os arquivos do
+   banco de dados.
 
-3. Connect to the database by using the following command:
+3. Conecte-se ao banco de dados usando o seguinte comando:
 
-    ```console
-    $ docker exec -ti db psql -U postgres
-    ```
+   ```console
+   $ docker exec -ti db psql -U postgres
+   ```
 
-4. In the PostgreSQL command line, run the following to create a database table and insert two records:
+4. Na linha de comando do PostgreSQL, execute o seguinte comando para criar uma
+   tabela no banco de dados e inserir dois registros:
 
-    ```text
-    CREATE TABLE tasks (
-        id SERIAL PRIMARY KEY,
-        description VARCHAR(100)
-    );
-    INSERT INTO tasks (description) VALUES ('Finish work'), ('Have fun');
-    ```
+   ```text
+   CREATE TABLE tasks (
+       id SERIAL PRIMARY KEY,
+       description VARCHAR(100)
+   );
+   INSERT INTO tasks (description) VALUES ('Finish work'), ('Have fun');
+   ```
 
-5. Verify the data is in the database by running the following in the PostgreSQL command line:
+5. Verifique se os dados estão no banco de dados executando o seguinte comando
+   na linha de comando do PostgreSQL:
 
-    ```text
-    SELECT * FROM tasks;
-    ```
+   ```text
+   SELECT * FROM tasks;
+   ```
 
-    You should get output that looks like the following:
+   Você deverá obter uma saída semelhante à seguinte:
 
-    ```text
-     id | description
-    ----+-------------
-      1 | Finish work
-      2 | Have fun
-    (2 rows)
-    ```
+   ```text
+    id | description
+   ----+-------------
+     1 | Finish work
+     2 | Have fun
+   (2 rows)
+   ```
 
-6. Exit out of the PostgreSQL shell by running the following command:
+6. Saia do shell do PostgreSQL executando o seguinte comando:
 
-    ```console
-    \q
-    ```
+   ```console
+   \q
+   ```
 
-7. Stop and remove the database container. Remember that, even though the container has been deleted, the data is persisted in the `postgres_data` volume.
+7. Pare e remova o contêiner do banco de dados.
+   Lembre-se de que, mesmo que o contêiner tenha sido excluído, os dados são
+   persistidos no volume `postgres_data`.
 
-    ```console
-    $ docker stop db
-    $ docker rm db
-    ```
+   ```console
+   $ docker stop db
+   $ docker rm db
+   ```
 
-8. Start a new container by running the following command, attaching the same volume with the persisted data:
+8. Inicie um novo contêiner executando o seguinte comando, anexando o mesmo
+   volume com os dados persistidos:
 
-    ```console
-    $ docker run --name=new-db -d -v postgres_data:/var/lib/postgresql/data postgres
-    ```
+   ```console
+   $ docker run --name=new-db -d -v postgres_data:/var/lib/postgresql/data postgres
+   ```
 
-    You might have noticed that the `POSTGRES_PASSWORD` environment variable has been omitted. That’s because that variable is only used when bootstrapping a new database.
+   Você deve ter notado que a variável de ambiente `POSTGRES_PASSWORD` foi
+   omitida.
+   Isso ocorre porque essa variável é usada apenas ao inicializar um novo banco
+   de dados.
 
-9. Verify the database still has the records by running the following command:
+9. Verifique se o banco de dados ainda contém os registros executando o seguinte
+   comando:
 
-    ```console
-    $ docker exec -ti new-db psql -U postgres -c "SELECT * FROM tasks"
-    ```
+   ```console
+   $ docker exec -ti new-db psql -U postgres -c "SELECT * FROM tasks"
+   ```
 
-### View volume contents
+### Visualize o conteúdo de um volume
 
-The Docker Desktop Dashboard provides the ability to view the contents of any volume, as well as the ability to export, import, and clone volumes.
+O painel do Docker Desktop permite visualizar o conteúdo de qualquer volume,
+além de exportar, importar e clonar volumes.
 
-1. Open the Docker Desktop Dashboard and navigate to the **Volumes** view. In this view, you should see the **postgres_data** volume.
+1. Abra o painel do Docker Desktop e navegue até a visualização **Volumes**.
+   Nessa visualização, você verá o volume **postgres_data**.
 
-2. Select the **postgres_data** volume’s name.
+2. Selecione o nome do volume **postgres_data**.
 
-3. The **Data** tab shows the contents of the volume and provides the ability to navigate the files. Double-clicking on a file will let you see the contents and make changes.
+3. A guia **Data** exibe o conteúdo do volume e permite navegar pelos arquivos.
+   Clique duas vezes em um arquivo permite visualizar o conteúdo e fazer
+   alterações.
 
-4. Right-click on any file to save it or delete it.
+4. Clique com o botão direito em qualquer arquivo para salvá-lo ou excluí-lo.
 
-### Remove volumes
+### Remova volumes
 
-Before removing a volume, it must not be attached to any containers. If you haven’t removed the previous container, do so with the following command (the `-f` will stop the container first and then remove it):
+Antes de remover um volume, ele não deve estar associado a nenhum contêiner.
+Se você ainda não removeu o contêiner anterior, faça isso com o seguinte comando
+(a flag `-f` interromperá o contêiner primeiro e, em seguida, o removerá):
 
 ```console
 $ docker rm -f new-db
 ```
 
-There are a few methods to remove volumes, including the following:
+Existem alguns métodos para remover volumes, incluindo os seguintes:
 
-- Select the **Delete Volume** option on a volume in the Docker Desktop Dashboard.
-- Use the `docker volume rm` command:
+- Selecione a opção **Delete Volume** em um volume no painel do Docker Desktop.
+- Use o comando `docker volume rm`:
 
-    ```console
-    $ docker volume rm postgres_data
-    ```
-- Use the `docker volume prune` command to remove all unused volumes:
+  ```console
+  $ docker volume rm postgres_data
+  ```
 
-    ```console
-    $ docker volume prune
-    ```
+- Use o comando `docker volume prune` para remover todos os volumes não
+  utilizados:
 
-## Additional resources
+  ```console
+  $ docker volume prune
+  ```
 
-The following resources will help you learn more about volumes:
+## Recursos adicionais
 
-- [Manage data in Docker](/engine/storage)
+Os seguintes recursos ajudarão você a aprender mais sobre volumes:
+
+- [Gerencie dados no Docker](/engine/storage)
 - [Volumes](/engine/storage/volumes)
-- [Volume mounts](/engine/containers/run/#volume-mounts)
+- [Montagens de volume](/engine/containers/run/#volume-mounts)
 
-## Next steps
+## Próximos passos
 
-Now that you have learned about persisting container data, it’s time to learn about sharing local files with containers.
+Agora que você aprendeu sobre como persistir dados de contêineres, é hora de
+aprender sobre como compartilhar arquivos locais com contêineres.
 
-{{< button text="Sharing local files with containers" url="sharing-local-files" >}}
-
+{{< button text="Compartilhando arquivos locais com contêineres" url="sharing-local-files" >}}
