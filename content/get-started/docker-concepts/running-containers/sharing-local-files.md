@@ -10,44 +10,97 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Sharing local files with containers
+title: Compartilhando arquivos locais com contêineres
 weight: 4
-keywords: concepts, images, container, docker desktop
-description: This concept page will teach you the various storage options available in Docker and their common usage.
+keywords: conceitos, imagens, contêiner, docker desktop
+description: >-
+  Esta página conceitual ensinará você sobre as várias opções de armazenamento
+  disponíveis no Docker e seus usos comuns.
 aliases:
  - /guides/docker-concepts/running-containers/sharing-local-files/
 ---
+
 {{< youtube-embed 2dAzsVg3Dek >}}
 
-## Explanation
+## Explicação
 
-Each container has everything it needs to function with no reliance on any pre-installed dependencies on the host machine. Since containers run in isolation, they have minimal influence on the host and other containers. This isolation has a major benefit: containers minimize conflicts with the host system and other containers. However, this isolation also means containers can't directly access data on the host machine by default.
+Cada contêiner possui tudo o que precisa para funcionar, sem depender de nenhuma
+dependência pré-instalada na máquina host.
+Como os contêineres são executados isoladamente, eles têm influência mínima
+sobre o host e outros contêineres.
+Esse isolamento traz um grande benefício: os contêineres minimizam conflitos com
+o sistema host e outros contêineres.
+No entanto, esse isolamento também significa que, por padrão, os contêineres não
+podem acessar diretamente os dados na máquina host.
 
-Consider a scenario where you have a web application container that requires access to configuration settings stored in a file on your host system. This file may contain sensitive data such as database credentials or API keys. Storing such sensitive information directly within the container image poses security risks, especially during image sharing. To address this challenge, Docker offers storage options that bridge the gap between container isolation and your host machine's data.
+Considere um cenário em que você tenha um contêiner de aplicação web que precise
+acessar configurações armazenadas em um arquivo no seu sistema host.
+Esse arquivo pode conter dados confidenciais, como credenciais de banco de dados
+ou chaves de API.
+Armazenar essas informações confidenciais diretamente na imagem do contêiner
+representa riscos de segurança, especialmente durante o compartilhamento de
+imagens.
+Para solucionar esse desafio, o Docker oferece opções de armazenamento que
+preenchem a lacuna entre o isolamento do contêiner e os dados da sua máquina
+host.
 
-Docker offers two primary storage options for persisting data and sharing files between the host machine and containers: volumes and bind mounts.
+O Docker oferece duas opções principais de armazenamento para persistir dados e
+compartilhar arquivos entre a máquina host e os contêineres: volumes e bind
+mounts (montagens de diretórios).
 
-### Volume versus bind mounts
+### Volumes versus bind mounts
 
-If you want to ensure that data generated or modified inside the container persists even after the container stops running, you would opt for a volume. See [Persisting container data](/get-started/docker-concepts/running-containers/persisting-container-data/) to learn more about volumes and their use cases.
+Se você deseja garantir que os dados gerados ou modificados dentro do contêiner
+persistam mesmo após a interrupção da execução, você deve optar por um volume.
+Consulte
+[Persistindo dados do contêiner](/get-started/docker-concepts/running-containers/persisting-container-data/)
+para saber mais sobre volumes e seus casos de uso.
 
-If you have specific files or directories on your host system that you want to directly share with your container, like configuration files or development code, then you would use a bind mount. It's like opening a direct portal between your host and container for sharing. Bind mounts are ideal for development environments where real-time file access and sharing between the host and container are crucial.
+Se você tiver arquivos ou diretórios específicos em seu sistema host que deseja
+compartilhar diretamente com seu contêiner, como arquivos de configuração ou
+código de desenvolvimento, você deve usar uma montagem de diretórios.
+É como abrir um portal direto entre seu host e o contêiner para
+compartilhamento.
+As montagens de diretórios são ideais para ambientes de desenvolvimento onde o
+acesso e o compartilhamento de arquivos em tempo real entre o host e o contêiner
+são cruciais.
 
-### Sharing files between a host and container
+### Compartilhando arquivos entre um host e um contêiner
 
-Both `-v` (or `--volume`) and `--mount` flags used with the `docker run` command let you share files or directories between your local machine (host) and a Docker container. However, there are some key differences in their behavior and usage.
+As opções `-v` (ou `--volume`) e `--mount` usadas com o comando `docker run`
+permitem compartilhar arquivos ou diretórios entre sua máquina local (host) e um
+contêiner Docker.
+No entanto, existem algumas diferenças importantes em seu comportamento e uso.
 
-The `-v` flag is simpler and more convenient for basic volume or bind mount operations. If the host location doesn’t exist when using `-v` or `--volume`, a directory will be automatically created.
+A opção `-v` é mais simples e conveniente para operações básicas de volumes ou
+bind mounts.
+Se o local no host não existir ao usar `-v` ou `--volume`, um diretório será
+criado automaticamente.
 
-Imagine you're a developer working on a project. You have a source directory on your development machine where your code resides. When you compile or build your code, the generated artifacts (compiled code, executables, images, etc.) are saved in a separate subdirectory within your source directory. In the following examples, this subdirectory is `/HOST/PATH`. Now you want these build artifacts to be accessible within a Docker container running your application. Additionally, you want the container to automatically access the latest build artifacts whenever you rebuild your code.
+Imagine que você é uma pessoa desenvolvedora trabalhando em um projeto.
+Você tem um diretório de origem em sua máquina de desenvolvimento onde seu
+código reside.
+Quando você compila ou constrói seu código, os artefatos gerados (código
+compilado, executáveis, imagens, etc.) são salvos em um subdiretório separado
+dentro do seu diretório de origem.
+Nos exemplos a seguir, este subdiretório é `/HOST/PATH`.
+Agora você deseja que esses artefatos de construção sejam acessíveis em um
+contêiner Docker executando sua aplicação.
+Além disso, você deseja que o contêiner acesse automaticamente os artefatos de
+compilação mais recentes sempre que recompilar seu código.
 
-Here's a way to use `docker run` to start a container using a bind mount and map it to the container file location.
+Veja como usar o `docker run` para iniciar um contêiner usando um bind mount e
+mapeá-lo para o local do arquivo do contêiner.
 
 ```console
 $ docker run -v /HOST/PATH:/CONTAINER/PATH -it nginx
 ```
 
-The `--mount` flag offers more advanced features and granular control, making it suitable for complex mount scenarios or production deployments. If you use `--mount` to bind-mount a file or directory that doesn't yet exist on the Docker host, the `docker run` command doesn't automatically create it for you but generates an error.
+A flag `--mount` oferece recursos mais avançados e controle granular, tornando-a
+adequada para cenários de montagem complexos ou implantações em produção.
+Se você usar `--mount` para montar um arquivo ou diretório que ainda não existe
+no host do Docker, o comando `docker run` não o criará automaticamente, mas
+gerará um erro.
 
 ```console
 $ docker run --mount type=bind,source=/HOST/PATH,target=/CONTAINER/PATH,readonly nginx
@@ -55,88 +108,123 @@ $ docker run --mount type=bind,source=/HOST/PATH,target=/CONTAINER/PATH,readonly
 
 > [!NOTE]
 >
-> Docker recommends using the `--mount` syntax instead of `-v`. It provides better control over the mounting process and avoids potential issues with missing directories.
+> O Docker recomenda o uso da sintaxe `--mount` em vez de `-v`.
+> Ela oferece melhor controle sobre o processo de montagem e evita possíveis
+> problemas com diretórios ausentes.
 
-### File permissions for Docker access to host files
+### Permissões de arquivos para acesso do Docker aos arquivos do host
 
-When using bind mounts, it's crucial to ensure that Docker has the necessary permissions to access the host directory. To grant read/write access, you can use the `:ro` flag (read-only) or `:rw` (read-write) with the `-v` or `--mount` flag during container creation.
-For example, the following command grants read-write access permission.
+Ao usar bind mounts, é crucial garantir que o Docker tenha as permissões
+necessárias para acessar o diretório do host.
+Para conceder acesso de leitura/gravação, você pode usar a flag `:ro`
+(read-only, somente leitura) ou `:rw` (read-write, leitura e gravação) com a
+flag `-v` ou `--mount` durante a criação do contêiner.
+Por exemplo, o comando a seguir concede permissão de acesso de leitura e
+gravação.
 
 ```console
 $ docker run -v HOST-DIRECTORY:/CONTAINER-DIRECTORY:rw nginx
 ```
 
-Read-only bind mounts let the container access the mounted files on the host for reading, but it can't change or delete the files. With read-write bind mounts, containers can modify or delete mounted files, and these changes or deletions will also be reflected on the host system. Read-only bind mounts ensures that files on the host can't be accidentally modified or deleted by a container.
+Bind mounts somente leitura permitem que o contêiner acesse os arquivos montados
+no host para leitura, mas não pode alterá-los ou excluí-los.
+Com bind mounts de leitura e gravação, os contêineres podem modificar ou excluir
+arquivos montados, e essas alterações ou exclusões também serão refletidas no
+sistema host.
+Binding mounts somente leitura garantem que os arquivos no host não possam ser
+modificados ou excluídos acidentalmente por um contêiner.
 
-> **Synchronized File Share**
+> **Compartilhamento de arquivos sincronizado**
 >
-> As your codebase grows larger, traditional methods of file sharing like bind mounts may become inefficient or slow, especially in development environments where frequent access to files is necessary. [Synchronized file shares](/manuals/desktop/features/synchronized-file-sharing.md) improve bind mount performance by leveraging synchronized filesystem caches. This optimization ensures that file access between the host and virtual machine (VM) is fast and efficient.
+> À medida que sua base de código cresce, os métodos tradicionais de
+> compartilhamento de arquivos, como bind mounts, podem se tornar ineficientes
+> ou lentos, especialmente em ambientes de desenvolvimento onde o acesso
+> frequente a arquivos é necessário.
+> Os
+> [compartilhamentos de arquivos sincronizados](/manuals/desktop/features/synchronized-file-sharing.md)
+> melhoram o desempenho das montagens de diretórios, aproveitando os caches
+> sincronizados do sistema de arquivos.
+> Essa otimização garante que o acesso a arquivos entre o host e a máquina
+> virtual (VM) seja rápido e eficiente.
 
-## Try it out
+## Experimente
 
-In this hands-on guide, you’ll practice how to create and use a bind mount to share files between a host and a container.
+Neste guia prático, você aprenderá como criar e usar uma montagem de diretórios
+para compartilhar arquivos entre um host e um contêiner.
 
-### Run a container
+### Execute um contêiner
 
-1. [Download and install](/get-started/get-docker/) Docker Desktop.
+1. [Baixe e instale](/get-started/get-docker/) o Docker Desktop.
 
-2. Start a container using the [httpd](https://hub.docker.com/_/httpd) image with the following command:
+2. Inicie um contêiner usando a imagem [httpd](https://hub.docker.com/_/httpd)
+   com o seguinte comando:
 
    ```console
    $ docker run -d -p 8080:80 --name my_site httpd:2.4
    ```
 
-   This will start the `httpd` service in the background, and publish the webpage to port `8080` on the host.
+   Isso iniciará o serviço `httpd` em segundo plano e publicará a página web na
+   porta `8080` do host.
 
-3. Open the browser and access [http://localhost:8080](http://localhost:8080) or use the curl command to verify if it's working fine or not.
+3. Abra o navegador e acesse [http://localhost:8080](http://localhost:8080) ou
+   use o comando curl para verificar se está funcionando corretamente.
 
-    ```console
-    $ curl localhost:8080
-    ```
+   ```console
+   $ curl localhost:8080
+   ```
 
-### Use a bind mount
+### Use um bind mount
 
-Using a bind mount, you can map the configuration file on your host computer to a specific location within the container. In this example, you’ll see how to change the look and feel of the webpage by using bind mount:
+Usando um bind mount, você pode mapear o arquivo de configuração do seu
+computador host para um local específico dentro do contêiner.
+Neste exemplo, você verá como alterar a aparência da página da web usando um
+bind mount:
 
-1. Delete the existing container by using the Docker Desktop Dashboard:
+1. Exclua o contêiner existente usando o painel do Docker Desktop:
 
-   ![A screenshot of Docker Desktop Dashboard showing how to delete the httpd container](images/delete-httpd-container.webp?border=true)
+   ![Uma captura de tela do painel do Docker Desktop mostrando como excluir o contêiner httpd](images/delete-httpd-container.webp?border=true)
 
-2. Create a new directory called `public_html` on your host system.
+2. Crie um novo diretório chamado `public_html` no seu sistema host.
 
-    ```console
-    $ mkdir public_html
-    ```
+   ```console
+   $ mkdir public_html
+   ```
 
-3. Navigate into the newly created directory `public_html` and create a file called `index.html` with the following content. This is a basic HTML document that creates a simple webpage that welcomes you with a friendly whale.
+3. Navegue até o diretório recém-criado `public_html` e crie um arquivo chamado
+   `index.html` com o seguinte conteúdo.
+   Este é um documento HTML básico que cria uma página web simples que lhe dá as
+   boas-vindas com uma baleia amigável.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <title> My Website with a Whale & Docker!</title>
-    </head>
-    <body>
-    <h1>Whalecome!!</h1>
-    <p>Look! There's a friendly whale greeting you!</p>
-    <pre id="docker-art">
+   ```html
+   <!DOCTYPE html>
+   <html lang="pt-br">
+   <head>
+   <meta charset="UTF-8">
+   <title>Meu site com uma baleia e Docker!</title>
+   </head>
+   <body>
+   <h1>Boas vindas!!</h1>
+   <p>Look! There's a friendly whale greeting you!</p>
+   <pre id="docker-art">
        ##         .
       ## ## ##        ==
      ## ## ## ## ##    ===
-     /"""""""""""""""""\___/ ===
+    /"""""""""""""""""\___/ ===
    {                       /  ===-
-   \______ O           __/
-    \    \         __/
-     \____\_______/
+    \______ O           __/
+     \    \         __/
+      \____\_______/
 
-    Hello from Docker!
-    </pre>
-    </body>
-    </html>
-    ```
+   Olá do Docker!
+   </pre>
+   </body>
+   </html>
+   ```
 
-4. It's time to run the container. The `--mount` and `-v` examples produce the same result. You can't run them both unless you remove the `my_site` container after running the first one.
+4. Chegou a hora de executar o contêiner.
+   Os exemplos `--mount` e `-v` produzem o mesmo resultado.
+   Você não pode executá-los simultaneamente a menos que remova o contêiner
+   `my_site` após executar o primeiro.
 
    {{< tabs >}}
    {{< tab name="`-v`" >}}
@@ -156,49 +244,61 @@ Using a bind mount, you can map the configuration file on your host computer to 
    {{< /tabs >}}
 
    > [!TIP]
-   > When using the `-v` or `--mount` flag in Windows PowerShell, you need to provide the absolute path to your directory instead of just `./`. This is because PowerShell handles relative paths differently from bash (commonly used in Mac and Linux environments).
+   >
+   > Ao usar a opção `-v` ou `--mount` no Windows PowerShell, você precisa
+   > fornecer o caminho absoluto para o seu diretório em vez de apenas `./`.
+   > Isso ocorre porque o PowerShell lida com caminhos relativos de forma
+   > diferente do bash (comumente usado em ambientes Mac e Linux).
 
+   Com tudo configurado e funcionando, você poderá acessar o site via
+   [http://localhost:8080](http://localhost:8080) e encontrará uma nova página
+   web que lhe dá as boas-vindas com uma baleia amigável.
 
-   With everything now up and running, you should be able to access the site via [http://localhost:8080](http://localhost:8080) and find a new webpage that welcomes you with a friendly whale.
+### Acesse o arquivo no painel do Docker Desktop
 
-### Access the file on the Docker Desktop Dashboard
+1. Você pode visualizar os arquivos montados em um contêiner selecionando a guia
+   **Files** do contêiner e, em seguida, selecionando um arquivo dentro do
+   diretório `/usr/local/apache2/htdocs/`.
+   Depois, selecione **Open file editor**.
 
-1. You can view the mounted files inside a container by selecting the container's **Files** tab and then selecting a file inside the `/usr/local/apache2/htdocs/` directory. Then, select **Open file editor**.
+   ![Uma captura de tela do painel do Docker Desktop mostrando os arquivos montados em um contêiner](images/mounted-files.webp?border=true)
 
-   ![A screenshot of Docker Desktop Dashboard showing the mounted files inside the a container](images/mounted-files.webp?border=true)
+2. Exclua o arquivo no host e verifique se ele também foi excluído no contêiner.
+   Você verá que os arquivos não existem mais em **Files** no painel do Docker
+   Desktop.
 
-2. Delete the file on the host and verify the file is also deleted in the container. You will find that the files no longer exist under **Files** in the Docker Desktop Dashboard.
+   ![Uma captura de tela do painel do Docker Desktop mostrando os arquivos excluídos dentro de um contêiner](images/deleted-files.webp?border=true)
 
-   ![A screenshot of Docker Desktop Dashboard showing the deleted files inside the a container](images/deleted-files.webp?border=true)
+3. Recrie o arquivo HTML no sistema host e veja que ele reaparece na guia
+   **Files** em **Containers** no painel do Docker Desktop.
+   Agora você também poderá acessar o site.
 
-3. Recreate the HTML file on the host system and see that file re-appears under the **Files** tab under **Containers** on the Docker Desktop Dashboard. By now, you will be able to access the site too.
+### Pare seu contêiner
 
+O contêiner continua em execução até que você o pare.
 
-### Stop your container
+1. Acesse a visualização **Containers** no painel do Docker Desktop.
 
-The container continues to run until you stop it.
+2. Localize o contêiner que você deseja parar.
 
-1. Go to the **Containers** view in the Docker Desktop Dashboard.
+3. Selecione a ação **Delete** na coluna Actions.
 
-2. Locate the container you'd like to stop.
+![Uma captura de tela do painel do Docker Desktop mostrando como excluir o contêiner](images/delete-the-container.webp?border=true)
 
-3. Select the **Delete** action in the Actions column.
+## Recursos adicionais
 
-![A screenshot of Docker Desktop Dashboard showing how to delete the container](images/delete-the-container.webp?border=true)
+Os seguintes recursos ajudarão você a aprender mais sobre bind mounts:
 
-## Additional resources
+- [Gerencie dados no Docker](/storage/)
+- [Volumes](/storage/volumes/)
+- [Bind mounts](/storage/bind-mounts/)
+- [Executando contêineres](/reference/run/)
+- [Solucione problemas de armazenamento](/storage/troubleshooting_volume_errors/)
+- [Persistindo dados do contêiner](/get-started/docker-concepts/running-containers/persisting-container-data/)
 
-The following resources will help you learn more about bind mounts:
+## Próximos passos
 
-* [Manage data in Docker](/storage/)
-* [Volumes](/storage/volumes/)
-* [Bind mounts](/storage/bind-mounts/)
-* [Running containers](/reference/run/)
-* [Troubleshoot storage errors](/storage/troubleshooting_volume_errors/)
-* [Persisting container data](/get-started/docker-concepts/running-containers/persisting-container-data/)
+Agora que você aprendeu sobre como compartilhar arquivos locais com contêineres,
+é hora de aprender sobre aplicações multicontêineres.
 
-## Next steps
-
-Now that you have learned about sharing local files with containers, it’s time to learn about multi-container applications.
-
-{{< button text="Multi-container applications" url="Multi-container applications" >}}
+{{< button text="Aplicações multicontêineres" url="multi-container-applications" >}}
