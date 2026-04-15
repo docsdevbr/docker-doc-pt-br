@@ -10,6 +10,10 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
+source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/sharing-local-files.md
+revision: 489c7318152adb6958dfd02c3743f3c6b28279b6
+status: ready
+
 title: Compartilhando arquivos locais com contêineres
 weight: 4
 keywords: conceitos, imagens, contêiner, docker desktop
@@ -98,9 +102,9 @@ $ docker run -v /HOST/PATH:/CONTAINER/PATH -it nginx
 
 A flag `--mount` oferece recursos mais avançados e controle granular, tornando-a
 adequada para cenários de montagem complexos ou implantações em produção.
-Se você usar `--mount` para montar um arquivo ou diretório que ainda não existe
-no host do Docker, o comando `docker run` não o criará automaticamente, mas
-gerará um erro.
+Por padrão, se você usar `--mount` para montar um arquivo ou diretório que ainda
+não existe no host do Docker, o comando `docker run` não o criará
+automaticamente, mas gerará um erro.
 
 ```console
 $ docker run --mount type=bind,source=/HOST/PATH,target=/CONTAINER/PATH,readonly nginx
