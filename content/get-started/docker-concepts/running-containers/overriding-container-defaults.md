@@ -14,11 +14,11 @@ source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-
 revision: 0220ef67450476a5e2c18f481f29a3ee1b352f56
 status: ready
 
-title: Substituindo as configurações padrão do contêiner
+title: Sobrescrevendo as configurações padrão do contêiner
 weight: 2
 keywords: conceitos, construção, imagens, contêiner, docker desktop
 description: >-
-  Esta página conceitual ensinará como substituir as configurações padrão do
+  Esta página conceitual ensinará como sobrescrever as configurações padrão do
   contêiner usando o comando `docker run`.
 aliases:
  - /guides/docker-concepts/running-containers/overriding-container-defaults/
@@ -45,8 +45,9 @@ programa precisar de mais recursos para lidar com uma carga de trabalho pesada
 ou definir as variáveis de ambiente para fornecer detalhes de configuração
 específicos que o programa precisa para funcionar corretamente.
 
-O comando `docker run` oferece uma maneira poderosa de substituir esses padrões
-e personalizar o comportamento do contêiner de acordo com sua preferência.
+O comando `docker run` oferece uma maneira poderosa de sobrescrever esses
+padrões e personalizar o comportamento do contêiner de acordo com sua
+preferência.
 O comando oferece várias opções que permitem personalizar o comportamento do
 contêiner em tempo real.
 
@@ -122,7 +123,7 @@ específicas.
 
 ## Experimente
 
-Neste guia prático, você verá como usar o comando `docker run` para substituir
+Neste guia prático, você verá como usar o comando `docker run` para sobrescrever
 as configurações padrão do contêiner.
 
 1. [Baixe e instale](/get-started/get-docker/) o Docker Desktop.
@@ -199,7 +200,7 @@ personalizada.
 
    Isso iniciará o contêiner Postgres em segundo plano, mapeado para a porta
    5434 do host e conectado à rede `mynetwork`.
-   Você passou o parâmetro `--network` para substituir o padrão do contêiner,
+   Você passou o parâmetro `--network` para sobrescrever o padrão do contêiner,
    conectando-o a uma rede Docker personalizada para melhor isolamento e
    comunicação com outros contêineres.
    Você pode usar o comando `docker network inspect` para verificar se o
@@ -243,9 +244,9 @@ Aqui, ela está definida para meio núcleo de CPU (0,5), enquanto a flag
 `--memory` especifica o limite de memória para o contêiner.
 Neste caso, está definido para 512 MB.
 
-### Substitua o CMD e o ENTRYPOINT padrão no Docker Compose
+### Sobrescreva o CMD e o ENTRYPOINT padrão no Docker Compose
 
-Às vezes, pode ser necessário substituir os comandos (`CMD`) ou pontos de
+Às vezes, pode ser necessário sobrescrever os comandos (`CMD`) ou pontos de
 entrada (`ENTRYPOINT`) padrão definidos em uma imagem Docker, especialmente ao
 usar o Docker Compose.
 
@@ -294,10 +295,10 @@ usar o Docker Compose.
    > No entanto, uma senha será necessária se a conexão for feita a partir de um
    > host/contêiner diferente.
 
-### Substitua o CMD e o ENTRYPOINT padrão com `docker run`
+### Sobrescreva o CMD e o ENTRYPOINT padrão com `docker run`
 
-Você também pode substituir os padrões usando diretamente o comando `docker run`
-com o seguinte comando:
+Você também pode sobrescrever os padrões usando diretamente o comando
+`docker run` com o seguinte comando:
 
 ```console
 $ docker run -e POSTGRES_PASSWORD=secret postgres docker-entrypoint.sh -h localhost -p 5432
