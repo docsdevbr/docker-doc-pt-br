@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/_index.md
-revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
+revision: 95fff41cc2c387dc275aa6d1d40ceffbcf7bb71d
 status: ready
 
 title: Instale a Docker Engine
@@ -27,29 +27,44 @@ keywords: >-
   engine, instalando a docker engine, instalação do servidor docker, docker
   desktop vs. docker engine
 aliases:
-- /cs-engine/
-- /cs-engine/1.12/
-- /cs-engine/1.12/upgrade/
-- /cs-engine/1.13/
-- /cs-engine/1.13/upgrade/
-- /ee/docker-ee/oracle/
-- /ee/supported-platforms/
-- /en/latest/installation/
-- /engine/installation/
-- /engine/installation/frugalware/
-- /engine/installation/linux/
-- /engine/installation/linux/archlinux/
-- /engine/installation/linux/cruxlinux/
-- /engine/installation/linux/docker-ce/
-- /engine/installation/linux/docker-ee/
-- /engine/installation/linux/docker-ee/oracle/
-- /engine/installation/linux/frugalware/
-- /engine/installation/linux/gentoolinux/
-- /engine/installation/linux/oracle/
-- /engine/installation/linux/other/
-- /engine/installation/oracle/
-- /enterprise/supported-platforms/
-- /install/linux/docker-ee/oracle/
+  - /cs-engine/
+  - /cs-engine/1.12/
+  - /cs-engine/1.12/upgrade/
+  - /cs-engine/1.13/
+  - /cs-engine/1.13/upgrade/
+  - /ee/docker-ee/oracle/
+  - /ee/supported-platforms/
+  - /en/latest/installation/
+  - /engine/installation/
+  - /engine/installation/frugalware/
+  - /engine/installation/linux/
+  - /engine/installation/linux/archlinux/
+  - /engine/installation/linux/cruxlinux/
+  - /engine/installation/linux/docker-ce/
+  - /engine/installation/linux/docker-ee/
+  - /engine/installation/linux/docker-ee/oracle/
+  - /engine/installation/linux/frugalware/
+  - /engine/installation/linux/gentoolinux/
+  - /engine/installation/linux/oracle/
+  - /engine/installation/linux/other/
+  - /engine/installation/oracle/
+  - /enterprise/supported-platforms/
+  - /install/linux/docker-ee/oracle/
+  - /ee/docker-ee/sles/
+  - /ee/docker-ee/suse/
+  - /engine/installation/linux/docker-ce/sles/
+  - /engine/installation/linux/docker-ee/sles/
+  - /engine/installation/linux/docker-ee/suse/
+  - /engine/installation/linux/sles/
+  - /engine/installation/linux/SUSE/
+  - /engine/installation/linux/suse/
+  - /engine/installation/sles/
+  - /engine/installation/SUSE/
+  - /install/linux/docker-ce/sles/
+  - /install/linux/docker-ee/sles/
+  - /install/linux/docker-ee/suse/
+  - /install/linux/sles/
+  - /installation/sles/
 ---
 
 Esta seção descreve como instalar a Docker Engine no Linux, também conhecida
@@ -124,8 +139,8 @@ antecipado que estão sujeitos a alterações que podem causar incompatibilidade
 
 ## Suporte
 
-A Docker Engine é um projeto de código aberto, mantido pelos mantenedores do
-projeto Moby e membros da comunidade.
+A Docker Engine é um projeto de código aberto, mantido pelas pessoas
+mantenedoras do projeto Moby e pessoas membros da comunidade.
 O Docker não oferece suporte à Docker Engine.
 O Docker oferece suporte aos produtos Docker, incluindo o Docker Desktop, que
 usa a Docker Engine como um de seus componentes.
