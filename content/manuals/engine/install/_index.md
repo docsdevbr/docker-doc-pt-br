@@ -86,7 +86,6 @@ correspondente.
 | [Fedora](fedora.md)                            |       ✅        |        ✅        |              |    ✅    |       |
 | [Raspberry Pi OS (32-bit)](raspberry-pi-os.md) |                |                 |      ⚠️      |         |       |
 | [RHEL](rhel.md)                                |       ✅        |        ✅        |              |         |   ✅   |
-| [SLES](sles.md)                                |                |                 |              |         |   ❌   |
 | [Ubuntu](ubuntu.md)                            |       ✅        |        ✅        |      ✅       |    ✅    |   ✅   |
 | [Binários](binaries.md)                        |       ✅        |        ✅        |      ✅       |         |       |
 
