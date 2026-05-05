@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/debian.md
-revision: dd8720dadac6c21c8ff52c36f58cec0740b2d50e
+revision: 33d94e3011cbc9378e43279b6c4de0c8e50e83e8
 status: ready
 
 description: >-
@@ -205,15 +205,13 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
 
    > [!NOTE]
    >
-   > O serviço Docker inicia automaticamente após a instalação.
-   > Para verificar se o Docker está em execução, use:
+   > Após a instalação, verifique se o Docker está em execução:
    >
    > ```console
    > $ sudo systemctl status docker
    > ```
    >
-   > Alguns sistemas podem ter esse comportamento desativado e exigirão uma
-   > inicialização manual:
+   > Se o Docker não estiver em execução, inicie-o manualmente:
    >
    > ```console
    > $ sudo systemctl start docker
@@ -246,7 +244,8 @@ Você precisará baixar um novo arquivo sempre que quiser atualizar a Docker
 Engine.
 
 <!-- markdownlint-disable-next-line -->
-1. Acesse [`{{% param "download-url-base" %}}/dists/`]({{% param "download-url-base" %}}/dists/).
+1. Acesse
+   [`{{% param "download-url-base" %}}/dists/`]({{% param "download-url-base" %}}/dists/).
 
 2. Selecione sua versão do Debian na lista.
 
@@ -276,15 +275,13 @@ Engine.
 
    > [!NOTE]
    >
-   > O serviço Docker inicia automaticamente após a instalação.
-   > Para verificar se o Docker está em execução, use:
+   > Após a instalação, verifique se o Docker está em execução:
    >
    > ```console
    > $ sudo systemctl status docker
    > ```
    >
-   > Alguns sistemas podem ter esse comportamento desativado e exigirão uma
-   > inicialização manual:
+   > Se o Docker não estiver em execução, inicie-o manualmente:
    >
    > ```console
    > $ sudo systemctl start docker
@@ -306,8 +303,8 @@ Você instalou e iniciou a Docker Engine com sucesso.
 #### Atualize a Docker Engine
 
 Para atualizar a Docker Engine, baixe os arquivos de pacote mais recentes e
-repita o [procedimento de instalação](#instale-a-partir-de-um-pacote), apontando para
-os novos arquivos.
+repita o [procedimento de instalação](#instale-a-partir-de-um-pacote), apontando
+para os novos arquivos.
 
 {{% include "install-script.md" %}}
 
