@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/ubuntu.md
-revision: d0cf4cb7fc9a9c5adb135742aa201eeab35da7ca
+revision: 33d94e3011cbc9378e43279b6c4de0c8e50e83e8
 status: ready
 
 description: >-
@@ -210,15 +210,13 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
 
    > [!NOTE]
    >
-   > O serviço Docker inicia automaticamente após a instalação.
-   > Para verificar se o Docker está em execução, use:
+   > Após a instalação, verifique se o Docker está em execução:
    >
    > ```console
    > $ sudo systemctl status docker
    > ```
    >
-   > Alguns sistemas podem ter esse comportamento desativado e exigirão uma
-   > inicialização manual:
+   > Se o Docker não estiver em execução, inicie-o manualmente:
    >
    > ```console
    > $ sudo systemctl start docker
@@ -281,15 +279,13 @@ Engine.
 
    > [!NOTE]
    >
-   > O serviço Docker inicia automaticamente após a instalação.
-   > Para verificar se o Docker está em execução, use:
+   > Após a instalação, verifique se o Docker está em execução:
    >
    > ```console
    > $ sudo systemctl status docker
    > ```
    >
-   > Alguns sistemas podem ter esse comportamento desativado e exigirão uma
-   > inicialização manual:
+   > Se o Docker não estiver em execução, inicie-o manualmente:
    >
    > ```console
    > $ sudo systemctl start docker
