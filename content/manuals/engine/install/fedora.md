@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/fedora.md
-revision: d0cf4cb7fc9a9c5adb135742aa201eeab35da7ca
+revision: 1043de9461886112de180b2dd401d102afe8c700
 status: ready
 
 description: >-
@@ -155,7 +155,7 @@ $ sudo dnf config-manager addrepo --from-repofile {{% param "download-url-base" 
    Por exemplo, `docker-ce-3:{{% param "docker_ce_version" %}}-1.fc41`.
 
    Substitua `<VERSION_STRING>` pela versão desejada e execute o seguinte
-   comando para instalar:
+   comando para instalar os pacotes:
 
    ```console
    $ sudo dnf install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io docker-buildx-plugin docker-compose-plugin
@@ -178,6 +178,17 @@ $ sudo dnf config-manager addrepo --from-repofile {{% param "download-url-base" 
    quando você inicializar o sistema.
    Se você não quiser que o Docker inicie automaticamente, use
    `sudo systemctl start docker` em vez disso.
+
+   > [!NOTE]
+   >
+   > Se o serviço Docker não iniciar e `journalctl -u docker` mostrar
+   > `failed to find iptables`, aponte o comando `iptables` para `iptables-nft`
+   > usando `alternatives` e reinicie o serviço:
+   >
+   > ```console
+   > $ sudo alternatives --set iptables /usr/bin/iptables-nft
+   > $ sudo systemctl restart docker
+   > ```
 
 3. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 
@@ -208,8 +219,8 @@ Engine.
 
 <!-- markdownlint-disable-next-line -->
 1. Acesse
-   [{{% param "download-url-base" %}}/]({{% param "download-url-base" %}}/)
-   e escolha sua versão do Fedora.
+   [{{% param "download-url-base" %}}/]({{% param "download-url-base" %}}/) e
+   escolha sua versão do Fedora.
    Em seguida, navegue até `x86_64/stable/Packages/` e baixe o arquivo `.rpm` da
    versão do Docker que deseja instalar.
 
@@ -233,6 +244,17 @@ Engine.
    quando você inicializar o sistema.
    Se você não quiser que o Docker inicie automaticamente, use
    `sudo systemctl start docker` em vez disso.
+
+   > [!NOTE]
+   >
+   > Se o serviço Docker não iniciar e `journalctl -u docker` mostrar
+   > `failed to find iptables`, aponte o comando `iptables` para `iptables-nft`
+   > usando `alternatives` e reinicie o serviço:
+   >
+   > ```console
+   > $ sudo alternatives --set iptables /usr/bin/iptables-nft
+   > $ sudo systemctl restart docker
+   > ```
 
 4. Verifique se a instalação foi bem-sucedida executando a imagem `hello-world`:
 

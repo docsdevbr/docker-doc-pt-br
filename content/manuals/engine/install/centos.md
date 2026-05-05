@@ -163,7 +163,7 @@ $ sudo dnf config-manager --add-repo {{% param "download-url-base" %}}/docker-ce
    Por exemplo, `docker-ce-3:{{% param "docker_ce_version" %}}-1.el9`.
 
    Substitua `<VERSION_STRING>` pela versão desejada e execute o seguinte
-   comando para instalar:
+   comando para instalar os pacotes:
 
    ```console
    $ sudo dnf install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io docker-buildx-plugin docker-compose-plugin
