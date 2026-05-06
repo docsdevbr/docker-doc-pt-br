@@ -255,11 +255,11 @@ Engine.
 4. Baixe os seguintes arquivos `.deb` para a Docker Engine, CLI, containerd e
    pacotes do Docker Compose:
 
-- `containerd.io_<versao>_<arquitetura>.deb`
-- `docker-ce_<versao>_<arquitetura>.deb`
-- `docker-ce-cli_<versao>_<arquitetura>.deb`
-- `docker-buildx-plugin_<versao>_<arquitetura>.deb`
-- `docker-compose-plugin_<versao>_<arquitetura>.deb`
+   - `containerd.io_<versao>_<arquitetura>.deb`
+   - `docker-ce_<versao>_<arquitetura>.deb`
+   - `docker-ce-cli_<versao>_<arquitetura>.deb`
+   - `docker-buildx-plugin_<versao>_<arquitetura>.deb`
+   - `docker-compose-plugin_<versao>_<arquitetura>.deb`
 
 5. Instale os pacotes `.deb`.
    Atualize os caminhos no exemplo a seguir para onde você baixou os pacotes do
@@ -325,7 +325,7 @@ para os novos arquivos.
    $ sudo rm -rf /var/lib/containerd
    ```
 
-3. Remover a lista de fontes e os keyrings.
+3. Remova a lista de fontes e os keyrings.
 
    ```console
    $ sudo rm /etc/apt/sources.list.d/docker.sources

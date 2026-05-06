@@ -329,7 +329,7 @@ os novos arquivos.
    $ sudo rm -rf /var/lib/containerd
    ```
 
-3. Remover a lista de fontes e os keyrings.
+3. Remova a lista de fontes e os keyrings.
 
    ```console
    $ sudo rm /etc/apt/sources.list.d/docker.sources
