@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/get-started.md
-revision: 05e75eea72c7e0ef3b822314f7b7d10b5063e69a
+revision: d693c78fcdeceba2657f0b240608983164cd0340
 status: ready
 
 linktitle: Início rápido
@@ -32,7 +32,7 @@ aplicadas a qualquer DHI.
 
 Este guia de início rápido usa imagens da comunidade DHI do `dhi.io`.
 Você faz o login com sua conta Docker, baixa e executa uma imagem e a compara
-com uma imagem oficial do Docker.
+com uma Imagem Oficial do Docker.
 
 > [!NOTE]
 >
@@ -105,19 +105,18 @@ Você pode comparar rapidamente DHIs com outras imagens para ver as melhorias de
 segurança e as diferenças.
 Essa comparação ajuda você a entender o valor de usar imagens reforçadas.
 
-Execute o seguinte comando para ver uma comparação resumida entre a Imagem
-Docker Reforçada do Python e a Imagem Docker Oficial não-reforçada do Python do
-Docker Hub:
+Execute o seguinte comando para comparar a Imagem Docker Reforçada do Python com
+a Imagem Oficial Docker não reforçada do Python do Docker Hub.
+Procure a seção `## Overview` na saída para uma comparação resumida.
 
 ```console
 $ docker scout compare dhi.io/python:3.13 \
     --to python:3.13 \
     --platform linux/amd64 \
-    --ignore-unchanged \
-    2>/dev/null | sed -n '/## Overview/,/^  ## /p' | head -n -1
+    --ignore-unchanged
 ```
 
-Exemplo de saída:
+A seção `## Overview` da saída é semelhante à seguinte:
 
 ```plaintext
   ## Overview
