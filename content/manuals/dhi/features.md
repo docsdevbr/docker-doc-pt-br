@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/features.md
-revision: 29752b98cea2e3bad6b2641ab0eb5cb07d676fb6
+revision: f2376b6b91dbad52c3b4d90ea5f4eb01e1ea3302
 status: ready
 
 title: Recursos das Imagens Docker Reforçadas
@@ -114,8 +114,7 @@ Cada imagem inclui metadados de segurança completos e verificáveis:
 
 - Aplicação automática de patches: As imagens são reconstruídas e atualizadas
   quando patches de segurança upstream estão disponíveis, sem compromissos de
-  tempo com garantia de SLA para pessoas usuárias que não usam o plano DHI
-  Enterprise.
+  tempo com garantia de SLA para pessoas usuárias do plano DHI Community.
 - Integração com scanners: Integração direta com scanners e outras plataformas
   de segurança.
 
@@ -162,7 +161,7 @@ ao catálogo para grandes empresas com necessidades avançadas de segurança.
 Para uma comparação detalhada, consulte a
 [Comparação de assinaturas das Imagens Docker Reforçadas](https://www.docker.com/products/hardened-images/#compare).
 
-### Segurança com garantia de SLA {tier="DHI Select e DHI Enterprise"}
+### Segurança com garantia de SLA {tier="DHI Select ou DHI Enterprise"}
 
 - SLA de correção de CVE: SLA de 7 dias para vulnerabilidades críticas e de alta
   gravidade.
@@ -173,14 +172,14 @@ Para uma comparação detalhada, consulte a
 Para obter detalhes completos, consulte o
 [Support Service Level Agreement](https://docs.docker.com/go/dhi-sla/).
 
-### Variantes de conformidade {tier="DHI Select e DHI Enterprise"}
+### Variantes de conformidade {tier="DHI Select ou DHI Enterprise"}
 
 - Imagens compatíveis com FIPS: Para setores regulamentados e sistemas
   governamentais.
 - Imagens prontas para STIG: Atendem aos requisitos do Guia de Implementação
   Técnica de Segurança do Departamento de Defesa dos EUA (DoD).
 
-### Personalização e controle {tier="DHI Select e DHI Enterprise"}
+### Personalização e controle {tier="DHI Select ou DHI Enterprise"}
 
 - Crie imagens personalizadas: Adicione seus próprios pacotes, ferramentas,
   certificados e configurações.
