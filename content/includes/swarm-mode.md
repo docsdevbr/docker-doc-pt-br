@@ -9,15 +9,22 @@
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
+source_url: https://github.com/docker/docs/blob/main/content/includes/swarm-mode.md
+revision: befcaf0320bf6caaa13638d02f0f8fc93aa87400
+status: ready
 ---
 
 > [!NOTE]
 >
-> Swarm mode is an advanced feature for managing a cluster of Docker daemons.
+> O modo Swarm é um recurso avançado para gerenciar um cluster de daemons do
+> Docker.
 >
-> Use Swarm mode if you intend to use Swarm as a production runtime environment.
+> Use o modo Swarm se você pretende usar o Swarm como um ambiente de execução de
+> produção.
 >
-> If you're not planning on deploying with Swarm, use
-> [Docker Compose](/compose/) instead.
-> If you're developing for a Kubernetes deployment, consider using the
-> [integrated Kubernetes feature](/manuals/desktop/features/kubernetes.md) in Docker Desktop.
+> Se você não planeja implantar com o Swarm, use o [Docker Compose](/compose/).
+> Se você estiver desenvolvendo para uma implantação do Kubernetes, considere
+> usar o
+> [recurso integrado do Kubernetes](/manuals/desktop/use-desktop/kubernetes.md)
+> no Docker Desktop.
