@@ -10,9 +10,13 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-description: Docker Engine Swarm mode overview
-keywords: docker, container, cluster, swarm, docker engine
-title: Swarm mode
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/swarm/_index.md
+revision: 70d0c07c698bfc18bbe08b44c85f9dc859bd7718
+status: ready
+
+description: Visão geral do modo Swarm da Docker Engine
+keywords: docker, contêiner, cluster, swarm, docker engine
+title: Modo Swarm
 weight: 80
 aliases:
 - /api/swarm-api/
@@ -56,96 +60,108 @@ aliases:
 - /swarm/swarm_at_scale/deploy-infra/
 - /swarm/swarm_at_scale/troubleshoot/
 ---
+
 {{% include "swarm-mode.md" %}}
 
-Current versions of Docker include Swarm mode for natively managing a cluster
-of Docker Engines called a swarm. Use the Docker CLI to create a swarm, deploy
-application services to a swarm, and manage swarm behavior.
+As versões atuais do Docker incluem o modo Swarm para gerenciar nativamente um
+cluster de Docker Engines chamado swarm.
+Use a CLI do Docker para criar um swarm, implantar serviços de aplicações em um
+swarm e gerenciar o comportamento do swarm.
 
-Docker Swarm mode is built into the Docker Engine. Do not confuse Docker Swarm mode
-with [Docker Classic Swarm](https://github.com/docker/classicswarm)
-which is no longer actively developed.
+O modo Swarm do Docker está integrado à Docker Engine.
+Não confunda o modo Swarm do Docker com o
+[Docker Classic Swarm](https://github.com/docker/classicswarm), que não está
+mais em desenvolvimento ativo.
 
-## Feature highlights
+## Destaques do recurso
 
-### Cluster management integrated with Docker Engine
+### Gerenciamento de cluster integrado à Docker Engine
 
-Use the Docker Engine CLI to create a swarm of Docker Engines where you can deploy application
-services. You don't need additional orchestration software to create or manage
-a swarm.
+Use a CLI da Docker Engine para criar um swarm da Docker Engine onde você pode
+implantar serviços de aplicações.
+Você não precisa de software de orquestração adicional para criar ou gerenciar
+um swarm.
 
-### Decentralized design
+### Design descentralizado
 
-Instead of handling differentiation between node roles at deployment time, the Docker Engine handles any specialization at runtime. You can deploy both kinds of nodes, managers and workers, using the
-Docker Engine. This means you can build an entire swarm from a single disk
-image.
+Em vez de lidar com a diferenciação entre funções de nós no momento da
+implantação, a Docker Engine lida com qualquer especialização em tempo de
+execução.
+Você pode implantar ambos os tipos de nós, managers (gerenciadores) e workers
+(trabalhadores), usando a Docker Engine.
+Isso significa que você pode construir um swarm inteiro a partir de uma única
+imagem de disco.
 
-### Declarative service model
+### Modelo de serviço declarativo
 
-Docker Engine uses a declarative approach to
-let you define the desired state of the various services in your application
-stack. For example, you might describe an application comprised of a web front
-end service with message queueing services and a database backend.
+A Docker Engine usa uma abordagem declarativa para permitir que você defina o
+estado desejado dos vários serviços em sua pilha de aplicações.
+Por exemplo, você pode descrever uma aplicação composta por um serviço de
+front-end web com serviços de filas de mensagens e um banco de dados como
+backend.
 
-### Scaling
+### Escalabilidade
 
-For each service, you can declare the number of tasks you want to
-run. When you scale up or down, the swarm manager automatically adapts by
-adding or removing tasks to maintain the desired state.
+Para cada serviço, você pode declarar o número de tarefas que deseja executar.
+Ao aumentar ou diminuir a escala, o gerenciador do swarm se adapta
+automaticamente, adicionando ou removendo tarefas para manter o estado desejado.
 
-### Desired state reconciliation
+### Reconciliação do estado desejado
 
-The swarm manager node constantly monitors
-the cluster state and reconciles any differences between the actual state and your
-expressed desired state. For example, if you set up a service to run 10
-replicas of a container, and a worker machine hosting two of those replicas
-crashes, the manager creates two new replicas to replace the replicas that
-crashed. The swarm manager assigns the new replicas to workers that are
-running and available.
+O nó gerenciador do swarm monitora constantemente o estado do cluster e
+reconcilia quaisquer diferenças entre o estado atual e o estado desejado
+especificado.
+Por exemplo, se você configurar um serviço para executar 10 réplicas de um
+contêiner e uma máquina de trabalho que hospeda duas dessas réplicas falhar, o
+gerenciador criará duas novas réplicas para substituir as réplicas que falharam.
+O gerenciador do swarm atribui as novas réplicas aos workers que estão em
+execução e disponíveis.
 
-### Multi-host networking
+### Redes com múltiplos hosts
 
-You can specify an overlay network for your
-services. The swarm manager automatically assigns addresses to the containers
-on the overlay network when it initializes or updates the application.
+Você pode especificar uma rede overlay para seus serviços.
+O gerenciador do swarm atribui automaticamente endereços aos contêineres na rede
+overlay quando inicializa ou atualiza a aplicação.
 
-### Service discovery
+### Descoberta de serviços
 
-Swarm manager nodes assign each service in the swarm a
-unique DNS name and load balance running containers. You can query every
-container running in the swarm through a DNS server embedded in the swarm.
+Os nós gerenciadores do swarm atribuem a cada serviço no swarm um nome DNS
+exclusivo e balanceiam a carga dos contêineres em execução.
+Você pode consultar todos os contêineres em execução no swarm por meio de um
+servidor DNS integrado ao swarm.
 
-### Load balancing
+### Balanceamento de carga
 
-You can expose the ports for services to an
-external load balancer. Internally, the swarm lets you specify how to distribute
-service containers between nodes.
+Você pode expor as portas dos serviços a um balanceador de carga externo.
+Internamente, o swarm permite que você especifique como distribuir os
+contêineres de serviço entre os nós.
 
-### Secure by default
+### Seguro por padrão
 
-Each node in the swarm enforces TLS mutual
-authentication and encryption to secure communications between itself and all
-other nodes. You have the option to use self-signed root certificates or
-certificates from a custom root CA.
+Cada nó no swarm impõe autenticação mútua TLS e criptografia para proteger as
+comunicações entre si e todos os outros nós.
+Você tem a opção de usar certificados raiz autoassinados ou certificados de uma
+CA raiz personalizada.
 
-### Rolling updates
+### Atualizações contínuas
 
-At rollout time you can apply service updates to nodes
-incrementally. The swarm manager lets you control the delay between service
-deployment to different sets of nodes. If anything goes wrong, you can
-roll back to a previous version of the service.
+Durante a implantação, você pode aplicar atualizações de serviço aos nós de
+forma incremental.
+O gerenciador do swarm permite controlar o atraso entre a implantação do serviço
+em diferentes conjuntos de nós.
+Se algo der errado, você pode reverter para uma versão anterior do serviço.
 
-## What's next?
+## O que vem a seguir?
 
-* Learn Swarm mode [key concepts](key-concepts.md).
-* Get started with the [Swarm mode tutorial](swarm-tutorial/_index.md).
-* Explore Swarm mode CLI commands
-  * [swarm init](/reference/cli/docker/swarm/init.md)
-  * [swarm join](/reference/cli/docker/swarm/join.md)
-  * [service create](/reference/cli/docker/service/create.md)
-  * [service inspect](/reference/cli/docker/service/inspect.md)
-  * [service ls](/reference/cli/docker/service/ls.md)
-  * [service rm](/reference/cli/docker/service/rm.md)
-  * [service scale](/reference/cli/docker/service/scale.md)
-  * [service ps](/reference/cli/docker/service/ps.md)
-  * [service update](/reference/cli/docker/service/update.md)
+- Aprenda os [principais conceitos](key-concepts.md) do Modo Swarm.
+- Comece com o [tutorial do Modo Swarm](swarm-tutorial/_index.md).
+- Explore os comandos da CLI do Modo Swarm:
+  - [swarm init](/reference/cli/docker/swarm/init/)
+  - [swarm join](/reference/cli/docker/swarm/join/)
+  - [service create](/reference/cli/docker/service/create/)
+  - [service inspect](/reference/cli/docker/service/inspect/)
+  - [service ls](/reference/cli/docker/service/ls/)
+  - [service rm](/reference/cli/docker/service/rm/)
+  - [service scale](/reference/cli/docker/service/scale/)
+  - [service ps](/reference/cli/docker/service/ps/)
+  - [service update](/reference/cli/docker/service/update/)
