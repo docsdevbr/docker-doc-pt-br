@@ -14,9 +14,9 @@ source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/swar
 revision: 70d0c07c698bfc18bbe08b44c85f9dc859bd7718
 status: ready
 
-description: Visão geral do modo Swarm da Docker Engine
+description: Visão geral do modo swarm da Docker Engine
 keywords: docker, contêiner, cluster, swarm, docker engine
-title: Modo Swarm
+title: Modo swarm
 weight: 80
 aliases:
 - /api/swarm-api/
@@ -63,13 +63,13 @@ aliases:
 
 {{% include "swarm-mode.md" %}}
 
-As versões atuais do Docker incluem o modo Swarm para gerenciar nativamente um
+As versões atuais do Docker incluem o modo swarm para gerenciar nativamente um
 cluster de Docker Engines chamado swarm.
 Use a CLI do Docker para criar um swarm, implantar serviços de aplicações em um
 swarm e gerenciar o comportamento do swarm.
 
-O modo Swarm do Docker está integrado à Docker Engine.
-Não confunda o modo Swarm do Docker com o
+O modo swarm do Docker está integrado à Docker Engine.
+Não confunda o modo swarm do Docker com o
 [Docker Classic Swarm](https://github.com/docker/classicswarm), que não está
 mais em desenvolvimento ativo.
 
@@ -153,9 +153,9 @@ Se algo der errado, você pode reverter para uma versão anterior do serviço.
 
 ## O que vem a seguir?
 
-- Aprenda os [principais conceitos](key-concepts.md) do modo Swarm.
-- Comece com o [tutorial do modo Swarm](swarm-tutorial/_index.md).
-- Explore os comandos da CLI do modo Swarm:
+- Aprenda os [principais conceitos](key-concepts.md) do modo swarm.
+- Comece com o [tutorial do modo swarm](swarm-tutorial/_index.md).
+- Explore os comandos da CLI do modo swarm:
   - [swarm init](/reference/cli/docker/swarm/init/)
   - [swarm join](/reference/cli/docker/swarm/join/)
   - [service create](/reference/cli/docker/service/create/)

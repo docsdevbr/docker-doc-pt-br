@@ -10,112 +10,141 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-description: Introducing key concepts for Docker Engine swarm mode
-keywords: docker, container, cluster, swarm mode, docker engine
-title: Swarm mode key concepts
+source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/swarm/key-concepts.md
+revision: 6e4790e2912429d3e06e461d60732a7a5dba3c2a
+status: ready
+
+description: Introdução aos principais conceitos do modo swarm da Docker Engine.
+keywords: docker, contêiner, cluster, modo swarm, docker engine
+title: Principais conceitos do modo swarm
 ---
-This topic introduces some of the concepts unique to the cluster management and
-orchestration features of Docker Engine 1.12.
 
-## What is a swarm?
+Este tópico apresenta alguns dos conceitos exclusivos dos recursos de
+gerenciamento e orquestração de clusters da Docker Engine 1.12.
 
-The cluster management and orchestration features embedded in Docker Engine
-are built using [swarmkit](https://github.com/docker/swarmkit/). Swarmkit is a
-separate project which implements Docker's orchestration layer and is used
-directly within Docker.
+## O que é um swarm?
 
-A swarm consists of multiple Docker hosts which run in Swarm mode and act as
-managers, to manage membership and delegation, and workers, which run
-[swarm services](#services-and-tasks). A given Docker host can
-be a manager, a worker, or perform both roles. When you create a service, you
-define its optimal state - number of replicas, network and storage resources
-available to it, ports the service exposes to the outside world, and more.
-Docker works to maintain that desired state. For instance, if a worker node
-becomes unavailable, Docker schedules that node's tasks on other nodes. A task
-is a running container which is part of a swarm service and is managed by a
-swarm manager, as opposed to a standalone container.
+Os recursos de gerenciamento e orquestração de clusters integrados à Docker
+Engine são construídos usando o [swarmkit](https://github.com/docker/swarmkit/).
+O swarmkit é um projeto separado que implementa a camada de orquestração do
+Docker e é usado diretamente dentro do Docker.
 
-One of the key advantages of swarm services over standalone containers is that
-you can modify a service's configuration, including the networks and volumes it
-is connected to, without the need to manually restart the service. Docker will
-update the configuration, stop the service tasks with out of date
-configuration, and create new ones matching the desired configuration.
+Um swarm consiste em vários hosts Docker executados no modo swarm que atuam como
+managers (gerenciadores), para gerenciar a associação e a delegação, e workers
+(trabalhadores), que executam [serviços do swarm](#serviços-e-tarefas).
+Um determinado host Docker pode ser um gerenciador, um trabalhador ou
+desempenhar ambas as funções.
+Ao criar um serviço, você define seu estado ideal — número de réplicas, recursos
+de rede e armazenamento disponíveis, portas que o serviço expõe ao mundo externo
+e muito mais.
+O Docker trabalha para manter esse estado desejado.
+Por exemplo, se um nó trabalhador ficar indisponível, o Docker agenda as tarefas
+desse nó em outros nós.
+Uma tarefa é um contêiner em execução que faz parte de um serviço do swarm e é
+gerenciado por um gerenciador do swarm, ao contrário de um contêiner
+independente.
 
-When Docker is running in Swarm mode, you can still run standalone containers
-on any of the Docker hosts participating in the swarm, as well as swarm
-services. A key difference between standalone containers and swarm services is
-that only swarm managers can manage a swarm, while standalone containers can be
-started on any daemon. Docker daemons can participate in a swarm as managers,
-workers, or both.
+Uma das principais vantagens dos serviços do swarm em relação aos contêineres
+independentes é que você pode modificar a configuração de um serviço, incluindo
+as redes e os volumes aos quais ele está conectado, sem a necessidade de
+reiniciá-lo manualmente.
+O Docker irá atualizar a configuração, interromper as tarefas do serviço com
+configuração desatualizada e criar novas tarefas que correspondam à configuração
+desejada.
 
-In the same way that you can use [Docker Compose](/manuals/compose/_index.md) to define and run
-containers, you can define and run [Swarm service](services.md) stacks.
+Quando o Docker está em execução no modo swarm, você ainda pode executar
+contêineres independentes em qualquer um dos hosts Docker que participam do
+swarm, bem como serviços do swarm.
+Uma diferença fundamental entre contêineres independentes e serviços do swarm é
+que apenas os gerenciadores do swarm podem gerenciar um swarm, enquanto os
+contêineres independentes podem ser iniciados em qualquer daemon.
+Os daemons do Docker podem participar de um swarm como gerenciadores,
+trabalhadores ou ambos.
 
-Keep reading for details about concepts related to Docker swarm services,
-including nodes, services, tasks, and load balancing.
+Da mesma forma que você pode usar o [Docker Compose](/manuals/compose/_index.md)
+para definir e executar containers, você pode definir e executar pilhas de
+[serviços do swarm](services.md).
 
-## Nodes
+Continue lendo para obter detalhes sobre conceitos relacionados a serviços do
+swarm do Docker, incluindo nós, serviços, tarefas e balanceamento de carga.
 
-A node is an instance of the Docker engine participating in the swarm. You can also think of this as a Docker node. You can run one or more nodes on a single physical computer or cloud server, but production swarm deployments typically include Docker nodes distributed across multiple physical and cloud machines.
+## Nós
 
-To deploy your application to a swarm, you submit a service definition to a
-manager node. The manager node dispatches units of work called
-[tasks](#services-and-tasks) to worker nodes.
+Um nó é uma instância da Docker Engine que participa do swarm.
+Você também pode pensar nisso como um nó do Docker.
+É possível executar um ou mais nós em um único computador físico ou servidor em
+nuvem, mas as implantações de swarm em produção normalmente incluem nós do
+Docker distribuídos em várias máquinas físicas e em nuvem.
 
-Manager nodes also perform the orchestration and cluster management functions
-required to maintain the desired state of the swarm. Manager nodes select a
-single leader to conduct orchestration tasks.
+Para implantar sua aplicação em um swarm, você envia uma definição de serviço
+para um nó gerenciador.
+O nó gerenciador despacha unidades de trabalho chamadas
+[tarefas](#serviços-e-tarefas) para nós trabalhadores.
 
-Worker nodes receive and execute tasks dispatched from manager nodes.
-By default manager nodes also run services as worker nodes, but you can
-configure them to run manager tasks exclusively and be manager-only
-nodes. An agent runs on each worker node and reports on the tasks assigned to
-it. The worker node notifies the manager node of the current state of its
-assigned tasks so that the manager can maintain the desired state of each
-worker.
+Os nós gerenciadores também executam as funções de orquestração e gerenciamento
+de cluster necessárias para manter o estado desejado do swarm.
+Os nós gerenciadores selecionam um líder único para conduzir as tarefas de
+orquestração.
 
-## Services and tasks
+Os nós trabalhadores recebem e executam as tarefas despachadas pelos nós
+gerenciadores.
+Por padrão, os nós gerenciadores também executam serviços como nós
+trabalhadores, mas você pode configurá-los para executar exclusivamente tarefas
+de gerenciamento e serem nós somente gerenciadores.
+Um agente é executado em cada nó trabalhador e relata as tarefas atribuídas a
+ele.
+O nó trabalhador notifica o nó gerenciador sobre o estado atual de suas tarefas
+atribuídas para que o gerenciador possa manter o estado desejado de cada
+trabalhador.
 
-A service is the definition of the tasks to execute on the manager or worker nodes. It
-is the central structure of the swarm system and the primary root of user
-interaction with the swarm.
+## Serviços e tarefas
 
-When you create a service, you specify which container image to use and which
-commands to execute inside running containers.
+Um serviço é a definição das tarefas a serem executadas nos nós gerenciadores ou
+trabalhadores.
+É a estrutura central do sistema do swarm e a raiz principal da interação da
+pessoa usuária com o swarm.
 
-In the replicated services model, the swarm manager distributes a specific
-number of replica tasks among the nodes based upon the scale you set in the
-desired state.
+Ao criar um serviço, você especifica qual imagem de contêiner usar e quais
+comandos executar dentro dos contêineres em execução.
 
-For global services, the swarm runs one task for the service on every
-available node in the cluster.
+No modelo de serviços replicados, o gerenciador do swarm distribui um número
+específico de tarefas de réplica entre os nós com base na escala definida no
+estado desejado.
 
-A task carries a Docker container and the commands to run inside the
-container. It is the atomic scheduling unit of swarm. Manager nodes assign tasks
-to worker nodes according to the number of replicas set in the service scale.
-Once a task is assigned to a node, it cannot move to another node. It can only
-run on the assigned node or fail.
+Para serviços globais, o swarm executa uma tarefa para o serviço em cada nó
+disponível no cluster.
 
-## Load balancing
+Uma tarefa carrega um contêiner Docker e os comandos a serem executados dentro
+do contêiner.
+É a unidade de agendamento atômico do swarm.
+Os nós gerenciadores atribuem tarefas aos nós de trabalho conforme o número de
+réplicas definido na escala do serviço.
+Uma vez que uma tarefa é atribuída a um nó, ela não pode ser movida para outro
+nó.
+Ela só pode ser executada no nó atribuído ou falhar.
 
-The swarm manager uses ingress load balancing to expose the services you
-want to make available externally to the swarm. The swarm manager can
-automatically assign the service a published port or you can configure a
-published port for the service. You can specify any unused port. If you do not
-specify a port, the swarm manager assigns the service a port in the 30000-32767
-range.
+## Balanceamento de carga
 
-External components, such as cloud load balancers, can access the service on the
-published port of any node in the cluster whether or not the node is currently
-running the task for the service. All nodes in the swarm route ingress
-connections to a running task instance.
+O gerenciador do swarm usa balanceamento de carga de entrada para expor os
+serviços que você deseja disponibilizar externamente ao swarm.
+O gerenciador do swarm pode atribuir automaticamente uma porta publicada ao
+serviço ou você pode configurar uma porta publicada para o serviço.
+Você pode especificar qualquer porta não usada.
+Se você não especificar uma porta, o gerenciador do swarm atribuirá ao serviço
+uma porta no intervalo de 30000 a 32767.
 
-Swarm mode has an internal DNS component that automatically assigns each service
-in the swarm a DNS entry. The swarm manager uses internal load balancing to
-distribute requests among services within the cluster based upon the DNS name of
-the service.
+Componentes externos, como balanceadores de carga na nuvem, podem acessar o
+serviço na porta publicada de qualquer nó do cluster, independentemente de o nó
+estar ou não executando a tarefa para o serviço.
+Todos os nós do swarm roteiam as conexões de entrada para uma instância de
+tarefa em execução.
 
-## What's next?
+O modo swarm possui um componente DNS interno que atribui automaticamente a cada
+serviço no swarm uma entrada DNS.
+O gerenciador do swarm usa balanceamento de carga interno para distribuir as
+requisições entre os serviços dentro do cluster com base no nome DNS do serviço.
 
-* Read the [Swarm mode overview](index.md).
-* Get started with the [Swarm mode tutorial](swarm-tutorial/_index.md).
+## O que vem a seguir?
+
+- Leia a [Visão geral do modo swarm](_index.md).
+- Comece com o [Tutorial do modo swarm](swarm-tutorial/_index.md).

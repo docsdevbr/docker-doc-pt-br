@@ -17,10 +17,10 @@ status: ready
 
 > [!NOTE]
 >
-> O modo Swarm é um recurso avançado para gerenciar um cluster de daemons do
+> O modo swarm é um recurso avançado para gerenciar um cluster de daemons do
 > Docker.
 >
-> Use o modo Swarm se você pretende usar o Swarm como um ambiente de execução de
+> Use o modo swarm se você pretende usar o Swarm como um ambiente de execução de
 > produção.
 >
 > Se você não planeja implantar com o Swarm, use o [Docker Compose](/compose/).
