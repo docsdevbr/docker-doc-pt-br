@@ -63,12 +63,12 @@ grid:
     description: Leia as notas de lançamento da versão mais recente.
     icon: note_add
     link: /engine/release-notes
-  aliases:
-    - /edge/
-    - /engine/ce-ee-node-activate/
-    - /engine/migration/
-    - /engine/misc/
-    - /linux/
+aliases:
+  - /edge/
+  - /engine/ce-ee-node-activate/
+  - /engine/migration/
+  - /engine/misc/
+  - /linux/
 ---
 
 A Docker Engine é uma tecnologia de conteinerização de código aberto para

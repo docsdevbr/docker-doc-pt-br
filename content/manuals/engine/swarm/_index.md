@@ -153,9 +153,9 @@ Se algo der errado, você pode reverter para uma versão anterior do serviço.
 
 ## O que vem a seguir?
 
-- Aprenda os [principais conceitos](key-concepts.md) do Modo Swarm.
-- Comece com o [tutorial do Modo Swarm](swarm-tutorial/_index.md).
-- Explore os comandos da CLI do Modo Swarm:
+- Aprenda os [principais conceitos](key-concepts.md) do modo Swarm.
+- Comece com o [tutorial do modo Swarm](swarm-tutorial/_index.md).
+- Explore os comandos da CLI do modo Swarm:
   - [swarm init](/reference/cli/docker/swarm/init/)
   - [swarm join](/reference/cli/docker/swarm/join/)
   - [service create](/reference/cli/docker/service/create/)
