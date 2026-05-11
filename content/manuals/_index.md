@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/_index.md
-revision: eb22a5b867398c2eee72093c36d4d9b5d5b58906
+revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
 status: ready
 
 title: Manuais
@@ -28,13 +28,55 @@ params:
   icon: description
   sidebar:
     groups:
-      - Open source
-      - AI
-      - Products
+      - AI and agents
+      - Application development
+      - Supply chain security
       - Platform
       - Enterprise
   notoc: true
-  open-source:
+  ai-and-agents:
+  - title: Docker Sandboxes
+    description: Execute agentes de codificação de IA em ambientes isolados.
+    icon: terminal
+    link: /ai/sandboxes/
+  - title: Catálogo e Kit de Ferramentas MCP
+    description: Aumente seu fluxo de trabalho de IA com servidores MCP.
+    icon: /icons/toolkit.svg
+    link: /ai/mcp-catalog-and-toolkit/
+  - title: Gordon
+    description: >-
+      Simplifique seu fluxo de trabalho e aproveite ao máximo o ecossistema do
+      Docker com seu assistente pessoal de IA.
+    icon: note_add
+    link: /ai/gordon/
+  - title: Docker Model Runner
+    description: Visualize e gerencie seus modelos locais.
+    icon: /icons/models.svg
+    link: /ai/model-runner/
+  application-development:
+  - title: Docker Agent
+    description: >-
+      A solução multiagente de código aberto para ajudar você em suas tarefas.
+    icon: /icons/cagent.svg
+    link: /ai/docker-agent
+  - title: Docker Desktop
+    description: Seu centro de comando para desenvolvimento com contêineres.
+    icon: /icons/Whale.svg
+    link: /desktop/
+  - title: Docker Offload
+    description: Crie e execute contêineres na nuvem.
+    icon: cloud
+    link: /offload/
+  - title: Docker Build Cloud
+    description: Crie suas imagens mais rapidamente na nuvem.
+    icon: /icons/logo-build-cloud.svg
+    link: /build-cloud/
+  - title: Testcontainers
+    description: >-
+      Execute contêineres programaticamente em sua linguagem de programação
+      preferida.
+    icon: /icons/Testcontainers.svg
+    link: /testcontainers/
   - title: Docker Build
     description: Crie e lance qualquer aplicação em qualquer lugar.
     icon: build
@@ -47,65 +89,19 @@ params:
     description: Defina e execute aplicações multicontêineres.
     icon: /icons/Compose.svg
     link: /compose/
-  - title: Testcontainers
-    description: >-
-      Execute contêineres programaticamente em sua linguagem de programação
-      preferida.
-    icon: /icons/Testcontainers.svg
-    link: /testcontainers/
-  - title: Docker Agent
-    description: >-
-      A solução multiagente de código aberto para ajudar você em suas tarefas.
-    icon: /icons/cagent.svg
-    link: /ai/docker-agent
-  ai:
-  - title: Gordon
-    description: >-
-      Simplifique seu fluxo de trabalho e aproveite ao máximo o ecossistema do
-      Docker com seu assistente pessoal de IA.
-    icon: note_add
-    link: /ai/gordon/
-  - title: Docker Model Runner
-    description: Visualize e gerencie seus modelos locais.
-    icon: /icons/models.svg
-    link: /ai/model-runner/
-  - title: Catálogo e Kit de Ferramentas MCP
-    description: Aumente seu fluxo de trabalho de IA com servidores MCP.
-    icon: /icons/toolkit.svg
-    link: /ai/mcp-catalog-and-toolkit/
-  products:
-  - title: Docker Desktop
-    description: Seu centro de comando para desenvolvimento com contêineres.
-    icon: /icons/Whale.svg
-    link: /desktop/
-  - title: Imagens Docker Reforçadas
-    description: Imagens seguras e mínimas para entrega confiável de software.
-    icon: /icons/dhi.svg
-    link: /dhi/
-  - title: Docker Offload
-    description: Crie e execute contêineres na nuvem.
-    icon: cloud
-    link: /offload/
-  - title: Build Cloud
-    description: Crie suas imagens mais rapidamente na nuvem.
-    icon: /icons/logo-build-cloud.svg
-    link: /build-cloud/
+  supply-chain-security:
   - title: Docker Hub
     description: Descubra, compartilhe e integre imagens de contêineres.
     icon: hub
     link: /docker-hub/
+  - title: Imagens Docker Reforçadas
+    description: Imagens seguras e mínimas para entrega confiável de software.
+    icon: /icons/dhi.svg
+    link: /dhi/
   - title: Docker Scout
     description: Análise de imagens e validação de políticas.
     icon: /icons/Scout.svg
     link: /scout/
-  - title: Extensões Docker
-    description: Personalize seu fluxo de trabalho do Docker Desktop.
-    icon: extension
-    link: /extensions/
-  - title: Testcontainers Cloud
-    description: Execute testes de integração, com dependências reais, na nuvem.
-    icon: package_2
-    link: https://testcontainers.com/cloud/docs/
   platform:
   - title: Administração
     description: Observabilidade centralizada para empresas e organizações.
@@ -135,26 +131,27 @@ params:
     link: /enterprise/enterprise-deployment/
 ---
 
-Esta seção contém guias da pessoa usuária sobre como instalar, configurar,
-configurar e usar produtos Docker.
+Esta seção contém guias da pessoa usuária sobre como instalar, configurar e usar
+produtos Docker.
 
-## Código aberto
-
-Tecnologias de desenvolvimento e conteinerização de código aberto.
-
-{{< grid items=open-source >}}
-
-## IA
+## IA e agentes
 
 Todas as ferramentas de IA do Docker em um local de fácil acesso.
 
-{{< grid items=ai >}}
+{{< grid items=ai-and-agents >}}
 
-## Produtos
+## Desenvolvimento de aplicações
 
 Soluções completas para pessoas desenvolvedoras, para times inovadores.
 
-{{< grid items=products >}}
+{{< grid items=application-development >}}
+
+## Segurança da cadeia de suprimentos
+
+Guardrails de segurança e análise de imagens para sua cadeia de suprimentos de
+software.
+
+{{< grid items=supply-chain-security >}}
 
 ## Plataforma
 
