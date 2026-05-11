@@ -10,50 +10,79 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Overview of the Docker workshop
-linkTitle: Docker workshop
-keywords: docker basics, how to start a docker container, container settings, setup
-  docker, how to setup docker, setting up docker, docker container guide, how to get
-  started with docker
-description: Get started with the Docker basics in this workshop, You'll
-  learn about containers, images, and how to containerize your first application.
+source_url: https://github.com/docker/docs/blob/main/content/get-started/workshop/_index.md
+revision: 656d1a871c6837fae1e4538b82a3a5c01b70ed1e
+status: ready
+
+title: Visão geral do workshop de Docker
+linkTitle: Workshop de Docker
+keywords: >-
+  conceitos básicos de docker, como iniciar um contêiner docker, configurações
+  de contêiner, configurar o docker, como configurar o docker, configurando o
+  docker, guia de contêiner docker, como começar com o docker
+description: >-
+  Comece com os conceitos básicos do Docker neste workshop.
+  Você aprenderá sobre contêineres, imagens e como conteinerizar sua primeira
+  aplicação.
 aliases:
 - /guides/get-started/
 - /get-started/hands-on-overview/
 - /guides/workshop/
 ---
-This 45-minute workshop contains step-by-step instructions on how to get started with Docker. This workshop shows you how to:
 
-- Build and run an image as a container.
-- Share images using Docker Hub.
-- Deploy Docker applications using multiple containers with a database.
-- Run applications using Docker Compose.
+Este workshop de 45 minutos contém instruções passo a passo sobre como começar a
+usar o Docker.
+Este workshop mostra como:
+
+- Criar e executar uma imagem como um contêiner.
+- Compartilhar imagens usando o Docker Hub.
+- Implantar aplicações Docker usando vários contêineres com um banco de dados.
+- Executar aplicações usando o Docker Compose.
 
 > [!NOTE]
 >
-> For a quick introduction to Docker and the benefits of containerizing your
-> applications, see [Getting started](/get-started/introduction/_index.md).
+> Para uma introdução rápida ao Docker e aos benefícios de conteinerizar suas
+> aplicações, consulte a [Introdução](/get-started/introduction/_index.md).
 
-## What is a container?
+## O que é um contêiner?
 
-A container is a sandboxed process running on a host machine that is isolated from all other processes running on that host machine. That isolation leverages [kernel namespaces and cgroups](https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504),
-features that have been in Linux for a long time. Docker makes these capabilities approachable and easy to use. To summarize, a container:
+Um contêiner é um processo isolado executado em uma máquina host, separado de
+todos os outros processos em execução nessa mesma máquina.
+Esse isolamento aproveita os
+[namespaces e cgroups do kernel](https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504),
+recursos presentes no Linux há muito tempo.
+O Docker torna essas capacidades acessíveis e fáceis de usar.
+Resumindo, um contêiner:
 
-- Is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.
-- Can be run on local machines, virtual machines, or deployed to the cloud.
-- Is portable (and can be run on any OS).
-- Is isolated from other containers and runs its own software, binaries, configurations, etc.
+- É uma instância executável de uma imagem.
+  Você pode criar, iniciar, parar, mover ou excluir um contêiner usando a API ou
+  a CLI do Docker.
+- Pode ser executado em máquinas locais, máquinas virtuais ou implantado na
+  nuvem.
+- É portátil (e pode ser executado em qualquer sistema operacional).
+- É isolado de outros contêineres e executa seu próprio software, binários,
+  configurações etc.
 
-If you're familiar with `chroot`, then think of a container as an extended version of `chroot`. The filesystem comes from the image. However, a container adds additional isolation not available when using chroot.
+Se você já conhece o `chroot`, pense em um contêiner como uma versão estendida
+do `chroot`.
+O sistema de arquivos vem da imagem.
+No entanto, um contêiner adiciona isolamento adicional não disponível ao usar o
+chroot.
 
-## What is an image?
+## O que é uma imagem?
 
-A running container uses an isolated filesystem. This isolated filesystem is provided by an image, and the image must contain everything needed to run an application - all dependencies, configurations, scripts, binaries, etc. The image also contains other configurations for the container, such as environment variables, a default command to run, and other metadata.
+Um contêiner em execução usa um sistema de arquivos isolado.
+Esse sistema de arquivos isolado é fornecido por uma imagem, e a imagem deve
+conter tudo o que é necessário para executar uma aplicação — todas as
+dependências, configurações, scripts, binários, etc.
+A imagem também contém outras configurações para o contêiner, como variáveis de
+ambiente, um comando padrão para executar e outros metadados.
 
-## Next steps
+## Próximos passos
 
-In this section, you learned about containers and images.
+Nesta seção, você aprendeu sobre contêineres e imagens.
 
-Next, you'll containerize a simple application and get hands-on with the concepts.
+A seguir, você irá conteinerizar uma aplicação simples e colocará os conceitos
+em prática.
 
-{{< button text="Containerize an application" url="02_our_app.md" >}}
+{{< button text="Conteinerize uma aplicação" url="02_our_app.md" >}}
