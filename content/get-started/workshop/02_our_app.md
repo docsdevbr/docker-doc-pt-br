@@ -10,140 +10,187 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Containerize an application
+source_url: https://github.com/docker/docs/blob/main/content/get-started/workshop/02_our_app.md
+revision: ca0e85cf12f7a517cb633f75e414c2a4169dd5dd
+status: ready
+
+title: Conteinerize uma aplicação
 weight: 20
-linkTitle: "Part 1: Containerize an application"
-keywords: |
-  dockerfile example, Containerize an application, run docker file, running
-  docker file, how to run dockerfile, example dockerfile, how to create a docker container,
-  create dockerfile, simple dockerfile, creating containers
-description: |
-  Follow this step-by-step guide to learn how to create and run a containerized
-  application using Docker
+linkTitle: "Parte 1: Conteinerize uma aplicação"
+keywords: >-
+  exemplo de dockerfile, conteinerize uma aplicação, executar dockerfile,
+  executando dockerfile, como executar dockerfile, exemplo de dockerfile, como
+  criar um contêiner docker, criar dockerfile, dockerfile simples, criando
+  contêineres
+description: >-
+  Siga este guia passo a passo para aprender como criar e executar uma aplicação
+  conteinerizada usando o Docker.
 aliases:
   - /get-started/part2/
   - /get-started/02_our_app/
   - /guides/workshop/02_our_app/
+  - /guides/walkthroughs/containerize-your-app/
 ---
-For the rest of this guide, you'll be working with a simple todo
-list manager that runs on Node.js. If you're not familiar with Node.js,
-don't worry. This guide doesn't require any prior experience with JavaScript.
 
-## Prerequisites
+Para o restante deste guia, você trabalhará com um gerenciador de listas de
+tarefas simples que roda em Node.js.
+Se você não tiver familiaridade com Node.js, não se preocupe.
+Este guia não exige nenhuma experiência prévia com JavaScript.
 
-- You have installed the latest version of [Docker Desktop](/get-started/get-docker.md).
-- You have installed a [Git client](https://git-scm.com/downloads).
-- You have an IDE or a text editor to edit files. Docker recommends using [Visual Studio Code](https://code.visualstudio.com/).
+## Pré-requisitos
 
-## Get the app
+- Você instalou a versão mais recente do
+  [Docker Desktop](/get-started/get-docker.md).
+- Você instalou um [cliente Git](https://git-scm.com/downloads).
+- Você tem uma IDE ou um editor de texto para editar arquivos.
+  O Docker recomenda o uso do
+  [Visual Studio Code](https://code.visualstudio.com/).
 
-Before you can run the application, you need to get the application source code onto your machine.
+## Obtenha a aplicação
 
-1. Clone the [getting-started-app repository](https://github.com/docker/getting-started-app/tree/main) using the following command:
+Antes de executar a aplicação, você precisa baixar o código-fonte da aplicação
+em sua máquina.
+
+1. Clone o repositório
+   [getting-started-app](https://github.com/docker/getting-started-app/tree/main)
+   usando o seguinte comando:
 
    ```console
    $ git clone https://github.com/docker/getting-started-app.git
    ```
 
-2. View the contents of the cloned repository. You should see the following files and sub-directories.
+2. Visualize o conteúdo do repositório clonado.
+   Você deverá ver os seguintes arquivos e subdiretórios.
 
    ```text
    ├── getting-started-app/
    │ ├── .dockerignore
    │ ├── package.json
+   │ ├── package-lock.json
    │ ├── README.md
    │ ├── spec/
    │ ├── src/
-   │ └── yarn.lock
    ```
 
-## Build the app's image
+## Construa a imagem da aplicação
 
-To build the image, you'll need to use a Dockerfile. A Dockerfile is simply a text-based file with no file extension that contains a script of instructions. Docker uses this script to build a container image.
+Para construir a imagem, você precisará usar um Dockerfile.
+Um Dockerfile é simplesmente um arquivo de texto sem extensão que contém um
+script de instruções.
+O Docker usa esse script para construir uma imagem de contêiner.
 
-1. In the `getting-started-app` directory, the same location as the
-   `package.json` file, create a file named `Dockerfile` with the following contents:
+1. No diretório `getting-started-app`, no mesmo local do arquivo `package.json`,
+   crie um arquivo chamado `Dockerfile` com o seguinte conteúdo:
 
    ```dockerfile
    # syntax=docker/dockerfile:1
 
-   FROM node:lts-alpine
+   FROM node:24-alpine
    WORKDIR /app
    COPY . .
-   RUN yarn install --production
+   RUN npm install --omit=dev
    CMD ["node", "src/index.js"]
    EXPOSE 3000
    ```
 
-   This Dockerfile starts off with a `node:lts-alpine` base image, a
-   light-weight Linux image that comes with Node.js and the Yarn package
-   manager pre-installed. It copies all of the source code into the image,
-   installs the necessary dependencies, and starts the application.
+   Este Dockerfile faz o seguinte:
 
-2. Build the image using the following commands:
+   - Usa `node:24-alpine` como imagem base, uma imagem Linux leve com Node.js
+     pré-instalado.
+   - Define `/app` como o diretório de trabalho.
+   - Copia o código-fonte para a imagem.
+   - Instala as dependências necessárias.
+   - Especifica o comando para iniciar a aplicação.
+   - Documenta que a aplicação está escutando na porta 3000.
 
-   In the terminal, make sure you're in the `getting-started-app` directory. Replace `/path/to/getting-started-app` with the path to your `getting-started-app` directory.
+2. Construa a imagem usando os seguintes comandos:
+
+   No terminal, certifique-se de estar no diretório `getting-started-app`.
+   Substitua `/caminho/para/getting-started-app` pelo caminho para o seu
+   diretório `getting-started-app`.
 
    ```console
-   $ cd /path/to/getting-started-app
+   $ cd /caminho/para/getting-started-app
    ```
 
-   Build the image.
+   Construa a imagem.
 
    ```console
    $ docker build -t getting-started .
    ```
 
-   The `docker build` command uses the Dockerfile to build a new image. You might have noticed that Docker downloaded a lot of "layers". This is because you instructed the builder that you wanted to start from the `node:lts-alpine` image. But, since you didn't have that on your machine, Docker needed to download the image.
+   O comando `docker build` usa o Dockerfile para construir uma nova imagem.
+   Você deve ter notado que o Docker baixou várias "camadas".
+   Isso ocorre porque você instruiu o construtor a começar com a imagem
+   `node:24-alpine`.
+   Como você não tinha essa imagem na sua máquina, o Docker precisou baixá-la.
 
-   After Docker downloaded the image, the instructions from the Dockerfile copied in your application and used `yarn` to install your application's dependencies. The `CMD` directive specifies the default command to run when starting a container from this image.
+   Após o Docker baixar a imagem, as instruções do Dockerfile foram copiadas
+   para a sua aplicação e o `npm` foi usado para instalar as dependências da sua
+   aplicação.
 
-   Finally, the `-t` flag tags your image. Think of this as a human-readable name for the final image. Since you named the image `getting-started`, you can refer to that image when you run a container.
+   Por fim, a flag `-t` cria uma tag da sua imagem.
+   Pense nisso como um nome legível para a imagem final.
+   Como você nomeou a imagem como `getting-started`, você pode se referir a ela
+   ao executar um contêiner.
 
-   The `.` at the end of the `docker build` command tells Docker that it should look for the `Dockerfile` in the current directory.
+   O ponto (`.`) no final do comando `docker build` indica ao Docker que ele
+   deve procurar o `Dockerfile` no diretório atual.
 
-## Start an app container
+## Inicie um contêiner de aplicação
 
-Now that you have an image, you can run the application in a container using the `docker run` command.
+Agora que você tem uma imagem, pode executar a aplicação em um contêiner usando
+o comando `docker run`.
 
-1. Run your container using the `docker run` command and specify the name of the image you just created:
+1. Execute seu contêiner usando o comando `docker run` e especifique o nome da
+   imagem que você acabou de criar:
 
    ```console
    $ docker run -d -p 127.0.0.1:3000:3000 getting-started
    ```
 
-   The `-d` flag (short for `--detach`) runs the container in the background.
-   This means that Docker starts your container and returns you to the terminal
-   prompt. Also, it does not display logs in the terminal.
+   A opção `-d` (abreviação de `--detach`) executa o contêiner em segundo plano.
+   Isso significa que o Docker inicia o seu contêiner e retorna você ao prompt
+   do terminal.
+   Além disso, ele não exibe logs no terminal.
 
-   The `-p` flag (short for `--publish`) creates a port mapping between the
-   host and the container. The `-p` flag takes a string value in the format of
-   `HOST:CONTAINER`, where `HOST` is the address on the host, and `CONTAINER`
-   is the port on the container. The command publishes the container's port
-   3000 to `127.0.0.1:3000` (`localhost:3000`) on the host. Without the port
-   mapping, you wouldn't be able to access the application from the host.
+   A opção `-p` (abreviação de `--publish`) cria um mapeamento de porta entre o
+   host e o contêiner.
+   A opção `-p` aceita um valor de string no formato de `HOST:CONTÊINER`, onde
+   `HOST` é o endereço no host e `CONTÊINER` é a porta no contêiner.
+   O comando publica a porta 3000 do contêiner para `127.0.0.1:3000`
+   (`localhost:3000`) no host.
+   Sem o mapeamento de porta, você não conseguiria acessar a aplicação a partir
+   do host.
 
-2. After a few seconds, open your web browser to [http://localhost:3000](http://localhost:3000).
-   You should see your app.
+2. Após alguns segundos, abra seu navegador em
+   [http://localhost:3000](http://localhost:3000).
+   Você deverá ver sua aplicação.
 
-   ![Empty todo list](images/todo-list-empty.webp)
+   ![Lista de tarefas vazia](images/todo-list-empty.webp)
 
-3. Add an item or two and see that it works as you expect. You can mark items as complete and remove them. Your frontend is successfully storing items in the backend.
+3. Adicione um ou dois itens e veja se funciona como esperado.
+   Você pode marcar itens como concluídos e removê-los.
+   Seu frontend está armazenando itens com sucesso no backend.
 
-At this point, you have a running todo list manager with a few items.
+Neste ponto, você tem um gerenciador de listas de tarefas em execução com alguns
+itens.
 
-If you take a quick look at your containers, you should see at least one container running that's using the `getting-started` image and on port `3000`. To see your containers, you can use the CLI or Docker Desktop's graphical interface.
+Se você der uma olhada rápida em seus contêineres, deverá ver pelo menos um
+contêiner em execução usando a imagem `getting-started` e na porta `3000`.
+Para ver seus contêineres, você pode usar a CLI ou a interface gráfica do Docker
+Desktop.
 
 {{< tabs >}}
 {{< tab name="CLI" >}}
 
-Run the `docker ps` command in a terminal to list your containers.
+Execute o comando `docker ps` em um terminal para listar seus contêineres.
 
 ```console
 $ docker ps
 ```
 
-Output similar to the following should appear.
+Deverá aparecer um resultado semelhante ao seguinte.
 
 ```console
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                      NAMES
@@ -153,24 +200,30 @@ df784548666d        getting-started     "docker-entrypoint.s…"   2 minutes ago
 {{< /tab >}}
 {{< tab name="Docker Desktop" >}}
 
-In Docker Desktop, select the **Containers** tab to see a list of your containers.
+No Docker Desktop, selecione a aba **Containers** para ver uma lista dos seus
+contêineres.
 
-![Docker Desktop with get-started container running](images/dashboard-two-containers.webp)
+![Docker Desktop com o contêiner get-started em execução](images/dashboard-two-containers.webp)
 
 {{< /tab >}}
 {{< /tabs >}}
 
-## Summary
+## Resumo
 
-In this section, you learned the basics about creating a Dockerfile to build an image. Once you built an image, you started a container and saw the running app.
+Nesta seção, você aprendeu o básico sobre como criar um Dockerfile para
+construir uma imagem.
+Após construir a imagem, você iniciou um contêiner e viu a aplicação em
+execução.
 
-Related information:
+Informações relacionadas:
 
-- [Dockerfile reference](/reference/dockerfile/)
-- [docker CLI reference](/reference/cli/docker/)
+- [Referência do Dockerfile](/reference/dockerfile/)
+- [Referência da CLI do docker](/reference/cli/docker/)
 
-## Next steps
+## Próximos passos
 
-Next, you're going to make a modification to your app and learn how to update your running application with a new image. Along the way, you'll learn a few other useful commands.
+A seguir, você fará uma modificação na sua aplicação e aprenderá como
+atualizá-lo com uma nova imagem.
+Ao longo do processo, você aprenderá alguns outros comandos úteis.
 
-{{< button text="Update the application" url="03_updating_app.md" >}}
+{{< button text="Atualizar a aplicação" url="03_updating_app.md" >}}
