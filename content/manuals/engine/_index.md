@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/_index.md
-revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
+revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
 status: ready
 
 title: Docker Engine
@@ -22,7 +22,7 @@ description: >-
 keywords: Engine
 params:
   sidebar:
-    group: Open source
+    group: Application development
 grid:
   - title: Instale a Docker Engine
     description: >-
