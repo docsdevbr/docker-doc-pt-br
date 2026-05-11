@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/_index.md
-revision: 1bf9cb9c3b772826a9320ea4fe1cdbabca8711ee
+revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
 status: ready
 
 title: Docker Desktop
@@ -24,7 +24,7 @@ keywords: >-
   desktop faz, usando o docker desktop
 params:
   sidebar:
-    group: Products
+    group: Application development
 grid:
 - title: Instale o Docker Desktop
   description: >-
