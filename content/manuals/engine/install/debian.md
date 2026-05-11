@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/debian.md
-revision: 33d94e3011cbc9378e43279b6c4de0c8e50e83e8
+revision: aeb2e86060e46c72996a758b76c14479b362f7de
 status: ready
 
 description: >-
@@ -158,15 +158,16 @@ Em seguida, você pode instalar e atualizar o Docker a partir do repositório.
 
    > [!NOTE]
    >
-   > Se você usa uma distribuição derivada, como o Kali Linux, talvez precise
-   > substituir a parte deste comando que deve imprimir o codinome da versão:
+   > Se você usa o Debian testing ou uma distribuição derivada, como o Kali
+   > Linux, talvez precise substituir a parte deste comando que deve imprimir o
+   > codinome da versão:
    >
    > ```console
    > $(. /etc/os-release && echo "$VERSION_CODENAME")
    > ```
    >
    > Substitua esta parte pelo codinome da versão Debian correspondente, como
-   > `bookworm`.
+   > `trixie`.
 
 2. Instale os pacotes do Docker.
 
