@@ -10,81 +10,81 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Educational resources
-keywords: get started, setup, orientation, quickstart, intro, concepts, kubernetes,
-  docker desktop
-description: Get started resources learning docker
+source_url: https://github.com/docker/docs/blob/main/content/get-started/resources.md
+revision: 6eb77d004b7287894561333add02301c45c0223f
+status: ready
+
+title: Recursos educacionais
+keywords: >-
+  primeiros passos, configuração, orientação, início rápido, introdução,
+  conceitos, Kubernetes, docker desktop
+description: Recursos para começar a aprender Docker.
 ---
 
-Docker and the broader community of Docker experts have put together many different ways to get further training and hands-on experience with Docker. Expand your understanding of Docker and Kubernetes with these additional free and paid resources.
+Docker e a comunidade de especialistas em Docker criaram diversas maneiras de
+obter treinamento adicional e experiência prática com Docker.
+Expanda seu conhecimento sobre Docker e Kubernetes com estes recursos
+adicionais, gratuitos e pagos.
 
-## Docker Training
+## Treinamento em Docker
 
-Expand your knowledge on all things Docker with [basic to advanced trainings from Docker experts](https://www.docker.com/trainings/).
+Aprenda os fundamentos do Docker e da conteinerização por meio de
+[cursos de treinamento práticos](/get-started/introduction) e autoguiados,
+criados por especialistas em Docker.
 
-You can find recorded content at your own convenience, or register for a live session to participate in Q&A.
+## Livros
 
-## Hosted labs
+Se você prefere aprender por meio de livros, confira estes escritos pelos
+[Docker Captains](https://www.docker.com/community/captains).
+O título de Docker Captain é uma distinção concedida pela Docker a pessoas
+membros selecionadas da comunidade especialistas em suas áreas e comprometidas
+em compartilhar seu conhecimento sobre Docker com outras pessoas.
 
-These self-paced and hands-on workshops use a free, hosted environment ([Play with Kubernetes](https://labs.play-with-k8s.com/)) that doesn't require any installation. Follow along and learn more about Kubernetes.
+- [Learn Docker in a Month of Lunches](https://www.manning.com/books/learn-docker-in-a-month-of-lunches),
+  de Elton Stoneman.
+  Use o código `stonemanpc` para obter 40% de desconto.
+- [Docker on Windows: From 101 to Production with Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/),
+  de Elton Stoneman.
+- [Learn Kubernetes in a Month of Lunches](https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches),
+  de Elton Stoneman.
+  Use o código `stonemanpc` para obter 40% de desconto.
+- [Docker in Action, 2nd Edition](https://www.manning.com/books/docker-in-action-second-edition),
+  Jeff Nickoloff, outubro de 2019.
+- [The Kubernetes Book](https://www.amazon.com/Kubernetes-Book-Nigel-Poulton/dp/1521823634/ref=sr_1_3?ie=UTF8&qid=1509660871&sr=8-3&keywords=nigel+poulton),
+  Nigel Poulton, novembro de 2018.
+- [Docker Deep Dive](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF),
+  Nigel Poulton, edição de 2024.
+- \[Português\] [Docker para desenvolvedores](https://leanpub.com/dockerparadesenvolvedores)
+  (2017), por Rafael Gomes.
+- \[Espanhol\] [Érase una vez Docker](https://leanpub.com/erase-una-vez-docker),
+  Manuel Morejón, março de 2023.
+- \[Espanhol\] [Érase una vez Kubernetes](https://leanpub.com/erase-una-vez-kubernetes),
+  Manuel Morejón, janeiro de 2022.
 
-* [Kubernetes Workshop](https://training.play-with-kubernetes.com/kubernetes-workshop/)
+## Guia de referência rápida da CLI
 
-\* Labs are free but require registration with a Docker ID.
+O [Guia de referência rápida da CLI do Docker](/get-started/docker_cheatsheet.pdf)
+apresenta os comandos comuns da CLI do Docker para facilitar a consulta.
+Ele abrange o trabalho com imagens, contêineres, Docker Hub e outros comandos de
+uso geral.
 
-## Self-guided tutorials
+## Aprendizado online autodirigido
 
-Created by experts in the Docker community, these free tutorials provide guided step-by-step workflows for working with the Docker platform.
+Diversas pessoas Docker Captains também criaram cursos em vídeo sobre Docker e
+Kubernetes.
 
-* **Integrating Docker with Your IDE**
-    * [Java Development: Eclipse](https://training.play-with-docker.com/java-debugging-eclipse/)
-    * [Java Development: IntelliJ](https://training.play-with-docker.com/java-debugging-intellij/)
-    * [Java Development: Netbeans](https://training.play-with-docker.com/java-debugging-netbeans/)
-    * [Live Debugging Node.js with Docker and Visual Studio Code](https://training.play-with-docker.com/nodejs-live-debugging/)
+- [Bret Fisher](https://www.bretfisher.com/courses/):
+  Docker Mastery, Docker Swarm Mastery, Docker Mastery for Node.js Projects.
+- [Elton Stoneman](https://docker4.net/udemy): Docker for .NET Apps - on Linux
+  and Windows.
+  Inclui o código de desconto `644ABCBC33F474541885`.
+- [Nick Janetakis](https://nickjanetakis.com/courses/) Dive into Docker, Docker
+  for DevOps.
+- [Nigel Poulton](https://nigelpoulton.com/video-courses): Kubernetes 101,
+  Getting Started with Kubernetes, Docker and Kubernetes: The Big Picture,
+  Kubernetes Deep Dive, Docker Deep Dive.
+- [Ajeet Singh Raina](https://collabnix.com/): Docker and Kubernetes Labs.
+- \[Francês\] [Luc Juggery](https://www.udemy.com/user/lucjuggery/):
+  Introduction to Kubernetes, The Docker Platform.
 
-* **Windows Containers**
-    * [Windows Container Setup](https://training.play-with-docker.com/windows-containers-setup/)
-    * [Windows Container Basics](https://training.play-with-docker.com/windows-containers-basics/)
-    * [Windows Containers Multi-Container Applications](https://training.play-with-docker.com/windows-containers-multicontainer/)
-
-## Books
-
-If books are your preferred learning style, check out these written by the [Docker Captains](https://www.docker.com/community/captains). Docker Captain is a distinction that Docker awards to select members of the community that are both experts in their field and are committed to sharing their Docker knowledge with others.
-
-* [Learn Docker in a Month of Lunches](https://www.manning.com/books/learn-docker-in-a-month-of-lunches), Elton Stoneman. Use the code `stonemanpc` for a 40% discount.
-* [Docker on Windows: From 101 to Production with Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/), Elton Stoneman
-* [Learn Kubernetes in a Month of Lunches](https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches), Elton Stoneman. Use the code `stonemanpc` for a 40% discount.
-* [Docker in Action 2nd Edition](https://www.manning.com/books/docker-in-action-second-edition) Jeff Nickoloff, Oct 2019
-* [The Kubernetes Book](https://www.amazon.com/Kubernetes-Book-Nigel-Poulton/dp/1521823634/ref=sr_1_3?ie=UTF8&qid=1509660871&sr=8-3&keywords=nigel+poulton), Nigel Poulton, Nov 2018
-* [Docker Deep Dive](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF), Nigel Poulton, 2024 Edition
-* \[Portuguese\] [Docker para desenvolvedores](https://leanpub.com/dockerparadesenvolvedores) (2017) by Rafael Gomes
-* \[Spanish\] [Érase una vez Docker](https://leanpub.com/erase-una-vez-docker), Manuel Morejón, March 2023
-* \[Spanish\] [Érase una vez Kubernetes](https://leanpub.com/erase-una-vez-kubernetes), Manuel Morejón, Jan 2022
-
-## CLI cheat sheet
-
-The [Docker CLI cheat sheet](/get-started/docker_cheatsheet.pdf) features the common Docker CLI commands for easy reference. It covers working with Images, Containers, Docker Hub, and other general purpose commands.
-
-## Self-Paced online learning
-
-A number of Docker Captains have also created video courses on Docker and Kubernetes.
-
-* [Bret Fisher](https://www.bretfisher.com/courses/): Docker Mastery, Docker Swarm Mastery, Docker Mastery for Node.js Projects
-* [Elton Stoneman](https://docker4.net/udemy): Docker for .NET Apps - on Linux and Windows. Includes the discount code `644ABCBC33F474541885`.
-* [Nick Janetakis](https://nickjanetakis.com/courses/) Dive into Docker, Docker for DevOps
-* [Nigel Poulton](https://nigelpoulton.com/video-courses): Kubernetes 101, Getting Started with Kubernetes, Docker and Kubernetes: The Big Picture, Kubernetes Deep Dive, Docker Deep Dive
-* [Arun Gupta](https://www.lynda.com/Docker-tutorials/Docker-Java-developers/576584-2.html): Docker for Java Developers
-* [Ajeet Singh Raina](https://collabnix.com/): Docker and Kubernetes Labs
-* \[French\] [Luc Juggery](https://www.udemy.com/user/lucjuggery/): Introduction to Kubernetes, The Docker Platform
-
-\* Many of the courses are fee-based
-
-## Community-translated docs
-
-> [!NOTE]
->
-> The following section contains a subset of Docker docs that are translated by community
-> members. This is not an officially translated version of Docker docs and it may not be up to date.
-> You must use the community-translated docs at your own discretion.
-
-- [Subset of Docker docs in Japanese](https://docs.docker.jp/index.html) translated by Docker Captain [Masahito Zembutsu](https://github.com/zembutsu).
+\* Muitos dos cursos são pagos.
