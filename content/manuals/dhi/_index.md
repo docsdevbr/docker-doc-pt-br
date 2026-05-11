@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/_index.md
-revision: a960edbd5af1bb7bdcfd5fe786636648f4eb0d71
+revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
 status: ready
 
 title: Imagens Docker Reforçadas
@@ -19,7 +19,7 @@ description: Imagens base seguras, minimalistas e prontas para produção.
 weight: 8
 params:
   sidebar:
-    group: Products
+    group: Supply chain security
     badge:
       color: green
       text: New
