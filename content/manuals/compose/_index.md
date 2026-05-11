@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/compose/_index.md
-revision: 3415afac4033c6befb133d63ca992a72b288dd7a
+revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
 status: ready
 
 title: Docker Compose
@@ -24,7 +24,7 @@ keywords: >-
   aplicações multicontêineres, orquestração de contêineres, docker cli
 params:
   sidebar:
-    group: Open source
+    group: Application development
 grid:
   - title: Por que usar o Compose?
     description: Entenda os principais benefícios do Docker Compose.
