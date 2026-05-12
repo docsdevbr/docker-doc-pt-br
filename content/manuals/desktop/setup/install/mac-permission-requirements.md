@@ -10,10 +10,16 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-description: Understand permission requirements for Docker Desktop for Mac and the
-  differences between versions
-keywords: Docker Desktop, mac, security, install, permissions
-title: Understand permission requirements for Docker Desktop on Mac
+source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/install/mac-permission-requirements.md
+revision: 5dd8bad4e7fc71927c6a9e8b27d266d0651842b3
+status: ready
+
+description: >-
+  Entenda os requisitos de permissão para o Docker Desktop no Mac e as
+  diferenças entre as versões.
+keywords: docker desktop, mac, segurança, instalação, permissões
+title: Entenda os requisitos de permissão para o Docker Desktop no Mac
+linkTitle: Requisitos de permissão do Mac
 aliases:
 - /docker-for-mac/privileged-helper/
 - /desktop/mac/privileged-helper/
@@ -21,145 +27,146 @@ aliases:
 - /desktop/install/mac-permission-requirements/
 weight: 20
 ---
-This page contains information about the permission requirements for running and installing Docker Desktop on Mac.
 
-It also provides clarity on running containers as `root` as opposed to having `root` access on the host.
+Esta página contém informações sobre os requisitos de permissão para executar e
+instalar o Docker Desktop no Mac.
 
-## Permission requirements
+Também esclarece a diferença entre executar contêineres como `root` e ter acesso
+`root` no host.
 
-Docker Desktop for Mac is run as an unprivileged user. However, Docker Desktop requires certain functionalities to perform a limited set of privileged configurations such as:
- - [Installing symlinks](#installing-symlinks) in`/usr/local/bin`.
- - [Binding privileged ports](#binding-privileged-ports) that are less than 1024. The so-called "privileged ports" are not generally used as a security boundary, however operating systems still prevent unprivileged processes from binding them which breaks commands like `docker run -p 127.0.0.1:80:80 docker/getting-started`.
- - [Ensuring `localhost` and `kubernetes.docker.internal` are defined](#ensuring-localhost-and-kubernetesdockerinternal-are-defined) in `/etc/hosts`. Some old macOS installs don't have `localhost` in `/etc/hosts`, which causes Docker to fail. Defining the DNS name `kubernetes.docker.internal` allows Docker to share Kubernetes contexts with containers.
- - Securely caching the Registry Access Management policy which is read-only for the developer.
+O Docker Desktop para Mac foi projetado com foco em segurança.
+Direitos administrativos são necessários apenas quando absolutamente
+imprescindível.
 
-Depending on which version of Docker Desktop for Mac is used, privileged access is granted either during installation, first run, or only when it's needed.
+## Requisitos de permissão
 
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
+O Docker Desktop para Mac é executado como um usuário sem privilégios.
+No entanto, o Docker Desktop requer certas funcionalidades para realizar um
+conjunto limitado de configurações privilegiadas, como:
+- [Instalar links simbólicos](#instalando-links-simbólicos) em `/usr/local/bin`.
+- [Vincular portas privilegiadas](#vinculando-portas-privilegiadas) com número
+  de acesso inferior a 1024.
+  Embora as portas privilegiadas (portas abaixo de 1024) normalmente não sejam
+  usadas como uma barreira de segurança, os sistemas operacionais ainda impedem
+  que processos sem privilégios se vinculem a elas, o que impede a execução de
+  comandos como `docker run -p 127.0.0.1:80:80 docker/getting-started`.
+- [Garantir que `localhost` e `kubernetes.docker.internal` estejam definidos](#garantindo-que-localhost-e-kubernetesdockerinternal-estejam-definidos)
+  em `/etc/hosts`.
+  Algumas instalações antigas do macOS não possuem `localhost` em `/etc/hosts`,
+  o que faz com que o Docker falhe.
+  Definir o nome DNS `kubernetes.docker.internal` permite que o Docker
+  compartilhe contextos do Kubernetes com os contêineres.
+- Armazenar em cache com segurança a política de Registry Access Management, que
+  é somente leitura para a pessoa desenvolvedora.
 
-From version 4.18 and later, Docker Desktop for Mac provides greater control over functionality that's enabled during installation.
+O acesso privilegiado é concedido durante a instalação.
 
-The first time Docker Desktop for Mac launches, it presents an installation window where you can choose to either use the default settings, which work for most developers and requires you to grant privileged access, or use advanced settings.
+Ao executar o Docker Desktop para Mac pela primeira vez, uma janela de
+instalação será exibida, onde você poderá escolher entre usar as configurações
+padrão, que atendem à maioria das pessoas desenvolvedoras e exigem a concessão
+de acesso privilegiado, ou usar as configurações avançadas.
 
-If you work in an environment with elevated security requirements, for instance where local administrative access is prohibited, then you can use the advanced settings to remove the need for granting privileged access. You can configure:
-- The location of the Docker CLI tools either in the system or user directory
-- The default Docker socket
-- Privileged port mapping
+Se você trabalha em um ambiente com requisitos de segurança elevados, por
+exemplo, onde o acesso administrativo local é proibido, você pode usar as
+configurações avançadas para eliminar a necessidade de conceder acesso
+privilegiado.
+Você pode configurar:
+- A localização das ferramentas de linha de comando do Docker, seja no diretório
+  do sistema ou do usuário;
+- O socket padrão do Docker;
+- O mapeamento de portas privilegiadas.
 
-Depending on which advanced settings you configure, you must enter your password to confirm.
+Dependendo das configurações avançadas que você escolher, será necessário
+inserir sua senha para confirmar.
 
-You can change these configurations at a later date from the **Advanced** page in **Settings**.
+Você pode alterar essas configurações posteriormente na página **Advanced** em
+**Settings**.
 
-{{< /tab >}}
-{{< tab name="Version 4.15 - 4.17" >}}
+### Instalando links simbólicos
 
-Versions 4.15 to 4.17 of Docker Desktop for Mac don't require the privileged process to run permanently. Whenever elevated privileges are needed for a configuration, Docker Desktop prompts you with information on the task it needs to perform. Most configurations are applied once, subsequent runs don't prompt for privileged access anymore.
-The only time Docker Desktop may start the privileged process is for binding privileged ports that aren't allowed by default on the host OS.
+Os binários do Docker são instalados por padrão em
+`/Applications/Docker.app/Contents/Resources/bin`.
+O Docker Desktop cria links simbólicos para os binários em `/usr/local/bin`, o
+que significa que eles são automaticamente incluídos no `PATH` na maioria dos
+sistemas.
 
-{{< /tab >}}
-{{< tab name="Versions prior to 4.15" >}}
+Você pode escolher se deseja instalar links simbólicos em `/usr/local/bin` ou em
+`$HOME/.docker/bin` durante a instalação do Docker Desktop.
 
-Versions prior to 4.15 of Docker Desktop for Mac require `root` access to be granted on the first run. The first time that Docker Desktop launches you receive an admin prompt to grant permission for the installation of the `com.docker.vmnetd` privileged helper service. For subsequent runs, `root` privileges aren't required. Following the principle of least privilege, this approach allows `root` access to be used only for the operations for which it's absolutely necessary, while still being able to use Docker Desktop as an unprivileged user.
-All privileged operations are run using the privileged helper process `com.docker.vmnetd`.
+Se `/usr/local/bin` for escolhido e esse local não tiver permissão de escrita
+para usuários sem privilégios, o Docker Desktop exigirá autorização para
+confirmar essa escolha antes que os links simbólicos para os binários do Docker
+sejam criados em `/usr/local/bin`.
+Se `$HOME/.docker/bin` for selecionado, a autorização não será necessária, mas
+você deverá
+[adicionar manualmente `$HOME/.docker/bin`](/manuals/desktop/settings-and-maintenance/settings.md#advanced)
+ao seu PATH.
 
-{{< /tab >}}
-{{< /tabs >}}
+Você também tem a opção de habilitar a instalação do link simbólico
+`/var/run/docker.sock`.
+A criação desse link simbólico garante que vários clientes Docker que dependem
+do caminho padrão do socket Docker funcionem sem alterações adicionais.
 
-### Installing symlinks
+Como `/var/run` é montado como um sistema de arquivos temporário (tmpfs), seu
+conteúdo é excluído na reinicialização, incluindo o link simbólico para o socket
+Docker.
+Para garantir que o socket Docker exista após a reinicialização, o Docker
+Desktop configura uma tarefa de inicialização `launchd` que cria o link
+simbólico executando
+`ln -s -f /Users/<user>/.docker/run/docker.sock /var/run/docker.sock`.
+Isso garante que você não tenha que criar o link simbólico a cada inicialização.
+Se você não habilitar essa opção durante a instalação, o link simbólico e a
+tarefa de inicialização não serão criados e você poderá ter que definir
+explicitamente a variável de ambiente `DOCKER_HOST` como
+`/Users/<usuário>/.docker/run/docker.sock` nos clientes que a usam.
+A CLI do Docker depende do contexto atual para recuperar o caminho do socket; o
+contexto atual é definido como `desktop-linux` na inicialização do Docker
+Desktop.
 
-The Docker binaries are installed by default in `/Applications/Docker.app/Contents/Resources/bin`. Docker Desktop creates symlinks for the binaries in `/usr/local/bin`, which means they're automatically included in `PATH` on most systems.
+### Vinculando portas privilegiadas
 
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
+Você pode optar por habilitar o mapeamento de portas privilegiadas durante a
+instalação ou na página **Advanced** em **Settings** após a instalação.
+O Docker Desktop requer autorização para confirmar essa escolha.
 
-With version 4.18 and later, you can choose whether to install symlinks either in `/usr/local/bin` or `$HOME/.docker/bin` during installation of Docker Desktop.
+### Garantindo que `localhost` e `kubernetes.docker.internal` estejam definidos
 
-If `/usr/local/bin` is chosen, and this location is not writable by unprivileged users, Docker Desktop requires authorization to confirm this choice before the symlinks to Docker binaries are created in `/usr/local/bin`. If `$HOME/.docker/bin` is chosen, authorization is not required, but then you must [manually add `$HOME/.docker/bin`](/manuals/desktop/settings-and-maintenance/settings.md#advanced) to their PATH.
+É sua responsabilidade garantir que `localhost` seja resolvido para `127.0.0.1`
+e, se o Kubernetes for usado, que `kubernetes.docker.internal` seja resolvido
+para `127.0.0.1`.
 
-You are also given the option to enable the installation of the `/var/run/docker.sock` symlink. Creating this symlink ensures various Docker clients relying on the default Docker socket path work without additional changes.
+## Instalando pela linha de comando
 
-As the `/var/run` is mounted as a tmpfs, its content is deleted on restart, symlink to the Docker socket included. To ensure the Docker socket exists after restart, Docker Desktop sets up a `launchd` startup task that creates the symlink by running `ln -s -f /Users/<user>/.docker/run/docker.sock /var/run/docker.sock`. This ensures the you aren't prompted on each startup to create the symlink. If you don't enable this option at installation, the symlink and the startup task is not created and you may have to explicitly set the `DOCKER_HOST` environment variable to `/Users/<user>/.docker/run/docker.sock` in the clients it is using. The Docker CLI relies on the current context to retrieve the socket path, the current context is set to `desktop-linux` on Docker Desktop startup.
+Configurações com privilégios de administrador são aplicadas durante a
+instalação com a opção `--user` no
+[comando de instalação](/manuals/desktop/setup/install/mac-install.md#instale-pela-linha-de-comando).
+Nesse caso, a conceção privilégios de administrador não será sugerida na
+primeira execução do Docker Desktop.
+Especificamente, a opção `--user`:
+- Desinstala o `com.docker.vmnetd` anterior, se presente.
+- Cria links simbólicos.
+- Garante que `localhost` seja resolvido para `127.0.0.1`.
 
-{{< /tab >}}
-{{< tab name="Version 4.17 and earlier" >}}
+A limitação dessa abordagem é que o Docker Desktop só pode ser executado por uma
+conta de usuário por máquina, ou seja, aquela especificada na opção `--user`.
 
-For versions prior to 4.18, installing symlinks in `/usr/local/bin` is a privileged configuration Docker Desktop performs on the first startup. Docker Desktop checks if symlinks exists and takes the following actions:
-- Creates the symlinks without the admin prompt if `/usr/local/bin` is writable by unprivileged users.
-- Triggers an admin prompt for you to authorize the creation of symlinks in `/usr/local/bin`. If you authorizes this, symlinks to Docker binaries are created in `/usr/local/bin`. If you reject the prompt, are not willing to run configurations requiring elevated privileges, or don't have admin rights on your machine, Docker Desktop creates the symlinks in `~/.docker/bin` and edits your shell profile to ensure this location is in your PATH. This requires all open shells to be reloaded.
-The rejection is recorded for future runs to avoid prompting you again.
-For any failure to ensure binaries are on your PATH, you may need to manually add to their PATH the `/Applications/Docker.app/Contents/Resources/bin` or use the full path to Docker binaries.
+## Auxiliar privilegiado
 
-A particular case is the installation of the `/var/run/docker.sock` symlink. Creating this symlink ensures various Docker clients relying on the default Docker socket path work without additional changes. As the `/var/run` is mounted as a tmpfs, its content is deleted on restart, symlink to Docker socket included.
-To ensure the Docker socket exists after restart, Docker Desktop sets up a `launchd` startup task that creates a symlink by running `ln -s -f /Users/<user>/.docker/run/docker.sock /var/run/docker.sock`. This ensures that you are not prompted on each startup to create the symlink. If you reject the prompt, the symlink and the startup task are not created and you may have to explicitly set the `DOCKER_HOST` to `/Users/<user>/.docker/run/docker.sock` in the clients it is using. The Docker CLI relies on the current context to retrieve the socket path, the current context is set to `desktop-linux` on Docker Desktop startup.
+Em situações específicas onde o auxiliar privilegiado é necessário, como por
+exemplo, para vincular portas privilegiadas ou armazenar em cache a política de
+Registry Access Management, ele é iniciado pelo `launchd` e executado em segundo
+plano, a menos que seja desativado em tempo de execução, conforme descrito
+anteriormente.
+O backend do Docker Desktop se comunica com o auxiliar privilegiado através do
+socket de domínio UNIX `/var/run/com.docker.vmnetd.sock`.
+As funcionalidades que ele executa são:
+- Vincular portas privilegiadas com número de acesso inferior a 1024.
+- Armazenar em cache, de forma segura, a política de Registry Access Management,
+  que é somente leitura para a pessoa desenvolvedora.
+- Desinstalar o auxiliar privilegiado.
 
-{{< /tab >}}
-{{< /tabs >}}
-
-### Binding privileged ports
-
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
-
-With version 4.18 and later you can choose to enable privileged port mapping during installation, or from the **Advanced** page in **Settings** post-installation. Docker Desktop requires authorization to confirm this choice.
-
-{{< /tab >}}
-{{< tab name="Version 4.17 and earlier" >}}
-
-For versions below 4.18 , if you run a container that requires binding privileged ports, Docker Desktop first attempts to bind it directly as an unprivileged process. If the OS prevents this and it fails, Docker Desktop checks if the `com.docker.vmnetd` privileged helper process is running to bind the privileged port through it.
-
-If the privileged helper process is not running, Docker Desktop prompts you for authorization to run it under [launchd](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html).
-This configures the privileged helper to run as in the versions of Docker Desktop prior to 4.15. However, the functionality provided by this privileged helper now only supports port binding and caching the Registry Access Management policy.
-If you decline the launch of the privileged helper process, binding the privileged port cannot be done and the Docker CLI returns an error:
-```console
-$ docker run -p 127.0.0.1:80:80 docker/getting-started
-
-docker: Error response from daemon: Ports are not available: exposing port
-TCP 127.0.0.1:80 -> 0.0.0.0:0: failed to connect to /var/run/com.docker.vmnetd.sock:
-is vmnetd running?: dial unix /var/run/com.docker.vmnetd.sock: connect: connection
-refused.
-ERRO[0003] error waiting for container: context canceled
-```
-
-> [!NOTE]
->
-> The command may fail with the same error if you take too long to authorize the prompt to start the helper process, as it may timeout.
-
-{{< /tab >}}
-{{< /tabs >}}
-
-### Ensuring `localhost` and `kubernetes.docker.internal` are defined
-
-{{< tabs >}}
-{{< tab name="Version 4.18 and later" >}}
-
-With versions 4.18 and later, it is your responsibility to ensure that localhost is resolved to `127.0.0.1` and if Kubernetes is used, that `kubernetes.docker.internal` is resolved to `127.0.0.1`.
-
-{{< /tab >}}
-{{< tab name="Version 4.17 and earlier" >}}
-
-On first run, Docker Desktop checks if `localhost` is resolved to `127.0.0.1`. In case the resolution fails, it prompts you to allow adding the mapping to `/etc/hosts`. Similarly, when the Kubernetes cluster is installed, it checks that `kubernetes.docker.internal` is resolved to `127.0.0.1` and prompts you to do so.
-
-{{< /tab >}}
-{{< /tabs >}}
-
-## Installing from the command line
-
-In version 4.11 and later of Docker Desktop for Mac, privileged configurations are applied during the installation with the `--user` flag on the [install command](/manuals/desktop/setup/install/mac-install.md#install-from-the-command-line). In this case, you are not prompted to grant root privileges on the first run of Docker Desktop. Specifically, the `--user` flag:
-- Uninstalls the previous `com.docker.vmnetd` if present
-- Sets up symlinks
-- Ensures that `localhost` is resolved to `127.0.0.1`
-
-The limitation of this approach is that Docker Desktop can only be run by one user-account per machine, namely the one specified in the `-–user` flag.
-
-## Privileged helper
-
-In the limited situations when the privileged helper is needed, for example binding privileged ports or caching the Registry Access Management policy, the privileged helper is started by `launchd` and runs in the background unless it is disabled at runtime as previously described. The Docker Desktop backend communicates with the privileged helper over the UNIX domain socket `/var/run/com.docker.vmnetd.sock`. The functionalities it performs are:
-- Binding privileged ports that are less than 1024.
-- Securely caching the Registry Access Management policy which is read-only for the developer.
-- Uninstalling the privileged helper.
-
-The removal of the privileged helper process is done in the same way as removing `launchd` processes.
+A remoção do processo do auxiliar privilegiado é feita da mesma forma que a
+remoção dos processos do `launchd`.
 
 ```console
 $ ps aux | grep vmnetd
@@ -177,24 +184,27 @@ $ rm /Library/LaunchDaemons/com.docker.vmnetd.plist
 $ rm /Library/PrivilegedHelperTools/com.docker.vmnetd
 ```
 
-## Containers running as root within the Linux VM
+## Contêineres executados como root dentro da VM Linux
 
-With Docker Desktop, the Docker daemon and containers run in a lightweight Linux
-VM managed by Docker. This means that although containers run by default as
-`root`, this doesn't grant `root` access to the Mac host machine. The Linux VM
-serves as a security boundary and limits what resources can be accessed from the
-host. Any directories from the host bind mounted into Docker containers still
-retain their original permissions.
+Com o Docker Desktop, o daemon do Docker e os contêineres são executados em uma
+VM Linux leve gerenciada pelo Docker.
+Isso significa que, embora os contêineres sejam executados por padrão como
+`root`, isso não concede acesso de `root` à máquina host Mac.
+A VM Linux serve como um limite de segurança e limita quais recursos podem ser
+acessados a partir do host.
+Quaisquer diretórios do host montados em contêineres Docker ainda mantêm suas
+permissões originais.
 
-## Enhanced Container Isolation
+## Isolamento de contêineres aprimorado
 
-In addition, Docker Desktop supports [Enhanced Container Isolation
-mode](/manuals/security/for-admins/hardened-desktop/enhanced-container-isolation/_index.md) (ECI),
-available to Business customers only, which further secures containers without
-impacting developer workflows.
+Além disso, o Docker Desktop oferece suporte ao
+[modo de Isolamento de Contêineres Aprimorado (Enhanced Container Isolation, ou ECI)](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md),
+disponível apenas para clientes Business, que protege ainda mais os contêineres
+sem impactar os fluxos de trabalho das pessoas desenvolvedoras.
 
-ECI automatically runs all containers within a Linux user-namespace, such that
-root in the container is mapped to an unprivileged user inside the Docker
-Desktop VM. ECI uses this and other advanced techniques to further secure
-containers within the Docker Desktop Linux VM, such that they are further
-isolated from the Docker daemon and other services running inside the VM.
+O ECI executa automaticamente todos os contêineres em um namespace de usuário
+Linux, de forma que o usuário root no contêiner seja mapeado para um usuário sem
+privilégios dentro da VM Linux do Docker Desktop.
+O ECI usa essa e outras técnicas avançadas para proteger ainda mais os
+contêineres dentro da VM Linux do Docker Desktop, de forma que eles fiquem ainda
+mais isolados do daemon do Docker e de outros serviços em execução dentro da VM.

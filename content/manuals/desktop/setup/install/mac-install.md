@@ -207,7 +207,7 @@ O comando `install` aceita as seguintes flags:
   Isso elimina a necessidade de a pessoa usuária conceder privilégios de root na
   primeira execução.
   Para obter mais informações, consulte
-  [Requisitos de permissão do auxiliar privilegiado](/manuals/desktop/setup/install/mac-permission-requirements.md#permission-requirements).
+  [Requisitos de permissão do auxiliar privilegiado](/manuals/desktop/setup/install/mac-permission-requirements.md#requisitos-de-permissão).
   Para encontrar o nome de usuário, digite `ls /Users` na linha de comando.
 
 - ##### Segurança e acesso
@@ -219,7 +219,7 @@ O comando `install` aceita as seguintes flags:
   Isso elimina a necessidade de a pessoa usuária conceder privilégios de root na
   primeira execução.
   Para obter mais informações, consulte
-  [Requisitos de permissão do auxiliar privilegiado](/manuals/desktop/setup/install/mac-permission-requirements.md#permission-requirements).
+  [Requisitos de permissão do auxiliar privilegiado](/manuals/desktop/setup/install/mac-permission-requirements.md#requisitos-de-permissão).
   Para encontrar o nome de usuário, digite `ls /Users` na CLI.
 - `--admin-settings`: Cria automaticamente um arquivo `admin-settings.json` que
   é usado por pessoas administradoras para controlar determinadas configurações
