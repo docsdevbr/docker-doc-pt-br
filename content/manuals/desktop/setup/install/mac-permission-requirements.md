@@ -195,10 +195,10 @@ acessados a partir do host.
 Quaisquer diretórios do host montados em contêineres Docker ainda mantêm suas
 permissões originais.
 
-## Isolamento de contêineres aprimorado
+## Isolamento de contêiner aprimorado
 
 Além disso, o Docker Desktop oferece suporte ao
-[modo de Isolamento de Contêineres Aprimorado (Enhanced Container Isolation, ou ECI)](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md),
+[modo de Isolamento de Contêiner Aprimorado (Enhanced Container Isolation, ou ECI)](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md),
 disponível apenas para clientes Business, que protege ainda mais os contêineres
 sem impactar os fluxos de trabalho das pessoas desenvolvedoras.
 
