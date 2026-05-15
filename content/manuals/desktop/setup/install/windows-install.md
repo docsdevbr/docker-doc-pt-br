@@ -433,14 +433,14 @@ Se o acesso à Microsoft Store estiver bloqueado devido a políticas de seguran�
   é usado por pessoas administradoras para controlar determinadas configurações
   do Docker Desktop em máquinas cliente dentro de sua organização.
   Para obter mais informações, consulte
-  [Gerenciamento de Configurações](/manuals/enterprise/security/hardened-desktop/settings-management/_index.md).
+  [Gerenciamento de configurações](/manuals/enterprise/security/hardened-desktop/settings-management/_index.md).
   - Deve ser usado em conjunto com a flag `--allowed-org=<nome da organização>`.
   - Por exemplo:
     `--allowed-org=<nome da organização> --admin-settings="{'configurationFileVersion': 2, 'enhancedContainerIsolation': {'value': true, 'locked': false}}"`.
 - `--no-windows-containers`: Desativa a integração com contêineres do Windows.
   Isso pode melhorar a segurança.
   Para obter mais informações, consulte
-  [Contêineres do Windows](/manuals/desktop/setup/install/windows-permission-requirements.md#windows-containers).
+  [Contêineres do Windows](/manuals/desktop/setup/install/windows-permission-requirements.md#contêineres-do-windows).
 
 #### Configurações de proxy
 
@@ -494,7 +494,7 @@ Se o acesso à Microsoft Store estiver bloqueado devido a políticas de seguran�
 No modo por usuário, o Docker Desktop pode ser instalado e atualizado sem
 privilégios de administrador.
 Algumas configurações ainda exigem elevação de privilégios e são marcadas como
-**Requires password** na interface de Configurações.
+**Requires password** na interface Settings.
 Habilitar o WSL 2 pela primeira vez também requer privilégios de administrador,
 mas essa é uma operação única, por máquina.
 

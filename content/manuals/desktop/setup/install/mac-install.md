@@ -145,7 +145,7 @@ instalação passo a passo para o Docker Desktop no Mac.
    - As assinaturas Docker Pro, Team e Business incluem o uso comercial do
      Docker Desktop.
 
-5. Selecione **Aceitar** para continuar.
+5. Selecione **Accept** para continuar.
 
    Observe que o Docker Desktop não será executado se você não concordar com os
    termos.
@@ -159,10 +159,10 @@ instalação passo a passo para o Docker Desktop no Mac.
 
 6. Na janela de instalação, selecione:
 
-   - **Usar configurações recomendadas (Requer senha)**.
+   - **Use recommended settings (Requires password)**.
      Isso permite que o Docker Desktop defina automaticamente as configurações
      necessárias.
-   - **Usar configurações avançadas**.
+   - **Use advanced settings**.
      Você poderá definir o local das ferramentas de linha de comando do Docker
      no diretório do sistema ou do usuário, habilitar o socket padrão do Docker
      e habilitar o mapeamento de portas privilegiadas.
@@ -171,7 +171,7 @@ instalação passo a passo para o Docker Desktop no Mac.
      para obter mais informações e saber como definir o local das ferramentas da
      CLI do Docker.
 
-7. Selecione **Concluir**.
+7. Selecione **Finish**.
    Se você aplicou alguma das configurações anteriores que exigem uma senha no
    passo 6, digite sua senha para confirmar sua escolha.
 
