@@ -9,11 +9,18 @@
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
+source_url: https://github.com/docker/docs/blob/main/content/includes/desktop-license-update.md
+revision: e3aa78b72c9faf56e97896681c33425cafc1c847
+status: ready
 ---
 
-Here’s a summary of the key points:
+Aqui está um resumo dos pontos principais:
 
-- Docker Desktop is free for small businesses (fewer than 250 employees AND less than $10 million in annual revenue), personal use, education, and non-commercial open source projects.
-- Otherwise, it requires a paid subscription for professional use.
-- Paid subscriptions are also required for government entities.
-- The Docker Pro, Team, and Business subscriptions include commercial use of Docker Desktop.
+- O Docker Desktop é gratuito para pequenas empresas (menos de 250 pessoas
+  funcionárias E menos de US$ 10 milhões em receita anual), uso pessoal,
+  educação e projetos de código aberto não comerciais.
+- Caso contrário, é necessária uma assinatura paga para uso profissional.
+- Assinaturas pagas também são necessárias para entidades governamentais.
+- As assinaturas Docker Pro, Team e Business incluem o uso comercial do Docker
+  Desktop.
