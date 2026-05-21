@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/resources.md
-source_revision: 6eb77d004b7287894561333add02301c45c0223f
+source_revision: 254f1d0835a007b0b782f04b087d5b7a478a51df
 translation_status: ready
 
 title: Recursos educacionais
@@ -40,25 +40,27 @@ O título de Docker Captain é uma distinção concedida pela Docker a pessoas
 membros selecionadas da comunidade especialistas em suas áreas e comprometidas
 em compartilhar seu conhecimento sobre Docker com outras pessoas.
 
-- [Learn Docker in a Month of Lunches](https://www.manning.com/books/learn-docker-in-a-month-of-lunches),
+* [Operational AI with Docker](https://www.amazon.com/Operational-AI-Docker-services-Kubernetes/dp/1807301095),
+  Ajeet Singh Raina e Harsh Manvar, abril de 2026.
+* [Learn Docker in a Month of Lunches](https://www.manning.com/books/learn-docker-in-a-month-of-lunches),
   de Elton Stoneman.
   Use o código `stonemanpc` para obter 40% de desconto.
-- [Docker on Windows: From 101 to Production with Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/),
+* [Docker on Windows: From 101 to Production with Docker on Windows](https://www.amazon.com/Docker-Windows-Elton-Stoneman-ebook/dp/B0711Y4J9K/),
   de Elton Stoneman.
-- [Learn Kubernetes in a Month of Lunches](https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches),
+* [Learn Kubernetes in a Month of Lunches](https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches),
   de Elton Stoneman.
   Use o código `stonemanpc` para obter 40% de desconto.
-- [Docker in Action, 2nd Edition](https://www.manning.com/books/docker-in-action-second-edition),
+* [Docker in Action, 2nd Edition](https://www.manning.com/books/docker-in-action-second-edition),
   Jeff Nickoloff, outubro de 2019.
-- [The Kubernetes Book](https://www.amazon.com/Kubernetes-Book-Nigel-Poulton/dp/1521823634/ref=sr_1_3?ie=UTF8&qid=1509660871&sr=8-3&keywords=nigel+poulton),
+* [The Kubernetes Book](https://www.amazon.com/Kubernetes-Book-Nigel-Poulton/dp/1521823634/ref=sr_1_3?ie=UTF8&qid=1509660871&sr=8-3&keywords=nigel+poulton),
   Nigel Poulton, novembro de 2018.
-- [Docker Deep Dive](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF),
+* [Docker Deep Dive](https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF),
   Nigel Poulton, edição de 2024.
-- \[Português\] [Docker para desenvolvedores](https://leanpub.com/dockerparadesenvolvedores)
+* \[Português\] [Docker para desenvolvedores](https://leanpub.com/dockerparadesenvolvedores)
   (2017), por Rafael Gomes.
-- \[Espanhol\] [Érase una vez Docker](https://leanpub.com/erase-una-vez-docker),
+* \[Espanhol\] [Érase una vez Docker](https://leanpub.com/erase-una-vez-docker),
   Manuel Morejón, março de 2023.
-- \[Espanhol\] [Érase una vez Kubernetes](https://leanpub.com/erase-una-vez-kubernetes),
+* \[Espanhol\] [Érase una vez Kubernetes](https://leanpub.com/erase-una-vez-kubernetes),
   Manuel Morejón, janeiro de 2022.
 
 ## Guia de referência rápida da CLI
@@ -73,18 +75,18 @@ uso geral.
 Diversas pessoas Docker Captains também criaram cursos em vídeo sobre Docker e
 Kubernetes.
 
-- [Bret Fisher](https://www.bretfisher.com/courses/):
+* [Bret Fisher](https://www.bretfisher.com/courses/):
   Docker Mastery, Docker Swarm Mastery, Docker Mastery for Node.js Projects.
-- [Elton Stoneman](https://docker4.net/udemy): Docker for .NET Apps - on Linux
+* [Elton Stoneman](https://docker4.net/udemy): Docker for .NET Apps – on Linux
   and Windows.
   Inclui o código de desconto `644ABCBC33F474541885`.
-- [Nick Janetakis](https://nickjanetakis.com/courses/) Dive into Docker, Docker
+* [Nick Janetakis](https://nickjanetakis.com/courses/) Dive into Docker, Docker
   for DevOps.
-- [Nigel Poulton](https://nigelpoulton.com/video-courses): Kubernetes 101,
+* [Nigel Poulton](https://nigelpoulton.com/video-courses): Kubernetes 101,
   Getting Started with Kubernetes, Docker and Kubernetes: The Big Picture,
   Kubernetes Deep Dive, Docker Deep Dive.
-- [Ajeet Singh Raina](https://collabnix.com/): Docker and Kubernetes Labs.
-- \[Francês\] [Luc Juggery](https://www.udemy.com/user/lucjuggery/):
+* [Ajeet Singh Raina](https://collabnix.com/): Docker and Kubernetes Labs.
+* \[Francês\] [Luc Juggery](https://www.udemy.com/user/lucjuggery/):
   Introduction to Kubernetes, The Docker Platform.
 
 \* Muitos dos cursos são pagos.
