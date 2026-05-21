@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/_index.md
-source_revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
+source_revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
 translation_status: ready
 
 title: Manuais
@@ -25,7 +25,7 @@ keywords: >-
 url: /manuals/
 layout: wide
 params:
-  icon: description
+  icon: document-text
   sidebar:
     groups:
       - AI and agents
@@ -37,7 +37,7 @@ params:
   ai-and-agents:
   - title: Docker Sandboxes
     description: Execute agentes de codificação de IA em ambientes isolados.
-    icon: terminal
+    icon: command-line
     link: /ai/sandboxes/
   - title: Catálogo e Kit de Ferramentas MCP
     description: Aumente seu fluxo de trabalho de IA com servidores MCP.
@@ -47,7 +47,7 @@ params:
     description: >-
       Simplifique seu fluxo de trabalho e aproveite ao máximo o ecossistema do
       Docker com seu assistente pessoal de IA.
-    icon: note_add
+    icon: document-plus
     link: /ai/gordon/
   - title: Docker Model Runner
     description: Visualize e gerencie seus modelos locais.
@@ -79,11 +79,11 @@ params:
     link: /testcontainers/
   - title: Docker Build
     description: Crie e lance qualquer aplicação em qualquer lugar.
-    icon: build
+    icon: wrench-screwdriver
     link: /build/
   - title: Docker Engine
     description: O tempo de execução de contêiner líder do setor.
-    icon: developer_board
+    icon: cpu-chip
     link: /engine/
   - title: Docker Compose
     description: Defina e execute aplicações multicontêineres.
@@ -92,7 +92,7 @@ params:
   supply-chain-security:
   - title: Docker Hub
     description: Descubra, compartilhe e integre imagens de contêineres.
-    icon: hub
+    icon: globe-alt
     link: /docker-hub/
   - title: Imagens Docker Reforçadas
     description: Imagens seguras e mínimas para entrega confiável de software.
@@ -105,29 +105,29 @@ params:
   platform:
   - title: Administração
     description: Observabilidade centralizada para empresas e organizações.
-    icon: admin_panel_settings
+    icon: shield-check
     link: /admin/
   - title: Faturamento
     description: Gerencie métodos de faturamento e pagamento.
-    icon: payments
+    icon: credit-card
     link: /billing/
   - title: Contas
     description: Gerencie sua conta Docker.
-    icon: account_circle
+    icon: user-circle
     link: /accounts/
   - title: Segurança
     description: >-
       Guardrails de segurança para pessoas administradoras e desenvolvedoras.
-    icon: lock
+    icon: lock-closed
     link: /security/
   - title: Assinatura
     description: Licenças de uso comercial para produtos Docker.
-    icon: card_membership
+    icon: credit-card
     link: /subscription/
   enterprise:
   - title: Implante o Docker Desktop
     description: Implante o Docker Desktop em escala na sua empresa.
-    icon: download
+    icon: arrow-down-tray
     link: /enterprise/enterprise-deployment/
 ---
 
