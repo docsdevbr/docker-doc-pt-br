@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/_index.md
-source_revision: 2c0dd7e08312f8b9470f1e30cd959a2c68b67dbf
+source_revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
 translation_status: ready
 
 description: >-
@@ -27,27 +27,27 @@ toc_min: 1
 grid:
   - title: Elementos de nível superior version e name
     description: Entenda os atributos version e name do Compose.
-    icon: text_snippet
+    icon: document-text
     link: /reference/compose-file/version-and-name/
   - title: Elemento de nível superior services
     description: Explore todos os atributos de services do Compose.
-    icon: construction
+    icon: wrench-screwdriver
     link: /reference/compose-file/services/
   - title: Elemento de nível superior networks
     description: Encontre todos os atributos de networks do Compose.
-    icon: lan
+    icon: server-stack
     link: /reference/compose-file/networks/
   - title: Elemento de nível superior volumes
     description: Explore todos os atributos de volumes do Compose.
-    icon: database
+    icon: circle-stack
     link: /reference/compose-file/volumes/
   - title: Elemento de nível superior configs
     description: Saiba mais sobre configs no Compose.
-    icon: settings
+    icon: cog-6-tooth
     link: /reference/compose-file/configs/
   - title: Elemento de nível superior secrets
     description: Saiba mais sobre secrets no Compose.
-    icon: lock
+    icon: lock-closed
     link: /reference/compose-file/secrets/
 aliases:
   - /compose/yaml/
