@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/_index.md
-source_revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
+source_revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
 translation_status: ready
 
 title: Docker Engine
@@ -28,40 +28,40 @@ grid:
     description: >-
       Aprenda como instalar a Docker Engine de código aberto para sua
       distribuição.
-    icon: download
+    icon: arrow-down-tray
     link: /engine/install
   - title: Armazenamento
     description: Use dados persistentes com contêineres Docker.
-    icon: database
+    icon: circle-stack
     link: /storage
   - title: Redes
     description: Gerencie conexões de rede entre contêineres.
-    icon: network_node
+    icon: server-stack
     link: /network
   - title: Logs de contêiner
     description: Aprenda como visualizar e ler logs de contêiner.
-    icon: text_snippet
+    icon: document-text
     link: /config/containers/logging/
   - title: Limpeza
     description: Remova os recursos não utilizados.
-    icon: content_cut
+    icon: scissors
     link: /config/pruning
   - title: Configure o daemon
     description: Explore as opções de configuração do daemon do Docker.
-    icon: tune
+    icon: adjustments-horizontal
     link: /config/daemon
   - title: Modo rootless
     description: Execute o Docker sem privilégios de root.
-    icon: security
+    icon: shield-check
     link: /engine/security/rootless
   - title: Recursos descontinuados
     description: >-
       Descubra quais recursos da Docker Engine você deve parar de usar.
-    icon: folder_delete
+    icon: folder-minus
     link: /engine/deprecated/
   - title: Notas de lançamento
     description: Leia as notas de lançamento da versão mais recente.
-    icon: note_add
+    icon: document-plus
     link: /engine/release-notes
 aliases:
   - /edge/
