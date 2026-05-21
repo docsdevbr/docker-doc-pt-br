@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/rootless/troubleshoot.md
-source_revision: 6e8ef4cf2140a8f48485eb17820e5bb5bd66931c
+source_revision: 8ca7f1bdb2064b4f4c47f425fdd614e061623dad
 translation_status: ready
 
 description: Solução de problemas no modo rootless
@@ -25,7 +25,7 @@ weight: 30
 {{< tabs >}}
 {{< tab name="Ubuntu" >}}
 
-- O Ubuntu 24.04 e versões posteriores habilitam namespaces de usuário não
+* O Ubuntu 24.04 e versões posteriores habilitam namespaces de usuário não
   privilegiados restritos por padrão, o que impede que processos não
   privilegiados criem namespaces de usuário, a menos que um perfil do AppArmor
   esteja configurado para permitir que os programas usem namespaces de usuário
@@ -65,59 +65,64 @@ weight: 30
 {{< /tab >}}
 {{< tab name="Arch Linux" >}}
 
-- Adicione `kernel.unprivileged_userns_clone=1` ao arquivo `/etc/sysctl.conf`
+* Adicione `kernel.unprivileged_userns_clone=1` ao arquivo `/etc/sysctl.conf`
   (ou `/etc/sysctl.d`) e execute `sudo sysctl --system`.
 
 {{< /tab >}}
 {{< tab name="openSUSE e SLES" >}}
 
-- O comando `sudo modprobe ip_tables iptable_mangle iptable_nat iptable_filter`
+* O comando `sudo modprobe ip_tables iptable_mangle iptable_nat iptable_filter`
   é necessário.
   Isso também pode ser necessário em outras distribuições, dependendo da
   configuração.
-- Funciona no openSUSE 15 e no SLES 15.
+* Funciona no openSUSE 15 e no SLES 15.
 
 {{< /tab >}}
 {{< tab name="CentOS, RHEL e Fedora" >}}
 
-- Para o RHEL 8 e distribuições similares, recomenda-se a instalação do
+* Para o RHEL 8 e distribuições similares, recomenda-se a instalação do
   `fuse-overlayfs`.
   Execute `sudo dnf install -y fuse-overlayfs`.
   Esta etapa não é necessária no RHEL 9 e distribuições similares.
-- Você pode precisar executar `sudo dnf install -y iptables`.
+* Você pode precisar executar `sudo dnf install -y iptables`.
 
 {{< /tab >}}
 {{< /tabs >}}
 
 ## Limitações conhecidas
 
-- Somente os seguintes drivers de armazenamento são suportados:
-  - `overlay2` (somente se estiver executando com o kernel 5.11 ou posterior).
-  - `fuse-overlayfs` (somente se estiver executando com o kernel 4.18 ou
+* Somente os seguintes drivers de armazenamento são suportados:
+  * `overlay2` (somente se estiver executando com o kernel 5.11 ou posterior).
+  * `fuse-overlayfs` (somente se estiver executando com o kernel 4.18 ou
     posterior e o `fuse-overlayfs` estiver instalado).
-  - `btrfs` (somente se estiver executando com o kernel 4.18 ou posterior ou se
+  * `btrfs` (somente se estiver executando com o kernel 4.18 ou posterior ou se
     `~/.local/share/docker` estiver montado com a opção de montagem
     `user_subvol_rm_allowed`).
-  - `vfs`.
-- O cgroup é suportado somente quando executado com cgroup v2 e systemd.
+  * `vfs`.
+* O cgroup é suportado somente quando executado com cgroup v2 e systemd.
   Consulte [Limitando recursos](./tips.md#limitando-recursos).
-- Os seguintes recursos não são suportados:
-  - AppArmor
-  - Checkpoint
-  - Rede overlay
-  - Expor as portas SCTP.
-- Para usar o comando `ping`, consulte
+* Os seguintes recursos não são suportados:
+  * AppArmor
+  * Checkpoint
+  * Rede overlay
+  * Expor as portas SCTP.
+* Para usar o comando `ping`, consulte
   [Roteamento de pacotes ping](./tips.md#roteamento-de-pacotes-ping).
-- Para expor portas TCP/UDP privilegiadas (< 1024), consulte
+* Para expor portas TCP/UDP privilegiadas (< 1024), consulte
   [Expondo portas privilegiadas](./tips.md#expondo-portas-privilegiadas).
-- O `IPAddress` exibido em `docker inspect` está dentro do namespace de rede do
+* Montagens NFS como "data-root" do Docker não são suportadas.
+  Essa limitação não é específica do modo rootless.
+
+### Limitações históricas
+
+#### Até a Docker Engine v29.5
+
+* O `IPAddress` exibido em `docker inspect` está dentro do namespace de rede do
   RootlessKit.
   Isso significa que o endereço IP não é acessível a partir do host sem usar o
   `nsenter` para acessar o namespace de rede.
-- A rede do host (`docker run --net=host`) também está dentro do namespace do
+* A rede do host (`docker run --net=host`) também está dentro do namespace do
   RootlessKit.
-- Montagens NFS como "data-root" do Docker não são suportadas.
-  Essa limitação não é específica do modo rootless.
 
 ## Solução de problemas
 
@@ -214,9 +219,9 @@ Em vez de `sudo -iu <nome-de-usuario>`, você precisa fazer login usando
 `pam_systemd`.
 Por exemplo:
 
-- Faça login através do console gráfico.
-- `ssh <nome-de-usuario>@localhost`
-- `machinectl shell <nome-de-usuario>@`
+* Faça login através do console gráfico.
+* `ssh <nome-de-usuario>@localhost`
+* `machinectl shell <nome-de-usuario>@`
 
 **The daemon does not start up automatically**
 
@@ -290,24 +295,29 @@ Se você estiver enfrentando comportamentos inesperados ou problemas de
 desempenho relacionados à rede, consulte a tabela a seguir, que mostra as
 configurações suportadas pelo RootlessKit e como elas se comparam:
 
-| Driver de rede | Driver de porta | Taxa de transferência de rede | Taxa de transferência de porta | Propagação de IP de origem | Sem SUID | Observação                                                                          |
-| -------------- | --------------- | ----------------------------- | ------------------------------ | -------------------------- | -------- | ----------------------------------------------------------------------------------- |
-| `slirp4netns`  | `builtin`       | Lenta                         | Rápida ✅                      | ❌                         | ✅       | Padrão em uma configuração típica                                                   |
-| `vpnkit`       | `builtin`       | Lenta                         | Rápida ✅                      | ❌                         | ✅       | Padrão quando `slirp4netns` não está instalado                                      |
-| `slirp4netns`  | `slirp4netns`   | Lenta                         | Lenta                          | ✅                         | ✅       |                                                                                     |
-| `pasta`        | `implicit`      | Lenta                         | Rápida ✅                      | ✅                         | ✅       | Experimental; Requer a versão 2023_12_04 ou posterior do pasta                      |
-| `lxc-user-nic` | `builtin`       | Rápida ✅                     | Rápida ✅                      | ❌                         | ❌       | Experimental                                                                        |
-| `bypass4netns` | `bypass4netns`  | Rápida ✅                     | Rápida ✅                      | ✅                         | ✅       | **Nota:** Não integrado ao RootlessKit, pois requer um perfil seccomp personalizado |
+| Driver de rede     | Driver de porta    | Taxa de transferência de rede | Taxa de transferência de porta | Propagação de IP de origem | Sem SUID | Observação                                                                           |
+|--------------------|--------------------|-------------------------------|--------------------------------|----------------------------| -------- |--------------------------------------------------------------------------------------|
+| `gvisor-tap-vsock` | `builtin`          | Lenta                         | Rápida ✅                       | ✅ (*)                      | ✅ | Padrão quando `slirp4netns` não está instalado.                                      |
+| `slirp4netns`      | `builtin`          | Lenta                         | Rápida ✅                       | ✅ (*)                      | ✅ | Padrão quando `slirp4netns` está instalado.                                          |
+| `vpnkit`           | `builtin`          | Lenta                         | Rápida ✅                       | ✅ (*)                      | ✅ | Legado                                                                               |
+| `gvisor-tap-vsock` | `gvisor-tap-vsock` | Lenta                         | Lenta                          | ❌                          | ✅ | Não recomendado. Use o driver de porta `builtin` em vez disso.                       |
+| `slirp4netns`      | `slirp4netns`      | Lenta                         | Lenta                          | ✅                          | ✅       |                                                                                      |
+| `pasta`            | `implicit`         | Lenta                         | Rápida ✅                       | ✅                          | ✅       | Experimental. Requer a versão 2023_12_04 ou posterior do pasta.                      |
+| `lxc-user-nic`     | `builtin`          | Rápida ✅                      | Rápida ✅                       | ✅ (*)                      | ❌       | Experimental                                                                         |
+| `bypass4netns`     | `bypass4netns`     | Rápida ✅                      | Rápida ✅                       | ✅                          | ✅       | **Nota:** Não integrado ao RootlessKit, pois requer um perfil seccomp personalizado. |
+
+(*) Aplicável a partir do RootlessKit v3.0.
+Também requer que o `userland-proxy` esteja desativado.
 
 Para obter informações sobre como solucionar problemas específicos de rede,
 consulte:
 
-- [`docker run -p` falha com `cannot expose privileged port`](#docker-run--p-falha-com-cannot-expose-privileged-port)
-- [O ping não funciona](#o-ping-não-funciona)
-- [O `IPAddress` exibido em `docker inspect` está inacessível](#o-ipaddress-exibido-em-docker-inspect-está-inacessível)
-- [`--net=host` não escuta portas no namespace de rede do host](#--nethost-não-escuta-portas-no-namespace-de-rede-do-host)
-- [Rede lenta](#rede-lenta)
-- [`docker run -p` não propaga endereços IP de origem](#docker-run--p-não-propaga-endereços-ip-de-origem)
+* [`docker run -p` falha com `cannot expose privileged port`](#docker-run--p-falha-com-cannot-expose-privileged-port)
+* [O ping não funciona](#o-ping-não-funciona)
+* [O `IPAddress` exibido em `docker inspect` está inacessível](#o-ipaddress-exibido-em-docker-inspect-está-inacessível)
+* [`--net=host` não escuta portas no namespace de rede do host](#--nethost-não-escuta-portas-no-namespace-de-rede-do-host)
+* [Rede lenta](#rede-lenta)
+* [`docker run -p` não propaga endereços IP de origem](#docker-run--p-não-propaga-endereços-ip-de-origem)
 
 #### `docker run -p` falha com `cannot expose privileged port`
 
@@ -344,15 +354,17 @@ Para mais detalhes, consulte
 
 #### O `IPAddress` exibido em `docker inspect` está inacessível
 
-Este é o comportamento esperado, já que o daemon está em um namespace dentro do
-namespace de rede do RootlessKit.
-Use `docker run -p` em vez disso.
+Esse era o comportamento esperado até a Docker Engine v29.5, já que o daemon
+estava em um namespace dentro do namespace de rede do RootlessKit.
+Use `docker run -p` em vez disso ou atualize para a Docker Engine v29.5 ou
+posterior.
 
 #### `--net=host` não escuta portas no namespace de rede do host
 
-Este é o comportamento esperado, já que o daemon está em um namespace dentro do
-namespace de rede do RootlessKit.
-Use `docker run -p` em vez disso.
+Esse era o comportamento esperado até a Docker Engine v29.5, já que o daemon
+estava em um namespace dentro do namespace de rede do RootlessKit.
+Use `docker run -p` em vez disso ou atualize para a Docker Engine v29.5 ou
+posterior.
 
 #### Rede lenta
 
@@ -364,7 +376,7 @@ Se o slirp4netns não estiver instalado, o Docker usa o
 A instalação do slirp4netns pode melhorar a taxa de transferência da rede.
 
 Para mais informações sobre os drivers de rede do RootlessKit, consulte a
-[documentação do RootlessKit](https://github.com/rootless-containers/rootlesskit/blob/v2.0.0/docs/network.md).
+[documentação do RootlessKit](https://github.com/rootless-containers/rootlesskit/blob/v3.0.0/docs/network.md).
 
 Além disso, alterar o valor do MTU também pode melhorar a taxa de transferência.
 O valor do MTU pode ser especificado criando o arquivo
@@ -384,12 +396,44 @@ $ systemctl --user restart docker
 
 #### `docker run -p` não propaga endereços IP de origem
 
-Isso ocorre porque o Docker no modo rootless usa o driver de porta `builtin` do
-RootlessKit por padrão, que não suporta a propagação de IP de origem.
+{{< tabs >}}
+{{< tab name="RootlessKit v3.0 ou posterior" >}}
+
+Isso ocorre porque o `userland-proxy` da Docker Engine é incompatível com a
+propagação do IP de origem do RootlessKit.
+
+Para desativar o `userland-proxy`, adicione a seguinte configuração ao arquivo
+`~/.config/docker/daemon.json`:
+
+```json
+{"userland-proxy": false}
+```
+
+Em seguida, reinicie o daemon:
+
+```bash
+systemctl --user restart docker
+```
+
+Você também pode precisar carregar o módulo do kernel `br_netfilter`:
+
+```bash
+sudo tee /etc/modules-load.d/docker.conf <<EOF >/dev/null
+br_netfilter
+EOF
+
+sudo systemctl restart systemd-modules-load.service
+```
+
+{{< /tab >}}
+{{< tab name="Versões anteriores" >}}
+
+Isso ocorre porque a porta `builtin` do RootlessKit não suportava propagação de
+IP de origem até a versão 3.0.
 Para habilitar a propagação de IP de origem, você pode:
 
-- Usar o driver de porta `slirp4netns` do RootlessKit.
-- Usar o driver de rede `pasta` do RootlessKit, com o driver de porta
+* Usar o driver de porta `slirp4netns` do RootlessKit.
+* Usar o driver de rede `pasta` do RootlessKit, com o driver de porta
   `implicit`.
 
 O driver de rede `pasta` é experimental, mas oferece melhor desempenho de
@@ -402,7 +446,7 @@ Para alterar a configuração de rede do RootlessKit:
 2. Adicione o seguinte conteúdo, dependendo da configuração que você deseja
    usar:
 
-   - `slirp4netns`
+   * `slirp4netns`
 
       ```systemd
       [Service]
@@ -410,7 +454,7 @@ Para alterar a configuração de rede do RootlessKit:
       Environment="DOCKERD_ROOTLESS_ROOTLESSKIT_PORT_DRIVER=slirp4netns"
       ```
 
-   - Driver de rede `pasta` com driver de porta `implicit`:
+   * Driver de rede `pasta` com driver de porta `implicit`:
 
       ```systemd
       [Service]
@@ -425,10 +469,13 @@ Para alterar a configuração de rede do RootlessKit:
    $ systemctl --user restart docker
    ```
 
+{{< /tab >}}
+{{< /tabs >}}
+
 Para obter mais informações sobre as opções de rede do RootlessKit, consulte:
 
-- [Drivers de rede](https://github.com/rootless-containers/rootlesskit/blob/v2.0.0/docs/network.md)
-- [Drivers de porta](https://github.com/rootless-containers/rootlesskit/blob/v2.0.0/docs/port.md)
+* [Drivers de rede](https://github.com/rootless-containers/rootlesskit/blob/v3.0.0/docs/network.md)
+* [Drivers de porta](https://github.com/rootless-containers/rootlesskit/blob/v3.0.0/docs/port.md)
 
 ### Dicas para depuração
 
