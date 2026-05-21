@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/_index.md
-revision: 54ca9b78c4bf83a1da664b66a7f39dc21166df18
+revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
 status: ready
 
 title: Comece
@@ -19,34 +19,34 @@ keywords: Docker, comece
 description: Comece a usar o Docker.
 layout: wide
 params:
-  icon: download
+  icon: arrow-down-tray
   notoc: true
   get-started:
   - title: Baixe o Docker
     description: Escolha a melhor forma de instalação para sua configuração.
     link: /get-started/get-docker/
-    icon: download
+    icon: arrow-down-tray
   - title: O que é o Docker?
     description: Saiba mais sobre a plataforma Docker.
     link: /get-started/docker-overview/
-    icon: summarize
+    icon: document-text
   get-started2:
   - title: Introdução
     description: >-
       Comece com os conceitos básicos e os benefícios da conteinerização de suas
       aplicações.
     link: /get-started/introduction/
-    icon: rocket
+    icon: rocket-launch
   - title: Conceitos do Docker
     description: >-
       Obtenha uma melhor compreensão dos conceitos básicos do Docker.
     link: /get-started/docker-concepts/the-basics/what-is-a-container/
-    icon: foundation
+    icon: home
   - title: Workshop sobre Docker
     description: >-
       Participe de um workshop de 45 minutos para aprender sobre o Docker.
     link: /get-started/workshop/
-    icon: desk
+    icon: computer-desktop
 aliases:
   - /engine/get-started/
   - /engine/tutorials/usingdocker/
