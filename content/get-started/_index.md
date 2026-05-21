@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/_index.md
-revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
-status: ready
+source_revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
+translation_status: ready
 
 title: Comece
 keywords: Docker, comece
