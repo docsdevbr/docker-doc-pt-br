@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/_index.md
-source_revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
+source_revision: 322a7cf2e87b76291ed9e756d610623b07326e29
 translation_status: ready
 
 title: Imagens Docker Reforçadas
@@ -28,37 +28,37 @@ params:
       description: >-
         Siga um guia passo a passo para explorar e executar uma Imagem Docker
         Reforçada.
-      icon: rocket_launch
+      icon: rocket-launch
       link: /dhi/get-started/
     - title: Explore
       description: >-
         Aprenda o que são Imagens Docker Reforçadas, como elas são construídas e
         o que as diferencia das imagens base típicas.
-      icon: info
+      icon: information-circle
       link: /dhi/explore/
     - title: Recursos
       description: >-
         Descubra os recursos de segurança, conformidade e prontidão corporativa
         integrados às Imagens Docker Reforçadas.
-      icon: lock
+      icon: lock-closed
       link: /dhi/features/
     - title: Tutoriais
       description: >-
         Guias passo a passo para usar, verificar, analisar e migrar para Imagens
         Docker Reforçadas.
-      icon: play_arrow
+      icon: play
       link: /dhi/how-to/
     - title: Conceitos básicos
       description: >-
         Compreenda os princípios da cadeia de suprimentos segura que tornam as
         Imagens Docker Reforçadas prontas para produção.
-      icon: fact_check
+      icon: clipboard-document-check
       link: /dhi/core-concepts/
     - title: Solução de problemas
       description: >-
         Resolva problemas comuns na criação, execução ou depuração de Imagens
         Docker Reforçadas.
-      icon: help_center
+      icon: question-mark-circle
       link: /dhi/troubleshoot/
     - title: Recursos adicionais
       description: >-
@@ -77,22 +77,22 @@ com pouca ou nenhuma necessidade de reconfiguração.
 
 As DHI estão disponíveis nas seguintes três assinaturas:
 
-| Recurso                                                                                            | Community | Select | Enterprise                                                                                                                                                                                                        |
-|----------------------------------------------------------------------------------------------------|-----------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Imagens reforçadas e mínimas                                                                       | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Quase zero CVEs                                                                                    | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Proveniência verificável de SBOMs e SLSA Build L3                                                  | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Visibilidade completa e sem supressão de CVEs                                                      | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Adoção imediata, sem alterações no fluxo de trabalho                                               | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Catálogo completo de imagens de código aberto sob Apache 2.0                                       | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Construído com Pacotes de Sistema Reforçados do Docker                                             | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Cadência upstream para patches lançados pelo Docker                                                | ✅         | ✅      | ✅                                                                                                                                                                                                                 |
-| Variantes FIPS/STIG                                                                                | ❌         | ✅      | ✅                                                                                                                                                                                                                 |
-| Correções de CVE críticas em menos de 7 dias com aplicação contínua de patches com garantia de SLA | ❌         | ✅      | ✅                                                                                                                                                                                                                 |
-| Personalizações                                                                                    | ❌         | Até 5  | Ilimitado                                                                                                                                                                                                         |
-| Acesso ao repositório de Pacotes de Sistema Reforçados                                             | ❌         | ❌      | ✅                                                                                                                                                                                                                 |
-| Acesso ao catálogo completo disponível                                                             | ❌         | ❌      | ✅                                                                                                                                                                                                                 |
-| Suporte ao Ciclo de Vida Estendido disponível                                                      | ❌         | ❌      | ✅<br/><br/>Inclui:<br/>✅ +5 anos de atualizações reforçadas.<br/>✅ Mantém atualizações de segurança após o fim do suporte upstream.<br/>✅ SBOMs e procedência.<br/>✅ Protege cargas de trabalho de longa duração. |
+| Recurso                                                                                            | Community | Select  | Enterprise                            |
+|----------------------------------------------------------------------------------------------------|-----------|---------|---------------------------------------|
+| Imagens reforçadas e mínimas                                                                       | ✅         | ✅       | ✅                                     |
+| Quase zero CVEs                                                                                    | ✅         | ✅       | ✅                                     |
+| Proveniência verificável de SBOMs e SLSA Build L3                                                  | ✅         | ✅       | ✅                                     |
+| Visibilidade completa e sem supressão de CVEs                                                      | ✅         | ✅       | ✅                                     |
+| Adoção imediata, sem alterações no fluxo de trabalho                                               | ✅         | ✅       | ✅                                     |
+| Catálogo completo de imagens de código aberto sob Apache 2.0                                       | ✅         | ✅       | ✅                                     |
+| Construído com Pacotes de Sistema Reforçados do Docker                                             | ✅         | ✅       | ✅                                     |
+| Cadência upstream para patches lançados pelo Docker                                                | ✅         | ✅       | ✅                                     |
+| Variantes FIPS/STIG                                                                                | ❌         | ✅       | ✅                                     |
+| Correções de CVE críticas em menos de 7 dias com aplicação contínua de patches com garantia de SLA | ❌         | ✅       | ✅                                     |
+| Personalizações                                                                                    | ❌         | ✅ Até 5 | ✅ Ilimitado                           |
+| Acesso ao repositório de Pacotes de Sistema Reforçados                                             | ❌         | ❌       | ✅                                     |
+| Acesso ao catálogo completo disponível                                                             | ❌         | ❌       | ✅                                     |
+| Suporte ao Ciclo de Vida Estendido disponível                                                      | ❌         | ❌       | ✅ +5 anos de atualizações reforçadas. |
 
 Para preços e mais detalhes, consulte a
 [comparação de assinaturas das Imagens Docker Reforçadas](https://www.docker.com/products/hardened-images/#compare).
