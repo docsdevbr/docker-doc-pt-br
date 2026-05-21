@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/using-the-build-cache.md
-revision: 19961dd50fa5a23b4d9fabe272eb885b6a5311a9
-status: ready
+source_revision: 19961dd50fa5a23b4d9fabe272eb885b6a5311a9
+translation_status: ready
 
 title: Using the build cache
 keywords: concepts, build, images, container, docker desktop

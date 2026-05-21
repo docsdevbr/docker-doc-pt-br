@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/_index.md
-revision: 33226cf897eff35777786dcc75ac57d3cc0c073c
-status: ready
+source_revision: 33226cf897eff35777786dcc75ac57d3cc0c073c
+translation_status: ready
 
 title: Construindo imagens
 weight: 20

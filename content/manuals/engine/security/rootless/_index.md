@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/rootless/_index.md
-revision: 89344f43f19c68ef2d6941de0a5633ff6f1754e5
-status: ready
+source_revision: 89344f43f19c68ef2d6941de0a5633ff6f1754e5
+translation_status: ready
 
 description: >-
   Execute o daemon do Docker como um usuário não root (modo rootless).

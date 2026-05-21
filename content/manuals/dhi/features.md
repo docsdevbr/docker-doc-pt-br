@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/features.md
-revision: f2376b6b91dbad52c3b4d90ea5f4eb01e1ea3302
-status: ready
+source_revision: f2376b6b91dbad52c3b4d90ea5f4eb01e1ea3302
+translation_status: ready
 
 title: Recursos das Imagens Docker Reforçadas
 linktitle: Recursos

@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md
-revision: 0220ef67450476a5e2c18f481f29a3ee1b352f56
-status: ready
+source_revision: 0220ef67450476a5e2c18f481f29a3ee1b352f56
+translation_status: ready
 
 title: Sobrescrevendo as configurações padrão do contêiner
 weight: 2

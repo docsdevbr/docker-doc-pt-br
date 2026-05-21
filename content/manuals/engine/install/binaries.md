@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/binaries.md
-revision: d083617e9d835b3c2300d7952a7e4ced36635adb
-status: ready
+source_revision: d083617e9d835b3c2300d7952a7e4ced36635adb
+translation_status: ready
 
 description: >-
   Aprenda como instalar o Docker como um binário.

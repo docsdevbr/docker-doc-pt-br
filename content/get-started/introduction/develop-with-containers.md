@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/develop-with-containers.md
-revision: 3e21d7caaa6f95057fb4708881a3decbfeb56090
-status: ready
+source_revision: 3e21d7caaa6f95057fb4708881a3decbfeb56090
+translation_status: ready
 
 title: Desenvolva com contêineres
 keywords: conceitos, construção, imagens, contêiner, docker desktop

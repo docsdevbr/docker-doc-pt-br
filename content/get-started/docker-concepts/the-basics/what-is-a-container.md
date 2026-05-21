@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-container.md
-revision: f97a5fa1f8dee89a79793cf1f91bae8352c562f3
-status: ready
+source_revision: f97a5fa1f8dee89a79793cf1f91bae8352c562f3
+translation_status: ready
 
 title: O que é um contêiner?
 weight: 10

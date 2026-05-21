@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-overview.md
-revision: 88db8a35ad90f096c3bed808fad90192b6144c78
-status: ready
+source_revision: 88db8a35ad90f096c3bed808fad90192b6144c78
+translation_status: ready
 
 description: >-
   Obtenha uma visão geral aprofundada da plataforma Docker, incluindo para que

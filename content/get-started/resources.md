@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/resources.md
-revision: 6eb77d004b7287894561333add02301c45c0223f
-status: ready
+source_revision: 6eb77d004b7287894561333add02301c45c0223f
+translation_status: ready
 
 title: Recursos educacionais
 keywords: >-

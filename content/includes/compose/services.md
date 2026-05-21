@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/includes/compose/services.md
-revision: e3aa78b72c9faf56e97896681c33425cafc1c847
-status: ready
+source_revision: e3aa78b72c9faf56e97896681c33425cafc1c847
+translation_status: ready
 ---
 
 Um serviço é uma definição abstrata de um recurso computacional em uma aplicação

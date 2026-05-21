@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/centos.md
-revision: f819659d0e74442285d0c3f2dbc075b7f04d4218
-status: ready
+source_revision: f819659d0e74442285d0c3f2dbc075b7f04d4218
+translation_status: ready
 
 description: >-
   Aprenda como instalar a Docker Engine no CentOS.

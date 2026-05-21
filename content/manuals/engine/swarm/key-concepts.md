@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/swarm/key-concepts.md
-revision: 6e4790e2912429d3e06e461d60732a7a5dba3c2a
-status: ready
+source_revision: 6e4790e2912429d3e06e461d60732a7a5dba3c2a
+translation_status: ready
 
 description: Introdução aos principais conceitos do modo swarm da Docker Engine.
 keywords: docker, contêiner, cluster, modo swarm, docker engine

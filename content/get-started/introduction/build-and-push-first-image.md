@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/build-and-push-first-image.md
-revision: aa3af370e7a38eaab6d9d7359cd6beab78fdc314
-status: ready
+source_revision: aa3af370e7a38eaab6d9d7359cd6beab78fdc314
+translation_status: ready
 
 title: Crie e publique sua primeira imagem
 keywords: conceitos, contêiner, docker desktop

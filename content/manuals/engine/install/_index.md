@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/_index.md
-revision: 95fff41cc2c387dc275aa6d1d40ceffbcf7bb71d
-status: ready
+source_revision: 95fff41cc2c387dc275aa6d1d40ceffbcf7bb71d
+translation_status: ready
 
 title: Instale a Docker Engine
 linkTitle: Instale

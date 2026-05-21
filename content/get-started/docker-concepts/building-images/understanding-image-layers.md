@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/understanding-image-layers.md
-revision: f482b78ec94de3c39bc6371aa8210f559432d12a
-status: ready
+source_revision: f482b78ec94de3c39bc6371aa8210f559432d12a
+translation_status: ready
 
 title: Entendendo as camadas de imagem
 keywords: conceitos, construção, imagens, contêiner, docker desktop

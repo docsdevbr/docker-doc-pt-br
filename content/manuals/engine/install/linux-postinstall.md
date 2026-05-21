@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/linux-postinstall.md
-revision: f4ac24cacfd7915b18c5eb0257094ebc77f663a4
-status: ready
+source_revision: f4ac24cacfd7915b18c5eb0257094ebc77f663a4
+translation_status: ready
 
 description: >-
   Encontre os passos recomendados para a pós-instalação da Docker Engine para

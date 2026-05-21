@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/_index.md
-revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
-status: ready
+source_revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
+translation_status: ready
 
 title: Docker Desktop
 weight: 10

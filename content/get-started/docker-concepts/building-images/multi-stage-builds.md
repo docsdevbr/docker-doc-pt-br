@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/multi-stage-builds.md
-revision: fbcabd5b97fcfdf62d76e6735765d3388ed184d6
-status: ready
+source_revision: fbcabd5b97fcfdf62d76e6735765d3388ed184d6
+translation_status: ready
 
 title: Construções multiestágio
 keywords: conceitos, construção, imagens, contêiner, docker desktop

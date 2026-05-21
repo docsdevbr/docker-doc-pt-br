@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md
-revision: c5b3cb60ad63dca4d6fc7cf19c001ba893b0c6b2
-status: ready
+source_revision: c5b3cb60ad63dca4d6fc7cf19c001ba893b0c6b2
+translation_status: ready
 
 title: Construa, adicione tags e publique uma imagem
 keywords: conceitos, construção, imagens, contêiner, docker desktop

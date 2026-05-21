@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/_index.md
-revision: 6fe2b1154d2a5c7727dcd4664a2a7d7714623022
-status: ready
+source_revision: 6fe2b1154d2a5c7727dcd4664a2a7d7714623022
+translation_status: ready
 
 title: Documentação do Docker
 description: >-

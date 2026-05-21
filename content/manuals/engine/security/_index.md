@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/_index.md
-revision: b398f346a7e38451cacda1cfe54f1697d2685cdc
-status: ready
+source_revision: b398f346a7e38451cacda1cfe54f1697d2685cdc
+translation_status: ready
 
 description: Análise da superfície de ataque do daemon do Docker.
 keywords: docker, documentação do docker, segurança

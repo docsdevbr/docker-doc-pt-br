@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/debian.md
-revision: aeb2e86060e46c72996a758b76c14479b362f7de
-status: ready
+source_revision: aeb2e86060e46c72996a758b76c14479b362f7de
+translation_status: ready
 
 description: >-
   Aprenda como instalar a Docker Engine no Debian.

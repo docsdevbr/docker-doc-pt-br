@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/ubuntu.md
-revision: 33d94e3011cbc9378e43279b6c4de0c8e50e83e8
-status: ready
+source_revision: 33d94e3011cbc9378e43279b6c4de0c8e50e83e8
+translation_status: ready
 
 description: >-
   Impulsione suas aplicações de servidor do lado do cliente com a Docker Engine

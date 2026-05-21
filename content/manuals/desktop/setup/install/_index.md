@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/install/_index.md
-revision: f4310aed2f865acfe962395874defedb61752c2a
-status: ready
+source_revision: f4310aed2f865acfe962395874defedb61752c2a
+translation_status: ready
 
 build:
   render: never

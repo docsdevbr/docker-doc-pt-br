@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/install/windows-install.md
-revision: 5fb0fb25fdb00e8019576245f80acc194efa2ce4
-status: ready
+source_revision: 5fb0fb25fdb00e8019576245f80acc194efa2ce4
+translation_status: ready
 
 description: >-
   Comece a usar o Docker para Windows.

@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/dhi/get-started.md
-revision: d693c78fcdeceba2657f0b240608983164cd0340
-status: ready
+source_revision: d693c78fcdeceba2657f0b240608983164cd0340
+translation_status: ready
 
 linktitle: Início rápido
 title: Início rápido das Imagens Docker Reforçadas

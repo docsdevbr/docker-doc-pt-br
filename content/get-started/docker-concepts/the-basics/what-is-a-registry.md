@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-registry.md
-revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
-status: ready
+source_revision: e7e28c4386ee99ceb49c33c0300f4a19ba0b8a60
+translation_status: ready
 
 title: O que é um registro?
 weight: 30

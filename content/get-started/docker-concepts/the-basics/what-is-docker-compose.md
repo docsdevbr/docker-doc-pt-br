@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md
-revision: c5b3cb60ad63dca4d6fc7cf19c001ba893b0c6b2
-status: ready
+source_revision: c5b3cb60ad63dca4d6fc7cf19c001ba893b0c6b2
+translation_status: ready
 
 title: O que é o Docker Compose?
 weight: 40

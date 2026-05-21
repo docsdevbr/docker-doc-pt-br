@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/multi-container-applications.md
-revision: eaff43affd5b3bdedbbc65047bc41a58237b4f29
-status: ready
+source_revision: eaff43affd5b3bdedbbc65047bc41a58237b4f29
+translation_status: ready
 
 title: Aplicações multicontêineres
 weight: 5

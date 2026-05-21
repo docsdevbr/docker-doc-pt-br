@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/_index.md
-revision: 2c0dd7e08312f8b9470f1e30cd959a2c68b67dbf
-status: ready
+source_revision: 2c0dd7e08312f8b9470f1e30cd959a2c68b67dbf
+translation_status: ready
 
 description: >-
   Encontre a versão mais recente recomendada do formato de arquivo Docker

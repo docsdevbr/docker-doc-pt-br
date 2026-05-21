@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/includes/install-script.md
-revision: 2a483c25468533e3b377b323f01f4854dd492628
-status: ready
+source_revision: 2a483c25468533e3b377b323f01f4854dd492628
+translation_status: ready
 ---
 
 ### Instale usando o script de conveniência

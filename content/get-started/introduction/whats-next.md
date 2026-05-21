@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/introduction/whats-next.md
-revision: a09b94306da7763eb3dc752fa2c6db34ea126833
-status: ready
+source_revision: a09b94306da7763eb3dc752fa2c6db34ea126833
+translation_status: ready
 
 title: Próximos passos
 keywords: conceitos, construção, imagens, contêiner, docker desktop

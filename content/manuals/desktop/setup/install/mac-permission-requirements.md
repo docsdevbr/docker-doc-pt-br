@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/install/mac-permission-requirements.md
-revision: 5dd8bad4e7fc71927c6a9e8b27d266d0651842b3
-status: ready
+source_revision: 5dd8bad4e7fc71927c6a9e8b27d266d0651842b3
+translation_status: ready
 
 description: >-
   Entenda os requisitos de permissão para o Docker Desktop no Mac e as

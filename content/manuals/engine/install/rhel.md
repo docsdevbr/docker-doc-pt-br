@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/rhel.md
-revision: 280781f50e4129fbe7c877f5ad603310ef97d78c
-status: ready
+source_revision: 280781f50e4129fbe7c877f5ad603310ef97d78c
+translation_status: ready
 
 description: >-
   Aprenda como instalar a Docker Engine no RHEL.

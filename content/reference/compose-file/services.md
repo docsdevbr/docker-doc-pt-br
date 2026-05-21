@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/services.md
-revision: 9fe8e768d1e8f8ad4c56b9068fb045afe3185bb8
-status: wip
+source_revision: 9fe8e768d1e8f8ad4c56b9068fb045afe3185bb8
+translation_status: wip
 
 linkTitle: Serviços
 title: Defina serviços no Docker Compose

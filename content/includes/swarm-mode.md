@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/includes/swarm-mode.md
-revision: befcaf0320bf6caaa13638d02f0f8fc93aa87400
-status: ready
+source_revision: befcaf0320bf6caaa13638d02f0f8fc93aa87400
+translation_status: ready
 ---
 
 > [!NOTE]

@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/includes/compose/services-environment.md
-revision: e3aa78b72c9faf56e97896681c33425cafc1c847
-status: ready
+source_revision: e3aa78b72c9faf56e97896681c33425cafc1c847
+translation_status: ready
 ---
 
 O atributo `environment` define as variáveis de ambiente configuradas no

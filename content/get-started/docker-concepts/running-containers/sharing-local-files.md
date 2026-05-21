@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/sharing-local-files.md
-revision: 489c7318152adb6958dfd02c3743f3c6b28279b6
-status: ready
+source_revision: 489c7318152adb6958dfd02c3743f3c6b28279b6
+translation_status: ready
 
 title: Compartilhando arquivos locais com contêineres
 weight: 4

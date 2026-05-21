@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/publishing-ports.md
-revision: b1256d572f75131b9feb85c30fb1c25f9813dcb5
-status: ready
+source_revision: b1256d572f75131b9feb85c30fb1c25f9813dcb5
+translation_status: ready
 
 title: Publicando e expondo portas
 keywords: conceitos, construção, imagens, contêiner, docker desktop

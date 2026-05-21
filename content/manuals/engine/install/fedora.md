@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/fedora.md
-revision: 1043de9461886112de180b2dd401d102afe8c700
-status: ready
+source_revision: 1043de9461886112de180b2dd401d102afe8c700
+translation_status: ready
 
 description: >-
   Aprenda como instalar a Docker Engine no Fedora.

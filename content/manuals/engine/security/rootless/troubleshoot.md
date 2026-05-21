@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/security/rootless/troubleshoot.md
-revision: 6e8ef4cf2140a8f48485eb17820e5bb5bd66931c
-status: ready
+source_revision: 6e8ef4cf2140a8f48485eb17820e5bb5bd66931c
+translation_status: ready
 
 description: Solução de problemas no modo rootless
 keywords: segurança, namespaces, rootless, solução de problemas

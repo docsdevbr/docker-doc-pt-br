@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/version-and-name.md
-revision: 4c6f75f19facf9fcba938315035addd2949f180b
-status: ready
+source_revision: 4c6f75f19facf9fcba938315035addd2949f180b
+translation_status: ready
 
 title: Elementos de nível superior version e name
 description: >-

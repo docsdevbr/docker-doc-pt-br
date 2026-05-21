@@ -11,8 +11,8 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/workshop/02_our_app.md
-revision: ca0e85cf12f7a517cb633f75e414c2a4169dd5dd
-status: ready
+source_revision: ca0e85cf12f7a517cb633f75e414c2a4169dd5dd
+translation_status: ready
 
 title: Conteinerize uma aplicação
 weight: 20
