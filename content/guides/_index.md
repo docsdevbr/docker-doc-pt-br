@@ -11,14 +11,14 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/guides/_index.md
-source_revision: f062709f4b94be29523a2631d0e371e04578fa40
+source_revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
 translation_status: ready
 
 title: Guias do Docker
 linkTitle: Guias
 description: Explore os guias do Docker.
 params:
-  icon: developer_guide
+  icon: book-open
 layout: landing
 aliases:
   - /guides/language/
