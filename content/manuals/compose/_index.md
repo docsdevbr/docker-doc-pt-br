@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/compose/_index.md
-source_revision: 997b3b5f906047c9a72b9b0ea7010a45c4ccbb0f
+source_revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
 translation_status: ready
 
 title: Docker Compose
@@ -28,43 +28,43 @@ params:
 grid:
   - title: Por que usar o Compose?
     description: Entenda os principais benefícios do Docker Compose.
-    icon: feature_search
+    icon: magnifying-glass
     link: /compose/intro/features-uses/
   - title: Como o Compose funciona
     description: Entenda como o Compose funciona.
-    icon: category
+    icon: squares-2x2
     link: /compose/intro/compose-application-model/
   - title: Instale o Compose
     description: Siga as instruções para instalar o Docker Compose.
-    icon: download
+    icon: arrow-down-tray
     link: /compose/install
   - title: Início rápido
     description: >-
       Aprenda os principais conceitos do Docker Compose enquanto cria uma
       aplicação web simples em Python.
-    icon: explore
+    icon: magnifying-glass-plus
     link: /compose/gettingstarted
   - title: Consulte as notas de lançamento
     description: >-
       Descubra as melhorias e correções de bugs mais recentes.
-    icon: note_add
+    icon: document-plus
     link: "https://github.com/docker/compose/releases"
   - title: Explore a referência do arquivo Compose
     description: >-
       Encontre informações sobre como definir serviços, redes e volumes para uma
       aplicação Docker.
-    icon: polyline
+    icon: arrows-right-left
     link: /reference/compose-file
   - title: Use o Compose Bridge
     description: >-
       Transforme seu arquivo de configuração do Compose em arquivos de
       configuração para diferentes plataformas, como o Kubernetes.
-    icon: move_down
+    icon: arrow-down
     link: /compose/bridge
   - title: Navegue pelas perguntas frequentes mais comuns
     description: >-
       Explore as perguntas frequentes gerais e descubra como enviar feedback.
-    icon: help
+    icon: question-mark-circle
     link: /compose/faq
 aliases:
   - /compose/cli-command/
