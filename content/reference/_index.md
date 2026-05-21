@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/reference/_index.md
-source_revision: c69c0b53dd46ec56dc63e43e9fe6bd279f910431
+source_revision: ee71c80562c0edf1177ed79a8d67ddcd83a726e4
 translation_status: ready
 
 title: Documentação de referência
@@ -21,52 +21,52 @@ description: >-
   Encontre documentação de referência para as diversas APIs, CLIs e formatos de
   arquivo da plataforma Docker.
 params:
-  icon: terminal
+  icon: command-line
   notoc: true
   grid_files:
   - title: Dockerfile
     description: >-
       Defina o conteúdo e o comportamento de inicialização de um único
       contêiner.
-    icon: edit_document
+    icon: pencil-square
     link: /reference/dockerfile/
   - title: Arquivo Compose
     description: Defina uma aplicação multicontêiner.
-    icon: polyline
+    icon: rectangle-stack
     link: /reference/compose-file/
   grid_clis:
   - title: CLI do Docker
     description: A CLI principal do Docker, inclui todos os comandos `docker`.
-    icon: terminal
+    icon: command-line
     link: /reference/cli/docker/
   - title: CLI do Compose
     description: >-
       A CLI do Docker Compose, para criar e executar aplicações
       multicontêineres.
-    icon: subtitles
+    icon: server-stack
     link: /reference/cli/docker/compose/
   - title: CLI do daemon (dockerd)
     description: Processo persistente que gerencia contêineres.
-    icon: developer_board
+    icon: cpu-chip
     link: /reference/cli/dockerd/
   grid_apis:
   - title: API da Engine
     description: >-
       A API principal do Docker, fornece acesso programático a um daemon.
-    icon: api
+    icon: code-bracket
     link: /reference/api/engine/
   - title: API do Docker Hub
     description: API para interagir com o Docker Hub.
-    icon: communities
+    icon: cloud
     link: /reference/api/hub/latest/
   - title: API de dados do DVP
     description: >-
       API para Editores Verificados do Docker para buscar dados analíticos.
-    icon: area_chart
+    icon: chart-bar
     link: /reference/api/dvp/latest/
   - title: API do Registry
     description: API do Docker Registry.
-    icon: database
+    icon: circle-stack
     link: /reference/api/registry/latest/
 ---
 
