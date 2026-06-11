@@ -9,7 +9,12 @@
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
+source_url: https://github.com/docker/docs/blob/main/content/includes/compose/merge.md
+source_revision: e3aa78b72c9faf56e97896681c33425cafc1c847
+translation_status: ready
 ---
 
-Compose lets you define a Compose application model through multiple Compose files.
-When doing so, Compose follows certain rules to merge Compose files.
+O Compose permite que você defina um modelo de aplicação Compose por meio de
+vários arquivos Compose.
+Ao fazer isso, o Compose segue certas regras para mesclar arquivos Compose.
