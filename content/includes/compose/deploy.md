@@ -9,6 +9,12 @@
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
+source_url: https://github.com/docker/docs/blob/main/content/includes/compose/deploy.md
+source_revision: e3aa78b72c9faf56e97896681c33425cafc1c847
+translation_status: ready
 ---
 
-Deploy is an optional part of the Compose Specification. It provides a set of deployment specifications for managing the behavior of containers across different environments.
+Deploy (implantação) é uma parte opcional da Especificação do Compose.
+Ela fornece um conjunto de especificações de implantação para gerenciar o
+comportamento dos contêineres em diferentes ambientes.
