@@ -10,23 +10,37 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Networks top-level elements
-description: Explore all the attributes the networks top-level element can have.
-keywords: compose, compose specification, networks, compose file reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/networks.md
+source_revision: 0220ef67450476a5e2c18f481f29a3ee1b352f56
+translation_status: ready
+
+linkTitle: Redes
+title: Defina e gerencie redes no Docker Compose
+description: >-
+  Aprenda como configurar e controlar redes usando o elemento de nível superior
+  `networks` no Docker Compose.
+keywords: >-
+  compose, especificação do compose, redes, referência de arquivo compose
 aliases:
  - /compose/compose-file/06-networks/
 weight: 30
 ---
+
 {{% include "compose/networks.md" %}}
 
-To use a network across multiple services, you must explicitly grant each service access by using the [networks](services.md) attribute within the `services` top-level element. The `networks` top-level element has additional syntax that provides more granular control.
+Para usar uma rede em vários serviços, você deve conceder acesso explicitamente
+a cada serviço usando o atributo [networks](services.md) dentro do elemento de
+nível superior `services`.
+O elemento de nível superior `networks` possui uma sintaxe adicional que fornece
+um controle mais granular.
 
-## Examples
+## Exemplos
 
-### Basic example
+### Exemplo básico
 
-In the following example, at runtime, networks `front-tier` and `back-tier` are created and the `frontend` service
-is connected to `front-tier` and `back-tier` networks.
+No exemplo a seguir, em tempo de execução, as redes `front-tier` e `back-tier`
+são criadas e o serviço `frontend` é conectado às redes `front-tier` e
+`back-tier`.
 
 ```yml
 services:
@@ -41,7 +55,7 @@ networks:
   back-tier:
 ```
 
-### Advanced example
+### Exemplo avançado
 
 ```yml
 services:
@@ -55,34 +69,40 @@ services:
       - frontend
       - backend
   db:
-    image: postgres
+    image: postgres:18
     networks:
       - backend
 
 networks:
   frontend:
-    # Specify driver options
+    # Especifique as opções do driver
     driver: bridge
     driver_opts:
       com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
   backend:
-    # Use a custom driver
+    # Use um driver personalizado
     driver: custom-driver
 ```
 
-The advanced example shows a Compose file which defines two custom networks. The `proxy` service is isolated from the `db` service, because they do not share a network in common. Only `app` can talk to both.
+Este exemplo mostra um arquivo Compose que define duas redes personalizadas.
+O serviço `proxy` está isolado do serviço `db`, pois eles não compartilham uma
+rede em comum.
+Somente o serviço `app` pode se comunicar com ambos.
 
-## The default network
+## A rede padrão
 
-When a Compose file doesn't declare explicit networks, Compose uses an implicit `default` network. Services without an explicit [`networks`](services.md#networks) declaration are connected by Compose to this `default` network:
-
+Quando um arquivo Compose não declara redes explicitamente, o Compose usa uma
+rede `default` implícita.
+Serviços sem uma declaração explícita de [`networks`](services.md#networks) são
+conectados pelo Compose a esta rede `default`:
 
 ```yml
 services:
   some-service:
     image: foo
 ```
-This example is actually equivalent to:
+
+Este exemplo é, na verdade, equivalente a:
 
 ```yml
 services:
@@ -94,24 +114,40 @@ networks:
   default: {}
 ```
 
-You can customize the `default` network with an explicit declaration:
+Você pode personalizar a rede `default` com uma declaração explícita:
 
 ```yml
 networks:
   default:
-    name: a_network # Use a custom name
-    driver_opts:    # pass options to driver for network creation
+    name: uma_rede  # Use um nome personalizado
+    driver_opts:    # Passe opções para o driver para criação de rede
       com.docker.network.bridge.host_binding_ipv4: 127.0.0.1
 ```
 
-For options, see the [Docker Engine docs](https://docs.docker.com/engine/network/drivers/bridge/#options).
+Para opções, consulte a
+[documentação da Docker Engine](https://docs.docker.com/engine/network/drivers/bridge/#options).
 
-## Attributes
+## Atributos
+
+### `attachable`
+
+Se `attachable` estiver definido como `true`, os contêineres independentes
+poderão se conectar a esta rede, além dos serviços.
+Se um contêiner independente se conectar à rede, ele poderá se comunicar com
+serviços e outros contêineres independentes que também estejam conectados à
+rede.
+
+```yml
+networks:
+  mynet1:
+    driver: overlay
+    attachable: true
+```
 
 ### `driver`
 
-`driver` specifies which driver should be used for this network. Compose returns an error if the
-driver is not available on the platform.
+`driver` especifica qual driver deve ser usado para esta rede.
+O Compose retorna um erro se o driver não estiver disponível na plataforma.
 
 ```yml
 networks:
@@ -119,12 +155,14 @@ networks:
     driver: bridge
 ```
 
-For more information on drivers and available options, see [Network drivers](/manuals/engine/network/drivers/_index.md).
+Para obter mais informações sobre drivers e opções disponíveis, consulte
+[Drivers de rede](/manuals/engine/network/drivers/_index.md).
 
 ### `driver_opts`
 
-`driver_opts` specifies a list of options as key-value pairs to pass to the driver. These options are
-driver-dependent.
+`driver_opts` especifica uma lista de opções como pares chave-valor para passar
+para o driver.
+Essas opções são dependentes do driver.
 
 ```yml
 networks:
@@ -134,26 +172,14 @@ networks:
       com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
 ```
 
-Consult the [network drivers documentation](/manuals/engine/network/_index.md) for more information.
-
-### `attachable`
-
-If `attachable` is set to `true`, then standalone containers should be able to attach to this network, in addition to services.
-If a standalone container attaches to the network, it can communicate with services and other standalone containers
-that are also attached to the network.
-
-```yml
-networks:
-  mynet1:
-    driver: overlay
-    attachable: true
-```
+Consulte a [documentação dos drivers de rede](/manuals/engine/network/_index.md)
+para obter mais informações.
 
 ### `enable_ipv4`
 
 {{< summary-bar feature_name="Compose enable ipv4" >}}
 
-`enable_ipv4` can be used to disable IPv4 address assignment.
+`enable_ipv4` pode ser usado para desativar a atribuição de endereços IPv4.
 
 ```yml
   networks:
@@ -164,7 +190,7 @@ networks:
 
 ### `enable_ipv6`
 
-`enable_ipv6` enables IPv6 address assignment.
+`enable_ipv6` habilita a atribuição de endereços IPv6.
 
 ```yml
   networks:
@@ -174,14 +200,18 @@ networks:
 
 ### `external`
 
-If set to `true`:
- - `external` specifies that this network’s lifecycle is maintained outside of that of the application.
-Compose doesn't attempt to create these networks, and returns an error if one doesn't exist.
- - All other attributes apart from name are irrelevant. If Compose detects any other attribute, it rejects the Compose file as invalid.
+Se definido como `true`:
+  - `external` especifica que o ciclo de vida desta rede é mantido fora do ciclo
+    de vida da aplicação.
+    O Compose não tenta criar essas redes e retorna um erro se uma não existir.
+  - Todos os outros atributos, exceto o nome, são irrelevantes.
+    Se o Compose detectar qualquer outro atributo, ele rejeitará o arquivo
+    Compose como inválido.
 
-In the following example, `proxy` is the gateway to the outside world. Instead of attempting to create a network, Compose
-queries the platform for an existing network simply called `outside` and connects the
-`proxy` service's containers to it.
+No exemplo a seguir, `proxy` é o gateway para o mundo externo.
+Em vez de tentar criar uma rede, o Compose consulta a plataforma em busca de uma
+rede existente chamada `outside` e conecta os contêineres do serviço `proxy` a
+ela.
 
 ```yml
 services:
@@ -202,15 +232,18 @@ networks:
 
 ### `ipam`
 
-`ipam` specifies a custom IPAM configuration. This is an object with several properties, each of which is optional:
+`ipam` especifica uma configuração IPAM personalizada.
+Trata-se de um objeto com diversas propriedades, cada uma opcional:
 
-- `driver`: Custom IPAM driver, instead of the default.
-- `config`: A list with zero or more configuration elements, each containing a:
-  - `subnet`: Subnet in CIDR format that represents a network segment
-  - `ip_range`: Range of IPs from which to allocate container IPs
-  - `gateway`: IPv4 or IPv6 gateway for the master subnet
-  - `aux_addresses`: Auxiliary IPv4 or IPv6 addresses used by Network driver, as a mapping from hostname to IP
-- `options`: Driver-specific options as a key-value mapping.
+- `driver`: driver IPAM personalizado, em vez do padrão.
+- `config`: uma lista com zero ou mais elementos de configuração, cada um
+  contendo:
+  - `subnet`: sub-rede no formato CIDR que representa um segmento de rede.
+  - `ip_range`: intervalo de IPs a partir do qual alocar IPs de contêineres.
+  - `gateway`: gateway IPv4 ou IPv6 para a sub-rede principal.
+  - `aux_addresses`: endereços IPv4 ou IPv6 auxiliares usados pelo driver de
+     rede, como um mapeamento de hostname para IP.
+- `options`: opções específicas do driver como um mapeamento de chave-valor.
 
 ```yml
 networks:
@@ -232,14 +265,17 @@ networks:
 
 ### `internal`
 
-By default, Compose provides external connectivity to networks. `internal`, when set to `true`, lets you
-create an externally isolated network.
+Por padrão, o Compose fornece conectividade externa às redes.
+`internal`, quando definido como `true`, permite que você crie uma rede isolada
+externamente.
 
 ### `labels`
 
-Add metadata to containers using `labels`. You can use either an array or a dictionary.
+Adicione metadados aos contêineres usando `labels`.
+Você pode usar um array ou um dicionário.
 
-It is recommended that you use reverse-DNS notation to prevent labels from conflicting with those used by other software.
+Recomenda-se o uso da notação DNS reversa para evitar conflitos de labels com
+as usadas por outros softwares.
 
 ```yml
 networks:
@@ -259,12 +295,15 @@ networks:
       - "com.example.label-with-empty-value"
 ```
 
-Compose sets `com.docker.compose.project` and `com.docker.compose.network` labels.
+O Compose define as labels `com.docker.compose.project` e
+`com.docker.compose.network`.
 
 ### `name`
 
-`name` sets a custom name for the network. The name field can be used to reference networks which contain special characters.
-The name is used as is and is not scoped with the project name.
+`name` define um nome personalizado para a rede.
+O campo `name` pode ser usado para referenciar redes que contenham caracteres
+especiais.
+O nome é usado como está e não é vinculado ao nome do projeto.
 
 ```yml
 networks:
@@ -272,8 +311,10 @@ networks:
     name: my-app-net
 ```
 
-It can also be used in conjunction with the `external` property to define the platform network that Compose
-should retrieve, typically by using a parameter so the Compose file doesn't need to hard-code runtime specific values:
+Também pode ser usado em conjunto com a propriedade `external` para definir a
+rede da plataforma que o Compose deve recuperar, normalmente usando um parâmetro
+para que o arquivo Compose não precise codificar valores específicos de tempo de
+execução:
 
 ```yml
 networks:
@@ -282,6 +323,7 @@ networks:
     name: "${NETWORK_ID}"
 ```
 
-## Additional resources
+## Recursos adicionais
 
-For more examples, see [Networking in Compose](/manuals/compose/how-tos/networking.md).
+Para mais exemplos, consulte
+[Redes no Compose](/manuals/compose/how-tos/networking.md).
