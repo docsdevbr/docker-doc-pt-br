@@ -10,27 +10,46 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Volumes top-level element
-description: Explore all the attributes the volumes top-level element can have.
-keywords: compose, compose specification, volumes, compose file reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/volumes.md
+source_revision: 80faf488d21a7598b8101185bfa5ce5e38b4915b
+translation_status: ready
+
+linkTitle: Volumes
+title: Defina e gerencie volumes no Docker Compose
+description: >-
+  Controle como os volumes são declarados e compartilhados entre serviços usando
+  o elemento de nível superior volumes.
+keywords: >-
+  compose, especificação do compose, volumes, referência do arquivo compose
 aliases:
- - /compose/compose-file/07-volumes/
+  - /compose/compose-file/07-volumes/
 weight: 40
 ---
+
 {{% include "compose/volumes.md" %}}
 
-To use a volume across multiple services, you must explicitly grant each service access by using the [volumes](services.md#volumes) attribute within the `services` top-level element. The `volumes` attribute has additional syntax that provides more granular control.
+Para usar um volume em vários serviços, você deve conceder acesso explicitamente
+a cada serviço usando o atributo [volumes](services.md#volumes) dentro do
+elemento de nível superior `services`.
+O atributo `volumes` possui uma sintaxe adicional que oferece um controle mais
+granular.
 
 > [!TIP]
 >
-> Working with large repositories or monorepos, or with virtual file systems that are no longer scaling with your codebase?
-> Compose now takes advantage of [Synchronized file shares](/manuals/desktop/features/synchronized-file-sharing.md) and automatically creates file shares for bind mounts.
-> Ensure you're signed in to Docker with a paid subscription and have enabled both **Access experimental features** and **Manage Synchronized file shares with Compose** in Docker Desktop's settings.
+> Trabalhando com repositórios grandes ou monorepos, ou com sistemas de arquivos
+> virtuais que não escalam mais com sua base de código?
+> O Compose agora aproveita os
+> [Compartilhamentos de arquivos sincronizados](/manuals/desktop/features/synchronized-file-sharing.md)
+> e cria automaticamente compartilhamentos de arquivos para montagens de volume.
+> Certifique-se de ter acessado o Docker com uma assinatura paga e de ter
+> habilitado as opções **Access experimental features** e **Manage Synchronized
+> file shares with Compose** nas configurações do Docker Desktop.
 
-## Example
+## Exemplo
 
-The following example shows a two-service setup where a database's data directory is shared with another service as a volume, named
-`db-data`, so that it can be periodically backed up.
+O exemplo a seguir mostra uma configuração com dois serviços, onde o diretório
+de dados de um banco de dados é compartilhado com outro serviço como um volume,
+chamado `db-data`, para poder ser copiado periodicamente.
 
 ```yml
 services:
@@ -48,18 +67,24 @@ volumes:
   db-data:
 ```
 
-The `db-data` volume is mounted at the `/var/lib/backup/data` and `/etc/data` container paths for backup and backend respectively.
+O volume `db-data` é montado nos caminhos de contêiner `/var/lib/backup/data` e
+`/etc/data` para backup e backend, respectivamente.
 
-Running `docker compose up` creates the volume if it doesn't already exist. Otherwise, the existing volume is used and is recreated if it's manually deleted outside of Compose.
+Executar `docker compose up` cria o volume se ele ainda não existir.
+Caso contrário, o volume existente é usado e é recriado se for excluído
+manualmente fora do Compose.
 
-## Attributes
+## Atributos
 
-An entry under the top-level `volumes` section can be empty, in which case it uses the container engine's default configuration for
-creating a volume. Optionally, you can configure it with the following keys:
+Uma entrada na seção `volumes` de nível superior pode estar vazia, caso em que
+usa a configuração padrão da engine de contêiner para criar um volume.
+Opcionalmente, você pode configurá-la com as seguintes chaves:
 
 ### `driver`
 
-Specifies which volume driver should be used. If the driver is not available, Compose returns an error and doesn't deploy the application.
+Especifica qual driver de volume deve ser usado.
+Se o driver não estiver disponível, o Compose retorna um erro e não implanta a
+aplicação.
 
 ```yml
 volumes:
@@ -69,7 +94,9 @@ volumes:
 
 ### `driver_opts`
 
-`driver_opts` specifies a list of options as key-value pairs to pass to the driver for this volume. The options are driver-dependent.
+`driver_opts` especifica uma lista de opções como pares chave-valor para passar
+ao driver para este volume.
+As opções dependem do driver.
 
 ```yml
 volumes:
@@ -80,16 +107,38 @@ volumes:
       device: ":/docker/example"
 ```
 
+Se você deseja uma montagem de volume nomeada, use o driver `local` com
+`driver_opts`.
+Esse padrão atribui um nome estável ao volume do Compose, mapeando-o para um
+caminho específico do host.
+
+```yaml
+volumes:
+  app-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /srv/app-data # deve ser o caminho absoluto do host e já existir
+```
+
+As chaves `type`, `o` e `device` são passadas para o driver local.
+Para uma montagem única de caminho de host em um único serviço, consulte
+[montagens de vinculação](/manuals/engine/storage/bind-mounts.md).
+
 ### `external`
 
-If set to `true`:
- - `external` specifies that this volume already exists on the platform and its lifecycle is managed outside
-of that of the application. Compose then doesn't create the volume and returns an error if the volume doesn't exist.
- - All other attributes apart from `name` are irrelevant. If Compose detects any other attribute, it rejects the Compose file as invalid.
+Se definido como `true`:
+  - `external` especifica que este volume já existe na plataforma e seu ciclo de
+    vida é gerenciado fora da aplicação.
+    O Compose não cria o volume e retorna um erro se o volume não existir.
+  - Todos os outros atributos, exceto `name`, são irrelevantes.
+    Se o Compose detectar qualquer outro atributo, ele rejeitará o arquivo
+    Compose como inválido.
 
-In the following example, instead of attempting to create a volume called
-`{project_name}_db-data`, Compose looks for an existing volume simply
-called `db-data` and mounts it into the `backend` service's containers.
+No exemplo a seguir, em vez de tentar criar um volume chamado
+`{nome_do_projeto}_db-data`, o Compose procura um volume existente simplesmente
+chamado `db-data` e o monta nos contêineres do serviço `backend`.
 
 ```yml
 services:
@@ -105,9 +154,11 @@ volumes:
 
 ### `labels`
 
-`labels` are used to add metadata to volumes. You can use either an array or a dictionary.
+`labels` são usadas para adicionar metadados aos volumes.
+Você pode usar um array ou um dicionário.
 
-It's recommended that you use reverse-DNS notation to prevent your labels from conflicting with those used by other software.
+Recomenda-se o uso da notação DNS reversa para evitar conflitos entre suas
+labels e as usadas por outros softwares.
 
 ```yml
 volumes:
@@ -127,12 +178,23 @@ volumes:
       - "com.example.label-with-empty-value"
 ```
 
-Compose sets `com.docker.compose.project` and `com.docker.compose.volume` labels.
+O Compose define as labels `com.docker.compose.project` e
+`com.docker.compose.volume`.
+
+> [!NOTE]
+>
+> As labels definidas aqui se aplicam somente a volumes nomeados.
+> Elas são armazenadas no recurso de volume e visíveis por meio de
+> `docker volume inspect`.
+> Elas não se aplicam a montagens de volume e não alteram a semântica de
+> montagem.
 
 ### `name`
 
-`name` sets a custom name for a volume. The name field can be used to reference volumes that contain special
-characters. The name is used as is and is not scoped with the stack name.
+`name` define um nome personalizado para um volume.
+O campo `name` pode ser usado para referenciar volumes que contêm caracteres
+especiais.
+O nome é usado como está e não é limitado pelo nome da pilha.
 
 ```yml
 volumes:
@@ -140,9 +202,11 @@ volumes:
     name: "my-app-data"
 ```
 
-This makes it possible to make this lookup name a parameter of the Compose file, so that the model ID for the volume is hard-coded but the actual volume ID on the platform is set at runtime during deployment.
+Isso possibilita que esse nome de pesquisa seja um parâmetro do arquivo Compose,
+de forma que o ID do modelo para o volume seja codificado, mas o ID real do
+volume na plataforma seja definido em tempo de execução durante a implantação.
 
-For example, if `DATABASE_VOLUME=my_volume_001` is in your `.env` file:
+Por exemplo, se `DATABASE_VOLUME=my_volume_001` estiver no seu arquivo `.env`:
 
 ```yml
 volumes:
@@ -150,13 +214,16 @@ volumes:
     name: ${DATABASE_VOLUME}
 ```
 
-Running `docker compose up` uses the volume called `my_volume_001`.
+Executar `docker compose up` utiliza o volume chamado `my_volume_001`.
 
-It can also be used in conjunction with the `external` property. This means the name used to look up the actual volume on the platform is set separately from the name used to refer to the volume within the Compose file:
+Ele também pode ser usado em conjunto com a propriedade `external`.
+Isso significa que o nome usado para localizar o volume real na plataforma é
+definido separadamente do nome usado para se referir ao volume dentro do arquivo
+Compose:
 
 ```yml
 volumes:
   db-data:
     external: true
-    name: actual-name-of-volume
+    name: nome-real-do-volume
 ```

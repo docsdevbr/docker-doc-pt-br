@@ -271,11 +271,11 @@ externamente.
 
 ### `labels`
 
-Adicione metadados aos contêineres usando `labels`.
+Adicione metadados às redes usando `labels`.
 Você pode usar um array ou um dicionário.
 
-Recomenda-se o uso da notação DNS reversa para evitar conflitos de labels com
-as usadas por outros softwares.
+Recomenda-se o uso da notação DNS reversa para evitar conflitos entre suas
+labels e as usadas por outros softwares.
 
 ```yml
 networks:
