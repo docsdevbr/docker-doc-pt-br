@@ -10,27 +10,43 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Secrets top-level elements
-description: Explore all the attributes the secrets top-level element can have.
-keywords: compose, compose specification, secrets, compose file reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/secrets.md
+source_revision: 80faf488d21a7598b8101185bfa5ce5e38b4915b
+translation_status: ready
+
+title: Segredos
+description: >-
+  Explore todos os atributos que o elemento de nível superior `secrets` pode
+  ter.
+keywords: >-
+  compose, especificação do compose, segredos, referência de arquivo compose
 aliases:
- - /compose/compose-file/09-secrets/
+  - /compose/compose-file/09-secrets/
 weight: 60
 ---
-Secrets are a flavor of [Configs](configs.md) focusing on sensitive data, with specific constraint for this usage.
 
-Services can only access secrets when explicitly granted by a [`secrets` attribute](services.md#secrets) within the `services` top-level element.
+Segredos são uma variação de [Configurações](configs.md) com foco em dados
+sensíveis, com restrições específicas para esse uso.
 
-The top-level `secrets` declaration defines or references sensitive data that is granted to the services in your Compose
-application. The source of the secret is either `file` or `environment`.
+Os serviços só podem acessar segredos quando explicitamente concedidos por um
+[atributo `secrets`](services.md#secrets) dentro do elemento de nível superior
+`services`.
 
-- `file`: The secret is created with the contents of the file at the specified path.
-- `environment`: The secret is created with the value of an environment variable on the host.
+A declaração de nível superior `secrets` define ou referencia dados sensíveis
+concedidos aos serviços em sua aplicação Compose.
+A origem do segredo é `file` ou `environment`.
 
-## Example 1
+- `file`: O segredo é criado com o conteúdo do arquivo no caminho especificado.
+- `environment`: O segredo é criado com o valor de uma variável de ambiente no
+  host.
+  Isso só é compatível com o Docker Compose.
+  Não é compatível com a implantação usando [`docker stack deploy`](/manuals/engine/swarm/stack-deploy.md).
 
-`server-certificate` secret is created as `<project_name>_server-certificate` when the application is deployed,
-by registering content of the `server.cert` as a platform secret.
+## Exemplo 1
+
+O segredo `server-certificate` é criado como
+`<nome_do_projeto>_server-certificate` quando a aplicação é implantada,
+registrando o conteúdo do arquivo `server.cert` como um segredo da plataforma.
 
 ```yml
 secrets:
@@ -38,10 +54,11 @@ secrets:
     file: ./server.cert
 ```
 
-## Example 2
+## Exemplo 2
 
-`token` secret  is created as `<project_name>_token` when the application is deployed,
-by registering the content of the `OAUTH_TOKEN` environment variable as a platform secret.
+O segredo `token` é criado como `<nome_do_projeto>_token` quando a aplicação é
+implantada, registrando o conteúdo da variável de ambiente `OAUTH_TOKEN` como um
+segredo da plataforma.
 
 ```yml
 secrets:
@@ -49,6 +66,13 @@ secrets:
     environment: "OAUTH_TOKEN"
 ```
 
-## Additional resources
+> [!NOTE]
+>
+> Segredos `environment` não são suportados ao implantar com
+> `docker stack deploy`.
+> Use `file` ou `external` como fonte de segredos.
 
-For more information, see [How to use secrets in Compose](/manuals/compose/how-tos/use-secrets.md).
+## Recursos adicionais
+
+Para mais informações, consulte
+[Como usar segredos no Compose](/manuals/compose/how-tos/use-secrets.md).
