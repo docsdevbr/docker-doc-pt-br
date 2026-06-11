@@ -10,36 +10,63 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
-title: Configs top-level elements
-description: Explore all the attributes the configs top-level element can have.
-keywords: compose, compose specification, configs, compose file reference
+source_url: https://github.com/docker/docs/blob/main/content/reference/compose-file/configs.md
+source_revision: 3415afac4033c6befb133d63ca992a72b288dd7a
+translation_status: ready
+
+linkTitle: Configs
+title: Elemento de nível superior `configs`
+description: >-
+  Gerencie e compartilhe dados de configuração usando o elemento `configs` no
+  Docker Compose.
+keywords: >-
+  compose, especificação do compose, configurações, referência de arquivo
+  compose
 aliases:
- - /compose/compose-file/08-configs/
+  - /compose/compose-file/08-configs/
 weight: 50
 ---
+
 {{% include "compose/configs.md" %}}
 
-Services can only access configs when explicitly granted by a [`configs`](services.md#configs) attribute within the `services` top-level element.
+Os serviços só podem acessar as configurações quando explicitamente autorizados
+por um atributo [`configs`](services.md#configs) dentro do elemento de nível
+superior `services`.
 
-By default, the config:
-- Is owned by the user running the container command but can be overridden by service configuration.
-- Has world-readable permissions (mode 0444), unless the service is configured to override this.
+Por padrão, a configuração:
+- Pertence ao usuário que executa o comando do contêiner, mas pode ser
+  substituída pela configuração do serviço.
+- Possui permissões de leitura para todos (modo 0444), a menos que o serviço
+  esteja configurado para substituir isso.
 
-The top-level `configs` declaration defines or references configuration data that is granted to services in your Compose application. The source of the config is either `file` or `external`.
+A declaração de nível superior `configs` define ou referencia dados de
+configuração concedidos aos serviços em sua aplicação Compose.
+A origem da configuração pode ser `file`, `environment`, `content` ou
+`external`.
 
-- `file`: The config is created with the contents of the file at the specified path.
-- `environment`: The config content is created with the value of an environment variable. Introduced in Docker Compose version [2.23.1](/manuals/compose/releases/release-notes.md#2231).
-- `content`: The content is created with the inlined value. Introduced in Docker Compose version [2.23.1](/manuals/compose/releases/release-notes.md#2231).
-- `external`: If set to true, `external` specifies that this config has already been created. Compose does not
-  attempt to create it, and if it does not exist, an error occurs.
-- `name`: The name of the config object in the container engine to look up. This field can be used to
-  reference configs that contain special characters. The name is used as is
-  and will **not** be scoped with the project name.
+- `file`: A configuração é criada com o conteúdo do arquivo no caminho
+  especificado.
+- `environment`: O conteúdo da configuração é criado com o valor de uma variável
+  de ambiente.
+  Introduzida na versão
+  [2.23.1](https://github.com/docker/compose/releases/tag/v2.23.1).
+- `content`: O conteúdo é criado com o valor em linha.
+  Introduzida na versão
+  [2.23.1](https://github.com/docker/compose/releases/tag/v2.23.1).
+- `external`: Se definido como `true`, `external` especifica que esta
+  configuração já foi criada.
+  O Compose não tenta criá-la e, se ela não existir, ocorre um erro.
+- `name`: O nome do objeto de configuração no mecanismo de contêiner a ser
+  pesquisado.
+  Este campo pode ser usado para referenciar configurações que contenham
+  caracteres especiais.
+  O nome é usado como está e **não** será definido com o nome do projeto.
 
-## Example 1
+## Exemplo 1
 
-`<project_name>_http_config` is created when the application is deployed,
-by registering the content of the `httpd.conf` as the configuration data.
+O arquivo `<nome_do_projeto>_http_config` é criado quando a aplicação é
+implantada, registrando o conteúdo do arquivo `httpd.conf` como dados de
+configuração.
 
 ```yml
 configs:
@@ -47,7 +74,9 @@ configs:
     file: ./httpd.conf
 ```
 
-Alternatively, `http_config` can be declared as external. Compose looks up `http_config` to expose the configuration data to relevant services.
+Alternativamente, `http_config` pode ser declarada como externa.
+O Compose consulta `http_config` para expor os dados de configuração aos
+serviços.
 
 ```yml
 configs:
@@ -55,11 +84,30 @@ configs:
     external: true
 ```
 
-## Example 2
+## Exemplo 2
 
-`<project_name>_app_config` is created when the application is deployed,
-by registering the inlined content as the configuration data. This means Compose infers variables when creating the config, which allows you to
-adjust content according to service configuration:
+A busca de configurações externas também pode usar uma chave distinta
+especificando um `nome`.
+
+O exemplo a seguir modifica o anterior para buscar uma configuração usando o
+parâmetro `HTTP_CONFIG_KEY`.
+A chave de busca real é definida no momento da implantação pela
+[interpolação](interpolation.md) de variáveis, mas exposta aos contêineres como
+o ID fixo `http_config`.
+
+```yml
+configs:
+  http_config:
+    external: true
+    name: "${HTTP_CONFIG_KEY}"
+```
+
+## Exemplo 3
+
+`<nome_do_projeto>_app_config` é criada quando a aplicação é implantada,
+registrando o conteúdo em linha como dados de configuração.
+Isso significa que o Compose infere variáveis ao criar a configuração, o que
+permite ajustar o conteúdo conforme a configuração do serviço:
 
 ```yml
 configs:
@@ -70,19 +118,19 @@ configs:
       spring.application.name=${COMPOSE_PROJECT_NAME}
 ```
 
-## Example 3
+## Exemplo 4
 
-External configs lookup can also use a distinct key by specifying a `name`.
-
-The following
-example modifies the previous one to look up a config using the parameter `HTTP_CONFIG_KEY`. The actual lookup key is set at deployment time by the [interpolation](interpolation.md) of
-variables, but exposed to containers as hard-coded ID `http_config`.
+`<nome_do_projeto>_simple_config` é criada quando a aplicação é implantada,
+usando o valor de uma variável de ambiente como dados de configuração.
+Isso é útil para valores de configuração simples que não exigem interpolação:
 
 ```yml
 configs:
-  http_config:
-    external: true
-    name: "${HTTP_CONFIG_KEY}"
+  simple_config:
+    environment: "SIMPLE_CONFIG_VALUE"
 ```
 
-If `external` is set to `true`, all other attributes apart from `name` are irrelevant. If Compose detects any other attribute, it rejects the Compose file as invalid.
+Se `external` estiver definido como `true`, todos os outros atributos, exceto
+`name`, serão irrelevantes.
+Se o Compose detectar qualquer outro atributo, ele rejeitará o arquivo Compose
+como inválido.
