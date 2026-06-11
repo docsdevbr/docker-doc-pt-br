@@ -9,9 +9,17 @@
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+
+source_url: https://github.com/docker/docs/blob/main/content/includes/compose/extension.md
+source_revision: e3aa78b72c9faf56e97896681c33425cafc1c847
+translation_status: ready
 ---
 
-Extensions can be used to make your Compose file more efficient and easier to maintain.
+As extensões podem ser usadas para tornar seu arquivo Compose mais eficiente e
+fácil de manter.
 
-Use the prefix `x-` as a top-level element to modularize configurations that you want to reuse.
-Compose ignores any fields that start with `x-`, this is the sole exception where Compose silently ignores unrecognized fields.
+Use o prefixo `x-` como um elemento de nível superior para modularizar
+configurações que você deseja reutilizar.
+
+O Compose ignora quaisquer campos que comecem com `x-`; esta é a única exceção
+em que o Compose ignora silenciosamente campos não reconhecidos.
