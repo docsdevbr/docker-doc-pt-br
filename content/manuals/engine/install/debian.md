@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/debian.md
-source_revision: aeb2e86060e46c72996a758b76c14479b362f7de
+source_revision: aa7318d4769116af47fc48f2ede617ea3a4fc697
 translation_status: ready
 
 description: >-
