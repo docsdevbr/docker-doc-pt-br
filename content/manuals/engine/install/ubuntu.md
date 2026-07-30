@@ -11,7 +11,7 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/ubuntu.md
-source_revision: 33d94e3011cbc9378e43279b6c4de0c8e50e83e8
+source_revision: aa7318d4769116af47fc48f2ede617ea3a4fc697
 translation_status: ready
 
 description: >-
@@ -103,6 +103,7 @@ Os pacotes não oficiais a serem desinstalados são:
 - `docker-compose`
 - `docker-compose-v2`
 - `docker-doc`
+- `docker-buildx`
 - `podman-docker`
 
 Além disso, a Docker Engine depende do `containerd` e do `runc`.
@@ -113,7 +114,7 @@ evitar conflitos com as versões incluídas na Docker Engine.
 Execute o seguinte comando para desinstalar todos os pacotes conflitantes:
 
 ```console
-$ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
+$ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 ```
 
 O `apt` pode informar que você não tem nenhum desses pacotes instalado.
