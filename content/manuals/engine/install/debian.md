@@ -86,6 +86,7 @@ Os pacotes não oficiais a serem desinstalados são:
 - `docker.io`
 - `docker-compose`
 - `docker-doc`
+- `docker-buildx`
 - `podman-docker`
 
 Além disso, a Docker Engine depende do `containerd` e do `runc`.
@@ -96,7 +97,7 @@ evitar conflitos com as versões incluídas na Docker Engine.
 Execute o seguinte comando para desinstalar todos os pacotes conflitantes:
 
 ```console
-$ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc podman-docker containerd runc | cut -f1)
+$ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 ```
 
 O `apt` pode informar que você não tem nenhum desses pacotes instalado.
