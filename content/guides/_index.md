@@ -11,12 +11,13 @@
 # https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/guides/_index.md
-source_revision: a78c3c7e8cb20b8327092900e76d372be8f10ea8
+source_revision: f02e2a5633501461d873f2bfb2dde416cc2bb008
 translation_status: ready
 
 title: Guias do Docker
 linkTitle: Guias
-description: Explore os guias do Docker.
+description: >-
+  Tutoriais passo a passo, organizados de acordo com o que você deseja fazer.
 keywords: docker, guias, tutoriais, caminhos de aprendizagem, primeiros passos
 params:
   icon: book-open
@@ -24,13 +25,19 @@ layout: landing
 aliases:
   - /guides/language/
   - /language/
+  - /guides/dhi-from-doi/
+  - /guides/dhi-from-wolfi/
+  - /guides/dhi-go-example/
+  - /guides/dhi-nodejs-example/
+  - /guides/dhi-python-example/
+  - /guides/lab-docker-for-ai-redirect/
   - /learning-paths/
 ---
 
-Explore nossa coleção de guias para aprender como o Docker pode otimizar seus
-fluxos de trabalho de desenvolvimento e como usá-lo com linguagens, frameworks
-ou tecnologias específicos.
+Explore guias para saber como o Docker pode otimizar seus fluxos de trabalho de
+desenvolvimento e como usá-lo com linguagens, frameworks ou tecnologias
+específicas.
 
 Não encontrou o guia que procura?
-Abra uma issue no repositório
-[docker/docs](https://github.com/docker/docs/issues/new) para nos informar.
+Abra uma *issue* no repositório
+[docker/docs](https://github.com/docker/docs/issues/new).
