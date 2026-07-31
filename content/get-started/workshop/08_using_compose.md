@@ -166,7 +166,6 @@ $ docker run -d \
    Especifique também a imagem a ser usada.
 
    ```yaml
-
    services:
      app:
        # The app service definition

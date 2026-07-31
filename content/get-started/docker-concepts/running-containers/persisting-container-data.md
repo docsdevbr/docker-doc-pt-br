@@ -69,7 +69,7 @@ Quando o contêiner estiver em execução, todos os arquivos gravados na pasta
 Se você excluir o contêiner e iniciar um novo usando o mesmo volume, os arquivos
 ainda estarão lá.
 
-> ** Compartilhando arquivos usando volumes**
+> **Compartilhando arquivos usando volumes**
 >
 > Você pode anexar o mesmo volume a vários contêineres para compartilhar
 > arquivos entre eles.
