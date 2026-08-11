@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+# https://github.com/docsdevbr/docker-docs-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 title: "Interface: Docker"
 description: Docker extension API reference
@@ -58,7 +58,7 @@ For convenience, the command result object also has methods to easily parse it d
 # SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+# https://github.com/docsdevbr/docker-docs-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 Streams the output as a result of the execution of a Docker command.
 It is useful when the output of the command is too long, or you need to get the output as a stream.

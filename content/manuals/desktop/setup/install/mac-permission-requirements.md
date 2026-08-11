@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+# https://github.com/docsdevbr/docker-docs-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/desktop/setup/install/mac-permission-requirements.md
 source_revision: f24a6af220fe945d5ace3cbc663d6f55c5e1fc53

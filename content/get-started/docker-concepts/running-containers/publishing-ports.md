@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+# https://github.com/docsdevbr/docker-docs-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/publishing-ports.md
 source_revision: b1256d572f75131b9feb85c30fb1c25f9813dcb5

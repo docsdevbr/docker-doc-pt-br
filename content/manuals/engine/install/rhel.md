@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+# https://github.com/docsdevbr/docker-docs-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 source_url: https://github.com/docker/docs/blob/main/content/manuals/engine/install/rhel.md
 source_revision: 280781f50e4129fbe7c877f5ad603310ef97d78c

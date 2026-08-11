@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+# https://github.com/docsdevbr/docker-docs-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 description: The Docker Scout Dashboard helps review and share the analysis of images.
 keywords: scout, scanning, analysis, vulnerabilities, Hub, supply chain, security, report,

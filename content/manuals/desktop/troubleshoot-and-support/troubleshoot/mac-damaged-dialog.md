@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Documentation licensed under the Apache License, Version 2.0.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/docsdevbr/docker-doc-pt-br/blob/-/LICENSES/Apache-2.0.txt
+# https://github.com/docsdevbr/docker-docs-pt-br/blob/-/LICENSES/Apache-2.0.txt
 
 description: Fix "Docker.app is damaged and can't be opened. You should move it to the Trash" dialog on macOS
 keywords: docker desktop mac, damaged app, move to trash, gatekeeper, installation issues, troubleshooting
